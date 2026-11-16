@@ -1,0 +1,106 @@
+{
+  "status": "passed",
+  "scope": "actual DSH/native WASM, physical Photo editing and UI apply, real Deck source/PPTX/PNG; native command and metadata checks, no model",
+  "root": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\instance-apply-project\\e679daaa-3122-48e5-9904-4d2a7919df6b",
+  "codeRoot": "D:\\METIS超级合并\\dsh-plugin\\designcraft",
+  "checks": [
+    {
+      "name": "physical Photo edit applies to the same actual Deck picture/native App and preserves all non-content target properties",
+      "pass": true,
+      "detail": {
+        "sameNativeId": 261,
+        "sameApp": true,
+        "exactCropRotationTransparencyAndOtherProperties": true,
+        "originalAsset": "asset-627c39ef-ee2a-49cf-ae79-18f9651a3d80",
+        "newAsset": "asset-9704012b-4377-4c12-b6da-d696f53e8c91",
+        "mediaSha256": "54fb51609a7723449589b412e4a34c750750452d29dda8b4e5ab93ea1053c306"
+      }
+    },
+    {
+      "name": "ordinary second use and original Photo source remain unchanged; durable source receipt and graph agree",
+      "pass": true,
+      "detail": {
+        "otherNativeId": "262",
+        "otherExact": true,
+        "originalPhotoHead": "935453a0c6d9fbb766cad8ff4c8b6b957b4c96a38893baf9f4b5d1e2ac648c73",
+        "sourceReceipt": {
+          "action": "apply-instance",
+          "id": "9704012b-4377-4c12-b6da-d696f53e8c91",
+          "editId": "edit-65e11c1d-43ca-452f-88a6-c93bdbceb4a8",
+          "instanceId": "use-b9ea44f2-7f1e-415c-8a72-655716b8a73a",
+          "assetId": "asset-9704012b-4377-4c12-b6da-d696f53e8c91",
+          "previousAssetId": "asset-627c39ef-ee2a-49cf-ae79-18f9651a3d80",
+          "nativeId": "261",
+          "baseRevision": "d45c4f0c0e7cbacb44273377d7b74dee5178166e8b9e9f1089393bc0d37e70fe"
+        },
+        "instance": {
+          "id": "use-b9ea44f2-7f1e-415c-8a72-655716b8a73a",
+          "assetId": "asset-9704012b-4377-4c12-b6da-d696f53e8c91",
+          "sourceId": "work-9655d5ac-4dfb-432d-8792-e6ab1588b27b",
+          "nativeId": "261",
+          "boundAtRevision": "842c70ee63048829a6a185bb7804d55d907a91e78f11c9c2a23517b054c0c5a3",
+          "nativeNodeHash": "4d2077f8dc2de736957a6c6286798b71ab20c5f3e48b9f93c8fc9ac44b6de0f8",
+          "nativePage": {
+            "kind": "slide",
+            "id": 257,
+            "index": 0
+          },
+          "at": "2026-11-04T20:40:08.104Z",
+          "lastApplyOperationId": "9704012b-4377-4c12-b6da-d696f53e8c91",
+          "status": "present",
+          "currentSourceRevision": "842c70ee63048829a6a185bb7804d55d907a91e78f11c9c2a23517b054c0c5a3",
+          "nativeObject": {
+            "id": 261,
+            "name": "Picture 3",
+            "kind": "picture",
+            "page": {
+              "kind": "slide",
+              "id": 257,
+              "index": 0
+            }
+          },
+          "changedSincePlacement": false
+        }
+      }
+    },
+    {
+      "name": "actual native source and PPTX contain updated pixels; fresh native source reopen retains exact editable presentation",
+      "pass": true,
+      "detail": {
+        "pptxBytes": 30309,
+        "pngBytes": 23793,
+        "exactReopenedPresentation": true
+      }
+    }
+  ],
+  "owned": {
+    "workspaceId": "4ecf88a3-73e8-4160-844b-8401fb55c434",
+    "sessionId": "PUBLIC-REDACTED"
+  },
+  "edit": {
+    "id": "edit-65e11c1d-43ca-452f-88a6-c93bdbceb4a8",
+    "instanceId": "use-b9ea44f2-7f1e-415c-8a72-655716b8a73a",
+    "assetId": "asset-627c39ef-ee2a-49cf-ae79-18f9651a3d80",
+    "sourceId": "fork-65e11c1d-43ca-452f-88a6-c93bdbceb4a8",
+    "fromSourceId": "work-9a9d6695-bf47-420f-b0e2-32eb62397d59",
+    "fromRevision": "935453a0c6d9fbb766cad8ff4c8b6b957b4c96a38893baf9f4b5d1e2ac648c73",
+    "fromHash": "d3da165308d2cde89f25ac2305af8bc6331d11ba25df6f6b26bcde9fd915197e",
+    "mode": "independent",
+    "phase": "editing",
+    "at": "2026-11-04T20:40:15.997Z"
+  },
+  "updatedAsset": {
+    "id": "asset-9704012b-4377-4c12-b6da-d696f53e8c91",
+    "title": "两张独立图片 · 独立编辑",
+    "sourceId": "fork-65e11c1d-43ca-452f-88a6-c93bdbceb4a8",
+    "sourceRevision": "4b284cfed6cfa827e2213ff6c58eb258aa500497d9e54630a8d1c653bf40eb3c",
+    "sourceHash": "55099f7f4f1bac799840906b87be7008dd2f1bf0be514d62bc1bca2124f7f824",
+    "engine": "photocraft",
+    "format": "png",
+    "sha256": "54fb51609a7723449589b412e4a34c750750452d29dda8b4e5ab93ea1053c306",
+    "bytes": 4453,
+    "at": "2026-11-04T20:40:22.602Z"
+  },
+  "sourceId": "work-9655d5ac-4dfb-432d-8792-e6ab1588b27b",
+  "pageErrors": []
+}

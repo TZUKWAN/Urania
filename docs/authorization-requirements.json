@@ -1,0 +1,63 @@
+{
+  "schema": 1,
+  "at": "2026-11-12T18:04:04.279753+00:00",
+  "scope": "Authorization conditions only; no credentials read or services invoked.",
+  "blocksOtherWork": false,
+  "items": [
+    {
+      "id": "original-od-stock-search",
+      "affectedFeature": "OpenDesign 原版图库守护进程及授权项目绑定",
+      "status": "optional_outside_mandatory_scope_by_user",
+      "required": [
+        "真实 OD daemon 地址",
+        "对应的 OD run/project 上下文",
+        "该上下文签发的短期工具令牌",
+        "上游要求的 Vela 登录和项目权限"
+      ],
+      "currentProcessVariables": {
+        "OD_DAEMON_URL": false,
+        "OD_TOOL_TOKEN": false,
+        "OD_NODE_BIN": false,
+        "OD_BIN": false,
+        "VELA_BIN": false,
+        "VELA_WORKSPACE_ID": false
+      },
+      "accountState": "Not inspected; this authorization is no longer a mandatory core requirement.",
+      "currentImplementation": "Original OD/Vela authorization was not integrated; separate Commons code remains. No new account login is required for core local editing.",
+      "unaffected": [
+        "Commons public image source",
+        "local resource readers",
+        "native image/vector/deck code",
+        "source/metadata/license/delivery audits"
+      ],
+      "requiredForCoreProduct": false
+    },
+    {
+      "id": "configured-image-services",
+      "affectedFeature": "实际图片生成、编辑和其他远端模型任务",
+      "status": "functional_validation_deferred; credential availability not checked",
+      "required": [
+        "刘总选择的独立生图API密钥与服务权限，或现有DSH图片连接"
+      ],
+      "currentImplementation": "Independent image settings and DSH credential integration are implemented in source, with explicit DSH reuse mode. Credential writes, account access and real calls remain unverified.",
+      "blocksCodeAudit": false
+    },
+    {
+      "id": "optional-external-mcp",
+      "affectedFeature": "用户选择的 Stitch/PixelBin/Figma 等外部工作流",
+      "status": "optional_outside_mandatory_scope_by_user",
+      "required": [
+        "实际选择该服务时的账号/连接权限"
+      ],
+      "requiredForCoreProduct": false,
+      "blocksCodeAudit": false
+    }
+  ],
+  "notAuthorizationBlocks": [
+    "未执行的功能验证",
+    "未完整评估的上游脚本或附加运行时",
+    "历史证据缺档",
+    "精确字体/预构建依赖来源未证实"
+  ],
+  "coreProductScope": "core-product-scope.json"
+}

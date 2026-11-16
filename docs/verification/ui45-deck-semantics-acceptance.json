@@ -1,0 +1,95 @@
+{
+  "status": "passed_scoped",
+  "at": "2026-11-08T09:46:40.568021+00:00",
+  "scope": "Actual Deck host9 in owned DSH: native notes, theme, master layout, show and samples of fade transition/animation.",
+  "checks": [
+    "native notes, theme, fade transition and shape entrance animation persisted",
+    "native source reopened exactly; independent PPTX reader and XML retain notes, theme/master/layout, transition and animation elements",
+    "created a named native master layout, applied it to a slide and reopened it",
+    "actual show started, fade entrance changed rendered canvas pixels, Space advanced to slide 2 and Escape returned",
+    "physical keyboard input to native notes survived native reopen and independent PPTX notes read"
+  ],
+  "show": {
+    "showStart": {
+      "blank": null,
+      "custom": null,
+      "ended": false,
+      "goto": null,
+      "grid": false,
+      "notesPx": 18,
+      "presenterPaused": false,
+      "presenterSecs": 1.34929999999702,
+      "slide": 0,
+      "step": 0,
+      "zoom": null,
+      "zoomArm": false
+    },
+    "showAfterAnimation": {
+      "blank": null,
+      "custom": null,
+      "ended": false,
+      "goto": null,
+      "grid": false,
+      "notesPx": 18,
+      "presenterPaused": false,
+      "presenterSecs": 4.95220000000298,
+      "slide": 0,
+      "step": 1,
+      "zoom": null,
+      "zoomArm": false
+    },
+    "showAfterAdvance": {
+      "blank": null,
+      "custom": null,
+      "ended": false,
+      "goto": null,
+      "grid": false,
+      "notesPx": 18,
+      "presenterPaused": false,
+      "presenterSecs": 6.954000000000001,
+      "slide": 1,
+      "step": 0,
+      "zoom": null,
+      "zoomArm": false
+    },
+    "changedPixels": 35829
+  },
+  "files": [
+    {
+      "file": "verification/ui45-deck-semantics.pptx",
+      "sha256": "768380e9f2fcf1ebdc3e577efca24a4d7a0ba8341b70f83f3cdaf455f4cb14b5"
+    },
+    {
+      "file": "verification/ui45-deck-notes.pptx",
+      "sha256": "fdbbdbad1b08ef316e0db313d5fad78a9bb3cb6c5e38c007fb7d956682306118"
+    },
+    {
+      "file": "verification/ui45-deck-show-before.png",
+      "sha256": "c99b86c229bee6475469127d22c7c18013c5dd0fcefd1b3b133f057dfe780d8f"
+    },
+    {
+      "file": "verification/ui45-deck-show-after.png",
+      "sha256": "2dcb5060816be7914fac6baebf66fe831e55f81b301106144ccf5b63f9628251"
+    }
+  ],
+  "rawEvidence": [
+    {
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-deck-semantics.json",
+      "sha256": "aac3bb124a92312a603fff830c6948c196bcb6d1ad82c69893d62b292c455477"
+    },
+    {
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-deck-master-show.json",
+      "sha256": "73ca2dd381902049c419ea8de95839cf77872cfeb73bd128bf56d17905a69d15"
+    },
+    {
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-deck-notes.json",
+      "sha256": "e48a3faf759fd74e2169d1df12c3579b48d0213d9a039a073ac6bd098f62c9b2"
+    }
+  ],
+  "limits": [
+    "Notes were typed on the native canvas; theme, layout, transition and animation used real registered native commands.",
+    "The displayed show was an owned headless presenter view, not an independent projector or full packaged desktop.",
+    "Fade animation playback was observed; fade transition metadata was checked but transition playback and complex effects, including Morph, were not verified.",
+    "Upstream documents animation-effect and external-platform limitations; this sample does not establish all upstream behavior."
+  ]
+}

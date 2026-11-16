@@ -1,0 +1,2039 @@
+{
+  "schema": 1,
+  "updatedAt": "2026-11-13T10:01:25.466626+00:00",
+  "fullScopeComplete": false,
+  "authority": "approved-plan.txt",
+  "checklistTaskCount": 50,
+  "professionalWorkspace": {
+    "liveEngines": [
+      "vectorcraft",
+      "photocraft",
+      "deckcraft"
+    ],
+    "vectorManualAndKimi": "requested manual basics physically verified; historical two Kimi rounds retained; no new model call; full upstream parity not claimed",
+    "photo": "verified persistent core + requested physical tools/source/import slices + actual configured Kimi layer/mask continuation; full upstream parity/advanced formats not claimed",
+    "deck": "verified persistent native core/source/PPTX/PNG/physical input/exact context/current Kimi; complete advanced native scope not claimed",
+    "openDesignFullWorkflow": "partial: actual current DSH Kimi Corporate rules/tokens -> native SVG -> physical text/path edit -> targeted Kimi continuation -> independent SVG/export reimport; recovered first generation; full OD external bundles/HTML/brands remain pending",
+    "unifiedHostedUI": "verified Vector/Photo/Deck core in one DSH workbench; global visual polish/full advanced interaction remains incomplete",
+    "linkedCrossMaterialEditing": "partial: real PNG/SVG independent in-place edits, explicitly linked seven-use propagation and interrupted-commit recovery verified; brand-token bindings, general anchor behavior and full format coverage remain open",
+    "imageServiceInProfessionalWorkspace": "implementation_written_unvalidated; real provider calls not run in this phase",
+    "nativeFileCore": "verified_vector_new_open_save_saveAs_copy_close_nativePNG_and_editable_source_roundtrip; advanced paths still pending",
+    "vectorManualLayout": "verified physical multiselect, six align axes plus combined centre, both edge-gap spacing axes, undo/group/ungroup and source reopen; 14 checks",
+    "vectorFastTextExit": "host4 physical rapid text/source reopen and matching hidden Electron browser IME verified",
+    "vectorShiftedShortcut": "host4 physical Shift+KeyX verified in complete editing7/source reopen",
+    "vectorManualBasics": "physical paths/rectangle/anchor/text/fill/stroke/layers/Boolean/alignment/group/source reopen verified in the listed reports",
+    "vectorPreciseReference": "Vector page/object/multiselect/document-coordinate and stale page/deletion/draft/parking checks verified; cross-engine masks/pages pending",
+    "vectorHumanTakeover": "actual registered tool/manual continuation and targeted latest single-step native undo verified; older/manual/multi-step history conflicts preserved",
+    "openDesignSourceData": "pinned complete internal package-file inventory + bounded verified reads; catalogue pointers/dependencies explicitly separated from executable workflows",
+    "projectGraph": "actual immutable Photo native-source version/PNG -> real Vector and Deck native picture/page/media uses; source navigation and same-parent return; in-place/copy-on-write/live updates pending",
+    "photoPreciseReference": "actual selected native layer + image-pixel space + source-backed coverage identity; subsequent physical stroke refuses old quote; exact alpha data is native pcraft content, not bounds",
+    "photoManualTools": "physical brush/erase/crop/native layers/Multiply/soft mask brush/Free Transform ownership, actual adjustment/Gaussian and exact pcraft/pixels reopen; 9 checks include JPEG/U16 PNG imports",
+    "photoManualAndKimi": "one actual current kimi-for-coding turn changes only target opacity, preserves hand mask/all other native fields; physical refinement and fresh reopen verified4"
+  },
+  "originalProjectInventory": {
+    "status": "in_progress",
+    "meaning": "OD own-source package trees indexed and compared; mirrors/catalogue pointers are not implemented skills. Four-project feature-to-UI/source/export inventory still pending.",
+    "openDesignSourceTree": "verification/opendesign-inventory.json"
+  },
+  "verifiedSafetySlices": [
+    {
+      "file": "verification/editor-stop-admission.tap",
+      "sha256": "e779ae04b6a4605e9d1138caeedc1c7b33df1eedb528ed7e2114e0545c1237af",
+      "passed": 8,
+      "scope": "actual DSH SessionStore protocol/deadline/checkpoint checks using captured native input; no renderer or model claim"
+    },
+    {
+      "file": "verification/editor-stop-ui.json",
+      "sha256": "84a24328e06e9f9ee8214c88143b02a557ea17632dc981cc1ad4e1ee40a6b9a5",
+      "passed": 3,
+      "scope": "actual registered DSH tool and real native App; no model request"
+    },
+    {
+      "file": "verification/editor-scope-ui.json",
+      "sha256": "8ea0bf90807dcb25c7cf11ea139deefaebf75a0f5d2da9c7ac2bd94c7a644b41",
+      "passed": 4,
+      "scope": "actual DSH sessions, production controller, real native pointer edits and filesystem checkpoints; no LLM"
+    },
+    {
+      "file": "verification/editor-draft-ui.json",
+      "sha256": "4a65450bdb73b3e03bcc591076bbff8365b434d726828b1d5fd1e1a900472fdd",
+      "passed": 7,
+      "scope": "current production controller/native App, actual DSH and IndexedDB; no LLM"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "A1",
+      "goal": "建立真实能力和证据清单",
+      "files": "docs/requirements.json；docs/capability-matrix.json（拟新增）；README.md",
+      "action": "将四项目能力逐项对应到界面入口、AI 动作、真实源结构、输出和恢复；修正进度文件落后于已有证据的条目。",
+      "acceptance": "每项标明已实现已验证、已有但未接入、部分实现、未实现、上游限制或未验证；命令目录与历史测试不能自动算新工作区完成。",
+      "status": "in_progress",
+      "evidence": [
+        "capability-inventory.json",
+        "historical-evidence-reconciliation.json",
+        "implementation-source-audit.json",
+        "static-registry-audit.json",
+        "upstream-command-candidates.json"
+      ],
+      "verifiedScope": "50项、250个UI/AI/源/输出/恢复源码引用已对应实际文件，历史差异与精确找回独立记录；完整上游能力不作完成声明；本轮逐项验收以release-validation-20261113.json为准。",
+      "implementationNote": "50项和250个UI/AI/源/输出/恢复源码引用已静态对应真实文件；历史证据差异和精确找回单列，当前动态注册/功能核验暂缓。",
+      "currentValidation": {
+        "id": "A1",
+        "state": "scoped_local_checks_passed_with_stated_boundaries",
+        "cases": [
+          "test_delivery_formats_ui.py"
+        ],
+        "boundary": "Scoped source/evidence inventory; not an assertion of every upstream command."
+      },
+      "currentValidationAddendum": {
+        "report": "verification/real-services-validation-20261113.json",
+        "boundary": "Use precise individual service, target-only, replay and reopen scopes; original failed whole-model flows remain failures."
+      }
+    },
+    {
+      "id": "A2",
+      "goal": "确认磁盘代码与实际加载版本",
+      "files": "package.json；host/index.js；client/client.js；client/native-controller.js",
+      "action": "让诊断显示实际后端、前端、运行时与构建标识，并处理版本不一致；只读取必要元数据，不接管用户窗口。",
+      "acceptance": "能区分磁盘已更新与当前进程已加载；不匹配时保留作品并给出准确状态。本轮未重新确认用户窗口实际加载版本。",
+      "status": "verified_disk_frontend_host_runtime_diagnostics",
+      "evidence": [
+        "verification/editor-assets-current.tap",
+        "verification/live-version-diagnostics.json",
+        "verification/owned-running-health.json"
+      ],
+      "verifiedScope": "实际旧后台与新界面同时存在时提示双方版本，原生作品保留；重新加载后重开原作品，分别核对三种实际 WASM 文件与安装清单。",
+      "currentValidation": {
+        "id": "A2",
+        "state": "scoped_local_checks_passed_with_stated_boundaries",
+        "cases": [
+          "test_host_file_menu_ui.py"
+        ],
+        "boundary": "Owned process metadata checked; packaged installation check recorded separately; user running window unknown."
+      },
+      "currentValidationAddendum": {
+        "report": "verification/real-services-validation-20261113.json",
+        "boundary": "Use precise individual service, target-only, replay and reopen scopes; original failed whole-model flows remain failures."
+      }
+    },
+    {
+      "id": "A3",
+      "goal": "补齐切换作品、会话和页面的数据保护",
+      "files": "client/native-controller.js；host/editor-session.js；client/recovery.js",
+      "action": "将未完成操作、保存队列、草稿和对象身份统一纳入切换协议，拒绝旧表面的回报。",
+      "acceptance": "针对快速切换、未保存切换、保存失败切换各验证一次：旧结果不写入新作品，原草稿可恢复。",
+      "status": "verified_scope_switch_and_draft_protection_scoped",
+      "evidence": [
+        "verification/editor-draft-ui.json",
+        "verification/editor-scope-ui.json",
+        "verification/ui45-data-protection-acceptance.json"
+      ],
+      "verifiedScope": "真实快速切换和保存失败切换保留原编辑与草稿；旧表面晚到事件不污染新作品。",
+      "currentValidation": {
+        "id": "A3",
+        "state": "scoped_local_checks_passed_with_stated_boundaries",
+        "cases": [
+          "test_scope_switch_current.py"
+        ],
+        "boundary": "Case scopes define acceptance; no complete upstream equivalence or real-model execution inferred."
+      },
+      "currentValidationAddendum": {
+        "report": "verification/real-services-validation-20261113.json",
+        "boundary": "Use precise individual service, target-only, replay and reopen scopes; original failed whole-model flows remain failures."
+      }
+    },
+    {
+      "id": "A4",
+      "goal": "接通停止、超时和断连的真实语义",
+      "files": "host/editor-session.js；host/editor-tools.js；client/editor-surface.js；client/native-controller.js",
+      "action": "对未执行、执行中、完成但尚未确认的步骤分别处理；对结果不确定的操作先读取状态再决定恢复。",
+      "acceptance": "停止后不继续执行未开始步骤；晚到结果不覆盖后来手改；超时不冒称失败未生效，也不盲目重复调用。",
+      "status": "verified_stop_timeout_and_late_result_scoped",
+      "evidence": [
+        "verification/editor-stop-admission.tap",
+        "verification/editor-stop-ui.json",
+        "verification/ui45-data-protection-acceptance.json"
+      ],
+      "verifiedScope": "真实原生动作执行前停止不改文件，执行后停止如实记录已保存；当前会话测试验证超时 watchdog 和晚到回报隔离。",
+      "currentValidation": {
+        "id": "A4",
+        "state": "scoped_local_checks_passed_with_stated_boundaries",
+        "cases": [
+          "test_stop_current.py"
+        ],
+        "boundary": "Case scopes define acceptance; no complete upstream equivalence or real-model execution inferred."
+      },
+      "currentValidationAddendum": {
+        "report": "verification/real-services-validation-20261113.json",
+        "boundary": "Use precise individual service, target-only, replay and reopen scopes; original failed whole-model flows remain failures."
+      }
+    },
+    {
+      "id": "A5",
+      "goal": "补齐保存失败和草稿恢复闭环",
+      "files": "host/native-source-store.js；client/native-controller.js；client/editor-frame.js",
+      "action": "在已有原子检查点与保存确认上补齐断连、存储失败、重开和本地草稿冲突处理。",
+      "acceptance": "中断保存仍能重开上一完整源；新草稿保留；只有实际落盘对应修订才显示已保存，旧确认不能清除新修改。",
+      "status": "verified_save_failure_draft_and_ack_scoped",
+      "evidence": [
+        "verification/editor-draft-ui.json",
+        "verification/native-file-failure.json",
+        "verification/native-file-host.tap",
+        "verification/native-files-ui.json",
+        "verification/native-origins-stage-audit.json",
+        "verification/ui45-data-protection-acceptance.json"
+      ],
+      "verifiedScope": "真实保存断连、重开、本地草稿独立恢复、并发草稿写入和旧确认不清除新手改均按 Vector 样本核验。",
+      "currentValidation": {
+        "id": "A5",
+        "state": "scoped_local_checks_passed_with_stated_boundaries",
+        "cases": [
+          "test_draft_recovery_current.py"
+        ],
+        "boundary": "Case scopes define acceptance; no complete upstream equivalence or real-model execution inferred."
+      },
+      "currentValidationAddendum": {
+        "report": "verification/real-services-validation-20261113.json",
+        "boundary": "Use precise individual service, target-only, replay and reopen scopes; original failed whole-model flows remain failures."
+      }
+    },
+    {
+      "id": "A6",
+      "goal": "验证实际 DSH 桌面承载和故障边界",
+      "files": "client/editor-surface.js；host/editor-assets.js；上游 Web 宿主代码；定向宿主测试（拟新增）",
+      "action": "在不接管用户桌面的同版本测试宿主中验证中文输入、焦点、缩放、GPU/编辑域异常和运行预算；直接加载 D: 运行目录代码。",
+      "acceptance": "有实际 DSH/Electron 证据才标记桌面宿主通过；编辑域故障后检查 DSH 响应、恢复源与资源释放。必要宿主接口缺口须明确记录。",
+      "status": "verified_owned_electron_hardware_and_recovery_scoped",
+      "evidence": [
+        "verification/electron-background.json",
+        "verification/electron-crash.json",
+        "verification/electron-ime.json",
+        "verification/electron-surface.json",
+        "verification/ui45-electron-hardware-acceptance.json"
+      ],
+      "verifiedScope": "同版本隐藏 Electron 加载真实 DSH Web 宿主和认证转发；中文组合、物理缩放、AMD GPU、实际 WebGL 丢失、子渲染进程故障及保存源恢复按样本核验。完整打包版 preload/IPC 和系统候选窗未验证。",
+      "currentValidation": {
+        "id": "A6",
+        "state": "scoped_local_checks_passed_with_stated_boundaries",
+        "cases": [
+          "test_scope_switch_current.py"
+        ],
+        "boundary": "Headless actual DSH and scoped surface faults tested. Full desktop preload/IPC, OS IME and hardware GPU are outside this evidence."
+      },
+      "currentValidationAddendum": {
+        "report": "verification/real-services-validation-20261113.json",
+        "boundary": "Use precise individual service, target-only, replay and reopen scopes; original failed whole-model flows remain failures."
+      }
+    },
+    {
+      "id": "B1",
+      "goal": "重排主界面与画布空间",
+      "files": "client/native-workspace.js；client/ui.js；client/client.js",
+      "action": "保留一个 DSH 对话和主设计舞台；作品、素材、属性按需展开，去掉外层长期占位的重复区域。",
+      "acceptance": "实际编辑页面中画布不再被多层固定栏挤压；常用窗口尺寸下聊天、选区与工具仍可操作，尺寸变化不丢文档。",
+      "status": "verified_three_engine_responsive_workspace_scoped",
+      "evidence": [
+        "verification/electron-background.json",
+        "verification/ui160-ai-canvas-20261113.json",
+        "verification/ui161-ai-native-ux-20261113.json",
+        "verification/ui162-design-session-isolation-20261113.json",
+        "verification/ui45-layout-acceptance.json",
+        "verification/unified-workspace.json"
+      ],
+      "verifiedScope": "真实 Vector、Photo、Deck 在 1280×800 与 1600×900 下聊天区与全宽主舞台不重叠，缩放窗口保持同一源、修订与 App；边界见截图和报告。",
+      "currentValidation": {
+        "id": "B1",
+        "state": "scoped_local_checks_passed_with_stated_boundaries",
+        "cases": [
+          "test_workspace_layout_ui.py"
+        ],
+        "boundary": "Case scopes define acceptance; no complete upstream equivalence or real-model execution inferred."
+      },
+      "currentValidationAddendum": {
+        "report": "verification/real-services-validation-20261113.json",
+        "boundary": "Use precise individual service, target-only, replay and reopen scopes; original failed whole-model flows remain failures."
+      }
+    },
+    {
+      "id": "B2",
+      "goal": "给专业编辑器增加真正的宿主模式",
+      "files": "Vector 上游 crates/ui-egui/src；client/editor-frame.js；client/editor-surface.js",
+      "action": "在原生 UI 层处理重复首页、文件菜单、工具栏和宿主功能分工；保留专业命令的可达入口。",
+      "acceptance": "用户只有一套主文件和导航入口；节点、图层、文字等专业编辑仍能真实操作，不能靠 CSS 裁切隐藏功能。",
+      "status": "in_progress",
+      "evidence": [
+        "verification/native-files-ui.json",
+        "verification/rust-host-files-tests.log",
+        "verification/ui160-ai-canvas-20261113.json",
+        "verification/ui161-ai-native-ux-20261113.json",
+        "verification/ui162-design-session-isolation-20261113.json",
+        "verification/ui45-shared-file-menu-progress.json"
+      ],
+      "verifiedScope": "三引擎宿主已提供自定义尺寸新建、导入、导出、保存、另存、副本和关闭；共享文件操作及原生快捷键按样本通过。原生重复文件入口仍需收拢，专业功能不能裁切。",
+      "implementationNote": "三套文件入口收拢源码已构建装盘；Vector 模板菜单转交工作区选择与原件保护代码已构建，宿主菜单及专业入口尚未功能验证。",
+      "currentValidation": {
+        "id": "B2",
+        "state": "scoped_local_checks_passed_with_stated_boundaries",
+        "cases": [
+          "test_host_file_menu_ui.py",
+          "test_workspace_layout_ui.py"
+        ],
+        "boundary": "Case scopes define acceptance; no complete upstream equivalence or real-model execution inferred."
+      },
+      "currentValidationAddendum": {
+        "report": "verification/real-services-validation-20261113.json",
+        "boundary": "Use precise individual service, target-only, replay and reopen scopes; original failed whole-model flows remain failures."
+      }
+    },
+    {
+      "id": "B3",
+      "goal": "统一外层和原生编辑器视觉",
+      "files": "client/ui.js；client/native-workspace.js；各上游 crates/ui-egui/src",
+      "action": "统一主题、字体、间距、按钮、图标、选中、错误和加载状态，形成可复用的宿主视觉规则。",
+      "acceptance": "以实际运行页面检查整体效果；外层与编辑域主题协调、文字可读、状态可辨，静态效果图不算完成。",
+      "status": "in_progress",
+      "evidence": [
+        "five-gaps-and-deck.md",
+        "five-gaps-code-audit.json",
+        "hosted-ui-source-audit.json",
+        "verification/ui160-ai-canvas-20261113.json",
+        "verification/ui161-ai-native-ux-20261113.json",
+        "verification/ui162-design-session-isolation-20261113.json",
+        "verification/ui45-host-theme-progress.json",
+        "verification/unified-workspace.json"
+      ],
+      "verifiedScope": "Vector 既有宿主主题；Photo host4 和 Deck host10 已按外层绿色/明暗配色接入并实测，Photo 嵌入界面使用中文且不改原生偏好。Deck 原生控件仍为英文，三引擎控件样式尚未完全一致。",
+      "implementationNote": "Deck host16已真实构建装盘：保留原固定中文，新增130动态文案位点及笔迹文字/公式、屏幕截图、旁白、摄像头五入口；只在embedded启用，实际功能/视觉与系统组件待验证。",
+      "codeOnlyStatus": "built_source_ui_unvalidated",
+      "currentValidation": {
+        "id": "B3",
+        "state": "scoped_local_checks_passed_with_stated_boundaries",
+        "cases": [
+          "test_workspace_layout_ui.py"
+        ],
+        "boundary": "Case scopes define acceptance; no complete upstream equivalence or real-model execution inferred."
+      },
+      "currentValidationAddendum": {
+        "report": "verification/real-services-validation-20261113.json",
+        "boundary": "Use precise individual service, target-only, replay and reopen scopes; original failed whole-model flows remain failures."
+      }
+    },
+    {
+      "id": "B4",
+      "goal": "实现对象上下文工具",
+      "files": "client/native-workspace.js；client/native-controller.js；各上游原生工具区域",
+      "action": "按当前图片、路径、文字、演示对象显示对应真实工具；多选时显示对齐和分布。",
+      "acceptance": "切换对象后工具与真实选区一致；每个可用按钮改变原生对象，未接入的能力不得显示为可用。",
+      "status": "verified_native_context_controls_scoped",
+      "evidence": [
+        "verification/ui160-ai-canvas-20261113.json",
+        "verification/ui161-ai-native-ux-20261113.json",
+        "verification/ui162-design-session-isolation-20261113.json",
+        "verification/ui45-context-tools-acceptance.json"
+      ],
+      "verifiedScope": "真实 Photo/Vector/Deck 对象工具栏按样本核验：六种对齐、两种分布、编组/解组、文字与填色；Photo 蒙版/调整层/不透明度/选区、引用及手工拖动保护通过。",
+      "currentValidation": {
+        "id": "B4",
+        "state": "scoped_local_checks_passed_with_stated_boundaries",
+        "cases": [
+          "test_vector_context_tools_ui.py",
+          "test_photo_context_tools_ui.py",
+          "test_deck_context_tools_ui.py"
+        ],
+        "boundary": "Case scopes define acceptance; no complete upstream equivalence or real-model execution inferred."
+      },
+      "currentValidationAddendum": {
+        "report": "verification/real-services-validation-20261113.json",
+        "boundary": "Use precise individual service, target-only, replay and reopen scopes; original failed whole-model flows remain failures."
+      }
+    },
+    {
+      "id": "B5",
+      "goal": "实现项目总览与连续进入、返回",
+      "files": "client/native-workspace.js；client/preview-view.js；client/native-controller.js；项目关系模块（F1）",
+      "action": "用派生缩略图组织作品；进入实际编辑上下文，提供作品与内部素材的返回路径。",
+      "acceptance": "总览只承担导航；返回时恢复当前作品、视口、历史与草稿，无需用户搬运子项目。此项依赖 F1 与对应原生桥。",
+      "status": "verified_three_engine_overview_and_return_scoped",
+      "evidence": [
+        "verification/project-navigation-conflict.json",
+        "verification/project-navigation-crash.json",
+        "verification/project-navigation.json",
+        "verification/ui45-data-protection-acceptance.json",
+        "verification/ui45-three-engine-navigation-acceptance.json"
+      ],
+      "verifiedScope": "三引擎实际作品总览、真实内容缩略图及逐项进入；Vector 和 Deck 从素材来源返回原 App 时保留所选对象、视图与撤销历史，故障恢复按提示重开。独立作品切换不承诺保留内存历史。",
+      "currentValidation": {
+        "id": "B5",
+        "state": "scoped_local_checks_passed_with_stated_boundaries",
+        "cases": [
+          "test_three_engine_overview_ui.py",
+          "test_mixed_linked_seven.py"
+        ],
+        "boundary": "Case scopes define acceptance; no complete upstream equivalence or real-model execution inferred."
+      },
+      "currentValidationAddendum": {
+        "report": "verification/real-services-validation-20261113.json",
+        "boundary": "Use precise individual service, target-only, replay and reopen scopes; original failed whole-model flows remain failures."
+      }
+    },
+    {
+      "id": "B6",
+      "goal": "统一聊天、引用、快捷键和焦点",
+      "files": "client/dsh-context.js；client/native-reference.js；client/native-workspace.js；各上游 Web 输入代码",
+      "action": "沿用原生 DSH 输入框；正确路由文字输入、删除、撤销、缩放和保存；呈现真实 AI 等待与完成状态。",
+      "acceptance": "聊天输入不触发画布删除，编辑文字不丢中文组合输入；工具状态只反映实际执行，不伪造绘制或百分比。",
+      "status": "verified_chat_focus_ime_and_status_scoped",
+      "evidence": [
+        "verification/electron-ime.json",
+        "verification/menu-handoff.json",
+        "verification/native-origins-stage-audit.json",
+        "verification/native-reference-live.json",
+        "verification/rust-shortcut-modifiers.log",
+        "verification/ui160-ai-canvas-20261113.json",
+        "verification/ui161-ai-native-ux-20261113.json",
+        "verification/ui162-design-session-isolation-20261113.json",
+        "verification/ui45-chat-focus-acceptance.json",
+        "verification/ui45-data-protection-acceptance.json"
+      ],
+      "verifiedScope": "真实 DSH 聊天删除不改变已选矢量对象；隐藏同版本 Electron 中文组合输入与保存保护通过，停止状态按真实执行回执显示。系统候选窗和其他所有快捷键不在此样本内。",
+      "currentValidation": {
+        "id": "B6",
+        "state": "scoped_local_checks_passed_with_stated_boundaries",
+        "cases": [
+          "test_chat_focus_delete.py",
+          "test_context_quote_ui.py"
+        ],
+        "boundary": "Draft reference and physical Delete focus tested; no new OS IME candidate-window claim."
+      },
+      "currentValidationAddendum": {
+        "report": "verification/real-services-validation-20261113.json",
+        "boundary": "Use precise individual service, target-only, replay and reopen scopes; original failed whole-model flows remain failures."
+      }
+    },
+    {
+      "id": "C1",
+      "goal": "逐项验收真实矢量手工操作",
+      "files": "Vector 上游 crates/ui-egui/src；client/editor-frame.js；client/native-controller.js",
+      "action": "覆盖文字、路径和节点、填色描边、图层、组合、布尔运算、多选对齐与等距分布等已承诺能力。",
+      "acceptance": "每项从界面实际操作并核对原生结构；有界面但未生效、只有命令入口、无法重开的条目均不能通过。",
+      "status": "verified_requested_vector_basics",
+      "evidence": [
+        "verification/vector-alignment.json",
+        "verification/vector-editing.json",
+        "verification/vector-color.json",
+        "verification/vector-layers.json",
+        "verification/vector-boolean.json"
+      ],
+      "verifiedScope": "Physical rectangle/pen/one-anchor/text/custom paint/layer controls/Boolean/multiselect/align/equal gaps/group/undo/source reopen; full upstream parity not claimed",
+      "currentValidation": {
+        "id": "C1",
+        "state": "scoped_local_checks_passed_with_stated_boundaries",
+        "cases": [
+          "test_vector_context_tools_ui.py",
+          "test_svg_vector_inplace.py"
+        ],
+        "boundary": "Scoped native operations tested; unchanged historical native capabilities remain separately identified."
+      },
+      "currentValidationAddendum": {
+        "report": "verification/real-services-validation-20261113.json",
+        "boundary": "Use precise individual service, target-only, replay and reopen scopes; original failed whole-model flows remain failures."
+      }
+    },
+    {
+      "id": "C2",
+      "goal": "补齐精确引用与过期检查",
+      "files": "client/native-reference.js；client/dsh-context.js；host/editor-tools.js；host/editor-session.js",
+      "action": "完善作品、页面、对象、多选和区域/蒙版引用；携带源身份和真实修订；区分预览与源坐标。",
+      "acceptance": "引用后删除对象、换源或换页会被拒绝或重新读取；AI 对当前目标操作，不按过期屏幕位置猜测。区域能力随 Photo/Deck 接入分别验收。",
+      "status": "verified_precise_native_reference_guards_scoped",
+      "evidence": [
+        "verification/native-reference-live.json",
+        "verification/native-reference-pages.json",
+        "verification/ui160-ai-canvas-20261113.json",
+        "verification/ui161-ai-native-ux-20261113.json",
+        "verification/ui45-host9-files-references.json"
+      ],
+      "verifiedScope": "真实 Vector 对象/画板旧引用拒绝，Photo 羽化选区完整 alpha 导出及选区变化拒绝，Deck 切换页面后旧引用拒绝；均使用原生坐标和源身份。",
+      "currentValidation": {
+        "id": "C2",
+        "state": "scoped_local_checks_passed_with_stated_boundaries",
+        "cases": [
+          "test_photo_deck_references_ui.py",
+          "test_context_quote_ui.py"
+        ],
+        "boundary": "Case scopes define acceptance; no complete upstream equivalence or real-model execution inferred."
+      },
+      "currentValidationAddendum": {
+        "report": "verification/real-services-validation-20261113.json",
+        "boundary": "Use precise individual service, target-only, replay and reopen scopes; original failed whole-model flows remain failures."
+      }
+    },
+    {
+      "id": "C3",
+      "goal": "补完人机接管与安全撤销",
+      "files": "host/editor-session.js；host/editor-tools.js；各上游历史和控制模块",
+      "action": "在已验证的两轮 Kimi 基础上补同对象竞争、人工接管、分步骤状态和较早 AI 修改的撤销规则。",
+      "acceptance": "AI 操作后手改，再请求局部续改保留非目标内容；撤销较早 AI 不覆盖后来的手改，不能证明安全时明确冲突。",
+      "status": "verified_cross_engine_guarded_handoff_scoped",
+      "evidence": [
+        "verification/deck-kimi.json",
+        "verification/editor-history-policy.log",
+        "verification/editor-session-current.tap",
+        "verification/kimi-opendesign-resume.json",
+        "verification/native-handoff.json",
+        "verification/photo-kimi.json",
+        "verification/ui45-cross-engine-handoff-acceptance.json"
+      ],
+      "verifiedScope": "历史真实 Kimi 对 Vector、Photo、Deck 的同会话续改与手工保留；当前三个引擎注册工具的较早步骤在手改后安全拒绝撤销，最新可证明单步可撤销。当前 Photo/Deck 检查没有新的模型调用。",
+      "currentValidation": {
+        "id": "C3",
+        "state": "partial_pending_real_model_or_service",
+        "cases": [
+          "test_cross_engine_handoff_ui.py"
+        ],
+        "boundary": "Case scopes define acceptance; no complete upstream equivalence or real-model execution inferred."
+      },
+      "currentValidationAddendum": {
+        "report": "verification/real-services-validation-20261113.json",
+        "boundary": "Use precise individual service, target-only, replay and reopen scopes; original failed whole-model flows remain failures."
+      }
+    },
+    {
+      "id": "C4",
+      "goal": "打通原生文件菜单与宿主保存、导出",
+      "files": "client/editor-frame.js；client/editor-surface.js；client/native-controller.js；Vector Web 平台服务",
+      "action": "解决 captureDownloads 仅留在内存、编辑器内部另开文件与当前源身份脱节等缺口；统一原生源和成品输出入口。",
+      "acceptance": "原生保存、另存、导入、SVG/PNG 导出得到实际可重开的文件；不能写回错误作品，也不能只显示成功通知。",
+      "status": "verified_native_file_routes_three_engines_scoped",
+      "evidence": [
+        "verification/native-file-failure.json",
+        "verification/native-file-host.tap",
+        "verification/native-files-ui.json",
+        "verification/ui45-export-acceptance.json",
+        "verification/ui45-host9-files-references.json"
+      ],
+      "verifiedScope": "Vector 历史真实保存/另存/打开/导出与重开，当前 Photo/Deck 真实快捷键保存、另存、取消打开及独立原作保留；导出文件按格式报告核验。",
+      "currentValidation": {
+        "id": "C4",
+        "state": "scoped_local_checks_passed_with_stated_boundaries",
+        "cases": [
+          "test_host_file_menu_ui.py",
+          "test_vector_template_ui.py"
+        ],
+        "boundary": "Case scopes define acceptance; no complete upstream equivalence or real-model execution inferred."
+      },
+      "currentValidationAddendum": {
+        "report": "verification/real-services-validation-20261113.json",
+        "boundary": "Use precise individual service, target-only, replay and reopen scopes; original failed whole-model flows remain failures."
+      }
+    },
+    {
+      "id": "G1",
+      "goal": "补齐 OD 技能、模板、品牌和 Craft 资源",
+      "files": "resources/open-design；host/design-resources.js；host/templates.js；资源注册模块（拟新增）",
+      "action": "按已锁定上游逐项登记完整包及脚本、素材、字体和依赖；按需加载实际需要的内容。",
+      "acceptance": "资源清单对得上上游；每个已标可用的包能真实读取并运行其必要部分，缺文件或依赖不能装作完整支持。",
+      "status": "partially_verified_source_data",
+      "evidence": [
+        "authorization-requirements.json",
+        "external-native-import.md",
+        "external-resource-download.md",
+        "fal-image-adapter.md",
+        "fal-remote-outputs.md",
+        "fal-storage-adapter.md",
+        "fal-workflow-adapter.md",
+        "figma-source-adapter.md",
+        "five-gaps-and-deck.md",
+        "five-gaps-code-audit.json",
+        "html-project-assets.md",
+        "openai-image-svg-adapter.md",
+        "opendesign-declared-dependencies.json",
+        "opendesign-design-brief.md",
+        "opendesign-html-import.md",
+        "opendesign-skill-entry-map.json",
+        "opendesign-source-audit.json",
+        "opendesign-source-classification.json",
+        "opendesign-theme-factory.md",
+        "opendesign-workflow-context.md",
+        "opendesign-workflow-ledger.json",
+        "replicate-workflow-adapter.md",
+        "venice-audio-adapter.md",
+        "venice-image-adapter.md",
+        "venice-video-adapter.md",
+        "verification/opendesign-inventory.json",
+        "verification/opendesign-library.tap",
+        "verification/opendesign-registered.json",
+        "verification/opendesign-source-fetch.json",
+        "verification/ui45-od-dynamic-brand-acceptance.json",
+        "verification/ui45-od-html-package-acceptance.json",
+        "verification/ui45-od-import-acceptance.json"
+      ],
+      "verifiedScope": "Pinned own-source package trees and actual safe reader verified; selected Corporate24 + two entry files downloaded. External original bundles, fonts/services and package-specific execution still incomplete.；实际固定 SVG 与 PNG 已分别导入原生 Vector/Photo 并核对来源、回执与项目包；未接入的上游脚本与外部依赖仍明确标记。；两份实际 HTML 模板按完整文件树导入，逐个 Git 摘要一致，源码和 LICENSE 原名、项目包及停止回执已核验；其他包和外部工作流仍未全量接入。；新增按需搜索上游设计系统、读取真实主色和首选字体、创建品牌并保留原件，Agentic 样本及既有 Corporate 包回归通过；其他上游脚本/服务仍未全量接入。",
+      "implementationNote": "固定原包、GitHub 外部目录发现与 Git 回退、fal/Replicate 通用队列、Venice 图片、OpenAI/Gemini 图片、产品参考图工作流以及独立 Commons 搜图与来源保存部分代码已写入；此前额外添加的 Figma 等适配为可选，原方案不以其为前提。其他外部原包/服务和精确字体来源未全接入或证实，新增路径未验证。 原版OD/Vela图库和额外平台按刘总决定退出核心必做范围，保留可选入口，详见core-product-scope.json。 UI150补当前DSH本地规则/计划/实际产物编排及APCA/OKLCH/完整原生源颜色检查；不执行上游脚本，不接已放弃平台。",
+      "currentValidation": {
+        "id": "G1",
+        "state": "scoped_local_checks_passed_with_stated_boundaries",
+        "cases": [
+          "test_od_resource_import_ui.py",
+          "test_od_html_package_ui.py",
+          "test_plan_editor_migration_ui.py"
+        ],
+        "boundary": "Case scopes define acceptance; no complete upstream equivalence or real-model execution inferred."
+      },
+      "currentValidationAddendum": {
+        "report": "verification/real-services-validation-20261113.json",
+        "boundary": "Use precise individual service, target-only, replay and reopen scopes; original failed whole-model flows remain failures."
+      }
+    },
+    {
+      "id": "G2",
+      "goal": "把设计简报与生成规则接进当前 DSH 模型",
+      "files": "skills/designcraft/SKILL.md；host/editor-tools.js；OD 工作流适配模块（拟新增）",
+      "action": "由当前 kimi-for-coding 读取实际规则、品牌、模板和素材，完成简报、版式计划与产物生成；复用 DSH 停止和权限。",
+      "acceptance": "真实对话中的产物能对应所用资源和设计计划；没有第二个 OD 聊天或独立 agent 循环。",
+      "status": "partially_verified_corporate_svg_route",
+      "evidence": [
+        "design-plan-links.md",
+        "design-plan-manual.md",
+        "five-gaps-and-deck.md",
+        "five-gaps-code-audit.json",
+        "verification/kimi-opendesign-resume.json",
+        "verification/kimi-opendesign.json",
+        "verification/opendesign-model-audit.json"
+      ],
+      "verifiedScope": "Actual current configured Kimi reads original rules/tokens, uses OD orchestration paragraph, plans and creates native SVG. Final first narration hit QA deadline; actual saved generation reused after recovery. Full external director bundle not executed.",
+      "implementationNote": "设计计划可引用固定资源、已保存外部原包文件、固定 creative-director 文件及 Figma 导出，并可显式声明与已保存作品版本的关系；该声明不能证明模型行为，新关联和模型工作流未验证。 UI150补中文简报v2、图片任务精确计划绑定、历史指导原包兼容及显式迁移，均未功能验证。",
+      "currentValidation": {
+        "id": "G2",
+        "state": "partial_pending_real_model_or_service",
+        "cases": [
+          "test_local_design_features_ui.py",
+          "test_plan_editor_migration_ui.py"
+        ],
+        "boundary": "Case scopes define acceptance; no complete upstream equivalence or real-model execution inferred."
+      },
+      "currentValidationAddendum": {
+        "report": "verification/real-services-validation-20261113.json",
+        "boundary": "Use precise individual service, target-only, replay and reopen scopes; original failed whole-model flows remain failures."
+      }
+    },
+    {
+      "id": "G3",
+      "goal": "闭合 OD SVG 到原生可编辑设计的链路",
+      "files": "client/native-controller.js；host/editor-tools.js；生成产物/转换报告模块（拟新增）",
+      "action": "保留原始 SVG，经安全与依赖检查后交真实 Vector 导入；采用后的唯一可写源为原生文档。",
+      "acceptance": "OD 生成→手改路径/文字→AI 仅续改选中部分→SVG 导出重开；位图嵌入、缺字体、轮廓化和滤镜差异分别记录。",
+      "status": "verified_native_svg_core_route",
+      "evidence": [
+        "verification/kimi-opendesign-resume.json",
+        "verification/kimi-opendesign-export.svg",
+        "verification/opendesign-model-audit.json"
+      ],
+      "verifiedScope": "Actual generated original retained by hash; native text/path hand edit, actual selected-only Kimi continuation, physical SVG download, independent MuPDF decode and editable native reimport. Advanced dependencies/fonts/filter differences not fully audited.",
+      "currentValidation": {
+        "id": "G3",
+        "state": "partial_pending_real_model_or_service",
+        "cases": [
+          "test_svg_vector_inplace.py"
+        ],
+        "boundary": "Case scopes define acceptance; no complete upstream equivalence or real-model execution inferred."
+      },
+      "currentValidationAddendum": {
+        "report": "verification/real-services-validation-20261113.json",
+        "boundary": "Use precise individual service, target-only, replay and reopen scopes; original failed whole-model flows remain failures."
+      }
+    },
+    {
+      "id": "D1",
+      "goal": "扩展多引擎身份和选区协议",
+      "files": "host/editor-session.js；host/editor-tools.js；host/native-source-store.js；client/editor-frame.js；client/native-controller.js",
+      "action": "去掉仅适配 Vector 的类型假设；原生 u64 身份精确传输，保留各引擎真实选区结构和能力描述。",
+      "acceptance": "超出 JS 安全整数的 UID 不丢精度；不同引擎、源与旧选区不能互相误认；既有 Vector 路径保持有效。",
+      "status": "verified_vector_photo_core_foundation",
+      "evidence": [
+        "verification/native-exact-ids.json",
+        "verification/native-reference-pages.json",
+        "verification/vector-editing.json",
+        "verification/native-handoff.json",
+        "verification/native-protocol.tap",
+        "verification/native-contract.tap",
+        "verification/native-source-u64.tap",
+        "verification/native-history-u64.tap",
+        "verification/editor-protocol.tap",
+        "verification/editor-session-context2.tap",
+        "verification/editor-assets-context2.tap",
+        "verification/native-context-ordering-rust.log",
+        "verification/photo-workspace.json",
+        "verification/photo-original-placement-repair.json",
+        "verification/photo-core-stage.json"
+      ],
+      "verifiedScope": "Exact u64/raw JSON/full Vector context and ordering are verified in original foundation evidence. Actual Photo persistent DocId/generation/layer/image-pixel/source-backed selection and old-reference rejection are now verified in core6/native8/tools9/Kimi4. Complete Deck slide/text/cell/target context remains gated by its unfinished bridge.",
+      "currentValidation": {
+        "id": "D1",
+        "state": "scoped_local_checks_passed_with_stated_boundaries",
+        "cases": [
+          "test_photo_deck_references_ui.py"
+        ],
+        "boundary": "Case scopes define acceptance; no complete upstream equivalence or real-model execution inferred."
+      },
+      "currentValidationAddendum": {
+        "report": "verification/real-services-validation-20261113.json",
+        "boundary": "Use precise individual service, target-only, replay and reopen scopes; original failed whole-model flows remain failures."
+      }
+    },
+    {
+      "id": "D2",
+      "goal": "接通同一 Photo App 的持续控制桥",
+      "files": "Photo 上游 apps/photocraft-web/src 与 crates/ui-egui/src/{control.rs,app/control.rs}；client/editor-frame.js",
+      "action": "实现真实 ready/open 完成、状态、选择、执行、失败、历史和释放；所有操作进入正在显示的同一 App。",
+      "acceptance": "鼠标改图后 AI 读到同一图层状态；切面板再返回仍为同一文档，不能以逐命令短开 CLI 代替。",
+      "status": "verified_photo_core_bridge",
+      "evidence": [
+        "verification/photo-workspace.json",
+        "verification/photo-original-placement-repair.json",
+        "verification/photo-core-stage.json"
+      ],
+      "verifiedScope": "Actual source-matched Photo host3 and one real DSH persistent App: physical tools, current registered tools, full pcraft/pixels fresh reopen, ordered pending-state publication and genuine Kimi continuation verified. Broader formats/native file-menu paths are separate incomplete gates.",
+      "currentValidation": {
+        "id": "D2",
+        "state": "scoped_local_checks_passed_with_stated_boundaries",
+        "cases": [
+          "test_photo_tools.py",
+          "test_cross_engine_handoff_ui.py"
+        ],
+        "boundary": "Case scopes define acceptance; no complete upstream equivalence or real-model execution inferred."
+      },
+      "currentValidationAddendum": {
+        "report": "verification/real-services-validation-20261113.json",
+        "boundary": "Use precise individual service, target-only, replay and reopen scopes; original failed whole-model flows remain failures."
+      }
+    },
+    {
+      "id": "D3",
+      "goal": "接通 Photo 原生源和宿主平台服务",
+      "files": "Photo Web/文件/字体平台模块；client/native-controller.js；host/native-source-store.js；host/font.js",
+      "action": "提供真实源快照、保存确认、文件和所需剪贴板/字体服务，按来源限制选用许可兼容资源。",
+      "acceptance": "含图层、文字、软蒙版和调整的 .pcraft 保存重开仍保留对应结构；PNG/实际支持的分层交换格式按语义验证。",
+      "status": "verified_photo_layered_source_and_file_scoped",
+      "evidence": [
+        "verification/photo-core-stage.json",
+        "verification/photo-original-placement-repair.json",
+        "verification/photo-tools.json",
+        "verification/photo-workspace.json",
+        "verification/ui45-export-acceptance.json",
+        "verification/ui45-photo-complete-acceptance.json"
+      ],
+      "verifiedScope": "真实 .pcraft 同时含图层、文字、蒙版与调整层；重开后完整结构和 RGBA 一致，PNG/PSD/WebP/TIFF 按导出报告核验。系统剪贴板未使用。",
+      "currentValidation": {
+        "id": "D3",
+        "state": "scoped_local_checks_passed_with_stated_boundaries",
+        "cases": [
+          "test_photo_complete_source_ui.py",
+          "test_delivery_formats_ui.py"
+        ],
+        "boundary": "Case scopes define acceptance; no complete upstream equivalence or real-model execution inferred."
+      },
+      "currentValidationAddendum": {
+        "report": "verification/real-services-validation-20261113.json",
+        "boundary": "Use precise individual service, target-only, replay and reopen scopes; original failed whole-model flows remain failures."
+      }
+    },
+    {
+      "id": "D4",
+      "goal": "接入图片手工工具",
+      "files": "Photo 上游 crates/ui-egui/src；client/native-workspace.js",
+      "action": "逐项接入选择、裁剪、画笔、擦除、图层、蒙版、调整、滤镜和合成等原项目中承诺的功能。",
+      "acceptance": "真实绘制、软边选区和蒙版可见且改变源；选区 alpha、层顺序和参数重开保持，图片预览不能替代这些操作。",
+      "status": "verified_photo_manual_tools_scoped",
+      "evidence": [
+        "verification/photo-stage-audit.json",
+        "verification/photo-state-publication.json",
+        "verification/photo-tools.json",
+        "verification/ui45-context-tools-acceptance.json",
+        "verification/ui45-photo-complete-acceptance.json"
+      ],
+      "verifiedScope": "实际画笔、擦除、裁剪、选择、羽化蒙版、图层、调整、滤镜和混合及保存重开按报告核验；不宣称全部上游专业菜单完成。",
+      "currentValidation": {
+        "id": "D4",
+        "state": "scoped_local_checks_passed_with_stated_boundaries",
+        "cases": [
+          "test_photo_tools.py"
+        ],
+        "boundary": "Case scopes define acceptance; no complete upstream equivalence or real-model execution inferred."
+      },
+      "currentValidationAddendum": {
+        "report": "verification/real-services-validation-20261113.json",
+        "boundary": "Use precise individual service, target-only, replay and reopen scopes; original failed whole-model flows remain failures."
+      }
+    },
+    {
+      "id": "D5",
+      "goal": "让 Kimi 精确编辑 Photo 图层和选区",
+      "files": "host/editor-tools.js；client/native-reference.js；Photo 控制与状态模块",
+      "action": "向当前 DSH 模型暴露真实图层、选区、蒙版和可用命令，遵守同源版本检查与人工优先。",
+      "acceptance": "用户手刷蒙版→Kimi 只调指定层→用户继续补边；原图、其他层和后续手改保留，保存后结构可核对。",
+      "status": "verified_photo_mask_layer_kimi_route",
+      "evidence": [
+        "verification/photo-kimi.json",
+        "verification/photo-stage-audit.json",
+        "verification/ui160-ai-canvas-20261113.json",
+        "verification/ui161-ai-native-ux-20261113.json"
+      ],
+      "verifiedScope": "one actual current kimi-for-coding turn changes only target opacity, preserves hand mask/all other native fields; physical refinement and fresh reopen verified4",
+      "currentValidation": {
+        "id": "D5",
+        "state": "partial_pending_real_model_or_service",
+        "cases": [
+          "test_photo_deck_references_ui.py",
+          "test_cross_engine_handoff_ui.py"
+        ],
+        "boundary": "Case scopes define acceptance; no complete upstream equivalence or real-model execution inferred."
+      },
+      "currentValidationAddendum": {
+        "report": "verification/real-services-validation-20261113.json",
+        "boundary": "Use precise individual service, target-only, replay and reopen scopes; original failed whole-model flows remain failures."
+      }
+    },
+    {
+      "id": "E1",
+      "goal": "接通同一 Deck App 的持续控制桥",
+      "files": "Deck 上游 apps/deckcraft-web/src 与 crates/ui-egui/src/{control.rs,app/control.rs}；client/editor-frame.js",
+      "action": "宿主模式避免自动载入样例覆盖工作；连接真实文档、当前页、选区、操作完成与历史。",
+      "acceptance": "打开真实演示后手工和 AI 操作同一页面/对象；切回后对象身份、源和页面状态一致。依赖 D1。",
+      "status": "verified_deck_core_bridge",
+      "evidence": [
+        "verification/deck-surface.json",
+        "verification/deck-workspace.json",
+        "verification/deck-stage-audit.json"
+      ],
+      "verifiedScope": "Actual same SlideApp control/native UID/typed page/text/cell/master targets and ordered state; native7 + actual Surface4 + DSH4 verified. No short-lived CLI replacement.",
+      "currentValidation": {
+        "id": "E1",
+        "state": "scoped_local_checks_passed_with_stated_boundaries",
+        "cases": [
+          "test_deck_context_tools_ui.py",
+          "test_cross_engine_handoff_ui.py"
+        ],
+        "boundary": "Case scopes define acceptance; no complete upstream equivalence or real-model execution inferred."
+      },
+      "currentValidationAddendum": {
+        "report": "verification/real-services-validation-20261113.json",
+        "boundary": "Use precise individual service, target-only, replay and reopen scopes; original failed whole-model flows remain failures."
+      }
+    },
+    {
+      "id": "E2",
+      "goal": "接入演示常用原生对象的手工编辑",
+      "files": "Deck 上游 crates/ui-egui/src；client/native-workspace.js",
+      "action": "实现页面增删排序、文字、形状、图片，以及上游实际支持的表格和图表入口。",
+      "acceptance": "分别修改文字、形状和结构化对象并核对源；页面不能被整页图片替代，不能用图片装作可编辑表格或图表。",
+      "status": "verified_deck_native_structured_objects_scoped",
+      "evidence": [
+        "verification/deck-stage-audit.json",
+        "verification/deck-surface.json",
+        "verification/deck-workspace.json",
+        "verification/photo-deck-material.json",
+        "verification/ui45-deck-structured-acceptance.json"
+      ],
+      "verifiedScope": "真实表格单元格键盘编辑、图表数据修改及 PPTX 独立读取结构/数据；原生页面新增、排序、删除和重开通过，结合既有文字、形状和图片实测。",
+      "currentValidation": {
+        "id": "E2",
+        "state": "scoped_local_checks_passed_with_stated_boundaries",
+        "cases": [
+          "test_deck_structured_ui.py"
+        ],
+        "boundary": "Case scopes define acceptance; no complete upstream equivalence or real-model execution inferred."
+      },
+      "currentValidationAddendum": {
+        "report": "verification/real-services-validation-20261113.json",
+        "boundary": "Use precise individual service, target-only, replay and reopen scopes; original failed whole-model flows remain failures."
+      }
+    },
+    {
+      "id": "E3",
+      "goal": "逐项接入演示专有语义",
+      "files": "Deck 上游 crates/engine/src 与 crates/ui-egui/src；能力矩阵（A1）",
+      "action": "核对并接入母版、版式、主题、备注、演示和已承诺的转场/动画等上游能力，记录尚缺的 Web 平台服务。",
+      "acceptance": "按上游实际语义逐项验收；能力缺失须补齐或列明边界，不能用简单效果冒称复杂转场或完整演示支持。",
+      "status": "verified_deck_semantics_and_morph_samples_scoped",
+      "evidence": [
+        "verification/deck-stage-audit.json",
+        "verification/deck-surface.json",
+        "verification/ui45-deck-media-acceptance.json",
+        "verification/ui45-deck-media-picker-acceptance.json",
+        "verification/ui45-deck-morph-acceptance.json",
+        "verification/ui45-deck-semantics-acceptance.json"
+      ],
+      "verifiedScope": "实际备注、主题、母版/版式、放映、淡入动画、Morph 形状移动及 WAV/MP4 文件选择与保存按样本核验。其他效果、编码、外部 Office 和多屏未全量验证。",
+      "currentValidation": {
+        "id": "E3",
+        "state": "scoped_local_checks_passed_with_stated_boundaries",
+        "cases": [
+          "test_deck_semantics_ui.py",
+          "test_deck_master_show_ui.py",
+          "test_deck_local_ink_ui.py",
+          "test_mathml_native_retry_ui.py"
+        ],
+        "boundary": "Deck semantics and text Ink passed; actual Windows Math, screen, microphone and camera await timing permission."
+      },
+      "currentValidationAddendum": {
+        "report": "verification/real-services-validation-20261113.json",
+        "boundary": "Use precise individual service, target-only, replay and reopen scopes; original failed whole-model flows remain failures."
+      }
+    },
+    {
+      "id": "E4",
+      "goal": "让 Kimi 局部修改真实演示",
+      "files": "host/editor-tools.js；client/native-reference.js；Deck 状态/控制模块",
+      "action": "绑定当前页面、形状和范围；直接创建和编辑原生内容，复用当前素材和设计规则。",
+      "acceptance": "真实对话只改指定标题或对象，不重做整页；用户之前的对齐、文字和摆放保持。",
+      "status": "verified_deck_targeted_kimi_route",
+      "evidence": [
+        "verification/deck-kimi.json",
+        "verification/deck-stage-audit.json",
+        "verification/ui160-ai-canvas-20261113.json",
+        "verification/ui161-ai-native-ux-20261113.json"
+      ],
+      "verifiedScope": "One actual configured Kimi turn changes only requested shape.fill, preserves preceding manual move and every other native field; physical continuation + fresh source reopen verified4.",
+      "currentValidation": {
+        "id": "E4",
+        "state": "partial_pending_real_model_or_service",
+        "cases": [
+          "test_cross_engine_handoff_ui.py"
+        ],
+        "boundary": "Case scopes define acceptance; no complete upstream equivalence or real-model execution inferred."
+      },
+      "currentValidationAddendum": {
+        "report": "verification/real-services-validation-20261113.json",
+        "boundary": "Use precise individual service, target-only, replay and reopen scopes; original failed whole-model flows remain failures."
+      }
+    },
+    {
+      "id": "E5",
+      "goal": "闭合 Deck 原生源与可编辑 PPTX",
+      "files": "Deck 原生保存/PPTX 模块；client/native-controller.js；host/deck-source.js；导出适配模块（拟新增）",
+      "action": "接通 .deckcraft 保存和实际 PPTX 输出，处理真实字体、媒体和平台依赖。",
+      "acceptance": ".deckcraft 与 .pptx 分别重开；核验文字、形状和已承诺结构化对象可编辑，媒体与缺字体变化有报告。",
+      "status": "verified_deck_source_pptx_samples_scoped",
+      "evidence": [
+        "verification/deck-stage-audit.json",
+        "verification/deck-surface.json",
+        "verification/deck-workspace.json",
+        "verification/ui45-deck-font-acceptance.json",
+        "verification/ui45-deck-media-acceptance.json",
+        "verification/ui45-deck-structured-acceptance.json"
+      ],
+      "verifiedScope": "真实 .deckcraft 源及 PPTX 的文字、表格、图表重开和续改；Inter 内嵌字体字节往返、缺字提示及 WAV/H264 样本媒体保留通过。其他字体/编码及外部 Office 未全面验证。",
+      "currentValidation": {
+        "id": "E5",
+        "state": "scoped_local_checks_passed_with_stated_boundaries",
+        "cases": [
+          "test_deck_structured_ui.py",
+          "test_deck_font_roundtrip_ui.py",
+          "test_delivery_formats_ui.py"
+        ],
+        "boundary": "Case scopes define acceptance; no complete upstream equivalence or real-model execution inferred."
+      },
+      "currentValidationAddendum": {
+        "report": "verification/real-services-validation-20261113.json",
+        "boundary": "Use precise individual service, target-only, replay and reopen scopes; original failed whole-model flows remain failures."
+      }
+    },
+    {
+      "id": "F1",
+      "goal": "建立项目、源、实例与版本关系",
+      "files": "host/native-source-store.js；host/media-link.js；项目/素材/实例模块（拟新增）",
+      "action": "分别保存专业源、派生物和布局实例，记录来源、修订与唯一可写归属；预览不是权威源。",
+      "acceptance": "能追溯一张 PPT 图片和一个 SVG 的原生源；源更新与实例布局职责明确，同名文件或相同 hash 不自动关联。",
+      "status": "verified_three_engine_snapshot_foundation",
+      "evidence": [
+        "verification/project-materials.json",
+        "verification/project-material-recovery.json",
+        "verification/project-navigation.json",
+        "verification/project-navigation-conflict.json",
+        "verification/project-navigation-crash.json",
+        "verification/native-handoff.json",
+        "verification/native-source-placement.tap",
+        "verification/project-graph-storage.tap",
+        "verification/project-graph-protocol.tap",
+        "verification/editor-session-project-navigation.tap",
+        "verification/native-bundle-rust.log",
+        "verification/project-material-journal-fault.json",
+        "verification/photo-workspace.json",
+        "verification/photo-original-placement-repair.json",
+        "verification/photo-core-stage.json",
+        "verification/photo-deck-material.json",
+        "verification/deck-stage-audit.json"
+      ],
+      "verifiedScope": "actual immutable Photo native-source version/PNG -> real Vector and Deck native picture/page/media uses; source navigation and same-parent return; in-place/copy-on-write/live updates pending",
+      "currentValidation": {
+        "id": "F1",
+        "state": "scoped_local_checks_passed_with_stated_boundaries",
+        "cases": [
+          "test_mixed_linked_seven.py"
+        ],
+        "boundary": "Case scopes define acceptance; no complete upstream equivalence or real-model execution inferred."
+      },
+      "currentValidationAddendum": {
+        "report": "verification/real-services-validation-20261113.json",
+        "boundary": "Use precise individual service, target-only, replay and reopen scopes; original failed whole-model flows remain failures."
+      }
+    },
+    {
+      "id": "F2",
+      "goal": "实现普通复制独立和当前使用处分叉",
+      "files": "项目/实例模块（拟新增）；host/media-link.js；client/native-controller.js",
+      "action": "普通复制逻辑独立；修改共享素材的当前实例时自动独立成源；明确建立关联才联动。",
+      "acceptance": "同一 media 的两处使用中只改一处，另一处和品牌原件不变；用户无需手动建立、搬运子作品。",
+      "status": "verified_independent_png_svg_instances",
+      "evidence": [
+        "verification/independent-instances-core.json",
+        "verification/instance-stage-audit.json",
+        "verification/mixed-instance-stage-audit.json",
+        "verification/native-origins-stage-audit.json",
+        "verification/svg-inplace-core-audit.json"
+      ],
+      "verifiedScope": "已接入的 PNG、SVG 放入海报和演示。复制后独立编辑并应用，原件和其他使用处保留。",
+      "currentValidation": {
+        "id": "F2",
+        "state": "scoped_local_checks_passed_with_stated_boundaries",
+        "cases": [
+          "test_svg_vector_inplace.py",
+          "test_svg_deck_inplace.py"
+        ],
+        "boundary": "Case scopes define acceptance; no complete upstream equivalence or real-model execution inferred."
+      },
+      "currentValidationAddendum": {
+        "report": "verification/real-services-validation-20261113.json",
+        "boundary": "Use precise individual service, target-only, replay and reopen scopes; original failed whole-model flows remain failures."
+      }
+    },
+    {
+      "id": "F3",
+      "goal": "在海报/PPT 中原位编辑图片",
+      "files": "host/media-link.js；client/native-controller.js；client/native-workspace.js；Photo/Deck/Vector 桥",
+      "action": "双击图片进入其 Photo 内容上下文，再回到原版式，按新源修订更新派生图。",
+      "acceptance": "蒙版/调色后返回：位置、裁剪、旋转、组关系、层级和非目标内容保持；保存重开仍可进入分层源。",
+      "status": "verified_photo_double_click_inplace",
+      "evidence": [
+        "verification/instance-stage-audit.json",
+        "verification/mixed-instance-stage-audit.json",
+        "verification/native-origins-stage-audit.json",
+        "verification/photo-double-click-inplace.json",
+        "verification/ui45-photo-inplace-reverification.json"
+      ],
+      "verifiedScope": "海报、幻灯片双击已绑定 PNG 进入原生分层 Photo，实际软边蒙版回写同一对象，两份文件重开后再次双击均恢复相同蒙版。原位布局、裁剪、旋转、组与其他内容均按保存文件核对。",
+      "currentValidation": {
+        "id": "F3",
+        "state": "scoped_local_checks_passed_with_stated_boundaries",
+        "cases": [
+          "test_mixed_linked_seven.py"
+        ],
+        "boundary": "Case scopes define acceptance; no complete upstream equivalence or real-model execution inferred."
+      },
+      "currentValidationAddendum": {
+        "report": "verification/real-services-validation-20261113.json",
+        "boundary": "Use precise individual service, target-only, replay and reopen scopes; original failed whole-model flows remain failures."
+      }
+    },
+    {
+      "id": "F4",
+      "goal": "在海报/PPT 中原位编辑 SVG",
+      "files": "矢量媒体绑定模块（拟新增）；client/native-controller.js；Vector/Deck 桥",
+      "action": "保留关联的 Vector 源与 SVG 派生物；进入路径编辑并返回原实例，不要求手动导出回贴。",
+      "acceptance": "修改一个内部节点或文字后，源、显示、保存、导出、再导入分别一致；复杂 SVG 不静默转 PNG。",
+      "status": "verified_svg_inplace_core",
+      "evidence": [
+        "verification/svg-deck-stage-audit.json",
+        "verification/svg-inplace-core-audit.json",
+        "verification/svg-vector-stage-audit.json",
+        "verification/ui45-svg-current-reverification.json"
+      ],
+      "verifiedScope": "Actual new and eligible unchanged legacy SVG poster same-object edit/apply/undo/redo/reopen; actual Deck SVG+preview/PPTX; hosted SVG 7-decimal export and tested exact re-import. Self-contained/size and legacy subset limitations remain.",
+      "currentValidation": {
+        "id": "F4",
+        "state": "scoped_local_checks_passed_with_stated_boundaries",
+        "cases": [
+          "test_svg_vector_inplace.py",
+          "test_svg_deck_inplace.py"
+        ],
+        "boundary": "Case scopes define acceptance; no complete upstream equivalence or real-model execution inferred."
+      },
+      "currentValidationAddendum": {
+        "report": "verification/real-services-validation-20261113.json",
+        "boundary": "Use precise individual service, target-only, replay and reopen scopes; original failed whole-model flows remain failures."
+      }
+    },
+    {
+      "id": "F5",
+      "goal": "提供明确的 SVG 到 PPT 原生对象转换",
+      "files": "PPT 原生形状转换和报告模块（拟新增）；Deck 命令适配",
+      "action": "对实际支持的简单路径、形状和文字做有语义范围的转换，保留原 SVG 和转换前版本。",
+      "acceptance": "检查 PPTX 内确有对应可编辑原生对象；复杂滤镜、剪切或字体不等价时明确保留 SVG 或报告选择，不能把 SVG 媒体称为已拆形状。",
+      "status": "verified_svg_to_native_ppt_core",
+      "evidence": [
+        "verification/svg-native-ppt-core-audit.json",
+        "verification/ui45-svg-current-reverification.json"
+      ],
+      "verifiedScope": "Actual UI simple SVG to editable native paths/text, hidden original, native/PPTX export-reimport, physical edit/undo-redo and response-loss/reload recovery. Strict subset, text layout warning and edge-render differences remain.",
+      "currentValidation": {
+        "id": "F5",
+        "state": "scoped_local_checks_passed_with_stated_boundaries",
+        "cases": [
+          "test_svg_to_ppt_shapes.py",
+          "test_svg_to_ppt_text.py",
+          "test_svg_to_ppt_unsupported.py"
+        ],
+        "boundary": "Case scopes define acceptance; no complete upstream equivalence or real-model execution inferred."
+      },
+      "currentValidationAddendum": {
+        "report": "verification/real-services-validation-20261113.json",
+        "boundary": "Use precise individual service, target-only, replay and reopen scopes; original failed whole-model flows remain failures."
+      }
+    },
+    {
+      "id": "F6",
+      "goal": "实现明确关联更新与局部覆盖",
+      "files": "素材/品牌绑定和提交模块（拟新增）；host/persistence.js；client/native-workspace.js",
+      "action": "显式更新所有关联处时保留各实例布局、裁剪和手工覆盖；以可恢复版本提交多目标更新。",
+      "acceptance": "更新关联 7 处只影响这 7 处，普通副本不变；一处白色 logo 和人工位置保留；中途失败不显示半套成功，比例变化按锚点处理。",
+      "status": "verified_linked_updates_anchor_and_override_scoped",
+      "evidence": [
+        "verification/instance-stage-audit.json",
+        "verification/mixed-instance-stage-audit.json",
+        "verification/native-origins-stage-audit.json",
+        "verification/svg-linked-stage-audit.json",
+        "verification/ui45-brand-font-acceptance.json",
+        "verification/ui45-f6-anchor-acceptance.json"
+      ],
+      "verifiedScope": "实际 PNG/SVG 七处显式关联更新、独立第八处、局部白色及人工位置/失败恢复；PNG 左上与历史 SVG 右下锚点实测零偏移，九锚点旋转/裁剪几何测试通过；品牌字体按证据范围核验。",
+      "currentValidation": {
+        "id": "F6",
+        "state": "scoped_local_checks_passed_with_stated_boundaries",
+        "cases": [
+          "test_mixed_linked_seven.py",
+          "test_svg_linked_seven.py"
+        ],
+        "boundary": "Case scopes define acceptance; no complete upstream equivalence or real-model execution inferred."
+      },
+      "currentValidationAddendum": {
+        "report": "verification/real-services-validation-20261113.json",
+        "boundary": "Use precise individual service, target-only, replay and reopen scopes; original failed whole-model flows remain failures."
+      }
+    },
+    {
+      "id": "G4",
+      "goal": "保留 HTML 设计源与真实安全预览",
+      "files": "HTML 产物/受限预览模块（拟新增）；host/editor-assets.js；OD 适配",
+      "action": "管理 HTML/CSS、必要资源和原始产物，在受限运行域中真实渲染，处理外链、脚本、字体与文件边界。",
+      "acceptance": "可运行、可保存和重开原始网页设计；权限范围清楚，不能用截图代替 HTML 能力，也不扩展为网站发布工程。",
+      "status": "verified_html_source_preview_scoped",
+      "evidence": [
+        "verification/ui45-html-acceptance.json",
+        "verification/ui45-html-preview.json",
+        "verification/ui45-html-source.tap"
+      ],
+      "verifiedScope": "Owned headless DSH: actual HTML/CSS/JS/image source saved and reopened; scoped preview loaded local resources, blocked foreign network, parent DOM and host API; concurrent/stale writes refused. This is not a universal sandbox proof or evidence of the user window.",
+      "currentValidation": {
+        "id": "G4",
+        "state": "scoped_local_checks_passed_with_stated_boundaries",
+        "cases": [
+          "test_html_preview_ui.py",
+          "test_od_html_package_ui.py"
+        ],
+        "boundary": "Case scopes define acceptance; no complete upstream equivalence or real-model execution inferred."
+      },
+      "currentValidationAddendum": {
+        "report": "verification/real-services-validation-20261113.json",
+        "boundary": "Use precise individual service, target-only, replay and reopen scopes; original failed whole-model flows remain failures."
+      }
+    },
+    {
+      "id": "G5",
+      "goal": "接入 OD HTML 到可编辑 PPTX 服务",
+      "files": "OD deck-capture/dom-to-pptx 定向适配（拟新增）；转换报告模块；Deck 导入适配",
+      "action": "提供真实渲染、字体和导出依赖，执行实际转换；转换后由 Deck 接管新版本，来源 HTML 保留。",
+      "acceptance": "真实样本中原生文字/形状能手改；SVG 媒体和栅格效果分别报告；导出、导入、续改、重开通过，不承诺通用双向无损同步。",
+      "status": "verified_html_pptx_roundtrip_scoped",
+      "evidence": [
+        "verification/ui45-html-acceptance.json",
+        "verification/ui45-html-font-missing.json",
+        "verification/ui45-html-font.json",
+        "verification/ui45-html-raster-conversion.json",
+        "verification/ui45-html-raster-report.tap"
+      ],
+      "verifiedScope": "Owned headless DSH: actual converter produced native editable text/shapes, separate SVG and raster pictures; a physical text edit survived native reopen and PPTX export/reimport; local Inter font embedded, invalid font produced a persisted warning. Arbitrary HTML fidelity and converter dependency/license audit remain outside this evidence.",
+      "currentValidation": {
+        "id": "G5",
+        "state": "scoped_local_checks_passed_with_stated_boundaries",
+        "cases": [
+          "test_html_preview_ui.py",
+          "test_html_font_ui.py"
+        ],
+        "boundary": "Case scopes define acceptance; no complete upstream equivalence or real-model execution inferred."
+      },
+      "currentValidationAddendum": {
+        "report": "verification/real-services-validation-20261113.json",
+        "boundary": "Use precise individual service, target-only, replay and reopen scopes; original failed whole-model flows remain failures."
+      }
+    },
+    {
+      "id": "G6",
+      "goal": "完成一套品牌的海报、社交图和 PPT",
+      "files": "OD 工作流；品牌/模板/绑定模块（拟新增）；Photo/Vector/Deck 桥",
+      "action": "共享 logo、主视觉、字体和颜色，按目标尺寸分别生成原生版式，支持继承与局部覆盖。",
+      "acceptance": "三种物料各有可编辑源；改主色只动绑定属性且保留人工位置，一处 logo 改白不污染品牌本体；不能用同一海报缩放图充当三种排版。",
+      "status": "verified_three_native_brand_layouts",
+      "evidence": [
+        "verification/brand-package-audit.json"
+      ],
+      "verifiedScope": "独立海报、社交图与演示共享两组明确关联的原创 SVG、Inter 与 Corporate 主色。实测跨源换色、手动局部配色、白色标志、人工位置与中断恢复。字体使用共享字族，当前自动更新限于纯色填充。",
+      "implementationNote": "新文字身份绑定及保守恢复代码已构建装盘；复制、手改和故障恢复尚未验证，旧绑定仍按保守规则处理。",
+      "currentValidation": {
+        "id": "G6",
+        "state": "partial_pending_real_model_or_service",
+        "cases": [
+          "test_od_dynamic_brand_ui.py",
+          "test_brand_font_cross_ui.py",
+          "test_brand_font_ui.py"
+        ],
+        "boundary": "Case scopes define acceptance; no complete upstream equivalence or real-model execution inferred."
+      },
+      "currentValidationAddendum": {
+        "report": "verification/real-services-validation-20261113.json",
+        "boundary": "Use precise individual service, target-only, replay and reopen scopes; original failed whole-model flows remain failures."
+      }
+    },
+    {
+      "id": "H1",
+      "goal": "复用 DSH 已配置图片服务和安全凭据",
+      "files": "host/image-provider.js；host/image-jobs.js；DSH 设置/凭据接入",
+      "action": "读取当前服务元数据和真实能力，按需核验生成/编辑协议；沿用安全引用，不额外强制 OpenRouter。",
+      "acceptance": "实际服务与所宣称能力对应；密钥不进入浏览器、项目或日志；kimi-for-coding 做总控，不能凭模型名字断言其能生图。",
+      "status": "in_progress",
+      "evidence": [
+        "five-gaps-and-deck.md",
+        "five-gaps-code-audit.json",
+        "verification/ui45-image-acceptance.json"
+      ],
+      "verifiedScope": "实际本机代理目录及真实图片请求、凭据隔离检查通过；本轮 Kimi 对话工具调用返回额度 429，尚未通过。",
+      "implementationNote": "新增 Venice、fal、OpenAI 及 Gemini 图片协议入口和部分请求恢复代码；此前真实调用证据保留，本续接未调用模型或图片服务，最近 Kimi 记录为额度 429。 独立生图API的配置/切换/清除及请求绑定代码已写入，功能验证仍按用户要求暂缓。",
+      "currentValidation": {
+        "id": "H1",
+        "state": "partial_pending_real_model_or_service",
+        "cases": [
+          "test_image_api_settings_ui.py",
+          "test_image_catalog_ui.py"
+        ],
+        "boundary": "Case scopes define acceptance; no complete upstream equivalence or real-model execution inferred."
+      },
+      "currentValidationAddendum": {
+        "report": "verification/real-services-validation-20261113.json",
+        "boundary": "Use precise individual service, target-only, replay and reopen scopes; original failed whole-model flows remain failures."
+      }
+    },
+    {
+      "id": "H2",
+      "goal": "把真实生图接入可编辑图片源",
+      "files": "host/image-jobs.js；Photo 桥；素材模块（F1）",
+      "action": "真实调用现有可用服务，解码结果后建立实际 Photo 图片层，并允许继续人工合成。",
+      "acceptance": "真实响应、图片语义、源图层和保存结果可核验；结果能裁剪、加文字和蒙版，不只是预览卡片。",
+      "status": "verified_real_image_editable_source_scoped",
+      "evidence": [
+        "verification/ui45-image-acceptance.json"
+      ],
+      "verifiedScope": "真实双候选成为可编辑 Photo 源；蒙版、文字、裁剪及重开通过，后续补做 RGB 与 alpha 全通道复核。",
+      "currentValidation": {
+        "id": "H2",
+        "state": "partial_pending_real_model_or_service",
+        "cases": [
+          "test_image_catalog_ui.py"
+        ],
+        "boundary": "Case scopes define acceptance; no complete upstream equivalence or real-model execution inferred."
+      },
+      "currentValidationAddendum": {
+        "report": "verification/real-services-validation-20261113.json",
+        "boundary": "Use precise individual service, target-only, replay and reopen scopes; original failed whole-model flows remain failures."
+      }
+    },
+    {
+      "id": "H3",
+      "goal": "把真实局部重绘接入图层和蒙版",
+      "files": "host/photo-mask.js；host/image-composite.js；host/image-jobs.js；Photo 桥",
+      "action": "使用实际选区 alpha 和坐标，保留原图，以新结果层/蒙版采用；区分服务原生硬蒙版与参考图生成后受控合成。",
+      "acceptance": "真实服务修改指定内容；按承诺检查区域内变化与区域外保护；软边和变换正确，不能把无语义的覆盖操作当 AI 重绘。",
+      "status": "verified_real_masked_repaint_transform_scoped",
+      "evidence": [
+        "verification/ui45-image-acceptance.json",
+        "verification/ui45-transformed-mask.json"
+      ],
+      "verifiedScope": "真实服务按提示将红苹果改绿；原生羽化选区外 866832 像素未变化。另以真实旋转、缩放、羽化选区复用该服务结果，1022606 个选区外像素未变化；采用、撤销及冲突保护通过。",
+      "currentValidation": {
+        "id": "H3",
+        "state": "partial_pending_real_model_or_service",
+        "cases": [
+          "test_photo_tools.py"
+        ],
+        "boundary": "Case scopes define acceptance; no complete upstream equivalence or real-model execution inferred."
+      },
+      "currentValidationAddendum": {
+        "report": "verification/real-services-validation-20261113.json",
+        "boundary": "Use precise individual service, target-only, replay and reopen scopes; original failed whole-model flows remain failures."
+      }
+    },
+    {
+      "id": "H4",
+      "goal": "打通人工修边后的 AI 继续修改",
+      "files": "Photo 状态/控制模块；host/image-jobs.js；client/native-reference.js",
+      "action": "下一次 AI 操作读取当前真实图层、最新蒙版与人工修订；保护未采用结果和未目标图层。",
+      "acceptance": "生成/重绘→用户修边→AI 续改→保存重开，人工改动与非目标内容保持；不重新覆盖整个文档。",
+      "status": "verified_manual_edge_ai_continuation_scoped",
+      "evidence": [
+        "verification/ui45-image-acceptance.json"
+      ],
+      "verifiedScope": "真实生图后物理画笔修整苹果边缘，下一次真实 AI 编辑把叶子改为金黄；原手工层逐字段不变、1049904 选区外像素不变，原生源保存重开并按 RGBA 复核。",
+      "currentValidation": {
+        "id": "H4",
+        "state": "partial_pending_real_model_or_service",
+        "cases": [
+          "test_cross_engine_handoff_ui.py"
+        ],
+        "boundary": "Case scopes define acceptance; no complete upstream equivalence or real-model execution inferred."
+      },
+      "currentValidationAddendum": {
+        "report": "verification/real-services-validation-20261113.json",
+        "boundary": "Use precise individual service, target-only, replay and reopen scopes; original failed whole-model flows remain failures."
+      }
+    },
+    {
+      "id": "H5",
+      "goal": "接入真实多方案与安全采用",
+      "files": "host/variants.js；host/image-jobs.js；client/variant-ui.js；原生源分支模块（拟新增）",
+      "action": "图片和作品候选各有独立源与基线；提供对比、采用、撤销和冲突处理；恢复时不自动重发付费请求。",
+      "acceptance": "真实生成候选互不覆盖；用户之后手改仍保留；采用只影响指定范围，撤销再采用不无故重复调用服务。",
+      "status": "verified_real_image_and_native_variants_scoped",
+      "evidence": [
+        "verification/ui45-image-acceptance.json"
+      ],
+      "verifiedScope": "真实图片候选与 Photo 作品方案均独立；采用、撤销、再次采用无需重复生图，后续真实手改被保留且旧候选返回 409；补做全通道复核。",
+      "currentValidation": {
+        "id": "H5",
+        "state": "partial_pending_real_model_or_service",
+        "cases": [
+          "test_native_variants_ui.py"
+        ],
+        "boundary": "Case scopes define acceptance; no complete upstream equivalence or real-model execution inferred."
+      },
+      "currentValidationAddendum": {
+        "report": "verification/real-services-validation-20261113.json",
+        "boundary": "Use precise individual service, target-only, replay and reopen scopes; original failed whole-model flows remain failures."
+      }
+    },
+    {
+      "id": "I1",
+      "goal": "统一实际可用的导出入口和格式说明",
+      "files": "client/native-workspace.js；host/pptx.js；host/pdf.js；host/psd.js；host/jpeg.js；导出服务（拟新增）",
+      "action": "提供原生源、PNG/JPG、SVG、PPTX、PDF 及实际支持的分层交换格式；注明具体保留语义与可用范围。",
+      "acceptance": "入口、格式和真实产物一致；PDF 的矢量/文字、PSD 图层、PPTX 原生对象分别说明，不能仅换扩展名或整页图冒充。",
+      "status": "verified_export_entries_and_semantics_scoped",
+      "evidence": [
+        "verification/ui45-export-acceptance.json"
+      ],
+      "verifiedScope": "原生源、PNG/JPEG、SVG、PPTX、PDF、分层 PSD 和 WebP/TIFF 的实际入口与产物按样本核对；演示 PDF 标明页面位图及可搜索文字层。",
+      "currentValidation": {
+        "id": "I1",
+        "state": "scoped_local_checks_passed_with_stated_boundaries",
+        "cases": [
+          "test_delivery_formats_ui.py"
+        ],
+        "boundary": "Case scopes define acceptance; no complete upstream equivalence or real-model execution inferred."
+      },
+      "currentValidationAddendum": {
+        "report": "verification/real-services-validation-20261113.json",
+        "boundary": "Use precise individual service, target-only, replay and reopen scopes; original failed whole-model flows remain failures."
+      }
+    },
+    {
+      "id": "I2",
+      "goal": "为每种承诺格式完成重开验收",
+      "files": "tests/export-integrity.py；现有源/导出测试；对应新原生运行时测试（拟新增）",
+      "action": "独立解码或用合适消费者重开产物，核验画面、字体、结构、媒体和页面；有损处保留具体报告。",
+      "acceptance": "格式文件实际可用；能被本插件重读不自动代表外部兼容，外部消费者未验证须明确说明。",
+      "status": "verified_export_reopen_scoped",
+      "evidence": [
+        "verification/ui45-export-acceptance.json"
+      ],
+      "verifiedScope": "已承诺格式按报告用原生编辑器或独立 Pillow、PyMuPDF、python-pptx 读取；PSD 两层记录及 Photo 重开、PPTX 真实图表/表格均核对，Adobe/Office 桌面消费者未测。",
+      "currentValidation": {
+        "id": "I2",
+        "state": "scoped_local_checks_passed_with_stated_boundaries",
+        "cases": [
+          "test_delivery_formats_ui.py"
+        ],
+        "boundary": "Case scopes define acceptance; no complete upstream equivalence or real-model execution inferred."
+      },
+      "currentValidationAddendum": {
+        "report": "verification/real-services-validation-20261113.json",
+        "boundary": "Use precise individual service, target-only, replay and reopen scopes; original failed whole-model flows remain failures."
+      }
+    },
+    {
+      "id": "I3",
+      "goal": "生成可继续编辑的完整项目包",
+      "files": "项目打包和依赖清单模块（拟新增）；host/zip.js；host/native-source-store.js",
+      "action": "包含原生源、素材关系、实际依赖、来源及许可；导出 PPTX 内嵌当前媒体快照。",
+      "acceptance": "干净目录解包可继续编辑和关联复用；项目包无密钥/私有会话；外部 PPT 不冒称继承 DSH 的实时关联。",
+      "status": "verified_portable_native_project_core",
+      "evidence": [
+        "verification/brand-package-audit.json"
+      ],
+      "verifiedScope": "真实导出项目 ZIP，独立解压至空目录后在 DSH 重开并实际编辑、复用共享 SVG。含已发布源版本、素材关系、依赖/许可、来源；排除聊天状态和操作日志。",
+      "currentValidation": {
+        "id": "I3",
+        "state": "scoped_local_checks_passed_with_stated_boundaries",
+        "cases": [
+          "test_delivery_formats_ui.py"
+        ],
+        "boundary": "Case scopes define acceptance; no complete upstream equivalence or real-model execution inferred."
+      },
+      "currentValidationAddendum": {
+        "report": "verification/real-services-validation-20261113.json",
+        "boundary": "Use precise individual service, target-only, replay and reopen scopes; original failed whole-model flows remain failures."
+      }
+    },
+    {
+      "id": "I4",
+      "goal": "迁移旧作品并保留恢复能力",
+      "files": "旧作品适配模块（拟新增）；host/docstore.js；host/media-link.js；client/recovery.js",
+      "action": "旧数据只读解析后另存新项目，能恢复源的保留源，不能恢复的明确标注；保留旧版包和迁移来源。",
+      "acceptance": "旧作品和唯一原件不被覆盖；迁移失败可回原版，真实已有源不被无故扁平化。",
+      "status": "verified_legacy_migration_recovery_scoped",
+      "evidence": [
+        "verification/ui45-legacy-acceptance.json"
+      ],
+      "verifiedScope": "真实旧画板样本含 Photo/Vector 专业源：原件与备份字节核对、独立迁移、画板可编辑、项目包干净目录重开；缺失素材、版本冲突、损坏备份及旧演示结构按报告验证。",
+      "currentValidation": {
+        "id": "I4",
+        "state": "scoped_local_checks_passed_with_stated_boundaries",
+        "cases": [
+          "test_legacy_migration_ui.py"
+        ],
+        "boundary": "Case scopes define acceptance; no complete upstream equivalence or real-model execution inferred."
+      },
+      "currentValidationAddendum": {
+        "report": "verification/real-services-validation-20261113.json",
+        "boundary": "Use precise individual service, target-only, replay and reopen scopes; original failed whole-model flows remain failures."
+      }
+    },
+    {
+      "id": "J1",
+      "goal": "完成五条真实端到端旅程",
+      "files": "对应 integration/roundtrip/recovery 测试（拟新增）；实际源与输出证据",
+      "action": "按标识生成续改、修图入 PPT、多品牌物料、HTML/PPTX 转换、冲突中断恢复五条旅程检查完整交互。",
+      "acceptance": "每条从原生 DSH 对话/手工入口走通到源和输出；精确复用现有证据，只为新增风险运行必要测试，不用 mock 证明 AI。",
+      "status": "in_progress",
+      "evidence": [
+        "verification/ui45-partial-journeys.json"
+      ],
+      "verifiedScope": "五条旅程已有真实分段证据；各旅程的原方案完整步骤尚未在同一条实际流程中全部通过，见逐条缺口。",
+      "implementationNote": "五条原方案完整旅程仍需实际执行；按用户指示暂缓。",
+      "currentValidation": {
+        "id": "J1",
+        "state": "partial_pending_real_model_or_service",
+        "cases": [
+          "test_delivery_formats_ui.py"
+        ],
+        "boundary": "Case scopes define acceptance; no complete upstream equivalence or real-model execution inferred."
+      },
+      "currentValidationAddendum": {
+        "report": "verification/real-services-validation-20261113.json",
+        "boundary": "Use precise individual service, target-only, replay and reopen scopes; original failed whole-model flows remain failures."
+      }
+    },
+    {
+      "id": "J2",
+      "goal": "逐项收口四项目能力覆盖",
+      "files": "docs/requirements.json；能力矩阵（A1）；README.md；验证报告（拟新增）",
+      "action": "复核每项承诺是否有真实界面、AI 操作、源结构、输出与恢复证据；补齐矩阵内剩余缺口。",
+      "acceptance": "已承诺项逐一通过；上游限制、宿主依赖和未完成项逐项公开，任何关键项未通过不得称完整完成。",
+      "status": "pending",
+      "evidence": [],
+      "implementationNote": "全项目功能逐项运行验证仍需执行；静态声明不能替代验收。",
+      "currentValidation": {
+        "id": "J2",
+        "state": "partial_pending_real_model_or_service",
+        "cases": [
+          "test_delivery_formats_ui.py"
+        ],
+        "boundary": "Case scopes define acceptance; no complete upstream equivalence or real-model execution inferred."
+      },
+      "currentValidationAddendum": {
+        "report": "verification/real-services-validation-20261113.json",
+        "boundary": "Use precise individual service, target-only, replay and reopen scopes; original failed whole-model flows remain failures."
+      }
+    },
+    {
+      "id": "J3",
+      "goal": "核对运行版发布产物与最终交付",
+      "files": "D: 运行目录；package.json；runtime-lock.json；web-runtime-lock.json；发布/恢复说明",
+      "action": "核对实际部署来源、构建版本、文件完整性、资源许可、迁移与回退；执行最终对应检查。",
+      "acceptance": "交付可加载的真实插件、清单和证据；明确磁盘版本与加载版本，未经验证不声称用户窗口已更新；不操作用户桌面。",
+      "status": "pending",
+      "evidence": [
+        "core-closeout.md",
+        "dependency-license-audit.json",
+        "five-gaps-and-deck.md",
+        "five-gaps-code-audit.json",
+        "native-source-input-audit.json"
+      ],
+      "implementationNote": "运行时/供应商/许可摘要和开发包静态交付审计已补；预构建转换器精确源码关系、历史缺档及字体参考差异明确保留，用户运行窗口和最终功能验收仍未确认。",
+      "codeOnlyStatus": "static_delivery_audit_with_documented_limits",
+      "currentValidation": {
+        "id": "J3",
+        "state": "scoped_local_checks_passed_with_stated_boundaries",
+        "cases": [
+          "test_delivery_formats_ui.py"
+        ],
+        "boundary": "Candidate package integrity and extracted-package load must be recorded separately after packing."
+      },
+      "currentValidationAddendum": {
+        "report": "verification/real-services-validation-20261113.json",
+        "boundary": "Use precise individual service, target-only, replay and reopen scopes; original failed whole-model flows remain failures."
+      }
+    }
+  ],
+  "boundaries": [
+    "Matching hidden Electron/custom protocol IME and background lifecycle verified; full packaged desktop preload/IPC and system candidate UI not verified.",
+    "Software rendering only; hardware GPU and minimized-window behavior not verified.",
+    "Existing real child-renderer crash/source-recovery evidence has its original scope; uncommitted RAM-only content is not guaranteed recoverable.",
+    "Vector core native file lifecycle and downloads verified; native template import explicitly unsupported, drag/drop/advanced file paths and active failed-unload still require closure.",
+    "Vector/Photo/Deck persistent core UI is verified; all specialized tools/native semantics, full OD, in-place/live material updates and image-service integration remain incomplete.",
+    "User DSH loaded version not verified; only directly linked owned test host activation verified.",
+    "Only the requested Vector manual basics have physical/source/reopen evidence; complete upstream parity is not claimed.",
+    "C2 Vector objects, Photo source-backed coverage and actual Deck page/shape/target references are verified in their scoped reports. Standalone exact-alpha services and complete cross-domain reference cases remain pending.",
+    "C3 uses a conservative document-level conflict fence. Only a proven latest single AI step with unchanged source/revision is undoable. Older steps after manual edits, multi-step/20-entry sliced history, restart history and selective inverse/replay are not implemented and return conflicts.",
+    "No new model/image API call was made by these checks. Registered DSH tool execution is not a new Kimi cooperation-quality claim.",
+    "Photo and Deck persistent core bridges plus actual Kimi routes are verified. Full specialized tools/formats, complete OpenDesign, in-place links, image services/inpaint/variants, extra formats/migration and full-project audit remain incomplete.",
+    "Hidden Electron used software rendering and browser IME; full packaged preload/IPC, OS candidate UI, hardware GPU/minimized behavior and user-window loaded version are unverified.",
+    "The 928 package roots and 7457 files are a pinned SOURCE inventory including mirrors and supporting resources, not implemented features or 928 runnable skills.",
+    "Only selected real source packages have been downloaded and verified here: Corporate24 files plus two one-file entries. Other resources are bounded on-demand reads, not installed complete external bundles.",
+    "Catalogue pointers explicitly report external original bundles still missing. No upstream script, font installer, OD runtime/agent, image service or paid generation fallback was executed.",
+    "One actual Kimi SVG generation completed native creation/save, but the test stopped final narration at 300 seconds. Its exact saved source was reopened in the same DSH conversation and reused; no second generation request was made. This is a recovered workflow, not an uninterrupted first turn.",
+    "The resumed native App physically edited a title and path; the second actual Kimi turn changed only the referenced path paint. Source structures, original SVG, independent SVG decode and native export reimport passed.",
+    "This verifies one Corporate/reference-to-native-SVG route. Full OpenDesign external skills, brand/template binding, HTML preview/conversion and all font/effect semantics are not complete.",
+    "Three-engine native core/context and frozen Photo-to-Deck usage/source return are verified. Full Photo/Deck tool/format parity, linked/in-place updates, image services/inpaint/variants, extra exports/migration and full50 acceptance remain incomplete.",
+    "Only the owned direct-D: hidden test hosts were used. User desktop/original DSH was not controlled; user-window loaded version remains unverified."
+  ],
+  "verifiedDesktopSlices": [
+    {
+      "file": "verification/electron-surface.json",
+      "sha256": "108c5a3e9dbd73d8c2bdb816b7c66949975c0b77a2bca8efa53f32b91c17cd4f",
+      "checks": 2,
+      "scope": "matching Electron 44.7.0, DSH custom protocol and installed authenticated forwarding, production plugin; no LLM"
+    },
+    {
+      "file": "verification/electron-ime.json",
+      "sha256": "2aa1b4190d58bc32ff7ab6d3dbdf54aa650a2baf08677e79d947593c7fbb42a3",
+      "checks": 4,
+      "scope": "actual CDP IME/browser events in matching hidden Electron/dsh-app origin; full desktop IPC/system candidate UI not included",
+      "verifiedRelease": "dev.6/UI21/host4; matching hidden Electron/browser IME, not full desktop"
+    },
+    {
+      "file": "verification/electron-background.json",
+      "sha256": "34a0cdd6f6a2e503d0b358fd1abc351635fa30ce1cc47ba12f85b42b51a9cf69",
+      "checks": 5,
+      "scope": "actual matching hidden Electron/custom DSH protocol, dirty native editor parking; no LLM"
+    },
+    {
+      "file": "verification/electron-crash.json",
+      "sha256": "1e96e2ed0a7794f75ff8eda9f85773117c589367c3d03235524f4cd077e83c8a",
+      "checks": 3,
+      "scope": "real child Page.crash in matching hidden Electron with default site isolation; source recovery; no user desktop or LLM"
+    },
+    {
+      "file": "verification/native-reference-live.json",
+      "sha256": "9a0c9200ba0453cf7d0225e85425341f3e19143bb316248216a465a1126a910f",
+      "checks": 5,
+      "scope": "actual DSH composer/native object references, production codec and durable native source; no LLM",
+      "verifiedRelease": "dev.7/UI22/host4"
+    }
+  ],
+  "currentDiskBuild": {
+    "version": "1.3.0-dev.148",
+    "uiBuild": 162,
+    "nativeHost": "0.19.0+designcraft.host19",
+    "ownedTestLoaded": true,
+    "userProcessLoadedVersionVerified": false,
+    "stagedProtocolUpgrade": false,
+    "photoNativeHost": "0.18.0+designcraft.host8",
+    "deckNativeHost": "0.13.1+designcraft.host18"
+  },
+  "verifiedFileAndMenuSlices": [
+    {
+      "file": "native-files-ui.json",
+      "checks": 9,
+      "scope": "actual DSH controller/native WASM file actions, physical save/open shortcuts, filesystem checkpoints and browser downloads; no model",
+      "sha256": "25821c9edfa85b1800f2fdded039759d449bb0d5a23e4be19a51f6b1484d6b1f"
+    },
+    {
+      "file": "native-file-failure.json",
+      "checks": 2,
+      "scope": "actual DSH/native controller with deliberate HTTP503 upload fault; actual App/draft/filesystem preservation and real retry; no model or disk-full claim",
+      "sha256": "378dd945e96c2d6ae297de09ac3b2863976dda69a70b845f01c61538c2b5e9f3"
+    },
+    {
+      "file": "menu-handoff.json",
+      "checks": 2,
+      "scope": "actual DSH/native App, production reference codec and registered tool, filesystem checkpoint; no LLM",
+      "sha256": "2ae2a8f00bdf3129e73e7fd3b344242d63828fb42ce9b3538fd1d31cb570483d"
+    },
+    {
+      "file": "unified-workspace.json",
+      "checks": 5,
+      "scope": "actual DSH workbench and original native App, real menu actions/files; no model",
+      "sha256": "cbbb821dc843ef8f0cb2777e9e8296a56a778357e1a6db0f778b531ed296b5bf"
+    },
+    {
+      "file": "electron-ime.json",
+      "checks": 4,
+      "scope": "actual CDP IME/browser events in matching hidden Electron/dsh-app origin; full desktop IPC/system candidate UI not included",
+      "sha256": "89fd550e9b191d5ab70d9a315801a1580b3a5e15435ade0d326f65ead2e2d126"
+    },
+    {
+      "file": "electron-background.json",
+      "checks": 5,
+      "scope": "actual matching hidden Electron/custom DSH protocol, dirty native editor parking; no LLM",
+      "sha256": "15be3691491876ee5337b75f168de755b47a45e9c76169e74284060c54529d5d"
+    },
+    {
+      "file": "editor-assets-current.tap",
+      "checks": 4,
+      "sha256": "de781b859c2ed7805037a76688abbc1ed223a820b791e0103f81b6847e010cb3",
+      "scope": "actual DSH WebServer or SessionStore/storage protocol; not a model/renderer capability claim"
+    },
+    {
+      "file": "native-file-host.tap",
+      "checks": 3,
+      "sha256": "28772d003c940259c2f491ccd34ece79512bf46bbb97b8fbffe475a1a373729b",
+      "scope": "actual DSH WebServer or SessionStore/storage protocol; not a model/renderer capability claim"
+    },
+    {
+      "file": "rust-host-files-tests.log",
+      "checks": 8,
+      "sha256": "81fecf0174090253d7e4d0f60eff1f88160426ee08615d95853d3bbef236cd9e",
+      "scope": "actual native Rust host protocol, guards and transient presentation tests"
+    }
+  ],
+  "verifiedVectorEditingSlices": [
+    {
+      "file": "verification/vector-alignment.json",
+      "checks": 14,
+      "sha256": "c4d2abe37e05c93199610cdc4d1e2be9b0eba32b1c231554838ccc56eb4b41b5",
+      "scope": "actual native browser mouse/keyboard edits in current DSH App, independent saved path geometry and source reopen; no model",
+      "verifiedRelease": "earlier dev.4/UI20/host2; geometry implementation unchanged; not rerun this stage"
+    },
+    {
+      "file": "verification/vector-editing.json",
+      "checks": 7,
+      "sha256": "045f62484e4504017e1f989daa345c0ae7a67d84ad88f5eeb9f4cac0ea5c9893",
+      "scope": "actual native browser pointer/keyboard editing and saved path/text/appearance structures; no model",
+      "verifiedRelease": "dev.6/UI21/host4"
+    },
+    {
+      "file": "verification/vector-boolean.json",
+      "checks": 5,
+      "sha256": "907aee86f4115f84e4d1ff8014b9bc19037fa116a3556ec010992f4444e3a3fa",
+      "scope": "physical Pathfinder buttons -> native paths/compound paths -> independent MuPDF SVG area/source reopen; no model",
+      "verifiedRelease": "dev.6/UI21/host4"
+    },
+    {
+      "file": "verification/vector-color.json",
+      "checks": 3,
+      "sha256": "b38686b2976c0b1d65a8204b316ede645dd2cf1001f33ea1dc0bf9679323944e",
+      "scope": "physical Color panel hex fields -> native editable paints -> source save/reopen; no model",
+      "verifiedRelease": "dev.6/UI21/host4"
+    },
+    {
+      "file": "verification/vector-layers.json",
+      "checks": 9,
+      "sha256": "36b042006a61677d101fb39e291a1c975b02069708d4589a9efd6e8728210a94",
+      "scope": "physical native layer visibility/lock/name/create/order/reparent/delete/undo -> exact source/reopen; no model",
+      "verifiedRelease": "dev.6/UI21/host4"
+    },
+    {
+      "file": "verification/electron-ime.json",
+      "checks": 4,
+      "sha256": "2aa1b4190d58bc32ff7ab6d3dbdf54aa650a2baf08677e79d947593c7fbb42a3",
+      "scope": "actual CDP IME/browser events in matching hidden Electron/dsh-app origin; full desktop IPC/system candidate UI not included",
+      "verifiedRelease": "dev.6/UI21/host4; matching hidden Electron/browser IME, not full desktop"
+    },
+    {
+      "file": "verification/native-reference-pages.json",
+      "checks": 4,
+      "sha256": "393e63acf95746ad2bf991340f4ad1a7dde3e9ccb0411cb998bbce329caac1cc",
+      "scope": "actual DSH composer, registered tool fixture creation, physical Vector page/multiselect, codec rejection; no model",
+      "verifiedRelease": "dev.7/UI22/host4"
+    },
+    {
+      "file": "verification/native-reference-live.json",
+      "checks": 5,
+      "sha256": "9a0c9200ba0453cf7d0225e85425341f3e19143bb316248216a465a1126a910f",
+      "scope": "actual DSH composer/native object references, production codec and durable native source; no LLM",
+      "verifiedRelease": "dev.7/UI22/host4"
+    },
+    {
+      "file": "verification/native-handoff.json",
+      "checks": 8,
+      "sha256": "7b5401ad8a02d8aaf30c3bc40e619e1b970116faed651aadd96b1954a5d247b1",
+      "scope": "actual registered DSH tool/native App, physical manual input and exact source checkpoints/reopen; no LLM",
+      "verifiedRelease": "dev.8/UI23/host4"
+    }
+  ],
+  "verifiedOpenDesignSlices": [
+    {
+      "file": "verification/opendesign-inventory.json",
+      "sha256": "e680d1b383153192a2ee37c6fa5ee42f533ae211316ce0cf6158bdf6d57641da"
+    },
+    {
+      "file": "verification/opendesign-source-fetch.json",
+      "sha256": "5c37d153bc73cba2169203005cd71572b494906bcaa70833033085a4c3989be7"
+    },
+    {
+      "file": "verification/opendesign-registered.json",
+      "sha256": "b7951e8532bd01129b8dea590768f0d4cb2bec1a4727f1913546987713502e92"
+    },
+    {
+      "file": "verification/opendesign-library.tap",
+      "sha256": "89048ff5f26fb3b4f73060fcf92d9d8444d9739a89e5885f527a8dff888550b1"
+    },
+    {
+      "file": "verification/kimi-opendesign.json",
+      "sha256": "e2dfeae4f69e20ebb8818e4b4defafba8e733ee404e949d07fb4da5db5b92276"
+    },
+    {
+      "file": "verification/kimi-opendesign-transcript.txt",
+      "sha256": "0c8e2db80bfebbc260e38790f82ebd3ffec9eaa4657300c32799f5c0ba750a13"
+    },
+    {
+      "file": "verification/kimi-opendesign-resume.json",
+      "sha256": "10c8bb53dd35ec04d5e5e4c295eec0c9bcd601650927bf6387ad135923e4830c"
+    },
+    {
+      "file": "verification/kimi-opendesign-resume-transcript.txt",
+      "sha256": "dde51601c42c1e1e02573efe15bac305143a8294034291946dbf03bd9e35ce09"
+    },
+    {
+      "file": "verification/kimi-opendesign-export.svg",
+      "sha256": "743748136c613d0d7ca4e4fd3a05095164fa260b0b7b5c351058e69a19023d78"
+    }
+  ],
+  "verifiedIdentityFoundation": [
+    {
+      "file": "native-exact-ids.json",
+      "sha256": "3dbc44062202277b1a3d488ed6227bd4c4093142df9e99a9b3ab9d6cd9bf2ba6",
+      "checks": 6,
+      "scope": "actual native high-ID file and gestures, production MessageChannel/raw JSON, registered DSH tool, exact source/reopen; no LLM"
+    },
+    {
+      "file": "native-reference-pages.json",
+      "sha256": "c29f95d279863dff727543f8657a25b2839e4b51fb0741c38788d96f75ecff93",
+      "checks": 4,
+      "scope": "actual DSH composer, registered tool fixture creation, physical Vector page/multiselect, codec rejection; no model"
+    },
+    {
+      "file": "vector-editing.json",
+      "sha256": "1996938028a85a680d1b3851e879dee97dc9548344e29282e7fc281f4c051a01",
+      "checks": 7,
+      "scope": "actual native browser pointer/keyboard editing and saved path/text/appearance structures; no model"
+    },
+    {
+      "file": "native-handoff.json",
+      "sha256": "623e5eb1793ec3234043c0cdb8aa6a9a683059f1d0307b3cc118d8c3887f84da",
+      "checks": 8,
+      "scope": "actual registered DSH tool/native App, physical manual input and exact source checkpoints/reopen; no LLM"
+    },
+    {
+      "file": "native-protocol.tap",
+      "sha256": "4cd6847077d5b8375800fc4bbd5e31cf89336ac8fec5c524e8daffc789cb58e2",
+      "checks": 4,
+      "scope": "component/protocol/persistence checks; not model execution"
+    },
+    {
+      "file": "native-contract.tap",
+      "sha256": "4ca8084fa04042dcda94fb2fe85c97bd26c0a353870b804d786bc4ea85f7121a",
+      "checks": 4,
+      "scope": "component/protocol/persistence checks; not model execution"
+    },
+    {
+      "file": "native-source-u64.tap",
+      "sha256": "4a4c6ff8e59595b0b35f63a60e963372ef9e1f313b2b86cf0038c698bc6a60e6",
+      "checks": 9,
+      "scope": "component/protocol/persistence checks; not model execution"
+    },
+    {
+      "file": "native-history-u64.tap",
+      "sha256": "e221ec5b302b833c6591c431ccbad580d0eb0f3f038189605b10c75841c81da1",
+      "checks": 4,
+      "scope": "component/protocol/persistence checks; not model execution"
+    },
+    {
+      "file": "editor-protocol.tap",
+      "sha256": "f99c0654294369ba2cbbd1a98f01a39b5c35120028735f25fb108103ab192bb5",
+      "checks": 2,
+      "scope": "component/protocol/persistence checks; not model execution"
+    },
+    {
+      "file": "editor-session-context2.tap",
+      "sha256": "3965fc4abb05c90a9ce437acf7b51bb4aeffe75406858a605b2eef554d8164b9",
+      "checks": 12,
+      "scope": "component/protocol/persistence checks; not model execution"
+    },
+    {
+      "file": "editor-assets-context2.tap",
+      "sha256": "dc625df475d85ecca9809bf31d7edd2291cc2da0841c3dfab3648bbd74ee4bf2",
+      "checks": 4,
+      "scope": "component/protocol/persistence checks; not model execution"
+    },
+    {
+      "file": "native-context-ordering-rust.log",
+      "sha256": "f29216c4ebf7a081fa842ea3c9717ea1911c026c36d1232668fe7da4e7540711",
+      "checks": 26,
+      "scope": "genuine native App control tests"
+    }
+  ],
+  "verifiedProjectFoundation": [
+    {
+      "file": "project-materials.json",
+      "sha256": "fa702e15f20fa3d67482b4bdcba0700aa302281db08c3cc4993926909d6f295d",
+      "checks": 6,
+      "scope": "actual current DSH material UI, real native source/derivative pair and placements, registered tool, source files; explicit finish HTTP503 fault; no model"
+    },
+    {
+      "file": "project-material-recovery.json",
+      "sha256": "9f690cef3b499beed7ad21325e330a073cb2fc10048bd25a22ba6b9322ff7c14",
+      "checks": 3,
+      "scope": "actual source-based recovery after owned backend restart and deliberately absent operation journal; physical repair UI and registered DSH tool; no placement replay/model"
+    },
+    {
+      "file": "project-navigation.json",
+      "sha256": "8010f5956582833dfb776d6ad186b93de7a6c9d660a04da4f0bbcfa1654e5605",
+      "checks": 6,
+      "scope": "real current DSH source navigation, same native parent App/history/view, physical edits/undo and registered tools; no model"
+    },
+    {
+      "file": "project-navigation-conflict.json",
+      "sha256": "89550d6dc13a824f86e50ee8545b9a60971956b9b1e6cb73d6237165c93f7c14",
+      "checks": 3,
+      "scope": "two real owned DSH sessions/native Apps, physical source edit, active-writer refusal and exact newer-source return; no model"
+    },
+    {
+      "file": "project-navigation-crash.json",
+      "sha256": "cd1f4c99c5df590af379ba533516cbef3bb20390530e0c05e7c5e6841762423d",
+      "checks": 3,
+      "scope": "actual child renderer Page.crash in owned headless Chromium, real saved-source restore and parent return; not full packaged desktop/GPU verification"
+    },
+    {
+      "file": "native-handoff.json",
+      "sha256": "b3edcb90e34b4fce47ca0c9568122512cc5a5616e0f64d26e32073d5f3550d97",
+      "checks": 8,
+      "scope": "actual registered DSH tool/native App, physical manual input and exact source checkpoints/reopen; no LLM"
+    },
+    {
+      "file": "native-source-placement.tap",
+      "sha256": "ca0b5e2d3b239b129d518dae911297cd0306d588dbaa1ac553feab3960a6f3fc",
+      "checks": 11,
+      "scope": "storage/protocol checks, not a substituted native/model action"
+    },
+    {
+      "file": "project-graph-storage.tap",
+      "sha256": "e9e1ccca830ce95d83681fcf5402e8f98b7287005c660c5c72b36de5ca6b5e73",
+      "checks": 8,
+      "scope": "storage/protocol checks, not a substituted native/model action"
+    },
+    {
+      "file": "project-graph-protocol.tap",
+      "sha256": "3c019b13147b65a4b0162c2ccceea744712a25f49f22b7eda83fe6592c2c6cbb",
+      "checks": 12,
+      "scope": "storage/protocol checks, not a substituted native/model action"
+    },
+    {
+      "file": "editor-session-project-navigation.tap",
+      "sha256": "f721c76d335d5a9d0c8def7521e642bb6aa3553d3f1330fcfecf0fe309e8dfff",
+      "checks": 12,
+      "scope": "storage/protocol checks, not a substituted native/model action"
+    },
+    {
+      "file": "native-bundle-rust.log",
+      "sha256": "4b78b932af472198cddf516f35eb138aeaa5132503a1b2cf891e03cda920f805",
+      "checks": 28,
+      "scope": "genuine native App control tests"
+    },
+    {
+      "file": "project-material-journal-fault.json",
+      "sha256": "bc8c9ec8404f4a351e4716b872a6a41158d29614d3cecce469041512429b158b",
+      "scope": "explicit fault only in an owned QA workspace; source hash unchanged"
+    }
+  ],
+  "verifiedPhotoCore": {
+    "status": "passed_scoped_core",
+    "checks": 6,
+    "originalPlacementRepairChecks": 3,
+    "evidence": [
+      "verification/photo-workspace.json",
+      "verification/photo-original-placement-repair.json",
+      "verification/photo-core-stage.json"
+    ],
+    "modelCallsInThisSlice": 0,
+    "advancedToolsComplete": false,
+    "fullPhotoParity": false
+  },
+  "verifiedPhotoTools": {
+    "status": "passed_scoped",
+    "checks": 9,
+    "evidence": [
+      "verification/photo-tools.json",
+      "verification/photo-state-publication.json"
+    ],
+    "fullPhotoParity": false
+  },
+  "verifiedPhotoKimi": {
+    "status": "passed_scoped",
+    "checks": 4,
+    "evidence": [
+      "verification/photo-kimi.json"
+    ],
+    "provider": "kimi-coding",
+    "model": "kimi-for-coding",
+    "imageServiceCalls": 0
+  },
+  "verifiedDeckCore": {
+    "status": "passed_scoped",
+    "evidence": [
+      "verification/deck-surface.json",
+      "verification/deck-workspace.json",
+      "verification/deck-kimi.json",
+      "verification/photo-deck-material.json"
+    ],
+    "fullDeckParity": false
+  },
+  "verifiedInstanceCore": {
+    "scope": "Verified actual Photo historical instance forks, PNG content-only Deck apply, explicit linked PNG updates and saved-receipt recovery; continuing original full50",
+    "audit": "verification/instance-stage-audit.json",
+    "fullScopeComplete": false
+  },
+  "verifiedMixedInstanceCore": {
+    "audit": "verification/mixed-instance-stage-audit.json",
+    "fullScopeComplete": false
+  },
+  "verifiedNativeOrigins": {
+    "audit": "verification/native-origins-stage-audit.json",
+    "fullScopeComplete": false
+  },
+  "codeOnlyWork20261108": {
+    "status": "code_written_unvalidated_with_declared_limits",
+    "functionalTestsRun": "存在历史功能验证记录；本次续接未运行功能验证，新代码未验证。",
+    "modelCallsRun": "存在历史真实调用和额度 429 记录；本次续接未调用模型或图片服务。",
+    "deckMediaFontRuntime": "compiled and copied to disk as host8; no functional validation or user process reload",
+    "knownRisks": [
+      "new functionality has not been functionally validated",
+      "complete vendored converter transitive license inventory not established",
+      "not every OpenDesign package dependency or script is integrated"
+    ]
+  },
+  "implementationOnlyContinuation": {
+    "status": "code_complete_for_five_gaps_and_five_deck_inputs_unvalidated",
+    "functionalValidationThisContinuation": false,
+    "note": "本次续接按用户指示不运行功能验证；既有证据仅为历史样本，新增代码和新运行时尚未验证。",
+    "resourcePackages": "完整固定资源包保存及项目包来源记录代码已写入，尚未功能验证。",
+    "creativeDirector": "外部创意指导原包按固定提交作为数据接入，读取、来源记录及项目打包代码尚未功能验证。",
+    "designPlans": "设计简报和计划支持手动创建/编辑、本地草稿保护，以及基于固定 OpenDesign 规则的结构化/有限关键词规范与网页预览代码；默认和推断不等于用户明确要求。当前项目 PNG/SVG 派生素材可按版本加入网页文件，未接全局 OD 素材库。计划可引用固定资源、已保存外部原包文件、按需获取的 LFS 文件及 Figma 导出，并可显式关联实际保存的原生或网页作品版本；关联是声明，不能证明模型行为，版本恢复与项目打包代码会核对来源；新增路径尚未功能验证。",
+    "brandFontIdentity": "独立文字身份和事务代码已写入；按原生运行时能力门控，新增路径尚未功能验证。",
+    "nativeResourceImport": "素材界面原生导入和来源核对代码已写入；旧操作缺少精确来源身份时不按哈希猜测，尚未功能验证。",
+    "externalGithubSkills": "169 个固定技能入口已按 Git blob 核对；固定 OpenDesign HTML 稳定身份、初始来源及新版本索引/锁/根许可快照、GitHub 候选发现、仓库改名受限跳转、原包固定、Git 对象回退、标准 LFS 校验、外部 SVG/图片原生导入及外部 HTML 版本化导入（可选实际 LFS 文件）代码已写入；历史 v2 仍依赖旧固定索引，快照并非上游签名，跳转关系来自 HTTPS、公开 media 路径未必适用所有服务，未进行功能验证，外部执行仍未全接入。",
+    "canvasDesignOffline": "已保存固定提交的 83 个上游原文件；54 个字体内嵌 OFL 1.1 声明，六个官方参考文件与原包文件字节不一致，精确来源尚未证实；项目读取代码未功能验证。",
+    "projectFonts": "用户自带与外部原包字体登记、停用/启用、恢复、来源与编辑会话加载代码已写入；本机预览/导出在隔离目录提供项目字体但同名系统字体可能优先，三套 Web 运行时已编译装盘，全部新增路径未功能验证。",
+    "falWorkflows": "fal 图片目录与队列、通用模型 schema 工作流及用户界面、真实项目 ZIP/媒体的显式存储上传、训练结果受限远端地址加密记录及后续模型引用、WebSocket 实时图片会话、请求取回和取消、图片原生导入、来源与项目包代码已写入；远端引用不等于文件已下载，上传响应不代表训练完成，未调用模型目录或服务、未运行链接保护器，未做功能验证。",
+    "veniceImages": "Venice 图片目录、生成、多图编辑、依目录声明的风格参考/画质/透明背景/比例/分辨率请求，以及实际单图同步放大/背景移除端点、稳定任务回执和 Photo 独立候选代码已写入；未请求目录或服务，实际权限、费用、透明度、尺寸及功能均未验证。",
+    "veniceAudio": "Venice 音乐/音效模型、报价、队列、接收回执、取回和明确远端清理代码已写入；未请求目录或服务，未做功能验证。",
+    "veniceVideo": "Venice 视频模型、报价、队列、回执、私有链接 DPAPI 保护和取回代码已写入；保护器已编译未运行，未请求服务或进行功能验证。",
+    "figmaSources": "先前额外写入的可选 Figma 只读来源代码，不是原方案或 OpenDesign 核心的前置条件；仅在用户明确要求或提供 Figma 参考时使用，未访问账号或进行功能验证。",
+    "replicateWorkflows": "Replicate 固定版本及具备实际 schema 的官方模型、大素材 Files 上传和加密身份、prediction 队列、已有任务取回、实际图片原生导入与项目包代码已写入；官方权重可能变动，未请求服务、运行保护器或进行功能验证。",
+    "openAiImages": "OpenAI 图片/参考编辑、按官方明确型号限制的透明背景/常用尺寸/画质请求及 SVG 家族生成、原件保存和原生导入代码已写入；未请求目录或服务，未做功能验证。",
+    "geminiImages": "Gemini 默认凭据连接、官方稳定型号的尺寸/比例选项、思考图排除及多张服务原图保存和按需转换代码已写入；未请求目录或服务，未做功能验证。",
+    "stitchWorkflows": "Stitch 固定 MCP 连接、实际工具目录、只读快照、显式远端设计操作、防重复回执、页面原件、HTML 及 PNG/JPEG 截图原生导入代码已写入；部分上游下载可能要求登录，服务与新增路径均未功能验证。",
+    "pixelbinWorkflows": "PixelBin MCP 设备授权、实际工具目录、图片预测计费确认、结果保存与原生图片导入、显式公开/私有远端操作及来源回执代码已写入；上游 OAuth、上传主机、实际 schema 和全部新增路径均未功能验证。",
+    "figmaMcpWorkflows": "先前额外写入的可选 Figma MCP 适配代码，不是原方案必需；远端及桌面端的准入、认证、实际功能和多步流程均未验证，只有用户明确要求或提供 Figma 参考时才使用。",
+    "ecommerceWorkflow": "OpenDesign 真实产品参考图的三槽位计划、现有图片服务请求、来源摘要与版本化画廊/清单代码已写入；模型、产品保真、界面及新增路径均未功能验证。",
+    "htmlLocalDependencies": "网页外链候选扫描、按需固定摘要 Tailwind 兼容预览、客户端报告样式的版本化保存，以及已登记项目字体按指定家族生成网页字体/CSS 资源代码已写入；字体样式须按需引用，来源许可、动态类和视觉/PPT 效果尚未验证。",
+    "directorPlanSources": "项目按资源身份留存完整创意指导原包，旧dependencies回退读取、明确预览和新计划修订迁移、多版本项目包核对代码已写；缺旧字节明确报错，功能验证暂缓。",
+    "externalResourceDownloads": "外部原包文件受控下载代码已写入，用户明确选择后可保存并下载经过来源与字节摘要核对的原件；LFS 可能联网，浏览器落盘、文件打开和功能均未验证。",
+    "externalThemeFactory": "已保存 theme-factory 原包可读取选定主题的实际配色和字体名称，并供 DSH 对话和面板查看；不自动应用、安装字体或证明效果，新增路径尚未验证。",
+    "externalPptxImport": "已保存外部原包 PPTX/POTX/PPSX 可经结构准入、原件保护、稳定预约与来源回执代码进入独立 Deck 源；实际导入、恢复和项目包均未验证。",
+    "externalNativeRecovery": "新外部 SVG、图片和演示原生源记录稳定预约身份；日志缺失时只按唯一匹配源恢复关联，旧无身份 SVG/图片不按哈希猜测；实际恢复与项目包尚未验证。",
+    "onlineStockImages": "新增 DesignCraft 公共 Commons 搜图、主动预览、实际 PNG/JPEG 和许可元数据保存、独立原生图片源预约与恢复、署名 JSON 和项目包核对代码；无需图库密钥，不代表 OD 原版 stock-search 或 run/project 授权接通；可能为缩放图，功能与服务验证仍暂缓。",
+    "coreSourceAudit": "A1/B3/G1/J3 可独立的源码映射、规则/依赖入口、原生中文控件和交付静态审计已补；所有功能验证暂缓，授权条件和来源证明缺口分别列出；详见 core-closeout.md。",
+    "imageApiSettings": "图片面板内独立API配置、DSH凭据保存、手动模型未核验标记、版本/地址更换保护及更多服务入口收敛代码已写入；配置和服务尚未功能验证。",
+    "coreProductScope": "docs/core-product-scope.json",
+    "fiveGapsAndDeck": "十单元代码、构建和静态审计见five-gaps-code-audit.json；功能/识别/硬件/UI/模型/服务验证均未执行。"
+  },
+  "validationInProgress": {
+    "at": "2026-11-12T20:19:11.376477+00:00",
+    "authorizedBy": "刘总：代码阶段已结束，直接逐项测试并修复",
+    "version": "1.3.0-dev.138",
+    "uiBuild": 152,
+    "accepted": false,
+    "nodeFilesPassed": 75,
+    "actualUiCasesPassed": [
+      "test_host_file_menu_ui.py",
+      "test_vector_context_tools_ui.py",
+      "test_photo_context_tools_ui.py",
+      "test_deck_context_tools_ui.py"
+    ],
+    "evidenceDirectory": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\release-validation-20261113",
+    "userDesktopControlled": false
+  },
+  "currentFunctionalValidation": {
+    "report": "verification/release-validation-20261113.json",
+    "asOf": "2026-11-13T05:57:19.087715+00:00",
+    "allCoreFunctionsAccepted": false,
+    "legacyTaskStatusFields": "Historical explicitly scoped acceptance; currentValidation is separate.",
+    "addendum": "verification/real-services-validation-20261113.json",
+    "latestModelAcceptance": "verification/ui158-final-model-flow-20261113.json",
+    "scopedCoreEditingAndAiFlowAccepted": true,
+    "scopeChange": "verification/ui159-deck-capture-removal-20261113.json"
+  },
+  "removedFeaturesByUser": [
+    {
+      "action": "local_narration",
+      "name": "麦克风旁白采集"
+    },
+    {
+      "action": "local_camera",
+      "name": "摄像头照片/录像、Cameo采集"
+    },
+    {
+      "action": "local_screenshot",
+      "name": "屏幕、窗口和区域截图"
+    },
+    {
+      "action": "local_ink_math",
+      "name": "Windows公式识别"
+    }
+  ],
+  "aiCanvasInteraction": {
+    "report": "verification/ui161-ai-native-ux-20261113.json",
+    "status": "passed_scoped_ai_native_resize_history_selection_popup",
+    "nativeHosts": {
+      "vectorcraft": "0.19.0+designcraft.host19",
+      "photocraft": "0.18.0+designcraft.host8",
+      "deckcraft": "0.13.1+designcraft.host18"
+    },
+    "actualModelBuildScope": "UI161 / Vector host19 / current installed desktop DSH runtime"
+  },
+  "designAssistantConversation": {
+    "report": "verification/ui162-design-session-isolation-20261113.json",
+    "status": "passed_scoped_dedicated_design_session_isolation",
+    "explicitDedicatedSession": true
+  }
+}

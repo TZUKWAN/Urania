@@ -1,0 +1,45 @@
+{
+  "status": "passed_scoped",
+  "at": "2026-11-08T09:53:00.209417+00:00",
+  "scope": "actual pinned HTML template package import through registered DSH tool, source editor and project package",
+  "samples": [
+    {
+      "package": "design-templates/open-design-landing-deck",
+      "files": 6,
+      "bytes": 143600,
+      "id": "html-04e3185f-965d-428c-9e00-0e38657adeec",
+      "revision": "5de40c4843f5e589d531acf0482ddb0ffd8be2642c6cfe5d3c109ead371b290d"
+    },
+    {
+      "package": "design-templates/html-ppt-zhangzara-8-bit-orbit",
+      "files": 4,
+      "bytes": 57045,
+      "id": "html-e568fe1b-b26c-4eb5-bbe9-3c090e098746",
+      "revision": "2820daf00c3e7debb4ad113fd8d6f9ef79b200bfcfe698fc6e66655bb44ea837"
+    }
+  ],
+  "checks": [
+    "both real upstream package trees match every indexed Git blob including TypeScript and original LICENSE filename",
+    "the imported HTML opens as the exact editable source in the workspace",
+    "HTML-only project can export its complete project package; native vector SVG/PNG menu entries remain available after opening a native source"
+  ],
+  "fixes": [
+    "Preserve all admitted upstream files at their original paths, including TypeScript and LICENSE; unsupported MIME remains inert.",
+    "An HTML-only project can open the project export menu, while native export formats are shown only with a native source.",
+    "Project packages retain the root OpenDesign licence for imported HTML, and a save finishing after cancellation returns the actual committed id and revision."
+  ],
+  "cancelBoundary": "node --test work/test_html_cancel_receipt.mjs passed 2/2 with actual immutable store writes and controlled cancellation",
+  "package": {
+    "file": "verification/ui45-od-html-complete-project.zip",
+    "sha256": "42bc6cbde283e9ae4b006436c1296ed4f30c93fa3e8293610624c512906e8073"
+  },
+  "rawEvidence": {
+    "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-od-html-complete.json",
+    "sha256": "00fcb7044a39ef0fb3ab89fe3fd813a2e80e99c0f7d12ab30cc6b2de5e9d53f6"
+  },
+  "limits": [
+    "Only two real upstream package trees were imported and compared in this check.",
+    "Symlinks, files above 8 MiB, packages above 256 admitted files or 24 MiB, external services and network resources are not silently supplied.",
+    "Retaining source files does not mean their scripts are run or their external workflows are integrated."
+  ]
+}

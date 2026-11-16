@@ -1,0 +1,20 @@
+{
+  "engineVersion": "0.19.0",
+  "sourceRevision": "bcebabe3f8c23a376ac68e9e6726590af278f7bb",
+  "hostProtocol": 1,
+  "status": "development host build; Rust/Trunk completed; not a completed DesignCraft release",
+  "fontRevision": "b076417b5880bd4154bd22f00695b1d28c6bea83",
+  "rustToolchain": "1.95.0",
+  "buildLogSha256": "0729b97c8ab31125b2c16813864415348adadb8ffc451739ed606329803d02d4",
+  "sourceFiles": {
+    "crates/text/web-fonts.txt": "8e2739ac621b536b82fb388cf0ee3a085dbb3ea786eb2be0bcca6528dc32642a",
+    "crates/ui-egui/src/control.rs": "565adb224c318108766f681a4cd4089eea6f153d21cf390361ac67224b86b466",
+    "crates/ui-egui/src/control/hosted.rs": "6bc139aa031b068b1a474a107b8593a3e0bece39783fd15a0ed8e37843def454",
+    "crates/ui-egui/src/control/tests.rs": "d26c0d416f34016347907eb7f384db1be0851b15c74e57cc0d767ec8468d3cf4",
+    "crates/ui-egui/src/lib.rs": "4ec91ae2030529195ed011dbecc276af33620d60c3c0cd0558abb93914ef7b55",
+    "crates/ui-egui/src/app.rs": "69f1a3af708cd7d8cab3f6eb40bf4e9ad282e7d3dd2640cbe114cd22b7002c92",
+    "crates/ui-egui/src/chrome.rs": "ee38406fc802849f6c82397c261a91bd571b4b7ce2a7623dec4d30110faa8d18",
+    "crates/ui-egui/src/host_files.rs": "c84c34cfd0624c18aa952bc126ea528bf415656c598f092c2d6ae06bd9ca3cfb",
+    "crates/ui-egui/src/app/commands.rs": "11b758749c6d3117926086e3c2824f187c2e791887881f3cc62790d7244fbe55"
+  }
+}

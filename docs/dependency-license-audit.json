@@ -1,0 +1,4015 @@
+{
+  "schema": 1,
+  "kind": "static-shipped-dependency-and-license-evidence-audit",
+  "at": "2026-11-13T10:01:24.799551+00:00",
+  "functionalValidation": false,
+  "runtimeFilesChecked": 359,
+  "integrityErrors": [],
+  "unlistedWebRuntimeFiles": [],
+  "checks": [
+    {
+      "file": "runtimes/photocraft/v0.18.0/photocraft-cli.exe",
+      "bytes": 107798904,
+      "sha256": "4c3da089c2f262477fb8184ae89f0c282c84239ec7961e1890ce661b769f47ad",
+      "expected": "4c3da089c2f262477fb8184ae89f0c282c84239ec7961e1890ce661b769f47ad",
+      "kind": "native-cli",
+      "matched": true
+    },
+    {
+      "file": "runtimes/vectorcraft/v0.19.0/vectorcraft-cli.exe",
+      "bytes": 122114424,
+      "sha256": "755e6c0b4bea4b6be04337b29084e11776691a5d47a031d960d5543d65d33981",
+      "expected": "755e6c0b4bea4b6be04337b29084e11776691a5d47a031d960d5543d65d33981",
+      "kind": "native-cli",
+      "matched": true
+    },
+    {
+      "file": "runtimes/deckcraft/v0.13.1/deckcraft-cli.exe",
+      "bytes": 93593456,
+      "sha256": "53146cd6dcf04df6a06847e670774aec3dfc2c9e815595faa13f5aa8620e4551",
+      "expected": "53146cd6dcf04df6a06847e670774aec3dfc2c9e815595faa13f5aa8620e4551",
+      "kind": "native-cli",
+      "matched": true
+    },
+    {
+      "file": "runtimes/native-runner.exe",
+      "bytes": 7168,
+      "sha256": "a7d836714369be3816dc008ee744d30893db633dd751f13c4b311fb2f86e4223",
+      "expected": "a7d836714369be3816dc008ee744d30893db633dd751f13c4b311fb2f86e4223",
+      "kind": "native-runner",
+      "matched": true
+    },
+    {
+      "file": "runtimes/NativeRunner.cs",
+      "bytes": 5223,
+      "sha256": "b0b9138027acc9184d509f6aa60ddf4d94a46df3386dc93002713244ede5b7df",
+      "expected": "b0b9138027acc9184d509f6aa60ddf4d94a46df3386dc93002713244ede5b7df",
+      "kind": "native-runner-source",
+      "matched": true
+    },
+    {
+      "file": "runtimes/git-source-runner.exe",
+      "bytes": 7168,
+      "sha256": "955a25da69d34a0b85b98b00a4a54eeacd142bbdac6114b829d74bdbd74ef20e",
+      "expected": "955a25da69d34a0b85b98b00a4a54eeacd142bbdac6114b829d74bdbd74ef20e",
+      "kind": "git-source-runner",
+      "matched": true
+    },
+    {
+      "file": "runtimes/GitSourceRunner.cs",
+      "bytes": 5119,
+      "sha256": "00abb81fc89af124625115e7c3c95157080f31c7d74c440de759e2c20415b51c",
+      "expected": "00abb81fc89af124625115e7c3c95157080f31c7d74c440de759e2c20415b51c",
+      "kind": "git-source-runner",
+      "matched": true
+    },
+    {
+      "file": "runtimes/private-link-protector.exe",
+      "bytes": 4096,
+      "sha256": "f1d0c56757f420452657a71848da7c9cb577ad835641ccbf253e6bbfd9908760",
+      "expected": "f1d0c56757f420452657a71848da7c9cb577ad835641ccbf253e6bbfd9908760",
+      "kind": "private-link-protector",
+      "matched": true
+    },
+    {
+      "file": "runtimes/PrivateLinkProtector.cs",
+      "bytes": 1364,
+      "sha256": "c80945cbafcb5027213818e50b049f93cfed304c12b7a9a372a66325fdea62fe",
+      "expected": "c80945cbafcb5027213818e50b049f93cfed304c12b7a9a372a66325fdea62fe",
+      "kind": "private-link-protector",
+      "matched": true
+    },
+    {
+      "file": "runtimes/ink-recognizer.exe",
+      "bytes": 10752,
+      "sha256": "7596e605ebf2b8b5908836d2af67d937ee153c79f86304a50f013e61cec11047",
+      "expected": "7596e605ebf2b8b5908836d2af67d937ee153c79f86304a50f013e61cec11047",
+      "kind": "ink-recognizer",
+      "matched": true
+    },
+    {
+      "file": "runtimes/ink-recognizer.cs",
+      "bytes": 5107,
+      "sha256": "4bca2c34e203529e63f5ca852ef462dffe306033207e1af28d73655d217cd5d6",
+      "expected": "4bca2c34e203529e63f5ca852ef462dffe306033207e1af28d73655d217cd5d6",
+      "kind": "ink-recognizer",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft/OFL-shippori-mincho.txt",
+      "bytes": 4399,
+      "sha256": "41fba056279be5f45ff9a99e44b7b53897b42732f5806d8e666e0ab49ac6bd38",
+      "expected": "41fba056279be5f45ff9a99e44b7b53897b42732f5806d8e666e0ab49ac6bd38",
+      "kind": "web-runtime:vectorcraft",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft/LICENSE-MIT",
+      "bytes": 1103,
+      "sha256": "8b6025dc4b707e0fb08b9c2054096f1be3ae61529399aa2c348dec676562dc71",
+      "expected": "8b6025dc4b707e0fb08b9c2054096f1be3ae61529399aa2c348dec676562dc71",
+      "kind": "web-runtime:vectorcraft",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft/fonts/dc591156f36842d3/OFL.txt",
+      "bytes": 4384,
+      "sha256": "8c02263c5d73d40544f9ed91e30c4e947407057a3cc430d7b786189aeceff6df",
+      "expected": "8c02263c5d73d40544f9ed91e30c4e947407057a3cc430d7b786189aeceff6df",
+      "kind": "web-runtime:vectorcraft",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft/fonts/dc591156f36842d3/NotoSansGeorgian.ttf",
+      "bytes": 231988,
+      "sha256": "dc591156f36842d38996c4a7a17fee9bb58e45da3e2cac7a31b7d33de700adb9",
+      "expected": "dc591156f36842d38996c4a7a17fee9bb58e45da3e2cac7a31b7d33de700adb9",
+      "kind": "web-runtime:vectorcraft",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft/fonts/63111b5b2e074dd4/OFL.txt",
+      "bytes": 4382,
+      "sha256": "07fc70bfeb985cc1a87a8587d0a0c80bab11c86c9dc3fd95b6f0cb332f983e96",
+      "expected": "07fc70bfeb985cc1a87a8587d0a0c80bab11c86c9dc3fd95b6f0cb332f983e96",
+      "kind": "web-runtime:vectorcraft",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft/fonts/63111b5b2e074dd4/NotoSansArabic.ttf",
+      "bytes": 844676,
+      "sha256": "63111b5b2e074dd48cc67692e0a2726d86ee94c1c37fe8598257b7b4e87e869e",
+      "expected": "63111b5b2e074dd48cc67692e0a2726d86ee94c1c37fe8598257b7b4e87e869e",
+      "kind": "web-runtime:vectorcraft",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft/fonts/5a1c559bb539583c/OFL.txt",
+      "bytes": 4380,
+      "sha256": "2e98fd23a52d253db8612cd5942c8f2ff4111b21d2367050fdca91d8ccc374a0",
+      "expected": "2e98fd23a52d253db8612cd5942c8f2ff4111b21d2367050fdca91d8ccc374a0",
+      "kind": "web-runtime:vectorcraft",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft/fonts/5a1c559bb539583c/NotoSansThai.ttf",
+      "bytes": 218652,
+      "sha256": "5a1c559bb539583c8a1fd99d1c5b9491e5e14478c9cd2bd0970d5c3096cc9ef8",
+      "expected": "5a1c559bb539583c8a1fd99d1c5b9491e5e14478c9cd2bd0970d5c3096cc9ef8",
+      "kind": "web-runtime:vectorcraft",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft/OFL-noto-sans-hebrew.txt",
+      "bytes": 4382,
+      "sha256": "9b9fe028b5ba74d231659a1bbaf0ed09b11e759d1ca6a070999e16d151616b47",
+      "expected": "9b9fe028b5ba74d231659a1bbaf0ed09b11e759d1ca6a070999e16d151616b47",
+      "kind": "web-runtime:vectorcraft",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft/vectorcraft-web-56f8f562d77855f1_bg.wasm",
+      "bytes": 83866776,
+      "sha256": "a9f13507a8e6e6f83c8780f82692d5fe6e6dff51ed1239c51967456b3d269e49",
+      "expected": "a9f13507a8e6e6f83c8780f82692d5fe6e6dff51ed1239c51967456b3d269e49",
+      "kind": "web-runtime:vectorcraft",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft/ASSETS.md",
+      "bytes": 63414,
+      "sha256": "6a42e5ac5773bef86894ce4e317d3ab05c3fb3e0c7b4b2411fc66565314cc7f9",
+      "expected": "6a42e5ac5773bef86894ce4e317d3ab05c3fb3e0c7b4b2411fc66565314cc7f9",
+      "kind": "web-runtime:vectorcraft",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft/OFL-biz-ud-mincho.txt",
+      "bytes": 4408,
+      "sha256": "ef0ed524b3bd012f37015e986809eed6f67905456ebfc1ebd7fcc2765282ee01",
+      "expected": "ef0ed524b3bd012f37015e986809eed6f67905456ebfc1ebd7fcc2765282ee01",
+      "kind": "web-runtime:vectorcraft",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft/LICENSE-APACHE",
+      "bytes": 10174,
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+      "expected": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+      "kind": "web-runtime:vectorcraft",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft/OFL-noto-sans-georgian.txt",
+      "bytes": 4384,
+      "sha256": "8c02263c5d73d40544f9ed91e30c4e947407057a3cc430d7b786189aeceff6df",
+      "expected": "8c02263c5d73d40544f9ed91e30c4e947407057a3cc430d7b786189aeceff6df",
+      "kind": "web-runtime:vectorcraft",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft/_headers",
+      "bytes": 414,
+      "sha256": "dbca09da27d94b05de8b5f3ca1b933d3390f18f5cf64669b0910acb672e39968",
+      "expected": "dbca09da27d94b05de8b5f3ca1b933d3390f18f5cf64669b0910acb672e39968",
+      "kind": "web-runtime:vectorcraft",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft/OFL-biz-ud-pgothic.txt",
+      "bytes": 4408,
+      "sha256": "e753d7155d53c747d037a445e584c8ecfca6dd79846db610417e282a736b28bc",
+      "expected": "e753d7155d53c747d037a445e584c8ecfca6dd79846db610417e282a736b28bc",
+      "kind": "web-runtime:vectorcraft",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft/OFL-noto-sans-symbols-2.txt",
+      "bytes": 4383,
+      "sha256": "b118dd41337806a5d4797052c77caf3bd096aed783e5eb21b4d11154351e1ac0",
+      "expected": "b118dd41337806a5d4797052c77caf3bd096aed783e5eb21b4d11154351e1ac0",
+      "kind": "web-runtime:vectorcraft",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft/OFL-noto-sans-symbols.txt",
+      "bytes": 4383,
+      "sha256": "b118dd41337806a5d4797052c77caf3bd096aed783e5eb21b4d11154351e1ac0",
+      "expected": "b118dd41337806a5d4797052c77caf3bd096aed783e5eb21b4d11154351e1ac0",
+      "kind": "web-runtime:vectorcraft",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft/icons/32/ai.storyteller.vectorcraft.png",
+      "bytes": 1985,
+      "sha256": "da8689a9ea40b176e2167fe3d4f2b9c87144771d583e5d4033a8b2c0f185f7bd",
+      "expected": "da8689a9ea40b176e2167fe3d4f2b9c87144771d583e5d4033a8b2c0f185f7bd",
+      "kind": "web-runtime:vectorcraft",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft/icons/ai.storyteller.vectorcraft.svg",
+      "bytes": 374130,
+      "sha256": "caf794e769614d2661e31c2b549f39777474157905c75ffac2c0f72d529ab496",
+      "expected": "caf794e769614d2661e31c2b549f39777474157905c75ffac2c0f72d529ab496",
+      "kind": "web-runtime:vectorcraft",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft/icons/256/ai.storyteller.vectorcraft.png",
+      "bytes": 56885,
+      "sha256": "440a9a0d31ea3e098a6bd2806046ea936005a008742e4cc97c0adba2574a0825",
+      "expected": "440a9a0d31ea3e098a6bd2806046ea936005a008742e4cc97c0adba2574a0825",
+      "kind": "web-runtime:vectorcraft",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft/HOSTING.md",
+      "bytes": 5107,
+      "sha256": "73aa2e811441de59c633718b479f2bc9427942998eb752b65b5a6a6646ea4cd4",
+      "expected": "73aa2e811441de59c633718b479f2bc9427942998eb752b65b5a6a6646ea4cd4",
+      "kind": "web-runtime:vectorcraft",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft/OFL-noto-sans-cjk-sc.txt",
+      "bytes": 4301,
+      "sha256": "6a73f9541c2de74158c0e7cf6b0a58ef774f5a780bf191f2d7ec9cc53efe2bf2",
+      "expected": "6a73f9541c2de74158c0e7cf6b0a58ef774f5a780bf191f2d7ec9cc53efe2bf2",
+      "kind": "web-runtime:vectorcraft",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft/vectorcraft-web-56f8f562d77855f1.js",
+      "bytes": 183021,
+      "sha256": "2527424dd9c98c62dad53d826ff614d1133fbe9c34c676cbc274364fe65bdef6",
+      "expected": "2527424dd9c98c62dad53d826ff614d1133fbe9c34c676cbc274364fe65bdef6",
+      "kind": "web-runtime:vectorcraft",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft/README.md",
+      "bytes": 25138,
+      "sha256": "68eaaa4d2d58ab7edc8cd1ac9048b4baaa8b2dc37e9cfa0288a21f6e67cf76f2",
+      "expected": "68eaaa4d2d58ab7edc8cd1ac9048b4baaa8b2dc37e9cfa0288a21f6e67cf76f2",
+      "kind": "web-runtime:vectorcraft",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft/snippets/eframe-d31a8450ea12dfc1/inline0.js",
+      "bytes": 280,
+      "sha256": "22a98f9d0c5a0532d291bdc9a3050439420b3d11143b4568fcfd3c66fff36995",
+      "expected": "22a98f9d0c5a0532d291bdc9a3050439420b3d11143b4568fcfd3c66fff36995",
+      "kind": "web-runtime:vectorcraft",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft/OFL-noto-sans-arabic.txt",
+      "bytes": 4382,
+      "sha256": "07fc70bfeb985cc1a87a8587d0a0c80bab11c86c9dc3fd95b6f0cb332f983e96",
+      "expected": "07fc70bfeb985cc1a87a8587d0a0c80bab11c86c9dc3fd95b6f0cb332f983e96",
+      "kind": "web-runtime:vectorcraft",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft/licenses/pdf-backend/hayro-interpret/assets/CGATS_LICENSE.txt",
+      "bytes": 6552,
+      "sha256": "469d87b5fa48f8aaf69e25f4fcac3a309c97dbb7d561b917638abdb640e004d9",
+      "expected": "469d87b5fa48f8aaf69e25f4fcac3a309c97dbb7d561b917638abdb640e004d9",
+      "kind": "web-runtime:vectorcraft",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft/licenses/pdf-backend/hayro-interpret/assets/LICENSE_FOXIT",
+      "bytes": 1553,
+      "sha256": "b578cdd2345840ada550bd12519533812320d5f1d21cf4c1c7e1b1b0a31c98b7",
+      "expected": "b578cdd2345840ada550bd12519533812320d5f1d21cf4c1c7e1b1b0a31c98b7",
+      "kind": "web-runtime:vectorcraft",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft/licenses/pdf-backend/hayro-interpret/LICENSE-MIT",
+      "bytes": 1063,
+      "sha256": "51b50e6120c344dcc146bbd6375ca1c78e079d97c8bea76e67a53d6ff0efebac",
+      "expected": "51b50e6120c344dcc146bbd6375ca1c78e079d97c8bea76e67a53d6ff0efebac",
+      "kind": "web-runtime:vectorcraft",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft/licenses/pdf-backend/hayro-interpret/LICENSE-APACHE",
+      "bytes": 10173,
+      "sha256": "0cec06e0e55fbc3dc5cee4fca9b607f66cb8f4e4dbcf3b3c013594dd156732e9",
+      "expected": "0cec06e0e55fbc3dc5cee4fca9b607f66cb8f4e4dbcf3b3c013594dd156732e9",
+      "kind": "web-runtime:vectorcraft",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft/licenses/pdf-backend/hayro-cmap/LICENSE-MIT",
+      "bytes": 1063,
+      "sha256": "51b50e6120c344dcc146bbd6375ca1c78e079d97c8bea76e67a53d6ff0efebac",
+      "expected": "51b50e6120c344dcc146bbd6375ca1c78e079d97c8bea76e67a53d6ff0efebac",
+      "kind": "web-runtime:vectorcraft",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft/licenses/pdf-backend/hayro-cmap/LICENSE-APACHE",
+      "bytes": 10173,
+      "sha256": "0cec06e0e55fbc3dc5cee4fca9b607f66cb8f4e4dbcf3b3c013594dd156732e9",
+      "expected": "0cec06e0e55fbc3dc5cee4fca9b607f66cb8f4e4dbcf3b3c013594dd156732e9",
+      "kind": "web-runtime:vectorcraft",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft/licenses/pdf-backend/hayro-cmap/LICENSE.txt",
+      "bytes": 1453,
+      "sha256": "742665db9c8e1bc72603c6d319ca3e90b83bd6d95202f0cd4ef11068a07a9c29",
+      "expected": "742665db9c8e1bc72603c6d319ca3e90b83bd6d95202f0cd4ef11068a07a9c29",
+      "kind": "web-runtime:vectorcraft",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft/licenses/pdf-backend/hayro-syntax/LICENSE-MIT",
+      "bytes": 1063,
+      "sha256": "51b50e6120c344dcc146bbd6375ca1c78e079d97c8bea76e67a53d6ff0efebac",
+      "expected": "51b50e6120c344dcc146bbd6375ca1c78e079d97c8bea76e67a53d6ff0efebac",
+      "kind": "web-runtime:vectorcraft",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft/licenses/pdf-backend/hayro-syntax/LICENSE-APACHE",
+      "bytes": 10173,
+      "sha256": "0cec06e0e55fbc3dc5cee4fca9b607f66cb8f4e4dbcf3b3c013594dd156732e9",
+      "expected": "0cec06e0e55fbc3dc5cee4fca9b607f66cb8f4e4dbcf3b3c013594dd156732e9",
+      "kind": "web-runtime:vectorcraft",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft/licenses/pdf-backend/hayro-jbig2/LICENSE-MIT",
+      "bytes": 1063,
+      "sha256": "51b50e6120c344dcc146bbd6375ca1c78e079d97c8bea76e67a53d6ff0efebac",
+      "expected": "51b50e6120c344dcc146bbd6375ca1c78e079d97c8bea76e67a53d6ff0efebac",
+      "kind": "web-runtime:vectorcraft",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft/licenses/pdf-backend/hayro-jbig2/LICENSE-APACHE",
+      "bytes": 10173,
+      "sha256": "0cec06e0e55fbc3dc5cee4fca9b607f66cb8f4e4dbcf3b3c013594dd156732e9",
+      "expected": "0cec06e0e55fbc3dc5cee4fca9b607f66cb8f4e4dbcf3b3c013594dd156732e9",
+      "kind": "web-runtime:vectorcraft",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft/OFL-noto-sans-devanagari.txt",
+      "bytes": 4386,
+      "sha256": "a216f6f8d85c7228093e0ee5e258d9d377e6671f68acb4db1930b29583d0f331",
+      "expected": "a216f6f8d85c7228093e0ee5e258d9d377e6671f68acb4db1930b29583d0f331",
+      "kind": "web-runtime:vectorcraft",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft/index.html",
+      "bytes": 3086,
+      "sha256": "5aadeea66ab8053116ce88f193af54c24235643bf7130c7f1e13aced16f734de",
+      "expected": "5aadeea66ab8053116ce88f193af54c24235643bf7130c7f1e13aced16f734de",
+      "kind": "web-runtime:vectorcraft",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft/NOTICE",
+      "bytes": 8174,
+      "sha256": "ffb54183b2b44903f64736cdc9b50abb834ee6dac7059d2c9631692dd13c754b",
+      "expected": "ffb54183b2b44903f64736cdc9b50abb834ee6dac7059d2c9631692dd13c754b",
+      "kind": "web-runtime:vectorcraft",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft/OFL-noto-sans-thai.txt",
+      "bytes": 4380,
+      "sha256": "2e98fd23a52d253db8612cd5942c8f2ff4111b21d2367050fdca91d8ccc374a0",
+      "expected": "2e98fd23a52d253db8612cd5942c8f2ff4111b21d2367050fdca91d8ccc374a0",
+      "kind": "web-runtime:vectorcraft",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft/OFL-lxgw-wenkai-lite.txt",
+      "bytes": 5176,
+      "sha256": "0333a85fe077b6849f8e417acc44e8bd879442ceb681e271acf93e2d57fd4e2e",
+      "expected": "0333a85fe077b6849f8e417acc44e8bd879442ceb681e271acf93e2d57fd4e2e",
+      "kind": "web-runtime:vectorcraft",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft/OFL-nanum-gothic.txt",
+      "bytes": 4534,
+      "sha256": "eeacf16032901d0ed0456876ec77b8f0fda6b3fecec7d972f8543eb602e6c30f",
+      "expected": "eeacf16032901d0ed0456876ec77b8f0fda6b3fecec7d972f8543eb602e6c30f",
+      "kind": "web-runtime:vectorcraft",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft/.htaccess",
+      "bytes": 530,
+      "sha256": "2660940c9af97845dfd475cf1daa2ff1df18afb0bd91471e74e60d677fab2c6a",
+      "expected": "2660940c9af97845dfd475cf1daa2ff1df18afb0bd91471e74e60d677fab2c6a",
+      "kind": "web-runtime:vectorcraft",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft-host/fonts/2c76254f6fc379fd/NotoSansCJKsc-Regular.otf",
+      "bytes": 16437364,
+      "sha256": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+      "expected": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+      "kind": "web-runtime:vectorcraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft-host/fonts/2c76254f6fc379fd/OFL.txt",
+      "bytes": 4301,
+      "sha256": "6a73f9541c2de74158c0e7cf6b0a58ef774f5a780bf191f2d7ec9cc53efe2bf2",
+      "expected": "6a73f9541c2de74158c0e7cf6b0a58ef774f5a780bf191f2d7ec9cc53efe2bf2",
+      "kind": "web-runtime:vectorcraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft-host/fonts/5a1c559bb539583c/NotoSansThai.ttf",
+      "bytes": 218652,
+      "sha256": "5a1c559bb539583c8a1fd99d1c5b9491e5e14478c9cd2bd0970d5c3096cc9ef8",
+      "expected": "5a1c559bb539583c8a1fd99d1c5b9491e5e14478c9cd2bd0970d5c3096cc9ef8",
+      "kind": "web-runtime:vectorcraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft-host/fonts/5a1c559bb539583c/OFL.txt",
+      "bytes": 4380,
+      "sha256": "2e98fd23a52d253db8612cd5942c8f2ff4111b21d2367050fdca91d8ccc374a0",
+      "expected": "2e98fd23a52d253db8612cd5942c8f2ff4111b21d2367050fdca91d8ccc374a0",
+      "kind": "web-runtime:vectorcraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft-host/fonts/63111b5b2e074dd4/NotoSansArabic.ttf",
+      "bytes": 844676,
+      "sha256": "63111b5b2e074dd48cc67692e0a2726d86ee94c1c37fe8598257b7b4e87e869e",
+      "expected": "63111b5b2e074dd48cc67692e0a2726d86ee94c1c37fe8598257b7b4e87e869e",
+      "kind": "web-runtime:vectorcraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft-host/fonts/63111b5b2e074dd4/OFL.txt",
+      "bytes": 4382,
+      "sha256": "07fc70bfeb985cc1a87a8587d0a0c80bab11c86c9dc3fd95b6f0cb332f983e96",
+      "expected": "07fc70bfeb985cc1a87a8587d0a0c80bab11c86c9dc3fd95b6f0cb332f983e96",
+      "kind": "web-runtime:vectorcraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft-host/fonts/dc591156f36842d3/NotoSansGeorgian.ttf",
+      "bytes": 231988,
+      "sha256": "dc591156f36842d38996c4a7a17fee9bb58e45da3e2cac7a31b7d33de700adb9",
+      "expected": "dc591156f36842d38996c4a7a17fee9bb58e45da3e2cac7a31b7d33de700adb9",
+      "kind": "web-runtime:vectorcraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft-host/fonts/dc591156f36842d3/OFL.txt",
+      "bytes": 4384,
+      "sha256": "8c02263c5d73d40544f9ed91e30c4e947407057a3cc430d7b786189aeceff6df",
+      "expected": "8c02263c5d73d40544f9ed91e30c4e947407057a3cc430d7b786189aeceff6df",
+      "kind": "web-runtime:vectorcraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft-host/icons/256/ai.storyteller.vectorcraft.png",
+      "bytes": 56885,
+      "sha256": "440a9a0d31ea3e098a6bd2806046ea936005a008742e4cc97c0adba2574a0825",
+      "expected": "440a9a0d31ea3e098a6bd2806046ea936005a008742e4cc97c0adba2574a0825",
+      "kind": "web-runtime:vectorcraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft-host/icons/32/ai.storyteller.vectorcraft.png",
+      "bytes": 1985,
+      "sha256": "da8689a9ea40b176e2167fe3d4f2b9c87144771d583e5d4033a8b2c0f185f7bd",
+      "expected": "da8689a9ea40b176e2167fe3d4f2b9c87144771d583e5d4033a8b2c0f185f7bd",
+      "kind": "web-runtime:vectorcraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft-host/icons/ai.storyteller.vectorcraft.svg",
+      "bytes": 374130,
+      "sha256": "caf794e769614d2661e31c2b549f39777474157905c75ffac2c0f72d529ab496",
+      "expected": "caf794e769614d2661e31c2b549f39777474157905c75ffac2c0f72d529ab496",
+      "kind": "web-runtime:vectorcraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft-host/index.html",
+      "bytes": 3086,
+      "sha256": "1a9f22f34e5e9c42436ed0b1255433e6c1313ec43f5e7dfbc318727d2bd07c4d",
+      "expected": "1a9f22f34e5e9c42436ed0b1255433e6c1313ec43f5e7dfbc318727d2bd07c4d",
+      "kind": "web-runtime:vectorcraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft-host/LICENSE-APACHE",
+      "bytes": 10174,
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+      "expected": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+      "kind": "web-runtime:vectorcraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft-host/LICENSE-MIT",
+      "bytes": 1103,
+      "sha256": "8b6025dc4b707e0fb08b9c2054096f1be3ae61529399aa2c348dec676562dc71",
+      "expected": "8b6025dc4b707e0fb08b9c2054096f1be3ae61529399aa2c348dec676562dc71",
+      "kind": "web-runtime:vectorcraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft-host/NOTICE",
+      "bytes": 8174,
+      "sha256": "ffb54183b2b44903f64736cdc9b50abb834ee6dac7059d2c9631692dd13c754b",
+      "expected": "ffb54183b2b44903f64736cdc9b50abb834ee6dac7059d2c9631692dd13c754b",
+      "kind": "web-runtime:vectorcraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft-host/snippets/eframe-d31a8450ea12dfc1/inline0.js",
+      "bytes": 280,
+      "sha256": "22a98f9d0c5a0532d291bdc9a3050439420b3d11143b4568fcfd3c66fff36995",
+      "expected": "22a98f9d0c5a0532d291bdc9a3050439420b3d11143b4568fcfd3c66fff36995",
+      "kind": "web-runtime:vectorcraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft-host/vectorcraft-web-1a4f1888c82e6869.js",
+      "bytes": 181135,
+      "sha256": "ba3e17363385c177c8a9493b1b32fc968294bd4bf550ab86e8860d3c07b009f4",
+      "expected": "ba3e17363385c177c8a9493b1b32fc968294bd4bf550ab86e8860d3c07b009f4",
+      "kind": "web-runtime:vectorcraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft-host/vectorcraft-web-1a4f1888c82e6869_bg.wasm",
+      "bytes": 84273989,
+      "sha256": "bee669cdd1eb601d12e957628e30b3e2769afbd9c117900c50d5a837c112dc4d",
+      "expected": "bee669cdd1eb601d12e957628e30b3e2769afbd9c117900c50d5a837c112dc4d",
+      "kind": "web-runtime:vectorcraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft-host/vectorcraft-web-2061eac70a809dc0.js",
+      "bytes": 180367,
+      "sha256": "4e848c94dcd7934fa15ffcb86115bec63e83fc9ae2be4ce28b0c408a42274e62",
+      "expected": "4e848c94dcd7934fa15ffcb86115bec63e83fc9ae2be4ce28b0c408a42274e62",
+      "kind": "web-runtime:vectorcraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft-host/vectorcraft-web-2061eac70a809dc0_bg.wasm",
+      "bytes": 83964689,
+      "sha256": "a173208bf34d1925156fdf36a5e5f856d66ba3d6e8e29d97000065e8164c6076",
+      "expected": "a173208bf34d1925156fdf36a5e5f856d66ba3d6e8e29d97000065e8164c6076",
+      "kind": "web-runtime:vectorcraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft-host/vectorcraft-web-208dd8bf8428f171.js",
+      "bytes": 180367,
+      "sha256": "1f85c8527c87b7c002a789599c6304618f173f3096028009a2a8d671f197f5b9",
+      "expected": "1f85c8527c87b7c002a789599c6304618f173f3096028009a2a8d671f197f5b9",
+      "kind": "web-runtime:vectorcraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft-host/vectorcraft-web-208dd8bf8428f171_bg.wasm",
+      "bytes": 84269919,
+      "sha256": "11bd55c874b30076c3e172f936fb1e6ba689249b9b1b8a229b2b35c2d50c1f1e",
+      "expected": "11bd55c874b30076c3e172f936fb1e6ba689249b9b1b8a229b2b35c2d50c1f1e",
+      "kind": "web-runtime:vectorcraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft-host/vectorcraft-web-320678c2d1214f15.js",
+      "bytes": 179275,
+      "sha256": "8504d336dbb0150307c865ab20f8c18de516882c0a6d2daf8e80c1d7380b2093",
+      "expected": "8504d336dbb0150307c865ab20f8c18de516882c0a6d2daf8e80c1d7380b2093",
+      "kind": "web-runtime:vectorcraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft-host/vectorcraft-web-320678c2d1214f15_bg.wasm",
+      "bytes": 83949599,
+      "sha256": "08edc5994aae336c3fb5a99aa03c559d6c0526da8ee295abc5b08c1ed4031469",
+      "expected": "08edc5994aae336c3fb5a99aa03c559d6c0526da8ee295abc5b08c1ed4031469",
+      "kind": "web-runtime:vectorcraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft-host/vectorcraft-web-33baa8716f7bdefa.js",
+      "bytes": 179275,
+      "sha256": "8504d336dbb0150307c865ab20f8c18de516882c0a6d2daf8e80c1d7380b2093",
+      "expected": "8504d336dbb0150307c865ab20f8c18de516882c0a6d2daf8e80c1d7380b2093",
+      "kind": "web-runtime:vectorcraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft-host/vectorcraft-web-33baa8716f7bdefa_bg.wasm",
+      "bytes": 83940300,
+      "sha256": "20a7c0c4dce7fc100eaf887b230a614bfd3f9ebdb8019fb27d63d14301d40e70",
+      "expected": "20a7c0c4dce7fc100eaf887b230a614bfd3f9ebdb8019fb27d63d14301d40e70",
+      "kind": "web-runtime:vectorcraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft-host/vectorcraft-web-35ab59bcb836b0f7.js",
+      "bytes": 179275,
+      "sha256": "1fa309479aa6f48784f76b72b5e62c57bb7011be96741a87eab0acc02fd77d45",
+      "expected": "1fa309479aa6f48784f76b72b5e62c57bb7011be96741a87eab0acc02fd77d45",
+      "kind": "web-runtime:vectorcraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft-host/vectorcraft-web-35ab59bcb836b0f7_bg.wasm",
+      "bytes": 83935375,
+      "sha256": "051bd5c1515e121cc7bab40def068fd1a375aa2fee8ebdc95e876172271ba1ff",
+      "expected": "051bd5c1515e121cc7bab40def068fd1a375aa2fee8ebdc95e876172271ba1ff",
+      "kind": "web-runtime:vectorcraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft-host/vectorcraft-web-4f8333919875e9b7.js",
+      "bytes": 180367,
+      "sha256": "1301f3d894e3e95c7560edbd037941f6a494bd69f89cd5f985704e074fb11927",
+      "expected": "1301f3d894e3e95c7560edbd037941f6a494bd69f89cd5f985704e074fb11927",
+      "kind": "web-runtime:vectorcraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft-host/vectorcraft-web-4f8333919875e9b7_bg.wasm",
+      "bytes": 84194077,
+      "sha256": "029e638a8af8c6b42f3f34e27e67cb8b772d17701af63e42a6b6311f17ef82ac",
+      "expected": "029e638a8af8c6b42f3f34e27e67cb8b772d17701af63e42a6b6311f17ef82ac",
+      "kind": "web-runtime:vectorcraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft-host/vectorcraft-web-66c6f0f42a32473b.js",
+      "bytes": 180367,
+      "sha256": "e12afcf3f579453b80c3975726a33143cce1bd292f1a52be3e0dc403ae0cec0d",
+      "expected": "e12afcf3f579453b80c3975726a33143cce1bd292f1a52be3e0dc403ae0cec0d",
+      "kind": "web-runtime:vectorcraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft-host/vectorcraft-web-66c6f0f42a32473b_bg.wasm",
+      "bytes": 84220161,
+      "sha256": "345b3a708f1676e45d30e8936640e4e21847f98c13b925b105197aa440273c16",
+      "expected": "345b3a708f1676e45d30e8936640e4e21847f98c13b925b105197aa440273c16",
+      "kind": "web-runtime:vectorcraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft-host/vectorcraft-web-712f45399d29871.js",
+      "bytes": 180367,
+      "sha256": "fd073cde7022c6a159cf3b8744a2ea795e19a28125ad97b6f509fddcd5d4764a",
+      "expected": "fd073cde7022c6a159cf3b8744a2ea795e19a28125ad97b6f509fddcd5d4764a",
+      "kind": "web-runtime:vectorcraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft-host/vectorcraft-web-712f45399d29871_bg.wasm",
+      "bytes": 84244450,
+      "sha256": "3b16da4186a0505c17fea4b0441ead61ab45dcd8a64f7831fefab6427240675c",
+      "expected": "3b16da4186a0505c17fea4b0441ead61ab45dcd8a64f7831fefab6427240675c",
+      "kind": "web-runtime:vectorcraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft-host/vectorcraft-web-7ef0fcb67b7491c8.js",
+      "bytes": 179275,
+      "sha256": "8504d336dbb0150307c865ab20f8c18de516882c0a6d2daf8e80c1d7380b2093",
+      "expected": "8504d336dbb0150307c865ab20f8c18de516882c0a6d2daf8e80c1d7380b2093",
+      "kind": "web-runtime:vectorcraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft-host/vectorcraft-web-7ef0fcb67b7491c8_bg.wasm",
+      "bytes": 83949613,
+      "sha256": "d6959e785daaab9d317cdcd6e6f194f222d29ffc3f0721fb824d8fd661cb1e15",
+      "expected": "d6959e785daaab9d317cdcd6e6f194f222d29ffc3f0721fb824d8fd661cb1e15",
+      "kind": "web-runtime:vectorcraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft-host/vectorcraft-web-82a844e0755eb0d5.js",
+      "bytes": 179275,
+      "sha256": "1fa309479aa6f48784f76b72b5e62c57bb7011be96741a87eab0acc02fd77d45",
+      "expected": "1fa309479aa6f48784f76b72b5e62c57bb7011be96741a87eab0acc02fd77d45",
+      "kind": "web-runtime:vectorcraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft-host/vectorcraft-web-82a844e0755eb0d5_bg.wasm",
+      "bytes": 83937201,
+      "sha256": "8491bda5b945e9d72ca96578fc289a89ece9412b9b29c4591cc6e6aae8c4fa2f",
+      "expected": "8491bda5b945e9d72ca96578fc289a89ece9412b9b29c4591cc6e6aae8c4fa2f",
+      "kind": "web-runtime:vectorcraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft-host/vectorcraft-web-97e5c727b2a36b00.js",
+      "bytes": 181135,
+      "sha256": "ba3e17363385c177c8a9493b1b32fc968294bd4bf550ab86e8860d3c07b009f4",
+      "expected": "ba3e17363385c177c8a9493b1b32fc968294bd4bf550ab86e8860d3c07b009f4",
+      "kind": "web-runtime:vectorcraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft-host/vectorcraft-web-97e5c727b2a36b00_bg.wasm",
+      "bytes": 84273116,
+      "sha256": "e29beff640f362b5f6ea17fd5297df0e2b1b71c14ca2399a7a0330e3ba9d39b9",
+      "expected": "e29beff640f362b5f6ea17fd5297df0e2b1b71c14ca2399a7a0330e3ba9d39b9",
+      "kind": "web-runtime:vectorcraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft-host/vectorcraft-web-a6b129ea64536e96.js",
+      "bytes": 181135,
+      "sha256": "ba3e17363385c177c8a9493b1b32fc968294bd4bf550ab86e8860d3c07b009f4",
+      "expected": "ba3e17363385c177c8a9493b1b32fc968294bd4bf550ab86e8860d3c07b009f4",
+      "kind": "web-runtime:vectorcraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft-host/vectorcraft-web-a6b129ea64536e96_bg.wasm",
+      "bytes": 84273933,
+      "sha256": "525c7baae1ff1fe70518d3342d635d4d6db70db151657d59aa087fb2f152ebdb",
+      "expected": "525c7baae1ff1fe70518d3342d635d4d6db70db151657d59aa087fb2f152ebdb",
+      "kind": "web-runtime:vectorcraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft-host/vectorcraft-web-a76678203ab30411.js",
+      "bytes": 181135,
+      "sha256": "ba3e17363385c177c8a9493b1b32fc968294bd4bf550ab86e8860d3c07b009f4",
+      "expected": "ba3e17363385c177c8a9493b1b32fc968294bd4bf550ab86e8860d3c07b009f4",
+      "kind": "web-runtime:vectorcraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft-host/vectorcraft-web-a76678203ab30411_bg.wasm",
+      "bytes": 84273077,
+      "sha256": "5bc6d94db71f040a7e37312481e2d34e6ea45945ca69c0536084fc06e2594faf",
+      "expected": "5bc6d94db71f040a7e37312481e2d34e6ea45945ca69c0536084fc06e2594faf",
+      "kind": "web-runtime:vectorcraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft-host/vectorcraft-web-be0d2010a9ef5d5d.js",
+      "bytes": 180367,
+      "sha256": "e12afcf3f579453b80c3975726a33143cce1bd292f1a52be3e0dc403ae0cec0d",
+      "expected": "e12afcf3f579453b80c3975726a33143cce1bd292f1a52be3e0dc403ae0cec0d",
+      "kind": "web-runtime:vectorcraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft-host/vectorcraft-web-be0d2010a9ef5d5d_bg.wasm",
+      "bytes": 84220252,
+      "sha256": "39a817eeef8129980257e8b3b5f41abd64b87db08ed9e15d827625d1df821d24",
+      "expected": "39a817eeef8129980257e8b3b5f41abd64b87db08ed9e15d827625d1df821d24",
+      "kind": "web-runtime:vectorcraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft-host/vectorcraft-web-bf3d4524f0f4e9ec.js",
+      "bytes": 180367,
+      "sha256": "4e848c94dcd7934fa15ffcb86115bec63e83fc9ae2be4ce28b0c408a42274e62",
+      "expected": "4e848c94dcd7934fa15ffcb86115bec63e83fc9ae2be4ce28b0c408a42274e62",
+      "kind": "web-runtime:vectorcraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft-host/vectorcraft-web-bf3d4524f0f4e9ec_bg.wasm",
+      "bytes": 83969305,
+      "sha256": "5b8bf90c6df85d89b7d5f87a566acd06b4333fbbe51ed5f4d8f1bd6f586be5b8",
+      "expected": "5b8bf90c6df85d89b7d5f87a566acd06b4333fbbe51ed5f4d8f1bd6f586be5b8",
+      "kind": "web-runtime:vectorcraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft-host/vectorcraft-web-c333aafd53fa0fe3.js",
+      "bytes": 179275,
+      "sha256": "8504d336dbb0150307c865ab20f8c18de516882c0a6d2daf8e80c1d7380b2093",
+      "expected": "8504d336dbb0150307c865ab20f8c18de516882c0a6d2daf8e80c1d7380b2093",
+      "kind": "web-runtime:vectorcraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft-host/vectorcraft-web-c333aafd53fa0fe3_bg.wasm",
+      "bytes": 83946618,
+      "sha256": "4438c7431e390bca5c4e8d4f3994dfaa574405f138f5463d7256e4202f47d777",
+      "expected": "4438c7431e390bca5c4e8d4f3994dfaa574405f138f5463d7256e4202f47d777",
+      "kind": "web-runtime:vectorcraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft-host/vectorcraft-web-c8fdc860fd30d914.js",
+      "bytes": 180367,
+      "sha256": "1f85c8527c87b7c002a789599c6304618f173f3096028009a2a8d671f197f5b9",
+      "expected": "1f85c8527c87b7c002a789599c6304618f173f3096028009a2a8d671f197f5b9",
+      "kind": "web-runtime:vectorcraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft-host/vectorcraft-web-c8fdc860fd30d914_bg.wasm",
+      "bytes": 84268131,
+      "sha256": "119a60c219d36ccc98ffece5f2b77596d081346fb8da8801e3fb518162644483",
+      "expected": "119a60c219d36ccc98ffece5f2b77596d081346fb8da8801e3fb518162644483",
+      "kind": "web-runtime:vectorcraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft-host/vectorcraft-web-d8cffe9600254fd9.js",
+      "bytes": 180367,
+      "sha256": "1f85c8527c87b7c002a789599c6304618f173f3096028009a2a8d671f197f5b9",
+      "expected": "1f85c8527c87b7c002a789599c6304618f173f3096028009a2a8d671f197f5b9",
+      "kind": "web-runtime:vectorcraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft-host/vectorcraft-web-d8cffe9600254fd9_bg.wasm",
+      "bytes": 84265791,
+      "sha256": "17327bdc62342d59304ae60b8802f2ffa5ed6cbbaf1aa78a4722d8a9845e94dc",
+      "expected": "17327bdc62342d59304ae60b8802f2ffa5ed6cbbaf1aa78a4722d8a9845e94dc",
+      "kind": "web-runtime:vectorcraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft-host/vectorcraft-web-e15e745743f12977.js",
+      "bytes": 180367,
+      "sha256": "4e848c94dcd7934fa15ffcb86115bec63e83fc9ae2be4ce28b0c408a42274e62",
+      "expected": "4e848c94dcd7934fa15ffcb86115bec63e83fc9ae2be4ce28b0c408a42274e62",
+      "kind": "web-runtime:vectorcraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft-host/vectorcraft-web-e15e745743f12977_bg.wasm",
+      "bytes": 83964211,
+      "sha256": "1ee92302489be5d01f3b4ec9eb74cc530ad125a671ffa06e0123b169d1f26e7f",
+      "expected": "1ee92302489be5d01f3b4ec9eb74cc530ad125a671ffa06e0123b169d1f26e7f",
+      "kind": "web-runtime:vectorcraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft-host/vectorcraft-web-f28c74aaf617aaa0.js",
+      "bytes": 180367,
+      "sha256": "1f85c8527c87b7c002a789599c6304618f173f3096028009a2a8d671f197f5b9",
+      "expected": "1f85c8527c87b7c002a789599c6304618f173f3096028009a2a8d671f197f5b9",
+      "kind": "web-runtime:vectorcraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/vectorcraft-host/vectorcraft-web-f28c74aaf617aaa0_bg.wasm",
+      "bytes": 84272168,
+      "sha256": "902f15d011d931dd32e713379dfdccf3d58ba4f0cfb77a8ce2d7093793684a6e",
+      "expected": "902f15d011d931dd32e713379dfdccf3d58ba4f0cfb77a8ce2d7093793684a6e",
+      "kind": "web-runtime:vectorcraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/photocraft-host/ATTRIBUTION.md",
+      "bytes": 29440,
+      "sha256": "c87330f332d0b17a7620cfd8ed2fed5708ad2b95f82fe8e252752f5960f2917a",
+      "expected": "c87330f332d0b17a7620cfd8ed2fed5708ad2b95f82fe8e252752f5960f2917a",
+      "kind": "web-runtime:photocraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/photocraft-host/fonts/biz-ud-pgothic/BIZUDPGothic-Regular.ttf",
+      "bytes": 4669688,
+      "sha256": "258d7156c165f2ff774b6efee637c22c3b950de0d8a10e501137061bc8085d01",
+      "expected": "258d7156c165f2ff774b6efee637c22c3b950de0d8a10e501137061bc8085d01",
+      "kind": "web-runtime:photocraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/photocraft-host/fonts/biz-ud-pgothic/OFL.txt",
+      "bytes": 4408,
+      "sha256": "e753d7155d53c747d037a445e584c8ecfca6dd79846db610417e282a736b28bc",
+      "expected": "e753d7155d53c747d037a445e584c8ecfca6dd79846db610417e282a736b28bc",
+      "kind": "web-runtime:photocraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/photocraft-host/fonts/manifest.txt",
+      "bytes": 1556,
+      "sha256": "31b7e0993012cf8631b2d1ed5b0aa8ee89dfe5335ca44c5d02232b2cc604b944",
+      "expected": "31b7e0993012cf8631b2d1ed5b0aa8ee89dfe5335ca44c5d02232b2cc604b944",
+      "kind": "web-runtime:photocraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/photocraft-host/fonts/noto-sans-arabic/NotoSansArabic.ttf",
+      "bytes": 844676,
+      "sha256": "63111b5b2e074dd48cc67692e0a2726d86ee94c1c37fe8598257b7b4e87e869e",
+      "expected": "63111b5b2e074dd48cc67692e0a2726d86ee94c1c37fe8598257b7b4e87e869e",
+      "kind": "web-runtime:photocraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/photocraft-host/fonts/noto-sans-arabic/OFL.txt",
+      "bytes": 4382,
+      "sha256": "07fc70bfeb985cc1a87a8587d0a0c80bab11c86c9dc3fd95b6f0cb332f983e96",
+      "expected": "07fc70bfeb985cc1a87a8587d0a0c80bab11c86c9dc3fd95b6f0cb332f983e96",
+      "kind": "web-runtime:photocraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/photocraft-host/fonts/noto-sans-cjk-sc/NotoSansCJKsc-Regular.otf",
+      "bytes": 16437364,
+      "sha256": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+      "expected": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+      "kind": "web-runtime:photocraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/photocraft-host/fonts/noto-sans-cjk-sc/OFL.txt",
+      "bytes": 4301,
+      "sha256": "6a73f9541c2de74158c0e7cf6b0a58ef774f5a780bf191f2d7ec9cc53efe2bf2",
+      "expected": "6a73f9541c2de74158c0e7cf6b0a58ef774f5a780bf191f2d7ec9cc53efe2bf2",
+      "kind": "web-runtime:photocraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/photocraft-host/fonts/noto-sans-georgian/NotoSansGeorgian.ttf",
+      "bytes": 231988,
+      "sha256": "dc591156f36842d38996c4a7a17fee9bb58e45da3e2cac7a31b7d33de700adb9",
+      "expected": "dc591156f36842d38996c4a7a17fee9bb58e45da3e2cac7a31b7d33de700adb9",
+      "kind": "web-runtime:photocraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/photocraft-host/fonts/noto-sans-georgian/OFL.txt",
+      "bytes": 4384,
+      "sha256": "8c02263c5d73d40544f9ed91e30c4e947407057a3cc430d7b786189aeceff6df",
+      "expected": "8c02263c5d73d40544f9ed91e30c4e947407057a3cc430d7b786189aeceff6df",
+      "kind": "web-runtime:photocraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/photocraft-host/fonts/noto-sans-thai/NotoSansThai.ttf",
+      "bytes": 218652,
+      "sha256": "5a1c559bb539583c8a1fd99d1c5b9491e5e14478c9cd2bd0970d5c3096cc9ef8",
+      "expected": "5a1c559bb539583c8a1fd99d1c5b9491e5e14478c9cd2bd0970d5c3096cc9ef8",
+      "kind": "web-runtime:photocraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/photocraft-host/fonts/noto-sans-thai/OFL.txt",
+      "bytes": 4380,
+      "sha256": "2e98fd23a52d253db8612cd5942c8f2ff4111b21d2367050fdca91d8ccc374a0",
+      "expected": "2e98fd23a52d253db8612cd5942c8f2ff4111b21d2367050fdca91d8ccc374a0",
+      "kind": "web-runtime:photocraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/photocraft-host/index.html",
+      "bytes": 2507,
+      "sha256": "5a8bae979c76ea0bae60a7a6b44e1c844ed33f30685b0a0706eea5fbeb5c8cfa",
+      "expected": "5a8bae979c76ea0bae60a7a6b44e1c844ed33f30685b0a0706eea5fbeb5c8cfa",
+      "kind": "web-runtime:photocraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/photocraft-host/LICENSE-APACHE",
+      "bytes": 10174,
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+      "expected": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+      "kind": "web-runtime:photocraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/photocraft-host/LICENSE-MIT",
+      "bytes": 1102,
+      "sha256": "1a8f66d8a86b146f5336fa0d4b1186576c8aa98e60823080c85c7811cfd810af",
+      "expected": "1a8f66d8a86b146f5336fa0d4b1186576c8aa98e60823080c85c7811cfd810af",
+      "kind": "web-runtime:photocraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/photocraft-host/NOTICE",
+      "bytes": 3247,
+      "sha256": "bfb4e2d258b2db6aa3e9d2a33914212817745926ac836aa268e4208f13ed3fdf",
+      "expected": "bfb4e2d258b2db6aa3e9d2a33914212817745926ac836aa268e4208f13ed3fdf",
+      "kind": "web-runtime:photocraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/photocraft-host/photocraft-web-27700c220bf83b54.js",
+      "bytes": 177541,
+      "sha256": "c2631142da4da9545d61247cdb85ff64eb51e495cc01577be8cd7ddc4d50514c",
+      "expected": "c2631142da4da9545d61247cdb85ff64eb51e495cc01577be8cd7ddc4d50514c",
+      "kind": "web-runtime:photocraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/photocraft-host/photocraft-web-27700c220bf83b54_bg.wasm",
+      "bytes": 29628952,
+      "sha256": "919d1115bd4b1f983a43cd3af439870c6f2b70aa779922dfe2813b3697bcdd82",
+      "expected": "919d1115bd4b1f983a43cd3af439870c6f2b70aa779922dfe2813b3697bcdd82",
+      "kind": "web-runtime:photocraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/photocraft-host/photocraft-web-2bdea6dd55084a1d.js",
+      "bytes": 177541,
+      "sha256": "c2631142da4da9545d61247cdb85ff64eb51e495cc01577be8cd7ddc4d50514c",
+      "expected": "c2631142da4da9545d61247cdb85ff64eb51e495cc01577be8cd7ddc4d50514c",
+      "kind": "web-runtime:photocraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/photocraft-host/photocraft-web-2bdea6dd55084a1d_bg.wasm",
+      "bytes": 29669502,
+      "sha256": "ed3a1f33c61caa84340d92e633b1eab083b0d034cbdfe97cddddd11a12686a57",
+      "expected": "ed3a1f33c61caa84340d92e633b1eab083b0d034cbdfe97cddddd11a12686a57",
+      "kind": "web-runtime:photocraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/photocraft-host/photocraft-web-742943628811480c.js",
+      "bytes": 177541,
+      "sha256": "c2631142da4da9545d61247cdb85ff64eb51e495cc01577be8cd7ddc4d50514c",
+      "expected": "c2631142da4da9545d61247cdb85ff64eb51e495cc01577be8cd7ddc4d50514c",
+      "kind": "web-runtime:photocraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/photocraft-host/photocraft-web-742943628811480c_bg.wasm",
+      "bytes": 29668445,
+      "sha256": "be4153954270943bf90bb6fe45dff00c81a675ef129fb64f8e374c9e3f81746b",
+      "expected": "be4153954270943bf90bb6fe45dff00c81a675ef129fb64f8e374c9e3f81746b",
+      "kind": "web-runtime:photocraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/photocraft-host/photocraft-web-7f1d0af5b0884140.js",
+      "bytes": 178306,
+      "sha256": "ae78631f252495f1c23613c73b21a5d74bd001e7a12fbaf28663a5a15ede1387",
+      "expected": "ae78631f252495f1c23613c73b21a5d74bd001e7a12fbaf28663a5a15ede1387",
+      "kind": "web-runtime:photocraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/photocraft-host/photocraft-web-7f1d0af5b0884140_bg.wasm",
+      "bytes": 29671070,
+      "sha256": "4703483d174b8d085399a493f64f06f90ddbe4ab793e61a63ccff349dfbd9f5b",
+      "expected": "4703483d174b8d085399a493f64f06f90ddbe4ab793e61a63ccff349dfbd9f5b",
+      "kind": "web-runtime:photocraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/photocraft-host/photocraft-web-8cc93d6825b1429f.js",
+      "bytes": 178306,
+      "sha256": "ae78631f252495f1c23613c73b21a5d74bd001e7a12fbaf28663a5a15ede1387",
+      "expected": "ae78631f252495f1c23613c73b21a5d74bd001e7a12fbaf28663a5a15ede1387",
+      "kind": "web-runtime:photocraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/photocraft-host/photocraft-web-8cc93d6825b1429f_bg.wasm",
+      "bytes": 29670408,
+      "sha256": "b7abe7b003d7b45d13b8e18b8d5e6442d80f86298450d4a46212cf558d8c181d",
+      "expected": "b7abe7b003d7b45d13b8e18b8d5e6442d80f86298450d4a46212cf558d8c181d",
+      "kind": "web-runtime:photocraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/photocraft-host/photocraft-web-c21ca435b4f2522c.js",
+      "bytes": 177541,
+      "sha256": "c2631142da4da9545d61247cdb85ff64eb51e495cc01577be8cd7ddc4d50514c",
+      "expected": "c2631142da4da9545d61247cdb85ff64eb51e495cc01577be8cd7ddc4d50514c",
+      "kind": "web-runtime:photocraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/photocraft-host/photocraft-web-c21ca435b4f2522c_bg.wasm",
+      "bytes": 29668793,
+      "sha256": "1f5bbb8aea20c3d2b9b28662b5790df07f51f2e3680a14d8b26827bf3c18b508",
+      "expected": "1f5bbb8aea20c3d2b9b28662b5790df07f51f2e3680a14d8b26827bf3c18b508",
+      "kind": "web-runtime:photocraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/photocraft-host/photocraft-web-df380fadd9bada0b.js",
+      "bytes": 177541,
+      "sha256": "c2631142da4da9545d61247cdb85ff64eb51e495cc01577be8cd7ddc4d50514c",
+      "expected": "c2631142da4da9545d61247cdb85ff64eb51e495cc01577be8cd7ddc4d50514c",
+      "kind": "web-runtime:photocraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/photocraft-host/photocraft-web-df380fadd9bada0b_bg.wasm",
+      "bytes": 29629851,
+      "sha256": "8a1e36a3f15c8ec32965773e4061725c6754904c01f98d3d630c287ccced3faf",
+      "expected": "8a1e36a3f15c8ec32965773e4061725c6754904c01f98d3d630c287ccced3faf",
+      "kind": "web-runtime:photocraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/photocraft-host/photocraft-web-e6ff4a387667476a.js",
+      "bytes": 178306,
+      "sha256": "ae78631f252495f1c23613c73b21a5d74bd001e7a12fbaf28663a5a15ede1387",
+      "expected": "ae78631f252495f1c23613c73b21a5d74bd001e7a12fbaf28663a5a15ede1387",
+      "kind": "web-runtime:photocraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/photocraft-host/photocraft-web-e6ff4a387667476a_bg.wasm",
+      "bytes": 29671196,
+      "sha256": "dd5a9bbf818f351ae4c5d43bdd803843db47cde500bc92d377771abc880acfa5",
+      "expected": "dd5a9bbf818f351ae4c5d43bdd803843db47cde500bc92d377771abc880acfa5",
+      "kind": "web-runtime:photocraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/photocraft-host/snippets/eframe-d31a8450ea12dfc1/inline0.js",
+      "bytes": 280,
+      "sha256": "22a98f9d0c5a0532d291bdc9a3050439420b3d11143b4568fcfd3c66fff36995",
+      "expected": "22a98f9d0c5a0532d291bdc9a3050439420b3d11143b4568fcfd3c66fff36995",
+      "kind": "web-runtime:photocraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/deckcraft-host/ATTRIBUTION.md",
+      "bytes": 15650,
+      "sha256": "816b9eab869f45b27719b7f638625cb746b10e959fead1c4788cb786cbf92e5e",
+      "expected": "816b9eab869f45b27719b7f638625cb746b10e959fead1c4788cb786cbf92e5e",
+      "kind": "web-runtime:deckcraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/deckcraft-host/deckcraft-b8fcbb36ecec0385.ico",
+      "bytes": 22252,
+      "sha256": "ceb73e008aa2cdf4d05d6375da32c5536a2bc2637bee59cdf441e2f9f792a9cd",
+      "expected": "ceb73e008aa2cdf4d05d6375da32c5536a2bc2637bee59cdf441e2f9f792a9cd",
+      "kind": "web-runtime:deckcraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/deckcraft-host/deckcraft-web-178e3ee8573c1ac0.js",
+      "bytes": 170007,
+      "sha256": "e50f020176b5e2ea6855ff9d44e27fff3906644c405fce0261a4a02aea39085e",
+      "expected": "e50f020176b5e2ea6855ff9d44e27fff3906644c405fce0261a4a02aea39085e",
+      "kind": "web-runtime:deckcraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/deckcraft-host/deckcraft-web-178e3ee8573c1ac0_bg.wasm",
+      "bytes": 38323827,
+      "sha256": "aab07ab28d07c46fe812be9ba911d8140e32e24146a20fb735874b7a4727a9a0",
+      "expected": "aab07ab28d07c46fe812be9ba911d8140e32e24146a20fb735874b7a4727a9a0",
+      "kind": "web-runtime:deckcraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/deckcraft-host/deckcraft-web-3af43b3107cc67a2.js",
+      "bytes": 170007,
+      "sha256": "e50f020176b5e2ea6855ff9d44e27fff3906644c405fce0261a4a02aea39085e",
+      "expected": "e50f020176b5e2ea6855ff9d44e27fff3906644c405fce0261a4a02aea39085e",
+      "kind": "web-runtime:deckcraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/deckcraft-host/deckcraft-web-3af43b3107cc67a2_bg.wasm",
+      "bytes": 38372516,
+      "sha256": "f4d6cd373a5611fdbfd29b536a0d9fee0030a9c716c20eafed77061e286a31b9",
+      "expected": "f4d6cd373a5611fdbfd29b536a0d9fee0030a9c716c20eafed77061e286a31b9",
+      "kind": "web-runtime:deckcraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/deckcraft-host/deckcraft-web-92ed1924339b915f.js",
+      "bytes": 170007,
+      "sha256": "e50f020176b5e2ea6855ff9d44e27fff3906644c405fce0261a4a02aea39085e",
+      "expected": "e50f020176b5e2ea6855ff9d44e27fff3906644c405fce0261a4a02aea39085e",
+      "kind": "web-runtime:deckcraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/deckcraft-host/deckcraft-web-92ed1924339b915f_bg.wasm",
+      "bytes": 38378547,
+      "sha256": "64630d25193347eb46b8d337b1777a1790a6128f5eb35df9089790d19d3bbb8d",
+      "expected": "64630d25193347eb46b8d337b1777a1790a6128f5eb35df9089790d19d3bbb8d",
+      "kind": "web-runtime:deckcraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/deckcraft-host/deckcraft-web-eef554a06985b703.js",
+      "bytes": 170007,
+      "sha256": "2cc625ce3f4e9e8014f3d4e71dd3c5923997c7d1d1dcc0f0afa770fb1aa70a9b",
+      "expected": "2cc625ce3f4e9e8014f3d4e71dd3c5923997c7d1d1dcc0f0afa770fb1aa70a9b",
+      "kind": "web-runtime:deckcraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/deckcraft-host/deckcraft-web-eef554a06985b703_bg.wasm",
+      "bytes": 38128284,
+      "sha256": "2e315b69b915c76f6cf978f55168b8c33f8bdc1e66e13a8ff91e64cc16f047ba",
+      "expected": "2e315b69b915c76f6cf978f55168b8c33f8bdc1e66e13a8ff91e64cc16f047ba",
+      "kind": "web-runtime:deckcraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/deckcraft-host/fonts/biz-ud-pgothic/OFL.txt",
+      "bytes": 4408,
+      "sha256": "e753d7155d53c747d037a445e584c8ecfca6dd79846db610417e282a736b28bc",
+      "expected": "e753d7155d53c747d037a445e584c8ecfca6dd79846db610417e282a736b28bc",
+      "kind": "web-runtime:deckcraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/deckcraft-host/fonts/inter/OFL.txt",
+      "bytes": 4380,
+      "sha256": "262481e844521b326f5ecd053e59b98c8b2da78c8ee1bdbb6e8174305e54935a",
+      "expected": "262481e844521b326f5ecd053e59b98c8b2da78c8ee1bdbb6e8174305e54935a",
+      "kind": "web-runtime:deckcraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/deckcraft-host/fonts/lxgw-wenkai-lite/LXGWWenKaiLite-Regular.ttf",
+      "bytes": 13949472,
+      "sha256": "f799a538a3355877e597a0ae04050e897932c9ae7689eb9227c2953c5dd549ea",
+      "expected": "f799a538a3355877e597a0ae04050e897932c9ae7689eb9227c2953c5dd549ea",
+      "kind": "web-runtime:deckcraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/deckcraft-host/fonts/lxgw-wenkai-lite/OFL.txt",
+      "bytes": 5176,
+      "sha256": "0333a85fe077b6849f8e417acc44e8bd879442ceb681e271acf93e2d57fd4e2e",
+      "expected": "0333a85fe077b6849f8e417acc44e8bd879442ceb681e271acf93e2d57fd4e2e",
+      "kind": "web-runtime:deckcraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/deckcraft-host/fonts/runtime-provenance.json",
+      "bytes": 1264,
+      "sha256": "3a8a156dea6cfc5613c5c44d721db78afd34c68b21a29839683b3c5e3c233e2b",
+      "expected": "3a8a156dea6cfc5613c5c44d721db78afd34c68b21a29839683b3c5e3c233e2b",
+      "kind": "web-runtime:deckcraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/deckcraft-host/index.html",
+      "bytes": 1794,
+      "sha256": "ef2dce03da8573dd885ec6c849adce20c108cdd56ae13b047019ddbab9e12d2d",
+      "expected": "ef2dce03da8573dd885ec6c849adce20c108cdd56ae13b047019ddbab9e12d2d",
+      "kind": "web-runtime:deckcraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/deckcraft-host/LICENSE-APACHE",
+      "bytes": 10174,
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+      "expected": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+      "kind": "web-runtime:deckcraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/deckcraft-host/LICENSE-MIT",
+      "bytes": 1101,
+      "sha256": "90e96fef569474cd526350e716e4b05dd32f179ca96d39d61e6b928485e35406",
+      "expected": "90e96fef569474cd526350e716e4b05dd32f179ca96d39d61e6b928485e35406",
+      "kind": "web-runtime:deckcraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/deckcraft-host/NOTICE",
+      "bytes": 6550,
+      "sha256": "2ce764ed5d83f2453a7dba485092c0c41b465fe795b31c2c59bc5279332bc4f3",
+      "expected": "2ce764ed5d83f2453a7dba485092c0c41b465fe795b31c2c59bc5279332bc4f3",
+      "kind": "web-runtime:deckcraft-host",
+      "matched": true
+    },
+    {
+      "file": "runtimes/web/deckcraft-host/snippets/eframe-d31a8450ea12dfc1/inline0.js",
+      "bytes": 280,
+      "sha256": "22a98f9d0c5a0532d291bdc9a3050439420b3d11143b4568fcfd3c66fff36995",
+      "expected": "22a98f9d0c5a0532d291bdc9a3050439420b3d11143b4568fcfd3c66fff36995",
+      "kind": "web-runtime:deckcraft-host",
+      "matched": true
+    },
+    {
+      "file": "resources/vendor/msgpack-3.1.3/LICENSE",
+      "bytes": 740,
+      "sha256": "d95a411bcdadac85d678a99367ff51719e53539fa5ee9994943cd760c4ae64e4",
+      "expected": "d95a411bcdadac85d678a99367ff51719e53539fa5ee9994943cd760c4ae64e4",
+      "kind": "vendor-source-and-license",
+      "matched": true
+    },
+    {
+      "file": "resources/vendor/msgpack-3.1.3/dist.esm/CachedKeyDecoder.mjs",
+      "bytes": 2348,
+      "sha256": "263aa45942657a5fcfd4a229ed4bc3986dc7fc0a3b470e68aac516d57866b0d5",
+      "expected": "263aa45942657a5fcfd4a229ed4bc3986dc7fc0a3b470e68aac516d57866b0d5",
+      "kind": "vendor-source-and-license",
+      "matched": true
+    },
+    {
+      "file": "resources/vendor/msgpack-3.1.3/dist.esm/context.mjs",
+      "bytes": 47,
+      "sha256": "50876a3cf77eb5b7515df823c1c7233adfa0d3ef006eabace06bf077b4f13fd2",
+      "expected": "50876a3cf77eb5b7515df823c1c7233adfa0d3ef006eabace06bf077b4f13fd2",
+      "kind": "vendor-source-and-license",
+      "matched": true
+    },
+    {
+      "file": "resources/vendor/msgpack-3.1.3/dist.esm/decode.mjs",
+      "bytes": 1036,
+      "sha256": "c6eed74920ecd58c8b0c8c7174939336f2ec10e147ad11edda9984b9d46d553a",
+      "expected": "c6eed74920ecd58c8b0c8c7174939336f2ec10e147ad11edda9984b9d46d553a",
+      "kind": "vendor-source-and-license",
+      "matched": true
+    },
+    {
+      "file": "resources/vendor/msgpack-3.1.3/dist.esm/decodeAsync.mjs",
+      "bytes": 1268,
+      "sha256": "a2c4e3833c5b1d5b796813b597f7b137fcda04af0243616c29ecf28d75739c6b",
+      "expected": "a2c4e3833c5b1d5b796813b597f7b137fcda04af0243616c29ecf28d75739c6b",
+      "kind": "vendor-source-and-license",
+      "matched": true
+    },
+    {
+      "file": "resources/vendor/msgpack-3.1.3/dist.esm/DecodeError.mjs",
+      "bytes": 461,
+      "sha256": "2f9175116a6d59106a80e66b2a4178291118335c07b7db10281de1c4b987c12a",
+      "expected": "2f9175116a6d59106a80e66b2a4178291118335c07b7db10281de1c4b987c12a",
+      "kind": "vendor-source-and-license",
+      "matched": true
+    },
+    {
+      "file": "resources/vendor/msgpack-3.1.3/dist.esm/Decoder.mjs",
+      "bytes": 24749,
+      "sha256": "c55e62f4b159c4c22381a92674cad736344103d1513e69514f25db0fc1e22e43",
+      "expected": "c55e62f4b159c4c22381a92674cad736344103d1513e69514f25db0fc1e22e43",
+      "kind": "vendor-source-and-license",
+      "matched": true
+    },
+    {
+      "file": "resources/vendor/msgpack-3.1.3/dist.esm/encode.mjs",
+      "bytes": 483,
+      "sha256": "f7b3aefaccb6b3c3663f1184fcb5f510b56366534b54ee8e06b4f686248557e4",
+      "expected": "f7b3aefaccb6b3c3663f1184fcb5f510b56366534b54ee8e06b4f686248557e4",
+      "kind": "vendor-source-and-license",
+      "matched": true
+    },
+    {
+      "file": "resources/vendor/msgpack-3.1.3/dist.esm/Encoder.mjs",
+      "bytes": 15235,
+      "sha256": "884db1995163fc1a6b9f5d3d4cd1cf3c449f369fc3b88e347f85c935ec939f94",
+      "expected": "884db1995163fc1a6b9f5d3d4cd1cf3c449f369fc3b88e347f85c935ec939f94",
+      "kind": "vendor-source-and-license",
+      "matched": true
+    },
+    {
+      "file": "resources/vendor/msgpack-3.1.3/dist.esm/ExtData.mjs",
+      "bytes": 265,
+      "sha256": "6c6af27403017017e75056bfabc49e8b20b459c3928a2c2240ff87191c5628f6",
+      "expected": "6c6af27403017017e75056bfabc49e8b20b459c3928a2c2240ff87191c5628f6",
+      "kind": "vendor-source-and-license",
+      "matched": true
+    },
+    {
+      "file": "resources/vendor/msgpack-3.1.3/dist.esm/ExtensionCodec.mjs",
+      "bytes": 2410,
+      "sha256": "e7526000ef724f3f0180f2557e174ce64fb06cb098c4e2b9c7acfa3a51faed0c",
+      "expected": "e7526000ef724f3f0180f2557e174ce64fb06cb098c4e2b9c7acfa3a51faed0c",
+      "kind": "vendor-source-and-license",
+      "matched": true
+    },
+    {
+      "file": "resources/vendor/msgpack-3.1.3/dist.esm/index.mjs",
+      "bytes": 1049,
+      "sha256": "ff02984de11d45b86b67dccc4394be98aa786879ba90206bc666c44fc53a8b0a",
+      "expected": "ff02984de11d45b86b67dccc4394be98aa786879ba90206bc666c44fc53a8b0a",
+      "kind": "vendor-source-and-license",
+      "matched": true
+    },
+    {
+      "file": "resources/vendor/msgpack-3.1.3/dist.esm/utils/int.mjs",
+      "bytes": 985,
+      "sha256": "30e159cfd1b92c702b211d388c1507a21dc76bafe3fa5bce4c3eb2ecfb853bae",
+      "expected": "30e159cfd1b92c702b211d388c1507a21dc76bafe3fa5bce4c3eb2ecfb853bae",
+      "kind": "vendor-source-and-license",
+      "matched": true
+    },
+    {
+      "file": "resources/vendor/msgpack-3.1.3/dist.esm/utils/prettyByte.mjs",
+      "bytes": 162,
+      "sha256": "34586c2bbe9bb1996dbd3ffb5deadb20ae570d02a998e9a8ba4c2d6f6119c643",
+      "expected": "34586c2bbe9bb1996dbd3ffb5deadb20ae570d02a998e9a8ba4c2d6f6119c643",
+      "kind": "vendor-source-and-license",
+      "matched": true
+    },
+    {
+      "file": "resources/vendor/msgpack-3.1.3/dist.esm/utils/stream.mjs",
+      "bytes": 692,
+      "sha256": "db10dfe9599e02a4dab4fd4e1464b612c8e6f7ae666b55ee083589aa1d209f84",
+      "expected": "db10dfe9599e02a4dab4fd4e1464b612c8e6f7ae666b55ee083589aa1d209f84",
+      "kind": "vendor-source-and-license",
+      "matched": true
+    },
+    {
+      "file": "resources/vendor/msgpack-3.1.3/dist.esm/timestamp.mjs",
+      "bytes": 3510,
+      "sha256": "97ff2f72a7702923b8729c653b445f045f3cad29cc43149b27f6a2424a6b75c5",
+      "expected": "97ff2f72a7702923b8729c653b445f045f3cad29cc43149b27f6a2424a6b75c5",
+      "kind": "vendor-source-and-license",
+      "matched": true
+    },
+    {
+      "file": "resources/vendor/msgpack-3.1.3/dist.esm/utils/typedArrays.mjs",
+      "bytes": 628,
+      "sha256": "b817b259d25f569f9f9265ec706b4e8b782198082ab187fb5fb94c40df05bab0",
+      "expected": "b817b259d25f569f9f9265ec706b4e8b782198082ab187fb5fb94c40df05bab0",
+      "kind": "vendor-source-and-license",
+      "matched": true
+    },
+    {
+      "file": "resources/vendor/msgpack-3.1.3/dist.esm/utils/utf8.mjs",
+      "bytes": 5858,
+      "sha256": "e86d004a276a546ae36c3ec1c5394dc570338b319f5f4aa1138f90fe684d591f",
+      "expected": "e86d004a276a546ae36c3ec1c5394dc570338b319f5f4aa1138f90fe684d591f",
+      "kind": "vendor-source-and-license",
+      "matched": true
+    },
+    {
+      "file": "resources/vendor/tailwind-3.4.17/LICENSE.txt",
+      "bytes": 1071,
+      "sha256": "60e0b68c0f35c078eef3a5d29419d0b03ff84ec1df9c3f9d6e39a519a5ae7985",
+      "expected": "60e0b68c0f35c078eef3a5d29419d0b03ff84ec1df9c3f9d6e39a519a5ae7985",
+      "kind": "vendor-license-reference",
+      "matched": true
+    },
+    {
+      "file": "host/vendor/colorjs/LICENSE",
+      "bytes": 1080,
+      "sha256": "feee8a4ec1649b385f3ec9ac73174501cbfc9d5a75171a056d94cb452d3f3ec3",
+      "expected": "feee8a4ec1649b385f3ec9ac73174501cbfc9d5a75171a056d94cb452d3f3ec3",
+      "kind": "Color.js 0.5.2 source/MIT",
+      "matched": true
+    },
+    {
+      "file": "host/vendor/colorjs/src/spaces/a98rgb-linear.js",
+      "bytes": 1050,
+      "sha256": "98edb0413eb2be3f6495e422d2ef12f394c7df9dd39cc878d753e266cc1eae57",
+      "expected": "98edb0413eb2be3f6495e422d2ef12f394c7df9dd39cc878d753e266cc1eae57",
+      "kind": "Color.js 0.5.2 source/MIT",
+      "matched": true
+    },
+    {
+      "file": "host/vendor/colorjs/src/spaces/a98rgb.js",
+      "bytes": 388,
+      "sha256": "e769e285131539d340bb49a805b81e2b73432f90c4ac3ca6bd06a86dcbe45847",
+      "expected": "e769e285131539d340bb49a805b81e2b73432f90c4ac3ca6bd06a86dcbe45847",
+      "kind": "Color.js 0.5.2 source/MIT",
+      "matched": true
+    },
+    {
+      "file": "host/vendor/colorjs/src/spaces/acescc.js",
+      "bytes": 2143,
+      "sha256": "941fc85940cef9f4424a7897a732837c38c9e2657288c5cf5b2b740f97435963",
+      "expected": "941fc85940cef9f4424a7897a732837c38c9e2657288c5cf5b2b740f97435963",
+      "kind": "Color.js 0.5.2 source/MIT",
+      "matched": true
+    },
+    {
+      "file": "host/vendor/colorjs/src/spaces/acescg.js",
+      "bytes": 1517,
+      "sha256": "59ff3712e58de43f91d39f2b960295e0b96851d8949226a2ff1ae13d83e4ac2c",
+      "expected": "59ff3712e58de43f91d39f2b960295e0b96851d8949226a2ff1ae13d83e4ac2c",
+      "kind": "Color.js 0.5.2 source/MIT",
+      "matched": true
+    },
+    {
+      "file": "host/vendor/colorjs/src/adapt.js",
+      "bytes": 1702,
+      "sha256": "aac3fb194245feca4dc7c39ad153572ca2db7b5ca94eaf788e7c5a0f79f71772",
+      "expected": "aac3fb194245feca4dc7c39ad153572ca2db7b5ca94eaf788e7c5a0f79f71772",
+      "kind": "Color.js 0.5.2 source/MIT",
+      "matched": true
+    },
+    {
+      "file": "host/vendor/colorjs/src/angles.js",
+      "bytes": 679,
+      "sha256": "77606e9abfa09fbe6e40ef8786b57c4a0c1016bb4b615f4ea0b00514512b1d61",
+      "expected": "77606e9abfa09fbe6e40ef8786b57c4a0c1016bb4b615f4ea0b00514512b1d61",
+      "kind": "Color.js 0.5.2 source/MIT",
+      "matched": true
+    },
+    {
+      "file": "host/vendor/colorjs/src/contrast/APCA.js",
+      "bytes": 2492,
+      "sha256": "789624634afffdafc7afd2a2870f9066af9ca2f7b85e9022a10107c6341432e0",
+      "expected": "789624634afffdafc7afd2a2870f9066af9ca2f7b85e9022a10107c6341432e0",
+      "kind": "Color.js 0.5.2 source/MIT",
+      "matched": true
+    },
+    {
+      "file": "host/vendor/colorjs/src/spaces/cam16.js",
+      "bytes": 8731,
+      "sha256": "98f2f1d7d6c0c0b601c9a073817cd29d18eb778cf80a45a6c484ef8a9d7cf601",
+      "expected": "98f2f1d7d6c0c0b601c9a073817cd29d18eb778cf80a45a6c484ef8a9d7cf601",
+      "kind": "Color.js 0.5.2 source/MIT",
+      "matched": true
+    },
+    {
+      "file": "host/vendor/colorjs/src/CATs.js",
+      "bytes": 4111,
+      "sha256": "ef8c9dd7a8b7250226d0d3f1529d4aadf5c71a9c1e5ce332b183636b9ca0b024",
+      "expected": "ef8c9dd7a8b7250226d0d3f1529d4aadf5c71a9c1e5ce332b183636b9ca0b024",
+      "kind": "Color.js 0.5.2 source/MIT",
+      "matched": true
+    },
+    {
+      "file": "host/vendor/colorjs/src/chromaticity.js",
+      "bytes": 777,
+      "sha256": "3cc214fc6706f97f1a1c9c720a01c92b644c84b28eb3922867a104e281e50973",
+      "expected": "3cc214fc6706f97f1a1c9c720a01c92b644c84b28eb3922867a104e281e50973",
+      "kind": "Color.js 0.5.2 source/MIT",
+      "matched": true
+    },
+    {
+      "file": "host/vendor/colorjs/src/clone.js",
+      "bytes": 132,
+      "sha256": "10a6bc7403ceb04f4fbeb26fc433afe55dd2b47a30b35a957735d991ad3c1684",
+      "expected": "10a6bc7403ceb04f4fbeb26fc433afe55dd2b47a30b35a957735d991ad3c1684",
+      "kind": "Color.js 0.5.2 source/MIT",
+      "matched": true
+    },
+    {
+      "file": "host/vendor/colorjs/src/color.js",
+      "bytes": 3851,
+      "sha256": "1a6d7dd8724b907ae44a4e8230597e329033ea703f3803b7d6ca2e33b410ae59",
+      "expected": "1a6d7dd8724b907ae44a4e8230597e329033ea703f3803b7d6ca2e33b410ae59",
+      "kind": "Color.js 0.5.2 source/MIT",
+      "matched": true
+    },
+    {
+      "file": "host/vendor/colorjs/src/contrast.js",
+      "bytes": 870,
+      "sha256": "de7ab2cb4858002f7be55f35928400e67410106becf958f39b794e4715570d3e",
+      "expected": "de7ab2cb4858002f7be55f35928400e67410106becf958f39b794e4715570d3e",
+      "kind": "Color.js 0.5.2 source/MIT",
+      "matched": true
+    },
+    {
+      "file": "host/vendor/colorjs/src/defaults.js",
+      "bytes": 311,
+      "sha256": "4026081e799051c1a58951c6c1e4be73f50acc0aa2144bd7cf62f293219c6996",
+      "expected": "4026081e799051c1a58951c6c1e4be73f50acc0aa2144bd7cf62f293219c6996",
+      "kind": "Color.js 0.5.2 source/MIT",
+      "matched": true
+    },
+    {
+      "file": "host/vendor/colorjs/src/deltaE.js",
+      "bytes": 465,
+      "sha256": "70a11a91b9a424e4c55db78ad4010cbe67f9ac912cdac01eef5c4b36cc9c65bd",
+      "expected": "70a11a91b9a424e4c55db78ad4010cbe67f9ac912cdac01eef5c4b36cc9c65bd",
+      "kind": "Color.js 0.5.2 source/MIT",
+      "matched": true
+    },
+    {
+      "file": "host/vendor/colorjs/src/deltaE/deltaE2000.js",
+      "bytes": 4847,
+      "sha256": "6bb979cf7d3164663516ff30bd224c42199a5326d914d35c8b05881a9b409d77",
+      "expected": "6bb979cf7d3164663516ff30bd224c42199a5326d914d35c8b05881a9b409d77",
+      "kind": "Color.js 0.5.2 source/MIT",
+      "matched": true
+    },
+    {
+      "file": "host/vendor/colorjs/src/deltaE/deltaE76.js",
+      "bytes": 229,
+      "sha256": "e30721c56e28032203f97d73d2d4e513e03a768dd05d0da386ffb438b8737c05",
+      "expected": "e30721c56e28032203f97d73d2d4e513e03a768dd05d0da386ffb438b8737c05",
+      "kind": "Color.js 0.5.2 source/MIT",
+      "matched": true
+    },
+    {
+      "file": "host/vendor/colorjs/src/deltaE/deltaECMC.js",
+      "bytes": 3293,
+      "sha256": "dbb97e2d4a18937af2bef7071a52e3ffe86032c646d96b6a9c0c9bb43debfc57",
+      "expected": "dbb97e2d4a18937af2bef7071a52e3ffe86032c646d96b6a9c0c9bb43debfc57",
+      "kind": "Color.js 0.5.2 source/MIT",
+      "matched": true
+    },
+    {
+      "file": "host/vendor/colorjs/src/deltaE/deltaEHCT.js",
+      "bytes": 1729,
+      "sha256": "aba92bd198e5b0b9de86cf67589c6445b18bc65d7ecc30bbd42ccb7ca4ff0596",
+      "expected": "aba92bd198e5b0b9de86cf67589c6445b18bc65d7ecc30bbd42ccb7ca4ff0596",
+      "kind": "Color.js 0.5.2 source/MIT",
+      "matched": true
+    },
+    {
+      "file": "host/vendor/colorjs/src/deltaE/deltaEITP.js",
+      "bytes": 720,
+      "sha256": "a5b4997d0e2950b4f34d89a28e217a9c843834428c7a51e1c2c6d793ab7889d4",
+      "expected": "a5b4997d0e2950b4f34d89a28e217a9c843834428c7a51e1c2c6d793ab7889d4",
+      "kind": "Color.js 0.5.2 source/MIT",
+      "matched": true
+    },
+    {
+      "file": "host/vendor/colorjs/src/deltaE/deltaEJz.js",
+      "bytes": 1131,
+      "sha256": "c6a17cf767f50ebec8c856fc27933eb8b1f54168115fb8f5f33b898edb838444",
+      "expected": "c6a17cf767f50ebec8c856fc27933eb8b1f54168115fb8f5f33b898edb838444",
+      "kind": "Color.js 0.5.2 source/MIT",
+      "matched": true
+    },
+    {
+      "file": "host/vendor/colorjs/src/deltaE/deltaEOK.js",
+      "bytes": 575,
+      "sha256": "b9b83a806f22ce68a47a2be8edc8a7c723f44d7deec91eb1cf5ecfb066d2dfcd",
+      "expected": "b9b83a806f22ce68a47a2be8edc8a7c723f44d7deec91eb1cf5ecfb066d2dfcd",
+      "kind": "Color.js 0.5.2 source/MIT",
+      "matched": true
+    },
+    {
+      "file": "host/vendor/colorjs/src/contrast/deltaPhi.js",
+      "bytes": 831,
+      "sha256": "db3bb152fd7fc8be73e54f64f3e36020128ad187fbeafed8deb943b28d41ab5d",
+      "expected": "db3bb152fd7fc8be73e54f64f3e36020128ad187fbeafed8deb943b28d41ab5d",
+      "kind": "Color.js 0.5.2 source/MIT",
+      "matched": true
+    },
+    {
+      "file": "host/vendor/colorjs/src/display.js",
+      "bytes": 2875,
+      "sha256": "9ab6ccac63d7671138c59a3d66e6c525cce5763ee9452006c2da07fac21b4320",
+      "expected": "9ab6ccac63d7671138c59a3d66e6c525cce5763ee9452006c2da07fac21b4320",
+      "kind": "Color.js 0.5.2 source/MIT",
+      "matched": true
+    },
+    {
+      "file": "host/vendor/colorjs/src/distance.js",
+      "bytes": 502,
+      "sha256": "6a2b00395cc44893d1a4f0e889241823227b8766b67bbd96b5012a63713e836e",
+      "expected": "6a2b00395cc44893d1a4f0e889241823227b8766b67bbd96b5012a63713e836e",
+      "kind": "Color.js 0.5.2 source/MIT",
+      "matched": true
+    },
+    {
+      "file": "host/vendor/colorjs/src/equals.js",
+      "bytes": 293,
+      "sha256": "953dec61d148dabfeab7f1983791f15ab678dcb4f681c782bea5a04b9e2590bc",
+      "expected": "953dec61d148dabfeab7f1983791f15ab678dcb4f681c782bea5a04b9e2590bc",
+      "kind": "Color.js 0.5.2 source/MIT",
+      "matched": true
+    },
+    {
+      "file": "host/vendor/colorjs/src/get.js",
+      "bytes": 308,
+      "sha256": "2b75b922ba354525cc5c7946d3a95a3719295abae1100b772d76dea8fa507db1",
+      "expected": "2b75b922ba354525cc5c7946d3a95a3719295abae1100b772d76dea8fa507db1",
+      "kind": "Color.js 0.5.2 source/MIT",
+      "matched": true
+    },
+    {
+      "file": "host/vendor/colorjs/src/getAll.js",
+      "bytes": 595,
+      "sha256": "e75aae3016b246207237eff30d0eadab91993210a4521dd7a896522d45586434",
+      "expected": "e75aae3016b246207237eff30d0eadab91993210a4521dd7a896522d45586434",
+      "kind": "Color.js 0.5.2 source/MIT",
+      "matched": true
+    },
+    {
+      "file": "host/vendor/colorjs/src/getColor.js",
+      "bytes": 851,
+      "sha256": "1ad790b1201d26febc748378025b93cbf946e3293dee87b43bdfdf669216eabe",
+      "expected": "1ad790b1201d26febc748378025b93cbf946e3293dee87b43bdfdf669216eabe",
+      "kind": "Color.js 0.5.2 source/MIT",
+      "matched": true
+    },
+    {
+      "file": "host/vendor/colorjs/src/spaces/hct.js",
+      "bytes": 4315,
+      "sha256": "0204e13c17ffbeb2025d1d40a98ccc8e6e186a7b1d8e5b02d5ab2abb9444450e",
+      "expected": "0204e13c17ffbeb2025d1d40a98ccc8e6e186a7b1d8e5b02d5ab2abb9444450e",
+      "kind": "Color.js 0.5.2 source/MIT",
+      "matched": true
+    },
+    {
+      "file": "host/vendor/colorjs/src/hooks.js",
+      "bytes": 780,
+      "sha256": "4fb82e2648d41ad9a0513af575674cb2595777f62435acae52861494c681ae57",
+      "expected": "4fb82e2648d41ad9a0513af575674cb2595777f62435acae52861494c681ae57",
+      "kind": "Color.js 0.5.2 source/MIT",
+      "matched": true
+    },
+    {
+      "file": "host/vendor/colorjs/src/spaces/hpluv.js",
+      "bytes": 3448,
+      "sha256": "f640bb7226289a5e962c964994dae9494e849b4e48a56e4880269aa97354e03d",
+      "expected": "f640bb7226289a5e962c964994dae9494e849b4e48a56e4880269aa97354e03d",
+      "kind": "Color.js 0.5.2 source/MIT",
+      "matched": true
+    },
+    {
+      "file": "host/vendor/colorjs/src/spaces/hsl.js",
+      "bytes": 1750,
+      "sha256": "bd9c2a594d5aea0758ca1be7b7095db5edf64a87b54cb9afaf06578b45d65bb5",
+      "expected": "bd9c2a594d5aea0758ca1be7b7095db5edf64a87b54cb9afaf06578b45d65bb5",
+      "kind": "Color.js 0.5.2 source/MIT",
+      "matched": true
+    },
+    {
+      "file": "host/vendor/colorjs/src/spaces/hsluv.js",
+      "bytes": 4616,
+      "sha256": "0dfbd2164c4a7b106807020bad89906c4754d4eb07e9c848b2344d1146ec6d81",
+      "expected": "0dfbd2164c4a7b106807020bad89906c4754d4eb07e9c848b2344d1146ec6d81",
+      "kind": "Color.js 0.5.2 source/MIT",
+      "matched": true
+    },
+    {
+      "file": "host/vendor/colorjs/src/spaces/hsv.js",
+      "bytes": 1247,
+      "sha256": "b156d6df83bb16441745c472cb504bc55d5a7f595c9f7d2215d91ffbaf7b76b4",
+      "expected": "b156d6df83bb16441745c472cb504bc55d5a7f595c9f7d2215d91ffbaf7b76b4",
+      "kind": "Color.js 0.5.2 source/MIT",
+      "matched": true
+    },
+    {
+      "file": "host/vendor/colorjs/src/spaces/hwb.js",
+      "bytes": 1120,
+      "sha256": "31c6b6240ef5cdc47761c95c79f2b4c665be2bf74a27546e5ad8837157eff2bb",
+      "expected": "31c6b6240ef5cdc47761c95c79f2b4c665be2bf74a27546e5ad8837157eff2bb",
+      "kind": "Color.js 0.5.2 source/MIT",
+      "matched": true
+    },
+    {
+      "file": "host/vendor/colorjs/src/spaces/ictcp.js",
+      "bytes": 4311,
+      "sha256": "1d035dc0f81ffed0250523b26e20bdb9af023a3ce9d09b80b791503ae55edf9f",
+      "expected": "1d035dc0f81ffed0250523b26e20bdb9af023a3ce9d09b80b791503ae55edf9f",
+      "kind": "Color.js 0.5.2 source/MIT",
+      "matched": true
+    },
+    {
+      "file": "host/vendor/colorjs/src/spaces/index-fn-hdr.js",
+      "bytes": 347,
+      "sha256": "10654f3adea9a4c4979b5cceca4779934bc8543a73db427a9e5dcf72f4c19a30",
+      "expected": "10654f3adea9a4c4979b5cceca4779934bc8543a73db427a9e5dcf72f4c19a30",
+      "kind": "Color.js 0.5.2 source/MIT",
+      "matched": true
+    },
+    {
+      "file": "host/vendor/colorjs/src/index-fn.js",
+      "bytes": 1731,
+      "sha256": "61a9c576c38a388e4987a8e1411dcb25993931e5ae4b18278267fb88fa7bd188",
+      "expected": "61a9c576c38a388e4987a8e1411dcb25993931e5ae4b18278267fb88fa7bd188",
+      "kind": "Color.js 0.5.2 source/MIT",
+      "matched": true
+    },
+    {
+      "file": "host/vendor/colorjs/src/spaces/index-fn.js",
+      "bytes": 1331,
+      "sha256": "bc661181cf5f47ad8e995bb404512b301f95250bd45afda97529bcdfc97d0ef0",
+      "expected": "bc661181cf5f47ad8e995bb404512b301f95250bd45afda97529bcdfc97d0ef0",
+      "kind": "Color.js 0.5.2 source/MIT",
+      "matched": true
+    },
+    {
+      "file": "host/vendor/colorjs/src/contrast/index.js",
+      "bytes": 332,
+      "sha256": "725176028fbe29682b89b7d927a66e687ce9257443f10ffbd445eb480fdcfeaa",
+      "expected": "725176028fbe29682b89b7d927a66e687ce9257443f10ffbd445eb480fdcfeaa",
+      "kind": "Color.js 0.5.2 source/MIT",
+      "matched": true
+    },
+    {
+      "file": "host/vendor/colorjs/src/deltaE/index.js",
+      "bytes": 474,
+      "sha256": "520436f32ffb005d611dca62de784306291d6110bff389bda883a2439071d2ee",
+      "expected": "520436f32ffb005d611dca62de784306291d6110bff389bda883a2439071d2ee",
+      "kind": "Color.js 0.5.2 source/MIT",
+      "matched": true
+    },
+    {
+      "file": "host/vendor/colorjs/src/index.js",
+      "bytes": 913,
+      "sha256": "9603e1dbdc179cbb6fdbc66a10d14a77f248b5b76741105387705d988fb9a574",
+      "expected": "9603e1dbdc179cbb6fdbc66a10d14a77f248b5b76741105387705d988fb9a574",
+      "kind": "Color.js 0.5.2 source/MIT",
+      "matched": true
+    },
+    {
+      "file": "host/vendor/colorjs/src/spaces/index.js",
+      "bytes": 198,
+      "sha256": "8adb082a592dc99e8b594234ffd44a0ba79dc93c77101b45fddecb36b41ee87b",
+      "expected": "8adb082a592dc99e8b594234ffd44a0ba79dc93c77101b45fddecb36b41ee87b",
+      "kind": "Color.js 0.5.2 source/MIT",
+      "matched": true
+    },
+    {
+      "file": "host/vendor/colorjs/src/inGamut.js",
+      "bytes": 530,
+      "sha256": "a4596eece04581b2a0eae89d5d14e4be311adf7f7acb63754beba3362c05783d",
+      "expected": "a4596eece04581b2a0eae89d5d14e4be311adf7f7acb63754beba3362c05783d",
+      "kind": "Color.js 0.5.2 source/MIT",
+      "matched": true
+    },
+    {
+      "file": "host/vendor/colorjs/src/interpolation.js",
+      "bytes": 5897,
+      "sha256": "26e55dd3d0e3b2e98f281cf7aedf75c52fcedef7e58611e1c326edc75aa00828",
+      "expected": "26e55dd3d0e3b2e98f281cf7aedf75c52fcedef7e58611e1c326edc75aa00828",
+      "kind": "Color.js 0.5.2 source/MIT",
+      "matched": true
+    },
+    {
+      "file": "host/vendor/colorjs/src/spaces/jzazbz.js",
+      "bytes": 3201,
+      "sha256": "a2ba76a5d7c4c26db24a89e531fddd6b7ef6a59838640f5b68158be3102d0b7d",
+      "expected": "a2ba76a5d7c4c26db24a89e531fddd6b7ef6a59838640f5b68158be3102d0b7d",
+      "kind": "Color.js 0.5.2 source/MIT",
+      "matched": true
+    },
+    {
+      "file": "host/vendor/colorjs/src/spaces/jzczhz.js",
+      "bytes": 1057,
+      "sha256": "4d65ce3d6679d87c85392607df2fd5952ae0fa8a34f9620920fe2d879967b395",
+      "expected": "4d65ce3d6679d87c85392607df2fd5952ae0fa8a34f9620920fe2d879967b395",
+      "kind": "Color.js 0.5.2 source/MIT",
+      "matched": true
+    },
+    {
+      "file": "host/vendor/colorjs/src/keywords.js",
+      "bytes": 6823,
+      "sha256": "e0a8e28de2e05d96431125c79d2d2914d3279a264c202aa570149ea53efa3061",
+      "expected": "e0a8e28de2e05d96431125c79d2d2914d3279a264c202aa570149ea53efa3061",
+      "kind": "Color.js 0.5.2 source/MIT",
+      "matched": true
+    },
+    {
+      "file": "host/vendor/colorjs/src/spaces/lab-d65.js",
+      "bytes": 1927,
+      "sha256": "21a9a3e71c2960d1391e6c7e8d6cb95a9cd93e3c7dbb6470d5440e9fdae69ed2",
+      "expected": "21a9a3e71c2960d1391e6c7e8d6cb95a9cd93e3c7dbb6470d5440e9fdae69ed2",
+      "kind": "Color.js 0.5.2 source/MIT",
+      "matched": true
+    },
+    {
+      "file": "host/vendor/colorjs/src/spaces/lab.js",
+      "bytes": 1915,
+      "sha256": "9c352bc7549f2563735ff5a18ae09d223db1824747f4fc99565b353671b9be45",
+      "expected": "9c352bc7549f2563735ff5a18ae09d223db1824747f4fc99565b353671b9be45",
+      "kind": "Color.js 0.5.2 source/MIT",
+      "matched": true
+    },
+    {
+      "file": "host/vendor/colorjs/src/spaces/lch.js",
+      "bytes": 1233,
+      "sha256": "0b74cfb12399c7b84e22a53ff57199cac0a5c45ce1d417b07f7c6b3c91977650",
+      "expected": "0b74cfb12399c7b84e22a53ff57199cac0a5c45ce1d417b07f7c6b3c91977650",
+      "kind": "Color.js 0.5.2 source/MIT",
+      "matched": true
+    },
+    {
+      "file": "host/vendor/colorjs/src/spaces/lchuv.js",
+      "bytes": 1255,
+      "sha256": "0f4510245c2e9c654d76b27692d8414fa7af3d6bd6baa785ff0605163a7206bb",
+      "expected": "0f4510245c2e9c654d76b27692d8414fa7af3d6bd6baa785ff0605163a7206bb",
+      "kind": "Color.js 0.5.2 source/MIT",
+      "matched": true
+    },
+    {
+      "file": "host/vendor/colorjs/src/contrast/Lstar.js",
+      "bytes": 483,
+      "sha256": "425a9c0685356bb5b8c3c03b0d0a252cb968a15174591c56f622ffc67662372f",
+      "expected": "425a9c0685356bb5b8c3c03b0d0a252cb968a15174591c56f622ffc67662372f",
+      "kind": "Color.js 0.5.2 source/MIT",
+      "matched": true
+    },
+    {
+      "file": "host/vendor/colorjs/src/luminance.js",
+      "bytes": 587,
+      "sha256": "711112853ebd9e2deb9b52025195b05e520a236cb0e2f21f57217b650109b79b",
+      "expected": "711112853ebd9e2deb9b52025195b05e520a236cb0e2f21f57217b650109b79b",
+      "kind": "Color.js 0.5.2 source/MIT",
+      "matched": true
+    },
+    {
+      "file": "host/vendor/colorjs/src/spaces/luv.js",
+      "bytes": 1932,
+      "sha256": "317efd1b3bfb247b0e2d6e033366b76a6c608d099b74f786d2f369ae43092294",
+      "expected": "317efd1b3bfb247b0e2d6e033366b76a6c608d099b74f786d2f369ae43092294",
+      "kind": "Color.js 0.5.2 source/MIT",
+      "matched": true
+    },
+    {
+      "file": "host/vendor/colorjs/src/contrast/Michelson.js",
+      "bytes": 628,
+      "sha256": "12f9d8438a6e26ad3d6b4651f2f5e69d84f3c0bcbfb2f334871f33654afc1c60",
+      "expected": "12f9d8438a6e26ad3d6b4651f2f5e69d84f3c0bcbfb2f334871f33654afc1c60",
+      "kind": "Color.js 0.5.2 source/MIT",
+      "matched": true
+    },
+    {
+      "file": "host/vendor/colorjs/src/multiply-matrices.js",
+      "bytes": 838,
+      "sha256": "963bb0c5475f2cc67982d4087c53676b31c8306cdeb8d54b46a0d700228ccc56",
+      "expected": "963bb0c5475f2cc67982d4087c53676b31c8306cdeb8d54b46a0d700228ccc56",
+      "kind": "Color.js 0.5.2 source/MIT",
+      "matched": true
+    },
+    {
+      "file": "host/vendor/colorjs/src/spaces/oklab.js",
+      "bytes": 2035,
+      "sha256": "8dfe1a5774c67e469b8a8b792ace609f30f3d1034b81c0da5400b1e6559748dc",
+      "expected": "8dfe1a5774c67e469b8a8b792ace609f30f3d1034b81c0da5400b1e6559748dc",
+      "kind": "Color.js 0.5.2 source/MIT",
+      "matched": true
+    },
+    {
+      "file": "host/vendor/colorjs/src/spaces/oklch.js",
+      "bytes": 1223,
+      "sha256": "3b4f4ca8dd34c8da19828b7a069f0018c281a5d4668a9cc8bcb60146b120e8eb",
+      "expected": "3b4f4ca8dd34c8da19828b7a069f0018c281a5d4668a9cc8bcb60146b120e8eb",
+      "kind": "Color.js 0.5.2 source/MIT",
+      "matched": true
+    },
+    {
+      "file": "host/vendor/colorjs/src/spaces/p3-linear.js",
+      "bytes": 630,
+      "sha256": "ed04b75bb075249f1bb981805dfe8aaa525080f77cb337822a69a51302558c75",
+      "expected": "ed04b75bb075249f1bb981805dfe8aaa525080f77cb337822a69a51302558c75",
+      "kind": "Color.js 0.5.2 source/MIT",
+      "matched": true
+    },
+    {
+      "file": "host/vendor/colorjs/src/spaces/p3.js",
+      "bytes": 312,
+      "sha256": "a92bdf6406defcc211c760151b396871f0fb0280824896c7817f450fbb3f78a0",
+      "expected": "a92bdf6406defcc211c760151b396871f0fb0280824896c7817f450fbb3f78a0",
+      "kind": "Color.js 0.5.2 source/MIT",
+      "matched": true
+    },
+    {
+      "file": "host/vendor/colorjs/src/parse.js",
+      "bytes": 5850,
+      "sha256": "fc5e410229d50f5fdfcbfe924bcc6ef2190a2247d066ff717e06e4196ef7849d",
+      "expected": "fc5e410229d50f5fdfcbfe924bcc6ef2190a2247d066ff717e06e4196ef7849d",
+      "kind": "Color.js 0.5.2 source/MIT",
+      "matched": true
+    },
+    {
+      "file": "host/vendor/colorjs/src/spaces/prophoto-linear.js",
+      "bytes": 981,
+      "sha256": "476c5732bf45c3b57ce2b53d6bdeb0179de5a7b4ddcf62b8226d360a35edb847",
+      "expected": "476c5732bf45c3b57ce2b53d6bdeb0179de5a7b4ddcf62b8226d360a35edb847",
+      "kind": "Color.js 0.5.2 source/MIT",
+      "matched": true
+    },
+    {
+      "file": "host/vendor/colorjs/src/spaces/prophoto.js",
+      "bytes": 474,
+      "sha256": "eaa463798422a5556791198b02edde3bd4fb04607b55866423cf9d52f28375db",
+      "expected": "eaa463798422a5556791198b02edde3bd4fb04607b55866423cf9d52f28375db",
+      "kind": "Color.js 0.5.2 source/MIT",
+      "matched": true
+    },
+    {
+      "file": "host/vendor/colorjs/src/spaces/rec2020-linear.js",
+      "bytes": 909,
+      "sha256": "6632106e6c7fe8e006c00400c5de3c930d42025219bb913943d5ffc06391324b",
+      "expected": "6632106e6c7fe8e006c00400c5de3c930d42025219bb913943d5ffc06391324b",
+      "kind": "Color.js 0.5.2 source/MIT",
+      "matched": true
+    },
+    {
+      "file": "host/vendor/colorjs/src/spaces/rec2020.js",
+      "bytes": 671,
+      "sha256": "8fa169bd6151975e087df5d776958e34d8cc7c80ae85b38dc4eb137152e718b7",
+      "expected": "8fa169bd6151975e087df5d776958e34d8cc7c80ae85b38dc4eb137152e718b7",
+      "kind": "Color.js 0.5.2 source/MIT",
+      "matched": true
+    },
+    {
+      "file": "host/vendor/colorjs/src/spaces/rec2100-hlg.js",
+      "bytes": 1428,
+      "sha256": "89ad841b68ce3533598dcc36e63c17d5302c8efa2870122a3a8b9a14cb4fce84",
+      "expected": "89ad841b68ce3533598dcc36e63c17d5302c8efa2870122a3a8b9a14cb4fce84",
+      "kind": "Color.js 0.5.2 source/MIT",
+      "matched": true
+    },
+    {
+      "file": "host/vendor/colorjs/src/spaces/rec2100-pq.js",
+      "bytes": 1167,
+      "sha256": "18bdb3bf51c024697fdc4bff496db79b4336dfb0bfd552d4b9ffbd5826ea35ac",
+      "expected": "18bdb3bf51c024697fdc4bff496db79b4336dfb0bfd552d4b9ffbd5826ea35ac",
+      "kind": "Color.js 0.5.2 source/MIT",
+      "matched": true
+    },
+    {
+      "file": "host/vendor/colorjs/src/rgbspace.js",
+      "bytes": 1566,
+      "sha256": "12e946343d27bc979c4ca44b218a1743f0e83c80bb46315f7270b1ee6e569a4b",
+      "expected": "12e946343d27bc979c4ca44b218a1743f0e83c80bb46315f7270b1ee6e569a4b",
+      "kind": "Color.js 0.5.2 source/MIT",
+      "matched": true
+    },
+    {
+      "file": "host/vendor/colorjs/src/serialize.js",
+      "bytes": 2543,
+      "sha256": "47f2f540a659533c7fc32a7213c0caa9aba3aac448a8514f83eee5a2ae031b23",
+      "expected": "47f2f540a659533c7fc32a7213c0caa9aba3aac448a8514f83eee5a2ae031b23",
+      "kind": "Color.js 0.5.2 source/MIT",
+      "matched": true
+    },
+    {
+      "file": "host/vendor/colorjs/src/set.js",
+      "bytes": 812,
+      "sha256": "8507cf91bc26d4cbb41d272bd8c71a473202fa802c7b740b19e4c31b10a7dac8",
+      "expected": "8507cf91bc26d4cbb41d272bd8c71a473202fa802c7b740b19e4c31b10a7dac8",
+      "kind": "Color.js 0.5.2 source/MIT",
+      "matched": true
+    },
+    {
+      "file": "host/vendor/colorjs/src/setAll.js",
+      "bytes": 282,
+      "sha256": "cdbbdbac299392da1b4820cfb95485181a663221b7dd841842312289dda2cc75",
+      "expected": "cdbbdbac299392da1b4820cfb95485181a663221b7dd841842312289dda2cc75",
+      "kind": "Color.js 0.5.2 source/MIT",
+      "matched": true
+    },
+    {
+      "file": "host/vendor/colorjs/src/space-accessors.js",
+      "bytes": 2233,
+      "sha256": "638c1bfcb788552baaaf69c00b9778a32970c645886bee0d12f4d34135a7b3f8",
+      "expected": "638c1bfcb788552baaaf69c00b9778a32970c645886bee0d12f4d34135a7b3f8",
+      "kind": "Color.js 0.5.2 source/MIT",
+      "matched": true
+    },
+    {
+      "file": "host/vendor/colorjs/src/space.js",
+      "bytes": 9643,
+      "sha256": "75983a07a93309411258f7fea8efad3305545ba17dfef65863a121165aca0c0a",
+      "expected": "75983a07a93309411258f7fea8efad3305545ba17dfef65863a121165aca0c0a",
+      "kind": "Color.js 0.5.2 source/MIT",
+      "matched": true
+    },
+    {
+      "file": "host/vendor/colorjs/src/spaces/srgb-linear.js",
+      "bytes": 1072,
+      "sha256": "df7507462b8b625f9438f1fb360ab1ec1de185f41e8bfeb57e39cf0232a838e1",
+      "expected": "df7507462b8b625f9438f1fb360ab1ec1de185f41e8bfeb57e39cf0232a838e1",
+      "kind": "Color.js 0.5.2 source/MIT",
+      "matched": true
+    },
+    {
+      "file": "host/vendor/colorjs/src/spaces/srgb.js",
+      "bytes": 2763,
+      "sha256": "67a11f93dd69da29f43931567496683a116297c049816eda80479c996b1dc55f",
+      "expected": "67a11f93dd69da29f43931567496683a116297c049816eda80479c996b1dc55f",
+      "kind": "Color.js 0.5.2 source/MIT",
+      "matched": true
+    },
+    {
+      "file": "host/vendor/colorjs/src/to.js",
+      "bytes": 676,
+      "sha256": "e1691fcc4093b761e88af5373774e4057eddfeb919e6b210f6973d46b28279e2",
+      "expected": "e1691fcc4093b761e88af5373774e4057eddfeb919e6b210f6973d46b28279e2",
+      "kind": "Color.js 0.5.2 source/MIT",
+      "matched": true
+    },
+    {
+      "file": "host/vendor/colorjs/src/toGamut.js",
+      "bytes": 8620,
+      "sha256": "433e241f47a4eae8fbef745a4bdc5988f374ed92773e376bd6513b193991c4a9",
+      "expected": "433e241f47a4eae8fbef745a4bdc5988f374ed92773e376bd6513b193991c4a9",
+      "kind": "Color.js 0.5.2 source/MIT",
+      "matched": true
+    },
+    {
+      "file": "host/vendor/colorjs/src/util.js",
+      "bytes": 5873,
+      "sha256": "3f45f562e63f0d548ae2d0553734cfee47f4a48464db8f002067056fdfc3a834",
+      "expected": "3f45f562e63f0d548ae2d0553734cfee47f4a48464db8f002067056fdfc3a834",
+      "kind": "Color.js 0.5.2 source/MIT",
+      "matched": true
+    },
+    {
+      "file": "host/vendor/colorjs/src/variations.js",
+      "bytes": 426,
+      "sha256": "a10cee63141f9a7e6389622f72d5b879151d23f0ed11b02fa6fb886161388f0b",
+      "expected": "a10cee63141f9a7e6389622f72d5b879151d23f0ed11b02fa6fb886161388f0b",
+      "kind": "Color.js 0.5.2 source/MIT",
+      "matched": true
+    },
+    {
+      "file": "host/vendor/colorjs/src/contrast/WCAG21.js",
+      "bytes": 571,
+      "sha256": "a1878bbccc6b38f50a9eafe8b0de2249b72d179a41bf48b85f34b9bd07825e65",
+      "expected": "a1878bbccc6b38f50a9eafe8b0de2249b72d179a41bf48b85f34b9bd07825e65",
+      "kind": "Color.js 0.5.2 source/MIT",
+      "matched": true
+    },
+    {
+      "file": "host/vendor/colorjs/src/contrast/Weber.js",
+      "bytes": 821,
+      "sha256": "8400632a678a66a2ec97226c999ad0c0d2960e4e7558b73306f64383a9143d28",
+      "expected": "8400632a678a66a2ec97226c999ad0c0d2960e4e7558b73306f64383a9143d28",
+      "kind": "Color.js 0.5.2 source/MIT",
+      "matched": true
+    },
+    {
+      "file": "host/vendor/colorjs/src/spaces/xyz-abs-d65.js",
+      "bytes": 932,
+      "sha256": "609d85e61a5202a5ad6a0ed513226fb004da7bfe2c7afc460f1add9e982f0b92",
+      "expected": "609d85e61a5202a5ad6a0ed513226fb004da7bfe2c7afc460f1add9e982f0b92",
+      "kind": "Color.js 0.5.2 source/MIT",
+      "matched": true
+    },
+    {
+      "file": "host/vendor/colorjs/src/spaces/xyz-d50.js",
+      "bytes": 323,
+      "sha256": "edab1bfac642775b99e75f8b2ceef8a65c64c268d51813c78a349fd81d35b41d",
+      "expected": "edab1bfac642775b99e75f8b2ceef8a65c64c268d51813c78a349fd81d35b41d",
+      "kind": "Color.js 0.5.2 source/MIT",
+      "matched": true
+    },
+    {
+      "file": "host/vendor/colorjs/src/spaces/xyz-d65.js",
+      "bytes": 272,
+      "sha256": "5e6d1b4268643d92438a6add948f3dc18ef3e374336f6c2a40723a73aeb97168",
+      "expected": "5e6d1b4268643d92438a6add948f3dc18ef3e374336f6c2a40723a73aeb97168",
+      "kind": "Color.js 0.5.2 source/MIT",
+      "matched": true
+    },
+    {
+      "file": "host/vendor/colorjs/package.json",
+      "bytes": 2995,
+      "sha256": "97571bfcf10d32ffc759accf31321cd3548bfb995ae875fd9a3b2913d8839c14",
+      "expected": "97571bfcf10d32ffc759accf31321cd3548bfb995ae875fd9a3b2913d8839c14",
+      "kind": "Color.js 0.5.2 source/MIT",
+      "matched": true
+    },
+    {
+      "file": "runtimes/ink-recognizer.exe",
+      "bytes": 10752,
+      "sha256": "7596e605ebf2b8b5908836d2af67d937ee153c79f86304a50f013e61cec11047",
+      "expected": "7596e605ebf2b8b5908836d2af67d937ee153c79f86304a50f013e61cec11047",
+      "kind": "local-user-input-helper",
+      "matched": true
+    },
+    {
+      "file": "runtimes/ink-recognizer.cs",
+      "bytes": 5107,
+      "sha256": "4bca2c34e203529e63f5ca852ef462dffe306033207e1af28d73655d217cd5d6",
+      "expected": "4bca2c34e203529e63f5ca852ef462dffe306033207e1af28d73655d217cd5d6",
+      "kind": "local-user-input-helper-source",
+      "matched": true
+    },
+    {
+      "file": "resources/open-design/LICENSE",
+      "bytes": 11296,
+      "sha256": "9d95806a26532623360eb84bb17d298f394b55ef73fb4c0796d99b4319b2b0da",
+      "expected": "9d95806a26532623360eb84bb17d298f394b55ef73fb4c0796d99b4319b2b0da",
+      "kind": "fixed-design-resource",
+      "matched": true
+    },
+    {
+      "file": "resources/open-design/design-systems/default/manifest.json",
+      "bytes": 1684,
+      "sha256": "3341b0456a8ec0917c0ba11233b58ccd4e0c02d2d8d5e1cbbd4e0ebbf1af5ff4",
+      "expected": "3341b0456a8ec0917c0ba11233b58ccd4e0c02d2d8d5e1cbbd4e0ebbf1af5ff4",
+      "kind": "fixed-design-resource",
+      "matched": true
+    },
+    {
+      "file": "resources/open-design/design-systems/default/DESIGN.md",
+      "bytes": 2839,
+      "sha256": "aeba1b5aa9db00f7e08616c0ffb2ee3408ff96edaa2fc26709743eecf13045d7",
+      "expected": "aeba1b5aa9db00f7e08616c0ffb2ee3408ff96edaa2fc26709743eecf13045d7",
+      "kind": "fixed-design-resource",
+      "matched": true
+    },
+    {
+      "file": "resources/open-design/design-systems/default/design-tokens.json",
+      "bytes": 20433,
+      "sha256": "8e85abb0e1bda9841efac02674003909f5073b7d23d5b306dbdc56612ed9a36f",
+      "expected": "8e85abb0e1bda9841efac02674003909f5073b7d23d5b306dbdc56612ed9a36f",
+      "kind": "fixed-design-resource",
+      "matched": true
+    },
+    {
+      "file": "resources/open-design/design-systems/default/tokens.css",
+      "bytes": 10963,
+      "sha256": "af18264f698dd2ee30f1227108fd7dee9eb94d08aaa2570d83a5a5bb85d0b321",
+      "expected": "af18264f698dd2ee30f1227108fd7dee9eb94d08aaa2570d83a5a5bb85d0b321",
+      "kind": "fixed-design-resource",
+      "matched": true
+    },
+    {
+      "file": "resources/open-design/design-systems/default/USAGE.md",
+      "bytes": 1436,
+      "sha256": "75240e73f72bb0f29bfe870db4582d954def1879816ccca51aa66ffb55b56f00",
+      "expected": "75240e73f72bb0f29bfe870db4582d954def1879816ccca51aa66ffb55b56f00",
+      "kind": "fixed-design-resource",
+      "matched": true
+    },
+    {
+      "file": "resources/open-design/design-systems/default/system/artifacts/poster.html",
+      "bytes": 5881,
+      "sha256": "2b1edce59ee73512b080014432dc5eb5d6eaf7d78341696be4fa015193473b79",
+      "expected": "2b1edce59ee73512b080014432dc5eb5d6eaf7d78341696be4fa015193473b79",
+      "kind": "fixed-design-resource",
+      "matched": true
+    },
+    {
+      "file": "resources/open-design/design-systems/default/system/artifacts/deck.html",
+      "bytes": 5875,
+      "sha256": "9119ad0ef42edf07ed06e9ae9c240ec8e7db2de615e9dc92477f0600a8b90f8d",
+      "expected": "9119ad0ef42edf07ed06e9ae9c240ec8e7db2de615e9dc92477f0600a8b90f8d",
+      "kind": "fixed-design-resource",
+      "matched": true
+    },
+    {
+      "file": "resources/open-design/design-systems/editorial/manifest.json",
+      "bytes": 1340,
+      "sha256": "05146d509397e0a56452a1263d4e356ac3dc5a3e9101a3346ced6339c3436d03",
+      "expected": "05146d509397e0a56452a1263d4e356ac3dc5a3e9101a3346ced6339c3436d03",
+      "kind": "fixed-design-resource",
+      "matched": true
+    },
+    {
+      "file": "resources/open-design/design-systems/editorial/DESIGN.md",
+      "bytes": 3053,
+      "sha256": "fc2b9e3dddf4911796911cd0d11b8a02f039d74a96a361e67fea4fc2b1775e31",
+      "expected": "fc2b9e3dddf4911796911cd0d11b8a02f039d74a96a361e67fea4fc2b1775e31",
+      "kind": "fixed-design-resource",
+      "matched": true
+    },
+    {
+      "file": "resources/open-design/design-systems/editorial/design-tokens.json",
+      "bytes": 20300,
+      "sha256": "896cf9f004ad3de2d0ba6416a27d66adde2769343db1ab63a94959d112de08b5",
+      "expected": "896cf9f004ad3de2d0ba6416a27d66adde2769343db1ab63a94959d112de08b5",
+      "kind": "fixed-design-resource",
+      "matched": true
+    },
+    {
+      "file": "resources/open-design/design-systems/editorial/tokens.css",
+      "bytes": 1748,
+      "sha256": "47f3dea08a51dac4781b790b9bf4096ef7965d597358fe956aed23f0577308e9",
+      "expected": "47f3dea08a51dac4781b790b9bf4096ef7965d597358fe956aed23f0577308e9",
+      "kind": "fixed-design-resource",
+      "matched": true
+    },
+    {
+      "file": "resources/open-design/design-systems/editorial/USAGE.md",
+      "bytes": 1503,
+      "sha256": "465156eecc7ed8872ca85d03411542f29cca284abe6d9b1ba49bc31fdcdaf458",
+      "expected": "465156eecc7ed8872ca85d03411542f29cca284abe6d9b1ba49bc31fdcdaf458",
+      "kind": "fixed-design-resource",
+      "matched": true
+    },
+    {
+      "file": "resources/open-design/design-systems/editorial/system/artifacts/poster.html",
+      "bytes": 5730,
+      "sha256": "659890681d6bb9f137378c821be66748c4a76bc611dab0479ddf240a55c3dd54",
+      "expected": "659890681d6bb9f137378c821be66748c4a76bc611dab0479ddf240a55c3dd54",
+      "kind": "fixed-design-resource",
+      "matched": true
+    },
+    {
+      "file": "resources/open-design/design-systems/editorial/system/artifacts/deck.html",
+      "bytes": 5724,
+      "sha256": "e6abcd46940debe1a0a17310c1f3ae7e3b0c197966a00bb9ef32a836aa9b445b",
+      "expected": "e6abcd46940debe1a0a17310c1f3ae7e3b0c197966a00bb9ef32a836aa9b445b",
+      "kind": "fixed-design-resource",
+      "matched": true
+    },
+    {
+      "file": "resources/open-design/design-systems/corporate/manifest.json",
+      "bytes": 1345,
+      "sha256": "8d6989073a79c6733838c13b3cd4f2f8bd37d1b502dbe22b61ffc1d0dfac322a",
+      "expected": "8d6989073a79c6733838c13b3cd4f2f8bd37d1b502dbe22b61ffc1d0dfac322a",
+      "kind": "fixed-design-resource",
+      "matched": true
+    },
+    {
+      "file": "resources/open-design/design-systems/corporate/DESIGN.md",
+      "bytes": 3077,
+      "sha256": "3c8c80294a48d3295738d8575e93f0cd5d85f092eae3fc9e192cb39864f0453b",
+      "expected": "3c8c80294a48d3295738d8575e93f0cd5d85f092eae3fc9e192cb39864f0453b",
+      "kind": "fixed-design-resource",
+      "matched": true
+    },
+    {
+      "file": "resources/open-design/design-systems/corporate/design-tokens.json",
+      "bytes": 20280,
+      "sha256": "6573ae98648ad98c81fbf3e6b0c257c6f155ab0d1bb83570c106156e1d1e9143",
+      "expected": "6573ae98648ad98c81fbf3e6b0c257c6f155ab0d1bb83570c106156e1d1e9143",
+      "kind": "fixed-design-resource",
+      "matched": true
+    },
+    {
+      "file": "resources/open-design/design-systems/corporate/tokens.css",
+      "bytes": 1728,
+      "sha256": "4f9e32beb95f1e701146b6023fb96300df51254e50c7a558bd38c161199e0f12",
+      "expected": "4f9e32beb95f1e701146b6023fb96300df51254e50c7a558bd38c161199e0f12",
+      "kind": "fixed-design-resource",
+      "matched": true
+    },
+    {
+      "file": "resources/open-design/design-systems/corporate/USAGE.md",
+      "bytes": 1511,
+      "sha256": "b482cf110efe4d94661e1b6f864fa0fbfa4d07e9f8a1237c85762ac7fa52572e",
+      "expected": "b482cf110efe4d94661e1b6f864fa0fbfa4d07e9f8a1237c85762ac7fa52572e",
+      "kind": "fixed-design-resource",
+      "matched": true
+    },
+    {
+      "file": "resources/open-design/design-systems/corporate/system/artifacts/poster.html",
+      "bytes": 5704,
+      "sha256": "9a0c511a651edd840dab4a0907fdb16e3fcb9a6ba520af85b92d640d97e0dab8",
+      "expected": "9a0c511a651edd840dab4a0907fdb16e3fcb9a6ba520af85b92d640d97e0dab8",
+      "kind": "fixed-design-resource",
+      "matched": true
+    },
+    {
+      "file": "resources/open-design/design-systems/corporate/system/artifacts/deck.html",
+      "bytes": 5698,
+      "sha256": "c4655fff331a289df4cded27954dd0c2f5e4bba62e84779ab5c32bb87534fbed",
+      "expected": "c4655fff331a289df4cded27954dd0c2f5e4bba62e84779ab5c32bb87534fbed",
+      "kind": "fixed-design-resource",
+      "matched": true
+    },
+    {
+      "file": "resources/open-design/design-systems/clean/manifest.json",
+      "bytes": 1325,
+      "sha256": "01271a88c31251ea8c57bdc10d4f896062b9575d6a0aa5caf944950334f9e72a",
+      "expected": "01271a88c31251ea8c57bdc10d4f896062b9575d6a0aa5caf944950334f9e72a",
+      "kind": "fixed-design-resource",
+      "matched": true
+    },
+    {
+      "file": "resources/open-design/design-systems/clean/DESIGN.md",
+      "bytes": 3060,
+      "sha256": "a24ab35183490435c5a7aad7d372155a82a8d36c65872433385cebdbe02bfd54",
+      "expected": "a24ab35183490435c5a7aad7d372155a82a8d36c65872433385cebdbe02bfd54",
+      "kind": "fixed-design-resource",
+      "matched": true
+    },
+    {
+      "file": "resources/open-design/design-systems/clean/design-tokens.json",
+      "bytes": 20274,
+      "sha256": "47eac4c1f040f2d64821028e3aefb4de902fd47eaff6ff55639c04c37db71cf4",
+      "expected": "47eac4c1f040f2d64821028e3aefb4de902fd47eaff6ff55639c04c37db71cf4",
+      "kind": "fixed-design-resource",
+      "matched": true
+    },
+    {
+      "file": "resources/open-design/design-systems/clean/tokens.css",
+      "bytes": 1697,
+      "sha256": "f3ad1e89d3074a542d61f207ad5825167984d020fa9d788791883ad41d0bc928",
+      "expected": "f3ad1e89d3074a542d61f207ad5825167984d020fa9d788791883ad41d0bc928",
+      "kind": "fixed-design-resource",
+      "matched": true
+    },
+    {
+      "file": "resources/open-design/design-systems/clean/USAGE.md",
+      "bytes": 1502,
+      "sha256": "f22d8a2b91a404a227130d3d719af0a0fb7e9b583ab7b817f3426e20298a8134",
+      "expected": "f22d8a2b91a404a227130d3d719af0a0fb7e9b583ab7b817f3426e20298a8134",
+      "kind": "fixed-design-resource",
+      "matched": true
+    },
+    {
+      "file": "resources/open-design/design-systems/clean/system/artifacts/poster.html",
+      "bytes": 5681,
+      "sha256": "50b9eb4712c3644362f4df09246858be8efb21ec4ab8c88bd4c2b2c452c1def7",
+      "expected": "50b9eb4712c3644362f4df09246858be8efb21ec4ab8c88bd4c2b2c452c1def7",
+      "kind": "fixed-design-resource",
+      "matched": true
+    },
+    {
+      "file": "resources/open-design/design-systems/clean/system/artifacts/deck.html",
+      "bytes": 5675,
+      "sha256": "6ee96e3c8af9b05c902bd618b6e7e36c1f9731031d3fefe6cadc96a5329f6d93",
+      "expected": "6ee96e3c8af9b05c902bd618b6e7e36c1f9731031d3fefe6cadc96a5329f6d93",
+      "kind": "fixed-design-resource",
+      "matched": true
+    },
+    {
+      "file": "resources/open-design/design-systems/bold/manifest.json",
+      "bytes": 1323,
+      "sha256": "778d0cc91d40602f13c6f3cfad630e364da7336896d579987784f3a010c01df2",
+      "expected": "778d0cc91d40602f13c6f3cfad630e364da7336896d579987784f3a010c01df2",
+      "kind": "fixed-design-resource",
+      "matched": true
+    },
+    {
+      "file": "resources/open-design/design-systems/bold/DESIGN.md",
+      "bytes": 3003,
+      "sha256": "91ccb39dbfdf2388d28c4dad2a8b88bf4340a98c0e72dd2a829d26507ecc1f8c",
+      "expected": "91ccb39dbfdf2388d28c4dad2a8b88bf4340a98c0e72dd2a829d26507ecc1f8c",
+      "kind": "fixed-design-resource",
+      "matched": true
+    },
+    {
+      "file": "resources/open-design/design-systems/bold/design-tokens.json",
+      "bytes": 20277,
+      "sha256": "a99e6a83f578ecbbe2e04f7d8fc100811023587a9c2cfe183bd046c0cc97c8df",
+      "expected": "a99e6a83f578ecbbe2e04f7d8fc100811023587a9c2cfe183bd046c0cc97c8df",
+      "kind": "fixed-design-resource",
+      "matched": true
+    },
+    {
+      "file": "resources/open-design/design-systems/bold/tokens.css",
+      "bytes": 1699,
+      "sha256": "29c81cda0ecfbb41cd0b6be50127ca8ef52479759332c078f4c61efdbcc81568",
+      "expected": "29c81cda0ecfbb41cd0b6be50127ca8ef52479759332c078f4c61efdbcc81568",
+      "kind": "fixed-design-resource",
+      "matched": true
+    },
+    {
+      "file": "resources/open-design/design-systems/bold/USAGE.md",
+      "bytes": 1467,
+      "sha256": "e6ce6ef19e3f679b1a1ff7016498cb22799f626432e1967e9b2cad6d3497cc0d",
+      "expected": "e6ce6ef19e3f679b1a1ff7016498cb22799f626432e1967e9b2cad6d3497cc0d",
+      "kind": "fixed-design-resource",
+      "matched": true
+    },
+    {
+      "file": "resources/open-design/design-systems/bold/system/artifacts/poster.html",
+      "bytes": 5683,
+      "sha256": "43e8d69df3a48f16e044d025c6cb964e21ebc26a7ca24a5a6d755aaa1e8dfd1e",
+      "expected": "43e8d69df3a48f16e044d025c6cb964e21ebc26a7ca24a5a6d755aaa1e8dfd1e",
+      "kind": "fixed-design-resource",
+      "matched": true
+    },
+    {
+      "file": "resources/open-design/design-systems/bold/system/artifacts/deck.html",
+      "bytes": 5677,
+      "sha256": "c4fb259dc1f9197611b4c3209ed5d7385528cf2f9276267ddb8b5e15aa391572",
+      "expected": "c4fb259dc1f9197611b4c3209ed5d7385528cf2f9276267ddb8b5e15aa391572",
+      "kind": "fixed-design-resource",
+      "matched": true
+    },
+    {
+      "file": "resources/open-design/dom-to-pptx/LICENSE",
+      "bytes": 1110,
+      "sha256": "03e47f0d43133a09b8e91ca80eeb50fd8cd94620cf1f59712163909b0ec9b182",
+      "expected": "03e47f0d43133a09b8e91ca80eeb50fd8cd94620cf1f59712163909b0ec9b182",
+      "kind": "pinned-converter",
+      "matched": true
+    },
+    {
+      "file": "resources/open-design/dom-to-pptx/README.md",
+      "bytes": 1623,
+      "sha256": "6420642a11affcf9cd3dbca1e0433b540c8909e66238f3a46b3ac3be98d40cec",
+      "expected": "6420642a11affcf9cd3dbca1e0433b540c8909e66238f3a46b3ac3be98d40cec",
+      "kind": "pinned-converter",
+      "matched": true
+    },
+    {
+      "file": "resources/open-design/dom-to-pptx/dom-to-pptx.bundle.js.gz",
+      "bytes": 1008075,
+      "sha256": "87f6ba93e4f833e0e9a44e80f313d10c20bea6b165b2949f3aeb62be5ee1cb8c",
+      "expected": "87f6ba93e4f833e0e9a44e80f313d10c20bea6b165b2949f3aeb62be5ee1cb8c",
+      "kind": "pinned-converter",
+      "matched": true
+    },
+    {
+      "file": "licenses/dom-to-pptx-components/jszip-3.10.1.txt",
+      "bytes": 33753,
+      "sha256": "566c953c6090b1218ca6217dd7359d45dde46581968586dc607d59a78af6a9c4",
+      "expected": "566c953c6090b1218ca6217dd7359d45dde46581968586dc607d59a78af6a9c4",
+      "kind": "converter-license-text",
+      "matched": true
+    },
+    {
+      "file": "licenses/dom-to-pptx-components/pptxgenjs-4.0.1.txt",
+      "bytes": 1081,
+      "sha256": "7a2bfe96150786ed1908b8e63f98ebab88875c1e79e28faff6649e0f11f77e52",
+      "expected": "7a2bfe96150786ed1908b8e63f98ebab88875c1e79e28faff6649e0f11f77e52",
+      "kind": "converter-license-text",
+      "matched": true
+    },
+    {
+      "file": "licenses/dom-to-pptx-components/html2canvas-1.4.1.txt",
+      "bytes": 1061,
+      "sha256": "86200ce4e92d9a22c41c8647a55f7a5fddff304ff89b4d36ecc699ed8c123d2c",
+      "expected": "86200ce4e92d9a22c41c8647a55f7a5fddff304ff89b4d36ecc699ed8c123d2c",
+      "kind": "converter-license-text",
+      "matched": true
+    },
+    {
+      "file": "licenses/dom-to-pptx-components/css-line-break-2.1.0.txt",
+      "bytes": 1061,
+      "sha256": "ce1ee0539f7fe1f7b75b76d121e674cb897c709c3e24ddba7f9a10fe2d0d88a5",
+      "expected": "ce1ee0539f7fe1f7b75b76d121e674cb897c709c3e24ddba7f9a10fe2d0d88a5",
+      "kind": "converter-license-text",
+      "matched": true
+    },
+    {
+      "file": "licenses/dom-to-pptx-components/utrie-1.0.2.txt",
+      "bytes": 1061,
+      "sha256": "8b00952cd8d0f5cbbefb13576778e1185dc963943151353d90c4e14a5a4caf40",
+      "expected": "8b00952cd8d0f5cbbefb13576778e1185dc963943151353d90c4e14a5a4caf40",
+      "kind": "converter-license-text",
+      "matched": true
+    },
+    {
+      "file": "licenses/dom-to-pptx-components/base64-arraybuffer-1.0.2.txt",
+      "bytes": 1062,
+      "sha256": "f3eca6ff762533fa5a77caf954a143e48afa204668cf97dce758c45a9e006be3",
+      "expected": "f3eca6ff762533fa5a77caf954a143e48afa204668cf97dce758c45a9e006be3",
+      "kind": "converter-license-text",
+      "matched": true
+    },
+    {
+      "file": "licenses/dom-to-pptx-components/text-segmentation-1.0.3.txt",
+      "bytes": 1061,
+      "sha256": "8b00952cd8d0f5cbbefb13576778e1185dc963943151353d90c4e14a5a4caf40",
+      "expected": "8b00952cd8d0f5cbbefb13576778e1185dc963943151353d90c4e14a5a4caf40",
+      "kind": "converter-license-text",
+      "matched": true
+    },
+    {
+      "file": "licenses/dom-to-pptx-components/xmldom--xmldom-0.8.11.txt",
+      "bytes": 1298,
+      "sha256": "4da724fc305d81606b245b324d4d2586916b9d248b23d82183df753ace0fdf71",
+      "expected": "4da724fc305d81606b245b324d4d2586916b9d248b23d82183df753ace0fdf71",
+      "kind": "converter-license-text",
+      "matched": true
+    },
+    {
+      "file": "licenses/dom-to-pptx-components/base64-arraybuffer-1.0.2.txt",
+      "bytes": 1062,
+      "sha256": "f3eca6ff762533fa5a77caf954a143e48afa204668cf97dce758c45a9e006be3",
+      "expected": "f3eca6ff762533fa5a77caf954a143e48afa204668cf97dce758c45a9e006be3",
+      "kind": "converter-license-text",
+      "matched": true
+    },
+    {
+      "file": "licenses/dom-to-pptx-components/base64-js-1.5.1.txt",
+      "bytes": 1081,
+      "sha256": "5b37224c080cdcc97c871ada971c224e9926370fe74f11b539aa1cf9f3b1aca1",
+      "expected": "5b37224c080cdcc97c871ada971c224e9926370fe74f11b539aa1cf9f3b1aca1",
+      "kind": "converter-license-text",
+      "matched": true
+    },
+    {
+      "file": "licenses/dom-to-pptx-components/buffer-6.0.3.txt",
+      "bytes": 1106,
+      "sha256": "06bafa45fdad2579ba0e43b0c9b2c6290287c99c4203c300254a462b38a307f6",
+      "expected": "06bafa45fdad2579ba0e43b0c9b2c6290287c99c4203c300254a462b38a307f6",
+      "kind": "converter-license-text",
+      "matched": true
+    },
+    {
+      "file": "licenses/dom-to-pptx-components/core-util-is-1.0.3.txt",
+      "bytes": 1077,
+      "sha256": "33b734d60042d0fe0c92dd1fc1e874193a1c899ec3e276a2eb935d2d0bf5b710",
+      "expected": "33b734d60042d0fe0c92dd1fc1e874193a1c899ec3e276a2eb935d2d0bf5b710",
+      "kind": "converter-license-text",
+      "matched": true
+    },
+    {
+      "file": "licenses/dom-to-pptx-components/css-line-break-2.1.0.txt",
+      "bytes": 1061,
+      "sha256": "ce1ee0539f7fe1f7b75b76d121e674cb897c709c3e24ddba7f9a10fe2d0d88a5",
+      "expected": "ce1ee0539f7fe1f7b75b76d121e674cb897c709c3e24ddba7f9a10fe2d0d88a5",
+      "kind": "converter-license-text",
+      "matched": true
+    },
+    {
+      "file": "licenses/dom-to-pptx-components/fonteditor-core-2.6.3.txt",
+      "bytes": 1072,
+      "sha256": "56da234b06e4b46e2d3ad7c83721ebc98493849972c7eeadfa5079308261f0b1",
+      "expected": "56da234b06e4b46e2d3ad7c83721ebc98493849972c7eeadfa5079308261f0b1",
+      "kind": "converter-license-text",
+      "matched": true
+    },
+    {
+      "file": "licenses/dom-to-pptx-components/html2canvas-1.4.1.txt",
+      "bytes": 1061,
+      "sha256": "86200ce4e92d9a22c41c8647a55f7a5fddff304ff89b4d36ecc699ed8c123d2c",
+      "expected": "86200ce4e92d9a22c41c8647a55f7a5fddff304ff89b4d36ecc699ed8c123d2c",
+      "kind": "converter-license-text",
+      "matched": true
+    },
+    {
+      "file": "licenses/dom-to-pptx-components/https-1.0.0-package-metadata.json",
+      "bytes": 331,
+      "sha256": "30cc493ed51f008e9e1d0d0730759183294f9d1b39798032ee341dc6a17399f7",
+      "expected": "30cc493ed51f008e9e1d0d0730759183294f9d1b39798032ee341dc6a17399f7",
+      "kind": "converter-license-text",
+      "matched": true
+    },
+    {
+      "file": "licenses/dom-to-pptx-components/ieee754-1.2.1.txt",
+      "bytes": 1465,
+      "sha256": "18d45466ba3253deae04667e267a91ea8de8548f18c1125264d1c9db28194cc1",
+      "expected": "18d45466ba3253deae04667e267a91ea8de8548f18c1125264d1c9db28194cc1",
+      "kind": "converter-license-text",
+      "matched": true
+    },
+    {
+      "file": "licenses/dom-to-pptx-components/image-size-1.2.1.txt",
+      "bytes": 1112,
+      "sha256": "3109783dad7527b490aabc49c3cb148573c19b41b843e70cf9388a93f3d7fccd",
+      "expected": "3109783dad7527b490aabc49c3cb148573c19b41b843e70cf9388a93f3d7fccd",
+      "kind": "converter-license-text",
+      "matched": true
+    },
+    {
+      "file": "licenses/dom-to-pptx-components/immediate-3.0.6.txt",
+      "bytes": 1115,
+      "sha256": "809e66de579fb7d92503848bbe6d1f348f4f6521a71e5d294fe7cc0c87a3b4ff",
+      "expected": "809e66de579fb7d92503848bbe6d1f348f4f6521a71e5d294fe7cc0c87a3b4ff",
+      "kind": "converter-license-text",
+      "matched": true
+    },
+    {
+      "file": "licenses/dom-to-pptx-components/inherits-2.0.4.txt",
+      "bytes": 749,
+      "sha256": "5ffe28e7ade7d8f10d85d5337a73fd793dac5c462fb9a28fbf8c5046c7fbca3b",
+      "expected": "5ffe28e7ade7d8f10d85d5337a73fd793dac5c462fb9a28fbf8c5046c7fbca3b",
+      "kind": "converter-license-text",
+      "matched": true
+    },
+    {
+      "file": "licenses/dom-to-pptx-components/isarray-1.0.0-README-license.txt",
+      "bytes": 1890,
+      "sha256": "ff138e683771b187f3629c383db72ee7d632009010a36d08e18e8d2a34222ec7",
+      "expected": "ff138e683771b187f3629c383db72ee7d632009010a36d08e18e8d2a34222ec7",
+      "kind": "converter-license-text",
+      "matched": true
+    },
+    {
+      "file": "licenses/dom-to-pptx-components/jszip-3.10.1.txt",
+      "bytes": 33753,
+      "sha256": "566c953c6090b1218ca6217dd7359d45dde46581968586dc607d59a78af6a9c4",
+      "expected": "566c953c6090b1218ca6217dd7359d45dde46581968586dc607d59a78af6a9c4",
+      "kind": "converter-license-text",
+      "matched": true
+    },
+    {
+      "file": "licenses/dom-to-pptx-components/lie-3.3.0.txt",
+      "bytes": 1084,
+      "sha256": "5c81b0caa98593408b03125efa25efe622341ed87ae55561968828cd887d64a4",
+      "expected": "5c81b0caa98593408b03125efa25efe622341ed87ae55561968828cd887d64a4",
+      "kind": "converter-license-text",
+      "matched": true
+    },
+    {
+      "file": "licenses/dom-to-pptx-components/opentype.js-2.0.0.txt",
+      "bytes": 1085,
+      "sha256": "a5b87c9bc191e7f9c06b07bd7cbbed3ed846dfdb50e859484b2c245aa1ab2e61",
+      "expected": "a5b87c9bc191e7f9c06b07bd7cbbed3ed846dfdb50e859484b2c245aa1ab2e61",
+      "kind": "converter-license-text",
+      "matched": true
+    },
+    {
+      "file": "licenses/dom-to-pptx-components/pako-1.0.11.txt",
+      "bytes": 1104,
+      "sha256": "a04665b3b2de56c66730c1f720f528175739e4104f79073614aa611da1e85539",
+      "expected": "a04665b3b2de56c66730c1f720f528175739e4104f79073614aa611da1e85539",
+      "kind": "converter-license-text",
+      "matched": true
+    },
+    {
+      "file": "licenses/dom-to-pptx-components/pako-2.1.0.txt",
+      "bytes": 1104,
+      "sha256": "a04665b3b2de56c66730c1f720f528175739e4104f79073614aa611da1e85539",
+      "expected": "a04665b3b2de56c66730c1f720f528175739e4104f79073614aa611da1e85539",
+      "kind": "converter-license-text",
+      "matched": true
+    },
+    {
+      "file": "licenses/dom-to-pptx-components/pptxgenjs-4.0.1.txt",
+      "bytes": 1081,
+      "sha256": "7a2bfe96150786ed1908b8e63f98ebab88875c1e79e28faff6649e0f11f77e52",
+      "expected": "7a2bfe96150786ed1908b8e63f98ebab88875c1e79e28faff6649e0f11f77e52",
+      "kind": "converter-license-text",
+      "matched": true
+    },
+    {
+      "file": "licenses/dom-to-pptx-components/process-nextick-args-2.0.1.txt",
+      "bytes": 1064,
+      "sha256": "ecdccbcf39024f624ded480c01c0b25458e1eca8f26ecf040933865ce56d9a4f",
+      "expected": "ecdccbcf39024f624ded480c01c0b25458e1eca8f26ecf040933865ce56d9a4f",
+      "kind": "converter-license-text",
+      "matched": true
+    },
+    {
+      "file": "licenses/dom-to-pptx-components/queue-6.0.2.txt",
+      "bytes": 1099,
+      "sha256": "38d7c4d8410c68eeae9ce24a8b4ee2380199d6df4abb1d9c15dc70b135935fe8",
+      "expected": "38d7c4d8410c68eeae9ce24a8b4ee2380199d6df4abb1d9c15dc70b135935fe8",
+      "kind": "converter-license-text",
+      "matched": true
+    },
+    {
+      "file": "licenses/dom-to-pptx-components/readable-stream-2.3.8.txt",
+      "bytes": 2337,
+      "sha256": "ec62dc96da0099b87f4511736c87309335527fb7031639493e06c95728dc8c54",
+      "expected": "ec62dc96da0099b87f4511736c87309335527fb7031639493e06c95728dc8c54",
+      "kind": "converter-license-text",
+      "matched": true
+    },
+    {
+      "file": "licenses/dom-to-pptx-components/rollup-plugin-polyfill-node-0.10.2.txt",
+      "bytes": 2322,
+      "sha256": "35ebfced43835b096ee196a5d63d1b220752e63c900d59aa79bd1dfb2564c483",
+      "expected": "35ebfced43835b096ee196a5d63d1b220752e63c900d59aa79bd1dfb2564c483",
+      "kind": "converter-license-text",
+      "matched": true
+    },
+    {
+      "file": "licenses/dom-to-pptx-components/safe-buffer-5.1.2.txt",
+      "bytes": 1081,
+      "sha256": "c7cc929b57080f4b9d0c6cf57669f0463fc5b39906344dfc8d3bc43426b30eac",
+      "expected": "c7cc929b57080f4b9d0c6cf57669f0463fc5b39906344dfc8d3bc43426b30eac",
+      "kind": "converter-license-text",
+      "matched": true
+    },
+    {
+      "file": "licenses/dom-to-pptx-components/setimmediate-1.0.5.txt",
+      "bytes": 1103,
+      "sha256": "c4b4ad3a5746f1f5249a6dd90396ec519264e1bb02e01e48a6522c48a3a97cb4",
+      "expected": "c4b4ad3a5746f1f5249a6dd90396ec519264e1bb02e01e48a6522c48a3a97cb4",
+      "kind": "converter-license-text",
+      "matched": true
+    },
+    {
+      "file": "licenses/dom-to-pptx-components/string_decoder-1.1.1.txt",
+      "bytes": 2338,
+      "sha256": "11f2aafb37d06b3ee5bdaf06e9811141d0da05263c316f3d627f45c20d43261b",
+      "expected": "11f2aafb37d06b3ee5bdaf06e9811141d0da05263c316f3d627f45c20d43261b",
+      "kind": "converter-license-text",
+      "matched": true
+    },
+    {
+      "file": "licenses/dom-to-pptx-components/text-segmentation-1.0.3.txt",
+      "bytes": 1061,
+      "sha256": "8b00952cd8d0f5cbbefb13576778e1185dc963943151353d90c4e14a5a4caf40",
+      "expected": "8b00952cd8d0f5cbbefb13576778e1185dc963943151353d90c4e14a5a4caf40",
+      "kind": "converter-license-text",
+      "matched": true
+    },
+    {
+      "file": "licenses/dom-to-pptx-components/util-deprecate-1.0.2.txt",
+      "bytes": 1102,
+      "sha256": "0154425673db15cdfa80ecba2c9b1f1a867f7197a006764712849bfc3a93cbb7",
+      "expected": "0154425673db15cdfa80ecba2c9b1f1a867f7197a006764712849bfc3a93cbb7",
+      "kind": "converter-license-text",
+      "matched": true
+    },
+    {
+      "file": "licenses/dom-to-pptx-components/utrie-1.0.2.txt",
+      "bytes": 1061,
+      "sha256": "8b00952cd8d0f5cbbefb13576778e1185dc963943151353d90c4e14a5a4caf40",
+      "expected": "8b00952cd8d0f5cbbefb13576778e1185dc963943151353d90c4e14a5a4caf40",
+      "kind": "converter-license-text",
+      "matched": true
+    },
+    {
+      "file": "licenses/dom-to-pptx-components/google-woff2-upstream.txt",
+      "bytes": 1071,
+      "sha256": "d42a3e363d99da22b860ab760faa37dfa9781d74c9f3ed634d05109081616513",
+      "expected": "d42a3e363d99da22b860ab760faa37dfa9781d74c9f3ed634d05109081616513",
+      "kind": "referenced-upstream-license-text",
+      "matched": true
+    },
+    {
+      "file": "licenses/dom-to-pptx-components/google-brotli-upstream.txt",
+      "bytes": 1084,
+      "sha256": "3d180008e36922a4e8daec11c34c7af264fed5962d07924aea928c38e8663c94",
+      "expected": "3d180008e36922a4e8daec11c34c7af264fed5962d07924aea928c38e8663c94",
+      "kind": "referenced-upstream-license-text",
+      "matched": true
+    },
+    {
+      "file": "licenses/dom-to-pptx-components/woff2-wasm-upstream.txt",
+      "bytes": 1067,
+      "sha256": "f721b0cdc2ff82937d8c291141534487ed22ee1cf579c4699adceb4e93b92989",
+      "expected": "f721b0cdc2ff82937d8c291141534487ed22ee1cf579c4699adceb4e93b92989",
+      "kind": "referenced-upstream-license-text",
+      "matched": true
+    },
+    {
+      "file": "licenses/dom-to-pptx-components/publisher-tag-lock-audit.json",
+      "bytes": 15692,
+      "sha256": "d0c3b8055532180eeea37acbfb785d2145d4c465373347c4fd2bcc1a007d8d34",
+      "expected": "d0c3b8055532180eeea37acbfb785d2145d4c465373347c4fd2bcc1a007d8d34",
+      "kind": "publisher-tag-lock-audit",
+      "matched": true
+    },
+    {
+      "file": "resources/canvas-design/canvas-design.zip",
+      "bytes": 5710179,
+      "sha256": "7c51b4a775bee79e39f0be47b924e1a758a92cf5a5d27084048489a4a31a70d1",
+      "expected": "7c51b4a775bee79e39f0be47b924e1a758a92cf5a5d27084048489a4a31a70d1",
+      "kind": "pinned-canvas-source-archive",
+      "matched": true
+    },
+    {
+      "file": "resources/canvas-design/font-license-references/ibmplexserif-OFL.txt",
+      "bytes": 4456,
+      "sha256": "7e6b2818edbd8f6a01ae80641cc8f16a51080d08fb4e532be3a0b6f74adb07da",
+      "expected": "7e6b2818edbd8f6a01ae80641cc8f16a51080d08fb4e532be3a0b6f74adb07da",
+      "kind": "official-font-license-reference",
+      "matched": true
+    },
+    {
+      "file": "resources/canvas-design/font-license-references/instrumentserif-OFL.txt",
+      "bytes": 4405,
+      "sha256": "129ed7618959716959f2941fdd5b49e0ad6e6c1d78726761786a00253d865521",
+      "expected": "129ed7618959716959f2941fdd5b49e0ad6e6c1d78726761786a00253d865521",
+      "kind": "official-font-license-reference",
+      "matched": true
+    }
+  ],
+  "nativeWebVersions": {
+    "vectorcraft": "0.19.0",
+    "vectorcraft-host": "0.19.0+designcraft.host19",
+    "photocraft-host": "0.18.0+designcraft.host8",
+    "deckcraft-host": "0.13.1+designcraft.host18"
+  },
+  "fontsInOriginalCanvasArchive": [
+    {
+      "archiveFile": "files/skills/canvas-design/canvas-fonts/ArsenalSC-Regular.ttf",
+      "bytes": 165848,
+      "sha256": "65e6f89df58f68fd905b3add34a79dd6106aa3b3044df0dad9676fff53d504b9",
+      "embeddedNameRecords": {
+        "0": "Copyright 2012 The Arsenal Project Authors (andrij.design@gmail.com)",
+        "1": "Arsenal SC",
+        "3": "2.001;MYFO;ArsenalSC-Regular",
+        "5": "Version 2.001; ttfautohint (v1.8.4.7-5d5b)",
+        "8": "Stairsfor",
+        "9": "Andrij Shevchenko",
+        "11": "http://stairsfor.com/",
+        "13": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://openfontlicense.org",
+        "14": "https://openfontlicense.org"
+      },
+      "licenseDeclaredInFont": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://openfontlicense.org",
+      "licenseUrlDeclaredInFont": "https://openfontlicense.org",
+      "actualSource": "Pinned original archive; font metadata and official reference text are separate evidence. No font is executed or installed."
+    },
+    {
+      "archiveFile": "files/skills/canvas-design/canvas-fonts/BigShoulders-Bold.ttf",
+      "bytes": 94528,
+      "sha256": "b43bcd198b9fdf717dd42aa61a34dba32e01aceaeae659d689afd0ca52c37ea2",
+      "embeddedNameRecords": {
+        "0": "Copyright 2019 The Big Shoulders Project Authors (https://github.com/xotypeco/big_shoulders)",
+        "1": "Big Shoulders",
+        "3": "2.002;HoP;BigShoulders-Bold",
+        "5": "Version 2.002",
+        "8": "XO Type Co",
+        "9": "Patric King",
+        "11": "http://xotype.co",
+        "13": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://openfontlicense.org",
+        "14": "https://openfontlicense.org"
+      },
+      "licenseDeclaredInFont": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://openfontlicense.org",
+      "licenseUrlDeclaredInFont": "https://openfontlicense.org",
+      "actualSource": "Pinned original archive; font metadata and official reference text are separate evidence. No font is executed or installed."
+    },
+    {
+      "archiveFile": "files/skills/canvas-design/canvas-fonts/BigShoulders-Regular.ttf",
+      "bytes": 94396,
+      "sha256": "18a879fc71978a4447150705caf880a9da3860083c259fd29e6dc03057b6842a",
+      "embeddedNameRecords": {
+        "0": "Copyright 2019 The Big Shoulders Project Authors (https://github.com/xotypeco/big_shoulders)",
+        "1": "Big Shoulders",
+        "3": "2.002;HoP;BigShoulders-Regular",
+        "5": "Version 2.002",
+        "8": "XO Type Co",
+        "9": "Patric King",
+        "11": "http://xotype.co",
+        "13": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://openfontlicense.org",
+        "14": "https://openfontlicense.org"
+      },
+      "licenseDeclaredInFont": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://openfontlicense.org",
+      "licenseUrlDeclaredInFont": "https://openfontlicense.org",
+      "actualSource": "Pinned original archive; font metadata and official reference text are separate evidence. No font is executed or installed."
+    },
+    {
+      "archiveFile": "files/skills/canvas-design/canvas-fonts/Boldonse-Regular.ttf",
+      "bytes": 77168,
+      "sha256": "cc2e540604565c0f90a7d8d46194a2f42fc9c45512cd2e39bf03b50eb68c35a4",
+      "embeddedNameRecords": {
+        "0": "Copyright 2024 The Boldonse Project Authors (https://github.com/googlefonts/boldonse)",
+        "1": "Boldonse",
+        "3": "1.000;NONE;Boldonse-Regular",
+        "5": "Version 1.000; ttfautohint (v1.8.4.7-5d5b)",
+        "8": "Universitype Foundry",
+        "9": "Universitype Foundry",
+        "11": "www.universitype.com",
+        "13": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://openfontlicense.org",
+        "14": "https://openfontlicense.org"
+      },
+      "licenseDeclaredInFont": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://openfontlicense.org",
+      "licenseUrlDeclaredInFont": "https://openfontlicense.org",
+      "actualSource": "Pinned original archive; font metadata and official reference text are separate evidence. No font is executed or installed."
+    },
+    {
+      "archiveFile": "files/skills/canvas-design/canvas-fonts/BricolageGrotesque-Bold.ttf",
+      "bytes": 90952,
+      "sha256": "a737b146fe0d77ffe8a86e3cd16700dd431d3b1e420d4fd80e142cd68a1cb50d",
+      "embeddedNameRecords": {
+        "0": "Copyright 2022 The Bricolage Grotesque Project Authors (https://github.com/ateliertriay/bricolage)",
+        "1": "Bricolage Grotesque",
+        "3": "1.001;ATLR;BricolageGrotesque-Bold",
+        "5": "Version 1.001;gftools[0.9.33.dev8+g029e19f]",
+        "8": "Atelier Triay",
+        "9": "Mathieu Triay",
+        "11": "https://www.readvisions.com/",
+        "13": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL",
+        "14": "https://scripts.sil.org/OFL"
+      },
+      "licenseDeclaredInFont": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL",
+      "licenseUrlDeclaredInFont": "https://scripts.sil.org/OFL",
+      "actualSource": "Pinned original archive; font metadata and official reference text are separate evidence. No font is executed or installed."
+    },
+    {
+      "archiveFile": "files/skills/canvas-design/canvas-fonts/BricolageGrotesque-Regular.ttf",
+      "bytes": 90920,
+      "sha256": "972a6d098c9867ae131d0ea99e221e63976b11a19d4b931c2c7ace525674e4f6",
+      "embeddedNameRecords": {
+        "0": "Copyright 2022 The Bricolage Grotesque Project Authors (https://github.com/ateliertriay/bricolage)",
+        "1": "Bricolage Grotesque",
+        "3": "1.001;ATLR;BricolageGrotesque-Regular",
+        "5": "Version 1.001;gftools[0.9.33.dev8+g029e19f]",
+        "8": "Atelier Triay",
+        "9": "Mathieu Triay",
+        "11": "https://www.readvisions.com/",
+        "13": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL",
+        "14": "https://scripts.sil.org/OFL"
+      },
+      "licenseDeclaredInFont": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL",
+      "licenseUrlDeclaredInFont": "https://scripts.sil.org/OFL",
+      "actualSource": "Pinned original archive; font metadata and official reference text are separate evidence. No font is executed or installed."
+    },
+    {
+      "archiveFile": "files/skills/canvas-design/canvas-fonts/CrimsonPro-Bold.ttf",
+      "bytes": 107352,
+      "sha256": "48f191e38355c8db100eb3ce157c20f9302a3b9a37b44a660f77ecfce3986609",
+      "embeddedNameRecords": {
+        "0": "Copyright 2018 The Crimson Pro Project Authors (https://github.com/Fonthausen/CrimsonPro)",
+        "1": "Crimson Pro",
+        "3": "1.003;FoHa;CrimsonPro-Bold",
+        "5": "Version 1.003",
+        "8": "Baron von Fonthausen",
+        "9": "Jacques Le Bailly",
+        "11": "http://www.baronvonfonthausen.com/",
+        "13": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL",
+        "14": "https://scripts.sil.org/OFL"
+      },
+      "licenseDeclaredInFont": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL",
+      "licenseUrlDeclaredInFont": "https://scripts.sil.org/OFL",
+      "actualSource": "Pinned original archive; font metadata and official reference text are separate evidence. No font is executed or installed."
+    },
+    {
+      "archiveFile": "files/skills/canvas-design/canvas-fonts/CrimsonPro-Italic.ttf",
+      "bytes": 108828,
+      "sha256": "52318db3526b644e6efa60be0b3ca5a50e40fbe8bd026c261e0aa206f0772267",
+      "embeddedNameRecords": {
+        "0": "Copyright 2018 The Crimson Pro Project Authors (https://github.com/Fonthausen/CrimsonPro)",
+        "1": "Crimson Pro",
+        "3": "1.003;FoHa;CrimsonPro-Italic",
+        "5": "Version 1.003",
+        "8": "Baron von Fonthausen",
+        "9": "Jacques Le Bailly",
+        "11": "http://www.baronvonfonthausen.com/",
+        "13": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL",
+        "14": "https://scripts.sil.org/OFL"
+      },
+      "licenseDeclaredInFont": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL",
+      "licenseUrlDeclaredInFont": "https://scripts.sil.org/OFL",
+      "actualSource": "Pinned original archive; font metadata and official reference text are separate evidence. No font is executed or installed."
+    },
+    {
+      "archiveFile": "files/skills/canvas-design/canvas-fonts/CrimsonPro-Regular.ttf",
+      "bytes": 106696,
+      "sha256": "48fad08cb1917a7b2f2c6fe5135d6c07743a6663cf7631ec4481108aaf081422",
+      "embeddedNameRecords": {
+        "0": "Copyright 2018 The Crimson Pro Project Authors (https://github.com/Fonthausen/CrimsonPro)",
+        "1": "Crimson Pro",
+        "3": "1.003;FoHa;CrimsonPro-Regular",
+        "5": "Version 1.003",
+        "8": "Baron von Fonthausen",
+        "9": "Jacques Le Bailly",
+        "11": "http://www.baronvonfonthausen.com/",
+        "13": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL",
+        "14": "https://scripts.sil.org/OFL"
+      },
+      "licenseDeclaredInFont": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL",
+      "licenseUrlDeclaredInFont": "https://scripts.sil.org/OFL",
+      "actualSource": "Pinned original archive; font metadata and official reference text are separate evidence. No font is executed or installed."
+    },
+    {
+      "archiveFile": "files/skills/canvas-design/canvas-fonts/DMMono-Regular.ttf",
+      "bytes": 48852,
+      "sha256": "f98ada968dc3b6b2c08d3f5caaf266977df0bfe0929372b93df5a06cf2ace450",
+      "embeddedNameRecords": {
+        "0": "Copyright 2020 The DM Mono Project Authors (https://www.github.com/googlefonts/dm-mono)",
+        "1": "DM Mono",
+        "3": "1.000;CF;DMMono-Regular",
+        "5": "Version 1.000; ttfautohint (v1.8.2.53-6de2)",
+        "8": "Colophon Foundry",
+        "9": "Colophon Foundry",
+        "11": "https://www.colophon-foundry.org",
+        "13": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: http://scripts.sil.org/OFL",
+        "14": "http://scripts.sil.org/OFL"
+      },
+      "licenseDeclaredInFont": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: http://scripts.sil.org/OFL",
+      "licenseUrlDeclaredInFont": "http://scripts.sil.org/OFL",
+      "actualSource": "Pinned original archive; font metadata and official reference text are separate evidence. No font is executed or installed."
+    },
+    {
+      "archiveFile": "files/skills/canvas-design/canvas-fonts/EricaOne-Regular.ttf",
+      "bytes": 24872,
+      "sha256": "db1d89e80e33a8a01beaaac7a85df582857d24a43f1e181461aa7ff5d701476a",
+      "embeddedNameRecords": {
+        "0": "Copyright (c) 2011 by LatinoType Limitada (info@latinotype.com),  with Reserved Font Names \"Erica\" \"Erica One\"",
+        "1": "Erica One",
+        "3": "MiguelHernandez: Erica One: 2011",
+        "5": "Version 1.003",
+        "8": "Miguel Hernandez",
+        "9": "Miguel Hernandez",
+        "11": "www.latinotype.com",
+        "13": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: http://scripts.sil.org/OFL",
+        "14": "http://scripts.sil.org/OFL"
+      },
+      "licenseDeclaredInFont": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: http://scripts.sil.org/OFL",
+      "licenseUrlDeclaredInFont": "http://scripts.sil.org/OFL",
+      "actualSource": "Pinned original archive; font metadata and official reference text are separate evidence. No font is executed or installed."
+    },
+    {
+      "archiveFile": "files/skills/canvas-design/canvas-fonts/GeistMono-Bold.ttf",
+      "bytes": 78304,
+      "sha256": "75c0828d5c1ee44b9ef9f4df577bf41595ec362e2ea3f1e558590c9e92c7949d",
+      "embeddedNameRecords": {
+        "0": "Copyright 2024 The Geist Project Authors (https://github.com/vercel/geist-font.git)",
+        "1": "Geist Mono",
+        "3": "1.401;VRCL;GeistMono-Bold",
+        "5": "Version 1.401",
+        "8": "Basement.studio, Vercel, Andrés Briganti, Guido Ferreyra, Mateo Zaragoza",
+        "9": "Basement.studio, Andrés Briganti, Mateo Zaragoza",
+        "11": "https://basement.studio/",
+        "13": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://openfontlicense.org",
+        "14": "https://openfontlicense.org"
+      },
+      "licenseDeclaredInFont": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://openfontlicense.org",
+      "licenseUrlDeclaredInFont": "https://openfontlicense.org",
+      "actualSource": "Pinned original archive; font metadata and official reference text are separate evidence. No font is executed or installed."
+    },
+    {
+      "archiveFile": "files/skills/canvas-design/canvas-fonts/GeistMono-Regular.ttf",
+      "bytes": 78232,
+      "sha256": "a55c1b51cda4afeab9e471e7947b85a20f7c8831d7e6b1470c1b7fbdc0f0f15e",
+      "embeddedNameRecords": {
+        "0": "Copyright 2024 The Geist Project Authors (https://github.com/vercel/geist-font.git)",
+        "1": "Geist Mono",
+        "3": "1.401;VRCL;GeistMono-Regular",
+        "5": "Version 1.401",
+        "8": "Basement.studio, Vercel, Andrés Briganti, Guido Ferreyra, Mateo Zaragoza",
+        "9": "Basement.studio, Andrés Briganti, Mateo Zaragoza",
+        "11": "https://basement.studio/",
+        "13": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://openfontlicense.org",
+        "14": "https://openfontlicense.org"
+      },
+      "licenseDeclaredInFont": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://openfontlicense.org",
+      "licenseUrlDeclaredInFont": "https://openfontlicense.org",
+      "actualSource": "Pinned original archive; font metadata and official reference text are separate evidence. No font is executed or installed."
+    },
+    {
+      "archiveFile": "files/skills/canvas-design/canvas-fonts/Gloock-Regular.ttf",
+      "bytes": 95156,
+      "sha256": "e86b4ce66dbd3f1f83eee8db99ec96e0da1128c3f53df0e9b3b7472025dfe960",
+      "embeddedNameRecords": {
+        "0": "Copyright 2022 The Gloock Project Authors (https://github.com/duartp/gloock)",
+        "1": "Gloock",
+        "3": "1.000;NONE;Gloock-Regular",
+        "5": "Version 1.000; ttfautohint (v1.8.4.7-5d5b)",
+        "8": "Duarte Pinto",
+        "9": "Duarte Pinto",
+        "11": "https://www.behance.net/dwarte",
+        "13": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL",
+        "14": "https://scripts.sil.org/OFL"
+      },
+      "licenseDeclaredInFont": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL",
+      "licenseUrlDeclaredInFont": "https://scripts.sil.org/OFL",
+      "actualSource": "Pinned original archive; font metadata and official reference text are separate evidence. No font is executed or installed."
+    },
+    {
+      "archiveFile": "files/skills/canvas-design/canvas-fonts/IBMPlexMono-Bold.ttf",
+      "bytes": 136008,
+      "sha256": "dbd2a2fb024579438d6400a84e57579bfd2dbe67c306c8fd9fde92a61e4f2eea",
+      "embeddedNameRecords": {
+        "0": "Copyright 2017 IBM Corp. All rights reserved.",
+        "1": "IBM Plex Mono",
+        "3": "2.3;IBM ;IBMPlexMono-Bold",
+        "5": "Version 2.3",
+        "8": "Bold Monday",
+        "9": "Mike Abbink, Paul van der Laan, Pieter van Rosmalen",
+        "11": "http://www.boldmonday.com",
+        "13": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: http://scripts.sil.org/OFL",
+        "14": "http://scripts.sil.org/OFL"
+      },
+      "licenseDeclaredInFont": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: http://scripts.sil.org/OFL",
+      "licenseUrlDeclaredInFont": "http://scripts.sil.org/OFL",
+      "actualSource": "Pinned original archive; font metadata and official reference text are separate evidence. No font is executed or installed."
+    },
+    {
+      "archiveFile": "files/skills/canvas-design/canvas-fonts/IBMPlexMono-Regular.ttf",
+      "bytes": 133796,
+      "sha256": "ab08018ccd276b79fb2c636bb95b9c543598f9d50505fe92506fcb4dae7810cd",
+      "embeddedNameRecords": {
+        "0": "Copyright 2017 IBM Corp. All rights reserved.",
+        "1": "IBM Plex Mono",
+        "3": "2.3;IBM ;IBMPlexMono-Regular",
+        "5": "Version 2.3",
+        "8": "Bold Monday",
+        "9": "Mike Abbink, Paul van der Laan, Pieter van Rosmalen",
+        "11": "http://www.boldmonday.com",
+        "13": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: http://scripts.sil.org/OFL",
+        "14": "http://scripts.sil.org/OFL"
+      },
+      "licenseDeclaredInFont": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: http://scripts.sil.org/OFL",
+      "licenseUrlDeclaredInFont": "http://scripts.sil.org/OFL",
+      "actualSource": "Pinned original archive; font metadata and official reference text are separate evidence. No font is executed or installed."
+    },
+    {
+      "archiveFile": "files/skills/canvas-design/canvas-fonts/IBMPlexSerif-Bold.ttf",
+      "bytes": 161000,
+      "sha256": "b8d294e9b5c5a0940f167c3ced0f7ef2e3f57082ca3ff096ef30e86e26c1c159",
+      "embeddedNameRecords": {
+        "0": "Copyright 2020 IBM Corp. All rights reserved.",
+        "1": "IBM Plex Serif",
+        "3": "2.6;IBM ;IBMPlexSerif-Bold",
+        "5": "Version 2.6",
+        "8": "Bold Monday",
+        "9": "Mike Abbink, Paul van der Laan, Pieter van Rosmalen",
+        "11": "http://www.boldmonday.com",
+        "13": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: http://scripts.sil.org/OFL",
+        "14": "http://scripts.sil.org/OFL"
+      },
+      "licenseDeclaredInFont": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: http://scripts.sil.org/OFL",
+      "licenseUrlDeclaredInFont": "http://scripts.sil.org/OFL",
+      "actualSource": "Pinned original archive; font metadata and official reference text are separate evidence. No font is executed or installed."
+    },
+    {
+      "archiveFile": "files/skills/canvas-design/canvas-fonts/IBMPlexSerif-BoldItalic.ttf",
+      "bytes": 169840,
+      "sha256": "da64b75f4284f53e7b5c71fa190a35b8bf3494fe19f1804c81c3a53340bca570",
+      "embeddedNameRecords": {
+        "0": "Copyright 2020 IBM Corp. All rights reserved.",
+        "1": "IBM Plex Serif",
+        "3": "2.6;IBM ;IBMPlexSerif-BoldItalic",
+        "5": "Version 2.6",
+        "8": "Bold Monday",
+        "9": "Mike Abbink, Paul van der Laan, Pieter van Rosmalen",
+        "11": "http://www.boldmonday.com",
+        "13": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: http://scripts.sil.org/OFL",
+        "14": "http://scripts.sil.org/OFL"
+      },
+      "licenseDeclaredInFont": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: http://scripts.sil.org/OFL",
+      "licenseUrlDeclaredInFont": "http://scripts.sil.org/OFL",
+      "actualSource": "Pinned original archive; font metadata and official reference text are separate evidence. No font is executed or installed."
+    },
+    {
+      "archiveFile": "files/skills/canvas-design/canvas-fonts/IBMPlexSerif-Italic.ttf",
+      "bytes": 170004,
+      "sha256": "b11f1048745e715a55c9d837b3f10226ca3d78867b7db7251ddad8f98dcf0f38",
+      "embeddedNameRecords": {
+        "0": "Copyright 2020 IBM Corp. All rights reserved.",
+        "1": "IBM Plex Serif",
+        "3": "2.6;IBM ;IBMPlexSerif-Italic",
+        "5": "Version 2.6",
+        "8": "Bold Monday",
+        "9": "Mike Abbink, Paul van der Laan, Pieter van Rosmalen",
+        "11": "http://www.boldmonday.com",
+        "13": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: http://scripts.sil.org/OFL",
+        "14": "http://scripts.sil.org/OFL"
+      },
+      "licenseDeclaredInFont": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: http://scripts.sil.org/OFL",
+      "licenseUrlDeclaredInFont": "http://scripts.sil.org/OFL",
+      "actualSource": "Pinned original archive; font metadata and official reference text are separate evidence. No font is executed or installed."
+    },
+    {
+      "archiveFile": "files/skills/canvas-design/canvas-fonts/IBMPlexSerif-Regular.ttf",
+      "bytes": 160380,
+      "sha256": "77cd233a2af8dc6b1022faea3bb3b01f3c75af68bcf530cb6aeb15982ff3dbb7",
+      "embeddedNameRecords": {
+        "0": "Copyright 2020 IBM Corp. All rights reserved.",
+        "1": "IBM Plex Serif",
+        "3": "2.6;IBM ;IBMPlexSerif-Regular",
+        "5": "Version 2.6",
+        "8": "Bold Monday",
+        "9": "Mike Abbink, Paul van der Laan, Pieter van Rosmalen",
+        "11": "http://www.boldmonday.com",
+        "13": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: http://scripts.sil.org/OFL",
+        "14": "http://scripts.sil.org/OFL"
+      },
+      "licenseDeclaredInFont": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: http://scripts.sil.org/OFL",
+      "licenseUrlDeclaredInFont": "http://scripts.sil.org/OFL",
+      "actualSource": "Pinned original archive; font metadata and official reference text are separate evidence. No font is executed or installed."
+    },
+    {
+      "archiveFile": "files/skills/canvas-design/canvas-fonts/InstrumentSans-Bold.ttf",
+      "bytes": 68084,
+      "sha256": "444f85bf1c4b0e1ce1ca624f6be54bcd832207714ccaf4ea99ee531341683bdf",
+      "embeddedNameRecords": {
+        "0": "Copyright 2022 The Instrument Sans Project Authors (https://github.com/Instrument/instrument-sans)",
+        "1": "Instrument Sans",
+        "3": "1.000;NONE;InstrumentSans-Bold",
+        "5": "Version 1.000;gftools[0.9.28]",
+        "8": "fragTYPE",
+        "9": "Rodrigo Fuenzalida",
+        "11": "www.fragtypefoundry.xyz",
+        "13": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL",
+        "14": "https://scripts.sil.org/OFL"
+      },
+      "licenseDeclaredInFont": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL",
+      "licenseUrlDeclaredInFont": "https://scripts.sil.org/OFL",
+      "actualSource": "Pinned original archive; font metadata and official reference text are separate evidence. No font is executed or installed."
+    },
+    {
+      "archiveFile": "files/skills/canvas-design/canvas-fonts/InstrumentSans-BoldItalic.ttf",
+      "bytes": 70004,
+      "sha256": "3762f6cef95d6039489ad5ba5787d4c30f17a1ad01e9ac3c816ed69692722a68",
+      "embeddedNameRecords": {
+        "0": "Copyright 2022 The Instrument Sans Project Authors (https://github.com/Instrument/instrument-sans)",
+        "1": "Instrument Sans",
+        "3": "1.000;NONE;InstrumentSans-BoldItalic",
+        "5": "Version 1.000;gftools[0.9.28]",
+        "8": "fragTYPE",
+        "9": "Rodrigo Fuenzalida",
+        "11": "www.fragtypefoundry.xyz",
+        "13": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL",
+        "14": "https://scripts.sil.org/OFL"
+      },
+      "licenseDeclaredInFont": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL",
+      "licenseUrlDeclaredInFont": "https://scripts.sil.org/OFL",
+      "actualSource": "Pinned original archive; font metadata and official reference text are separate evidence. No font is executed or installed."
+    },
+    {
+      "archiveFile": "files/skills/canvas-design/canvas-fonts/InstrumentSans-Italic.ttf",
+      "bytes": 69900,
+      "sha256": "78e85858e371b2cb4e18f617c10f0f937c0e12a0887ffee98555b24ed305b3a7",
+      "embeddedNameRecords": {
+        "0": "Copyright 2022 The Instrument Sans Project Authors (https://github.com/Instrument/instrument-sans)",
+        "1": "Instrument Sans",
+        "3": "1.000;NONE;InstrumentSans-Italic",
+        "5": "Version 1.000;gftools[0.9.28]",
+        "8": "fragTYPE",
+        "9": "Rodrigo Fuenzalida",
+        "11": "www.fragtypefoundry.xyz",
+        "13": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL",
+        "14": "https://scripts.sil.org/OFL"
+      },
+      "licenseDeclaredInFont": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL",
+      "licenseUrlDeclaredInFont": "https://scripts.sil.org/OFL",
+      "actualSource": "Pinned original archive; font metadata and official reference text are separate evidence. No font is executed or installed."
+    },
+    {
+      "archiveFile": "files/skills/canvas-design/canvas-fonts/InstrumentSans-Regular.ttf",
+      "bytes": 68028,
+      "sha256": "a22cb26e48fd79bcb01bf2fc92d36785474dce36d9c544ab0a8868c2657c4a87",
+      "embeddedNameRecords": {
+        "0": "Copyright 2022 The Instrument Sans Project Authors (https://github.com/Instrument/instrument-sans)",
+        "1": "Instrument Sans",
+        "3": "1.000;NONE;InstrumentSans-Regular",
+        "5": "Version 1.000;gftools[0.9.28]",
+        "8": "fragTYPE",
+        "9": "Rodrigo Fuenzalida",
+        "11": "www.fragtypefoundry.xyz",
+        "13": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL",
+        "14": "https://scripts.sil.org/OFL"
+      },
+      "licenseDeclaredInFont": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL",
+      "licenseUrlDeclaredInFont": "https://scripts.sil.org/OFL",
+      "actualSource": "Pinned original archive; font metadata and official reference text are separate evidence. No font is executed or installed."
+    },
+    {
+      "archiveFile": "files/skills/canvas-design/canvas-fonts/InstrumentSerif-Italic.ttf",
+      "bytes": 70868,
+      "sha256": "9c86e4d5a47b50224a2463a9eca8535835257c8e85c470c2c6b454b1af6f046e",
+      "embeddedNameRecords": {
+        "0": "Copyright 2022 The Instrument Serif Project Authors (https://github.com/Instrument/instrument-serif)",
+        "1": "Instrument Serif",
+        "3": "1.000;NONE;InstrumentSerif-Italic",
+        "5": "Version 1.000; ttfautohint (v1.8.4.7-5d5b);gftools[0.9.27]",
+        "8": "fragTYPE",
+        "9": "Rodrigo Fuenzalida",
+        "11": "www.fragtypefoundry.xyz",
+        "13": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL",
+        "14": "https://scripts.sil.org/OFL"
+      },
+      "licenseDeclaredInFont": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL",
+      "licenseUrlDeclaredInFont": "https://scripts.sil.org/OFL",
+      "actualSource": "Pinned original archive; font metadata and official reference text are separate evidence. No font is executed or installed."
+    },
+    {
+      "archiveFile": "files/skills/canvas-design/canvas-fonts/InstrumentSerif-Regular.ttf",
+      "bytes": 69312,
+      "sha256": "56ac3be03ac3ba283196b3e77850ab2ffcf56cfb6fd3212c5620109a972f8c99",
+      "embeddedNameRecords": {
+        "0": "Copyright 2022 The Instrument Serif Project Authors (https://github.com/Instrument/instrument-serif)",
+        "1": "Instrument Serif",
+        "3": "1.000;NONE;InstrumentSerif-Regular",
+        "5": "Version 1.000; ttfautohint (v1.8.4.7-5d5b);gftools[0.9.27]",
+        "8": "fragTYPE",
+        "9": "Rodrigo Fuenzalida",
+        "11": "www.fragtypefoundry.xyz",
+        "13": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL",
+        "14": "https://scripts.sil.org/OFL"
+      },
+      "licenseDeclaredInFont": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL",
+      "licenseUrlDeclaredInFont": "https://scripts.sil.org/OFL",
+      "actualSource": "Pinned original archive; font metadata and official reference text are separate evidence. No font is executed or installed."
+    },
+    {
+      "archiveFile": "files/skills/canvas-design/canvas-fonts/Italiana-Regular.ttf",
+      "bytes": 27184,
+      "sha256": "15c4dd6ab8cf4a29ba8826f65edcbe2f6c266c557d34d081f25072dfd5605fd2",
+      "embeddedNameRecords": {
+        "0": "Copyright (c) 2011 by Santiago Orozco (hi@typemade.mx) with reserved name Italiana",
+        "1": "Italiana",
+        "3": "FONTLAB:OTFEXPORT",
+        "5": "Version 001.001 ",
+        "8": "Santiago Orozco",
+        "9": "Santiago Orozco",
+        "13": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: http://scripts.sil.org/OFL",
+        "14": "http://scripts.sil.org/OFL"
+      },
+      "licenseDeclaredInFont": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: http://scripts.sil.org/OFL",
+      "licenseUrlDeclaredInFont": "http://scripts.sil.org/OFL",
+      "actualSource": "Pinned original archive; font metadata and official reference text are separate evidence. No font is executed or installed."
+    },
+    {
+      "archiveFile": "files/skills/canvas-design/canvas-fonts/JetBrainsMono-Bold.ttf",
+      "bytes": 114828,
+      "sha256": "a2349098b9e45419e7bf0e2958d6c4937a049dded37387b08be725be4c7615f3",
+      "embeddedNameRecords": {
+        "0": "Copyright 2020 The JetBrains Mono Project Authors (https://github.com/JetBrains/JetBrainsMono)",
+        "1": "JetBrains Mono",
+        "3": "2.211;JB;JetBrainsMono-Bold",
+        "5": "Version 2.211",
+        "8": "JetBrains",
+        "9": "Philipp Nurullin, Konstantin Bulenkov",
+        "11": "https://www.jetbrains.com",
+        "13": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL",
+        "14": "https://scripts.sil.org/OFL"
+      },
+      "licenseDeclaredInFont": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL",
+      "licenseUrlDeclaredInFont": "https://scripts.sil.org/OFL",
+      "actualSource": "Pinned original archive; font metadata and official reference text are separate evidence. No font is executed or installed."
+    },
+    {
+      "archiveFile": "files/skills/canvas-design/canvas-fonts/JetBrainsMono-Regular.ttf",
+      "bytes": 114904,
+      "sha256": "b6b1ff4ddefe36d7f2a6174e1d001cab374e594519ee9049af028d577b64c5f5",
+      "embeddedNameRecords": {
+        "0": "Copyright 2020 The JetBrains Mono Project Authors (https://github.com/JetBrains/JetBrainsMono)",
+        "1": "JetBrains Mono",
+        "3": "2.211;JB;JetBrainsMono-Regular",
+        "5": "Version 2.211",
+        "8": "JetBrains",
+        "9": "Philipp Nurullin, Konstantin Bulenkov",
+        "11": "https://www.jetbrains.com",
+        "13": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL",
+        "14": "https://scripts.sil.org/OFL"
+      },
+      "licenseDeclaredInFont": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL",
+      "licenseUrlDeclaredInFont": "https://scripts.sil.org/OFL",
+      "actualSource": "Pinned original archive; font metadata and official reference text are separate evidence. No font is executed or installed."
+    },
+    {
+      "archiveFile": "files/skills/canvas-design/canvas-fonts/Jura-Light.ttf",
+      "bytes": 154308,
+      "sha256": "c891a381df056b2c4dfe85841e911bf45da0890fa21a7b2692cbe5ea1f505e1e",
+      "embeddedNameRecords": {
+        "0": "Copyright 2019 The Jura Project Authors (https://github.com/ossobuffo/jura)",
+        "1": "Jura Light",
+        "3": "5.106;GOOG;Jura-Light",
+        "5": "Version 5.106",
+        "8": "Daniel Johnson",
+        "9": "Daniel Johnson, Alexei Vanyashin, Mirko Velimirovic",
+        "11": "http://www.danieljohnson.name",
+        "13": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: http://scripts.sil.org/OFL",
+        "14": "http://scripts.sil.org/OFL"
+      },
+      "licenseDeclaredInFont": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: http://scripts.sil.org/OFL",
+      "licenseUrlDeclaredInFont": "http://scripts.sil.org/OFL",
+      "actualSource": "Pinned original archive; font metadata and official reference text are separate evidence. No font is executed or installed."
+    },
+    {
+      "archiveFile": "files/skills/canvas-design/canvas-fonts/Jura-Medium.ttf",
+      "bytes": 154488,
+      "sha256": "c72965cb732a92872643819fd1734128238583cc36b116313859137a51d3368a",
+      "embeddedNameRecords": {
+        "0": "Copyright 2019 The Jura Project Authors (https://github.com/ossobuffo/jura)",
+        "1": "Jura Medium",
+        "3": "5.106;GOOG;Jura-Medium",
+        "5": "Version 5.106",
+        "8": "Daniel Johnson",
+        "9": "Daniel Johnson, Alexei Vanyashin, Mirko Velimirovic",
+        "11": "http://www.danieljohnson.name",
+        "13": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: http://scripts.sil.org/OFL",
+        "14": "http://scripts.sil.org/OFL"
+      },
+      "licenseDeclaredInFont": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: http://scripts.sil.org/OFL",
+      "licenseUrlDeclaredInFont": "http://scripts.sil.org/OFL",
+      "actualSource": "Pinned original archive; font metadata and official reference text are separate evidence. No font is executed or installed."
+    },
+    {
+      "archiveFile": "files/skills/canvas-design/canvas-fonts/LibreBaskerville-Regular.ttf",
+      "bytes": 147584,
+      "sha256": "2101302538d9e88adb679031c04623e4578b5745e89566284fd2c508d79acae0",
+      "embeddedNameRecords": {
+        "0": "Copyright 2012 The Libre Baskerville Project Authors (https://github.com/impallari/Libre-Baskerville)",
+        "1": "Libre Baskerville",
+        "3": "1.051;pyrs;LibreBaskerville-Regular",
+        "5": "Version 1.051; ttfautohint (v1.8.4.7-5d5b)",
+        "8": "Pablo Impallari, Rodrigo Fuenzalida",
+        "9": "Pablo Impallari, Rodrigo Fuenzalida",
+        "11": "www.impallari.com",
+        "13": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://openfontlicense.org",
+        "14": "https://openfontlicense.org"
+      },
+      "licenseDeclaredInFont": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://openfontlicense.org",
+      "licenseUrlDeclaredInFont": "https://openfontlicense.org",
+      "actualSource": "Pinned original archive; font metadata and official reference text are separate evidence. No font is executed or installed."
+    },
+    {
+      "archiveFile": "files/skills/canvas-design/canvas-fonts/Lora-Bold.ttf",
+      "bytes": 133828,
+      "sha256": "7d74015e950c2fb66519c7295b8155621d22200ae2ca2a4c6b43ce3c490cac87",
+      "embeddedNameRecords": {
+        "0": "Copyright 2011 The Lora Project Authors (https://github.com/cyrealtype/Lora-Cyrillic), with Reserved Font Name \"Lora\".",
+        "1": "Lora",
+        "3": "3.008;CYRE;Lora-Bold",
+        "5": "Version 3.008",
+        "8": "Cyreal",
+        "9": "Olga Karpushina, Alexei Vanyashin (Cyrillic)",
+        "11": "https://cyreal.org",
+        "13": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL",
+        "14": "https://scripts.sil.org/OFL"
+      },
+      "licenseDeclaredInFont": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL",
+      "licenseUrlDeclaredInFont": "https://scripts.sil.org/OFL",
+      "actualSource": "Pinned original archive; font metadata and official reference text are separate evidence. No font is executed or installed."
+    },
+    {
+      "archiveFile": "files/skills/canvas-design/canvas-fonts/Lora-BoldItalic.ttf",
+      "bytes": 140332,
+      "sha256": "152f87e71f5ddb60d5c57ecd9132807c947e65c42977193c9164e7c5a6690081",
+      "embeddedNameRecords": {
+        "0": "Copyright 2011 The Lora Project Authors (https://github.com/cyrealtype/Lora-Cyrillic), with Reserved Font Name \"Lora\".",
+        "1": "Lora",
+        "3": "3.008;CYRE;Lora-BoldItalic",
+        "5": "Version 3.008",
+        "8": "Cyreal",
+        "9": "Olga Karpushina, Alexei Vanyashin (Cyrillic)",
+        "11": "https://cyreal.org",
+        "13": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL",
+        "14": "https://scripts.sil.org/OFL"
+      },
+      "licenseDeclaredInFont": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL",
+      "licenseUrlDeclaredInFont": "https://scripts.sil.org/OFL",
+      "actualSource": "Pinned original archive; font metadata and official reference text are separate evidence. No font is executed or installed."
+    },
+    {
+      "archiveFile": "files/skills/canvas-design/canvas-fonts/Lora-Italic.ttf",
+      "bytes": 139328,
+      "sha256": "be627e595184e8afe521f08da0607eee613f1997d423bc8dadc5798995581377",
+      "embeddedNameRecords": {
+        "0": "Copyright 2011 The Lora Project Authors (https://github.com/cyrealtype/Lora-Cyrillic), with Reserved Font Name \"Lora\".",
+        "1": "Lora",
+        "3": "3.008;CYRE;Lora-Italic",
+        "5": "Version 3.008",
+        "8": "Cyreal",
+        "9": "Olga Karpushina, Alexei Vanyashin (Cyrillic)",
+        "11": "https://cyreal.org",
+        "13": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL",
+        "14": "https://scripts.sil.org/OFL"
+      },
+      "licenseDeclaredInFont": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL",
+      "licenseUrlDeclaredInFont": "https://scripts.sil.org/OFL",
+      "actualSource": "Pinned original archive; font metadata and official reference text are separate evidence. No font is executed or installed."
+    },
+    {
+      "archiveFile": "files/skills/canvas-design/canvas-fonts/Lora-Regular.ttf",
+      "bytes": 133888,
+      "sha256": "7ed00e7c9cdf16ab7e2fd2361fe45d4f0b61263cd60aae398b27b7ee08108827",
+      "embeddedNameRecords": {
+        "0": "Copyright 2011 The Lora Project Authors (https://github.com/cyrealtype/Lora-Cyrillic), with Reserved Font Name \"Lora\".",
+        "1": "Lora",
+        "3": "3.008;CYRE;Lora-Regular",
+        "5": "Version 3.008",
+        "8": "Cyreal",
+        "9": "Olga Karpushina, Alexei Vanyashin (Cyrillic)",
+        "11": "https://cyreal.org",
+        "13": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL",
+        "14": "https://scripts.sil.org/OFL"
+      },
+      "licenseDeclaredInFont": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL",
+      "licenseUrlDeclaredInFont": "https://scripts.sil.org/OFL",
+      "actualSource": "Pinned original archive; font metadata and official reference text are separate evidence. No font is executed or installed."
+    },
+    {
+      "archiveFile": "files/skills/canvas-design/canvas-fonts/NationalPark-Bold.ttf",
+      "bytes": 79208,
+      "sha256": "69ac4c301c4a7233c6e602d12a92c54d7967b575f4449951c45ce773f7acff53",
+      "embeddedNameRecords": {
+        "0": "Copyright 2024 The National Park Project Authors (https://github.com/benhoepner/National-Park)",
+        "1": "National Park",
+        "3": "1.009;NONE;NationalPark-Bold",
+        "5": "Version 1.009",
+        "9": "Andrea Herstowski, Ben Hoepner",
+        "13": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://openfontlicense.org",
+        "14": "https://openfontlicense.org"
+      },
+      "licenseDeclaredInFont": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://openfontlicense.org",
+      "licenseUrlDeclaredInFont": "https://openfontlicense.org",
+      "actualSource": "Pinned original archive; font metadata and official reference text are separate evidence. No font is executed or installed."
+    },
+    {
+      "archiveFile": "files/skills/canvas-design/canvas-fonts/NationalPark-Regular.ttf",
+      "bytes": 76424,
+      "sha256": "a477338b7e18308d476650dfe31235ef86a883572665e56ffb5fb80f82009b58",
+      "embeddedNameRecords": {
+        "0": "Copyright 2024 The National Park Project Authors (https://github.com/benhoepner/National-Park)",
+        "1": "National Park",
+        "3": "1.009;NONE;NationalPark-Regular",
+        "5": "Version 1.009",
+        "9": "Andrea Herstowski, Ben Hoepner",
+        "13": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://openfontlicense.org",
+        "14": "https://openfontlicense.org"
+      },
+      "licenseDeclaredInFont": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://openfontlicense.org",
+      "licenseUrlDeclaredInFont": "https://openfontlicense.org",
+      "actualSource": "Pinned original archive; font metadata and official reference text are separate evidence. No font is executed or installed."
+    },
+    {
+      "archiveFile": "files/skills/canvas-design/canvas-fonts/NothingYouCouldDo-Regular.ttf",
+      "bytes": 32020,
+      "sha256": "d866f985896d3280f4fce72db7e17302c24a0c1fdb0699b6b5ed3af14f944d57",
+      "embeddedNameRecords": {
+        "0": "Copyright (c) 2010, Kimberly Geswein (kimberlygeswein.com). This Font Software is licensed under the SIL Open Font License, Version 1.1.  This license available with a FAQ at:  http://scripts.sil.org/OFL",
+        "1": "Nothing You Could Do",
+        "3": "KimberlyGeswein: Nothing You Could Do: 2010",
+        "5": "Version 1.005",
+        "8": "Kimberly Geswein",
+        "9": "Kimberly Geswein",
+        "11": "http://kimberlygeswein.com",
+        "13": "Copyright (c) 2010, Kimberly Geswein (kimberlygeswein.com). This Font Software is licensed under the SIL Open Font License, Version 1.1.  This license available with a FAQ at:  http://scripts.sil.org/OFL",
+        "14": " http://scripts.sil.org/OFL"
+      },
+      "licenseDeclaredInFont": "Copyright (c) 2010, Kimberly Geswein (kimberlygeswein.com). This Font Software is licensed under the SIL Open Font License, Version 1.1.  This license available with a FAQ at:  http://scripts.sil.org/OFL",
+      "licenseUrlDeclaredInFont": " http://scripts.sil.org/OFL",
+      "actualSource": "Pinned original archive; font metadata and official reference text are separate evidence. No font is executed or installed."
+    },
+    {
+      "archiveFile": "files/skills/canvas-design/canvas-fonts/Outfit-Bold.ttf",
+      "bytes": 55392,
+      "sha256": "6654b93d21301ec61887d3cedd6c11d9df1b1dfb63f9cf45ac7995f6e2235ab1",
+      "embeddedNameRecords": {
+        "0": "Copyright 2021 The Outfit Project Authors (https://github.com/Outfitio/Outfit-Fonts)",
+        "1": "Outfit",
+        "3": "1.100;frag;Outfit-Bold",
+        "5": "Version 1.100;gftools[0.9.27]",
+        "8": "fragTYPE",
+        "9": "Rodrigo Fuenzalida",
+        "11": "www.fragtypefoundry.xyz",
+        "13": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL",
+        "14": "https://scripts.sil.org/OFL"
+      },
+      "licenseDeclaredInFont": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL",
+      "licenseUrlDeclaredInFont": "https://scripts.sil.org/OFL",
+      "actualSource": "Pinned original archive; font metadata and official reference text are separate evidence. No font is executed or installed."
+    },
+    {
+      "archiveFile": "files/skills/canvas-design/canvas-fonts/Outfit-Regular.ttf",
+      "bytes": 54912,
+      "sha256": "f24945365147c9e783e91d8649959b59be6b00c9ee4ecd2f6b33afbb2dd871fe",
+      "embeddedNameRecords": {
+        "0": "Copyright 2021 The Outfit Project Authors (https://github.com/Outfitio/Outfit-Fonts)",
+        "1": "Outfit",
+        "3": "1.100;frag;Outfit-Regular",
+        "5": "Version 1.100;gftools[0.9.27]",
+        "8": "fragTYPE",
+        "9": "Rodrigo Fuenzalida",
+        "11": "www.fragtypefoundry.xyz",
+        "13": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL",
+        "14": "https://scripts.sil.org/OFL"
+      },
+      "licenseDeclaredInFont": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL",
+      "licenseUrlDeclaredInFont": "https://scripts.sil.org/OFL",
+      "actualSource": "Pinned original archive; font metadata and official reference text are separate evidence. No font is executed or installed."
+    },
+    {
+      "archiveFile": "files/skills/canvas-design/canvas-fonts/PixelifySans-Medium.ttf",
+      "bytes": 51072,
+      "sha256": "38397504f71c122b03d234ea6f55118e3d5bdbddffd82bedddbd7755d3b3be82",
+      "embeddedNameRecords": {
+        "0": "Copyright 2021 The Pixelify Sans Project Authors (https://github.com/eifetx/Pixelify-Sans)",
+        "1": "Pixelify Sans Medium",
+        "3": "1.000;NONE;PixelifySans-Medium",
+        "5": "Version 1.000",
+        "8": "Typecalism Foundryline",
+        "9": "Stefie Justprince",
+        "11": "https://www.myfonts.com/collections/typecalism-foundryline-foundry",
+        "13": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL",
+        "14": "https://scripts.sil.org/OFL"
+      },
+      "licenseDeclaredInFont": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL",
+      "licenseUrlDeclaredInFont": "https://scripts.sil.org/OFL",
+      "actualSource": "Pinned original archive; font metadata and official reference text are separate evidence. No font is executed or installed."
+    },
+    {
+      "archiveFile": "files/skills/canvas-design/canvas-fonts/PoiretOne-Regular.ttf",
+      "bytes": 45244,
+      "sha256": "9cf265b139648b36b6c0afdfeb0bf27f7e66db9a16094bc40f644d8da05bc318",
+      "embeddedNameRecords": {
+        "0": "Copyright (c) 2011, Denis Masharov (denis.masharov@gmail.com)",
+        "1": "Poiret One",
+        "3": "DenisMasharov: Poiret One: 2011",
+        "5": "Version 1.001",
+        "8": "Denis Masharov",
+        "9": "Denis Masharov",
+        "11": "denis.masharov@gmail.com",
+        "13": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: http://scripts.sil.org/OFL",
+        "14": "http://scripts.sil.org/OFL"
+      },
+      "licenseDeclaredInFont": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: http://scripts.sil.org/OFL",
+      "licenseUrlDeclaredInFont": "http://scripts.sil.org/OFL",
+      "actualSource": "Pinned original archive; font metadata and official reference text are separate evidence. No font is executed or installed."
+    },
+    {
+      "archiveFile": "files/skills/canvas-design/canvas-fonts/RedHatMono-Bold.ttf",
+      "bytes": 34420,
+      "sha256": "7ef48353f4be5ddb90f000f6fad48f2b62b3e8c27d9818d8d45ff46c201065e0",
+      "embeddedNameRecords": {
+        "0": "Copyright 2024 The Red Hat Project Authors (https://github.com/RedHatOfficial/RedHatFont)",
+        "1": "Red Hat Mono",
+        "3": "1.030;MCKL;RedHatMono-Bold",
+        "5": "Version 1.030",
+        "8": "MCKL",
+        "9": "Pentagram, MCKL",
+        "11": "https://www.mckltype.com",
+        "13": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://openfontlicense.org",
+        "14": "https://openfontlicense.org"
+      },
+      "licenseDeclaredInFont": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://openfontlicense.org",
+      "licenseUrlDeclaredInFont": "https://openfontlicense.org",
+      "actualSource": "Pinned original archive; font metadata and official reference text are separate evidence. No font is executed or installed."
+    },
+    {
+      "archiveFile": "files/skills/canvas-design/canvas-fonts/RedHatMono-Regular.ttf",
+      "bytes": 34488,
+      "sha256": "452fe826871b37539f5212b20c87cf30f82f58dd2741f1c96edd1dcbdc0db6b4",
+      "embeddedNameRecords": {
+        "0": "Copyright 2024 The Red Hat Project Authors (https://github.com/RedHatOfficial/RedHatFont)",
+        "1": "Red Hat Mono",
+        "3": "1.030;MCKL;RedHatMono-Regular",
+        "5": "Version 1.030",
+        "8": "MCKL",
+        "9": "Pentagram, MCKL",
+        "11": "https://www.mckltype.com",
+        "13": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://openfontlicense.org",
+        "14": "https://openfontlicense.org"
+      },
+      "licenseDeclaredInFont": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://openfontlicense.org",
+      "licenseUrlDeclaredInFont": "https://openfontlicense.org",
+      "actualSource": "Pinned original archive; font metadata and official reference text are separate evidence. No font is executed or installed."
+    },
+    {
+      "archiveFile": "files/skills/canvas-design/canvas-fonts/Silkscreen-Regular.ttf",
+      "bytes": 31960,
+      "sha256": "49567408600809e25147e9225ac4f37f410e2df45a750696c45027531fb65f1b",
+      "embeddedNameRecords": {
+        "0": "Copyright 2001 The Silkscreen Project Authors (https://github.com/googlefonts/silkscreen)",
+        "1": "Silkscreen",
+        "3": "1.001;UNKN;Silkscreen-Regular",
+        "5": "Version 1.001; ttfautohint (v1.8.4.7-5d5b)",
+        "8": "Jason Kottke",
+        "9": "Jason Kottke",
+        "11": "https://kottke.org/",
+        "13": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL",
+        "14": "https://scripts.sil.org/OFL"
+      },
+      "licenseDeclaredInFont": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL",
+      "licenseUrlDeclaredInFont": "https://scripts.sil.org/OFL",
+      "actualSource": "Pinned original archive; font metadata and official reference text are separate evidence. No font is executed or installed."
+    },
+    {
+      "archiveFile": "files/skills/canvas-design/canvas-fonts/SmoochSans-Medium.ttf",
+      "bytes": 59704,
+      "sha256": "dd76e6e77cce82f827a8654cd906e9ce58f3aaf78adda63c4a7f655b8ecb41f0",
+      "embeddedNameRecords": {
+        "0": "Copyright 2016 The Smooch Sans Project Authors (https://github.com/googlefonts/smooch-sans)",
+        "1": "Smooch Sans Medium",
+        "3": "1.010;GOOG;SmoochSans-Medium",
+        "5": "Version 1.010",
+        "8": "Robert E. Leuschke",
+        "9": "Robert E. Leuschke",
+        "11": "www.typesetit.com",
+        "13": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL",
+        "14": "https://scripts.sil.org/OFL"
+      },
+      "licenseDeclaredInFont": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL",
+      "licenseUrlDeclaredInFont": "https://scripts.sil.org/OFL",
+      "actualSource": "Pinned original archive; font metadata and official reference text are separate evidence. No font is executed or installed."
+    },
+    {
+      "archiveFile": "files/skills/canvas-design/canvas-fonts/Tektur-Medium.ttf",
+      "bytes": 76248,
+      "sha256": "52bbe8c9b057b3d2da4eeace31a524b1ea26a1375ae34319cf6900ccc57a4c82",
+      "embeddedNameRecords": {
+        "0": "Copyright 2023 The Tektur Project Authors (https://www.github.com/hyvyys/Tektur)",
+        "1": "Tektur Medium",
+        "3": "1.005;Adam;Tektur-Medium",
+        "5": "Version 1.005;gftools[0.9.30]",
+        "8": "Adam Jagosz",
+        "9": "Adam Jagosz",
+        "11": "https://www.adamjagosz.com",
+        "13": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL",
+        "14": "https://scripts.sil.org/OFL"
+      },
+      "licenseDeclaredInFont": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL",
+      "licenseUrlDeclaredInFont": "https://scripts.sil.org/OFL",
+      "actualSource": "Pinned original archive; font metadata and official reference text are separate evidence. No font is executed or installed."
+    },
+    {
+      "archiveFile": "files/skills/canvas-design/canvas-fonts/Tektur-Regular.ttf",
+      "bytes": 75604,
+      "sha256": "162e1b36c4718c5b051b36c971ad7e50d341944f35618f480422ebbe72988f98",
+      "embeddedNameRecords": {
+        "0": "Copyright 2023 The Tektur Project Authors (https://www.github.com/hyvyys/Tektur)",
+        "1": "Tektur",
+        "3": "1.005;Adam;Tektur-Regular",
+        "5": "Version 1.005;gftools[0.9.30]",
+        "8": "Adam Jagosz",
+        "9": "Adam Jagosz",
+        "11": "https://www.adamjagosz.com",
+        "13": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL",
+        "14": "https://scripts.sil.org/OFL"
+      },
+      "licenseDeclaredInFont": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL",
+      "licenseUrlDeclaredInFont": "https://scripts.sil.org/OFL",
+      "actualSource": "Pinned original archive; font metadata and official reference text are separate evidence. No font is executed or installed."
+    },
+    {
+      "archiveFile": "files/skills/canvas-design/canvas-fonts/WorkSans-Bold.ttf",
+      "bytes": 191304,
+      "sha256": "240d125fc9f8561363dc1ea3f513501253bd70942f41468f48f0b0cafb0c82e2",
+      "embeddedNameRecords": {
+        "0": "Copyright 2019 The Work Sans Project Authors (https://github.com/weiweihuanghuang/Work-Sans)",
+        "1": "Work Sans",
+        "3": "2.012;WEI;WorkSans-Bold",
+        "5": "Version 2.012",
+        "8": "Wei Huang",
+        "9": "Wei Huang",
+        "11": "http://weiweihuanghuang.github.io/",
+        "13": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: http://scripts.sil.org/OFL",
+        "14": "http://scripts.sil.org/OFL"
+      },
+      "licenseDeclaredInFont": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: http://scripts.sil.org/OFL",
+      "licenseUrlDeclaredInFont": "http://scripts.sil.org/OFL",
+      "actualSource": "Pinned original archive; font metadata and official reference text are separate evidence. No font is executed or installed."
+    },
+    {
+      "archiveFile": "files/skills/canvas-design/canvas-fonts/WorkSans-BoldItalic.ttf",
+      "bytes": 175772,
+      "sha256": "a5b2cad813df0aaa7d16621f2e93b5117c25e9bc788bc9a3ad218e9d6348ce34",
+      "embeddedNameRecords": {
+        "0": "Copyright 2019 The Work Sans Project Authors (https://github.com/weiweihuanghuang/Work-Sans)",
+        "1": "Work Sans",
+        "3": "2.012;WEI;WorkSans-BoldItalic",
+        "5": "Version 2.012",
+        "8": "Wei Huang",
+        "9": "Wei Huang",
+        "11": "http://weiweihuanghuang.github.io/",
+        "13": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: http://scripts.sil.org/OFL",
+        "14": "http://scripts.sil.org/OFL"
+      },
+      "licenseDeclaredInFont": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: http://scripts.sil.org/OFL",
+      "licenseUrlDeclaredInFont": "http://scripts.sil.org/OFL",
+      "actualSource": "Pinned original archive; font metadata and official reference text are separate evidence. No font is executed or installed."
+    },
+    {
+      "archiveFile": "files/skills/canvas-design/canvas-fonts/WorkSans-Italic.ttf",
+      "bytes": 174280,
+      "sha256": "6b7f7002e0b0c8b261fe878658ef5551e3e59d9f6b609b04efb90dde1e2c1ada",
+      "embeddedNameRecords": {
+        "0": "Copyright 2019 The Work Sans Project Authors (https://github.com/weiweihuanghuang/Work-Sans)",
+        "1": "Work Sans",
+        "3": "2.012;WEI;WorkSans-Italic",
+        "5": "Version 2.012",
+        "8": "Wei Huang",
+        "9": "Wei Huang",
+        "11": "http://weiweihuanghuang.github.io/",
+        "13": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: http://scripts.sil.org/OFL",
+        "14": "http://scripts.sil.org/OFL"
+      },
+      "licenseDeclaredInFont": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: http://scripts.sil.org/OFL",
+      "licenseUrlDeclaredInFont": "http://scripts.sil.org/OFL",
+      "actualSource": "Pinned original archive; font metadata and official reference text are separate evidence. No font is executed or installed."
+    },
+    {
+      "archiveFile": "files/skills/canvas-design/canvas-fonts/WorkSans-Regular.ttf",
+      "bytes": 188916,
+      "sha256": "e67985a843df0d3cdee51a3d0f329eb1774a344ad9ff0c9ab923751f1577e2a4",
+      "embeddedNameRecords": {
+        "0": "Copyright 2019 The Work Sans Project Authors (https://github.com/weiweihuanghuang/Work-Sans)",
+        "1": "Work Sans",
+        "3": "2.012;WEI;WorkSans-Regular",
+        "5": "Version 2.012",
+        "8": "Wei Huang",
+        "9": "Wei Huang",
+        "11": "http://weiweihuanghuang.github.io/",
+        "13": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: http://scripts.sil.org/OFL",
+        "14": "http://scripts.sil.org/OFL"
+      },
+      "licenseDeclaredInFont": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: http://scripts.sil.org/OFL",
+      "licenseUrlDeclaredInFont": "http://scripts.sil.org/OFL",
+      "actualSource": "Pinned original archive; font metadata and official reference text are separate evidence. No font is executed or installed."
+    },
+    {
+      "archiveFile": "files/skills/canvas-design/canvas-fonts/YoungSerif-Regular.ttf",
+      "bytes": 105136,
+      "sha256": "f8dc08f77abad753a00670af70756a8ace938e5c3f0b770f4f4c2071c4bd8fc6",
+      "embeddedNameRecords": {
+        "0": "Copyright 2023 The Young Serif Project Authors (https://github.com/noirblancrouge/YoungSerif)",
+        "1": "Young Serif",
+        "3": "3.003;NONE;YoungSerif-Regular",
+        "5": "Version 3.003; ttfautohint (v1.8.4.7-5d5b);gftools[0.9.33]",
+        "8": "NBR — Bastien Sozeau",
+        "9": "Bastien Sozeau",
+        "11": "https://noirblancrouge.com",
+        "13": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL",
+        "14": "https://scripts.sil.org/OFL"
+      },
+      "licenseDeclaredInFont": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL",
+      "licenseUrlDeclaredInFont": "https://scripts.sil.org/OFL",
+      "actualSource": "Pinned original archive; font metadata and official reference text are separate evidence. No font is executed or installed."
+    }
+  ],
+  "officialFontReferenceComparisons": [
+    {
+      "file": "IBMPlexSerif-Regular.ttf",
+      "source": "https://raw.githubusercontent.com/google/fonts/5bb28733cec313b63fbd415b574b5ae35c8aa8b8/ofl/ibmplexserif/IBMPlexSerif-Regular.ttf",
+      "archiveSha256": "77cd233a2af8dc6b1022faea3bb3b01f3c75af68bcf530cb6aeb15982ff3dbb7",
+      "referenceSha256": "e882efa9c41949a528ac2369079ec5ef050c1c996bbd0bacce3c3326d44cf80d",
+      "bytesMatch": false
+    },
+    {
+      "file": "IBMPlexSerif-Italic.ttf",
+      "source": "https://raw.githubusercontent.com/google/fonts/5bb28733cec313b63fbd415b574b5ae35c8aa8b8/ofl/ibmplexserif/IBMPlexSerif-Italic.ttf",
+      "archiveSha256": "b11f1048745e715a55c9d837b3f10226ca3d78867b7db7251ddad8f98dcf0f38",
+      "referenceSha256": "4b75b38be4673527231f49c48818d090c913d5042dd5c747b525bf6185d29ecb",
+      "bytesMatch": false
+    },
+    {
+      "file": "IBMPlexSerif-Bold.ttf",
+      "source": "https://raw.githubusercontent.com/google/fonts/5bb28733cec313b63fbd415b574b5ae35c8aa8b8/ofl/ibmplexserif/IBMPlexSerif-Bold.ttf",
+      "archiveSha256": "b8d294e9b5c5a0940f167c3ced0f7ef2e3f57082ca3ff096ef30e86e26c1c159",
+      "referenceSha256": "534c02c295999dd86e770457ece1d43db0de9256dd98bf741426f63ae904209e",
+      "bytesMatch": false
+    },
+    {
+      "file": "IBMPlexSerif-BoldItalic.ttf",
+      "source": "https://raw.githubusercontent.com/google/fonts/5bb28733cec313b63fbd415b574b5ae35c8aa8b8/ofl/ibmplexserif/IBMPlexSerif-BoldItalic.ttf",
+      "archiveSha256": "da64b75f4284f53e7b5c71fa190a35b8bf3494fe19f1804c81c3a53340bca570",
+      "referenceSha256": "2a32b76ac19c1942bf5942dbbd2a1566e5f1ae9833e421ebcf36d3522715e153",
+      "bytesMatch": false
+    },
+    {
+      "file": "InstrumentSerif-Regular.ttf",
+      "source": "https://raw.githubusercontent.com/google/fonts/5bb28733cec313b63fbd415b574b5ae35c8aa8b8/ofl/instrumentserif/InstrumentSerif-Regular.ttf",
+      "archiveSha256": "56ac3be03ac3ba283196b3e77850ab2ffcf56cfb6fd3212c5620109a972f8c99",
+      "referenceSha256": "498efd461f6ddfcb7a111bf9a565709d2085d48201d501ead960d93e84ffbb88",
+      "bytesMatch": false
+    },
+    {
+      "file": "InstrumentSerif-Italic.ttf",
+      "source": "https://raw.githubusercontent.com/google/fonts/5bb28733cec313b63fbd415b574b5ae35c8aa8b8/ofl/instrumentserif/InstrumentSerif-Italic.ttf",
+      "archiveSha256": "9c86e4d5a47b50224a2463a9eca8535835257c8e85c470c2c6b454b1af6f046e",
+      "referenceSha256": "08939b8bdf534afec24ae0ef5e03f948940cd9a8fe08e7fecbad040e62327385",
+      "bytesMatch": false
+    }
+  ],
+  "otherLicenseEvidence": [
+    {
+      "file": "licenses/getrandom-0.4.3/LICENSE-APACHE",
+      "bytes": 10849,
+      "sha256": "aaff376532ea30a0cd5330b9502ad4a4c8bf769c539c87ffe78819d188a18ebf"
+    },
+    {
+      "file": "licenses/getrandom-0.4.3/LICENSE-MIT",
+      "bytes": 1130,
+      "sha256": "523a42c25d245dde9c015f882cec7f4555aad883382a6cf19b4b7d9b2cd5419b"
+    },
+    {
+      "file": "licenses/getrandom-0.4.3/source.json",
+      "bytes": 475,
+      "sha256": "229f52bc8540723a7bbeafbc8d50c0dd2d6c9e51d7dc7089b8273c906895903e"
+    },
+    {
+      "file": "licenses/opendesign-styles/cloudflare-kumo-LICENSE.txt",
+      "bytes": 1103,
+      "sha256": "df3e141c129d1804bea95fe087b157b156241b3bb1a4664808630aa85f2cd8fc"
+    },
+    {
+      "file": "licenses/opendesign-styles/source-lock.json",
+      "bytes": 1013,
+      "sha256": "0930a02f085de66bf0209b6fd1bb374611a2abcc0e3343340596d046c0b08d55"
+    },
+    {
+      "file": "licenses/opendesign-styles/tom-modern-LICENSE.txt",
+      "bytes": 1068,
+      "sha256": "603513fe37c4744395a6d06886d5cf4b7bbe46dc12952d2c423c9c38b0b7fdd5"
+    }
+  ],
+  "sourceLimitations": [
+    {
+      "component": "pinned dom-to-pptx 2.0.1 bundle",
+      "status": "exact bytes and parent MIT source verified; complete bundle-to-lock relationship not established",
+      "details": [
+        "Publisher-tag lock and licence data are retained, but exact bundle-to-lock provenance, embedded nested components and WOFF2/Brotli source revisions are not fully established.",
+        "No package code or lifecycle script was executed."
+      ]
+    },
+    {
+      "component": "fonteditor-core@2.6.3 embedded WOFF2/Brotli",
+      "status": "package binary identity and upstream license texts recorded; exact native source/build revisions not identified"
+    },
+    {
+      "component": "6 canvas fonts (IBM Plex Serif and Instrument Serif)",
+      "status": "actual source archive, embedded copyright/version/OFL declaration and official license reference recorded; exact Google Fonts reference bytes differ",
+      "files": [
+        "IBMPlexSerif-Regular.ttf",
+        "IBMPlexSerif-Italic.ttf",
+        "IBMPlexSerif-Bold.ttf",
+        "IBMPlexSerif-BoldItalic.ttf",
+        "InstrumentSerif-Regular.ttf",
+        "InstrumentSerif-Italic.ttf"
+      ]
+    }
+  ],
+  "interpretation": "Hash checks and license/source declarations only. This is not a legal opinion, complete transitive-source proof, functional acceptance or authorization to a remote service."
+}

@@ -1,0 +1,39 @@
+{
+  "scope": "actual native insert.svgPicture/picture.replaceSvgContent integration output; assigned test identities, not a real project graph",
+  "producerMetadata": {
+    "originAfter": {
+      "assetId": "asset-edited",
+      "instanceId": "6c5c654474d79c7936fe3c4b8079bda1",
+      "projectId": "project-fixture",
+      "schema": 1
+    },
+    "originBefore": {
+      "assetId": "asset-original",
+      "instanceId": "6c5c654474d79c7936fe3c4b8079bda1",
+      "projectId": "project-fixture",
+      "schema": 1
+    },
+    "otherId": 263,
+    "producer": "actual insert.svgPicture/picture.replaceSvgContent integration test",
+    "targetId": 261
+  },
+  "license": "MIT OR Apache-2.0",
+  "files": {
+    "before.deckcraft": {
+      "sha256": "b0aa4d199df7aa7ff506da55bca0bfc6ecf9e0eabf28884fee2b9e93acd99c38",
+      "bytes": 11173
+    },
+    "after.deckcraft": {
+      "sha256": "8b45a16e253352f6af302d5d4c7e1bf9b34afc1b5d94cbe8e25f1719c03f9c3b",
+      "bytes": 17232
+    },
+    "after.pptx": {
+      "sha256": "ca4ee48872e994f88e27dcda01c06523afc56e830ef75066d107892d3f1e7e9e",
+      "bytes": 36159
+    },
+    "metadata.json": {
+      "sha256": "0130c4035363ffe8414d3cfd267f1e3de5adef8339cced6b12476a4131d9ac10",
+      "bytes": 449
+    }
+  }
+}

@@ -1,0 +1,377 @@
+{
+  "schema": 1,
+  "fullScopeComplete": false,
+  "goalStatus": "active",
+  "scope": "Actual native Photo to Vector/Deck PNG in-place application; explicit seven-use mixed-engine update, independent eighth, local white correction, real source-aspect change and committed-response-loss recovery",
+  "verified": {
+    "vectorNativeTests": 2,
+    "ignored": 0,
+    "vectorActualUiChecks": 3,
+    "mixedActualUiChecks": 5,
+    "focusedNodePassed": 49,
+    "focusedNodeFailed": 0,
+    "packageCheck": {
+      "javascriptFiles": 70,
+      "syntax": "passed",
+      "nativeBinaryHashes": 4,
+      "resourceHashes": 36
+    }
+  },
+  "runtime": {
+    "vectorcraft-host": "0.19.0+designcraft.host8",
+    "photocraft-host": "0.18.0+designcraft.host3",
+    "deckcraft-host": "0.13.1+designcraft.host3"
+  },
+  "userWindowLoadedVersionVerified": false,
+  "findings": [
+    "Actual same Vector App/image2 survives Photo edit inside native rotated clipping group with opacity/Multiply and all other source fields exact",
+    "Real Vector PNG renderer changes; SVG retains exact new PNG and editable clipping path; native source fresh reopen exact",
+    "Explicit complete member-list authorization prevents silently changing update scope",
+    "Three Vector images plus four PPT pictures update; independent eighth and original layered source stay unchanged",
+    "Native source PNG changes320x240 to400x240; original native frames/affine corners/crops/rotation/appearance preserved",
+    "White local picture correction preserved, real exported pixel[255,255,255,255]on dark background; shared raw PNG remains original black L mark",
+    "First native source committed then response lost; resume skips it with exact same source HEAD and retains physical later hand move in remaining design",
+    "Own exact linked revision reload restores actual prior Deck slide/object selection; both native files reopen exact and real PPTX ZIP intact"
+  ],
+  "fixedProblems": [
+    "Native Vector ordinary replace recreates nodes: added genuine image.replaceContent with original object/frame/appearance retention",
+    "Native test optional-font manifest absent Shippori: image-only tests use documented no-external-font mode; Web keeps real strictfour-font gate",
+    "Worker source snapshot format now follows actual native engine",
+    "Linked return view now restores basic slide/object selection only for exact own committed source revision",
+    "Harness optionalfalse pending field and group-ready wait corrected; failure logs retained separately"
+  ],
+  "commands": [
+    "cargo test --locked -p vectorcraft-engine --lib cmd::place::image_content::tests",
+    "cargo check --locked --target wasm32-unknown-unknown -p vectorcraft-web",
+    "pwsh -NoProfile -File work/build_vector.ps1",
+    "python work/adopt_vector_build.py --host-build 8",
+    "python work/test_vector_instance_apply.py",
+    "python work/test_mixed_linked_seven.py",
+    "node --test tests/instance-fork.test.mjs tests/linked-update.test.mjs tests/project-graph.test.mjs tests/native-source-store.test.mjs tests/native-vector-header.test.mjs tests/native-deck-header.test.mjs tests/vector-material-identity.test.mjs tests/vector-apply-storage.test.mjs tests/native-contract.test.mjs tests/native-protocol.test.mjs tests/editor-history.test.mjs",
+    "npm run check"
+  ],
+  "remaining": [
+    "Native clipboard copies still need explicit source-marker inheritance and real copy/paste acceptance",
+    "Manual native undo needs source-relation reconciliation; not accepted yet",
+    "SVG in-place/group update and SVG to native PPT objects not complete",
+    "Return text/cell/master/camera context and prior live undo history across linked-source reload not fully verified",
+    "Original full50 specialized tools/formats/OD/HTML/brand/image-service/inpaint/variants/projectpack/migration/journey/final-release work remains",
+    "External PowerPoint/other-app rendering not run; no user desktop control or restart"
+  ],
+  "sourceFiles": [
+    {
+      "file": "host/native-vector-header.js",
+      "sha256": "27daa648e1088e9e7997f6bc457483df1f5d12d3f42caad721eec76af9aded48"
+    },
+    {
+      "file": "host/project-graph.js",
+      "sha256": "eb414baf01d82167f7ffa9f091cc375e82f45e2794e71d39ae482a17fbd657fc"
+    },
+    {
+      "file": "host/linked-updates.js",
+      "sha256": "f7522dc1808474eefde603aa3ff9e602899e53ad0e1239120ede3b51563d8352"
+    },
+    {
+      "file": "host/native-source-store.js",
+      "sha256": "1cacabcfe1a9fb0a95ad9d4d0a13fd3f31ca0051b23f71e87f4fe2d682d1b14a"
+    },
+    {
+      "file": "host/editor-session.js",
+      "sha256": "999fcb4175e305c4b7dd41de315d4fdd8f852df1da62d2573d1a59eca32a6ce7"
+    },
+    {
+      "file": "host/editor-routes.js",
+      "sha256": "9732494290832bd783820125612b3e9648f128a169dfb1f0c630aaee9194785b"
+    },
+    {
+      "file": "host/editor-tools.js",
+      "sha256": "fc5285cafc32b341245a054cc8c8726cbe9fef498b0e7a5f2fcb1ca6247101b4"
+    },
+    {
+      "file": "client/native-controller.js",
+      "sha256": "dad3ce048a3300c8d4fd677a20a64035b8386381373b6c1d04d34bea367233a2"
+    },
+    {
+      "file": "client/native-workspace.js",
+      "sha256": "4d4ab426b52e81049ae325994f2323788938a69c3be48bd110130a209cc34a64"
+    },
+    {
+      "file": "web-runtime-lock.json",
+      "sha256": "81cba296a9ce7963e28a33810abc505cc0ed29a85774e8a94ac0794508060fdc"
+    }
+  ],
+  "primaryReview": {
+    "everyCopiedFileRehashed": true,
+    "nativeSourceSvgPngPptxInspected": true,
+    "actualSourceReceiptsAndSevenMemberScopeVerified": true,
+    "full50NotComplete": true
+  },
+  "evidenceDirectory": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\outputs\\DesignCraft_三编辑器七处关联证据_20261105",
+  "evidence": [
+    {
+      "file": "vector-content-native.log",
+      "bytes": 1906,
+      "sha256": "9e742b193484f919d92fcd18aad74e1bea7fac32b06f9054191070d4e1c94011"
+    },
+    {
+      "file": "vector-content-native-result.json",
+      "bytes": 951,
+      "sha256": "97359627c518002425e221486bd3616988f78b3242547ddb287f09419daa3fed"
+    },
+    {
+      "file": "vector-content-wasm-check.log",
+      "bytes": 14035,
+      "sha256": "fb5c7f8b776d0b4b110939158fbd7833c0e13ee15dac23a42594e0f64ae46795"
+    },
+    {
+      "file": "vector-build-result.json",
+      "bytes": 4128,
+      "sha256": "c796eb9ac7a4be578d737c3238ce78e82958b1b4235514b36eede0dd99ee59a7"
+    },
+    {
+      "file": "vector-build.log",
+      "bytes": 4466,
+      "sha256": "771ad574f26ea70ac93006b437fe7d796529df2827e0add5b0a1839c97488967"
+    },
+    {
+      "file": "vector-host-build.json",
+      "bytes": 4320,
+      "sha256": "4177c57c723a4d8d92ecedda9faf53e9a96a3f73929dc0680bf1ebc41c6a4751"
+    },
+    {
+      "file": "vector-instance-apply-browser.json",
+      "bytes": 2404,
+      "sha256": "3213a610a699231a5fa1eae64b5b2b6df723d8b1a0b8a4021eb137d0ebec626a"
+    },
+    {
+      "file": "vector-instance-apply-browser.log",
+      "bytes": 874,
+      "sha256": "8f4faed5af6b473665cd369382733d2d4af5c2357cd4e6dbc6fa6e99650cff01"
+    },
+    {
+      "file": "vector-instance-apply-ui.png",
+      "bytes": 167538,
+      "sha256": "6daa08b42103610514f7bcc374a35e68c2b11451e8c396c25b33536631819756"
+    },
+    {
+      "file": "vector-instance-applied.vectorcraft",
+      "bytes": 36247,
+      "sha256": "6a20c498913a72d5275e857139ac540419dbeea8bcd8f1e21c89b98cc74687c9"
+    },
+    {
+      "file": "vector-instance-applied.svg",
+      "bytes": 11612,
+      "sha256": "0477a6050cc4e483d835ef56d019f744eca87150424002ac354b5574c46e9d38"
+    },
+    {
+      "file": "vector-instance-applied.png",
+      "bytes": 8444,
+      "sha256": "f969aac355c537422f5e75c1f92c6c9a25719e17d673218ef22c7083df683b82"
+    },
+    {
+      "file": "mixed-seven-browser.json",
+      "bytes": 5879,
+      "sha256": "3ba897ab4e910d301c4befc40fe6782a602293155552c0c34359ef04708021ea"
+    },
+    {
+      "file": "mixed-seven-browser.log",
+      "bytes": 1734,
+      "sha256": "456380e708c5d5b0352ae39e63de8a483b5e4d674159d9cd7a7705bad7e2afc2"
+    },
+    {
+      "file": "mixed-seven-ui.png",
+      "bytes": 134060,
+      "sha256": "728eaf14d1b23575e169e22998aac4f899439e8a6121c314517cc9389215895c"
+    },
+    {
+      "file": "mixed-seven-vector.vectorcraft",
+      "bytes": 33142,
+      "sha256": "b1d77d680ce92bc607c57de778cba6fda2142aa87c58c399dc53c677786eb8a5"
+    },
+    {
+      "file": "mixed-seven-deck.deckcraft",
+      "bytes": 12449,
+      "sha256": "3f7ce43b256430751e8f903131c723fedf9aa11adba3d088cb5cb0efb306acbb"
+    },
+    {
+      "file": "mixed-seven-deck.pptx",
+      "bytes": 27277,
+      "sha256": "208ec309a182970912cea5135407fd5ee4ff94a0649bebefd856af504c1a19e9"
+    },
+    {
+      "file": "mixed-seven-white-render.png",
+      "bytes": 19157,
+      "sha256": "9bb0bc972b620f48f0136f84aaedf92b38f895d4e764be9deb35d966e4e83d98"
+    },
+    {
+      "file": "mixed-seven-new-source.png",
+      "bytes": 3997,
+      "sha256": "7bb6ad583c4e1cb4349995a271974a9e1820e049df3a50823bcce05c6cf74899"
+    },
+    {
+      "file": "mixed-stage-final-node.tap",
+      "bytes": 5336,
+      "sha256": "bb61473c770f87f7a7a4fadf3c14bd3e8a78e2ab713e5cc8d7ce7acf637a7a8a"
+    },
+    {
+      "file": "mixed-stage-package-check.log",
+      "bytes": 200,
+      "sha256": "b6954c160db1c8eef2eddffa1f4b3f9e2df5eece6118e104f1f854e61cd97e56"
+    },
+    {
+      "file": "linked-exact-member-scope.tap",
+      "bytes": 1058,
+      "sha256": "ffc0e9151b34584025cd737e1367abcb3724f5cd4c8d9bc51119ff6661a8bab5"
+    },
+    {
+      "file": "linked-return-selection-core.tap",
+      "bytes": 1604,
+      "sha256": "ed5a07b61cdac5d04fb8450e66ab94be0f9e4a02759653c2d3e7aec2215f218a"
+    },
+    {
+      "file": "vector-content-proof.tap",
+      "bytes": 699,
+      "sha256": "3410e7e46f55a15419b55eef23b60a25bff2553e8dc607a3b12710df307ed2a8"
+    },
+    {
+      "file": "vector-png-identity.tap",
+      "bytes": 1376,
+      "sha256": "231b3dcaaee37fb6b3eeff3890d2033d1af5feb1c5e52f330286965d55b38f88"
+    },
+    {
+      "file": "vector-controller-adapter-core.tap",
+      "bytes": 2079,
+      "sha256": "ddbc760a263c44a1b83b3eb2747be700e222d1bc4593b8f51d359f7eb2b31cb6"
+    },
+    {
+      "file": "native-vector8-source/crates/text/web-fonts.txt",
+      "bytes": 1615,
+      "sha256": "8e2739ac621b536b82fb388cf0ee3a085dbb3ea786eb2be0bcca6528dc32642a"
+    },
+    {
+      "file": "native-vector8-source/crates/ui-egui/src/control.rs",
+      "bytes": 32957,
+      "sha256": "db1bd5efb18a427ca552dbe8632a8a1e922dd5bc88ad0c07e4253d55f91f9510"
+    },
+    {
+      "file": "native-vector8-source/crates/ui-egui/src/control/hosted.rs",
+      "bytes": 11206,
+      "sha256": "ce300da308c38b2dd86e6e34b811569124ecb066704655ddd1bbaa6c6d9c5b28"
+    },
+    {
+      "file": "native-vector8-source/crates/ui-egui/src/control/tests.rs",
+      "bytes": 35745,
+      "sha256": "c8449f933f1c7616cbd1a0245e83cb631172e56693cbae4d959a47135c6d1684"
+    },
+    {
+      "file": "native-vector8-source/crates/ui-egui/src/lib.rs",
+      "bytes": 15652,
+      "sha256": "4ec91ae2030529195ed011dbecc276af33620d60c3c0cd0558abb93914ef7b55"
+    },
+    {
+      "file": "native-vector8-source/crates/ui-egui/src/app.rs",
+      "bytes": 25935,
+      "sha256": "69f1a3af708cd7d8cab3f6eb40bf4e9ad282e7d3dd2640cbe114cd22b7002c92"
+    },
+    {
+      "file": "native-vector8-source/crates/ui-egui/src/chrome.rs",
+      "bytes": 19216,
+      "sha256": "ee38406fc802849f6c82397c261a91bd571b4b7ce2a7623dec4d30110faa8d18"
+    },
+    {
+      "file": "native-vector8-source/crates/ui-egui/src/host_files.rs",
+      "bytes": 2979,
+      "sha256": "c84c34cfd0624c18aa952bc126ea528bf415656c598f092c2d6ae06bd9ca3cfb"
+    },
+    {
+      "file": "native-vector8-source/crates/ui-egui/src/app/commands.rs",
+      "bytes": 9681,
+      "sha256": "11b758749c6d3117926086e3c2824f187c2e791887881f3cc62790d7244fbe55"
+    },
+    {
+      "file": "native-vector8-source/crates/ui-egui/src/shortcuts.rs",
+      "bytes": 45981,
+      "sha256": "218d58667c5e18aad46bcf688e37044608c0c45a6d9575a542b3d8ce008c5deb"
+    },
+    {
+      "file": "native-vector8-source/crates/ui-egui/src/shortcuts/tests.rs",
+      "bytes": 112187,
+      "sha256": "28772ee932b46cc9b372a32e84b9425ca8fb09a8bcf1247b6e69b92723e1ad98"
+    },
+    {
+      "file": "native-vector8-source/apps/vectorcraft-web/src/api.rs",
+      "bytes": 8644,
+      "sha256": "57811c50f4eba1f8de6773171929a13be10a7626e5226e82384f2515182a7885"
+    },
+    {
+      "file": "native-vector8-source/Cargo.toml",
+      "bytes": 9762,
+      "sha256": "6699f02c5454559034b6f7b3900b2851ebb60245cdfaeaff99e8c450087bac0c"
+    },
+    {
+      "file": "native-vector8-source/Cargo.lock",
+      "bytes": 191765,
+      "sha256": "470b188ffd5d5abd32fada5d49ffc2ce4122e7ae77fd93426d0bdf1fb8cbcd10"
+    },
+    {
+      "file": "native-vector8-source/crates/engine/Cargo.toml",
+      "bytes": 2342,
+      "sha256": "4dfc01b0d32397915042712b2e02df5a8266a074104421c94a951c716a81b727"
+    },
+    {
+      "file": "native-vector8-source/crates/engine/src/cmd/place.rs",
+      "bytes": 45739,
+      "sha256": "e59428894360c4132c9bd0e43c07a0f813fba4549dc6e19594b749caf4ee7c55"
+    },
+    {
+      "file": "native-vector8-source/crates/engine/src/cmd/place/image_content.rs",
+      "bytes": 3773,
+      "sha256": "c138672a29809cf445b3e265fa5cc3773349ee2e14b21aa30de16045f5c7780f"
+    },
+    {
+      "file": "native-vector8-source/crates/engine/src/cmd/place/image_content/tests.rs",
+      "bytes": 5860,
+      "sha256": "7af66d90207b9c2661fe6f83b9d09d665886fe6614e7ce1d6c27c1122fba0ef9"
+    },
+    {
+      "file": "native-vector8-source/apps/vectorcraft-web/Trunk.toml",
+      "bytes": 539,
+      "sha256": "4d9eb5cac922ed609afb6b27859919b79076de7d15687dbd899d11c4ebdcf73b"
+    },
+    {
+      "file": "native-vector8-source/apps/vectorcraft-web/index.html",
+      "bytes": 2715,
+      "sha256": "91b8e73c505499c1fd909019163576dace67159580b1c797cc41b20aad1a5141"
+    },
+    {
+      "file": "native-vector8-source/crates/text/build.rs",
+      "bytes": 7476,
+      "sha256": "85d0fdce0d239f268e8662168dfd6880c5b98e06712af65affc277cd38d5c63b"
+    },
+    {
+      "file": "native-vector8-source/crates/text/build/web_fonts.rs",
+      "bytes": 4724,
+      "sha256": "59197fff8c7b185c3387515fd87bb06f66232f8cebab9be4cb0c9bb9684d8263"
+    },
+    {
+      "file": "native-vector8-source/xtask/src/web_fonts.rs",
+      "bytes": 7406,
+      "sha256": "89af53796b61ced407c16416d00dd49dd8a08e464f3129d0d6cbd557decb6a5f"
+    },
+    {
+      "file": "native-vector8-source/LICENSE-MIT",
+      "bytes": 1103,
+      "sha256": "8b6025dc4b707e0fb08b9c2054096f1be3ae61529399aa2c348dec676562dc71"
+    },
+    {
+      "file": "native-vector8-source/LICENSE-APACHE",
+      "bytes": 10174,
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+    },
+    {
+      "file": "native-vector8-source/NOTICE",
+      "bytes": 8174,
+      "sha256": "ffb54183b2b44903f64736cdc9b50abb834ee6dac7059d2c9631692dd13c754b"
+    }
+  ]
+}

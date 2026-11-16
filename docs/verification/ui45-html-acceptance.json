@@ -1,0 +1,34 @@
+{
+  "status": "passed",
+  "scope": "owned no-open DSH / headless Chromium; actual source, CSS/JS/image isolation, SVG/raster conversion, native text edit and PPTX reopen; no model",
+  "limitations": [
+    "does not establish fidelity of arbitrary HTML, every browser, every font, or the current user DSH process",
+    "third-party converter dependency/license audit remains separate"
+  ],
+  "files": [
+    {
+      "file": "ui45-html-preview.json",
+      "sha256": "187522c7ff0f0132e99961245eb8cf685cfe0b793fe937226ce6fb6d2be09277"
+    },
+    {
+      "file": "ui45-html-raster-conversion.json",
+      "sha256": "703e40aefd909a792e90c1dc96fa802ba0666d4b178d2c95d8ca0d0589859c28"
+    },
+    {
+      "file": "ui45-html-font.json",
+      "sha256": "d437baef1554668e6ccdd49ad09b1d4e57a39a421915edcc7841ad9bc5447fb6"
+    },
+    {
+      "file": "ui45-html-font-missing.json",
+      "sha256": "a8862614fe0d5f6534fe7ef251bfa2c992a50230edb23fe5533dd9693f7d5705"
+    },
+    {
+      "file": "ui45-html-raster-report.tap",
+      "sha256": "6378af577dec1d74d6c7f4127403ccdce5b340019f28dd846bdc6e3d9baec446"
+    },
+    {
+      "file": "ui45-html-source.tap",
+      "sha256": "f64f0af459d6d182f00619b85ebeb20e71a830db74658fa90ed22a1db9d8454d"
+    }
+  ]
+}

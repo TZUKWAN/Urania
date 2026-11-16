@@ -1,0 +1,68 @@
+{
+  "status": "passed_scoped",
+  "at": "2026-11-08T09:59:50.752257+00:00",
+  "scope": "Owned DSH: three native work thumbnails/navigation and Photo-source return to a Deck parent; previous Vector-parent recovery retained.",
+  "checks": [
+    "project overview displayed decoded derived thumbnails for Photo, Deck and Vector sources",
+    "physical overview selection opened the actual Photo, Deck and Vector sources",
+    "return retained exact Deck source, native App, selected object and zoom",
+    "native keyboard Undo after return restored the manual move made before entering Photo"
+  ],
+  "sources": [
+    {
+      "engine": "photocraft",
+      "title": "图片总览样本",
+      "id": "work-f185ce2a-b758-49fe-ac21-eb6a936a41f6",
+      "matchingPixels": 76800
+    },
+    {
+      "engine": "deckcraft",
+      "title": "演示总览样本",
+      "id": "work-8a795681-88ee-46f6-8ce5-d0fba070e646",
+      "matchingPixels": 21894
+    },
+    {
+      "engine": "vectorcraft",
+      "title": "矢量总览样本",
+      "id": "work-0ad517f5-9599-4ab9-a37f-1c73e03ad2b2",
+      "matchingPixels": 42075
+    }
+  ],
+  "deckParent": {
+    "sameRealm": true,
+    "zoom": 1.25,
+    "selection": {
+      "cells": null,
+      "shapes": [
+        261
+      ],
+      "slide": 0,
+      "slides": [],
+      "target": {
+        "kind": "slides"
+      },
+      "text": null
+    },
+    "beforeX": 360.0,
+    "movedX": 366.0,
+    "undoX": 360.0
+  },
+  "screenshot": {
+    "file": "verification/ui45-three-engine-overview.png",
+    "sha256": "3a02c3433d96eb6dc2e936b52a4c9dacb078ba33fbcc64a9b553678cf08c0b49"
+  },
+  "rawEvidence": [
+    {
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-three-engine-overview.json",
+      "sha256": "4f255131691608e9f25aad06bb9d072db782220c1ae8dc0fe19fa3b656ab95fe"
+    },
+    {
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-deck-parent-navigation.json",
+      "sha256": "f912634c32fff969642fef40101217b753b9294355ac83653339bc54c8c2b778"
+    }
+  ],
+  "limits": [
+    "The source-return tests cover a Vector parent and a Deck parent entering an actual bound source; a normal switch between independent works may reopen the other App.",
+    "Crash recovery may reopen a fresh App and explicitly disclose that in-memory history is lost; it does not promise recovery of input never checkpointed."
+  ]
+}

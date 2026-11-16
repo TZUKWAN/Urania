@@ -1,0 +1,457 @@
+{
+  "name": "colorjs.io",
+  "version": "0.5.2",
+  "license": "MIT",
+  "repository": {
+    "url": "git+https://github.com/LeaVerou/color.js.git",
+    "type": "git"
+  },
+  "metadataSource": "https://registry.npmjs.org/colorjs.io/0.5.2",
+  "tarball": "https://registry.npmjs.org/colorjs.io/-/colorjs.io-0.5.2.tgz",
+  "integrity": "sha512-twmVoizEW7ylZSN32OgKdXRmo1qg+wT5/6C3xu5b9QsWzSFAhHLn2xd8ro0diCsKfCj1RdaTP/nrcW+vAoQPIw==",
+  "tarballSha256": "49f3ea5c4efd4648e8869d2c9434c495cbf41951323470e329c1161c4dc9a204",
+  "use": "Local CSS color parsing, OKLCH conversion and APCA 0.0.98G; no network/service at runtime.",
+  "lifecycleScriptsExecuted": false,
+  "files": [
+    {
+      "file": "LICENSE",
+      "bytes": 1080,
+      "sha256": "feee8a4ec1649b385f3ec9ac73174501cbfc9d5a75171a056d94cb452d3f3ec3"
+    },
+    {
+      "file": "src/spaces/a98rgb-linear.js",
+      "bytes": 1050,
+      "sha256": "98edb0413eb2be3f6495e422d2ef12f394c7df9dd39cc878d753e266cc1eae57"
+    },
+    {
+      "file": "src/spaces/a98rgb.js",
+      "bytes": 388,
+      "sha256": "e769e285131539d340bb49a805b81e2b73432f90c4ac3ca6bd06a86dcbe45847"
+    },
+    {
+      "file": "src/spaces/acescc.js",
+      "bytes": 2143,
+      "sha256": "941fc85940cef9f4424a7897a732837c38c9e2657288c5cf5b2b740f97435963"
+    },
+    {
+      "file": "src/spaces/acescg.js",
+      "bytes": 1517,
+      "sha256": "59ff3712e58de43f91d39f2b960295e0b96851d8949226a2ff1ae13d83e4ac2c"
+    },
+    {
+      "file": "src/adapt.js",
+      "bytes": 1702,
+      "sha256": "aac3fb194245feca4dc7c39ad153572ca2db7b5ca94eaf788e7c5a0f79f71772"
+    },
+    {
+      "file": "src/angles.js",
+      "bytes": 679,
+      "sha256": "77606e9abfa09fbe6e40ef8786b57c4a0c1016bb4b615f4ea0b00514512b1d61"
+    },
+    {
+      "file": "src/contrast/APCA.js",
+      "bytes": 2492,
+      "sha256": "789624634afffdafc7afd2a2870f9066af9ca2f7b85e9022a10107c6341432e0"
+    },
+    {
+      "file": "src/spaces/cam16.js",
+      "bytes": 8731,
+      "sha256": "98f2f1d7d6c0c0b601c9a073817cd29d18eb778cf80a45a6c484ef8a9d7cf601"
+    },
+    {
+      "file": "src/CATs.js",
+      "bytes": 4111,
+      "sha256": "ef8c9dd7a8b7250226d0d3f1529d4aadf5c71a9c1e5ce332b183636b9ca0b024"
+    },
+    {
+      "file": "src/chromaticity.js",
+      "bytes": 777,
+      "sha256": "3cc214fc6706f97f1a1c9c720a01c92b644c84b28eb3922867a104e281e50973"
+    },
+    {
+      "file": "src/clone.js",
+      "bytes": 132,
+      "sha256": "10a6bc7403ceb04f4fbeb26fc433afe55dd2b47a30b35a957735d991ad3c1684"
+    },
+    {
+      "file": "src/color.js",
+      "bytes": 3851,
+      "sha256": "1a6d7dd8724b907ae44a4e8230597e329033ea703f3803b7d6ca2e33b410ae59"
+    },
+    {
+      "file": "src/contrast.js",
+      "bytes": 870,
+      "sha256": "de7ab2cb4858002f7be55f35928400e67410106becf958f39b794e4715570d3e"
+    },
+    {
+      "file": "src/defaults.js",
+      "bytes": 311,
+      "sha256": "4026081e799051c1a58951c6c1e4be73f50acc0aa2144bd7cf62f293219c6996"
+    },
+    {
+      "file": "src/deltaE.js",
+      "bytes": 465,
+      "sha256": "70a11a91b9a424e4c55db78ad4010cbe67f9ac912cdac01eef5c4b36cc9c65bd"
+    },
+    {
+      "file": "src/deltaE/deltaE2000.js",
+      "bytes": 4847,
+      "sha256": "6bb979cf7d3164663516ff30bd224c42199a5326d914d35c8b05881a9b409d77"
+    },
+    {
+      "file": "src/deltaE/deltaE76.js",
+      "bytes": 229,
+      "sha256": "e30721c56e28032203f97d73d2d4e513e03a768dd05d0da386ffb438b8737c05"
+    },
+    {
+      "file": "src/deltaE/deltaECMC.js",
+      "bytes": 3293,
+      "sha256": "dbb97e2d4a18937af2bef7071a52e3ffe86032c646d96b6a9c0c9bb43debfc57"
+    },
+    {
+      "file": "src/deltaE/deltaEHCT.js",
+      "bytes": 1729,
+      "sha256": "aba92bd198e5b0b9de86cf67589c6445b18bc65d7ecc30bbd42ccb7ca4ff0596"
+    },
+    {
+      "file": "src/deltaE/deltaEITP.js",
+      "bytes": 720,
+      "sha256": "a5b4997d0e2950b4f34d89a28e217a9c843834428c7a51e1c2c6d793ab7889d4"
+    },
+    {
+      "file": "src/deltaE/deltaEJz.js",
+      "bytes": 1131,
+      "sha256": "c6a17cf767f50ebec8c856fc27933eb8b1f54168115fb8f5f33b898edb838444"
+    },
+    {
+      "file": "src/deltaE/deltaEOK.js",
+      "bytes": 575,
+      "sha256": "b9b83a806f22ce68a47a2be8edc8a7c723f44d7deec91eb1cf5ecfb066d2dfcd"
+    },
+    {
+      "file": "src/contrast/deltaPhi.js",
+      "bytes": 831,
+      "sha256": "db3bb152fd7fc8be73e54f64f3e36020128ad187fbeafed8deb943b28d41ab5d"
+    },
+    {
+      "file": "src/display.js",
+      "bytes": 2875,
+      "sha256": "9ab6ccac63d7671138c59a3d66e6c525cce5763ee9452006c2da07fac21b4320"
+    },
+    {
+      "file": "src/distance.js",
+      "bytes": 502,
+      "sha256": "6a2b00395cc44893d1a4f0e889241823227b8766b67bbd96b5012a63713e836e"
+    },
+    {
+      "file": "src/equals.js",
+      "bytes": 293,
+      "sha256": "953dec61d148dabfeab7f1983791f15ab678dcb4f681c782bea5a04b9e2590bc"
+    },
+    {
+      "file": "src/get.js",
+      "bytes": 308,
+      "sha256": "2b75b922ba354525cc5c7946d3a95a3719295abae1100b772d76dea8fa507db1"
+    },
+    {
+      "file": "src/getAll.js",
+      "bytes": 595,
+      "sha256": "e75aae3016b246207237eff30d0eadab91993210a4521dd7a896522d45586434"
+    },
+    {
+      "file": "src/getColor.js",
+      "bytes": 851,
+      "sha256": "1ad790b1201d26febc748378025b93cbf946e3293dee87b43bdfdf669216eabe"
+    },
+    {
+      "file": "src/spaces/hct.js",
+      "bytes": 4315,
+      "sha256": "0204e13c17ffbeb2025d1d40a98ccc8e6e186a7b1d8e5b02d5ab2abb9444450e"
+    },
+    {
+      "file": "src/hooks.js",
+      "bytes": 780,
+      "sha256": "4fb82e2648d41ad9a0513af575674cb2595777f62435acae52861494c681ae57"
+    },
+    {
+      "file": "src/spaces/hpluv.js",
+      "bytes": 3448,
+      "sha256": "f640bb7226289a5e962c964994dae9494e849b4e48a56e4880269aa97354e03d"
+    },
+    {
+      "file": "src/spaces/hsl.js",
+      "bytes": 1750,
+      "sha256": "bd9c2a594d5aea0758ca1be7b7095db5edf64a87b54cb9afaf06578b45d65bb5"
+    },
+    {
+      "file": "src/spaces/hsluv.js",
+      "bytes": 4616,
+      "sha256": "0dfbd2164c4a7b106807020bad89906c4754d4eb07e9c848b2344d1146ec6d81"
+    },
+    {
+      "file": "src/spaces/hsv.js",
+      "bytes": 1247,
+      "sha256": "b156d6df83bb16441745c472cb504bc55d5a7f595c9f7d2215d91ffbaf7b76b4"
+    },
+    {
+      "file": "src/spaces/hwb.js",
+      "bytes": 1120,
+      "sha256": "31c6b6240ef5cdc47761c95c79f2b4c665be2bf74a27546e5ad8837157eff2bb"
+    },
+    {
+      "file": "src/spaces/ictcp.js",
+      "bytes": 4311,
+      "sha256": "1d035dc0f81ffed0250523b26e20bdb9af023a3ce9d09b80b791503ae55edf9f"
+    },
+    {
+      "file": "src/spaces/index-fn-hdr.js",
+      "bytes": 347,
+      "sha256": "10654f3adea9a4c4979b5cceca4779934bc8543a73db427a9e5dcf72f4c19a30"
+    },
+    {
+      "file": "src/index-fn.js",
+      "bytes": 1731,
+      "sha256": "61a9c576c38a388e4987a8e1411dcb25993931e5ae4b18278267fb88fa7bd188"
+    },
+    {
+      "file": "src/spaces/index-fn.js",
+      "bytes": 1331,
+      "sha256": "bc661181cf5f47ad8e995bb404512b301f95250bd45afda97529bcdfc97d0ef0"
+    },
+    {
+      "file": "src/contrast/index.js",
+      "bytes": 332,
+      "sha256": "725176028fbe29682b89b7d927a66e687ce9257443f10ffbd445eb480fdcfeaa"
+    },
+    {
+      "file": "src/deltaE/index.js",
+      "bytes": 474,
+      "sha256": "520436f32ffb005d611dca62de784306291d6110bff389bda883a2439071d2ee"
+    },
+    {
+      "file": "src/index.js",
+      "bytes": 913,
+      "sha256": "9603e1dbdc179cbb6fdbc66a10d14a77f248b5b76741105387705d988fb9a574"
+    },
+    {
+      "file": "src/spaces/index.js",
+      "bytes": 198,
+      "sha256": "8adb082a592dc99e8b594234ffd44a0ba79dc93c77101b45fddecb36b41ee87b"
+    },
+    {
+      "file": "src/inGamut.js",
+      "bytes": 530,
+      "sha256": "a4596eece04581b2a0eae89d5d14e4be311adf7f7acb63754beba3362c05783d"
+    },
+    {
+      "file": "src/interpolation.js",
+      "bytes": 5897,
+      "sha256": "26e55dd3d0e3b2e98f281cf7aedf75c52fcedef7e58611e1c326edc75aa00828"
+    },
+    {
+      "file": "src/spaces/jzazbz.js",
+      "bytes": 3201,
+      "sha256": "a2ba76a5d7c4c26db24a89e531fddd6b7ef6a59838640f5b68158be3102d0b7d"
+    },
+    {
+      "file": "src/spaces/jzczhz.js",
+      "bytes": 1057,
+      "sha256": "4d65ce3d6679d87c85392607df2fd5952ae0fa8a34f9620920fe2d879967b395"
+    },
+    {
+      "file": "src/keywords.js",
+      "bytes": 6823,
+      "sha256": "e0a8e28de2e05d96431125c79d2d2914d3279a264c202aa570149ea53efa3061"
+    },
+    {
+      "file": "src/spaces/lab-d65.js",
+      "bytes": 1927,
+      "sha256": "21a9a3e71c2960d1391e6c7e8d6cb95a9cd93e3c7dbb6470d5440e9fdae69ed2"
+    },
+    {
+      "file": "src/spaces/lab.js",
+      "bytes": 1915,
+      "sha256": "9c352bc7549f2563735ff5a18ae09d223db1824747f4fc99565b353671b9be45"
+    },
+    {
+      "file": "src/spaces/lch.js",
+      "bytes": 1233,
+      "sha256": "0b74cfb12399c7b84e22a53ff57199cac0a5c45ce1d417b07f7c6b3c91977650"
+    },
+    {
+      "file": "src/spaces/lchuv.js",
+      "bytes": 1255,
+      "sha256": "0f4510245c2e9c654d76b27692d8414fa7af3d6bd6baa785ff0605163a7206bb"
+    },
+    {
+      "file": "src/contrast/Lstar.js",
+      "bytes": 483,
+      "sha256": "425a9c0685356bb5b8c3c03b0d0a252cb968a15174591c56f622ffc67662372f"
+    },
+    {
+      "file": "src/luminance.js",
+      "bytes": 587,
+      "sha256": "711112853ebd9e2deb9b52025195b05e520a236cb0e2f21f57217b650109b79b"
+    },
+    {
+      "file": "src/spaces/luv.js",
+      "bytes": 1932,
+      "sha256": "317efd1b3bfb247b0e2d6e033366b76a6c608d099b74f786d2f369ae43092294"
+    },
+    {
+      "file": "src/contrast/Michelson.js",
+      "bytes": 628,
+      "sha256": "12f9d8438a6e26ad3d6b4651f2f5e69d84f3c0bcbfb2f334871f33654afc1c60"
+    },
+    {
+      "file": "src/multiply-matrices.js",
+      "bytes": 838,
+      "sha256": "963bb0c5475f2cc67982d4087c53676b31c8306cdeb8d54b46a0d700228ccc56"
+    },
+    {
+      "file": "src/spaces/oklab.js",
+      "bytes": 2035,
+      "sha256": "8dfe1a5774c67e469b8a8b792ace609f30f3d1034b81c0da5400b1e6559748dc"
+    },
+    {
+      "file": "src/spaces/oklch.js",
+      "bytes": 1223,
+      "sha256": "3b4f4ca8dd34c8da19828b7a069f0018c281a5d4668a9cc8bcb60146b120e8eb"
+    },
+    {
+      "file": "src/spaces/p3-linear.js",
+      "bytes": 630,
+      "sha256": "ed04b75bb075249f1bb981805dfe8aaa525080f77cb337822a69a51302558c75"
+    },
+    {
+      "file": "src/spaces/p3.js",
+      "bytes": 312,
+      "sha256": "a92bdf6406defcc211c760151b396871f0fb0280824896c7817f450fbb3f78a0"
+    },
+    {
+      "file": "src/parse.js",
+      "bytes": 5850,
+      "sha256": "fc5e410229d50f5fdfcbfe924bcc6ef2190a2247d066ff717e06e4196ef7849d"
+    },
+    {
+      "file": "src/spaces/prophoto-linear.js",
+      "bytes": 981,
+      "sha256": "476c5732bf45c3b57ce2b53d6bdeb0179de5a7b4ddcf62b8226d360a35edb847"
+    },
+    {
+      "file": "src/spaces/prophoto.js",
+      "bytes": 474,
+      "sha256": "eaa463798422a5556791198b02edde3bd4fb04607b55866423cf9d52f28375db"
+    },
+    {
+      "file": "src/spaces/rec2020-linear.js",
+      "bytes": 909,
+      "sha256": "6632106e6c7fe8e006c00400c5de3c930d42025219bb913943d5ffc06391324b"
+    },
+    {
+      "file": "src/spaces/rec2020.js",
+      "bytes": 671,
+      "sha256": "8fa169bd6151975e087df5d776958e34d8cc7c80ae85b38dc4eb137152e718b7"
+    },
+    {
+      "file": "src/spaces/rec2100-hlg.js",
+      "bytes": 1428,
+      "sha256": "89ad841b68ce3533598dcc36e63c17d5302c8efa2870122a3a8b9a14cb4fce84"
+    },
+    {
+      "file": "src/spaces/rec2100-pq.js",
+      "bytes": 1167,
+      "sha256": "18bdb3bf51c024697fdc4bff496db79b4336dfb0bfd552d4b9ffbd5826ea35ac"
+    },
+    {
+      "file": "src/rgbspace.js",
+      "bytes": 1566,
+      "sha256": "12e946343d27bc979c4ca44b218a1743f0e83c80bb46315f7270b1ee6e569a4b"
+    },
+    {
+      "file": "src/serialize.js",
+      "bytes": 2543,
+      "sha256": "47f2f540a659533c7fc32a7213c0caa9aba3aac448a8514f83eee5a2ae031b23"
+    },
+    {
+      "file": "src/set.js",
+      "bytes": 812,
+      "sha256": "8507cf91bc26d4cbb41d272bd8c71a473202fa802c7b740b19e4c31b10a7dac8"
+    },
+    {
+      "file": "src/setAll.js",
+      "bytes": 282,
+      "sha256": "cdbbdbac299392da1b4820cfb95485181a663221b7dd841842312289dda2cc75"
+    },
+    {
+      "file": "src/space-accessors.js",
+      "bytes": 2233,
+      "sha256": "638c1bfcb788552baaaf69c00b9778a32970c645886bee0d12f4d34135a7b3f8"
+    },
+    {
+      "file": "src/space.js",
+      "bytes": 9643,
+      "sha256": "75983a07a93309411258f7fea8efad3305545ba17dfef65863a121165aca0c0a"
+    },
+    {
+      "file": "src/spaces/srgb-linear.js",
+      "bytes": 1072,
+      "sha256": "df7507462b8b625f9438f1fb360ab1ec1de185f41e8bfeb57e39cf0232a838e1"
+    },
+    {
+      "file": "src/spaces/srgb.js",
+      "bytes": 2763,
+      "sha256": "67a11f93dd69da29f43931567496683a116297c049816eda80479c996b1dc55f"
+    },
+    {
+      "file": "src/to.js",
+      "bytes": 676,
+      "sha256": "e1691fcc4093b761e88af5373774e4057eddfeb919e6b210f6973d46b28279e2"
+    },
+    {
+      "file": "src/toGamut.js",
+      "bytes": 8620,
+      "sha256": "433e241f47a4eae8fbef745a4bdc5988f374ed92773e376bd6513b193991c4a9"
+    },
+    {
+      "file": "src/util.js",
+      "bytes": 5873,
+      "sha256": "3f45f562e63f0d548ae2d0553734cfee47f4a48464db8f002067056fdfc3a834"
+    },
+    {
+      "file": "src/variations.js",
+      "bytes": 426,
+      "sha256": "a10cee63141f9a7e6389622f72d5b879151d23f0ed11b02fa6fb886161388f0b"
+    },
+    {
+      "file": "src/contrast/WCAG21.js",
+      "bytes": 571,
+      "sha256": "a1878bbccc6b38f50a9eafe8b0de2249b72d179a41bf48b85f34b9bd07825e65"
+    },
+    {
+      "file": "src/contrast/Weber.js",
+      "bytes": 821,
+      "sha256": "8400632a678a66a2ec97226c999ad0c0d2960e4e7558b73306f64383a9143d28"
+    },
+    {
+      "file": "src/spaces/xyz-abs-d65.js",
+      "bytes": 932,
+      "sha256": "609d85e61a5202a5ad6a0ed513226fb004da7bfe2c7afc460f1add9e982f0b92"
+    },
+    {
+      "file": "src/spaces/xyz-d50.js",
+      "bytes": 323,
+      "sha256": "edab1bfac642775b99e75f8b2ceef8a65c64c268d51813c78a349fd81d35b41d"
+    },
+    {
+      "file": "src/spaces/xyz-d65.js",
+      "bytes": 272,
+      "sha256": "5e6d1b4268643d92438a6add948f3dc18ef3e374336f6c2a40723a73aeb97168"
+    },
+    {
+      "file": "package.json",
+      "bytes": 2995,
+      "sha256": "97571bfcf10d32ffc759accf31321cd3548bfb995ae875fd9a3b2913d8839c14"
+    }
+  ]
+}

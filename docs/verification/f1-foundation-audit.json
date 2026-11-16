@@ -1,0 +1,200 @@
+{
+  "status": "verified_scoped_vector_project_foundation",
+  "updatedAt": "2026-11-04T11:21:03.304052+00:00",
+  "fullGoalComplete": false,
+  "originalTasks": 50,
+  "codeRoot": "D:\\METIS超级合并\\dsh-plugin\\designcraft",
+  "version": "1.3.0-dev.11",
+  "uiBuild": 25,
+  "nativeHost": "0.19.0+designcraft.host7",
+  "nativeBuildLogSha256": "5450073ea3b6e2e74f19b42ecea513ef3fd96222d32d14ecf0cb7949c89d0ecf",
+  "nativeSourcePins": {
+    "crates/text/web-fonts.txt": "8e2739ac621b536b82fb388cf0ee3a085dbb3ea786eb2be0bcca6528dc32642a",
+    "crates/ui-egui/src/control.rs": "d1e9fed7fcd426f9c50eac8d9f7ac78ef879e23f978d4f3f8fc11ae64711df1d",
+    "crates/ui-egui/src/control/hosted.rs": "ce300da308c38b2dd86e6e34b811569124ecb066704655ddd1bbaa6c6d9c5b28",
+    "crates/ui-egui/src/control/tests.rs": "c8449f933f1c7616cbd1a0245e83cb631172e56693cbae4d959a47135c6d1684",
+    "crates/ui-egui/src/lib.rs": "4ec91ae2030529195ed011dbecc276af33620d60c3c0cd0558abb93914ef7b55",
+    "crates/ui-egui/src/app.rs": "69f1a3af708cd7d8cab3f6eb40bf4e9ad282e7d3dd2640cbe114cd22b7002c92",
+    "crates/ui-egui/src/chrome.rs": "ee38406fc802849f6c82397c261a91bd571b4b7ce2a7623dec4d30110faa8d18",
+    "crates/ui-egui/src/host_files.rs": "c84c34cfd0624c18aa952bc126ea528bf415656c598f092c2d6ae06bd9ca3cfb",
+    "crates/ui-egui/src/app/commands.rs": "11b758749c6d3117926086e3c2824f187c2e791887881f3cc62790d7244fbe55",
+    "crates/ui-egui/src/shortcuts.rs": "218d58667c5e18aad46bcf688e37044608c0c45a6d9575a542b3d8ce008c5deb",
+    "crates/ui-egui/src/shortcuts/tests.rs": "28772ee932b46cc9b372a32e84b9425ca8fb09a8bcf1247b6e69b92723e1ad98",
+    "apps/vectorcraft-web/src/api.rs": "57811c50f4eba1f8de6773171929a13be10a7626e5226e82384f2515182a7885"
+  },
+  "activeNativeFiles": {
+    "index.html": {
+      "bytes": 3086,
+      "sha256": "a9671ac25119c2d99c73fe13eb0a213f09c993a55b1129ae42cbf459ae0d237d"
+    },
+    "vectorcraft-web-bf3d4524f0f4e9ec.js": {
+      "bytes": 180367,
+      "sha256": "4e848c94dcd7934fa15ffcb86115bec63e83fc9ae2be4ce28b0c408a42274e62"
+    },
+    "vectorcraft-web-bf3d4524f0f4e9ec_bg.wasm": {
+      "bytes": 83969305,
+      "sha256": "5b8bf90c6df85d89b7d5f87a566acd06b4333fbbe51ed5f4d8f1bd6f586be5b8"
+    }
+  },
+  "ownedLoadedVersionVerified": true,
+  "userLoadedVersionVerified": false,
+  "evidence": [
+    {
+      "file": "project-materials.json",
+      "sha256": "fa702e15f20fa3d67482b4bdcba0700aa302281db08c3cc4993926909d6f295d",
+      "checks": 6,
+      "scope": "actual current DSH material UI, real native source/derivative pair and placements, registered tool, source files; explicit finish HTTP503 fault; no model"
+    },
+    {
+      "file": "project-material-recovery.json",
+      "sha256": "9f690cef3b499beed7ad21325e330a073cb2fc10048bd25a22ba6b9322ff7c14",
+      "checks": 3,
+      "scope": "actual source-based recovery after owned backend restart and deliberately absent operation journal; physical repair UI and registered DSH tool; no placement replay/model"
+    },
+    {
+      "file": "project-navigation.json",
+      "sha256": "8010f5956582833dfb776d6ad186b93de7a6c9d660a04da4f0bbcfa1654e5605",
+      "checks": 6,
+      "scope": "real current DSH source navigation, same native parent App/history/view, physical edits/undo and registered tools; no model"
+    },
+    {
+      "file": "project-navigation-conflict.json",
+      "sha256": "89550d6dc13a824f86e50ee8545b9a60971956b9b1e6cb73d6237165c93f7c14",
+      "checks": 3,
+      "scope": "two real owned DSH sessions/native Apps, physical source edit, active-writer refusal and exact newer-source return; no model"
+    },
+    {
+      "file": "project-navigation-crash.json",
+      "sha256": "cd1f4c99c5df590af379ba533516cbef3bb20390530e0c05e7c5e6841762423d",
+      "checks": 3,
+      "scope": "actual child renderer Page.crash in owned headless Chromium, real saved-source restore and parent return; not full packaged desktop/GPU verification"
+    },
+    {
+      "file": "native-handoff.json",
+      "sha256": "b3edcb90e34b4fce47ca0c9568122512cc5a5616e0f64d26e32073d5f3550d97",
+      "checks": 8,
+      "scope": "actual registered DSH tool/native App, physical manual input and exact source checkpoints/reopen; no LLM"
+    },
+    {
+      "file": "native-source-placement.tap",
+      "sha256": "ca0b5e2d3b239b129d518dae911297cd0306d588dbaa1ac553feab3960a6f3fc",
+      "checks": 11,
+      "scope": "storage/protocol checks, not a substituted native/model action"
+    },
+    {
+      "file": "project-graph-storage.tap",
+      "sha256": "e9e1ccca830ce95d83681fcf5402e8f98b7287005c660c5c72b36de5ca6b5e73",
+      "checks": 8,
+      "scope": "storage/protocol checks, not a substituted native/model action"
+    },
+    {
+      "file": "project-graph-protocol.tap",
+      "sha256": "3c019b13147b65a4b0162c2ccceea744712a25f49f22b7eda83fe6592c2c6cbb",
+      "checks": 12,
+      "scope": "storage/protocol checks, not a substituted native/model action"
+    },
+    {
+      "file": "editor-session-project-navigation.tap",
+      "sha256": "f721c76d335d5a9d0c8def7521e642bb6aa3553d3f1330fcfecf0fe309e8dfff",
+      "checks": 12,
+      "scope": "storage/protocol checks, not a substituted native/model action"
+    },
+    {
+      "file": "native-bundle-rust.log",
+      "sha256": "4b78b932af472198cddf516f35eb138aeaa5132503a1b2cf891e03cda920f805",
+      "checks": 28,
+      "scope": "genuine native App control tests"
+    },
+    {
+      "file": "project-material-journal-fault.json",
+      "sha256": "bc8c9ec8404f4a351e4716b872a6a41158d29614d3cecce469041512429b158b",
+      "scope": "explicit fault only in an owned QA workspace; source hash unchanged"
+    }
+  ],
+  "modelCallsThisStage": 0,
+  "imageServiceCallsThisStage": 0,
+  "desktopOperated": false,
+  "boundaries": [
+    "Only Vector is a registered live engine. Raster material here is an actual PNG snapshot, not an integrated PhotoCraft layered editor.",
+    "Materials are frozen snapshots of exact source versions. Opening the current original does not auto-update an existing placed object. F2-F6 remain pending.",
+    "One parent App is retained for normal source return. Source changes elsewhere reopen the latest source; renderer crash recovery loses temporary native history and says so.",
+    "Actual crash proof uses owned headless Chromium/software rendering; full packaged desktop preload/IPC, GPU and minimized-window verification remain incomplete.",
+    "Photo/Deck source/selection/placement/PPT adapters, full OpenDesign workflows, image/inpaint/variants, formats/migration and final full50 audit remain unfinished."
+  ],
+  "qaCorrections": [
+    "Fixed early-idle QA wait to wait for actual material/instance completion.",
+    "Accepted actual SVG rect elements while continuing to require independent vector geometry and real text, with no bitmap.",
+    "Fixed QA locator to match actual accessible placement label.",
+    "Fixed real new-menu flex-row inheritance and committed browser hit-region paint before readiness.",
+    "Fixed source recovery losing the return target and invalidated cached-renderer return loop; actual Page.crash and physical restore/return passed."
+  ],
+  "codeHashes": {
+    "host\\asset-stream.js": "00ceefb65f45c295678ce283a8c80f5b40d1142a02c744f6b0629c0943900cd5",
+    "host\\commands.js": "2e91f4aeb06177c59e816c48592c28ded7f53f10454245527586468f625a29cd",
+    "host\\deck-native.js": "db07d23e3e41ea9c0a15619a9c276332b82ac241d9b26d95c99dc919ff88d579",
+    "host\\deck-source.js": "831500bc92c076717642dfce949d0399999ddd2b3bfd1c1ca50133c39397203f",
+    "host\\decklayouts.js": "0636895b89e146dd58bb4cf35e921c5874d7e24cce0b1db9dc5b15a1ff5db006",
+    "host\\design-resources.js": "089ad875050fc8177c8afc2cc2f5792317c662446b2d3d9fe74902107a942629",
+    "host\\designsystems.js": "060808c39f6f5397a8a6c4764c1b53f5a7716001e4b21f9488334525126ba851",
+    "host\\docstore.js": "63867a2e1d0fd0205c0f692119b1e54e9e1636638b52ec9a90b0e2d248d1c6e1",
+    "host\\dsh-tools.js": "20ed6ff91b6cc44eaa90021e9a250d3be27dcabbf1156e1ae91647e891862608",
+    "host\\editor-assets.js": "dc86730d67d5d09bb707204620e1e8e881e0a26b596e2a87150895ff85c98ddd",
+    "host\\editor-policy.js": "f0dfe1d4d5e265d29a6fbe66ec39372f4b34210585eedcbecdf1b3e845cd3da1",
+    "host\\editor-routes.js": "142218e8f9a948283229e1b1d012ac9de3782da4674108a1702926e61757fedd",
+    "host\\editor-session.js": "443a2622b5bd72011593fa38b59bff9d399b42fc914642b8a94ed238b435a856",
+    "host\\editor-tools.js": "52cfec2e0d54a07cfa7b6fe3ce46e102d3918e060376dd7f75e5b6ab0706076f",
+    "host\\font.js": "06be22152e78df584217ead1ca5a447ab26ff1d5e856bee380a3cfd5b8b78863",
+    "host\\image-composite.js": "789bedf9dbc320045793f6a05a3e0379affbe50183af62eb524b0b78b95c51e3",
+    "host\\image-header.js": "6038d4cc0845fb24555504ad0964139da709df991a3d44acc4cbcb598015114f",
+    "host\\image-jobs.js": "1ddcba508831121d5b1a112e4158c6e5233fb4a96b5ddf71b0271a6bb04353fa",
+    "host\\image-provider.js": "66dd691f9892f814f536807ada0b0d0ab664e7eb16c510b4020e1145d775b6e0",
+    "host\\index.js": "311c8c12767aae092ac872396a38f654034a91500bacb5ad42b00ad43357377a",
+    "host\\job-worker.js": "1eb83c180c03539ca9cb523767bc0aaa34ec0d154a4b799c214a46625e35d473",
+    "host\\jobs.js": "5c61ac992271e25a0c15f1319d62013d410bd4c1936d6a9c473cd6b779a0a4fc",
+    "host\\jpeg.js": "8975a122c6ad39493dc6a9155c0724821fd412307aa250a08d764552ab05ddbe",
+    "host\\media-link.js": "0b4fc31260dc5e82af83478dfaa004692f9c6d3857504c928cc0b6cdda343e2d",
+    "host\\native-source-store.js": "cbd7292a243999826d59258678c9a0ad7b1fcd04a1a69441545664c90bce903e",
+    "host\\native.js": "db693093cdc56f6103f0b08d5f5e0ed9da1c21fa6b46a1747f5676168d7adcac",
+    "host\\open-design-library.js": "cabe0b4cc190bac06da95bdc3bad02fd46dcd013e9f7bf8928c5725625dc77c4",
+    "host\\open-design-tools.js": "f9dc41eacc544466bad95e2594c60b83dbe7b882202a519ab6cd1127c518120c",
+    "host\\pdf.js": "ecf37e268b2ad6e903183ea18416b4714aef30674c5da9f22c6fcfa2dcb9a5c5",
+    "host\\persistence.js": "f8f0e069ad23b657df5c8069f85241e5ab690653f81bcf6d8f7849f1d1b37f59",
+    "host\\photo-mask.js": "cb8c055cef5f1ddcd745fbd1509ee127d44d730c2c9faa9464258cc014dfc5b4",
+    "host\\pptx.js": "926427ec56824ae937fa03a7c370ef5f76724e7aa8995afcf3cb0bc83f568192",
+    "host\\preview-info.js": "701e23f15579f5a9dace869aecf1389ea1c541df55c179d1dde7ddf4b232047c",
+    "host\\project-graph.js": "6db578e28586bfff18cbe0694d7dc90577db3793f91ac223d526ebc89b0f5c27",
+    "host\\psd.js": "73bbe8845305f041b1dce35f5e9b85b3c099e0f57a5a206f743df3ee7c1c567b",
+    "host\\raster.js": "1d364fefe0078b056e403050cb70a7eec2206f0b7425d6e361a119b831e75e27",
+    "host\\safety.js": "dd0f9a8157ef86a91adc1ec31cb28c4ac64d9ed947eb407cf2e0409e3a2ed1dd",
+    "host\\svgtools.js": "7e42791122cd3beffe00cf9180fc207b120f80368ce40d0bd4aa72997aef407c",
+    "host\\templates.js": "9c2762a87fd724c5fa0458538af2c9c2731cd727a7683e2fd1c90a930ccfba33",
+    "host\\variants.js": "8cb2c66ccff12b3e3ec73bef6bceec99a5f80d16fe78bb2969fd933ec9f29b62",
+    "host\\workspace-native.js": "b1d0dcb1f040d3ea76f554607df381d9b62f3e1f22949e229c2f1b1becf26459",
+    "host\\zip.js": "8be46d26712599ad8462b4c61f0f8d96007609e697b5fce2124f18020b23d796",
+    "client\\actions.js": "4574eb55977c11ee7217a953cec1fdef012081680e889f0001d32e471187dc44",
+    "client\\client.js": "b1378980ce7e31027ac78a8934c896645fbeef1d1a2102df40b937db21171433",
+    "client\\deck.js": "4fddd29d095f339ad57eb257a3dfa218d305d037fa64bf5a36ff3387171b6be0",
+    "client\\dsh-context.js": "70031f67cd91c78adde6643eea071318c4d6d2445ce24cbc029a4d60772a18c0",
+    "client\\editor-frame.js": "218d6fb781b42f9749b6d113aa1f5e753a4d2e4b4e03cec34187490387b3b75c",
+    "client\\editor-surface.js": "3da976b5cbdcc195e17d898fe3b9d1dea68450b3931a0e5736f94d0ef7187098",
+    "client\\engine.js": "54a743a606939e90171bcd2432101cda84ae7fc9a42d1c502780469586fc8237",
+    "client\\image-ui.js": "3307b6b3e2b46d3e2a981457c2d50d425d6fe53834e8ed2c74ca3f27e4266a19",
+    "client\\merge.js": "8cf6d0aa45a9de1faf8ec1ea38a0e22cb8a06106e5943f4eae8f2489dc0b2e2f",
+    "client\\native-contract.js": "2e99de0696bed12542102f9d1970fdc9f334e334be47414efddc4dbc254cf872",
+    "client\\native-controller.js": "0c4a5a6758ef62d853e424e341e22f5b8b2540b18ae5a9bd095cc570cbaf0f1c",
+    "client\\native-protocol.js": "b480ebcc1fcaea135c03548a7401c5f09f7185776d45231ec9dc38e609e2e122",
+    "client\\native-reference.js": "07b28d20e5f4f7b574d1ca7e0ec55e3816407d9c879dfbae382812d6398b4bc3",
+    "client\\native-workspace.js": "c8e4f1a2e74ef3fdbbc56850d946d907e4d56562bf60f1f2d8cec08344008a70",
+    "client\\path.js": "c87eb59beb5384a284bf12dfe330687c1eb2ae03473a6be7447a8d5c7b24e231",
+    "client\\preview-view.js": "0119215ae3129403620353904eeb1d1c5754145f0e9a33ed49b795a3f5eb1f5b",
+    "client\\recovery.js": "23107ebccc6d208b43d56dc0a74a39c62c47f882bad8f6164922ee9d26c6af37",
+    "client\\selection.js": "635398eec52e103e09eeaab881a829eed4c0de79969af98332a19ab4b20d6108",
+    "client\\svg-export.js": "6f83a6276ef30ae1e4883858bf64824d86cef12ff008ec465e0a87db21ff69fb",
+    "client\\svgtools.js": "6a2321de8322b39ebbe54ee532d86053f8004349b5fef44b28e4895879ad6194",
+    "client\\sync.js": "13fa12eb889e148bdac999567888c787a0afe08b0f8d12eccea2291b2de79a91",
+    "client\\tools.js": "29235185ef3e037b8907fe2142cd3ce15cd5ddd38814807a3538817f79841f7f",
+    "client\\ui.js": "a85d0486599dcbf0b1412fd0c003c0d9e684702cc2f7947e81dea2b423919d55",
+    "client\\variant-ui.js": "3b0d337ea502584a90e86bb87d4190083bd8bd9fd39ea892a059b1563e94f3b9",
+    "client\\vector-nodes.js": "afebc891584b290ffc9ac300f45773b81a90aa9f9b327f78368a3e2d0aadd5a3"
+  }
+}

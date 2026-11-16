@@ -1,0 +1,45 @@
+{
+  "status": "passed_scoped",
+  "at": "2026-11-08T10:29:44.162446+00:00",
+  "scope": "Actual DSH web host/custom origin in separate hidden matching Electron, one hardware GPU, IME and isolated renderer recovery.",
+  "checks": [
+    "the real native canvas accepted and saved a physical edit under the observed renderer",
+    "physical keyboard zoom changed the native viewport",
+    "after actual WebGL context loss the DSH remained responsive and the visible saved-version action reopened the exact source",
+    "previous actual Electron IME, dirty-background parking, polling boundary and child-renderer crash/reopen checks"
+  ],
+  "gpu": {
+    "available": true,
+    "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+    "renderer": "ANGLE (AMD, AMD Radeon RX 9060 XT (0x00007590) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "vendor": "Google Inc. (AMD)",
+    "canLose": true
+  },
+  "zoomBefore": 1.1101191520690918,
+  "zoomAfter": 1.5,
+  "host": {
+    "shown": false,
+    "focused": false,
+    "electron": "44.7.0"
+  },
+  "screenshot": {
+    "file": "verification/ui45-electron-gpu.png",
+    "sha256": "0ba0968f3ba38697a2734df217d972d1b8742ffa0df59aabd792ca3538246862"
+  },
+  "rawEvidence": [
+    {
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-electron-gpu.json",
+      "sha256": "37e37aa9157b3e319fdedc0788f7ee4bbaf82f3a1976a99586bc37ce65022674"
+    },
+    {
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-electron-ime.json",
+      "sha256": "ad4ffe2cc2b6d07596a627635148024a6b77abafab48652b30c389516dea8540"
+    }
+  ],
+  "limits": [
+    "The separate Electron uses the real DSH web host and authenticated forwarding but does not exercise the packaged DSH preload or all desktop IPC.",
+    "Trusted browser composition was tested; an operating-system IME candidate window was not controlled.",
+    "GPU evidence covers the reported AMD/D3D11 device and Vector sample, not every machine, driver or engine.",
+    "Only saved source or captured drafts are recoverable; a crash can lose input that never reached a checkpoint."
+  ]
+}

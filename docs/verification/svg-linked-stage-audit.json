@@ -1,0 +1,488 @@
+{
+  "status": "partially_verified_linked_png_svg_vector_deck_seven",
+  "asOf": "2026-11-05T08:15:30.292748+00:00",
+  "fullScopeComplete": false,
+  "originalTaskCount": 50,
+  "scope": "Real explicit PNG and SVG updates of seven Vector/Deck uses with an independent eighth, local white correction, saved-source acknowledgement loss and manual move recovery.",
+  "installedDisk": {
+    "plugin": "1.3.0-dev.21",
+    "uiBuild": 35,
+    "vector": "0.19.0+designcraft.host12",
+    "photo": "0.18.0+designcraft.host3",
+    "deck": "0.13.1+designcraft.host6"
+  },
+  "userWindowVersion": "unverified; user process and desktop not controlled or restarted",
+  "actualSvg": {
+    "status": "passed",
+    "scope": "real headless UI, seven explicitly linked SVG uses plus independent eighth, Vector and Deck, actual lost-ack and hand-move recovery",
+    "root": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\svg-linked-seven-project\\050fc0e1-b0b3-43f1-a7d1-a0697f324350",
+    "codeRoot": "D:\\METIS超级合并\\dsh-plugin\\designcraft",
+    "checks": [
+      {
+        "name": "actual material buttons place SVG into both engines; UI links exactly seven uses",
+        "pass": true,
+        "detail": {
+          "independent": "use-142f6cfe-9e84-4749-914d-b06e327c5983",
+          "sourceIds": [
+            "work-bd56608a-c416-4f4d-b485-5bc673f3e57f",
+            "work-94f811d8-cd1f-43b4-a93b-2f3b25c5dbf8"
+          ]
+        }
+      },
+      {
+        "name": "lost first-source acknowledgement resumes without replay and preserves physical manual move",
+        "pass": true,
+        "detail": {
+          "revision": "497c31a90f1b340bc8b3385e34d42cbbc845c3cf27bee99024452755530a1369",
+          "manualX": 366.0
+        }
+      },
+      {
+        "name": "seven SVG source/preview pairs updated, all other native data and independent eighth unchanged",
+        "pass": true,
+        "detail": {
+          "vectorSourceSha256": "a51d58fbd154caf0ad0c6927077af723a3645b19c5b5ee9d40e0f24bccf69312",
+          "svgSha256": "c578faa2460d0eadc18bc95cb3de32dbf776c78cfe090c336a178d0e5addbf1e",
+          "previewSha256": "9aaf712444dfdd161b975865bbc559f3d6414e42b8089b9957667c54d67a9580",
+          "sourceSize": [
+            400,
+            240
+          ]
+        }
+      },
+      {
+        "name": "local white correction remains visibly white on dark slide",
+        "pass": true,
+        "detail": {
+          "brightness": 1,
+          "sample": [
+            255,
+            255,
+            255,
+            255
+          ],
+          "point": [
+            515,
+            232
+          ]
+        }
+      },
+      {
+        "name": "both native files reopen exactly and PPTX contains edited SVG",
+        "pass": true,
+        "detail": {
+          "pptxBytes": 28539
+        }
+      }
+    ],
+    "update": {
+      "id": "update-f830eb04-5aa8-4a97-b872-61672defb07b",
+      "editId": "edit-ca75bf9f-464a-4565-beed-eab1b1107882",
+      "linkId": "link-be598928-0521-4e9c-9add-52a5c59bd2db",
+      "assetId": "asset-f830eb04-5aa8-4a97-b872-61672defb07b",
+      "previousAssetId": "asset-b0090b5a-1435-4bcc-9ba6-426d289835ea",
+      "sources": {
+        "work-bd56608a-c416-4f4d-b485-5bc673f3e57f": {
+          "engine": "vectorcraft",
+          "baseRevision": "09e26bfd28099b02fb39cdef0eca1500617b92bc8dcaeb79617bba1cc113cb7f",
+          "instanceIds": [
+            "use-ba6ff157-44c6-4dd3-8bf7-1c2085d1e7b8",
+            "use-2ff343cd-5732-4e39-a097-e1082e667559",
+            "use-96c0ebbd-394a-496a-90c5-2fb6066c3966"
+          ]
+        },
+        "work-94f811d8-cd1f-43b4-a93b-2f3b25c5dbf8": {
+          "engine": "deckcraft",
+          "baseRevision": "42c09fda278070e1f5210c19327722a6d511e7b345ce068bc9d75774b697440e",
+          "instanceIds": [
+            "use-91b349b1-95d1-4f68-b1e7-a5af8401b911",
+            "use-ea156472-0732-4bcb-986b-72c731569ff3",
+            "use-8ef82b9c-d5a6-4e8b-8b50-2505f083e693",
+            "use-2a7882c6-3b44-46c5-bb7e-281dbbf269f5"
+          ],
+          "pages": {
+            "use-91b349b1-95d1-4f68-b1e7-a5af8401b911": {
+              "kind": "slide",
+              "id": 257,
+              "index": 0
+            },
+            "use-ea156472-0732-4bcb-986b-72c731569ff3": {
+              "kind": "slide",
+              "id": 257,
+              "index": 0
+            },
+            "use-8ef82b9c-d5a6-4e8b-8b50-2505f083e693": {
+              "kind": "slide",
+              "id": 257,
+              "index": 0
+            },
+            "use-2a7882c6-3b44-46c5-bb7e-281dbbf269f5": {
+              "kind": "slide",
+              "id": 266,
+              "index": 1
+            }
+          }
+        }
+      },
+      "committed": {
+        "work-bd56608a-c416-4f4d-b485-5bc673f3e57f": "497c31a90f1b340bc8b3385e34d42cbbc845c3cf27bee99024452755530a1369",
+        "work-94f811d8-cd1f-43b4-a93b-2f3b25c5dbf8": "a54a7be19541e186d1a16f8fe818e84abacfcb6768998bb36f9702a98d13b647"
+      },
+      "status": "succeeded",
+      "at": "2026-11-05T08:11:05.374Z"
+    },
+    "newAsset": {
+      "id": "asset-f830eb04-5aa8-4a97-b872-61672defb07b",
+      "title": "七处关联矢量图 · 独立编辑",
+      "sourceId": "fork-ca75bf9f-464a-4565-beed-eab1b1107882",
+      "sourceRevision": "bbda1eb75b201735259358b20d6fd01114bd7185920b158040bf81919a572db0",
+      "sourceHash": "a51d58fbd154caf0ad0c6927077af723a3645b19c5b5ee9d40e0f24bccf69312",
+      "engine": "vectorcraft",
+      "format": "svg",
+      "sha256": "c578faa2460d0eadc18bc95cb3de32dbf776c78cfe090c336a178d0e5addbf1e",
+      "bytes": 496,
+      "preview": {
+        "format": "png",
+        "sha256": "9aaf712444dfdd161b975865bbc559f3d6414e42b8089b9957667c54d67a9580",
+        "bytes": 2537,
+        "width": 400,
+        "height": 240
+      },
+      "at": "2026-11-05T08:11:03.157Z"
+    },
+    "pageErrors": []
+  },
+  "actualPng": {
+    "status": "passed",
+    "scope": "actual native Vector/Deck/Photo; 7 explicitly linked originals+independent8th; one local white correction; source PNG320x240->400x240 keeps native frames; real response-loss/physical hand-move resume; no model",
+    "root": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\mixed-seven-ui35-project\\9f378fb5-9485-479f-8073-c15d67a6c717",
+    "codeRoot": "D:\\METIS超级合并\\dsh-plugin\\designcraft",
+    "checks": [
+      {
+        "name": "UI explicitly links seven genuine PNG uses across Vector and Deck, leaving eighth independent",
+        "pass": true,
+        "detail": {
+          "uses": 7,
+          "independent": "use-fd474982-ecbf-42da-b6c5-dc599a226b72",
+          "engines": [
+            "vectorcraft",
+            "deckcraft"
+          ],
+          "sourceIds": [
+            "work-891f362d-5804-49e8-905d-a560681b48a4",
+            "work-1d42dc7e-7ddf-4460-9860-dc7193c4b481"
+          ]
+        }
+      },
+      {
+        "name": "real first-source response loss resumes only unfinished native source; physical hand move and return slide/object context survive",
+        "pass": true,
+        "detail": {
+          "sameCompletedVectorHead": "c0078a061036453d5ad06a5d85a8d673f6000d06e4e59b8d2df63a743b2e69f3",
+          "manualX": 366.0,
+          "returnPage": {
+            "id": 265,
+            "index": 1,
+            "kind": "slide"
+          },
+          "returnObjects": [
+            266
+          ]
+        }
+      },
+      {
+        "name": "changed PNG aspect updates exactly seven original IDs; all physical frames/crops/rotation/appearance and eighth use remain exact",
+        "pass": true,
+        "detail": {
+          "sourcePixelSize": [
+            400,
+            240
+          ],
+          "originalPixelSize": [
+            320,
+            240
+          ],
+          "updatedUses": 7,
+          "independentOldPngSha256": "cd1560491f4afe54861cffff47a0e664c169ccbca0b646b262aacfb2aaa66b33",
+          "allOtherNativeContentExact": true,
+          "originalLayeredSourceUnchanged": true,
+          "newPngSha256": "b73589748b9acb2ffea4686cf74de406e9b303bf2e88a3a9538ed512c9e9bad5"
+        }
+      },
+      {
+        "name": "local white correction remains visibly white on a dark slide without modifying original shared pixels",
+        "pass": true,
+        "detail": {
+          "nativeBrightness": 1,
+          "renderedSample": [
+            255,
+            255,
+            255,
+            255
+          ],
+          "samplePoint": [
+            186,
+            215
+          ],
+          "sourceAlpha": 255
+        }
+      },
+      {
+        "name": "both real native sources freshly reopen exact, and actual editable PPTX is intact",
+        "pass": true,
+        "detail": {
+          "sourceIds": [
+            "work-891f362d-5804-49e8-905d-a560681b48a4",
+            "work-1d42dc7e-7ddf-4460-9860-dc7193c4b481"
+          ],
+          "pptxBytes": 29161,
+          "exactReopen": true
+        }
+      }
+    ],
+    "owned": {
+      "workspaceId": "d584c4f7-d220-4fb7-a213-c0a7c7bdb69a",
+      "sessionId": "PUBLIC-REDACTED"
+    },
+    "update": {
+      "id": "update-8a950b65-2e13-429b-ba99-13be3554a8db",
+      "editId": "edit-eb7bc5cb-980e-40c5-956e-8f4b8d35f33a",
+      "linkId": "link-532af3bd-3d6f-4972-b5fd-911a7d1f5b1d",
+      "assetId": "asset-8a950b65-2e13-429b-ba99-13be3554a8db",
+      "previousAssetId": "asset-66ba5cf4-c590-4751-a4a2-1234cc558498",
+      "sources": {
+        "work-891f362d-5804-49e8-905d-a560681b48a4": {
+          "engine": "vectorcraft",
+          "baseRevision": "21bcb7748b8b550c1798c9ebfaa948d60ea60ddf7a33d95cc8db0f54c593dfc9",
+          "instanceIds": [
+            "use-57616267-8260-4818-a00e-41894c57bc40",
+            "use-73f1ea45-8d26-489c-89c1-2d3a585598bf",
+            "use-954ab88d-cfc1-45d1-8f3a-02934630885c"
+          ]
+        },
+        "work-1d42dc7e-7ddf-4460-9860-dc7193c4b481": {
+          "engine": "deckcraft",
+          "baseRevision": "0295e9a47d1938cab6b1e166f9b81ec57ee548c7ad6e9c4aca1cef9f941abe2d",
+          "instanceIds": [
+            "use-b8a9dfa2-055e-4e32-8a42-20395718a22e",
+            "use-e4637a11-19a6-40e0-a8a1-7d1cea9245c6",
+            "use-e586c2fb-c714-4c0f-bf38-a8f140351ba5",
+            "use-dd2cd42e-47f3-4ccb-a6c7-c6b7d0fa7fa7"
+          ],
+          "pages": {
+            "use-b8a9dfa2-055e-4e32-8a42-20395718a22e": {
+              "kind": "slide",
+              "id": 257,
+              "index": 0
+            },
+            "use-e4637a11-19a6-40e0-a8a1-7d1cea9245c6": {
+              "kind": "slide",
+              "id": 257,
+              "index": 0
+            },
+            "use-e586c2fb-c714-4c0f-bf38-a8f140351ba5": {
+              "kind": "slide",
+              "id": 257,
+              "index": 0
+            },
+            "use-dd2cd42e-47f3-4ccb-a6c7-c6b7d0fa7fa7": {
+              "kind": "slide",
+              "id": 265,
+              "index": 1
+            }
+          }
+        }
+      },
+      "committed": {
+        "work-891f362d-5804-49e8-905d-a560681b48a4": "c0078a061036453d5ad06a5d85a8d673f6000d06e4e59b8d2df63a743b2e69f3",
+        "work-1d42dc7e-7ddf-4460-9860-dc7193c4b481": "eb19afcead56e7ae3fc5893a9051ffc54d1ec99c2ac35fad5ab36ff51ba32cff"
+      },
+      "status": "succeeded",
+      "at": "2026-11-05T08:14:21.013Z"
+    },
+    "newAsset": {
+      "id": "asset-8a950b65-2e13-429b-ba99-13be3554a8db",
+      "title": "七处共用的原始标记 · 独立编辑",
+      "sourceId": "fork-eb7bc5cb-980e-40c5-956e-8f4b8d35f33a",
+      "sourceRevision": "862c4af5a3313cb81519339877db32778fe81180f9dcb53c82af529504538958",
+      "sourceHash": "d9c35c474f28c7820ab268b2c2caa6f1138af443c2ce4478c7df42ca7941b462",
+      "engine": "photocraft",
+      "format": "png",
+      "sha256": "b73589748b9acb2ffea4686cf74de406e9b303bf2e88a3a9538ed512c9e9bad5",
+      "bytes": 4003,
+      "at": "2026-11-05T08:14:20.470Z"
+    },
+    "pageErrors": []
+  },
+  "verification": {
+    "focusedNodeTestsPassed": 14,
+    "focusedNodeTestsFailed": 0,
+    "packageCheck": "73 JavaScript syntax, 4 native binary and 36 resource hashes passed",
+    "mainReview": "rechecked seven-use receipt and SVG/preview/native SHA-256 in the actual saved sources and exported PPTX",
+    "evidenceRehashed": true
+  },
+  "limitations": [
+    "Full brand-property and semantic color-token bindings remain unimplemented/unverified.",
+    "The tested changed-ratio sample preserves existing object frames; a configurable or general anchor policy has not been verified.",
+    "SVG source support remains limited to the self-contained supported material path; legacy or unsupported target types may be refused.",
+    "The white correction was verified in the native editor render; external PowerPoint rendering was not tested.",
+    "This audit is one scoped F6 result, not completion of the 50-task project."
+  ],
+  "evidence": [
+    {
+      "file": "f6-svg-linked-browser.json",
+      "bytes": 5083,
+      "sha256": "6a75a5dc0a85ad30547e5417fdf71fa3db4bd4ecd3aa755dd05908c77bb8c929"
+    },
+    {
+      "file": "f6-svg-linked-browser.log",
+      "bytes": 1218,
+      "sha256": "5e3fecc64978b6a4112e7de6246f5eb9f83e2cbb692d99a0e1c9127b8f8b3fa4"
+    },
+    {
+      "file": "f6-svg-linked-vector.vectorcraft",
+      "bytes": 80504,
+      "sha256": "dcbf9ee3575ee7c338a3aa940d6e4c09c462f39b5f52071068261ddb46b0d23c"
+    },
+    {
+      "file": "f6-svg-linked-deck.deckcraft",
+      "bytes": 11403,
+      "sha256": "4f0c4ba5da138cf7883039e0ebb6f688680a4920452b3954e3308ad6f83e740f"
+    },
+    {
+      "file": "f6-svg-linked-deck.pptx",
+      "bytes": 28539,
+      "sha256": "a148962e5dd7c02eaf00ccbaf6dfdab795a0aa7a56730d94c632d3fff1caa729"
+    },
+    {
+      "file": "f6-svg-linked-white.png",
+      "bytes": 20033,
+      "sha256": "4ad313e3622b4f7dccd487d89fd4f5cf2235baa7ccbb770f955353254755b8cc"
+    },
+    {
+      "file": "f6-svg-linked-source.svg",
+      "bytes": 496,
+      "sha256": "c578faa2460d0eadc18bc95cb3de32dbf776c78cfe090c336a178d0e5addbf1e"
+    },
+    {
+      "file": "f6-svg-linked-preview.png",
+      "bytes": 2537,
+      "sha256": "9aaf712444dfdd161b975865bbc559f3d6414e42b8089b9957667c54d67a9580"
+    },
+    {
+      "file": "f6-svg-linked-ui.png",
+      "bytes": 138598,
+      "sha256": "5bd68aafbdf84f9a67934fe4dab6bc92a61b3be6b61f7e2e866b650050c4dfd1"
+    },
+    {
+      "file": "f6-svg-linked-setup-first-failed.json",
+      "bytes": 881,
+      "sha256": "6306a806b95eefd2d5ce8e65818218381a7e4c96a4720ee5b4df4280b409170f"
+    },
+    {
+      "file": "f6-svg-linked-setup-first-failed.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "f6-final-focused.tap",
+      "bytes": 1613,
+      "sha256": "661763581e8eaadf781b0519f63b6f892abb036c7e0ecdf8d7ab4abddb14f7ad"
+    },
+    {
+      "file": "f6-deck-guard-first-failed.tap",
+      "bytes": 9550,
+      "sha256": "9314bee412a1afa17210a563d5db7f31b44f3fbd17d3f6a1bd0fd110cf1ddffe"
+    },
+    {
+      "file": "f6-deck-guard.tap",
+      "bytes": 1345,
+      "sha256": "3f41af327196e52ed97af51e647394d5f49b651e4adccc80305b7256d2914508"
+    },
+    {
+      "file": "f6-vector-guard.tap",
+      "bytes": 746,
+      "sha256": "20407003f48d7b1cc29cefbee40847ecc56b3018f6f643c7de98052871834d26"
+    },
+    {
+      "file": "f6-svg-graph.tap",
+      "bytes": 585,
+      "sha256": "86f5ee80b503b2ed8bb2bd3a1e7f6714f44e9c1defb06033936bf77867de4247"
+    },
+    {
+      "file": "mixed-seven-ui35-browser.json",
+      "bytes": 5884,
+      "sha256": "a0b7aad95033c8479719a4aa36edbe4e447f04e0b2e648eb851842e84695ee78"
+    },
+    {
+      "file": "mixed-seven-ui35-browser.log",
+      "bytes": 1734,
+      "sha256": "c18cee03b4151cac80d76fd077a60d44f6930cf3e3d06084d15b0b01413b2b07"
+    },
+    {
+      "file": "mixed-seven-ui35-vector.vectorcraft",
+      "bytes": 34658,
+      "sha256": "5a4033b369ad4c78aedc30096ee6a7a5a77079a0fdf9e5c15d89328563cbdd67"
+    },
+    {
+      "file": "mixed-seven-ui35-deck.deckcraft",
+      "bytes": 12703,
+      "sha256": "0f722b23b231e8f429016c805d312760d7707885e0f99a30be2517985a7be9ae"
+    },
+    {
+      "file": "mixed-seven-ui35-deck.pptx",
+      "bytes": 29161,
+      "sha256": "2d2f493ffa9e7aecd05c0be4a79976ec07202f9458d61f33bfe42a4a60ddbf6b"
+    },
+    {
+      "file": "mixed-seven-ui35-white-render.png",
+      "bytes": 19159,
+      "sha256": "5bd8ff6237ed2945e8183c46fc8b1e5e2fb65b9529f8583adf4c0b59501700c5"
+    },
+    {
+      "file": "host-native-deck-header.js",
+      "bytes": 6967,
+      "sha256": "c04b881d049460caea4f107ec8f7549a02facc956122511d1f4683804f22884c"
+    },
+    {
+      "file": "host-native-vector-header.js",
+      "bytes": 12266,
+      "sha256": "7b2c8cb421319a37162410827b236b81133618bd2839cd33aa3e90ceaa347ed8"
+    },
+    {
+      "file": "host-project-graph.js",
+      "bytes": 57550,
+      "sha256": "bf0c6909722661010f86aaba68a5b63051c576a1770480cd7bd0197dbbfc9d53"
+    },
+    {
+      "file": "client-native-controller.js",
+      "bytes": 81016,
+      "sha256": "55be98019d40198cf356029d0d38179798c70e4f70a8e989a8cca69a202f4ac4"
+    },
+    {
+      "file": "tests-svg-linked-mixed.test.mjs",
+      "bytes": 6617,
+      "sha256": "4b644b1f3ed0e5e705175bb119b32e34c2d49ff8a998e4f8152953c7235cf3a8"
+    },
+    {
+      "file": "tests-deck-svg-header.test.mjs",
+      "bytes": 4243,
+      "sha256": "a0143dfaca8e2f2bf4669f91ab81586e9f8d2fe9ec29847f0091b75e90e6b133"
+    },
+    {
+      "file": "tests-vector-embedded-svg-header.test.mjs",
+      "bytes": 3479,
+      "sha256": "c1109ee09d108605e82788e01c27d4f1ad52373755ed71aa628e47fb39a21c55"
+    },
+    {
+      "file": "test_svg_linked_seven.py",
+      "bytes": 18376,
+      "sha256": "a57bc6e283517aa4a902d11789b1aaa9b87b4575b91890ef4a6983c8116b4d68"
+    },
+    {
+      "file": "test_mixed_linked_ui35.py",
+      "bytes": 15133,
+      "sha256": "6e38ed86bd094c413f277335a7a544a36ceb7383a2ea6e0a3caa97fd3231e4dd"
+    }
+  ]
+}

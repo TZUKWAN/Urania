@@ -1,0 +1,25 @@
+{
+  "status": "passed_inventory_only",
+  "repository": "nexu-io/open-design",
+  "revision": "12d970eacc8971150e3c76470d2a9afe16dc2ed1",
+  "sourceTreeSha256": "ae4ff9ac2dca27103a58079ab35f738664581922f718e12ed97917dd67b7782b",
+  "indexSha256": "5abab17709ba42e4813cc05906151ccd3074f636aafdc85fc63dc93817a1f1f3",
+  "indexedPackages": 928,
+  "packageKinds": {
+    "support-resource": 1,
+    "design-system": 152,
+    "design-template": 115,
+    "official-plugin": 479,
+    "community-plugin": 10,
+    "prompt-collection": 2,
+    "skill": 169
+  },
+  "indexedFiles": 7457,
+  "indexedBytes": 174811826,
+  "existingSliceFiles": 36,
+  "existingSliceMatchesOriginalBlobs": true,
+  "completePackageTreesVerified": true,
+  "implementedWorkflowCount": "not asserted",
+  "filesFetchedThisStep": 0,
+  "upstreamCodeExecuted": false
+}

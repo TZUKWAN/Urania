@@ -1,0 +1,53 @@
+{
+  "task": "F3",
+  "status": "verified_photo_double_click_inplace",
+  "asOf": "2026-11-05T11:03:55.627Z",
+  "scope": "已绑定的 PNG 在海报或演示中通过双击进入独立 Photo 源，软边蒙版回写至原对象，重开后再次双击可继续修改蒙版。",
+  "results": [
+    {
+      "status": "passed",
+      "engine": "vectorcraft",
+      "root": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\double-click-inplace\\1708d08f-22e9-4b09-8642-990614f9568a",
+      "source": "work-891f362d-5804-49e8-905d-a560681b48a4",
+      "instanceId": "use-fd474982-ecbf-42da-b6c5-dc599a226b72",
+      "nativeId": "5",
+      "clickPoint": [
+        1031.1616666666666,
+        753.7216666666667
+      ],
+      "actualDoubleClickAndReopen": true,
+      "oldPng": "cd1560491f4afe54861cffff47a0e664c169ccbca0b646b262aacfb2aaa66b33",
+      "updatedPng": "8899841c8aa491928404b9d5801a465c4bfd34fa966a5139b229af8b2b1190a3",
+      "layeredSourceHash": "2d1828db9ffa6b023f0e1495e7fae95cdfc42f1f16287c9789113e05a38a4803",
+      "appliedRevision": "e51ef800a0ebefbfb58209d288ed7d93991dcf28d2576126a735b34a971ab852",
+      "wholeLayoutVerified": true
+    },
+    {
+      "status": "passed",
+      "engine": "deckcraft",
+      "root": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\double-click-inplace\\21b72c01-2139-4d1f-ac6e-de10da335673",
+      "source": "work-1d42dc7e-7ddf-4460-9860-dc7193c4b481",
+      "instanceId": "use-dd2cd42e-47f3-4ccb-a6c7-c6b7d0fa7fa7",
+      "nativeId": "266",
+      "clickPoint": [
+        1258.4124966859818,
+        643.6906227171421
+      ],
+      "actualDoubleClickAndReopen": true,
+      "oldPng": "b73589748b9acb2ffea4686cf74de406e9b303bf2e88a3a9538ed512c9e9bad5",
+      "updatedPng": "54e5b13fbd18f1b2d7647e7b62dda1d62a0b427b5d9adcf3a9fb683572bebd7e",
+      "layeredSourceHash": "2372387422f3e56e1c27e771e5826a93736d2ee46461d6fdf1813679fb3096ea",
+      "appliedRevision": "8974ac23833aabdcc0270942ceac721d0a2667fb7d674bed2362c8b177935274",
+      "wholeLayoutVerified": true
+    }
+  ],
+  "previousEvidence": [
+    "verification/vector-instance-apply-browser.json",
+    "verification/instance-stage-audit.json",
+    "verification/mixed-instance-stage-audit.json"
+  ],
+  "limitations": [
+    "支持已登记的可编辑 Photo 来源。其他来源和外链没有可追溯的分层源。",
+    "验证在隔离 DSH 工作区进行。"
+  ]
+}

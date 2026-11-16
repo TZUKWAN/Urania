@@ -1,0 +1,150 @@
+{
+  "status": "verified_primary_color_and_portable_native_project",
+  "asOf": "2026-11-05T11:21:59.410678+00:00",
+  "tasks": [
+    "G6",
+    "I3"
+  ],
+  "brand": "FOLDLINE STUDIO",
+  "basedOn": "OpenDesign Corporate",
+  "font": "Inter",
+  "primaryBefore": "#2563EB",
+  "primaryAfter": "#17695B",
+  "preservedOverride": "#F2BF65",
+  "sampleSizes": {
+    "poster": [
+      720,
+      960
+    ],
+    "social": [
+      720,
+      720
+    ],
+    "deck": [
+      960,
+      540
+    ]
+  },
+  "actualBrandOperation": {
+    "status": "passed",
+    "root": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\brand-three-designs\\4edbddc3-14c4-42cf-9857-78212bad51bb",
+    "checks": [
+      {
+        "check": "bound poster nativeId"
+      },
+      {
+        "check": "bound social nativeId"
+      },
+      {
+        "check": "bound social override"
+      },
+      {
+        "check": "bound deck nativeId"
+      },
+      {
+        "check": "explicit local color override"
+      },
+      {
+        "check": "first source committed, partial state visible, later physical move persisted"
+      },
+      {
+        "check": "three final native sources, original assets, local color, white logo, physical move and exports verified"
+      }
+    ],
+    "brand": "FOLDLINE STUDIO",
+    "transaction": {
+      "id": "8e2f2894-373a-4bc2-87cd-ce93de5270dc",
+      "kind": "recolor",
+      "brandId": "brand-a0db384f-9bbf-4fcc-aee9-29dda6afa9b0",
+      "previous": "#2563EB",
+      "next": "#17695B",
+      "groups": {
+        "work-bb8a96c8-08e2-4cfb-ac07-105816819dc7": {
+          "engine": "vectorcraft",
+          "baseRevision": "b77ac422fe31242fbd04d1207cf05b3e1fdb3a32ee8fa4687fd861e3b4f3d36c",
+          "rows": [
+            {
+              "bindingId": "brandcolor-a789af5b-66f4-4975-988f-31ad2adfb72d",
+              "nativeId": "9",
+              "token": "PUBLIC-REDACTED",
+              "previous": "#2563EB"
+            }
+          ]
+        },
+        "work-b6720633-dd9b-4755-a87f-c203ea934fa9": {
+          "engine": "vectorcraft",
+          "baseRevision": "3d0f0b3b20a84d1b1e6609bde7ac5520a05be4462fb0994d77ace00bf536506b",
+          "rows": [
+            {
+              "bindingId": "brandcolor-a585f347-0d5c-47f8-85a3-4b74676346b4",
+              "nativeId": "8",
+              "token": "PUBLIC-REDACTED",
+              "previous": "#2563EB"
+            }
+          ]
+        },
+        "work-d30c3750-751f-4402-854d-2df8a52ea04b": {
+          "engine": "deckcraft",
+          "baseRevision": "bc237f245302acc5612473b87eab1d746a8ff4b03563c4044359e70d9d549cf8",
+          "rows": [
+            {
+              "bindingId": "brandcolor-8ac3cb1d-fe86-41db-bd4f-5e34da4f4659",
+              "nativeId": "262",
+              "token": "PUBLIC-REDACTED",
+              "previous": "#2563EB"
+            }
+          ]
+        }
+      },
+      "committed": {
+        "work-bb8a96c8-08e2-4cfb-ac07-105816819dc7": "e20dc2b01ccc24c1deda784fa90658057873296151ef21d206e7cb2c91b2ded6",
+        "work-b6720633-dd9b-4755-a87f-c203ea934fa9": "a54fe0a8694ebf814ca1166ca3f0a277cd15bbf5fb804dc9efd7b60c19e0ed50",
+        "work-d30c3750-751f-4402-854d-2df8a52ea04b": "4556c88a6cc10c99fe6226dd20b4dff9c8a99a8fbd56279b2fc16e53a0d82103"
+      },
+      "overrides": [
+        "brandcolor-bfa481a9-8003-4ed1-97f5-c2c327e6cd16"
+      ],
+      "status": "succeeded",
+      "at": "2026-11-05T11:14:01.305Z"
+    },
+    "primary": "#17695B",
+    "localOverride": "#F2BF65",
+    "manualDeckX": 484.0,
+    "pageErrors": []
+  },
+  "packageRoundtrip": {
+    "status": "passed",
+    "source": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\brand-three-designs\\4edbddc3-14c4-42cf-9857-78212bad51bb",
+    "restoredProject": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\package-roundtrip\\dc4ead18-30ee-4fc3-8b04-8aa1ba3d74c0",
+    "files": 311,
+    "sources": 5,
+    "assets": 2,
+    "sha256": "0b0103dcfcd982ceb3609e593abda6f12ac38fc5bb4dca52a853b13f7a09ed68",
+    "actualExportMenu": true,
+    "independentUnzipVerified": true,
+    "workReopened": true,
+    "brandRestored": true,
+    "bothExplicitThreeUseGroupsRestored": true,
+    "actuallyPlacedSharedSvg": true
+  },
+  "sourceBuilds": {
+    "deckcraft": {
+      "version": "0.13.1+designcraft.host7",
+      "revision": "4ce2944630b04188dee8504c14151994d06c416a",
+      "fontRevision": "aced4137c022f1f587624d48e81ec77e1914a9cc"
+    },
+    "vectorcraft": {
+      "version": "0.19.0+designcraft.host13",
+      "revision": "bcebabe3f8c23a376ac68e9e6726590af278f7bb",
+      "fontRevision": "b076417b5880bd4154bd22f00695b1d28c6bea83"
+    }
+  },
+  "mainReview": "三份成品图逐张查看，并独立核对实际像素、SVG 文字、PPTX 内嵌媒体、归档清单与全部文件哈希。",
+  "boundaries": [
+    "目前自动传播的是明确绑定的原生路径/形状的纯色填充。三份作品共用 Inter 字体，字体令牌改动不会自动重排文字。",
+    "两组 SVG 素材关联在 DesignCraft 项目内保存。外部 PPTX 保留导出时的媒体和可编辑文字形状。",
+    "项目包覆盖已保存的本地专业源和素材关系，含兼容版作品或被检测到的外部媒体时会要求先迁移或嵌入。自定义系统字体由使用端提供。"
+  ],
+  "package": "Foldline_可编辑品牌项目.zip",
+  "exportSet": "Foldline_海报社交图与演示成品.zip"
+}

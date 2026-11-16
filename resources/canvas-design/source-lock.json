@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "repository": "anthropics/skills",
+  "revision": "2c5958ecac7cee2b583967a2c4981d0f4a75c579",
+  "treeSha": "4bcffd51f1f2d19946b520405782c0f2c544906a",
+  "source": "https://codeload.github.com/anthropics/skills/zip/2c5958ecac7cee2b583967a2c4981d0f4a75c579",
+  "archive": "canvas-design.zip",
+  "archiveBytes": 5710179,
+  "archiveSha256": "7c51b4a775bee79e39f0be47b924e1a758a92cf5a5d27084048489a4a31a70d1",
+  "receipt": {
+    "schema": 1,
+    "kind": "external-bundle",
+    "id": "externalbundle-e6f364563a25b0102130e2b9290a5b9f6e697b368f2bfae62f7e5b6d535514c6",
+    "odId": "skills/canvas-design",
+    "odReceiptId": "resource-a8437ae469e900b43e2ba5aeffba096ff11cdb2eb1b5c358302807bedd0c06cd",
+    "repository": "anthropics/skills",
+    "revision": "2c5958ecac7cee2b583967a2c4981d0f4a75c579",
+    "treeSha": "4bcffd51f1f2d19946b520405782c0f2c544906a",
+    "subdir": "skills/canvas-design",
+    "license": "Apache-2.0",
+    "assetName": "ext-e6f364563a25b0102130e2b9.zip",
+    "bytes": 5710179,
+    "sha256": "7c51b4a775bee79e39f0be47b924e1a758a92cf5a5d27084048489a4a31a70d1"
+  },
+  "fileCount": 83,
+  "scope": "skills/canvas-design complete tree, including its Apache license and original supplied font license files; font-level coverage is not established; inert data, no scripts executed"
+}

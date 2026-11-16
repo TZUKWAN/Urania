@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "scope": "actual transformed Photo selection and locally composited previously returned provider image; no new provider call",
+  "maskBounds": {
+    "x": 522,
+    "y": 247,
+    "w": 346,
+    "h": 286
+  },
+  "fractionalPixels": 33826,
+  "verification": {
+    "outsidePixels": 1022606,
+    "mismatchedOutside": 0,
+    "changedInside": 56902,
+    "width": 1408,
+    "height": 768
+  },
+  "newProviderRequests": 0
+}

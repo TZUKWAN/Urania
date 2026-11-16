@@ -1,0 +1,115 @@
+{
+ "schema": 1,
+ "updatedAt": "2026-11-14T08:02:10.752Z",
+ "adoptions": [
+  {
+   "repo": "OpenMontageInc/OpenMontage",
+   "path": "LICENSE",
+   "license": "AGPL-3.0",
+   "expectedSha256": "0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0",
+   "verified": true,
+   "savedTo": "D:/METIS超级合并/dsh-plugin/designcraft/licenses/motion/OpenMontage-AGPL-3.0.txt",
+   "use": "original for minimal adaptation; adaptations recorded separately with diffs in MV5-02"
+  },
+  {
+   "repo": "OpenMontageInc/OpenMontage",
+   "path": "pipeline_defs/animation.yaml",
+   "license": "AGPL-3.0",
+   "expectedSha256": "55f759962023d439df5dcdd1bdac3f7f326da6249b4b64c9481d4ef2ede955c3",
+   "verified": true,
+   "savedTo": "D:/METIS超级合并/dsh-plugin/designcraft/resources/motion-workflows/upstream/OpenMontage-animation.yaml",
+   "use": "original for minimal adaptation; adaptations recorded separately with diffs in MV5-02"
+  },
+  {
+   "repo": "OpenMontageInc/OpenMontage",
+   "path": "schemas/artifacts/asset_manifest.schema.json",
+   "license": "AGPL-3.0",
+   "expectedSha256": "61d54b22d18f925f05463305e7042c0c1d4fa812c79050d262fea003632f8051",
+   "verified": true,
+   "savedTo": "D:/METIS超级合并/dsh-plugin/designcraft/resources/motion-workflows/upstream/OpenMontage-asset_manifest.schema.json",
+   "use": "original for minimal adaptation; adaptations recorded separately with diffs in MV5-02"
+  },
+  {
+   "repo": "OpenMontageInc/OpenMontage",
+   "path": "lib/pipeline_loader.py",
+   "license": "AGPL-3.0",
+   "expectedSha256": "ea4c8bb031ebb6be9f9352fc35adad59880bafe55f5ed26b60537fc4549ce10d",
+   "verified": true,
+   "savedTo": "D:/METIS超级合并/dsh-plugin/designcraft/resources/motion-workflows/upstream/OpenMontage-pipeline_loader.py",
+   "use": "original for minimal adaptation; adaptations recorded separately with diffs in MV5-02"
+  },
+  {
+   "repo": "whaleyxbt/claude-motion",
+   "path": "LICENSE",
+   "license": "MIT",
+   "expectedSha256": "ca02fba63bfcc89f475a8672dd852a220005a17325fc05d7f2299f5adf7f10a4",
+   "verified": true,
+   "savedTo": "D:/METIS超级合并/dsh-plugin/designcraft/licenses/motion/claude-motion-MIT.txt",
+   "use": "original for minimal adaptation; adaptations recorded separately with diffs in MV5-02"
+  },
+  {
+   "repo": "whaleyxbt/claude-motion",
+   "path": ".claude/skills/review-loop/SKILL.md",
+   "license": "MIT",
+   "expectedSha256": "2b313265d9d977f4ca53561f0ce7510c4d653674e0e017dc2afc597259e79173",
+   "verified": true,
+   "savedTo": "D:/METIS超级合并/dsh-plugin/designcraft/resources/motion-workflows/upstream/claude-motion-review-loop-SKILL.md",
+   "use": "original for minimal adaptation; adaptations recorded separately with diffs in MV5-02"
+  },
+  {
+   "repo": "whaleyxbt/claude-motion",
+   "path": "sims/capture.mjs",
+   "license": "MIT",
+   "expectedSha256": "4488cb1298d492bf6ad85c4caa9fa7a58d3848aecf274d92b14d4098cdc852db",
+   "verified": true,
+   "savedTo": "D:/METIS超级合并/dsh-plugin/designcraft/resources/motion-workflows/upstream/claude-motion-capture.mjs",
+   "use": "original for minimal adaptation; adaptations recorded separately with diffs in MV5-02"
+  },
+  {
+   "repo": "Vincentwei1021/video-shotcraft",
+   "path": "LICENSE",
+   "license": "Apache-2.0",
+   "expectedSha256": "b2ce9877a55547ada9b870150664d1468ff777e67cc9888806a73927d31c5771",
+   "verified": true,
+   "savedTo": "D:/METIS超级合并/dsh-plugin/designcraft/licenses/motion/video-shotcraft-Apache-2.0.txt",
+   "use": "original for minimal adaptation; adaptations recorded separately with diffs in MV5-02"
+  },
+  {
+   "repo": "Vincentwei1021/video-shotcraft",
+   "path": "workbench/src/cards/types.ts",
+   "license": "Apache-2.0",
+   "expectedSha256": "7219651d75df3845dcb29da3ccad1b7da4ebf1e44e724033672b2e2d16e1c2ec",
+   "verified": true,
+   "savedTo": "D:/METIS超级合并/dsh-plugin/designcraft/resources/motion-workflows/upstream/video-shotcraft-cards-types.ts",
+   "use": "original for minimal adaptation; adaptations recorded separately with diffs in MV5-02"
+  }
+ ],
+ "verifiedFrom": "animation-handoff-20261114/evidence/source-index.json (46 files, official Git blob SHA + local SHA256)",
+ "repos": [
+  {
+   "repo": "OpenMontageInc/OpenMontage",
+   "commit": "fecb9a1e3cc23ef84de30b272059457a427f16f8",
+   "license": "AGPL-3.0",
+   "use": "minimal stage/asset-schema adoption only"
+  },
+  {
+   "repo": "whaleyxbt/claude-motion",
+   "commit": "6f80380b91858dad66524a5b34e027dad656d538",
+   "license": "MIT",
+   "use": "review-loop method + capture reference"
+  },
+  {
+   "repo": "Vincentwei1021/video-shotcraft",
+   "commit": "6700db2ba80572ebc777b99d72049679fed9840c",
+   "license": "Apache-2.0",
+   "use": "shot card metadata reference"
+  }
+ ],
+ "notInProduct": [
+  "MotionHarness (UNLICENSED)",
+  "onetake (PolyForm NC) code/prompts",
+  "Lemo NC/CC-BY-NC prose and prompts",
+  "remotion-dev/skills full text (no root LICENSE)",
+  "third-party videos/trademarks from awesome indexes"
+ ]
+}

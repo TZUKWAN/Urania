@@ -1,0 +1,1164 @@
+{
+  "schema": 1,
+  "kind": "requested-ten-units-code-build-static-audit",
+  "at": "2026-11-12T19:39:42.531067+00:00",
+  "product": "DesignCraft",
+  "version": "1.3.0-dev.136",
+  "uiBuild": 150,
+  "status": "requested_code_written_build_and_static_checks_complete_functionality_unvalidated",
+  "scope": "Only the five reported code gaps and the five Deck inputs; current-session local design orchestration, not all upstream scripts or additional external services.",
+  "functionalValidation": false,
+  "uiOrRecognitionOrHardwareOrModelOrServiceExecution": false,
+  "userDesktopControlled": false,
+  "dshRestarted": false,
+  "allCoreFunctionsAccepted": false,
+  "units": [
+    {
+      "id": "K1",
+      "title": "Deck动态中文",
+      "codeStatus": "written_and_statically_reviewed",
+      "files": [
+        "client/native-workspace.js",
+        "docs/hosted-ui-source-audit.json"
+      ],
+      "functionalValidation": "deferred_by_user"
+    },
+    {
+      "id": "K2",
+      "title": "图片任务与精确计划版本",
+      "codeStatus": "written_and_statically_reviewed",
+      "files": [
+        "host/image-plan-binding.js",
+        "host/image-jobs.js",
+        "host/studio-image.js",
+        "client/studio-image-workspace.js",
+        "host/project-package.js"
+      ],
+      "functionalValidation": "deferred_by_user"
+    },
+    {
+      "id": "K3",
+      "title": "中文简报v2与旧v1兼容",
+      "codeStatus": "written_and_statically_reviewed",
+      "files": [
+        "host/chinese-design-brief.js",
+        "host/opendesign-design-brief.js",
+        "host/opendesign-design-brief-v1.js",
+        "host/opendesign-brief-job.js"
+      ],
+      "functionalValidation": "deferred_by_user"
+    },
+    {
+      "id": "K4",
+      "title": "历史创意指导原包与计划迁移",
+      "codeStatus": "written_and_statically_reviewed",
+      "files": [
+        "host/director-snapshots.js",
+        "host/creative-director-resource.js",
+        "host/design-plan-migration.js",
+        "host/design-plan-restore.js",
+        "host/project-package.js",
+        "client/native-workspace.js"
+      ],
+      "functionalValidation": "deferred_by_user"
+    },
+    {
+      "id": "K5",
+      "title": "本地OD编排/APCA/OKLCH/完整原生源颜色审计",
+      "codeStatus": "written_and_statically_reviewed",
+      "files": [
+        "host/local-design-workflows.js",
+        "host/local-workflow-routes.js",
+        "host/open-design-tools.js",
+        "client/local-workflow-panel.js",
+        "host/color-contrast.js",
+        "host/document-color-audit.js",
+        "host/native-color-source.js",
+        "client/brand-panel.js",
+        "host/project-package.js"
+      ],
+      "functionalValidation": "deferred_by_user"
+    },
+    {
+      "id": "D1",
+      "title": "墨迹文字",
+      "codeStatus": "written_and_statically_reviewed",
+      "files": [
+        "host/deck-local-inputs.js",
+        "runtimes/ink-recognizer.cs",
+        "client/deck-local-tools.js",
+        "client/native-controller.js"
+      ],
+      "functionalValidation": "deferred_by_user"
+    },
+    {
+      "id": "D2",
+      "title": "墨迹公式",
+      "codeStatus": "written_and_statically_reviewed",
+      "files": [
+        "host/deck-local-inputs.js",
+        "runtimes/ink-recognizer.cs",
+        "client/mathml-to-omml.js",
+        "client/deck-local-tools.js",
+        "client/native-controller.js"
+      ],
+      "functionalValidation": "deferred_by_user"
+    },
+    {
+      "id": "D3",
+      "title": "屏幕截图",
+      "codeStatus": "written_and_statically_reviewed",
+      "files": [
+        "host/deck-local-inputs.js",
+        "runtimes/ink-recognizer.cs",
+        "client/local-capture.js",
+        "client/deck-local-tools.js",
+        "client/native-controller.js"
+      ],
+      "functionalValidation": "deferred_by_user"
+    },
+    {
+      "id": "D4",
+      "title": "麦克风旁白",
+      "codeStatus": "written_and_statically_reviewed",
+      "files": [
+        "client/local-capture.js",
+        "client/deck-local-tools.js",
+        "client/native-controller.js"
+      ],
+      "functionalValidation": "deferred_by_user"
+    },
+    {
+      "id": "D5",
+      "title": "摄像头照片/录像",
+      "codeStatus": "written_and_statically_reviewed",
+      "files": [
+        "client/local-capture.js",
+        "client/deck-local-tools.js",
+        "client/native-controller.js"
+      ],
+      "functionalValidation": "deferred_by_user"
+    }
+  ],
+  "changedJavaScript": [
+    {
+      "file": "host/chinese-design-brief.js",
+      "sha256": "2f92041723fa45b10aedef800a9906dc836db2d0ddceb1986e06149b9b540c9e",
+      "bytes": 5446,
+      "change": "added",
+      "syntaxChecked": true
+    },
+    {
+      "file": "host/color-contrast.js",
+      "sha256": "5ece78c172b458a29878ed34c2c0cb0470de4310822d065be9b89a7ab9d5190d",
+      "bytes": 2554,
+      "change": "modified",
+      "syntaxChecked": true
+    },
+    {
+      "file": "host/creative-director-resource.js",
+      "sha256": "88574f670eb49fd8981eb7fe1978da1fce6b3f7dfedeea46769b45ddd36d1f82",
+      "bytes": 6610,
+      "change": "modified",
+      "syntaxChecked": true
+    },
+    {
+      "file": "host/deck-local-inputs.js",
+      "sha256": "1ccc0f31337b4463a3eb50fcf7b1eea92ecff0dc340a99a67ac42ed0bf8b02f1",
+      "bytes": 6510,
+      "change": "added",
+      "syntaxChecked": true
+    },
+    {
+      "file": "host/design-plan-migration.js",
+      "sha256": "4f55473af155831d7753bcbefdd81deefd0ff18cad8042f788f1e33dbb2065c4",
+      "bytes": 3563,
+      "change": "added",
+      "syntaxChecked": true
+    },
+    {
+      "file": "host/design-plan-restore.js",
+      "sha256": "9ecbbd29f1da9b3c2617e33dd28dccc4d7b83f6c3ca70bb2a9bff97daa171f53",
+      "bytes": 4898,
+      "change": "modified",
+      "syntaxChecked": true
+    },
+    {
+      "file": "host/design-plan-tool.js",
+      "sha256": "fafe448a2449e5ea133a31bb2abf3e80862cad0f1f1f9ecd5b4556336805a310",
+      "bytes": 17192,
+      "change": "modified",
+      "syntaxChecked": true
+    },
+    {
+      "file": "host/director-snapshots.js",
+      "sha256": "296438fbd3613dd7e5a9a9bab2640c1b0de442ef60b652101cb6ed8e84b132f5",
+      "bytes": 7822,
+      "change": "added",
+      "syntaxChecked": true
+    },
+    {
+      "file": "host/document-color-audit.js",
+      "sha256": "4e0600fc45f8a5797258c343de9f9d945ce3be5531ac48c0c6866f0a2886ea46",
+      "bytes": 6100,
+      "change": "added",
+      "syntaxChecked": true
+    },
+    {
+      "file": "host/editor-routes.js",
+      "sha256": "397e828e032bd00b01873caf2374f8dc04d7cb8b490939d91cde832bf8d0f5c1",
+      "bytes": 32066,
+      "change": "modified",
+      "syntaxChecked": true
+    },
+    {
+      "file": "host/html-routes.js",
+      "sha256": "c6587c5ea7d66374d6d4a80fafe10b48cfe972c316192fca646bf9f64493cc15",
+      "bytes": 48684,
+      "change": "modified",
+      "syntaxChecked": true
+    },
+    {
+      "file": "host/image-jobs.js",
+      "sha256": "78ff2250eb85eb2f4dbd181b6b54b0bc916263bf62fde2b64be1d9901b4b5231",
+      "bytes": 57686,
+      "change": "modified",
+      "syntaxChecked": true
+    },
+    {
+      "file": "host/image-plan-binding.js",
+      "sha256": "1a45a59885a2508e7996b43cd278564303f1f4c6beb2240933c081faecfdadd2",
+      "bytes": 5264,
+      "change": "added",
+      "syntaxChecked": true
+    },
+    {
+      "file": "host/index.js",
+      "sha256": "76e617aa7875cb387211025243fe7ea634890de6ae1853a53527f1c377e0271e",
+      "bytes": 39434,
+      "change": "modified",
+      "syntaxChecked": true
+    },
+    {
+      "file": "host/local-design-workflows.js",
+      "sha256": "23e7dc04a3be5a5faa53f61c342f372bf12ce453c428ee490dd7587139bfc6a3",
+      "bytes": 18815,
+      "change": "added",
+      "syntaxChecked": true
+    },
+    {
+      "file": "host/local-workflow-routes.js",
+      "sha256": "26a34fea610494cf3cc613722023d075690c98d298d981b9c8e64a80351cf699",
+      "bytes": 2649,
+      "change": "added",
+      "syntaxChecked": true
+    },
+    {
+      "file": "host/native-color-source.js",
+      "sha256": "1d4b0a69295588bea460a96ccbf66460c90ccfaa8bc2b58e50b6b67e6777784b",
+      "bytes": 2884,
+      "change": "added",
+      "syntaxChecked": true
+    },
+    {
+      "file": "host/open-design-tools.js",
+      "sha256": "4c8aaa08a1f7a9b75abcc052f5eec2e704bc62041710e68f3b039b44eef68163",
+      "bytes": 56590,
+      "change": "modified",
+      "syntaxChecked": true
+    },
+    {
+      "file": "host/opendesign-brief-job.js",
+      "sha256": "ada0930a12b8d70378e216f123d20d25130df9dbde1dc52e0ba540521c204f74",
+      "bytes": 15940,
+      "change": "modified",
+      "syntaxChecked": true
+    },
+    {
+      "file": "host/opendesign-brief-tool.js",
+      "sha256": "47ea1d01992daf6b1de1488b72e7f6ec9b0bf247b8a0eb1e94d1ed048eb72e9b",
+      "bytes": 4786,
+      "change": "modified",
+      "syntaxChecked": true
+    },
+    {
+      "file": "host/opendesign-design-brief-v1.js",
+      "sha256": "4e2b71ab859746a242093e1725091c7c9bfe7010746056531e7f2fcb0f61b457",
+      "bytes": 13574,
+      "change": "added",
+      "syntaxChecked": true
+    },
+    {
+      "file": "host/opendesign-design-brief.js",
+      "sha256": "5d8820fba1a6717633d55c0c36f4e2ddf4491b00fc6135fd8f74a49669ad36ef",
+      "bytes": 2390,
+      "change": "modified",
+      "syntaxChecked": true
+    },
+    {
+      "file": "host/project-package.js",
+      "sha256": "346dd35495348ee582d73437330023dfa1deae379f008bb11cb41837f8eceede",
+      "bytes": 224404,
+      "change": "modified",
+      "syntaxChecked": true
+    },
+    {
+      "file": "host/studio-image.js",
+      "sha256": "73f4663bbfd03b12b0dfcea6e96e2f1a15b5eb16382b41fa701dfe0aca5d94bb",
+      "bytes": 26349,
+      "change": "modified",
+      "syntaxChecked": true
+    },
+    {
+      "file": "client/brand-panel.js",
+      "sha256": "6afcdf6332af83e3261c12f68c0d53113a6d352c646bb237dbc6683de7311b4d",
+      "bytes": 19734,
+      "change": "modified",
+      "syntaxChecked": true
+    },
+    {
+      "file": "client/client.js",
+      "sha256": "9b279ff5fb97e3acc8d48c8cde45d265ee5905c61928a8017dc963096bc0d090",
+      "bytes": 10465,
+      "change": "modified",
+      "syntaxChecked": true
+    },
+    {
+      "file": "client/deck-local-tools.js",
+      "sha256": "4ce59593dd3552cbccbe7ca3d3e760c2c53d6ef5f2eea473948911f69dde3636",
+      "bytes": 11403,
+      "change": "added",
+      "syntaxChecked": true
+    },
+    {
+      "file": "client/editor-frame.js",
+      "sha256": "725c9dc1c10c3eababf83e92547d6808a32f040ee6cb04e13bf0621589f0318c",
+      "bytes": 17827,
+      "change": "modified",
+      "syntaxChecked": true
+    },
+    {
+      "file": "client/editor-surface.js",
+      "sha256": "d49aba2aac7ec5eceec62aed6b8a40a2d7cea50d2da78a6259b76bb4efe1d093",
+      "bytes": 5811,
+      "change": "modified",
+      "syntaxChecked": true
+    },
+    {
+      "file": "client/html-workspace.js",
+      "sha256": "95ca55e267efa7b7164cc6aebeaaa92eb8ceada0c6c451b0656225f0b17b3ae6",
+      "bytes": 94885,
+      "change": "modified",
+      "syntaxChecked": true
+    },
+    {
+      "file": "client/local-capture.js",
+      "sha256": "82a88d7ff05073a3f42e5420cda44412f091be93fd2dcbdfdfedd798b993cac2",
+      "bytes": 6146,
+      "change": "added",
+      "syntaxChecked": true
+    },
+    {
+      "file": "client/local-workflow-panel.js",
+      "sha256": "e0c4d1946bd5be7f0ba7dc6c9d06fe4d8f131a37edec8e8dfe1732bcea018dcb",
+      "bytes": 8695,
+      "change": "added",
+      "syntaxChecked": true
+    },
+    {
+      "file": "client/mathml-to-omml.js",
+      "sha256": "c33f349e7c31f2d4200a19e2d06d6654282da72eb38cd542384946204929cf43",
+      "bytes": 5504,
+      "change": "added",
+      "syntaxChecked": true
+    },
+    {
+      "file": "client/native-context-tools.js",
+      "sha256": "0600b75b023f242df53306063c8cc969775b663bfca11b5a201f6e6c3eeef2f3",
+      "bytes": 3730,
+      "change": "modified",
+      "syntaxChecked": true
+    },
+    {
+      "file": "client/native-contract.js",
+      "sha256": "80d4b2f98a07829f513ee6fbdeafa03c013cd25d420fb2cb309f3013faa376eb",
+      "bytes": 7813,
+      "change": "modified",
+      "syntaxChecked": true
+    },
+    {
+      "file": "client/native-controller.js",
+      "sha256": "2f88ebf91da2f4760a7d3f9ecc46da7b9b481874aa9c5fb1a6e1c96eeeedc508",
+      "bytes": 133875,
+      "change": "modified",
+      "syntaxChecked": true
+    },
+    {
+      "file": "client/native-reference.js",
+      "sha256": "a338e1fbcf1342a928ab2131a233269d027506caa2814e6cb108358b29429aea",
+      "bytes": 6531,
+      "change": "modified",
+      "syntaxChecked": true
+    },
+    {
+      "file": "client/native-workspace.js",
+      "sha256": "c57f95f9ee199b7816b885d57f469b1c193bf218b3e6022bbd92f62126063c53",
+      "bytes": 97491,
+      "change": "modified",
+      "syntaxChecked": true
+    },
+    {
+      "file": "client/studio-image-workspace.js",
+      "sha256": "a36d2f68700fe0cd628e5896fac09539be5b3058063bb86048bde242e3bc19cb",
+      "bytes": 39192,
+      "change": "modified",
+      "syntaxChecked": true
+    },
+    {
+      "file": "client/ui.js",
+      "sha256": "374a2b2f4817b585f73cd076b74b1122996c8f0e9bbadaf795a83c79a095bb7c",
+      "bytes": 101124,
+      "change": "modified",
+      "syntaxChecked": true
+    }
+  ],
+  "syntaxFilesChecked": 40,
+  "staticCommands": [
+    {
+      "command": "node --check D:\\METIS超级合并\\dsh-plugin\\designcraft\\host\\chinese-design-brief.js",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check D:\\METIS超级合并\\dsh-plugin\\designcraft\\host\\color-contrast.js",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check D:\\METIS超级合并\\dsh-plugin\\designcraft\\host\\creative-director-resource.js",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check D:\\METIS超级合并\\dsh-plugin\\designcraft\\host\\deck-local-inputs.js",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check D:\\METIS超级合并\\dsh-plugin\\designcraft\\host\\design-plan-migration.js",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check D:\\METIS超级合并\\dsh-plugin\\designcraft\\host\\design-plan-restore.js",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check D:\\METIS超级合并\\dsh-plugin\\designcraft\\host\\design-plan-tool.js",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check D:\\METIS超级合并\\dsh-plugin\\designcraft\\host\\director-snapshots.js",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check D:\\METIS超级合并\\dsh-plugin\\designcraft\\host\\document-color-audit.js",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check D:\\METIS超级合并\\dsh-plugin\\designcraft\\host\\editor-routes.js",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check D:\\METIS超级合并\\dsh-plugin\\designcraft\\host\\html-routes.js",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check D:\\METIS超级合并\\dsh-plugin\\designcraft\\host\\image-jobs.js",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check D:\\METIS超级合并\\dsh-plugin\\designcraft\\host\\image-plan-binding.js",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check D:\\METIS超级合并\\dsh-plugin\\designcraft\\host\\index.js",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check D:\\METIS超级合并\\dsh-plugin\\designcraft\\host\\local-design-workflows.js",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check D:\\METIS超级合并\\dsh-plugin\\designcraft\\host\\local-workflow-routes.js",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check D:\\METIS超级合并\\dsh-plugin\\designcraft\\host\\native-color-source.js",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check D:\\METIS超级合并\\dsh-plugin\\designcraft\\host\\open-design-tools.js",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check D:\\METIS超级合并\\dsh-plugin\\designcraft\\host\\opendesign-brief-job.js",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check D:\\METIS超级合并\\dsh-plugin\\designcraft\\host\\opendesign-brief-tool.js",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check D:\\METIS超级合并\\dsh-plugin\\designcraft\\host\\opendesign-design-brief-v1.js",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check D:\\METIS超级合并\\dsh-plugin\\designcraft\\host\\opendesign-design-brief.js",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check D:\\METIS超级合并\\dsh-plugin\\designcraft\\host\\project-package.js",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check D:\\METIS超级合并\\dsh-plugin\\designcraft\\host\\studio-image.js",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check D:\\METIS超级合并\\dsh-plugin\\designcraft\\client\\brand-panel.js",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check D:\\METIS超级合并\\dsh-plugin\\designcraft\\client\\client.js",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check D:\\METIS超级合并\\dsh-plugin\\designcraft\\client\\deck-local-tools.js",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check D:\\METIS超级合并\\dsh-plugin\\designcraft\\client\\editor-frame.js",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check D:\\METIS超级合并\\dsh-plugin\\designcraft\\client\\editor-surface.js",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check D:\\METIS超级合并\\dsh-plugin\\designcraft\\client\\html-workspace.js",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check D:\\METIS超级合并\\dsh-plugin\\designcraft\\client\\local-capture.js",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check D:\\METIS超级合并\\dsh-plugin\\designcraft\\client\\local-workflow-panel.js",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check D:\\METIS超级合并\\dsh-plugin\\designcraft\\client\\mathml-to-omml.js",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check D:\\METIS超级合并\\dsh-plugin\\designcraft\\client\\native-context-tools.js",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check D:\\METIS超级合并\\dsh-plugin\\designcraft\\client\\native-contract.js",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check D:\\METIS超级合并\\dsh-plugin\\designcraft\\client\\native-controller.js",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check D:\\METIS超级合并\\dsh-plugin\\designcraft\\client\\native-reference.js",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check D:\\METIS超级合并\\dsh-plugin\\designcraft\\client\\native-workspace.js",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check D:\\METIS超级合并\\dsh-plugin\\designcraft\\client\\studio-image-workspace.js",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check D:\\METIS超级合并\\dsh-plugin\\designcraft\\client\\ui.js",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "command": "python work/static_external_imports.py",
+      "exitCode": 0,
+      "output": "Checked 643 literal relative references in 130 source files; workers exist.\n"
+    },
+    {
+      "command": "python work/audit_client_module_routes.py",
+      "exitCode": 0,
+      "output": "静态核对 43 个声明文件、77 个可识别相对 JS 引用：均在路由表；未运行服务或界面。\n"
+    }
+  ],
+  "sourceEvidence": [
+    {
+      "file": "README.md",
+      "sha256": "9a21b1c9512879797512b98dc05454928531d60782fe1862a5061f751a5ca6d3",
+      "bytes": 25707
+    },
+    {
+      "file": "client/brand-panel.js",
+      "sha256": "6afcdf6332af83e3261c12f68c0d53113a6d352c646bb237dbc6683de7311b4d",
+      "bytes": 19734
+    },
+    {
+      "file": "client/deck-local-tools.js",
+      "sha256": "4ce59593dd3552cbccbe7ca3d3e760c2c53d6ef5f2eea473948911f69dde3636",
+      "bytes": 11403
+    },
+    {
+      "file": "client/local-capture.js",
+      "sha256": "82a88d7ff05073a3f42e5420cda44412f091be93fd2dcbdfdfedd798b993cac2",
+      "bytes": 6146
+    },
+    {
+      "file": "client/local-workflow-panel.js",
+      "sha256": "e0c4d1946bd5be7f0ba7dc6c9d06fe4d8f131a37edec8e8dfe1732bcea018dcb",
+      "bytes": 8695
+    },
+    {
+      "file": "client/mathml-to-omml.js",
+      "sha256": "c33f349e7c31f2d4200a19e2d06d6654282da72eb38cd542384946204929cf43",
+      "bytes": 5504
+    },
+    {
+      "file": "client/native-controller.js",
+      "sha256": "2f88ebf91da2f4760a7d3f9ecc46da7b9b481874aa9c5fb1a6e1c96eeeedc508",
+      "bytes": 133875
+    },
+    {
+      "file": "client/native-workspace.js",
+      "sha256": "c57f95f9ee199b7816b885d57f469b1c193bf218b3e6022bbd92f62126063c53",
+      "bytes": 97491
+    },
+    {
+      "file": "client/studio-image-workspace.js",
+      "sha256": "a36d2f68700fe0cd628e5896fac09539be5b3058063bb86048bde242e3bc19cb",
+      "bytes": 39192
+    },
+    {
+      "file": "docs/five-gaps-and-deck.md",
+      "sha256": "41a382853d311bca8eec18d2086280c5b60567b545ca9392c2007a2dda39962c",
+      "bytes": 6598
+    },
+    {
+      "file": "docs/hosted-ui-source-audit.json",
+      "sha256": "69f43683f0a3886b17194ea2d6e621319f6cd3879cf15e2401249eccf6114077",
+      "bytes": 36929
+    },
+    {
+      "file": "host/chinese-design-brief.js",
+      "sha256": "2f92041723fa45b10aedef800a9906dc836db2d0ddceb1986e06149b9b540c9e",
+      "bytes": 5446
+    },
+    {
+      "file": "host/color-contrast.js",
+      "sha256": "5ece78c172b458a29878ed34c2c0cb0470de4310822d065be9b89a7ab9d5190d",
+      "bytes": 2554
+    },
+    {
+      "file": "host/creative-director-resource.js",
+      "sha256": "88574f670eb49fd8981eb7fe1978da1fce6b3f7dfedeea46769b45ddd36d1f82",
+      "bytes": 6610
+    },
+    {
+      "file": "host/deck-local-inputs.js",
+      "sha256": "1ccc0f31337b4463a3eb50fcf7b1eea92ecff0dc340a99a67ac42ed0bf8b02f1",
+      "bytes": 6510
+    },
+    {
+      "file": "host/design-plan-migration.js",
+      "sha256": "4f55473af155831d7753bcbefdd81deefd0ff18cad8042f788f1e33dbb2065c4",
+      "bytes": 3563
+    },
+    {
+      "file": "host/design-plan-restore.js",
+      "sha256": "9ecbbd29f1da9b3c2617e33dd28dccc4d7b83f6c3ca70bb2a9bff97daa171f53",
+      "bytes": 4898
+    },
+    {
+      "file": "host/director-snapshots.js",
+      "sha256": "296438fbd3613dd7e5a9a9bab2640c1b0de442ef60b652101cb6ed8e84b132f5",
+      "bytes": 7822
+    },
+    {
+      "file": "host/document-color-audit.js",
+      "sha256": "4e0600fc45f8a5797258c343de9f9d945ce3be5531ac48c0c6866f0a2886ea46",
+      "bytes": 6100
+    },
+    {
+      "file": "host/image-jobs.js",
+      "sha256": "78ff2250eb85eb2f4dbd181b6b54b0bc916263bf62fde2b64be1d9901b4b5231",
+      "bytes": 57686
+    },
+    {
+      "file": "host/image-plan-binding.js",
+      "sha256": "1a45a59885a2508e7996b43cd278564303f1f4c6beb2240933c081faecfdadd2",
+      "bytes": 5264
+    },
+    {
+      "file": "host/index.js",
+      "sha256": "76e617aa7875cb387211025243fe7ea634890de6ae1853a53527f1c377e0271e",
+      "bytes": 39434
+    },
+    {
+      "file": "host/local-design-workflows.js",
+      "sha256": "23e7dc04a3be5a5faa53f61c342f372bf12ce453c428ee490dd7587139bfc6a3",
+      "bytes": 18815
+    },
+    {
+      "file": "host/local-workflow-routes.js",
+      "sha256": "26a34fea610494cf3cc613722023d075690c98d298d981b9c8e64a80351cf699",
+      "bytes": 2649
+    },
+    {
+      "file": "host/native-color-source.js",
+      "sha256": "1d4b0a69295588bea460a96ccbf66460c90ccfaa8bc2b58e50b6b67e6777784b",
+      "bytes": 2884
+    },
+    {
+      "file": "host/open-design-tools.js",
+      "sha256": "4c8aaa08a1f7a9b75abcc052f5eec2e704bc62041710e68f3b039b44eef68163",
+      "bytes": 56590
+    },
+    {
+      "file": "host/opendesign-brief-job.js",
+      "sha256": "ada0930a12b8d70378e216f123d20d25130df9dbde1dc52e0ba540521c204f74",
+      "bytes": 15940
+    },
+    {
+      "file": "host/opendesign-design-brief-v1.js",
+      "sha256": "4e2b71ab859746a242093e1725091c7c9bfe7010746056531e7f2fcb0f61b457",
+      "bytes": 13574
+    },
+    {
+      "file": "host/opendesign-design-brief.js",
+      "sha256": "5d8820fba1a6717633d55c0c36f4e2ddf4491b00fc6135fd8f74a49669ad36ef",
+      "bytes": 2390
+    },
+    {
+      "file": "host/project-package.js",
+      "sha256": "346dd35495348ee582d73437330023dfa1deae379f008bb11cb41837f8eceede",
+      "bytes": 224404
+    },
+    {
+      "file": "host/studio-image.js",
+      "sha256": "73f4663bbfd03b12b0dfcea6e96e2f1a15b5eb16382b41fa701dfe0aca5d94bb",
+      "bytes": 26349
+    },
+    {
+      "file": "runtime-lock.json",
+      "sha256": "241ca1f16017b1cd70f9e8eac8864860d57e2a1c750a96865bb34e5e6cb8f24e",
+      "bytes": 2077
+    },
+    {
+      "file": "runtimes/ink-recognizer.cs",
+      "sha256": "960777d1fca9ad409e169a4ed0b3183631ad2c2bb638587141d7f0fa7c9a5614",
+      "bytes": 10178
+    },
+    {
+      "file": "runtimes/ink-recognizer.exe",
+      "sha256": "759329111be8465fcfe74d54bf6a104055d63eb9c31e0b7219e3c64ded389ca0",
+      "bytes": 20992
+    },
+    {
+      "file": "runtimes/ink-recognizer.lock.json",
+      "sha256": "7944e612b5762cb4c8b5bf11f351b1a658ac645e621f6dd4e9755ffab19d731f",
+      "bytes": 412
+    },
+    {
+      "file": "skills/designcraft/SKILL.md",
+      "sha256": "d6295922b61d954200c3b9f5e219dede4eb362b1d8a59fb29ce6ceb43dd6bfbb",
+      "bytes": 55697
+    },
+    {
+      "file": "web-runtime-lock.json",
+      "sha256": "395e311d741bcacff0d41ef5ff590517fe1e20710bf131eaf622af220238f0e9",
+      "bytes": 57625
+    }
+  ],
+  "nativeChangedSources": [
+    {
+      "file": "crates/ui-egui/src/control.rs",
+      "sha256": "22ec3265c9f9680c1b0b8c94b61d91a861b5cd811d1e267397c76a19a9b75bca"
+    },
+    {
+      "file": "crates/ui-egui/src/doc_window.rs",
+      "sha256": "b5a7287b1a265ce85ada97047f3f6ee0f217c4e8ba3471ad9d77c61f890a60c1"
+    },
+    {
+      "file": "crates/ui-egui/src/host_ui.rs",
+      "sha256": "3b6268d4dbc13f0c1241bb38a73a8fb1fc46a01b19810fd495beced714ed7cc5"
+    },
+    {
+      "file": "crates/ui-egui/src/media.rs",
+      "sha256": "9e1c025a4196e67382b1585bdfee46c1ffaa9fae9be9a9c69dd2a4a146e56306"
+    },
+    {
+      "file": "crates/ui-egui/src/opening.rs",
+      "sha256": "263d2ed2aa66f2edac9fa15e3183f4cf36412e9dfb722c3df2ffba9cd29da5f0"
+    },
+    {
+      "file": "crates/ui-egui/src/sorter.rs",
+      "sha256": "9a8d005536522511815fa5de4ca60fe40d306e476c06b46a5f0dbd7ed9a6356c"
+    },
+    {
+      "file": "crates/ui-egui/src/status.rs",
+      "sha256": "a13977dc9e0244feaf2b2ad0c25203d9a173cf9d132e633de590d60fbed1df0e"
+    },
+    {
+      "file": "crates/ui-egui/src/toast.rs",
+      "sha256": "78f7ae1c009b5e4c1104d6c2a395e3293edb9f0f10833f57acf6b530bf6ac2e1"
+    },
+    {
+      "file": "crates/ui-egui/src/widgets.rs",
+      "sha256": "21a206a600360bb0d3a606f7f6001edfc534df5498378d7b43aedb40de91b224"
+    },
+    {
+      "file": "crates/ui-egui/src/app/commands.rs",
+      "sha256": "fb6cad6110115e7536939f872072212881174f6e000746043358ad0983dfaaab"
+    },
+    {
+      "file": "crates/ui-egui/src/app/files.rs",
+      "sha256": "4e32f92a21ef116b47ed36ad6f5329130415d37daafda7dfff8f6b2b0957ccb2"
+    },
+    {
+      "file": "crates/ui-egui/src/app/frame.rs",
+      "sha256": "b3160ad3b703a5bb53ccb92743c5593eede2d4e4c862441a5802d3ca6e2301a9"
+    },
+    {
+      "file": "crates/ui-egui/src/app/keys.rs",
+      "sha256": "ef5d1abe023390292d178ee1c0941e3ccac4c08eb9c92f18119efa03a7149050"
+    },
+    {
+      "file": "crates/ui-egui/src/app/playback.rs",
+      "sha256": "5f59c6d67b2e950dc1f5e6b186fe2caba3cb4824a31c94fc276483fac7c50303"
+    },
+    {
+      "file": "crates/ui-egui/src/backstage/files.rs",
+      "sha256": "e86962ee05fe921448b14a51c9e5041f13309969a22d5927777650e0d78069df"
+    },
+    {
+      "file": "crates/ui-egui/src/backstage/info.rs",
+      "sha256": "2a13f34ba24f3c41469280d72fd66394d0a8e31dc66d3e3960d7db9348f56cc8"
+    },
+    {
+      "file": "crates/ui-egui/src/backstage/print.rs",
+      "sha256": "e387d83abd3bbbf235691a4297a75a8b46207a96dd06a34a65412f8055418d84"
+    },
+    {
+      "file": "crates/ui-egui/src/canvas/rulers.rs",
+      "sha256": "fada9183cfa895433d6277e2d266fdd709cd2cc613256df74610a6ad8b9d42b3"
+    },
+    {
+      "file": "crates/ui-egui/src/control/hosted.rs",
+      "sha256": "b96535d0759bea329d89e490e0616e3dca2fb311a054f2f377fcec52dddcf8be"
+    },
+    {
+      "file": "crates/ui-egui/src/dialogs/about.rs",
+      "sha256": "5d919d0f4da70335ada0db0f408f5b7f746082b77f4a1898d45fe96c9343e1f1"
+    },
+    {
+      "file": "crates/ui-egui/src/dialogs/body.rs",
+      "sha256": "48cb990fdd35caccfc2d6d981abd8639d0db5c5d33d2ffa93c2456a50b476a57"
+    },
+    {
+      "file": "crates/ui-egui/src/dialogs/credits.rs",
+      "sha256": "383d4992e96a72e99bc01a18eccea8c4326409a688ba34fdef267b3351f5ee5c"
+    },
+    {
+      "file": "crates/ui-egui/src/dialogs/export.rs",
+      "sha256": "161921a666298c7d44b7dcb64ee4db2fde7b9de86de09350257355bbeb0c6da0"
+    },
+    {
+      "file": "crates/ui-egui/src/dialogs/find.rs",
+      "sha256": "711ddae2384633fc3166c6f71a4f9f1a3db25ce900845b57b04ee8b86ca86009"
+    },
+    {
+      "file": "crates/ui-egui/src/dialogs/photo_album.rs",
+      "sha256": "0f2bf69f15f9a2fa37923651f1f283467291cf4515790d09c1a3aa20a47ccc00"
+    },
+    {
+      "file": "crates/ui-egui/src/dialogs/size_position.rs",
+      "sha256": "6a6f1ec1ae3e0271e88a6b241bfc0a79cc8ba34c0fc3bc4238fe8ba844c7c09a"
+    },
+    {
+      "file": "crates/ui-egui/src/dialogs/tabs.rs",
+      "sha256": "f746c583bfa1f7299223623510157962b025dae4a65a3603ddc21cc2a777798e"
+    },
+    {
+      "file": "crates/ui-egui/src/dialogs/theme_colors.rs",
+      "sha256": "7aeeae05b8f44bae3a5d47dcd5289bfd1be24e56ef8783544584d6c6f2d5e1bf"
+    },
+    {
+      "file": "crates/ui-egui/src/dialogs/theme_fonts.rs",
+      "sha256": "5e1ac716ff0a03ff3949c2eb1ce9bbef593342a52066df23476e875a9eff451d"
+    },
+    {
+      "file": "crates/ui-egui/src/dialogs/updates_ui.rs",
+      "sha256": "7ba18fe253080309f6552240742215ea354b3cb13c22bb5455ba67e6123e5e66"
+    },
+    {
+      "file": "crates/ui-egui/src/panels/animation.rs",
+      "sha256": "20f8ef302df1986fb8ee2f039712859b0315ca8179f32509f93f768dcf88393c"
+    },
+    {
+      "file": "crates/ui-egui/src/panels/animtimeline.rs",
+      "sha256": "e47c5f7523d0dd258007b4bbead97c001ecd03fd97d5100b077d9e48ed1af981"
+    },
+    {
+      "file": "crates/ui-egui/src/panels/comments.rs",
+      "sha256": "b8bd43ec80063e0360c4cf749328fb4a867d1353aaf44512dcfa50471a332c65"
+    },
+    {
+      "file": "crates/ui-egui/src/panels/effect_presets.rs",
+      "sha256": "a156e57841ff6d65293f7800d87d06fee85f7ceceaf65d14448b2232ebf452a7"
+    },
+    {
+      "file": "crates/ui-egui/src/panels/fillui.rs",
+      "sha256": "bb2d126d6a0d504663a9878b4666d1d5b7f1b98e90c3786775a4c425448b49af"
+    },
+    {
+      "file": "crates/ui-egui/src/panels/thesaurus.rs",
+      "sha256": "c9735eb82efb121d245b476f0ab473a37c3e2433925e14d51e283ddff51819ba"
+    },
+    {
+      "file": "crates/ui-egui/src/panels/thumbs.rs",
+      "sha256": "fc93de272be28cbfea790b33dc488630da42585720976c385442662c0f420034"
+    },
+    {
+      "file": "crates/ui-egui/src/ribbon/animations.rs",
+      "sha256": "61a5f21d3e6d3a4e47387dca1ed03dfac291d3b28bff74f40f556b76daa1a138"
+    },
+    {
+      "file": "crates/ui-egui/src/ribbon/design.rs",
+      "sha256": "830095ed32eef70bd8d1b62375694d13bf2b53080cf397c889e4750c9f5855c2"
+    },
+    {
+      "file": "crates/ui-egui/src/ribbon/draw.rs",
+      "sha256": "c7d4c355374b4c9ea37a83583c60e3a6bcd568889fb8aa3de3f1da5e88dd75de"
+    },
+    {
+      "file": "crates/ui-egui/src/ribbon/galleries.rs",
+      "sha256": "946bac266395a6b4936eddbc6821aa7e7338472d0b817dd920cfdbd427001a84"
+    },
+    {
+      "file": "crates/ui-egui/src/ribbon/home.rs",
+      "sha256": "f767f50ec8bb6255aca73e87b0c3a323c21cd7157bd977ef5de2c5c0caded61a"
+    },
+    {
+      "file": "crates/ui-egui/src/ribbon/insert.rs",
+      "sha256": "65e3b0e04fca59a1d4efbc2bd4c62a4d8603e351298c30b85a8c3a89cbf97bb7"
+    },
+    {
+      "file": "crates/ui-egui/src/ribbon/masters.rs",
+      "sha256": "ba4cf35b24a6c521f806ab28e6f017ae592e0858f7da9f646e081a8059920ce5"
+    },
+    {
+      "file": "crates/ui-egui/src/ribbon/picture_format.rs",
+      "sha256": "668e38905bb60ce08812a0832ca3678122359e173b48123f7d90461283fde71d"
+    },
+    {
+      "file": "crates/ui-egui/src/ribbon/qat.rs",
+      "sha256": "0c5f5e19b7d44225bda36b80a016c1b7901347d423d9296714b4912da419a9c5"
+    },
+    {
+      "file": "crates/ui-egui/src/ribbon/slide_show.rs",
+      "sha256": "06ed0f45ec1d4ed23f9ac5881501c1b65cd9cbf2d4c7e141dd6685f4b7bae01c"
+    },
+    {
+      "file": "crates/ui-egui/src/ribbon/table.rs",
+      "sha256": "464eaec429da14c5a29ac30945d11411a776aff480f5fb1f40a0089b4b598157"
+    },
+    {
+      "file": "crates/ui-egui/src/show/presenter.rs",
+      "sha256": "7e8c0107dc6e2d81e1f0e590f31d94684cc5bc7f697cf8095956815ffbd148c2"
+    },
+    {
+      "file": "crates/ui-egui/src/show/ui.rs",
+      "sha256": "37df03077997ce41f8e726b10fcdb56dfae577e0d0deaf668ef9a0780bc17a7a"
+    },
+    {
+      "file": "crates/ui-egui/src/show/zoom.rs",
+      "sha256": "a3a2ca86324caf5567e75c09de0ee1fba08f470f4f874b33c6f4a1194de3565f"
+    },
+    {
+      "file": "crates/engine/src/cmd.rs",
+      "sha256": "dae2cee773e4437b56826b81302814227f32b565602fd09ab759d017610ac004"
+    },
+    {
+      "file": "crates/engine/src/cmd/insert.rs",
+      "sha256": "295385f9bcfebb19392f3b90f3141327cc2bee58f27d4524613cf15d9e10f05f"
+    },
+    {
+      "file": "crates/engine/src/cmd/insert/picture.rs",
+      "sha256": "7c6d89ba1e7e502799a621b701073170d4bc46a8b645e5c1146725f3f90eb883"
+    },
+    {
+      "file": "crates/engine/src/cmd/ink_recognition.rs",
+      "sha256": "2497b119e1c00d8a185413cf2421c10f2fe705f9da4c439d9bb7c1ab3d4908fd",
+      "change": "added"
+    }
+  ],
+  "nativeBuild": {
+    "host": "0.13.1+designcraft.host16",
+    "rustTrunkExitCode": 0,
+    "sourceMatches": true,
+    "inputFiles": 151,
+    "logSha256": "c7b3cbe81308c94eab2064b49285b8423b9638eca06c5360e487dc4aeb6416b6",
+    "sourceArchive": {
+      "schema": 1,
+      "kind": "exact-native-source-input-audit",
+      "at": "2026-11-12T19:33:41.701135+00:00",
+      "archive": "engine-source-snapshots-ui150.zip",
+      "bytes": 33392423,
+      "sha256": "39fb5c637d22edbb9bcdccf5523a3c41e1153ae79bc74ea0e5b086c29d8b8e87",
+      "sourceInputCount": 239,
+      "archiveFileCount": 250,
+      "engines": {
+        "vectorcraft-host": {
+          "version": "0.19.0+designcraft.host17",
+          "upstreamCommit": "bcebabe3f8c23a376ac68e9e6726590af278f7bb",
+          "sourceInputsMatched": 59
+        },
+        "photocraft-host": {
+          "version": "0.18.0+designcraft.host6",
+          "upstreamCommit": "8a87a457abb43ac344deeb3fdb67541b91a72ff1",
+          "sourceInputsMatched": 29
+        },
+        "deckcraft-host": {
+          "version": "0.13.1+designcraft.host16",
+          "upstreamCommit": "4ce2944630b04188dee8504c14151994d06c416a",
+          "sourceInputsMatched": 151
+        }
+      },
+      "archiveRoundtripBytesMatch": true,
+      "functionalValidation": false,
+      "scope": "File/ZIP integrity only. No engine or source code was executed by this audit."
+    }
+  },
+  "localHelper": {
+    "schema": 1,
+    "file": "ink-recognizer.exe",
+    "platform": "win32-x64",
+    "scope": "local Windows Ink, Math Input Control and explicit user-selected screen region",
+    "sha256": "759329111be8465fcfe74d54bf6a104055d63eb9c31e0b7219e3c64ded389ca0",
+    "source": "ink-recognizer.cs",
+    "sourceSha256": "960777d1fca9ad409e169a4ed0b3183631ad2c2bb638587141d7f0fa7c9a5614",
+    "functionalValidation": false
+  },
+  "vendor": {
+    "name": "colorjs.io",
+    "version": "0.5.2",
+    "license": "MIT",
+    "filesMatched": 88,
+    "relativeImportsChecked": 323,
+    "tarballSha256": "49f3ea5c4efd4648e8869d2c9434c495cbf41951323470e329c1161c4dc9a204",
+    "scriptsExecuted": false
+  },
+  "legacyBriefBytesIdentical": true,
+  "mainModelReview": [
+    "十单元真实代码、工具/路由/UI/源文件接线按源码复核；没有用示例识别、假媒体或占位文件完成入口。",
+    "完整颜色检查改读保存原生源，常规UI摘要不作整稿依据。",
+    "候选先确认，原生源/epoch/修订/选区核对；已应用结果保存失败仅重试保存，取消和卸载释放采集设备。",
+    "历史指导原包按真实资源身份核验/保留，迁移只创建新计划修订；旧v1解析器为原字节副本。",
+    "本地编排检查实际规则分页和产物字节；人工查阅不记模型已读，停用声明单列，结果不证明模型遵循或视觉效果。",
+    "没有新接被放弃外部平台；未运行功能/识别/设备/API/UI/模型验证。"
+  ],
+  "correctedFindings": [
+    "独立engine cargo check第一次缺已有getrandom/wasm_js feature，明确加feature后通过；web包release构建通过。",
+    "本地helper每次编译的EXE摘要不同；最终桥/锁均固定到实际最后编译产物，没有用旧摘要。",
+    "Display P3公共名称映射到实际Color.js p3空间。",
+    "颜色审计初稿使用受限UI摘要，已改读完整已保存原生结构。",
+    "本地工作流修正规则人工/模型交付区分、实际计划关联返回字段、停用关联、HTML不确定提交恢复和角色标识。",
+    "扩大排除范围时一处JS正则斜杠未转义被node --check拒绝；已修正并重新检查通过。",
+    "采集取消、AudioContext启动失败及编码启动失败的资源清理分支已补。"
+  ],
+  "remainingCodeUnitsWithinRequestedScope": [],
+  "deferred": [
+    "十单元的功能、UI、识别准确度和硬件权限验证",
+    "核心旅程、保存重开、PPTX/媒体/项目包效果和模型真实执行验收"
+  ],
+  "residualLimits": [
+    "Windows Ink/Math组件可用性和识别准确度未经运行确认。",
+    "屏幕/麦克风/摄像头权限、DPI、多屏和编码器受实际宿主环境影响；Cameo是照片/视频对象而非直播放映。",
+    "APCA为实验性指标；原生源颜色检查保留主题/复杂背景/透明/栅格/遮挡和度量未知，不是像素级合规证明。",
+    "旧指导包如果没有原字节必须从旧项目包恢复，不能以当前版本替换。",
+    "当前DSH模型负责生成和遵循规则；本地编排不等于所有上游脚本/视频/浏览器/PR运行时兼容。",
+    {
+      "component": "pinned dom-to-pptx 2.0.1 bundle",
+      "status": "exact bytes and parent MIT source verified; complete bundle-to-lock relationship not established",
+      "details": [
+        "Publisher-tag lock and licence data are retained, but exact bundle-to-lock provenance, embedded nested components and WOFF2/Brotli source revisions are not fully established.",
+        "No package code or lifecycle script was executed."
+      ]
+    },
+    {
+      "component": "fonteditor-core@2.6.3 embedded WOFF2/Brotli",
+      "status": "package binary identity and upstream license texts recorded; exact native source/build revisions not identified"
+    },
+    {
+      "component": "6 canvas fonts (IBM Plex Serif and Instrument Serif)",
+      "status": "actual source archive, embedded copyright/version/OFL declaration and official license reference recorded; exact Google Fonts reference bytes differ",
+      "files": [
+        "IBMPlexSerif-Regular.ttf",
+        "IBMPlexSerif-Italic.ttf",
+        "IBMPlexSerif-Bold.ttf",
+        "IBMPlexSerif-BoldItalic.ttf",
+        "InstrumentSerif-Regular.ttf",
+        "InstrumentSerif-Italic.ttf"
+      ]
+    }
+  ],
+  "currentUserLoadedVersion": "unverified",
+  "backups": [
+    "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\before-five-gaps-20261113",
+    "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\before-deck-host16",
+    "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\before-ui150"
+  ]
+}

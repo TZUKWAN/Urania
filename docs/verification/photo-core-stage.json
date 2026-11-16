@@ -1,0 +1,94 @@
+{
+  "schema": 1,
+  "updatedAt": "2026-11-04T16:14:28.050881+00:00",
+  "originalChat": "01a19111-0093-71d1-9b87-ff7f32fe796c",
+  "title": "DSH DESIGN",
+  "productRoot": "D:\\METIS超级合并\\dsh-plugin\\designcraft",
+  "fullScopeComplete": false,
+  "causeOfChatFailure": "Recorded max_output_tokens, then context_length_exceeded including failed compact; not an established product crash.",
+  "freshVerification": [
+    {
+      "command": "node --test --test-reporter=tap tests/native-vector-header.test.mjs tests/project-graph.test.mjs",
+      "pass": 10,
+      "fail": 0,
+      "evidence": "Actual tool stdout in current chat; not rerun merely to create a log."
+    },
+    {
+      "command": "python -u work/designcraft-unified/test_photo_workspace.py",
+      "pass": 6,
+      "fail": 0,
+      "evidence": "photo-workspace.json"
+    },
+    {
+      "command": "python -u work/repair_photo_placement.py",
+      "pass": 3,
+      "fail": 0,
+      "evidence": "photo-original-placement-repair.json"
+    },
+    {
+      "command": "cargo test -p photocraft-ui-egui --lib control::hosted::tests",
+      "pass": 8,
+      "fail": 0,
+      "evidence": "photo-hosted-after-fix.log"
+    }
+  ],
+  "reviewedResults": [
+    "Real DSH Photo create/manual brush/registered tools/exact reference/native layered reopen -> PNG asset -> native Vector image -> open Photo origin -> return same Vector App.",
+    "Original uncertain placement repaired through actual UI without replay: native revision and source SHA-256 e662a9d5060cbce4f29ab36c930d0b9aae39fe97c2974c0415ae196c6e57233c unchanged, one instance, repeated repair reused.",
+    "Actual native regression reproduced missing pending-crop fence. Corrected crop, drag and transform ownership; native focused suite8 passes. Web adoption and physical tool acceptance are separate pending gates."
+  ],
+  "installedPhotoRuntime": "0.18.0+designcraft.host2",
+  "nextPhotoBuild": {
+    "status": "running",
+    "exitCode": null,
+    "sourceMatches": null,
+    "startedAt": "2026-11-04T16:00:53.2542355Z",
+    "finishedAt": null
+  },
+  "newModelOrImageServiceCalls": 0,
+  "userDesktopControlled": false,
+  "userDshRestarted": false,
+  "unfinished": [
+    "Photo Web host3 adoption and physical crop/transform/mask/adjust/filter/import acceptance",
+    "Photo real configured Kimi layer-only continuation",
+    "Deck persistent bridge and native PPT/PPTX flow",
+    "Remaining original 50-task cross-material/OD/brand/image-service/exports/migration/final acceptance"
+  ],
+  "evidence": [
+    {
+      "file": "photo-workspace.json",
+      "bytes": 3452,
+      "sha256": "4fe8bf3e5c4dd06e4b51e6193e6e115871566e25f2b537b5c1daa7ff755287f5"
+    },
+    {
+      "file": "photo-workspace.log",
+      "bytes": 2432,
+      "sha256": "e4a1deb212084cc8d0b715ec87306a4ef160a472227bf1159877c996add3b6a5"
+    },
+    {
+      "file": "photo-original-placement-repair.json",
+      "bytes": 1277,
+      "sha256": "18501a30059bf763575f3a9c0f802f3c704a5bef4bf1c9f720d46039987f1d00"
+    },
+    {
+      "file": "photo-original-placement-repair.log",
+      "bytes": 790,
+      "sha256": "500b9895ec6b44666031f0b90eac93864329fdc069277c3d382ffb519dbc9981"
+    },
+    {
+      "file": "photo-crop-before-fix.log",
+      "bytes": 2848,
+      "sha256": "227ffc9200dfb1cf195897a84b7615d031159fd873329736923df5d91645eee1"
+    },
+    {
+      "file": "photo-hosted-after-fix.log",
+      "bytes": 2319,
+      "sha256": "f245590730333c7631fbacd145c377e4e9dbdc00fa08b45859612f83732fc770"
+    }
+  ],
+  "limitations": [
+    "Owned headless DSH verification only; actual user window loaded version remains unverified.",
+    "Fixed material snapshots are not in-place or live linked updates.",
+    "No full four-project parity claim."
+  ]
+}

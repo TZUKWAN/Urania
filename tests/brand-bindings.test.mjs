@@ -1,0 +1,130 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {mkdtemp,readFile} from 'node:fs/promises';
+import {tmpdir} from 'node:os';
+import {join} from 'node:path';
+import {createHash} from 'node:crypto';
+import {NativeSourceStore} from '../host/native-source-store.js';
+import {ProjectGraph} from '../host/project-graph.js';
+import {BrandBindings,actualSolidFill,assertBrandFillOnly,deckBrandOrigins,assertDeckBrandAssignmentOnly,vectorBrandOrigins,assertVectorBrandAssignmentOnly} from '../host/brand-bindings.js';
+import {readZip,createZip} from '../host/zip.js';
+import {checkHostedCommand} from '../host/editor-policy.js';
+
+const load=name=>readFile(new URL('./fixtures/'+name,import.meta.url));
+const sha=bytes=>createHash('sha256').update(bytes).digest('hex');
+async function fixture(){
+ const root=await mkdtemp(join(tmpdir(),'designcraft-brand-')),sources=new NativeSourceStore(root),graph=new ProjectGraph(root,sources),brands=new BrandBindings(graph);
+ const vectorBytes=await load('svg-material/source.vectorcraft'),deckBytes=await load('brand-bindings/actual-deck.deckcraft');
+ assert.equal(sha(deckBytes),'4f0c4ba5da138cf7883039e0ebb6f688680a4920452b3954e3308ad6f83e740f');
+ const vector=await sources.commit('poster',{engine:'vectorcraft',bytes:vectorBytes,engineState:{uid:1,revision:1}});
+ const deck=await sources.commit('deck',{engine:'deckcraft',bytes:deckBytes,engineState:{uid:2,revision:1}});
+ return {sources,graph,brands,vector,deck,vectorBytes,deckBytes};
+}
+test('explicit brand fill records use real native source/object/color and leave designs unchanged',async()=>{
+ const f=await fixture();
+ assert.equal(actualSolidFill(f.vectorBytes,'vectorcraft','4'),'#27445F');
+ assert.equal(actualSolidFill(f.deckBytes,'deckcraft','260'),'#233456');
+ const a=await f.brands.create({baseRevision:null,name:'海报品牌',primary:'#27445F'});
+ const av=await f.brands.bind({baseRevision:a.revision,brandId:a.brand.id,sourceId:'poster',sourceRevision:f.vector.revision,nativeId:'4'});
+ const b=await f.brands.create({baseRevision:av.revision,name:'演示品牌',primary:'#233456'});
+ const bd=await f.brands.bind({baseRevision:b.revision,brandId:b.brand.id,sourceId:'deck',sourceRevision:f.deck.revision,nativeId:'260'});
+ const {manifest,revision}=await f.graph.read();assert.equal(revision,bd.revision);assert.equal(Object.keys(manifest.brandState.bindings).length,2);
+ assert.equal(manifest.brandState.bindings[av.binding.id].confirmedValue,'#27445F');
+ assert.equal(manifest.brandState.bindings[bd.binding.id].confirmedValue,'#233456');
+ assert.equal((await f.sources.read('poster')).revision,f.vector.revision);assert.equal((await f.sources.read('deck')).revision,f.deck.revision);
+ assert.equal(sha((await f.sources.read('poster')).bytes),sha(f.vectorBytes));assert.equal(sha((await f.sources.read('deck')).bytes),sha(f.deckBytes));
+});
+test('wrong colors, gradients, unknown objects, stale versions and duplicate bindings are refused',async()=>{
+ const f=await fixture(),a=await f.brands.create({baseRevision:null,name:'品牌',primary:'#27445F'});
+ const request={baseRevision:a.revision,brandId:a.brand.id,sourceId:'poster',sourceRevision:f.vector.revision,nativeId:'4'};
+ await assert.rejects(f.brands.bind({...request,nativeId:'3'}),/颜色与品牌主色不同/);
+ await assert.rejects(f.brands.bind({...request,nativeId:'2'}),/不是支持的不透明 RGB 纯色/);
+ await assert.rejects(f.brands.bind({...request,nativeId:'1'}),/仅支持单个海报路径/);
+ await assert.rejects(f.brands.bind({...request,nativeId:'999'}),/不存在/);
+ const magic=Buffer.from([10,0,86,67,66,76,79,66,83,0]),at=f.vectorBytes.indexOf(magic),locked=JSON.parse(at<0?f.vectorBytes:f.vectorBytes.subarray(0,at));
+ locked.document.layers[0].locked=true;
+ assert.throws(()=>actualSolidFill(Buffer.concat([Buffer.from(JSON.stringify(locked)),at<0?Buffer.alloc(0):f.vectorBytes.subarray(at)]),'vectorcraft','4'),/上级隐藏或锁定/);
+ await assert.rejects(f.brands.bind({...request,sourceRevision:'0'.repeat(64)}),/原生设计版本已改变/);
+ const accepted=await f.brands.bind(request);
+ await assert.rejects(f.brands.bind(request),/项目版本已改变/);
+ await assert.rejects(f.brands.bind({...request,baseRevision:accepted.revision}),/不能重复绑定/);
+ assert.equal((await f.graph.read()).revision,accepted.revision);
+ assert.equal((await f.sources.read('poster')).revision,f.vector.revision);
+});
+test('old projects without brand records remain readable and bad brand colors are refused',async()=>{
+ const f=await fixture(),original=await f.graph.change(null,()=>{});
+ assert.equal((await f.graph.read()).manifest.brandState,undefined);
+ for(const primary of ['#fff','#GG0000','rgb(1,2,3)','#AABBCC80'])await assert.rejects(f.brands.create({baseRevision:original.revision,name:'品牌',primary}));
+ assert.equal((await f.graph.read()).revision,original.revision);
+});
+test('changed source or changed fill is surfaced and never rewritten by inspection',async()=>{
+ const f=await fixture(),brand=await f.brands.create({baseRevision:null,name:'品牌',primary:'#233456'});
+ const saved=await f.brands.bind({baseRevision:brand.revision,brandId:brand.brand.id,sourceId:'deck',sourceRevision:f.deck.revision,nativeId:'260'});
+ assert.equal((await f.brands.inspect()).bindings[0].status,'recorded');
+ const newer=await f.sources.commit('deck',{engine:'deckcraft',bytes:f.deckBytes,baseRevision:f.deck.revision,engineState:{uid:2,revision:2}});
+ let item=(await f.brands.inspect()).bindings[0];assert.equal(item.status,'source_changed');assert.equal(item.currentValue,'#233456');
+ const entries=readZip(f.deckBytes),row=entries.find(entry=>entry.name==='presentation.json'),doc=JSON.parse(row.data);
+ const shape=doc.presentation.slides.flatMap(slide=>slide.shapes).find(node=>node.id===260);
+ shape.fill.color.base.rgb={r:255,g:255,b:255,a:255};row.data=Buffer.from(JSON.stringify(doc));
+ const changedBytes=createZip(entries),changed=await f.sources.commit('deck',{engine:'deckcraft',bytes:changedBytes,baseRevision:newer.revision,engineState:{uid:2,revision:3}});
+ item=(await f.brands.inspect()).bindings[0];assert.equal(item.status,'color_changed');assert.equal(item.currentValue,'#FFFFFF');assert.equal(item.confirmedValue,'#233456');
+ assert.equal((await f.graph.read()).revision,saved.revision);assert.equal((await f.sources.head('deck')).revision,changed.revision);
+ assert.equal(sha((await f.sources.read('deck')).bytes),sha(changedBytes));
+});
+test('brand change preview requires exact members and reports changed source without changing color',async()=>{
+ const f=await fixture(),brand=await f.brands.create({baseRevision:null,name:'品牌',primary:'#233456'});
+ const saved=await f.brands.bind({baseRevision:brand.revision,brandId:brand.brand.id,sourceId:'deck',sourceRevision:f.deck.revision,nativeId:'260'});
+ const request={baseRevision:saved.revision,brandId:brand.brand.id,primary:'#C03020',bindingIds:[saved.binding.id]};
+ let plan=await f.brands.prepare(request);assert.equal(plan.status,'ready_for_revalidation');assert.equal(plan.readOnly,true);assert.equal(plan.targets.length,1);assert.equal(plan.conflicts.length,0);
+ await assert.rejects(f.brands.prepare({...request,bindingIds:['brandcolor-00000000-0000-0000-0000-000000000000']}),/绑定成员已改变/);
+ await assert.rejects(f.brands.prepare({...request,primary:'#233456'}),/颜色相同/);
+ await f.sources.commit('deck',{engine:'deckcraft',bytes:f.deckBytes,baseRevision:f.deck.revision,engineState:{uid:2,revision:2}});
+ plan=await f.brands.prepare(request);assert.equal(plan.status,'review_required');assert.equal(plan.targets.length,0);assert.equal(plan.conflicts[0].status,'source_changed');
+ assert.equal((await f.graph.read()).revision,saved.revision);assert.equal((await f.brands.inspect()).brands[0].primary,'#233456');
+});
+test('genuine native Vector and Deck fill edits pass only when all other content remains exact',async()=>{
+ const vb=await load('brand-bindings/brand-vector-before.vectorcraft'),va=await load('brand-bindings/brand-vector-after.vectorcraft');
+ const db=await load('brand-bindings/brand-deck-before.deckcraft'),da=await load('brand-bindings/brand-deck-after.deckcraft');
+ assert.doesNotThrow(()=>assertBrandFillOnly(vb,va,'vectorcraft',['2'],'#287D6C','#C03020'));
+ assert.doesNotThrow(()=>assertBrandFillOnly(db,da,'deckcraft',['260'],'#287D6C','#C03020'));
+ assert.throws(()=>assertBrandFillOnly(vb,va,'vectorcraft',['2'],'#287D6C','#FFFFFF'),/颜色不一致/);
+ const vec=JSON.parse(va);vec.document.layers[0].name='unrelated change';
+ assert.throws(()=>assertBrandFillOnly(vb,Buffer.from(JSON.stringify(vec)),'vectorcraft',['2'],'#287D6C','#C03020'),/其他海报/);
+ const entries=readZip(da),row=entries.find(entry=>entry.name==='presentation.json'),doc=JSON.parse(row.data);
+ doc.presentation.slides.flatMap(slide=>slide.shapes).find(shape=>shape.id===260).xfrm.x+=1;row.data=Buffer.from(JSON.stringify(doc));
+ assert.throws(()=>assertBrandFillOnly(db,createZip(entries),'deckcraft',['260'],'#287D6C','#C03020'),/其他演示/);
+ const extra=readZip(da);extra.push({name:'other-proof.txt',data:Buffer.from('unrelated')});
+ assert.throws(()=>assertBrandFillOnly(db,createZip(extra),'deckcraft',['260'],'#287D6C','#C03020'),/其他演示/);
+});
+test('genuine native brand identity assignment preserves the whole deck and refuses collisions',async()=>{
+ const before=await load('brand-bindings/brand-deck-marker-before.deckcraft'),after=await load('brand-bindings/brand-deck-marker-after.deckcraft');
+ const capture=JSON.parse(await load('brand-bindings/brand-deck-marker.json')),marker=capture.marker,id=String(capture.nativeId);
+ assert.deepEqual(assertDeckBrandAssignmentOnly(before,after,id,marker),marker);
+ assert.deepEqual(deckBrandOrigins(after).get(id),marker);
+ assert.throws(()=>assertDeckBrandAssignmentOnly(before,after,id,{...marker,instanceId:'0'.repeat(32)}),/授权目标不一致/);
+ const entries=readZip(after),row=entries.find(entry=>entry.name==='presentation.json'),doc=JSON.parse(row.data);
+ const all=doc.presentation.slides.flatMap(slide=>slide.shapes),target=all.find(shape=>String(shape.id)===id),other=all.find(shape=>String(shape.id)!==id);
+ other.tags=structuredClone(target.tags);row.data=Buffer.from(JSON.stringify(doc));
+ assert.throws(()=>deckBrandOrigins(createZip(entries)),/发生重复/);
+ other.tags=[];target.xfrm.x+=1;row.data=Buffer.from(JSON.stringify(doc));
+ assert.throws(()=>assertDeckBrandAssignmentOnly(before,createZip(entries),id,marker),/其他演示/);
+});
+test('generic hosted execution cannot attach unverified brand markers directly or in a batch',()=>{
+ assert.throws(()=>checkHostedCommand('shape.assignBrandOrigins',{origins:[]}),/专用绑定动作/);
+ assert.throws(()=>checkHostedCommand('command.batch',{commands:[{command:'shape.assignBrandOrigins',params:{origins:[]}}]}),/专用绑定动作/);
+ assert.throws(()=>checkHostedCommand('object.setProps',{data:{'data-dsh-brand-color-v1':'forged'}}),/专用绑定动作/);
+ assert.throws(()=>checkHostedCommand('command.batch',{commands:[{command:'object.setProps',params:{data:{'DSH-BRAND-COLOR-V1':'forged'}}}]}),/专用绑定动作/);
+ assert.doesNotThrow(()=>checkHostedCommand('object.setProps',{data:{'client-label':'ok'}}));
+});
+test('genuine native Vector marker assignment preserves other data and refuses collisions',async()=>{
+ const before=await load('brand-bindings/brand-vector-marker-before.vectorcraft'),after=await load('brand-bindings/brand-vector-marker-after.vectorcraft');
+ const capture=JSON.parse(await load('brand-bindings/brand-vector-marker.json')),marker=capture.marker,id=String(capture.nativeId);
+ assert.deepEqual(assertVectorBrandAssignmentOnly(before,after,id,marker),marker);
+ assert.deepEqual(vectorBrandOrigins(after).get(id),marker);
+ assert.throws(()=>assertVectorBrandAssignmentOnly(before,after,id,{...marker,instanceId:'0'.repeat(32)}),/授权目标不一致/);
+ const doc=JSON.parse(after),root=doc.document.layers[0],target=root.kind.children.find(node=>String(node.id)===id);
+ root.attrs={data:structuredClone(target.attrs.data.filter(row=>row[0]==='dsh-brand-color-v1'))};
+ assert.throws(()=>vectorBrandOrigins(Buffer.from(JSON.stringify(doc))),/发生重复/);
+ delete root.attrs;target.name='unauthorized change';
+ assert.throws(()=>assertVectorBrandAssignmentOnly(before,Buffer.from(JSON.stringify(doc)),id,marker),/其他海报/);
+});

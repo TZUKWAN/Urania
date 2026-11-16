@@ -1,0 +1,78 @@
+{
+  "status": "passed",
+  "scope": "real current DSH source navigation, same native parent App/history/view, physical edits/undo and registered tools; no model",
+  "codeRoot": "D:\\METIS超级合并\\dsh-plugin\\designcraft",
+  "checks": [
+    {
+      "name": "physical source navigation opens the actual original and pauses exactly one existing parent App",
+      "pass": true,
+      "detail": {
+        "parentRealm": "f854c01c-5b30-4a0d-a8cb-7a59e82ac7b9",
+        "sourceRealm": "875a06b0-8db0-4cc2-9ec1-a52864a3bd3f",
+        "parentSourceId": "work-97c442fb-ec85-4d32-8171-dae0ae700b22",
+        "sourceId": "import-53c8b20f-189c-4bfa-bc52-48dee8fcd3e3",
+        "frames": 2
+      }
+    },
+    {
+      "name": "physical source editing persists its own native document while the parent layout and frozen material stay unchanged",
+      "pass": true,
+      "detail": {
+        "sourceRevision": "9b8da5092d3bde75b628541d8b96e747c07dba985213ca9cde0b83aa17653233",
+        "originalX": 61,
+        "newX": 62,
+        "frozenMaterialHash": "6a857a152816c6f5451159bf6a6837aaf79b00709a1d89f3dcbcfadf312b66f6"
+      }
+    },
+    {
+      "name": "physical return reuses the exact original App, selection, stable viewport and native undo history",
+      "pass": true,
+      "detail": {
+        "realmUnchanged": true,
+        "history": [
+          "Move"
+        ],
+        "selection": [
+          7
+        ],
+        "view": {
+          "artboard": 0,
+          "center": {
+            "x": 640,
+            "y": 501.8282548476454
+          },
+          "fitted": true,
+          "rotation": 0,
+          "zoom": 0.5640625
+        }
+      }
+    },
+    {
+      "name": "a stale child tool reference is rejected and genuine native Undo still reverses only the prior parent manual move",
+      "pass": true,
+      "detail": {
+        "refusalStatus": 409,
+        "manualUndoRestoredExactDocument": true
+      }
+    },
+    {
+      "name": "actual registered DSH open/return tools use the same source-navigation path and original parent App",
+      "pass": true,
+      "detail": {
+        "openJob": "ac2b7d25-9e84-48fd-b943-6ce0da8f95a5",
+        "returnJob": "53a4d384-3f84-4f01-808d-d1aed2795ec7",
+        "sameParentRealm": true
+      }
+    },
+    {
+      "name": "actual DSH workspace switching releases both paused/current native surfaces and does not leak old project assets",
+      "pass": true,
+      "detail": {
+        "newSessionId": "session-PUBLIC-REDACTED",
+        "remainingFrames": 0,
+        "newProjectAssets": 0
+      }
+    }
+  ],
+  "pageErrors": []
+}

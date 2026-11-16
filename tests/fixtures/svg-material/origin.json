@@ -1,0 +1,47 @@
+{
+  "status": "passed",
+  "scope": "original hand-authored geometric SVG fixture (not AI artwork); true native Vector same-revision source/SVG/PNG exports; no system fonts or vendor assets",
+  "license": "MIT OR Apache-2.0",
+  "previewSize": [
+    320,
+    240
+  ],
+  "transparentCorner": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "visibleCenter": [
+    225,
+    232,
+    225,
+    255
+  ],
+  "engineState": {
+    "uid": 1,
+    "revision": 1,
+    "selectionStamp": "{\"page\":0,\"selection\":{\"new_art\":[]},\"tool\":{\"options\":null,\"tool\":\"selection\"}}"
+  },
+  "runtime": "0.19.0+designcraft.host10",
+  "files": {
+    "input.svg": {
+      "sha256": "c04818c956219f5f18f0ee48612bf85c97d9fd90e3d9423da1b9e599d75b40ca",
+      "bytes": 551
+    },
+    "source.vectorcraft": {
+      "sha256": "8b59a20b4ac7cdbdff2d5336d761786589b178430e395d4ac28b92e752b6f5b2",
+      "bytes": 33716
+    },
+    "source.svg": {
+      "sha256": "8f85b883ee5e0cfa5473b711333cfef1c63413b442297fadbd4f8bce380217ea",
+      "bytes": 1017
+    },
+    "preview.png": {
+      "sha256": "c9555c168a9d0bbac75cdc0f558e84cec2425f4ca8292359e470910434ad3920",
+      "bytes": 5276
+    }
+  },
+  "actualSameSourceBytesAndContext": true,
+  "ownedSessionSha256": "c7e55e5e79da3b739dd7e978265412b88229e7bd1d9cb332b03ef0bd124e5ea2"
+}

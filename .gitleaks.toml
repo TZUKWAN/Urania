@@ -1,0 +1,179 @@
+title = "Urania reviewed public-source false positives"
+[extend]
+useDefault = true
+
+[[allowlists]]
+targetRules = ["generic-api-key"]
+description = "Exact comparison to public metadata attribute name in archived engine source"
+condition = "AND"
+regexTarget = "line"
+paths = ['''(?:^|/)docs/engine-source-snapshots-ui150\.zip!vectorcraft-host/crates/engine/src/cmd/place/legacy_svg\.rs$''']
+regexes = ['''^\s*if node\.extras\(\)\.attrs\.as_ref\(\)\.is_some_and\(\|a\| a\.data\.iter\(\)\.any\(\|\(key, _\)\| key == "dsh-material-v1"\)\) \{\s*$''']
+
+[[allowlists]]
+targetRules = ["generic-api-key"]
+description = "Exact comparison to public metadata attribute name in archived engine source"
+condition = "AND"
+regexTarget = "line"
+paths = ['''(?:^|/)docs/engine-source-snapshots-ui159\.zip!vectorcraft-host/crates/engine/src/cmd/place/legacy_svg\.rs$''']
+regexes = ['''^\s*if node\.extras\(\)\.attrs\.as_ref\(\)\.is_some_and\(\|a\| a\.data\.iter\(\)\.any\(\|\(key, _\)\| key == "dsh-material-v1"\)\) \{\s*$''']
+
+[[allowlists]]
+targetRules = ["generic-api-key"]
+description = "Exact comparison to public metadata attribute name in archived engine source"
+condition = "AND"
+regexTarget = "line"
+paths = ['''(?:^|/)docs/engine-source-snapshots-ui160\.zip!vectorcraft-host/crates/engine/src/cmd/place/legacy_svg\.rs$''']
+regexes = ['''^\s*if node\.extras\(\)\.attrs\.as_ref\(\)\.is_some_and\(\|a\| a\.data\.iter\(\)\.any\(\|\(key, _\)\| key == "dsh-material-v1"\)\) \{\s*$''']
+
+[[allowlists]]
+targetRules = ["generic-api-key"]
+description = "Exact comparison to public metadata attribute name in archived engine source"
+condition = "AND"
+regexTarget = "line"
+paths = ['''(?:^|/)docs/engine-source-snapshots\.zip!vectorcraft-host/crates/engine/src/cmd/place/legacy_svg\.rs$''']
+regexes = ['''^\s*if node\.extras\(\)\.attrs\.as_ref\(\)\.is_some_and\(\|a\| a\.data\.iter\(\)\.any\(\|\(key, _\)\| key == "dsh-material-v1"\)\) \{\s*$''']
+
+[[allowlists]]
+targetRules = ["generic-api-key"]
+description = "Exact public material-metadata field-name declaration mirrored in historical source audit"
+condition = "AND"
+regexTarget = "line"
+paths = ['''(?:^|/)docs/implementation-source-audit\.json$''']
+regexes = ['''^\s*"declaration": "export const VECTOR_ORIGIN_KEY='dsh-material-v1',DECK_ORIGIN_KEY='DSH-MATERIAL-V1';"\s*$''']
+
+[[allowlists]]
+targetRules = ["generic-api-key"]
+description = "Exact known non-secret SHA256 of a Rust source file in a pinned manifest"
+condition = "AND"
+regexTarget = "line"
+paths = ['''(?:^|/)docs/upstream-command-candidates\.json$''']
+regexes = ['''^\s*"crates/engine/src/cmd/brush_key_cmds\.rs": "a8bc11327c95852045dd75419eef6f81582bee8e9b6f9808ef35e9bd2d0ee21f",\s*$''']
+
+[[allowlists]]
+targetRules = ["generic-api-key"]
+description = "Exact known non-secret SHA256 of a Rust source file in a pinned manifest"
+condition = "AND"
+regexTarget = "line"
+paths = ['''(?:^|/)docs/upstream-command-candidates\.json$''']
+regexes = ['''^\s*"crates/engine/src/cmd/fill_key_cmds\.rs": "2545f0e71ccb360b38f2c6ccdd0e66dd5c90fbab007aa783399631a599701f6a",\s*$''']
+
+[[allowlists]]
+targetRules = ["generic-api-key"]
+description = "Exact known non-secret SHA256 of a Rust source file in a pinned manifest"
+condition = "AND"
+regexTarget = "line"
+paths = ['''(?:^|/)docs/upstream-command-candidates\.json$''']
+regexes = ['''^\s*"crates/ui-egui/src/app/keys\.rs": "bbf4df45c1a1a93d08543558b5807457fcd7c3c9b4caef43b1a64e01443d6a91",\s*$''']
+
+[[allowlists]]
+targetRules = ["generic-api-key"]
+description = "Exact known non-secret SHA256 of a Rust source file in a pinned manifest"
+condition = "AND"
+regexTarget = "line"
+paths = ['''(?:^|/)docs/upstream-command-candidates\.json$''']
+regexes = ['''^\s*"crates/ui-egui/src/keymap\.rs": "e81b48b6d45c15605adb4d8b2478bb5c1b0df0c5c7ba51e4b47bd219872a5de0",\s*$''']
+
+[[allowlists]]
+targetRules = ["generic-api-key"]
+description = "Exact known non-secret SHA256 of a Rust source file in a pinned manifest"
+condition = "AND"
+regexTarget = "line"
+paths = ['''(?:^|/)docs/upstream-command-candidates\.json$''']
+regexes = ['''^\s*"crates/ui-egui/src/tests/distortkeys\.rs": "876c5362b529ce14754c193be690b75ccb3b8ba007d4007e25fb6a7d18044b0d",\s*$''']
+
+[[allowlists]]
+targetRules = ["generic-api-key"]
+description = "Exact known non-secret SHA256 of a Rust source file in a pinned manifest"
+condition = "AND"
+regexTarget = "line"
+paths = ['''(?:^|/)docs/verification/d1-foundation-audit\.json$''']
+regexes = ['''^\s*"apps/vectorcraft-web/src/api\.rs": "57811c50f4eba1f8de6773171929a13be10a7626e5226e82384f2515182a7885"\s*$''']
+
+[[allowlists]]
+targetRules = ["generic-api-key"]
+description = "Exact known non-secret SHA256 of a Rust source file in a pinned manifest"
+condition = "AND"
+regexTarget = "line"
+paths = ['''(?:^|/)docs/verification/deck-stage-audit\.json$''']
+regexes = ['''^\s*"apps/deckcraft-web/src/api\.rs": "0430364aaabaa18748249fa84a3d27815eca0450dfc85b07043ae9bae41d8b83",\s*$''']
+
+[[allowlists]]
+targetRules = ["generic-api-key"]
+description = "Exact known non-secret SHA256 of a Rust source file in a pinned manifest"
+condition = "AND"
+regexTarget = "line"
+paths = ['''(?:^|/)docs/verification/f1-foundation-audit\.json$''']
+regexes = ['''^\s*"apps/vectorcraft-web/src/api\.rs": "57811c50f4eba1f8de6773171929a13be10a7626e5226e82384f2515182a7885"\s*$''']
+
+[[allowlists]]
+targetRules = ["generic-api-key"]
+description = "Exact known non-secret SHA256 of a Rust source file in a pinned manifest"
+condition = "AND"
+regexTarget = "line"
+paths = ['''(?:^|/)docs/verification/photo-stage-audit\.json$''']
+regexes = ['''^\s*"apps/photocraft-web/src/api\.rs": "759d2e295b3e20bcddce26560a19a57c1e76172a5ad1ea3de39182f898b5fd66",\s*$''']
+
+[[allowlists]]
+targetRules = ["generic-api-key"]
+description = "Exact known non-secret SHA256 of a Rust source file in a pinned manifest"
+condition = "AND"
+regexTarget = "line"
+paths = ['''(?:^|/)docs/verification/svg-deck-stage-audit\.json$''']
+regexes = ['''^\s*"apps/deckcraft-web/src/api\.rs": "0430364aaabaa18748249fa84a3d27815eca0450dfc85b07043ae9bae41d8b83",\s*$''']
+
+[[allowlists]]
+targetRules = ["generic-api-key"]
+description = "Exact public material metadata field names, not credentials"
+condition = "AND"
+regexTarget = "line"
+paths = ['''(?:^|/)host/material-origin\.js$''']
+regexes = ['''^\s*export const VECTOR_ORIGIN_KEY='dsh-material-v1',DECK_ORIGIN_KEY='DSH-MATERIAL-V1';\s*$''']
+
+[[allowlists]]
+targetRules = ["generic-api-key"]
+description = "Fixed operation-key schema test input, not a service API key"
+condition = "AND"
+regexTarget = "line"
+paths = ['''(?:^|/)tests/motion-schema\.test\.mjs$''']
+regexes = ['''^\s*test\('operationKey: valid', \(\) => ok\(validateOperationKey, 'op_123\.abc-def'\)\);\s*$''']
+
+[[allowlists]]
+targetRules = ["generic-api-key"]
+description = "Exact public metadata key with dynamically generated test project/asset IDs, not a credential"
+condition = "AND"
+regexTarget = "line"
+paths = ['''(?:^|/)tests/vector-legacy-apply\.test\.mjs$''']
+regexes = ['''^\s*const row=node\.attrs\.data\.find\(\(\[key\]\)=>key==='dsh-material-v1'\),origin=JSON\.parse\(row\[1\]\);origin\.projectId=project;origin\.assetId=replacement\.id;row\[1\]=JSON\.stringify\(origin\);\s*$''']
+
+[[allowlists]]
+targetRules = ["generic-api-key"]
+description = "Exact known non-secret SHA256 of a Rust source file in a pinned manifest"
+condition = "AND"
+regexTarget = "line"
+paths = ['''(?:^|/)web-runtime-lock\.json$''']
+regexes = ['''^\s*"apps/deckcraft-web/src/api\.rs": "da8734620b55c6f9928242cf1fbe01e059e0c8c24f9d94df22ebc9471bd265e6",\s*$''']
+
+[[allowlists]]
+targetRules = ["generic-api-key"]
+description = "Exact known non-secret SHA256 of a Rust source file in a pinned manifest"
+condition = "AND"
+regexTarget = "line"
+paths = ['''(?:^|/)web-runtime-lock\.json$''']
+regexes = ['''^\s*"apps/photocraft-web/src/api\.rs": "cfca17485fbf366751b09a8c1898350a31e6450b0cf5726f0f648ab6538eba7c",\s*$''']
+
+[[allowlists]]
+targetRules = ["generic-api-key"]
+description = "Exact known non-secret SHA256 of a Rust source file in a pinned manifest"
+condition = "AND"
+regexTarget = "line"
+paths = ['''(?:^|/)web-runtime-lock\.json$''']
+regexes = ['''^\s*"apps/vectorcraft-web/src/api\.rs": "1592c498d025b54c5562e9836211cebd3f5ecc8eb86cdbe82ccf5c2a716d0624",\s*$''']
+
+[[allowlists]]
+targetRules = ["generic-api-key"]
+description = "Exact known non-secret SHA256 of a Rust source file in a pinned manifest"
+condition = "AND"
+regexTarget = "line"
+paths = ['''(?:^|/)web-runtime-lock\.json$''']
+regexes = ['''^\s*"crates/ui-egui/src/app/keys\.rs": "ef5d1abe023390292d178ee1c0941e3ccac4c08eb9c92f18119efa03a7149050",\s*$''']

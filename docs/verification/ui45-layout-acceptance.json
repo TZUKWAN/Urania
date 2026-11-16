@@ -1,0 +1,113 @@
+{
+  "status": "passed_scoped",
+  "at": "2026-11-08T09:27:11.820136+00:00",
+  "scope": "actual owned DSH three-engine layout, resize and theme; no user window",
+  "checks": [
+    {
+      "engine": "vectorcraft",
+      "viewport": [
+        1280,
+        800
+      ],
+      "stage": [
+        710,
+        742
+      ],
+      "chatWidth": 290
+    },
+    {
+      "engine": "vectorcraft",
+      "viewport": [
+        1600,
+        900
+      ],
+      "stage": [
+        1000,
+        842
+      ],
+      "chatWidth": 320
+    },
+    {
+      "engine": "photocraft",
+      "viewport": [
+        1280,
+        800
+      ],
+      "stage": [
+        710,
+        699
+      ],
+      "chatWidth": 290
+    },
+    {
+      "engine": "photocraft",
+      "viewport": [
+        1600,
+        900
+      ],
+      "stage": [
+        1000,
+        799
+      ],
+      "chatWidth": 320
+    },
+    {
+      "engine": "deckcraft",
+      "viewport": [
+        1280,
+        800
+      ],
+      "stage": [
+        710,
+        742
+      ],
+      "chatWidth": 290
+    },
+    {
+      "engine": "deckcraft",
+      "viewport": [
+        1600,
+        900
+      ],
+      "stage": [
+        1000,
+        842
+      ],
+      "chatWidth": 320
+    }
+  ],
+  "images": [
+    {
+      "file": "verification/ui45-layout-vectorcraft-light.png",
+      "sha256": "b9b6d766815309c70d832af19f8b285d015a5cdb8c14d25e7055a2daae45ebd0"
+    },
+    {
+      "file": "verification/ui45-layout-vectorcraft-dark.png",
+      "sha256": "c1ad1ea8c01e428473e5ed9cc1c123dc7ab027b34854b197f735d278c40f28c7"
+    },
+    {
+      "file": "verification/ui45-layout-photocraft-light.png",
+      "sha256": "5551995f5d75aa15e12237e999108cd6400c7117d6fc495dacf495924f11a78e"
+    },
+    {
+      "file": "verification/ui45-layout-photocraft-dark.png",
+      "sha256": "9a3f14926990330eb3dbf5f671d95863dafe5ac05e66846071688694415c4748"
+    },
+    {
+      "file": "verification/ui45-layout-deckcraft-light.png",
+      "sha256": "aa93e14b2ce395cd3cf87ff2e8835a19add9eb8c0425a0498b1984f393f90372"
+    },
+    {
+      "file": "verification/ui45-layout-deckcraft-dark.png",
+      "sha256": "bb53a782c9bf48a72debe48beb7cf8614b05ac6aada24c4d3a194164d1a2e4e8"
+    }
+  ],
+  "rawEvidence": {
+    "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-workspace-layout.json",
+    "sha256": "4725afe677cf25bbc8ab750877e52cc0b21d3ae6db8796f871c607183e466bf9"
+  },
+  "limits": [
+    "The screenshots are actual running interfaces in two tested viewport sizes; they do not establish every screen size.",
+    "The three native editors still retain different control and language styles; overall visual unification remains incomplete."
+  ]
+}

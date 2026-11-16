@@ -1,0 +1,17 @@
+{
+  "originAfter": {
+    "assetId": "asset-edited",
+    "instanceId": "6c5c654474d79c7936fe3c4b8079bda1",
+    "projectId": "project-fixture",
+    "schema": 1
+  },
+  "originBefore": {
+    "assetId": "asset-original",
+    "instanceId": "6c5c654474d79c7936fe3c4b8079bda1",
+    "projectId": "project-fixture",
+    "schema": 1
+  },
+  "otherId": 263,
+  "producer": "actual insert.svgPicture/picture.replaceSvgContent integration test",
+  "targetId": 261
+}

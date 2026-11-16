@@ -1,0 +1,36 @@
+{
+  "status": "passed",
+  "scope": "repair original saved Photo PNG to Vector placement through actual DSH UI, without replay or source changes; no model calls",
+  "codeRoot": "D:\\METIS超级合并\\dsh-plugin\\designcraft",
+  "checks": [
+    {
+      "name": "original pending placement and its actual saved binary-image source are discoverable",
+      "pass": true,
+      "detail": {
+        "jobId": "9fe42619-65c5-4940-8524-9e6d15b19edf",
+        "sourceHash": "e662a9d5060cbce4f29ab36c930d0b9aae39fe97c2974c0415ae196c6e57233c",
+        "bytes": 32408
+      }
+    },
+    {
+      "name": "physical repair binds the existing exact image object without changing native revision or saved bytes",
+      "pass": true,
+      "detail": {
+        "instanceId": "use-9fe42619-65c5-4940-8524-9e6d15b19edf",
+        "nativeId": "2",
+        "nativeRevisionUnchanged": true,
+        "sourceHashUnchanged": true
+      }
+    },
+    {
+      "name": "repaired relation is durable and repeated actual recovery is idempotent",
+      "pass": true,
+      "detail": {
+        "instances": 1,
+        "repeatedRecoveryReused": true,
+        "sourceHash": "e662a9d5060cbce4f29ab36c930d0b9aae39fe97c2974c0415ae196c6e57233c"
+      }
+    }
+  ],
+  "pageErrors": []
+}

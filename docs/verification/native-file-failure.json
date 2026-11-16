@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "scope": "actual DSH/native controller with deliberate HTTP503 upload fault; actual App/draft/filesystem preservation and real retry; no model or disk-full claim",
+  "codeRoot": "D:\\METIS超级合并\\dsh-plugin\\designcraft",
+  "checks": [
+    {
+      "name": "failed file preparation dismisses the dialog while retaining the same editable App, draft and saved source",
+      "pass": true,
+      "detail": {
+        "draftBytes": 24797,
+        "uid": 1,
+        "display": "block",
+        "active": true
+      }
+    },
+    {
+      "name": "a later real native save commits the retained source and clears only its matching draft",
+      "pass": true,
+      "detail": {
+        "sourceId": "import-e84db6fa-5696-46d3-8a5e-01b4927fc3f8",
+        "revision": "5a92a55d12ec57b83bddf2334f356e7c3978994f1908272be773c03369c4f0a2"
+      }
+    }
+  ],
+  "pageErrors": []
+}

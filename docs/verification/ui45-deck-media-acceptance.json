@@ -1,0 +1,68 @@
+{
+  "status": "passed_scoped",
+  "at": "2026-11-08T07:59:46.817100+00:00",
+  "scope": "Owned headless DSH with installed Deck host8: one generated PCM WAV and one locally generated H264/AAC clip; system audio muted.",
+  "checks": [
+    "actual WAV and H264/AAC media embedded byte-for-byte in native source",
+    "actual WebAudio output callback emitted nonzero samples while muted externally",
+    "native source and exported PPTX reopen with the original audio and video bytes",
+    "H264 video produced colored, changing pixels in the actual Deck canvas"
+  ],
+  "audioGraph": {
+    "buffers": 5,
+    "peak": 0.36617010831832886,
+    "contextRunning": true
+  },
+  "audioSha256": "6eeac52dee136c0aad6fb24b408b60e9d515c5a52ceea6c63737c14f68bfbcd6",
+  "videoSha256": "9a43fc3387c8cf0367151d3b70f995d8e0d79338ce2ed000e87402c398e9d595",
+  "pptxSha256": "34edd75c715caa0f7a6c3bf1f6a82d6e0f9bdd9a3141c1169ba8dcb595d80d3b",
+  "videoFrameChangedPixels": [
+    8259,
+    0,
+    0,
+    0
+  ],
+  "files": [
+    {
+      "file": "verification/ui45-deck-media.pptx",
+      "bytes": 230250,
+      "sha256": "34edd75c715caa0f7a6c3bf1f6a82d6e0f9bdd9a3141c1169ba8dcb595d80d3b"
+    },
+    {
+      "file": "verification/ui45-deck-video-0.png",
+      "bytes": 23155,
+      "sha256": "83d2cecdf112e24d678be04d247964ba5fad4430d79d4834081e03531c702ef9"
+    },
+    {
+      "file": "verification/ui45-deck-video-1.png",
+      "bytes": 22837,
+      "sha256": "aea598da89d25f7a5d04db40abd75ad2e2efa3b3cc1f165dd94a201159424804"
+    }
+  ],
+  "limits": [
+    "Only these sample formats and the observed browser audio graph/video frames were tested.",
+    "An independent desktop PowerPoint consumer and every codec, animation, master and font interchange were not verified."
+  ],
+  "rawEvidence": [
+    {
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-deck-media.json",
+      "sha256": "af2d28d8710928beca335874ba434b1820d664ceffe889dd8bfb37f239868111"
+    },
+    {
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-deck-video-play.json",
+      "sha256": "7bd42bc3419ef819f77fde553b116eda0dc853fb5ddd9cdee28b1bb18a0ce7e4"
+    }
+  ],
+  "host9Regression": {
+    "status": "passed",
+    "checks": [
+      "actual WAV and H264/AAC media embedded byte-for-byte in native source",
+      "actual WebAudio output callback emitted nonzero samples while muted externally",
+      "native source and exported PPTX reopen with the original audio and video bytes"
+    ],
+    "rawEvidence": {
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-deck-media-host9.json",
+      "sha256": "edbbd31a312181baa25fd327e7e95f5682e9073243ea4c436c99b31d0941cacc"
+    }
+  }
+}

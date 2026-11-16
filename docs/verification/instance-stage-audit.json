@@ -1,0 +1,306 @@
+{
+  "schema": 1,
+  "fullScopeComplete": false,
+  "goalStatus": "active",
+  "scope": "Verified actual Photo historical instance forks, PNG content-only Deck apply, explicit linked PNG updates and saved-receipt recovery; continuing original full50",
+  "originalChecklistIds": {
+    "F2": "partial: exact historical independent fork verified; native clipboard provenance not complete",
+    "F3": "partial: Photo to Deck image apply verified; Vector poster path not complete",
+    "F6": "partial: 3 linked uses/3 pages/2 sources plus independent 4th verified; 7-use/property-override/ratio-anchor cases not complete",
+    "F4": "SVG in-place editing remains incomplete; PNG linked updates do not establish F4"
+  },
+  "commands": [
+    "cargo test --locked -p deckcraft-engine --lib cmd::shape::picture::preserve_tests",
+    "cargo check --locked --target wasm32-unknown-unknown -p deckcraft-web",
+    "pwsh -NoProfile -File work/build_deck.ps1",
+    "python work/adopt_deck_build.py --host-build 3",
+    "node --test tests/instance-fork.test.mjs tests/linked-update.test.mjs tests/project-graph.test.mjs tests/native-source-store.test.mjs tests/native-deck-header.test.mjs tests/native-contract.test.mjs tests/editor-history.test.mjs",
+    "npm run check",
+    "python work/test_instance_fork.py",
+    "python work/test_instance_apply.py",
+    "python work/test_instance_apply.py --interrupt",
+    "python work/test_linked_updates.py",
+    "python work/test_linked_updates.py --interrupt"
+  ],
+  "gates": {
+    "instance-fork-browser.json": 3,
+    "instance-apply-browser.json": 3,
+    "instance-apply-recovery-browser.json": 4,
+    "linked-update-browser.json": 3,
+    "linked-update-recovery-browser.json": 4
+  },
+  "focusedNodeTests": {
+    "passed": 38,
+    "failed": 0
+  },
+  "packageCheck": {
+    "javascriptFiles": 70,
+    "syntax": "passed",
+    "nativeBinaries": 4,
+    "runtimeHashes": "passed",
+    "resourceFiles": 36,
+    "resourceHashes": "passed"
+  },
+  "deckNativeTests": {
+    "passed": 3,
+    "failed": 0
+  },
+  "diskRuntime": {
+    "vector": "0.19.0+designcraft.host7",
+    "photo": "0.18.0+designcraft.host3",
+    "deck": "0.13.1+designcraft.host3",
+    "userWindowLoadedVersionVerified": false
+  },
+  "actualFindings": [
+    "Fork clones exactly the material-bound historical native source while original HEAD may be newer",
+    "Physical edit applies to the same native Deck picture; crop/rotation/transparency/corrections/group/order/other properties retained",
+    "Paired source/PNG and whole-presentation proof precede source publication; saved receipt reconciles without native replay",
+    "Explicit link membership covers only selected uses; independent use and original Photo source unchanged",
+    "First source committed then response lost; resume skips it and retains a physical manual move saved in the remaining source",
+    "Actual native source/PPTX contains new pixels; both linked native presentations reopen exactly"
+  ],
+  "fixedProblems": [
+    "Native Deck picture.change reset crop/artistic: added genuine picture.replaceContent with real artistic recomputation",
+    "Hosted surface refuses opening second design: each linked source now owns a fresh sequential worker",
+    "Fresh worker startup may trigger predispatch input guard: retry only the exact confirmed-before-dispatch refusal with fresh context; never unknown outcomes"
+  ],
+  "limitations": [
+    "Uncommitted apply draft from an expired job requires independent recovery to retain contents",
+    "Vector native content-only command is being implemented/tested, not installed or declared usable",
+    "Original full50 includes additional SVG/PPT conversion, brand/HTML/image-service/export/migration/journey work",
+    "No user desktop, native GUI, extra model/image API, subagent, commit or push used in this slice"
+  ],
+  "primaryReview": {
+    "allCopiedEvidenceRehashed": true,
+    "realNativeSourceAndPptxInspected": true,
+    "full50ClaimRefused": true,
+    "currentSourceFiles": [
+      {
+        "file": "host/native-source-store.js",
+        "sha256": "1cacabcfe1a9fb0a95ad9d4d0a13fd3f31ca0051b23f71e87f4fe2d682d1b14a"
+      },
+      {
+        "file": "host/project-graph.js",
+        "sha256": "99df7eb342837d5722d47c30603a4e689cb3708ed5cd5eb68d643cfef9e3f8bb"
+      },
+      {
+        "file": "host/native-deck-header.js",
+        "sha256": "5cd297044144aa751d3472e338e5f8e3c9ba20519bc7dc1103edebf5052b656a"
+      },
+      {
+        "file": "host/linked-updates.js",
+        "sha256": "bd400444810e0c553f76ebed7932706fa46d6588fe17ec0a3b68dd6eed35ed39"
+      },
+      {
+        "file": "host/editor-session.js",
+        "sha256": "999fcb4175e305c4b7dd41de315d4fdd8f852df1da62d2573d1a59eca32a6ce7"
+      },
+      {
+        "file": "host/editor-routes.js",
+        "sha256": "9732494290832bd783820125612b3e9648f128a169dfb1f0c630aaee9194785b"
+      },
+      {
+        "file": "host/editor-tools.js",
+        "sha256": "c8e5e08e21de89492ddec471931b08f25ae9fb86c54dc3786e4acd7e14f5adbc"
+      },
+      {
+        "file": "client/native-controller.js",
+        "sha256": "a4b8ec5517956e06ea01a0ae5c6906801a694b38f9b022f81acd9eb43cceb418"
+      },
+      {
+        "file": "client/native-workspace.js",
+        "sha256": "4d4ab426b52e81049ae325994f2323788938a69c3be48bd110130a209cc34a64"
+      },
+      {
+        "file": "tests/instance-fork.test.mjs",
+        "sha256": "ed2ae7dfa18464f24dce03b337c71b20875faaa705503b31f6803cd8ec933866"
+      },
+      {
+        "file": "tests/linked-update.test.mjs",
+        "sha256": "423b41efff3242b6d2808884f368ac38fa753ad9c12fcf64962de6d938662fcc"
+      },
+      {
+        "file": "tests/native-deck-header.test.mjs",
+        "sha256": "4a58d9d516ffdcd0e1a45ff83cc97ec78d94c3a8e0f4699f0a1e5d6f6fcfd3a3"
+      }
+    ]
+  },
+  "evidenceDirectory": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\outputs\\DesignCraft_图片回写阶段证据_20261105",
+  "evidence": [
+    {
+      "file": "instance-fork-browser.json",
+      "bytes": 3494,
+      "sha256": "4c6877b5cfb4a1204012761c6c2bfa7e3e68a8f6f15ae25282ba59fcfa723cca"
+    },
+    {
+      "file": "instance-apply-browser.json",
+      "bytes": 4703,
+      "sha256": "21df333a609685268c867740b9e98353865d24edecd2b64ddc778c78e5d04c2d"
+    },
+    {
+      "file": "instance-apply-recovery-browser.json",
+      "bytes": 5345,
+      "sha256": "0ff3d54ac334c9eb8adcbe8e007378bffb85b76dc924c5cfefe395ab1900fbed"
+    },
+    {
+      "file": "linked-update-browser.json",
+      "bytes": 4735,
+      "sha256": "c17fe276554be99eda644cbdc3a7f9dc28b0edfc3d9bebfb95107b986681393d"
+    },
+    {
+      "file": "linked-update-recovery-browser.json",
+      "bytes": 5177,
+      "sha256": "18bc42e5d3ea9acc120bddf96f16ac9b0f16a43f4775b3aa58e83f7be9bd6516"
+    },
+    {
+      "file": "instance-fork-browser.log",
+      "bytes": 1083,
+      "sha256": "05c3d49e172df599960ed84183211b53bdef423aca8d3c3f2a3f7b39ab3b4427"
+    },
+    {
+      "file": "instance-apply-browser.log",
+      "bytes": 2182,
+      "sha256": "510ed8f6bf07ba543823c192fe7a3243191d3e3352ef65924a04862592b68494"
+    },
+    {
+      "file": "instance-apply-recovery-browser.log",
+      "bytes": 2700,
+      "sha256": "069847a0441ec653b13fae8905fe6ba7159ffd881f356bf0ef61d524012c560b"
+    },
+    {
+      "file": "linked-update-browser.log",
+      "bytes": 1234,
+      "sha256": "e3a4e68ea4bfc7c1542c42a85db6f91c48448fb8de5a0d2d76e5f3f67282f2a3"
+    },
+    {
+      "file": "linked-update-recovery-browser.log",
+      "bytes": 1598,
+      "sha256": "31d962316a9a522b5780b98191bca5b61042229df4c7fc7adaddd5eb20edaee7"
+    },
+    {
+      "file": "deck-preserve-picture-native.log",
+      "bytes": 1928,
+      "sha256": "7ba414db691a981474b66a78cafde7dd3818cb1b5ec072372e2037d98413d153"
+    },
+    {
+      "file": "deck-preserve-wasm-check.log",
+      "bytes": 2142,
+      "sha256": "0752f542396fbb2fae08f591a19545f6893cd5b105525287016ec1062ad910e5"
+    },
+    {
+      "file": "deck-build-result.json",
+      "bytes": 4304,
+      "sha256": "35c0fa60bbaa23cbf32e3dc39e62baa8a207daca910734fd65da950816a6448f"
+    },
+    {
+      "file": "deck-build.log",
+      "bytes": 2233,
+      "sha256": "2579e513a49fe6f54a5eb404a5c2c40efa4c4140e1ef9faade534b089b0c8de0"
+    },
+    {
+      "file": "deck-host-build.json",
+      "bytes": 5785,
+      "sha256": "ee04bba00249b1af9035e1bbd949b15f7869d236ff15693b1152dc21d560200f"
+    },
+    {
+      "file": "instance-stage-final-node.tap",
+      "bytes": 4107,
+      "sha256": "23c1191352821706ac8a2713750e8c1ca5ed34dbb7f424426181d439082f6987"
+    },
+    {
+      "file": "instance-stage-package-check.log",
+      "bytes": 200,
+      "sha256": "b6954c160db1c8eef2eddffa1f4b3f9e2df5eece6118e104f1f854e61cd97e56"
+    },
+    {
+      "file": "instance-fork-storage.tap",
+      "bytes": 2469,
+      "sha256": "ee65d168375d4d4a23daab58580eb58639badb80da7901721445183499ecd9c2"
+    },
+    {
+      "file": "linked-resume-latest-source.tap",
+      "bytes": 722,
+      "sha256": "5dcb80e0667f20a9ee2e4403696598ff3e31071871bb5e56958367d8eeb9520d"
+    },
+    {
+      "file": "content-only-prepublish.tap",
+      "bytes": 721,
+      "sha256": "9e198d5606fee257ee49c3754d0b8385164ab697982cc6b264365f5ef62efa7a"
+    },
+    {
+      "file": "instance-applied.deckcraft",
+      "bytes": 13191,
+      "sha256": "e30af1d4159e8cd8e51efb5d4ac3574c522402914284c67e3a3a751a3c193079"
+    },
+    {
+      "file": "instance-applied.pptx",
+      "bytes": 30309,
+      "sha256": "05008cca1c3e01cc6eda1f5a6703a56efa6484d6a3a7f8d01bebf2125dba5848"
+    },
+    {
+      "file": "instance-applied.png",
+      "bytes": 23793,
+      "sha256": "6442c3c6990163c2317cae9bc54e9129e7659131d566743ba0c0c43e968bed57"
+    },
+    {
+      "file": "instance-apply-recovery.deckcraft",
+      "bytes": 13160,
+      "sha256": "69a9540c9f5d0120ddd567c5ec4011c0c1af5b333eefd41f0bac609f9abbdac0"
+    },
+    {
+      "file": "instance-apply-recovery.pptx",
+      "bytes": 30278,
+      "sha256": "cd284e04a0d106301ff2dc5bb85911edabcea8777ad2b1844d1549e5c89ff60b"
+    },
+    {
+      "file": "instance-apply-recovery.png",
+      "bytes": 23793,
+      "sha256": "47c2b0cd030488f97aa14f3ca486439f64c54917c1e035eecafb2ec4c6146d4b"
+    },
+    {
+      "file": "linked-update-a.deckcraft",
+      "bytes": 13172,
+      "sha256": "6f6077bdc9e360a19e54f0f7e46a0c5ab7ce7a38be09d103e6aea0475db4bb16"
+    },
+    {
+      "file": "linked-update-b.deckcraft",
+      "bytes": 13112,
+      "sha256": "bb207d765e092176093f20c5a1b4838986fb00944c65c0e8bb4714046b8bb7d9"
+    },
+    {
+      "file": "linked-update-recovery-a.deckcraft",
+      "bytes": 13171,
+      "sha256": "3c4cdd69bf51f658b42241850c0a67b61c469b779e77c8624ba2ef9f8d602af6"
+    },
+    {
+      "file": "linked-update-recovery-b.deckcraft",
+      "bytes": 13114,
+      "sha256": "c438dfa59d507ab06b05b576cf4a77d84940863e06c3cb9907d148e9493bd996"
+    },
+    {
+      "file": "instance-fork-ui.png",
+      "bytes": 167377,
+      "sha256": "f212f3c12910951e62a1d15b74fdf6bee7d0391a7fc4ca8765f619d4806ef11c"
+    },
+    {
+      "file": "instance-apply-ui.png",
+      "bytes": 149098,
+      "sha256": "802daebb4aa740022c1598d647a05ab271072298ec0ba0de1a8d33a47d3c302d"
+    },
+    {
+      "file": "instance-apply-recovery-ui.png",
+      "bytes": 148422,
+      "sha256": "c930e9de6fa5207dc0fd11df1e5b693eee021399f278340ab6d22f308cca36bb"
+    },
+    {
+      "file": "linked-update-ui.png",
+      "bytes": 140005,
+      "sha256": "31791395631fb2614cb992ce6d02106853d494a27f16f596d54c7640da2339cd"
+    },
+    {
+      "file": "linked-update-recovery-ui.png",
+      "bytes": 139608,
+      "sha256": "b9083fb370221df581ed21ced590e76b029fbe0e8e47976c0f57a41ee1ba4438"
+    }
+  ]
+}

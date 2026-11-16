@@ -1,0 +1,1188 @@
+{
+  "kind": "source-only-hosted-label-audit",
+  "functionalValidation": false,
+  "translationKeys": 577,
+  "literalSites": 391,
+  "files": [
+    {
+      "path": "crates\\ui-egui\\src\\dialogs.rs",
+      "sha256": "8606567985730ced45720dea1797a00500c054f7bda5b822d09c6f70cebd1f3c",
+      "sites": 1
+    },
+    {
+      "path": "crates\\ui-egui\\src\\doc_window.rs",
+      "sha256": "b5a7287b1a265ce85ada97047f3f6ee0f217c4e8ba3471ad9d77c61f890a60c1",
+      "sites": 2
+    },
+    {
+      "path": "crates\\ui-egui\\src\\menus.rs",
+      "sha256": "be362216c79dc460c0d3b5acc315ec52617d79661f869df8acfb844bbe47abe6",
+      "sites": 1
+    },
+    {
+      "path": "crates\\ui-egui\\src\\sorter.rs",
+      "sha256": "9a8d005536522511815fa5de4ca60fe40d306e476c06b46a5f0dbd7ed9a6356c",
+      "sites": 9
+    },
+    {
+      "path": "crates\\ui-egui\\src\\status.rs",
+      "sha256": "a13977dc9e0244feaf2b2ad0c25203d9a173cf9d132e633de590d60fbed1df0e",
+      "sites": 6
+    },
+    {
+      "path": "crates\\ui-egui\\src\\toast.rs",
+      "sha256": "78f7ae1c009b5e4c1104d6c2a395e3293edb9f0f10833f57acf6b530bf6ac2e1",
+      "sites": 1
+    },
+    {
+      "path": "crates\\ui-egui\\src\\widgets.rs",
+      "sha256": "21a206a600360bb0d3a606f7f6001edfc534df5498378d7b43aedb40de91b224",
+      "sites": 5
+    },
+    {
+      "path": "crates\\ui-egui\\src\\backstage\\files.rs",
+      "sha256": "e86962ee05fe921448b14a51c9e5041f13309969a22d5927777650e0d78069df",
+      "sites": 6
+    },
+    {
+      "path": "crates\\ui-egui\\src\\backstage\\info.rs",
+      "sha256": "2a13f34ba24f3c41469280d72fd66394d0a8e31dc66d3e3960d7db9348f56cc8",
+      "sites": 2
+    },
+    {
+      "path": "crates\\ui-egui\\src\\backstage\\print.rs",
+      "sha256": "e387d83abd3bbbf235691a4297a75a8b46207a96dd06a34a65412f8055418d84",
+      "sites": 9
+    },
+    {
+      "path": "crates\\ui-egui\\src\\canvas\\context_menu.rs",
+      "sha256": "b8fbec137d42939d65e648ce311b174cbd6e8032f33b7a79dfebb8f87faae78c",
+      "sites": 30
+    },
+    {
+      "path": "crates\\ui-egui\\src\\dialogs\\about.rs",
+      "sha256": "5d919d0f4da70335ada0db0f408f5b7f746082b77f4a1898d45fe96c9343e1f1",
+      "sites": 2
+    },
+    {
+      "path": "crates\\ui-egui\\src\\dialogs\\body.rs",
+      "sha256": "48cb990fdd35caccfc2d6d981abd8639d0db5c5d33d2ffa93c2456a50b476a57",
+      "sites": 17
+    },
+    {
+      "path": "crates\\ui-egui\\src\\dialogs\\credits.rs",
+      "sha256": "383d4992e96a72e99bc01a18eccea8c4326409a688ba34fdef267b3351f5ee5c",
+      "sites": 7
+    },
+    {
+      "path": "crates\\ui-egui\\src\\dialogs\\date_time.rs",
+      "sha256": "cfda59d5e42d1337a053901d84fedd1d03e2db5090d4d2f4ebb0f68969ad2b5e",
+      "sites": 3
+    },
+    {
+      "path": "crates\\ui-egui\\src\\dialogs\\export.rs",
+      "sha256": "161921a666298c7d44b7dcb64ee4db2fde7b9de86de09350257355bbeb0c6da0",
+      "sites": 1
+    },
+    {
+      "path": "crates\\ui-egui\\src\\dialogs\\find.rs",
+      "sha256": "711ddae2384633fc3166c6f71a4f9f1a3db25ce900845b57b04ee8b86ca86009",
+      "sites": 6
+    },
+    {
+      "path": "crates\\ui-egui\\src\\dialogs\\font.rs",
+      "sha256": "31ec3f666a7414aa3b89e3b46f21dc8ca5da595cd2ea62d10735fa4ea88cb751",
+      "sites": 6
+    },
+    {
+      "path": "crates\\ui-egui\\src\\dialogs\\grid_options.rs",
+      "sha256": "ce497616d6a69718c93b948d6d2f2d85040c19b40e1848d09de18e9b4ae552fe",
+      "sites": 2
+    },
+    {
+      "path": "crates\\ui-egui\\src\\dialogs\\paragraph.rs",
+      "sha256": "86f1556fc57d507747758abb9f09a975432682304c4acab9fad3cbdf66a0e88f",
+      "sites": 6
+    },
+    {
+      "path": "crates\\ui-egui\\src\\dialogs\\photo_album.rs",
+      "sha256": "0f2bf69f15f9a2fa37923651f1f283467291cf4515790d09c1a3aa20a47ccc00",
+      "sites": 14
+    },
+    {
+      "path": "crates\\ui-egui\\src\\dialogs\\size_position.rs",
+      "sha256": "6a6f1ec1ae3e0271e88a6b241bfc0a79cc8ba34c0fc3bc4238fe8ba844c7c09a",
+      "sites": 3
+    },
+    {
+      "path": "crates\\ui-egui\\src\\dialogs\\tabs.rs",
+      "sha256": "f746c583bfa1f7299223623510157962b025dae4a65a3603ddc21cc2a777798e",
+      "sites": 6
+    },
+    {
+      "path": "crates\\ui-egui\\src\\dialogs\\theme_colors.rs",
+      "sha256": "7aeeae05b8f44bae3a5d47dcd5289bfd1be24e56ef8783544584d6c6f2d5e1bf",
+      "sites": 2
+    },
+    {
+      "path": "crates\\ui-egui\\src\\dialogs\\theme_fonts.rs",
+      "sha256": "5e1ac716ff0a03ff3949c2eb1ce9bbef593342a52066df23476e875a9eff451d",
+      "sites": 4
+    },
+    {
+      "path": "crates\\ui-egui\\src\\dialogs\\zoom.rs",
+      "sha256": "7593a33fc6de959cf0c3762f687c7baeebee8a86cbf2e1bfb7e23708f35e3751",
+      "sites": 3
+    },
+    {
+      "path": "crates\\ui-egui\\src\\panels\\animation.rs",
+      "sha256": "20f8ef302df1986fb8ee2f039712859b0315ca8179f32509f93f768dcf88393c",
+      "sites": 4
+    },
+    {
+      "path": "crates\\ui-egui\\src\\panels\\background.rs",
+      "sha256": "8686cdde6a1e6686c9ede7728f1fec941b26326e03e245a9e4d93ee14f34c464",
+      "sites": 9
+    },
+    {
+      "path": "crates\\ui-egui\\src\\panels\\comments.rs",
+      "sha256": "b8bd43ec80063e0360c4cf749328fb4a867d1353aaf44512dcfa50471a332c65",
+      "sites": 7
+    },
+    {
+      "path": "crates\\ui-egui\\src\\panels\\designer.rs",
+      "sha256": "b18955386d572c30321e852a579d7cdb55e1bc9c14a4e5d2a6d912a19edde4d2",
+      "sites": 3
+    },
+    {
+      "path": "crates\\ui-egui\\src\\panels\\fillui.rs",
+      "sha256": "bb2d126d6a0d504663a9878b4666d1d5b7f1b98e90c3786775a4c425448b49af",
+      "sites": 10
+    },
+    {
+      "path": "crates\\ui-egui\\src\\panels\\format_shape.rs",
+      "sha256": "22d55e8f014465bb0560a0fc2a58400600a50fcf7a038d6f4610534cbf99b883",
+      "sites": 38
+    },
+    {
+      "path": "crates\\ui-egui\\src\\panels\\selpane.rs",
+      "sha256": "6cb5254cd7ce2333aedd6986cb60dc743c0750bfcc685bdcf9a7920ca261f10e",
+      "sites": 4
+    },
+    {
+      "path": "crates\\ui-egui\\src\\panels\\smartart.rs",
+      "sha256": "336f9a0467da828b99ccb82a44e6718fbca9a9acd33ac70b019d70b11b352321",
+      "sites": 5
+    },
+    {
+      "path": "crates\\ui-egui\\src\\panels\\thesaurus.rs",
+      "sha256": "c9735eb82efb121d245b476f0ab473a37c3e2433925e14d51e283ddff51819ba",
+      "sites": 2
+    },
+    {
+      "path": "crates\\ui-egui\\src\\panels\\thumbs.rs",
+      "sha256": "fc93de272be28cbfea790b33dc488630da42585720976c385442662c0f420034",
+      "sites": 12
+    },
+    {
+      "path": "crates\\ui-egui\\src\\ribbon\\animations.rs",
+      "sha256": "61a5f21d3e6d3a4e47387dca1ed03dfac291d3b28bff74f40f556b76daa1a138",
+      "sites": 6
+    },
+    {
+      "path": "crates\\ui-egui\\src\\ribbon\\arrange.rs",
+      "sha256": "841ad2cd8529b4865dc805f9e3f3ecc823f70e42e7b386ec4fb4a02605d906fc",
+      "sites": 11
+    },
+    {
+      "path": "crates\\ui-egui\\src\\ribbon\\design.rs",
+      "sha256": "830095ed32eef70bd8d1b62375694d13bf2b53080cf397c889e4750c9f5855c2",
+      "sites": 6
+    },
+    {
+      "path": "crates\\ui-egui\\src\\ribbon\\draw.rs",
+      "sha256": "9f287320261417f87583989cd1fab963250b833a30e87654f76ddaab1affcdd2",
+      "sites": 3
+    },
+    {
+      "path": "crates\\ui-egui\\src\\ribbon\\galleries.rs",
+      "sha256": "946bac266395a6b4936eddbc6821aa7e7338472d0b817dd920cfdbd427001a84",
+      "sites": 10
+    },
+    {
+      "path": "crates\\ui-egui\\src\\ribbon\\home.rs",
+      "sha256": "f767f50ec8bb6255aca73e87b0c3a323c21cd7157bd977ef5de2c5c0caded61a",
+      "sites": 27
+    },
+    {
+      "path": "crates\\ui-egui\\src\\ribbon\\insert.rs",
+      "sha256": "0c9a4fd13be1732b672f865eb9caa9c59cf32bca703508d41f6e465bceeb1948",
+      "sites": 7
+    },
+    {
+      "path": "crates\\ui-egui\\src\\ribbon\\masters.rs",
+      "sha256": "ba4cf35b24a6c521f806ab28e6f017ae592e0858f7da9f646e081a8059920ce5",
+      "sites": 4
+    },
+    {
+      "path": "crates\\ui-egui\\src\\ribbon\\picture_format.rs",
+      "sha256": "668e38905bb60ce08812a0832ca3678122359e173b48123f7d90461283fde71d",
+      "sites": 13
+    },
+    {
+      "path": "crates\\ui-egui\\src\\ribbon\\playback.rs",
+      "sha256": "fc1fbf4cc833cdd52ab65676842da6e048f630c7142e4d3727f3ade6fb643f70",
+      "sites": 6
+    },
+    {
+      "path": "crates\\ui-egui\\src\\ribbon\\qat.rs",
+      "sha256": "0c5f5e19b7d44225bda36b80a016c1b7901347d423d9296714b4912da419a9c5",
+      "sites": 4
+    },
+    {
+      "path": "crates\\ui-egui\\src\\ribbon\\review.rs",
+      "sha256": "6f74ef8ae5773d9ad87a32f520b672269c6c940a0f8f4e8614783904c28fe6e1",
+      "sites": 1
+    },
+    {
+      "path": "crates\\ui-egui\\src\\ribbon\\shape_format.rs",
+      "sha256": "2467fc15368016173dbdca0f353fd1a18a0705768d1970869ff27c2bece24add",
+      "sites": 10
+    },
+    {
+      "path": "crates\\ui-egui\\src\\ribbon\\slide_show.rs",
+      "sha256": "6381f7d06dc2c67635de3644ef7f6534c6d9a04511806148ff17a601aa2ee8f5",
+      "sites": 5
+    },
+    {
+      "path": "crates\\ui-egui\\src\\ribbon\\smartart.rs",
+      "sha256": "46a03f4ac89249b77d8f38aae5acb061ffef4bf523bdc79e85a409e0f39c1d5e",
+      "sites": 4
+    },
+    {
+      "path": "crates\\ui-egui\\src\\ribbon\\table.rs",
+      "sha256": "464eaec429da14c5a29ac30945d11411a776aff480f5fb1f40a0089b4b598157",
+      "sites": 10
+    },
+    {
+      "path": "crates\\ui-egui\\src\\ribbon\\transitions.rs",
+      "sha256": "67c3e838083c354cd4aed0c58141bac360aac78d391493ea0780b19891794b6e",
+      "sites": 8
+    },
+    {
+      "path": "crates\\ui-egui\\src\\ribbon\\view.rs",
+      "sha256": "d3692c59dcae39ce4a6d23959973906b59fa378f6b4a79128432f344a86049f6",
+      "sites": 7
+    },
+    {
+      "path": "crates\\ui-egui\\src\\show\\ui.rs",
+      "sha256": "37df03077997ce41f8e726b10fcdb56dfae577e0d0deaf668ef9a0780bc17a7a",
+      "sites": 1
+    },
+    {
+      "path": "crates\\ui-egui\\src\\lib.rs",
+      "sha256": "c8c584a49f965be85183b55f14b8b74fc55eadbfc95ce0a21f94c8f99e1266fe",
+      "sites": 0
+    },
+    {
+      "path": "crates\\ui-egui\\src\\app.rs",
+      "sha256": "60b55fe3cba45871a31a45682b29e2f7ae23dee7b562666dee5d3c562bb81278",
+      "sites": 0
+    },
+    {
+      "path": "crates\\ui-egui\\src\\ribbon.rs",
+      "sha256": "a84dad6435734242fd8289af8ea11f6ae42512e401fe38e29e6511c6bae328e8",
+      "sites": 0
+    },
+    {
+      "path": "crates\\ui-egui\\src\\host_ui.rs",
+      "sha256": "3b6268d4dbc13f0c1241bb38a73a8fb1fc46a01b19810fd495beced714ed7cc5",
+      "sites": 0
+    }
+  ],
+  "sharedCatalogs": [
+    {
+      "path": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\upstream\\vectorcraft-bcebabe3f8c23a376ac68e9e6726590af278f7bb\\crates\\ui-egui\\src\\i18n\\zh-hans.tsv",
+      "sha256": "c44b0113756471daf9652347c545022c8c309e11cf659be5c4679535d1c83e33",
+      "license": "MIT OR Apache-2.0"
+    },
+    {
+      "path": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\upstream\\photocraft-8a87a457abb43ac344deeb3fdb67541b91a72ff1\\crates\\ui-egui\\src\\i18n\\zh-hans.tsv",
+      "sha256": "6bd60afd37e1031cebb7bc6f2fd087ad72440900d5167cdee442365e46d2ff2f",
+      "license": "MIT OR Apache-2.0"
+    }
+  ],
+  "technicalLabelsPreserved": [
+    "12 pt",
+    "18 pt",
+    "AaBbCcDd",
+    "DeckCraft",
+    "MIT OR Apache-2.0 · © 2026 ArtCraft Team and the DeckCraft contributors",
+    "RRGGBB",
+    "SmartArt",
+    "command_palette",
+    "in",
+    "pt"
+  ],
+  "scope": "Direct UI literals and common ribbon/palette labels; dynamic formatted descriptions and external engine-generated labels can still require further localization. No document content, command IDs or file formats are translated.",
+  "installedVersion": "0.13.1+designcraft.host18",
+  "buildResult": {
+    "sourceMatches": true,
+    "logSha256": "cf9725e65e6a7c781eb7c251ec0fb89dc38c52e2b93a3d24938a9486a5a44fbe",
+    "exitCode": 0
+  },
+  "visualValidation": false,
+  "previousBuildAuditScope": "Fixed/dynamic label counts are historical host15/16 snapshots; current source hashes and capture removal are host17.",
+  "dynamicLabels": {
+    "schema": 1,
+    "kind": "source-only-dynamic-label-translation",
+    "sites": [
+      {
+        "file": "control.rs",
+        "line": 169,
+        "english": "unknown pointer kind `{kind}`",
+        "chinese": "未知指针类型 `{kind}`"
+      },
+      {
+        "file": "control.rs",
+        "line": 226,
+        "english": "unknown tool `{name}`",
+        "chinese": "未知工具 `{name}`"
+      },
+      {
+        "file": "control.rs",
+        "line": 324,
+        "english": "no slide {i}",
+        "chinese": "没有第 {i} 张幻灯片"
+      },
+      {
+        "file": "control.rs",
+        "line": 390,
+        "english": "unknown method `{other}`",
+        "chinese": "未知方法 `{other}`"
+      },
+      {
+        "file": "doc_window.rs",
+        "line": 97,
+        "english": "Slide {} of {n}",
+        "chinese": "第 {} 张，共 {n} 张"
+      },
+      {
+        "file": "media.rs",
+        "line": 566,
+        "english": "No sound: {err}",
+        "chinese": "没有声音：{err}"
+      },
+      {
+        "file": "opening.rs",
+        "line": 39,
+        "english": "Still opening {name}",
+        "chinese": "仍在打开 {name}"
+      },
+      {
+        "file": "opening.rs",
+        "line": 73,
+        "english": "Stopped opening {}",
+        "chinese": "已停止打开 {}"
+      },
+      {
+        "file": "opening.rs",
+        "line": 83,
+        "english": "{}: reading the file stopped unexpectedly",
+        "chinese": "{}：文件读取意外停止"
+      },
+      {
+        "file": "opening.rs",
+        "line": 110,
+        "english": "Opening {name}…",
+        "chinese": "正在打开 {name}…"
+      },
+      {
+        "file": "opening.rs",
+        "line": 113,
+        "english": "Reading the file: {secs:.0} s",
+        "chinese": "正在读取文件：{secs:.0} 秒"
+      },
+      {
+        "file": "sorter.rs",
+        "line": 204,
+        "english": "Slide {}",
+        "chinese": "第 {} 张"
+      },
+      {
+        "file": "status.rs",
+        "line": 20,
+        "english": "Slide {} of {}",
+        "chinese": "第 {} 张，共 {} 张"
+      },
+      {
+        "file": "toast.rs",
+        "line": 23,
+        "english": "{a} and {b}",
+        "chinese": "{a} 和 {b}"
+      },
+      {
+        "file": "toast.rs",
+        "line": 24,
+        "english": "{a}, {b} and {c}",
+        "chinese": "{a}、{b} 和 {c}"
+      },
+      {
+        "file": "toast.rs",
+        "line": 25,
+        "english": "{a}, {b}, {c} and {} more",
+        "chinese": "{a}、{b}、{c}，另有 {} 项"
+      },
+      {
+        "file": "toast.rs",
+        "line": 28,
+        "english": "{names} {it} installed on this computer. Text that uses {them} is shown in a similar font.",
+        "chinese": "本机未安装 {names}。相关文字将使用相近字体显示。"
+      },
+      {
+        "file": "widgets.rs",
+        "line": 56,
+        "english": "{name} options",
+        "chinese": "{name} 选项"
+      },
+      {
+        "file": "widgets.rs",
+        "line": 577,
+        "english": "{label} value",
+        "chinese": "{label} 数值"
+      },
+      {
+        "file": "widgets.rs",
+        "line": 591,
+        "english": "Increase {label}",
+        "chinese": "增大 {label}"
+      },
+      {
+        "file": "widgets.rs",
+        "line": 593,
+        "english": "Decrease {label}",
+        "chinese": "减小 {label}"
+      },
+      {
+        "file": "app\\commands.rs",
+        "line": 13,
+        "english": "`{key}` must be true or false",
+        "chinese": "`{key}` 必须为 true 或 false"
+      },
+      {
+        "file": "app\\commands.rs",
+        "line": 210,
+        "english": "unknown File page `{id}`",
+        "chinese": "未知文件页 `{id}`"
+      },
+      {
+        "file": "app\\commands.rs",
+        "line": 214,
+        "english": "File › {} needs an open presentation",
+        "chinese": "文件 › {} 需要先打开演示文稿"
+      },
+      {
+        "file": "app\\commands.rs",
+        "line": 287,
+        "english": "unknown UI command `{id}`",
+        "chinese": "未知界面命令 `{id}`"
+      },
+      {
+        "file": "app\\files.rs",
+        "line": 66,
+        "english": "{name}: DeckCraft can't open this kind of file",
+        "chinese": "{name}：DeckCraft 无法打开此类文件"
+      },
+      {
+        "file": "app\\files.rs",
+        "line": 142,
+        "english": "DeckCraft can't export “{other}”",
+        "chinese": "DeckCraft 无法导出“{other}”"
+      },
+      {
+        "file": "app\\files.rs",
+        "line": 155,
+        "english": "Exported {path}",
+        "chinese": "已导出 {path}"
+      },
+      {
+        "file": "app\\files.rs",
+        "line": 332,
+        "english": "Inserted {} slides",
+        "chinese": "已插入 {} 张幻灯片"
+      },
+      {
+        "file": "app\\files.rs",
+        "line": 389,
+        "english": "Saved {path}",
+        "chinese": "已保存 {path}"
+      },
+      {
+        "file": "app\\files.rs",
+        "line": 595,
+        "english": "{name} was not applied: the presentation it was chosen for is closed",
+        "chinese": "未应用 {name}：目标演示文稿已关闭"
+      },
+      {
+        "file": "app\\files.rs",
+        "line": 604,
+        "english": "{name} was not applied: {e}",
+        "chinese": "未应用 {name}：{e}"
+      },
+      {
+        "file": "app\\frame.rs",
+        "line": 48,
+        "english": "Couldn't save AutoRecover information: {e}",
+        "chinese": "无法保存自动恢复信息：{e}"
+      },
+      {
+        "file": "app\\frame.rs",
+        "line": 113,
+        "english": "Audio may be silent: {reason}. Interact with the presentation, then try playback again.",
+        "chinese": "音频可能没有声音：{reason}。请先操作演示文稿，再重试播放。"
+      },
+      {
+        "file": "app\\keys.rs",
+        "line": 247,
+        "english": "the pasted image is {w}×{h} pixels; the limit is 16 megapixels",
+        "chinese": "粘贴图片为 {w}×{h} 像素；上限为 1600 万像素"
+      },
+      {
+        "file": "app\\playback.rs",
+        "line": 21,
+        "english": "`from` is not a valid index: {v}",
+        "chinese": "`from` 不是有效索引：{v}"
+      },
+      {
+        "file": "app\\playback.rs",
+        "line": 25,
+        "english": "no slide {from}",
+        "chinese": "没有第 {from} 张幻灯片"
+      },
+      {
+        "file": "app\\playback.rs",
+        "line": 126,
+        "english": "no effect {i} in this slide's click sequence",
+        "chinese": "当前页的点击序列中没有第 {i} 个效果"
+      },
+      {
+        "file": "backstage\\files.rs",
+        "line": 107,
+        "english": "No recent presentations match “{}”.",
+        "chinese": "没有匹配“{}”的最近文稿。"
+      },
+      {
+        "file": "backstage\\files.rs",
+        "line": 134,
+        "english": "{path} — this file can't be found",
+        "chinese": "{path} — 找不到此文件"
+      },
+      {
+        "file": "backstage\\files.rs",
+        "line": 281,
+        "english": "No themes or templates match “{}”.",
+        "chinese": "没有匹配“{}”的主题或模板。"
+      },
+      {
+        "file": "backstage\\info.rs",
+        "line": 141,
+        "english": "{b} bytes",
+        "chinese": "{b} 字节"
+      },
+      {
+        "file": "backstage\\print.rs",
+        "line": 277,
+        "english": "{} of {}",
+        "chinese": "{} / {}"
+      },
+      {
+        "file": "backstage\\print.rs",
+        "line": 325,
+        "english": "{} slides per page",
+        "chinese": "每页 {} 张幻灯片"
+      },
+      {
+        "file": "backstage\\print.rs",
+        "line": 328,
+        "english": "{n} slides per page",
+        "chinese": "每页 {n} 张幻灯片"
+      },
+      {
+        "file": "canvas\\rulers.rs",
+        "line": 170,
+        "english": "{kind_label} (click to change)",
+        "chinese": "{kind_label}（点击更改）"
+      },
+      {
+        "file": "control\\hosted.rs",
+        "line": 132,
+        "english": "native conflict: {field} changed",
+        "chinese": "原生内容冲突：{field} 已改变"
+      },
+      {
+        "file": "control\\hosted.rs",
+        "line": 421,
+        "english": "Fonts unavailable for rendering: {}",
+        "chinese": "渲染缺少字体：{}"
+      },
+      {
+        "file": "dialogs\\about.rs",
+        "line": 41,
+        "english": "Version {}",
+        "chinese": "版本 {}"
+      },
+      {
+        "file": "dialogs\\body.rs",
+        "line": 69,
+        "english": "“{}” is not available yet.",
+        "chinese": "“{}”尚未提供。"
+      },
+      {
+        "file": "dialogs\\body.rs",
+        "line": 116,
+        "english": "Width ({abbr}):",
+        "chinese": "宽度（{abbr}）："
+      },
+      {
+        "file": "dialogs\\body.rs",
+        "line": 117,
+        "english": "Height ({abbr}):",
+        "chinese": "高度（{abbr}）："
+      },
+      {
+        "file": "dialogs\\body.rs",
+        "line": 295,
+        "english": "{} presentations",
+        "chinese": "{} 份演示文稿"
+      },
+      {
+        "file": "dialogs\\body.rs",
+        "line": 296,
+        "english": "Do you want to save the changes you made to {what}?",
+        "chinese": "是否保存对 {what} 的修改？"
+      },
+      {
+        "file": "dialogs\\body.rs",
+        "line": 328,
+        "english": "Do you want to save the changes you made to “{name}”?",
+        "chinese": "是否保存对“{name}”的修改？"
+      },
+      {
+        "file": "dialogs\\body.rs",
+        "line": 646,
+        "english": "Insert slides from {name} after the current slide:",
+        "chinese": "将 {name} 中的幻灯片插入到当前页之后："
+      },
+      {
+        "file": "dialogs\\body.rs",
+        "line": 664,
+        "english": "{}  (no title)",
+        "chinese": "{}（无标题）"
+      },
+      {
+        "file": "dialogs\\body.rs",
+        "line": 845,
+        "english": "“{from}” isn't used explicitly.",
+        "chinese": "没有明确使用“{from}”。"
+      },
+      {
+        "file": "dialogs\\body.rs",
+        "line": 845,
+        "english": "Replaced “{from}” with “{}”.",
+        "chinese": "已将“{from}”替换为“{}”。"
+      },
+      {
+        "file": "dialogs\\body.rs",
+        "line": 930,
+        "english": "Dictionary: {}",
+        "chinese": "词典：{}"
+      },
+      {
+        "file": "dialogs\\body.rs",
+        "line": 932,
+        "english": "Dictionary: {}",
+        "chinese": "词典：{}"
+      },
+      {
+        "file": "dialogs\\body.rs",
+        "line": 935,
+        "english": "No {} dictionary is installed, so only common misspellings are found. Put a Hunspell .aff/.dic pair in {}.",
+        "chinese": "尚未安装 {} 词典，目前仅检查常见拼写。可将 Hunspell 的 .aff/.dic 文件放入 {}。"
+      },
+      {
+        "file": "dialogs\\body.rs",
+        "line": 958,
+        "english": "Slide {}: “{w}”",
+        "chinese": "第 {} 张：“{w}”"
+      },
+      {
+        "file": "dialogs\\body.rs",
+        "line": 1073,
+        "english": "Slide {}: {}{}",
+        "chinese": "第 {} 张：{}{}"
+      },
+      {
+        "file": "dialogs\\body.rs",
+        "line": 1121,
+        "english": "{name}  (dictionary)",
+        "chinese": "{name}（词典）"
+      },
+      {
+        "file": "dialogs\\body.rs",
+        "line": 1145,
+        "english": "{} ({} slides)",
+        "chinese": "{}（{} 张幻灯片）"
+      },
+      {
+        "file": "dialogs\\credits.rs",
+        "line": 247,
+        "english": "{} contributors · {} commits",
+        "chinese": "{} 位贡献者 · {} 次提交"
+      },
+      {
+        "file": "dialogs\\export.rs",
+        "line": 41,
+        "english": "Width: enter {MIN_WIDTH} to {MAX_WIDTH} pixels",
+        "chinese": "宽度：请输入 {MIN_WIDTH} 到 {MAX_WIDTH} 像素"
+      },
+      {
+        "file": "dialogs\\export.rs",
+        "line": 49,
+        "english": "Seconds per slide: enter {MIN_SECONDS} to {MAX_SECONDS}",
+        "chinese": "每页秒数：请输入 {MIN_SECONDS} 到 {MAX_SECONDS}"
+      },
+      {
+        "file": "dialogs\\export.rs",
+        "line": 54,
+        "english": "Slides: choose a range from 1 to {n}",
+        "chinese": "幻灯片：请选择 1 到 {n} 的范围"
+      },
+      {
+        "file": "dialogs\\find.rs",
+        "line": 51,
+        "english": "Replaced {} occurrence(s).",
+        "chinese": "已替换 {} 处。"
+      },
+      {
+        "file": "dialogs\\find.rs",
+        "line": 52,
+        "english": "DeckCraft can't find “{text}”.",
+        "chinese": "DeckCraft 找不到“{text}”。"
+      },
+      {
+        "file": "dialogs\\find.rs",
+        "line": 67,
+        "english": "DeckCraft can't find “{text}”.",
+        "chinese": "DeckCraft 找不到“{text}”。"
+      },
+      {
+        "file": "dialogs\\find.rs",
+        "line": 81,
+        "english": "Match {} of {} on slide {}{where_}.",
+        "chinese": "第 {} 个匹配，共 {} 个；位于幻灯片 {}{where_}。"
+      },
+      {
+        "file": "dialogs\\photo_album.rs",
+        "line": 16,
+        "english": "Text: {text}",
+        "chinese": "文字：{text}"
+      },
+      {
+        "file": "dialogs\\photo_album.rs",
+        "line": 330,
+        "english": "Rotation {rot:.0}°, brightness {brightness:.1}, contrast {contrast:.1}",
+        "chinese": "旋转 {rot:.0}°，亮度 {brightness:.1}，对比度 {contrast:.1}"
+      },
+      {
+        "file": "dialogs\\size_position.rs",
+        "line": 136,
+        "english": "{label} must be a number",
+        "chinese": "{label} 必须是数字"
+      },
+      {
+        "file": "dialogs\\size_position.rs",
+        "line": 139,
+        "english": "{label} must be a number",
+        "chinese": "{label} 必须是数字"
+      },
+      {
+        "file": "dialogs\\size_position.rs",
+        "line": 144,
+        "english": "{label} must be a number",
+        "chinese": "{label} 必须是数字"
+      },
+      {
+        "file": "dialogs\\size_position.rs",
+        "line": 146,
+        "english": "{label} must be a number",
+        "chinese": "{label} 必须是数字"
+      },
+      {
+        "file": "dialogs\\tabs.rs",
+        "line": 39,
+        "english": "Clear the tab at {pos:.2}\\\"",
+        "chinese": "清除位于 {pos:.2} 英寸的制表位"
+      },
+      {
+        "file": "dialogs\\theme_colors.rs",
+        "line": 29,
+        "english": "{} hex",
+        "chinese": "{} 十六进制颜色"
+      },
+      {
+        "file": "dialogs\\theme_colors.rs",
+        "line": 46,
+        "english": "{} needs a colour like #RRGGBB.",
+        "chinese": "{} 需要 #RRGGBB 格式的颜色。"
+      },
+      {
+        "file": "dialogs\\theme_fonts.rs",
+        "line": 87,
+        "english": "Heading sample  {major}",
+        "chinese": "标题示例  {major}"
+      },
+      {
+        "file": "dialogs\\theme_fonts.rs",
+        "line": 88,
+        "english": "Body sample  {minor}",
+        "chinese": "正文示例  {minor}"
+      },
+      {
+        "file": "dialogs\\updates_ui.rs",
+        "line": 44,
+        "english": "DeckCraft {VERSION} is up to date.",
+        "chinese": "DeckCraft {VERSION} 已是最新版本。"
+      },
+      {
+        "file": "dialogs\\updates_ui.rs",
+        "line": 45,
+        "english": "Could not check for updates: {e}",
+        "chinese": "无法检查更新：{e}"
+      },
+      {
+        "file": "panels\\animation.rs",
+        "line": 54,
+        "english": "Shape {}",
+        "chinese": "对象 {}"
+      },
+      {
+        "file": "panels\\animation.rs",
+        "line": 95,
+        "english": "Timing bar {}",
+        "chinese": "计时条 {}"
+      },
+      {
+        "file": "panels\\animation.rs",
+        "line": 97,
+        "english": "Duration handle {}",
+        "chinese": "时长控制柄 {}"
+      },
+      {
+        "file": "panels\\animtimeline.rs",
+        "line": 90,
+        "english": "Start: {:.2}s, End: {:.2}s",
+        "chinese": "开始：{:.2} 秒，结束：{:.2} 秒"
+      },
+      {
+        "file": "panels\\comments.rs",
+        "line": 12,
+        "english": "Compared with {}",
+        "chinese": "与 {} 比较"
+      },
+      {
+        "file": "panels\\comments.rs",
+        "line": 26,
+        "english": "Accept All ({})",
+        "chinese": "全部接受（{}）"
+      },
+      {
+        "file": "panels\\comments.rs",
+        "line": 29,
+        "english": "Reject All ({})",
+        "chinese": "全部拒绝（{}）"
+      },
+      {
+        "file": "panels\\comments.rs",
+        "line": 37,
+        "english": "Slide inserted after {slide}",
+        "chinese": "已在第 {slide} 张之后插入幻灯片"
+      },
+      {
+        "file": "panels\\comments.rs",
+        "line": 38,
+        "english": "Slide {} deleted",
+        "chinese": "已删除第 {} 张幻灯片"
+      },
+      {
+        "file": "panels\\comments.rs",
+        "line": 39,
+        "english": "Slide {} changed",
+        "chinese": "第 {} 张幻灯片已改变"
+      },
+      {
+        "file": "panels\\comments.rs",
+        "line": 84,
+        "english": "Slide {}",
+        "chinese": "第 {} 张"
+      },
+      {
+        "file": "panels\\comments.rs",
+        "line": 119,
+        "english": "{when} · Resolved",
+        "chinese": "{when} · 已解决"
+      },
+      {
+        "file": "panels\\effect_presets.rs",
+        "line": 55,
+        "english": "{r} pt glow",
+        "chinese": "{r} 磅发光"
+      },
+      {
+        "file": "panels\\effect_presets.rs",
+        "line": 69,
+        "english": "{r} pt soft edges",
+        "chinese": "{r} 磅柔化边缘"
+      },
+      {
+        "file": "panels\\fillui.rs",
+        "line": 235,
+        "english": "Gradient stop {}",
+        "chinese": "渐变色标 {}"
+      },
+      {
+        "file": "panels\\fillui.rs",
+        "line": 500,
+        "english": "{label} color",
+        "chinese": "{label} 颜色"
+      },
+      {
+        "file": "panels\\thesaurus.rs",
+        "line": 19,
+        "english": "No synonyms for \\\"{}\\\".",
+        "chinese": "找不到“{}”的同义词。"
+      },
+      {
+        "file": "panels\\thumbs.rs",
+        "line": 182,
+        "english": "Slide {}",
+        "chinese": "第 {} 张"
+      },
+      {
+        "file": "panels\\thumbs.rs",
+        "line": 399,
+        "english": "{} Slide Master",
+        "chinese": "{} 幻灯片母版"
+      },
+      {
+        "file": "ribbon\\animations.rs",
+        "line": 139,
+        "english": "On Click of {name}",
+        "chinese": "点击 {name} 时"
+      },
+      {
+        "file": "ribbon\\design.rs",
+        "line": 129,
+        "english": "Style {i}",
+        "chinese": "样式 {i}"
+      },
+      {
+        "file": "ribbon\\galleries.rs",
+        "line": 303,
+        "english": "{r} pt glow",
+        "chinese": "{r} 磅发光"
+      },
+      {
+        "file": "ribbon\\home.rs",
+        "line": 177,
+        "english": "{f} (Headings)",
+        "chinese": "{f}（标题）"
+      },
+      {
+        "file": "ribbon\\home.rs",
+        "line": 179,
+        "english": "{f} (Body)",
+        "chinese": "{f}（正文）"
+      },
+      {
+        "file": "ribbon\\home.rs",
+        "line": 288,
+        "english": "{ch}  Bullet",
+        "chinese": "{ch}  项目符号"
+      },
+      {
+        "file": "ribbon\\home.rs",
+        "line": 349,
+        "english": "{n} Column{}",
+        "chinese": "{n} 栏{:.0}"
+      },
+      {
+        "file": "ribbon\\insert.rs",
+        "line": 99,
+        "english": "Action Button: {k}",
+        "chinese": "动作按钮：{k}"
+      },
+      {
+        "file": "ribbon\\insert.rs",
+        "line": 119,
+        "english": "WordArt style {}",
+        "chinese": "艺术字样式 {}"
+      },
+      {
+        "file": "ribbon\\insert.rs",
+        "line": 143,
+        "english": "{}x{} Table",
+        "chinese": "{}×{} 表格"
+      },
+      {
+        "file": "ribbon\\masters.rs",
+        "line": 105,
+        "english": "Slides Per\\nPage: {}",
+        "chinese": "每页张数：{}"
+      },
+      {
+        "file": "ribbon\\masters.rs",
+        "line": 108,
+        "english": "{n} Slide{}",
+        "chinese": "{n} 张幻灯片{:.0}"
+      },
+      {
+        "file": "ribbon\\picture_format.rs",
+        "line": 23,
+        "english": "Brightness {:+}%",
+        "chinese": "亮度 {:+}%"
+      },
+      {
+        "file": "ribbon\\picture_format.rs",
+        "line": 29,
+        "english": "Contrast {:+}%",
+        "chinese": "对比度 {:+}%"
+      },
+      {
+        "file": "ribbon\\picture_format.rs",
+        "line": 37,
+        "english": "Saturation {}%",
+        "chinese": "饱和度 {}%"
+      },
+      {
+        "file": "ribbon\\picture_format.rs",
+        "line": 315,
+        "english": "Compressed {n} picture(s): {} KB → {} KB",
+        "chinese": "已压缩 {n} 张图片：{} KB → {} KB"
+      },
+      {
+        "file": "ribbon\\qat.rs",
+        "line": 76,
+        "english": "unknown command `{id}`",
+        "chinese": "未知命令 `{id}`"
+      },
+      {
+        "file": "ribbon\\table.rs",
+        "line": 223,
+        "english": "Align text to the {l} of the cell",
+        "chinese": "将文字对齐到单元格的 {l}"
+      },
+      {
+        "file": "show\\presenter.rs",
+        "line": 169,
+        "english": "Slide {} of {}",
+        "chinese": "第 {} 张，共 {} 张"
+      },
+      {
+        "file": "show\\ui.rs",
+        "line": 579,
+        "english": "Go to slide {}",
+        "chinese": "转到第 {} 张"
+      },
+      {
+        "file": "show\\ui.rs",
+        "line": 650,
+        "english": "Slide {} of {}",
+        "chinese": "第 {} 张，共 {} 张"
+      },
+      {
+        "file": "show\\ui.rs",
+        "line": 726,
+        "english": "Slide {:02}:{:04.1}   Total {:02}:{:02}",
+        "chinese": "本页 {:02}:{:04.1}   总计 {:02}:{:02}"
+      },
+      {
+        "file": "show\\zoom.rs",
+        "line": 363,
+        "english": "First {GRID_CAP} slides",
+        "chinese": "前 {GRID_CAP} 张幻灯片"
+      },
+      {
+        "file": "show\\zoom.rs",
+        "line": 394,
+        "english": "{}  Hidden",
+        "chinese": "{}  已隐藏"
+      }
+    ],
+    "count": 130,
+    "files": [
+      "app\\commands.rs",
+      "app\\files.rs",
+      "app\\frame.rs",
+      "app\\keys.rs",
+      "app\\playback.rs",
+      "backstage\\files.rs",
+      "backstage\\info.rs",
+      "backstage\\print.rs",
+      "canvas\\rulers.rs",
+      "control.rs",
+      "control\\hosted.rs",
+      "dialogs\\about.rs",
+      "dialogs\\body.rs",
+      "dialogs\\credits.rs",
+      "dialogs\\export.rs",
+      "dialogs\\find.rs",
+      "dialogs\\photo_album.rs",
+      "dialogs\\size_position.rs",
+      "dialogs\\tabs.rs",
+      "dialogs\\theme_colors.rs",
+      "dialogs\\theme_fonts.rs",
+      "dialogs\\updates_ui.rs",
+      "doc_window.rs",
+      "media.rs",
+      "opening.rs",
+      "panels\\animation.rs",
+      "panels\\animtimeline.rs",
+      "panels\\comments.rs",
+      "panels\\effect_presets.rs",
+      "panels\\fillui.rs",
+      "panels\\thesaurus.rs",
+      "panels\\thumbs.rs",
+      "ribbon\\animations.rs",
+      "ribbon\\design.rs",
+      "ribbon\\galleries.rs",
+      "ribbon\\home.rs",
+      "ribbon\\insert.rs",
+      "ribbon\\masters.rs",
+      "ribbon\\picture_format.rs",
+      "ribbon\\qat.rs",
+      "ribbon\\table.rs",
+      "show\\presenter.rs",
+      "show\\ui.rs",
+      "show\\zoom.rs",
+      "sorter.rs",
+      "status.rs",
+      "toast.rs",
+      "widgets.rs"
+    ],
+    "documentContentTranslated": false,
+    "commandIdsTranslated": false,
+    "functionalValidation": false
+  },
+  "localEntryActions": [
+    "local_ink_text"
+  ],
+  "at": "2026-11-13T08:25:18.804865+00:00",
+  "removedLocalEntryActions": [
+    "local_ink_math",
+    "local_screenshot",
+    "local_narration",
+    "local_camera"
+  ],
+  "removalAuthority": "刘总明确取消麦克风、摄像头、截图和Windows公式识别",
+  "aiCanvasPresentation": true
+}

@@ -1,0 +1,9 @@
+{
+  "source": "PrivateLinkProtector.cs",
+  "sourceSha256": "c80945cbafcb5027213818e50b049f93cfed304c12b7a9a372a66325fdea62fe",
+  "sha256": "f1d0c56757f420452657a71848da7c9cb577ad835641ccbf253e6bbfd9908760",
+  "file": "private-link-protector.exe",
+  "schema": 1,
+  "algorithm": "Windows DPAPI",
+  "scope": "CurrentUser"
+}

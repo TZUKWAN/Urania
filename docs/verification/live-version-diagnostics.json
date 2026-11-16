@@ -1,0 +1,48 @@
+{
+  "task": "A2",
+  "scope": "当前设计面板的后台、界面、安装版本与实际加载的编辑器文件。",
+  "mismatch": {
+    "status": "passed",
+    "root": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\release-drift\\48a698ae-acf8-4121-a9e6-7c01f13bdcc1",
+    "source": {
+      "sourceId": "work-d45a485c-33bd-4450-a2c8-018f7c5d5a62",
+      "head": "45f2d79dc3a528cfbdab7d70b376094ffa72c955187f9f32e73e4c9a59261dc9",
+      "sourceHash": "ece7e7bd88d81d2eb58c34d21e4e0cc4b17923c692cf3e9e5e72e9fa430c2f9b",
+      "engine": "vectorcraft"
+    },
+    "disk": 42,
+    "host": 41,
+    "frontend": 42,
+    "displayed": "DesignCraft 模块加载失败：Error: 当前界面 UI42，后台 1.3.0-dev.27 / UI41，磁盘 1.3.0-dev.28 / UI42。组件版本或运行保护不匹配，请在方便时重新打开 DSH 以继续使用已保存作品。",
+    "preservedSourceHash": "ece7e7bd88d81d2eb58c34d21e4e0cc4b17923c692cf3e9e5e72e9fa430c2f9b"
+  },
+  "threeRenderers": {
+    "status": "passed",
+    "root": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\release-drift\\48a698ae-acf8-4121-a9e6-7c01f13bdcc1",
+    "engines": {
+      "vectorcraft": {
+        "version": "0.19.0+designcraft.host13",
+        "wasm": "vectorcraft-web-c8fdc860fd30d914_bg.wasm",
+        "entries": 1276,
+        "uniqueCommandIds": 1274,
+        "diskHash": "119a60c219d36ccc98ffece5f2b77596d081346fb8da8801e3fb518162644483"
+      },
+      "photocraft": {
+        "version": "0.18.0+designcraft.host3",
+        "wasm": "photocraft-web-742943628811480c_bg.wasm",
+        "entries": 948,
+        "uniqueCommandIds": 948,
+        "diskHash": "be4153954270943bf90bb6fe45dff00c81a675ef129fb64f8e374c9e3f81746b"
+      },
+      "deckcraft": {
+        "version": "0.13.1+designcraft.host7",
+        "wasm": "deckcraft-web-9540c6796f9b881f_bg.wasm",
+        "entries": 389,
+        "uniqueCommandIds": 389,
+        "diskHash": "f5affb635c41c5f258619929ff558a4e95a8f3a53b6368c816943481785665a7"
+      }
+    },
+    "originalSourceReopened": true
+  },
+  "userCurrentWindow": "未经验证；本次仅在隔离 DSH 中观察。"
+}

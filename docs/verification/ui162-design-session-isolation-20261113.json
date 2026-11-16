@@ -1,0 +1,287 @@
+{
+  "schema": 1,
+  "at": "2026-11-13T10:01:18.761426+00:00",
+  "status": "passed_scoped_dedicated_design_session_isolation",
+  "version": "1.3.0-dev.148",
+  "uiBuild": 162,
+  "userProblem": "设计助手错误继承全局普通DSH对话，显示了其他论文聊天；应独立绑定项目设计会话，保留其他对话。",
+  "rootCause": "The embedded session-maybe factory had no explicit SessionProvider. UI, canvas and send guards all treated global uiSession.current as the design conversation.",
+  "implementation": {
+    "explicitRetainedDshSessionProvider": true,
+    "durableWorkspaceSpecificReservedId": true,
+    "ordinaryBlankOrRecentSessionNeverAdopted": true,
+    "ordinaryTranscriptNeverCopiedOrCleared": true,
+    "displayDraftCanvasAndSendUseSameDedicatedId": true,
+    "globalOrdinarySelectionNotChanged": true,
+    "errorsNeverFallbackToOrdinaryChat": true,
+    "onlyDesignPanelMountInitializes": true,
+    "nativeCapabilitiesAndExistingUi161FeaturesRetained": true
+  },
+  "modifiedFiles": [
+    "host/design-assistant-session.js",
+    "host/index.js",
+    "client/design-session.js",
+    "client/client.js",
+    "client/ui.js",
+    "client/native-workspace.js",
+    "client/native-reference.js",
+    "client/native-ai-input.js",
+    "client/dsh-context.js",
+    "tests/design-session.test.mjs",
+    "tests/ai-canvas.test.mjs",
+    "tests/dsh-context.test.mjs",
+    "skills/designcraft/SKILL.md"
+  ],
+  "nativeHosts": {
+    "vectorcraft": "0.19.0+designcraft.host19",
+    "photocraft": "0.18.0+designcraft.host8",
+    "deckcraft": "0.13.1+designcraft.host18"
+  },
+  "nativeSourceInputsChanged": false,
+  "nativeSourceArchive": "engine-source-snapshots-ui160.zip",
+  "node": {
+    "files": [
+      {
+        "file": "tests/design-session.test.mjs",
+        "tests": 10,
+        "pass": 10,
+        "report": "verification/ui162-design-session-isolation-20261113/node/design-session.test.mjs.tap",
+        "command": "node --test --test-concurrency=1 --test-reporter=tap D:\\METIS超级合并\\dsh-plugin\\designcraft\\tests\\design-session.test.mjs"
+      },
+      {
+        "file": "tests/ai-canvas.test.mjs",
+        "tests": 13,
+        "pass": 13,
+        "report": "verification/ui162-design-session-isolation-20261113/node/ai-canvas.test.mjs.tap",
+        "command": "node --test --test-concurrency=1 --test-reporter=tap D:\\METIS超级合并\\dsh-plugin\\designcraft\\tests\\ai-canvas.test.mjs"
+      },
+      {
+        "file": "tests/dsh-context.test.mjs",
+        "tests": 2,
+        "pass": 2,
+        "report": "verification/ui162-design-session-isolation-20261113/node/dsh-context.test.mjs.tap",
+        "command": "node --test --test-concurrency=1 --test-reporter=tap D:\\METIS超级合并\\dsh-plugin\\designcraft\\tests\\dsh-context.test.mjs"
+      }
+    ],
+    "tests": 25,
+    "passed": 25,
+    "failed": 0
+  },
+  "actualUi": {
+    "case": "test_design_session_isolation_ui.py",
+    "status": "passed",
+    "seconds": 27.528,
+    "attempt": 2,
+    "report": "verification/ui162-design-session-isolation-20261113/ui/design-session-isolation-ui.json",
+    "sameProjectOrdinarySwitch": true,
+    "crossProjectIsolation": true,
+    "realReloadRestoresDedicatedIdAndDraft": true,
+    "ordinaryLogBytesExact": true,
+    "ordinaryDraftExact": true,
+    "originalTranscriptStillVisibleInOrdinaryChat": true,
+    "designAssistantDoesNotDisplayOriginalTranscript": true
+  },
+  "actualModel": {
+    "status": "passed",
+    "model": {
+      "provider": "zai-coding-cn",
+      "model": "glm-5.3-flash"
+    },
+    "actualUserTurns": 1,
+    "newChatHttpDispatches": 5,
+    "observedHttp200": 5,
+    "newImageRequests": 0,
+    "senderSessionId": "session-PUBLIC-REDACTED",
+    "ordinarySessionId": "PUBLIC-REDACTED",
+    "ordinaryLogBeforeSha256": "ebeaaa0c5f0e2ea9201a613d05a03ed136d07ecaeec72a720b8026c15a97e83e",
+    "ordinaryLogAfterSha256": "ebeaaa0c5f0e2ea9201a613d05a03ed136d07ecaeec72a720b8026c15a97e83e",
+    "ordinaryDraftExact": true,
+    "ordinaryGlobalSelectionUnchanged": true,
+    "floatingRequestStagedInDesignDraftThenMainComposerSent": true,
+    "selectedTargets": 2,
+    "targetColor": "#6f3da8",
+    "nonTargetNativeFieldsExact": true,
+    "nativeReopenBytesExact": true,
+    "realToolRefusals": [],
+    "review": "model/dedicated-model-primary-review.json"
+  },
+  "preservedFailures": [
+    {
+      "kind": "actual-ui-harness",
+      "attempt": 1,
+      "evidence": [
+        "verification/ui162-design-session-isolation-20261113/prior-failures/ui-attempt1/case.log",
+        "verification/ui162-design-session-isolation-20261113/prior-failures/ui-attempt1/executed-test.py",
+        "verification/ui162-design-session-isolation-20261113/prior-failures/ui-attempt1/design-session-isolation-ui.json"
+      ]
+    },
+    {
+      "kind": "unit-harness-syntax",
+      "attempt": 1,
+      "log": "verification/ui162-design-session-isolation-20261113/prior-failures/node-attempt1.tap"
+    }
+  ],
+  "harnessCorrection": "The first UI setup wrote an unmounted ordinary input shell, whose DSH persistence writer is installed only by a real mounted composer. The test was corrected to type/persist through the actual ordinary composer before entering Design; no product draft guard was weakened. A Node syntax error in the new test fixture was also corrected; both failures remain recorded.",
+  "postModelRefinements": [
+    {
+      "file": "client/design-session.js",
+      "change": "Public SDK reference getter can throw after release; synchronously clear the owned pointer before release and fail closed if generation getter is no longer active. The focused 10-case contract suite passed again."
+    },
+    {
+      "file": "client/native-ai-input.js",
+      "change": "Clear the old staged-for-review banner once main Send is invoked. The existing focused 13-case suite passed again. The completed actual model turn was not resubmitted."
+    }
+  ],
+  "mainModelReview": {
+    "singleAgent": true,
+    "model": "gpt-6.1-sol",
+    "reasoningEffort": "max",
+    "actualScreenshotsViewed": true,
+    "independentNativeAndHttpReadback": true,
+    "ordinaryPersistedLogIndependentlyHashed": true
+  },
+  "scopeBoundaries": [
+    "One dedicated design conversation is restored per DSH workspace identity; first entry creates its own blank conversation and does not import earlier ordinary chats. Original chats remain available in DSH.",
+    "The persistent project file stores only the reserved session identity, not transcript content. A different DSH workspace/profile does not guess or adopt another conversation.",
+    "The actual test uses the current installed DSH runtime in isolated headless service; not Electron IPC or physical input-method validation.",
+    "One configured GLM controlled-fill sample does not prove arbitrary prompts, every model or every native command.",
+    "UI161 resize/history/Photo/Deck selection evidence retains its original build scope; native19/8/18 inputs were not recompiled.",
+    "Dropped external services and four physical capture paths stay excluded; older font/source and image-boundary limits remain documented.",
+    "User running DSH and desktop were not controlled/restarted. The added host route/module requires saving work and reopening DSH or reloading the plugin backend to load UI162."
+  ],
+  "userDesktopControlled": false,
+  "userDshRestarted": false,
+  "allCoreFunctionsAccepted": false,
+  "rawEvidence": [
+    {
+      "file": "verification/ui162-design-session-isolation-20261113/model/dedicated-model-actual-result.png",
+      "bytes": 133380,
+      "sha256": "69e6b6b2e0b68d46775bb4418257be1ebcdf8ec8933cceeacce39c2daa1a3da3"
+    },
+    {
+      "file": "verification/ui162-design-session-isolation-20261113/model/dedicated-model-baseline.vectorcraft",
+      "bytes": 28026,
+      "sha256": "3d86a428a2248529136c57742595247c80a3159d17843f37a027e659d058583b"
+    },
+    {
+      "file": "verification/ui162-design-session-isolation-20261113/model/dedicated-model-primary-review.json",
+      "bytes": 1863,
+      "sha256": "123dc50a7ed4617c98e465d4e45a32a0667e75afc186eacb2d894494245a5533"
+    },
+    {
+      "file": "verification/ui162-design-session-isolation-20261113/model/dedicated-model-reopened.vectorcraft",
+      "bytes": 28028,
+      "sha256": "6691e997616385ddd01aac4424f39ad29d65d62a0e7b56239146053471bb72d7"
+    },
+    {
+      "file": "verification/ui162-design-session-isolation-20261113/model/dedicated-model-reservation.json",
+      "bytes": 479,
+      "sha256": "9838837a974b8d2f3d6b09867008760d3b4138b5c15c966287d5c44dac244fc4"
+    },
+    {
+      "file": "verification/ui162-design-session-isolation-20261113/model/dedicated-model-result.vectorcraft",
+      "bytes": 28028,
+      "sha256": "6691e997616385ddd01aac4424f39ad29d65d62a0e7b56239146053471bb72d7"
+    },
+    {
+      "file": "verification/ui162-design-session-isolation-20261113/model/dedicated-real-model.json",
+      "bytes": 47617,
+      "sha256": "40fbfc66d35e6658a71f0352a07bd0609f22c5ce6dec9367091772a435817b4a"
+    },
+    {
+      "file": "verification/ui162-design-session-isolation-20261113/model/executed-test.py",
+      "bytes": 10308,
+      "sha256": "db0fcb1203f38d015226e1e198ef09b9e3a1c8b6fce08a29a596bbc2928831c7"
+    },
+    {
+      "file": "verification/ui162-design-session-isolation-20261113/model/independent-review.py",
+      "bytes": 4489,
+      "sha256": "58ec8a3415f60b3327e42c76a41199c8ee158367afee74a33f04a5df4230988d"
+    },
+    {
+      "file": "verification/ui162-design-session-isolation-20261113/node/ai-canvas.test.mjs",
+      "bytes": 7202,
+      "sha256": "6e6d6619eb952706225d4da2477286a0c37250a846477607aeea2eca6cbebd27"
+    },
+    {
+      "file": "verification/ui162-design-session-isolation-20261113/node/ai-canvas.test.mjs.tap",
+      "bytes": 2627,
+      "sha256": "2fdfee742b0ef09d615803a6285a6934af16e3a31a00b059581f8186f1b0a2e5"
+    },
+    {
+      "file": "verification/ui162-design-session-isolation-20261113/node/design-session.test.mjs",
+      "bytes": 7051,
+      "sha256": "0beb8a91a9eb406ee5f47345296dba9481c0b1f82c816cf107b3a1489150a8ac"
+    },
+    {
+      "file": "verification/ui162-design-session-isolation-20261113/node/design-session.test.mjs.tap",
+      "bytes": 2298,
+      "sha256": "a54a51a256ed1546cf681f4825fc054c655c2f405e9a5788904869172e5ccfb5"
+    },
+    {
+      "file": "verification/ui162-design-session-isolation-20261113/node/dsh-context.test.mjs",
+      "bytes": 1320,
+      "sha256": "e2ec561c1bfc594360dc03e9742cb486987fd5887ad536341981a0a4fa035c9a"
+    },
+    {
+      "file": "verification/ui162-design-session-isolation-20261113/node/dsh-context.test.mjs.tap",
+      "bytes": 555,
+      "sha256": "448b9f62b72039dbc13cdf471e877f68a3625acbb3ecaa6f0b28bb27b80f0795"
+    },
+    {
+      "file": "verification/ui162-design-session-isolation-20261113/prior-failures/node-attempt1.tap",
+      "bytes": 1765,
+      "sha256": "3c21d959978b2c73dff6737ff322ae3bd56dbc50b926d675a70f80112761b2e3"
+    },
+    {
+      "file": "verification/ui162-design-session-isolation-20261113/prior-failures/ui-attempt1/case.log",
+      "bytes": 755,
+      "sha256": "00f34b9d9b482ff3f36d32569a5dcddc82aa6a85f450d49a765d419ba8976fca"
+    },
+    {
+      "file": "verification/ui162-design-session-isolation-20261113/prior-failures/ui-attempt1/design-session-isolation-ui.json",
+      "bytes": 1038,
+      "sha256": "88530b9fce848eb6704d2ce2937809715804e74d0f7ba0c3e46e7e43a566d6f9"
+    },
+    {
+      "file": "verification/ui162-design-session-isolation-20261113/prior-failures/ui-attempt1/executed-test.py",
+      "bytes": 7421,
+      "sha256": "e7838231c1c5d0ea188eecc87b8b1382414bdb2b89cd4087091c157fd585d6e7"
+    },
+    {
+      "file": "verification/ui162-design-session-isolation-20261113/review/PLAN.md",
+      "bytes": 2595,
+      "sha256": "cefac3479e6d814c38e8c3a41d94d9fed7ab07c6572f02683fd738836e3137b8"
+    },
+    {
+      "file": "verification/ui162-design-session-isolation-20261113/review/sdk-session-contract.json",
+      "bytes": 1272,
+      "sha256": "9a6cc649ff2c4d6659df6e9e9b59085b610a1fc16c1d6669e5b925b26a0ff7d6"
+    },
+    {
+      "file": "verification/ui162-design-session-isolation-20261113/ui/case.log",
+      "bytes": 185,
+      "sha256": "18ee37b5c7e601d2d8f042b7c1763e5ffae73336471c0af972decbe58a638e12"
+    },
+    {
+      "file": "verification/ui162-design-session-isolation-20261113/ui/dedicated-design-conversation.png",
+      "bytes": 92506,
+      "sha256": "3fbf025f0982289d9209085f6edb1ba554629311c8bcee86e616b7c0424829cd"
+    },
+    {
+      "file": "verification/ui162-design-session-isolation-20261113/ui/design-session-isolation-ui.json",
+      "bytes": 1403,
+      "sha256": "14aa6e6aab95a1436e74605059913cb7aa439f7aa84901c5d2991785793e4649"
+    },
+    {
+      "file": "verification/ui162-design-session-isolation-20261113/ui/executed-test.py",
+      "bytes": 7868,
+      "sha256": "1c2622fdca78b54188722a1d7844a1a2d0a27f30a3401f176d805d9dd3fd3e74"
+    },
+    {
+      "file": "verification/ui162-design-session-isolation-20261113/ui/original-ordinary-conversation-retained.png",
+      "bytes": 136468,
+      "sha256": "21243373e2ce01a3b180d52ef9879cc63a2c49adb17505a6e1863fbe1b994358"
+    }
+  ]
+}

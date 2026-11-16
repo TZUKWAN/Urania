@@ -1,0 +1,43 @@
+{
+  "status": "passed_scoped",
+  "at": "2026-11-08T10:53:49.366765+00:00",
+  "scope": "Current installed Photo host4 with Vector host13 and Deck host11 in owned DSH.",
+  "checks": [
+    "Physical double-click on a bound picture entered the editable Photo fork from a poster and from a presentation.",
+    "An actual feathered selection and layer mask were applied to the same use; the changed layered source and derivative were saved and reopening the same use retained the mask."
+  ],
+  "samples": [
+    {
+      "engine": "vectorcraft",
+      "source": "work-891f362d-5804-49e8-905d-a560681b48a4",
+      "instanceId": "use-fd474982-ecbf-42da-b6c5-dc599a226b72",
+      "nativeId": "5",
+      "oldPng": "cd1560491f4afe54861cffff47a0e664c169ccbca0b646b262aacfb2aaa66b33",
+      "updatedPng": "8899841c8aa491928404b9d5801a465c4bfd34fa966a5139b229af8b2b1190a3",
+      "layeredSourceHash": "2d1828db9ffa6b023f0e1495e7fae95cdfc42f1f16287c9789113e05a38a4803"
+    },
+    {
+      "engine": "deckcraft",
+      "source": "work-1d42dc7e-7ddf-4460-9860-dc7193c4b481",
+      "instanceId": "use-dd2cd42e-47f3-4ccb-a6c7-c6b7d0fa7fa7",
+      "nativeId": "266",
+      "oldPng": "b73589748b9acb2ffea4686cf74de406e9b303bf2e88a3a9538ed512c9e9bad5",
+      "updatedPng": "54e5b13fbd18f1b2d7647e7b62dda1d62a0b427b5d9adcf3a9fb683572bebd7e",
+      "layeredSourceHash": "2372387422f3e56e1c27e771e5826a93736d2ee46461d6fdf1813679fb3096ea"
+    }
+  ],
+  "rawEvidence": [
+    {
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\reverify-svg\\evidence\\f3-double-click-vectorcraft.json",
+      "sha256": "40d6db1472b07efb249f5abb4995b9af77a1b71df2a263602c14d3d012a60252"
+    },
+    {
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\reverify-svg\\evidence\\f3-double-click-deckcraft.json",
+      "sha256": "6159e109aeb1e0f5b48fad06ce627610a05fd634563fcae036b2b4f94831f262"
+    }
+  ],
+  "limits": [
+    "Only the bound PNG samples and demonstrated mask operations are covered; this does not imply arbitrary external image files contain editable layers.",
+    "The feathered mask was created through the actual registered native command route after a physical double-click; this run did not call a model."
+  ]
+}

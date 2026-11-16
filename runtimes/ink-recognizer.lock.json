@@ -1,0 +1,10 @@
+{
+  "schema": 1,
+  "file": "ink-recognizer.exe",
+  "platform": "win32-x64",
+  "scope": "local Windows Ink text recognition only",
+  "sha256": "7596e605ebf2b8b5908836d2af67d937ee153c79f86304a50f013e61cec11047",
+  "source": "ink-recognizer.cs",
+  "sourceSha256": "4bca2c34e203529e63f5ca852ef462dffe306033207e1af28d73655d217cd5d6",
+  "functionalValidation": false
+}

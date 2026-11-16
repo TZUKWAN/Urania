@@ -1,0 +1,27 @@
+{
+  "kind": "actual-recorded-GLM-tool-arguments-not-live-service",
+  "actualModel": "zai-coding-cn/glm-5.3-flash",
+  "callId": "call_ed311136855a4e418d49a0a1",
+  "arguments": {
+    "action": "execute",
+    "base": {
+      "engine": "vectorcraft",
+      "revision": 3,
+      "selection": [
+        2
+      ],
+      "selectionStamp": "{\"page\":0,\"selection\":{\"new_art\":[]},\"tool\":{\"options\":null,\"tool\":\"selection\"}}",
+      "uid": 1
+    },
+    "payload": {
+      "command": "paint.setFill",
+      "params": {
+        "color": "#c2410c",
+        "id": {
+          "$u64": "2"
+        }
+      }
+    },
+    "sourceId": "import-9186fb09-8284-4be6-82d9-ff0d9397c851"
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "status": "passed",
+  "scope": "actual CDP IME/browser events in matching hidden Electron/dsh-app origin; full desktop IPC/system candidate UI not included",
+  "codeRoot": "D:\\METIS超级合并\\dsh-plugin\\designcraft",
+  "checks": [
+    {
+      "name": "physical native text targeting reaches the actual Type tool edit session",
+      "pass": true,
+      "detail": {
+        "id": 3,
+        "options": {
+          "anchor": 0,
+          "caret": 12,
+          "composing": false,
+          "editing": 3,
+          "end": 12,
+          "prevTool": null,
+          "start": 0,
+          "typing": false
+        }
+      }
+    },
+    {
+      "name": "trusted browser composition owns native input and refuses intermediate source saves",
+      "pass": true,
+      "detail": {
+        "error": "请完成当前输入或拖动后保存"
+      }
+    },
+    {
+      "name": "IME commit becomes exact native editable text and a durable checkpoint with the other path unchanged",
+      "pass": true,
+      "detail": {
+        "text": "中文设计",
+        "revision": "01a27709e09291a708f259533413830feba0032024ab3b439ce4c4aa38705826",
+        "id": 3
+      }
+    },
+    {
+      "name": "Chinese composition in the actual DSH composer does not edit the native design",
+      "pass": true,
+      "detail": {
+        "draft": "PUBLIC-REDACTED",
+        "nativeRevision": 8
+      }
+    }
+  ],
+  "host": {
+    "pid": 70444,
+    "versions": {
+      "node": "24.21.0",
+      "acorn": "8.18.0",
+      "ada": "4.0.0",
+      "amaro": "1.1.11",
+      "ares": "1.34.8",
+      "brotli": "1.2.0",
+      "cldr": "48.0",
+      "icu": "78.2",
+      "llhttp": "9.4.3",
+      "merve": "1.2.2",
+      "modules": "149",
+      "napi": "10",
+      "nbytes": "0.1.4",
+      "ncrypto": "0.0.1",
+      "nghttp2": "1.70.0",
+      "nghttp3": "",
+      "ngtcp2": "",
+      "openssl": "0.0.0",
+      "simdjson": "4.6.7",
+      "simdutf": "7.7.0",
+      "sqlite": "3.53.4",
+      "tz": "2026d",
+      "undici": "7.29.1",
+      "unicode": "17.0",
+      "uv": "1.52.1",
+      "uvwasi": "0.0.23",
+      "v8": "15.2.124.28-electron.0",
+      "zlib": "1.3.2.1-motley",
+      "zstd": "1.6.0",
+      "electron": "44.7.0",
+      "chrome": "152.0.7977.130"
+    },
+    "shown": false,
+    "focused": false,
+    "events": [],
+    "webPreferences": {
+      "allowRunningInsecureContent": false,
+      "contextIsolation": true,
+      "disableDialogs": false,
+      "disablePopups": false,
+      "enableBlinkFeatures": "",
+      "experimentalFeatures": false,
+      "javascript": true,
+      "nodeIntegration": false,
+      "nodeIntegrationInSubFrames": false,
+      "nodeIntegrationInWorker": false,
+      "safeDialogs": false,
+      "safeDialogsMessage": "",
+      "sandbox": true,
+      "webSecurity": true,
+      "webviewTag": true
+    },
+    "preloadUsed": false,
+    "scope": "matching Electron/custom DSH protocol/auth forwarding; full packaged DSH IPC not included"
+  },
+  "imeEvents": [
+    {
+      "kind": "compositionstart",
+      "data": "",
+      "trusted": true
+    },
+    {
+      "kind": "beforeinput",
+      "data": "中文设计",
+      "trusted": true
+    },
+    {
+      "kind": "input",
+      "data": "中文设计",
+      "trusted": true
+    }
+  ]
+}

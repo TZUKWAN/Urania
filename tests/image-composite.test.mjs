@@ -1,0 +1,11 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {mkdirSync,mkdtempSync} from 'node:fs';
+import {join,resolve} from 'node:path';
+import * as store from '../host/docstore.js';
+import {createImage,toPNG,fromPNG,resize} from '../host/raster.js';
+import {prepareEditMask,verifyOutsideMask} from '../host/image-composite.js';
+const base=resolve(process.env.DESIGNCRAFT_TEST_ROOT||'tests/.work');mkdirSync(base,{recursive:true});
+test('canvas region projects into real source pixels without confusing display scale with source size',()=>{const root=mkdtempSync(join(base,'mask-')),source=store.saveAsset(root,'source.png',toPNG(createImage(4,4,[100,20,30,255]))),mask=prepareEditMask({root,sourceAsset:source.name,layer:{x:10,y:20,w:40,h:40},region:{kind:'rect',x:20,y:30,w:20,h:20},name:'actual-mask'});assert.equal(mask.selectedPixels,4);assert.deepEqual(mask.bounds,{x:1,y:1,w:2,h:2});const pixels=fromPNG(store.readAsset(root,mask.maskAsset));assert.equal(pixels.data[3],0);assert.equal(pixels.data[(1*4+1)*4+3],255);});
+test('pixel verifier refuses both unmasked outside changes and an unchanged edit',()=>{const root=mkdtempSync(join(base,'mask-')),source=store.saveAsset(root,'source.png',toPNG(createImage(4,4,[100,20,30,255]))),mask=prepareEditMask({root,sourceAsset:source.name,layer:{x:0,y:0,w:4,h:4},region:{kind:'rect',x:1,y:1,w:2,h:2},name:'mask'}),bad=store.saveAsset(root,'unit-bad.png',toPNG(createImage(4,4,[0,0,255,255])));assert.throws(()=>verifyOutsideMask({root,sourceAsset:source.name,resultAsset:bad.name,maskAsset:mask.maskAsset}),/选区外/);assert.throws(()=>verifyOutsideMask({root,sourceAsset:source.name,resultAsset:source.name,maskAsset:mask.maskAsset}),/没有改变/);});
+test('bilinear upsampling keeps the actual edge pixels instead of extrapolating beyond the image',()=>{const image=createImage(2,1);image.data.set([10,20,30,255,90,100,110,255]);const output=resize(image,4,1);assert.deepEqual([...output.data.subarray(0,4)],[10,20,30,255]);assert.deepEqual([...output.data.subarray(12,16)],[90,100,110,255]);});

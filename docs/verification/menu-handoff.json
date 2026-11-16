@@ -1,0 +1,32 @@
+{
+  "status": "passed",
+  "scope": "actual DSH/native App, production reference codec and registered tool, filesystem checkpoint; no LLM",
+  "codeRoot": "D:\\METIS超级合并\\dsh-plugin\\designcraft",
+  "checks": [
+    {
+      "name": "production send serialization resumes the actual paused menu App and quotes its durable current source",
+      "pass": true,
+      "detail": {
+        "sourceId": "import-82a0e24f-72fd-42cf-a143-b3a22a783a83",
+        "revision": "75ac3fb66a97c5270a6b496dbc9e7b6a6582ab1a205361d41daaccaf9655f943",
+        "sameApp": true
+      }
+    },
+    {
+      "name": "a real queued DSH tool resumes the menu App, edits the targeted object and persists it without manual menu dismissal",
+      "pass": true,
+      "detail": {
+        "sourceId": "import-82a0e24f-72fd-42cf-a143-b3a22a783a83",
+        "revision": "c0b50fdf13c6fc7389ac0192c1b64e80206af8812f4f3cde58a40d18c4d33d9e",
+        "target": 2,
+        "actualColor": {
+          "model": "rgb",
+          "r": 0.9764706,
+          "g": 0.4509804,
+          "b": 0.08627451
+        }
+      }
+    }
+  ],
+  "pageErrors": []
+}

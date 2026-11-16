@@ -1,0 +1,187 @@
+{
+  "kind": "read-only-exact-historical-artifact-reconciliation",
+  "at": "2026-11-12T16:17:36.616660+00:00",
+  "scannedFileNames": 31293,
+  "candidateFilesHashed": 98,
+  "exactMatches": [
+    {
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\before-core-closeout-20261112\\deck-source\\crates\\ui-egui\\src\\app.rs",
+      "bytes": 15772,
+      "sha256": "d298bfaf00c97f5fcf8632b867933397364057128eca629ccb5ce9a90ab8f290"
+    },
+    {
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\before-core-closeout-20261112\\deck-source\\crates\\ui-egui\\src\\lib.rs",
+      "bytes": 22723,
+      "sha256": "5030b4ae4707627c42ffc3e2f3c5716f426bdb27075787e7845f78e4bf56dab4"
+    },
+    {
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\before-css-design-tokens\\host\\open-design-library.js",
+      "bytes": 9734,
+      "sha256": "cabe0b4cc190bac06da95bdc3bad02fd46dcd013e9f7bf8928c5725625dc77c4"
+    },
+    {
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\before-project-fonts\\deck\\api.rs",
+      "bytes": 5007,
+      "sha256": "0430364aaabaa18748249fa84a3d27815eca0450dfc85b07043ae9bae41d8b83"
+    },
+    {
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\before-svg-commands\\crates\\engine\\src\\cmd.rs",
+      "bytes": 29789,
+      "sha256": "87dd83b430a171883a9ed17142cd837b29433dea65f270a3615d87e3b038bb2b"
+    },
+    {
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\native8-source-checkpoint\\crates\\text\\build\\web_fonts.rs",
+      "bytes": 4724,
+      "sha256": "59197fff8c7b185c3387515fd87bb06f66232f8cebab9be4cb0c9bb9684d8263"
+    },
+    {
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\legacy-package-restore\\95d9ca0b-5630-4f29-bd6c-d37b821f09a4\\dependencies\\photocraft-host\\LICENSE-APACHE",
+      "bytes": 10174,
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+    },
+    {
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\legacy-package-restore\\95d9ca0b-5630-4f29-bd6c-d37b821f09a4\\dependencies\\vectorcraft-host\\LICENSE-MIT",
+      "bytes": 1103,
+      "sha256": "8b6025dc4b707e0fb08b9c2054096f1be3ae61529399aa2c348dec676562dc71"
+    },
+    {
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\legacy-package-restore\\95d9ca0b-5630-4f29-bd6c-d37b821f09a4\\dependencies\\vectorcraft-host\\NOTICE",
+      "bytes": 8174,
+      "sha256": "ffb54183b2b44903f64736cdc9b50abb834ee6dac7059d2c9631692dd13c754b"
+    },
+    {
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\package-roundtrip\\6d8d6b74-f90c-45b9-8c6d-b716fda331ef\\dependencies\\deckcraft-host\\LICENSE-MIT",
+      "bytes": 1101,
+      "sha256": "90e96fef569474cd526350e716e4b05dd32f179ca96d39d61e6b928485e35406"
+    },
+    {
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\package-roundtrip\\6d8d6b74-f90c-45b9-8c6d-b716fda331ef\\dependencies\\designcraft\\THIRD_PARTY_NOTICES.md",
+      "bytes": 2640,
+      "sha256": "db3c03f21519da742116fc78d27993a768eb23812d8d997469c7e4ffc8947f0f"
+    },
+    {
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\upstream\\deckcraft-4ce2944630b04188dee8504c14151994d06c416a\\Cargo.toml",
+      "bytes": 5920,
+      "sha256": "95e2e1f6cc9eaf8e3f95f43757416df362a3c40b409f4cff704e35c2305a7135"
+    },
+    {
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\upstream\\deckcraft-4ce2944630b04188dee8504c14151994d06c416a\\apps\\deckcraft-web\\Trunk.toml",
+      "bytes": 199,
+      "sha256": "a996cb61144f4f961e8a44d8df04ef329620c12928aea4a4f328d1fcaf055ec8"
+    },
+    {
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\upstream\\deckcraft-4ce2944630b04188dee8504c14151994d06c416a\\crates\\engine\\src\\fonts.rs",
+      "bytes": 7565,
+      "sha256": "1e7db2d436d229d70df5775afb26f7066f4f1744611a8a0fcc2fa8d17405e2d8"
+    },
+    {
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\upstream\\deckcraft-4ce2944630b04188dee8504c14151994d06c416a\\crates\\engine\\src\\cmd\\artistic.rs",
+      "bytes": 8884,
+      "sha256": "006743ed76a3a63be3c66646136651182b9ae93be69f2feb9d01c0b49138fcdd"
+    },
+    {
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\upstream\\deckcraft-4ce2944630b04188dee8504c14151994d06c416a\\crates\\engine\\src\\cmd\\shape\\picture_replace_tests.rs",
+      "bytes": 7537,
+      "sha256": "6363798988211eef3feb26b12a2abf122863c05fa0b0a5543e95097fd8ac4b55"
+    },
+    {
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\upstream\\deckcraft-4ce2944630b04188dee8504c14151994d06c416a\\crates\\engine\\tests\\host_material.rs",
+      "bytes": 5407,
+      "sha256": "6ad1e44b958484c36424e35ad438b1788aa8451a8ce8176c66d7997d266fbe2b"
+    },
+    {
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\upstream\\deckcraft-4ce2944630b04188dee8504c14151994d06c416a\\crates\\fonts\\build.rs",
+      "bytes": 25854,
+      "sha256": "692cbe7723d5860c3b35816c5a274ae04919d80d6147cdf7d6288bb429f45bdf"
+    },
+    {
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\upstream\\deckcraft-4ce2944630b04188dee8504c14151994d06c416a\\crates\\ui-egui\\src\\app\\commands.rs",
+      "bytes": 14714,
+      "sha256": "fb054a7155a070980d1f8cde47e2ac43e9816679d336d21d88c66414ef1d807e"
+    },
+    {
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\upstream\\vectorcraft-bcebabe3f8c23a376ac68e9e6726590af278f7bb\\apps\\vectorcraft-web\\Cargo.toml",
+      "bytes": 1588,
+      "sha256": "8a3912fc1764cd1cf979534910d823b9d3c1d979a48b41888ea3f2d715396d1b"
+    },
+    {
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\upstream\\vectorcraft-bcebabe3f8c23a376ac68e9e6726590af278f7bb\\crates\\engine\\src\\cmd.rs",
+      "bytes": 26972,
+      "sha256": "f0b8ee1c033c3750ab6214b08858c85b59f4406d84053faa536a3621d9437731"
+    },
+    {
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\upstream\\vectorcraft-bcebabe3f8c23a376ac68e9e6726590af278f7bb\\crates\\engine\\src\\cmd\\edit.rs",
+      "bytes": 52448,
+      "sha256": "22828b93c9a9876457d9c0f7a2ff978b85bc17915da0317edf17325ed60b6035"
+    },
+    {
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\upstream\\vectorcraft-bcebabe3f8c23a376ac68e9e6726590af278f7bb\\crates\\engine\\tests\\host_material.rs",
+      "bytes": 5682,
+      "sha256": "c74b78903f168847b6aa745985c8d2a156c0542783c1df27a2f958430107f6f8"
+    }
+  ],
+  "remainingUniqueIdentities": [
+    "0e6a2d22dcfe9b37f9cdf4888fd2f59eea8833dd2884607c6f3a0813ca42d375",
+    "14c86d773aa7f0ff8ea80953549974c8e3117d8dccd130094877bc95a8e326e9",
+    "20ed6ff91b6cc44eaa90021e9a250d3be27dcabbf1156e1ae91647e891862608",
+    "229f52bc8540723a7bbeafbc8d50c0dd2d6c9e51d7dc7089b8273c906895903e",
+    "22ad590645d9db3e8e507fd605c67af0be7f50162257c749a8003b1ddfe1df73",
+    "25956751a5a6c187382db5976af8f957fdb022ddc1336be969e267a5637a1ff9",
+    "360cb7f31e90bb4d1060a90eee256dcba4ea8badf10475c94947f9010e58ddf8",
+    "4177c57c723a4d8d92ecedda9faf53e9a96a3f73929dc0680bf1ebc41c6a4751",
+    "440150433ea988d5c9183ead83ad2e06e3d507dc808dd8ef1063b6144a696800",
+    "452310a6c043cbaf86121d55d8ed97de3075bc9c2d95822fe07366e4a2e477ff",
+    "46c5cee5dfb04b5ada9c98a6d073729ce0de3bab28d20630e5cac267f032b7d4",
+    "4b644b1f3ed0e5e705175bb119b32e34c2d49ff8a998e4f8152953c7235cf3a8",
+    "500c69b3483d2a10450d40d14e2eb3212fd43c14ee86589e3b04933e7b620375",
+    "523a42c25d245dde9c015f882cec7f4555aad883382a6cf19b4b7d9b2cd5419b",
+    "5563bc045bbffdf9f303a51713c551d41fef9a319f1f4c6903b65bb2cb5f8ed2",
+    "5dc5782b95dd0d9a0cec27bdd2ed4663b2c45c7c6470f0c657926c971deaa4b0",
+    "5e182dbac95f88cd1db96fca3a6e8ff85408c7658537f2dbf1a8bb46da2c41b0",
+    "63e5ffe8b8c03dd276536434fc8a067fa7cad14baffcdb073d9c16123ac41e20",
+    "6704973575c8622e8da79a7af4b2e2fe25012735e3bc3b9f10983d746a36517d",
+    "6c3405292ff07504ca8099bc0d7f36a935e5f647af7f3c29813981d13445cd7f",
+    "6fa43c0c96130008d9d971027fc1c78addebc2af24c5f45c4867eef0c28af09b",
+    "7150da18a2f377de5c1d8af1c2a21069d31d8bf3ce84ecda579d0ec5086d5bf0",
+    "7172db38eede19323476c6288c7ada3b93a65eac273b4ce7123f5667824e4e16",
+    "75a750b7c16e4904a86cf8aa31b197aa1c15ff91b861cce27330599abc3ff2cd",
+    "75d5f8ad0f5c5499a55c859adabb9ceff5ab69bae992eb7e75d27a78c7ec654a",
+    "79f63cd83486bdbd0ded3d1c7635f156a54c79d4dc16f1220344e1d862c3d4c3",
+    "7b2c8cb421319a37162410827b236b81133618bd2839cd33aa3e90ceaa347ed8",
+    "8cac1030e7a0754e88810d58e0191ef0eba6fc567f2432edc61b259e4cc7b380",
+    "93cab4de0f980464ec79a206905153bef3ec8a6b9e07affe68664f24478a2f30",
+    "98aba554b35d201b1c4498a65705218ac6680ca8264ed7b76701b2f8b093e42c",
+    "99b5068e1621ba05388c9fa3d7bdc9a0e5d34de309a2ce5168fe5e6c39fbd7fb",
+    "a0143dfaca8e2f2bf4669f91ab81586e9f8d2fe9ec29847f0091b75e90e6b133",
+    "a857573030bd6c8a47a32228375b4a1a19a68e53adc04f603095bf6a2a44295c",
+    "aaa318e98f311a0fcc3e6a5a7afb673db5ea27822cfb493581780a6746e6411a",
+    "aaff376532ea30a0cd5330b9502ad4a4c8bf769c539c87ffe78819d188a18ebf",
+    "ab491ed2f53038e82233f840578b669aa1be075b4c185b1ef0947d8823c84748",
+    "ad5a09d13aebbb76c66ed6a057675a178f2afde3b665cf91520a294defb4cf0a",
+    "afaeae45b0c343bc0c4830129ed1360d9eb5d7cb7ecc0b4ec7026d6b9efdf616",
+    "b477350b5f69f784cff0f7b0bfb1c111826a197f27dc13ef6c1679643be03107",
+    "b9cf30f24664370337fe8b0bb16dddc4c30dabe6aa745128b6372e81e7d9715a",
+    "bf0c6909722661010f86aaba68a5b63051c576a1770480cd7bd0197dbbfc9d53",
+    "c04b881d049460caea4f107ec8f7549a02facc956122511d1f4683804f22884c",
+    "c1109ee09d108605e82788e01c27d4f1ad52373755ed71aa628e47fb39a21c55",
+    "c3e2ef432616f80f2021b2a626fe0c4e177df581b850421b82ae4d1b8fa333a7",
+    "c40e2d1bfeec7408d0dcd4b313cd25b2e8b4833365dde14529b72e7ccf703025",
+    "c7b3d0f0ad14f82ee2e9417da6b0bcca64c77f51c5e345d4b9346a5f623d3033",
+    "c9c79382ab91e0dff0482e4fd4facae22fb30366b4a65596e07895355de275ab",
+    "ca93aa7843bc4cd45ab3a179cf02102ad4b92cda65de6a9fce3b4363dca4e41d",
+    "ce61bbf5f6eaff550d5c3ae9cce85ae9e076fd7ec97168884468d8aabfb4ac8d",
+    "d738b7450a162d553f4afcad5b7c1dde61c9b7ec52754dfa70cb868456e178e4",
+    "d7ea718048a2aa9f8e673f1cad107f13dccddde80422299536b2fe045a973cfa",
+    "dae61990309a30de76506605c1690001a899cb5f45f96b8f6d3f6938e0fe2099",
+    "dd7feb5b0d58d2f6931eb79517679e82bac965c2c33b04970fc72881d489ba4c",
+    "ec08befc1fdefdaddbf75fa9e408300f7045cd896674adcaf97160c413375a66",
+    "ec29ee4b01de7c7c88ae0e8d7e45ede842f7fb53349b3599d91bac10be41be1d",
+    "ed2ae7dfa18464f24dce03b337c71b20875faaa705503b31f6803cd8ec933866",
+    "ee04bba00249b1af9035e1bbd949b15f7869d236ff15693b1152dc21d560200f",
+    "f9dc41eacc544466bad95e2594c60b83dbe7b882202a519ab6cd1127c518120c",
+    "fbc1c987f665bb9106faaca0240c239396698b7ac9a10fc506fc899afd8545ba"
+  ],
+  "changedOriginalEvidence": false,
+  "runtimeValidation": false,
+  "note": "Exact bytes were located in existing scoped source/backups. No old report, hash or current source was rewritten, and raw historical artifacts were not copied into the release."
+}

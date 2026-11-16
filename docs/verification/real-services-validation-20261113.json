@@ -1,0 +1,291 @@
+{
+  "schema": 1,
+  "kind": "actual-service-validation-and-targeted-fix-addendum",
+  "generatedAt": "2026-11-13T04:49:55.422616+00:00",
+  "version": "1.3.0-dev.144",
+  "uiBuild": 158,
+  "status": "images_passed_three_real_model_turns_exposed_fixed_tool_failures_final_model_flow_and_devices_pending",
+  "allCoreFunctionsAccepted": false,
+  "localBaselineReport": "release-validation-20261113.json",
+  "localBaselineScope": "48 feature UI cases ran on UI151–UI154; old UI155 package load passed separately. These are not represented as rerun on UI158.",
+  "node": {
+    "filesPassed": 78,
+    "tapCasesPassed": 286,
+    "skipped": 0,
+    "nonTapScripts": [
+      "client.test.mjs"
+    ],
+    "ledger": "real-services-20261113/node-results.json",
+    "scope": "Latest targeted tests accumulated with unchanged earlier results; unit fixtures are not live-service or native proof."
+  },
+  "approvalBudget": {
+    "imageRequestsApproved": 4,
+    "imageRequestsUsed": 4,
+    "userChatTurnsApproved": 3,
+    "userChatTurnsUsed": 3,
+    "providerChatHttpRequestsObserved": 46,
+    "allObservedProviderRequestsReturnedHttp200": true,
+    "providerUsageAndActualCost": "not verified",
+    "distinction": "A user chat turn can produce many provider HTTP calls for tool loops and auxiliary DSH operations. Three user turns does not mean three provider requests.",
+    "deviceActivationApproved": false
+  },
+  "images": {
+    "status": "passed_scoped_real_generation_edit_and_preservation",
+    "uiBuildActuallyExecuted": 155,
+    "provider": "existing local CLIProxyAPI / gemini-3.1-flash-image",
+    "realRequests": 4,
+    "candidatesGenerated": 2,
+    "firstMaskedEdit": {
+      "mismatchedOutside": 0,
+      "changedInside": 148703,
+      "fractionalMaskPixels": 65228
+    },
+    "afterPhysicalEdgeRefinement": {
+      "mismatchedOutside": 0,
+      "changedInside": 40023,
+      "fractionalMaskPixels": 30028
+    },
+    "manualEdgePixelsChanged": 632,
+    "nativeAdoptUndoReAdoptAndReopen": "passed in the individual reports",
+    "visualQualityLimit": "The last warm-lighting sample has a visible localized rectangular/yellow boundary. API execution and pixel/layer preservation passed; seamless visual quality is not claimed."
+  },
+  "modelTurns": [
+    {
+      "turn": 1,
+      "engine": "VectorCraft",
+      "result": "target fill and actual workflow read/attach/complete verified; strict same-App flow failed",
+      "report": "real-services-20261113/model-vector.json"
+    },
+    {
+      "turn": 2,
+      "engine": "PhotoCraft",
+      "result": "target opacity edit did not complete; original long context stamp copy failed and guards refused it",
+      "report": "real-services-20261113/model-photo.json"
+    },
+    {
+      "turn": 3,
+      "engines": [
+        "PhotoCraft",
+        "DeckCraft",
+        "VectorCraft"
+      ],
+      "result": "all three target-only native edits verified; strict same-App segment failed because two malformed opens reloaded Photo before F010",
+      "report": "real-services-20261113/model-final-three-engine.json"
+    }
+  ],
+  "independentNativeReopenExport": {
+    "status": "passed",
+    "report": "real-services-20261113/model-third-native-reopen-export.json",
+    "uiBuild": 158,
+    "nativeFiles": 3,
+    "exports": [
+      "PNG",
+      "PPTX",
+      "SVG"
+    ],
+    "boundary": "Reopens the exact frozen real AI outputs; no model resubmission and no rewriting original flow failures as passes."
+  },
+  "fixes": [
+    {
+      "id": "F008",
+      "files": [
+        "host/editor-tools.js",
+        "tests/editor-fence-arguments.test.mjs",
+        "tests/fixtures/editor-missing-epoch-20261113.json"
+      ],
+      "issue": "Actual GLM omitted the required top-level epoch, received an imprecise error and reopened the current App while recovering.",
+      "change": "Name missing sourceId/epoch/base fields with a 422 response and model-visible schema guidance; never supply missing fences automatically.",
+      "retest": [
+        "editor-fence-arguments.test.mjs",
+        "F008-owned-tool-replay.json"
+      ],
+      "liveModelBoundary": "The next actual model turn supplied epoch, but failed a different long-stamp copy."
+    },
+    {
+      "id": "F009",
+      "files": [
+        "host/editor-tools.js",
+        "host/editor-fence-tickets.js",
+        "tests/editor-fence-tickets.test.mjs",
+        "tests/fixtures/editor-long-selection-20261113.json"
+      ],
+      "issue": "Actual GLM repeatedly truncated the 3847-character Photo selection fence and correctly hit existing stale-context guards.",
+      "change": "Tool state issues a 71-character opaque ticket for an immutable, bounded, session/source/epoch/full-base snapshot; restore only the issued base before all existing backend/frame guards.",
+      "retest": [
+        "editor-fence-tickets.test.mjs",
+        "F009-owned-tool-tickets.json"
+      ],
+      "liveModelBoundary": "Third real model turn executed all three intended target edits on the first attempt with compact tickets; whole-flow same-App assertion failed on malformed open calls."
+    },
+    {
+      "id": "F010",
+      "files": [
+        "host/editor-tools.js",
+        "tests/editor-fence-arguments.test.mjs",
+        "tests/fixtures/editor-open-missing-source-20261113.json"
+      ],
+      "issue": "Actual GLM placed an intended target in payload.id/payload.sourceId; missing top-level sourceId silently reopened the current Photo App twice.",
+      "change": "Tool-only open requires the explicit existing target in top-level sourceId; malformed opens are refused before delegation. Native UI manager reload semantics remain unchanged.",
+      "retest": [
+        "editor-fence-arguments.test.mjs",
+        "F010-owned-open-target.json"
+      ],
+      "liveModelBoundary": "Deterministic actual registered-tool replay passed. No additional GLM user turn has been authorized or submitted after this fix."
+    }
+  ],
+  "sourceDifferenceAgainstImageTestedUI155": {
+    "functionalHostClientChanges": [
+      "host/editor-fence-tickets.js",
+      "host/editor-tools.js"
+    ],
+    "versionCacheOnlyClientFiles": [
+      "client/client.js",
+      "client/deck-local-tools.js",
+      "client/editor-frame.js",
+      "client/editor-surface.js",
+      "client/html-workspace.js",
+      "client/native-context-tools.js",
+      "client/native-contract.js",
+      "client/native-controller.js",
+      "client/native-reference.js",
+      "client/native-workspace.js",
+      "client/studio-image-workspace.js",
+      "client/ui.js"
+    ],
+    "unchangedTopLevelJsFiles": 190,
+    "originalPackageImmutable": true
+  },
+  "pendingAcceptance": [
+    {
+      "id": "current-dsh-model-final-flow",
+      "state": "three_approved_user_turns_consumed_final_post_F010_model_retest_not_run",
+      "needed": "At most one additional explicit Photo→Deck→Vector user turn to confirm same-App segments and exactly two requested source switches after F010.",
+      "risk": "Existing provider may consume model quota; uncertain requests will not be repeated automatically."
+    },
+    {
+      "id": "windows-math-and-screen",
+      "state": "not_enabled_user_asked_purpose_only",
+      "scope": [
+        "actual Windows Math recognizer dialog",
+        "real screen/region capture"
+      ],
+      "priorEvidenceBoundary": "Supplied MathML conversion/insertion does not prove OS recognition or screen capture."
+    },
+    {
+      "id": "microphone-and-camera",
+      "state": "not_enabled_user_asked_purpose_only",
+      "scope": [
+        "physical microphone narration",
+        "physical camera photo/video"
+      ],
+      "priorEvidenceBoundary": "Real QA-media insertion/playback/export does not prove physical device capture."
+    }
+  ],
+  "rawEvidence": [
+    {
+      "file": "verification/real-services-20261113/image-generate.json",
+      "sha256": "1e4506f34425e5af92703d7e96d2349dad59d5e24f88afa85d90fbc762ea3684",
+      "bytes": 2997
+    },
+    {
+      "file": "verification/real-services-20261113/image-edit-one.json",
+      "sha256": "5824e50316eab04f76f4106740a3d5762d5cfb584b665bfd00ff8f51caf6cfe9",
+      "bytes": 4450
+    },
+    {
+      "file": "verification/real-services-20261113/image-edit-one.attempt1.json",
+      "sha256": "07b469f7c818e835844f74e43d558baedfc2e870bfe684dd9a3fbdeb1a7ef9d4",
+      "bytes": 848
+    },
+    {
+      "file": "verification/real-services-20261113/image-edit-one.attempt2.json",
+      "sha256": "ecf702da2987cb487ce71a12af507634471c45608085380147f11796bb12af83",
+      "bytes": 2722
+    },
+    {
+      "file": "verification/real-services-20261113/image-edit-two.json",
+      "sha256": "93bfc08eed61128af117f4f6c3bec7136b946b14d0b772bb9aa5e64f038db826",
+      "bytes": 3063
+    },
+    {
+      "file": "verification/real-services-20261113/visual-review.json",
+      "sha256": "5e02f7164dd5f7b0ad2c12cddcbb7556b06a01b1b05ba1e9ad2b19a6448070ac",
+      "bytes": 1389
+    },
+    {
+      "file": "verification/real-services-20261113/model-vector.json",
+      "sha256": "7069d687f2e3f7840383288c7967eac4c3721e9d619c50208a06d16af32e1011",
+      "bytes": 131276
+    },
+    {
+      "file": "verification/real-services-20261113/model-photo.json",
+      "sha256": "6b3b10f1dd63b803bb795840225ab41a1c1c16a104faf8d689aa22e57951ad55",
+      "bytes": 158936
+    },
+    {
+      "file": "verification/real-services-20261113/model-final-three-engine.json",
+      "sha256": "ee276c325c5a21e45ebfb4b8c95b838d3d96aa7cdac0cca22d5600d238ee68a4",
+      "bytes": 561278
+    },
+    {
+      "file": "verification/real-services-20261113/model-third-primary-source-audit.json",
+      "sha256": "2fd0afffcb0c45d05272874b3eb560cd44a000a593171b3212f1ad622e30f89c",
+      "bytes": 2989
+    },
+    {
+      "file": "verification/real-services-20261113/model-third-native-reopen-export.json",
+      "sha256": "1355912a5d9cb8bc2d286ef0267dfd4c45abfc0df0b9bdfbd66920f30f1af12d",
+      "bytes": 3178
+    },
+    {
+      "file": "verification/real-services-20261113/model-third-native-reopen-export.attempt1.json",
+      "sha256": "61911b9a1f235c532190f7305128ecc083088cef9090d804f0a48caccb743ffc",
+      "bytes": 2365
+    },
+    {
+      "file": "verification/real-services-20261113/F008-root-cause.json",
+      "sha256": "ddc16f48166ab55024a37a86e1ae6510aec1b237aa7a1355dda86f80d95ac270",
+      "bytes": 1120
+    },
+    {
+      "file": "verification/real-services-20261113/F008-owned-tool-replay.json",
+      "sha256": "619bfbfea343eb28e067180d5e274947698211ef0a923d98b6a291489fcdc271",
+      "bytes": 1279
+    },
+    {
+      "file": "verification/real-services-20261113/F009-owned-tool-tickets.json",
+      "sha256": "691229a3423cbeed314cb48d2e847675911248b1f6a6f24e43ba1a7b002a514d",
+      "bytes": 443
+    },
+    {
+      "file": "verification/real-services-20261113/F010-owned-open-target.json",
+      "sha256": "eabb5b3f3dabfec041b3dbe63f8e446ab49f5fc31da1bc1a023cb0c4c9f13a10",
+      "bytes": 2464
+    },
+    {
+      "file": "verification/real-services-20261113/reservations.json",
+      "sha256": "48905b235986bd5441d932502bf8079dd39483509d7b56920dc8537f9f6cff2f",
+      "bytes": 1163
+    },
+    {
+      "file": "verification/real-services-20261113/provider-dispatch.ndjson",
+      "sha256": "ba50ba2d7871d84144e07a9957ce64f24b0646ea0691de58b573b80fcafa5818",
+      "bytes": 28798
+    },
+    {
+      "file": "verification/real-services-20261113/node-results.json",
+      "sha256": "0159411383c44c6d254902aca1709b5f3e9fe3f65c800a822b984e0f9b7ede3c",
+      "bytes": 63126
+    }
+  ],
+  "userDesktopControlled": false,
+  "userDshRestarted": false,
+  "finalCandidateLoad": "recorded externally after packaging to keep the archive immutable",
+  "mainModelReview": [
+    "Read actual tool-call arguments and current native source files; original failure reports retained.",
+    "Compact tickets restore immutable original bases and preserve source/epoch/native stale checks, never silently refreshing old arguments.",
+    "F010 malformed opens were replayed through the real registered tool and did not mutate or rebuild the active App.",
+    "Three genuine model outputs match all non-target baseline fields and independently reopen/export; full post-F010 model journey is not yet tested.",
+    "No dropped optional service, physical device, OS dialog, fourth model turn or fifth image request was invoked."
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "status": "passed_scoped",
+  "at": "2026-11-08T09:07:55.129197+00:00",
+  "scope": "actual pinned OpenDesign SVG/PNG import, provenance reconciliation and project package",
+  "checks": [
+    "pinned upstream SVG opened as an actual independent Vector source with exact original and provenance",
+    "pinned upstream PNG opened as an actual independent Photo source with exact original and provenance",
+    "saved resource links reconciled from actual operation receipts without reimport",
+    "project package retained the actual resource bytes and provenance records"
+  ],
+  "svg": {
+    "package": "plugins/_official/examples/open-design-homepage",
+    "file": "assets/icon.svg",
+    "sha256": "534da2592db7c261dc27c42b9bb94f56e3d49832cacb449e03f55a389c5bcf41"
+  },
+  "image": {
+    "package": "design-templates/html-ppt",
+    "file": "scripts/verify-output/animation-showcase/animation-showcase_01.png",
+    "sha256": "fcbe8582141463fed44b4b430f3592a2513968ae48f1e4c4929afc61c4d45b06"
+  },
+  "packageSha256": "ccdb3d93fc0170b60eb073621195191ce91bfb3a3f9af3bf7c264f8689902c48",
+  "rawEvidence": {
+    "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-od-resource-import.json",
+    "sha256": "57e8bbe810042efa7a72ae22417164bd35844cd8a8d395c786a893aa9c826cfe"
+  },
+  "package": "verification/ui45-od-import-project.zip",
+  "limits": [
+    "Only the two named fixed upstream files were imported here. Inventory and readable source do not imply external scripts, fonts or services are integrated or executed."
+  ]
+}

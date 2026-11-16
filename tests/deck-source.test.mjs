@@ -1,0 +1,42 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {mkdirSync,mkdtempSync,readFileSync,rmSync} from 'node:fs';
+import {resolve,relative,join} from 'node:path';
+import {fileURLToPath} from 'node:url';
+import {WorkspaceNative} from '../host/workspace-native.js';
+import {openNativeSession} from '../host/native.js';
+import {nativeDeckPackage} from '../host/deck-source.js';
+import * as store from '../host/docstore.js';
+import {createImage,toPNG} from '../host/raster.js';
+const base=resolve(process.env.DESIGNCRAFT_TEST_ROOT||fileURLToPath(new URL('./.work/',import.meta.url)));mkdirSync(base,{recursive:true});
+test('native PPTX import/edit/overlay export retains rich objects, physical size and original source',async t=>{
+ const root=mkdtempSync(join(base,'deck-source-')),runtime=new WorkspaceNative();let producer;
+ t.after(async()=>{runtime.dispose();await producer?.close();assert.ok(!relative(base,root).startsWith('..'));rmSync(root,{recursive:true,force:true});});
+ producer=await openNativeSession('deckcraft',root);await producer.call('run_command',{command:'file.new',params:{size:[240.5,180.25],blank:true}});await producer.call('add_slide',{layout:'blank'});
+ await producer.call('add_text_box',{x:10,y:10,w:180,h:30,text:'源文字',size:18,color:'#000000'});
+ const textShape=(await producer.call('inspect_slide',{})).data.shapes.find(shape=>shape.text==='源文字');await producer.call('run_command',{command:'animation.add',params:{effect:'fade',duration:1200,ids:[textShape.id]}});
+ await producer.call('run_command',{command:'insert.chart',params:{rect:[20,60,100,80],type:'column',categories:['A','B'],series:[{name:'源数据',values:[1,3]}]}});
+ await producer.call('insert_table',{x:130,y:60,w:80,h:60,rows:2,cols:2,data:[['列一','列二'],['保留','数据']]});await producer.call('run_command',{command:'slide.notes',params:{text:'原备注'}});
+ const file=join(producer.directory,'original.pptx');await producer.call('save_presentation',{path:file});const original=readFileSync(file);store.saveAsset(root,'original.pptx',original);await producer.close();producer=null;
+ store.saveAsset(root,'red.png',toPNG(createImage(16,12,[255,0,0,255])));store.createDoc(root,{id:'work',canvas:{width:32,height:32},assets:[],pages:[{id:'empty',layers:[]}]});
+ const input=extra=>({root,id:'work',baseRevision:store.readDoc(root,'work').revision,...extra});
+ await runtime.run(input({operation:'deck.import',asset:'original.pptx'}));let doc=store.readDoc(root,'work').doc,page=doc.pages[0],proxy=page.layers[0];
+ assert.equal(doc.native.deck.mode,'source');assert.equal(doc.canvas.width,240.5/.75);assert.equal(proxy.type,'native');assert.equal(proxy.native.engine,'deckcraft');assert.ok(proxy.native.nodes.some(node=>node.kind==='chart'));assert.ok(proxy.native.nodes.some(node=>node.kind==='table'));assert.deepEqual(store.readAsset(root,'original.pptx'),original);
+ const baseline=nativeDeckPackage(store.readAsset(root,doc.native.deck.source)).model.presentation;
+ assert.ok(baseline.slides[0].animations.length);const catalogue=await runtime.run(input({operation:'native.inspect',pageId:page.id,layerId:proxy.id,filter:'text.set'}));assert.ok(catalogue.candidate.commands.some(command=>command.id==='text.set'));
+ const target=proxy.native.nodes.find(node=>node.text==='源文字');assert.ok(target);await runtime.run(input({operation:'deck.apply',pageId:page.id,layerId:proxy.id,nativeObjectId:target.id,commands:[{id:'text.set',params:{text:'修改后的文字'}}]}));
+ doc=store.readDoc(root,'work').doc;page=doc.pages[0];proxy=page.layers[0];assert.ok(proxy.native.nodes.some(node=>node.text==='修改后的文字'));
+ await runtime.run(input({operation:'photo.import',pageId:page.id,asset:'red.png'}));doc=store.readDoc(root,'work').doc;const photo=doc.pages[0].layers.find(layer=>layer.type==='image');
+ await runtime.run(input({operation:'photo.apply',pageId:page.id,layerId:photo.id,commands:[{id:'image.adjustments.invert'}]}));
+ for(const text of ['第二次修改','第三次修改']){
+  doc=store.readDoc(root,'work').doc;page=doc.pages[0];proxy=page.layers[0];await runtime.run(input({operation:'deck.apply',pageId:page.id,layerId:proxy.id,nativeObjectId:target.id,commands:[{id:'text.set',params:{text}}]}));
+  const exported=await runtime.run(input({operation:'deck.export',out:'combined.pptx'}));assert.ok(store.readExport(root,exported.candidate.file).length);
+  doc=store.readDoc(root,'work').doc;const full=nativeDeckPackage(store.readAsset(root,doc.native.deck.exportSource)).model.presentation,baseSource=nativeDeckPackage(store.readAsset(root,doc.native.deck.source)).model.presentation;
+  assert.equal(full.slides[0].shapes.filter(shape=>shape.kind.type==='picture').length,1);assert.equal(baseSource.slides[0].shapes.filter(shape=>shape.kind.type==='picture').length,0,'ordinary overlays must not be painted twice into the native underlay');
+  assert.ok(full.slides[0].shapes.some(shape=>shape.text?.paragraphs.some(p=>p.runs.some(run=>run.text===text))));assert.deepEqual(full.slideSize,baseline.slideSize);assert.deepEqual(full.masters,baseline.masters);assert.deepEqual(full.slides[0].notes,baseline.slides[0].notes);assert.deepEqual(full.slides[0].animations,baseline.slides[0].animations);
+  assert.deepEqual(full.slides[0].shapes.find(shape=>shape.kind.type==='chart').kind.series[0].values,[1,3]);assert.equal(full.slides[0].shapes.find(shape=>shape.kind.type==='table').kind.rows[1].cells[0].text.paragraphs[0].runs[0].text,'保留');
+ }
+ doc=store.readDoc(root,'work').doc;page=doc.pages[0];await runtime.run(input({operation:'deck.clone',pageId:page.id}));doc=store.readDoc(root,'work').doc;assert.equal(doc.pages.length,2);assert.equal(doc.pages[1].layers.filter(layer=>layer.type==='image').length,1);assert.notEqual(doc.pages[0].layers[1].id,doc.pages[1].layers[1].id);
+ await runtime.run(input({operation:'deck.delete',pageId:doc.pages[0].id}));doc=store.readDoc(root,'work').doc;assert.equal(doc.pages.length,1);assert.deepEqual(store.readAsset(root,'original.pptx'),original);
+ await runtime.run(input({operation:'deck.design',resourceId:'editorial'}));doc=store.readDoc(root,'work').doc;assert.equal(doc.designSystem.upstream.id,'editorial');const themed=nativeDeckPackage(store.readAsset(root,doc.native.deck.source)).model.presentation;assert.deepEqual(themed.slides[0].background.fill.color.base.rgb,{r:251,g:247,b:240,a:255});assert.equal(doc.pages[0].layers.filter(layer=>layer.type==='image').length,1);
+});

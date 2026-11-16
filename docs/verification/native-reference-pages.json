@@ -1,0 +1,92 @@
+{
+  "status": "passed",
+  "scope": "actual DSH composer, registered tool fixture creation, physical Vector page/multiselect, codec rejection; no model",
+  "codeRoot": "D:\\METIS超级合并\\dsh-plugin\\designcraft",
+  "checks": [
+    {
+      "name": "actual composer serializes both precise native object IDs, the actual artboard and document-space bounds",
+      "pass": true,
+      "detail": {
+        "schema": 2,
+        "editorProtocol": 2,
+        "sessionId": "PUBLIC-REDACTED",
+        "root": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\reference-pages-project\\21684015-5f34-4c30-9c01-ce4da244d0db",
+        "sourceId": "import-7923d9fb-9d59-4b05-b31d-a4ae8c5e809f",
+        "title": "专业工具验证",
+        "epoch": "614e1675-3286-4ad4-8284-eed7ddc69c06",
+        "sourceRevision": "f18ee7d036c80d32fb89700379acd779e1a942c1e62477fff9b2dffa68a561db",
+        "engine": "vectorcraft",
+        "engineUid": 1,
+        "engineRevision": 4,
+        "objectIds": [
+          2,
+          3
+        ],
+        "nativeSelection": {
+          "data": {
+            "new_art": [],
+            "objects": [
+              2,
+              3
+            ]
+          },
+          "kind": "vectorcraft"
+        },
+        "selectionStamp": "{\"page\":0,\"selection\":{\"new_art\":[]},\"tool\":{\"options\":null,\"tool\":\"selection\"}}",
+        "page": {
+          "artboard": {
+            "height": 480,
+            "name": "Artboard 1",
+            "width": 640,
+            "x": 0,
+            "y": 0
+          },
+          "index": 0,
+          "kind": "artboard"
+        },
+        "coordinateSpace": "document",
+        "selectionBounds": {
+          "height": 190,
+          "width": 240,
+          "x": 60,
+          "y": 80
+        },
+        "workflow": "Read designcraft_editor state before editing and copy its CURRENT view.base including engine and selectionStamp. objectIds belong to sourceId; nativeSelection preserves the real engine selection. Use the declared native coordinateSpace and selection transforms, not preview pixels or assumed Vector coordinates. Large uint64 IDs are decimal strings; use {$u64:\"decimal-id\"} in command params, never Number(id). Re-read after page/source/revision/selection context changes. Keep manual changes; do not modify files or dcDoc behind the live App. Completion needs the actual native checkpoint."
+      }
+    },
+    {
+      "name": "a physical page-only switch rejects the prior reference even with unchanged document revision, preserving the user draft and source",
+      "pass": true,
+      "detail": {
+        "error": "设计已变化（协议、作品、画板或原生选区），请重新引用后发送，未发送旧对象或旧预览",
+        "engineRevision": 4,
+        "actualPage": 1
+      }
+    },
+    {
+      "name": "explicit re-reference uses the real second artboard and keeps existing composer text",
+      "pass": true,
+      "detail": {
+        "page": {
+          "artboard": {
+            "height": 480,
+            "name": "第二画板",
+            "width": 640,
+            "x": 700,
+            "y": 0
+          },
+          "index": 1,
+          "kind": "artboard"
+        }
+      }
+    },
+    {
+      "name": "physically deleting a referenced object rejects its old chip rather than sending a missing target",
+      "pass": true,
+      "detail": {
+        "error": "设计已变化（协议、作品、画板或原生选区），请重新引用后发送，未发送旧对象或旧预览"
+      }
+    }
+  ],
+  "pageErrors": []
+}

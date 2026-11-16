@@ -1,0 +1,30 @@
+{
+  "schema": 1,
+  "kind": "exact-native-source-input-audit",
+  "at": "2026-11-13T08:36:48.663950+00:00",
+  "archive": "engine-source-snapshots-ui160.zip",
+  "bytes": 33418619,
+  "sha256": "74a5d0d2cd46c13d07ef5248c5df82817751fffa1a72526fd6c067508f051740",
+  "sourceInputCount": 241,
+  "archiveFileCount": 252,
+  "engines": {
+    "vectorcraft-host": {
+      "version": "0.19.0+designcraft.host19",
+      "upstreamCommit": "bcebabe3f8c23a376ac68e9e6726590af278f7bb",
+      "sourceInputsMatched": 60
+    },
+    "photocraft-host": {
+      "version": "0.18.0+designcraft.host8",
+      "upstreamCommit": "8a87a457abb43ac344deeb3fdb67541b91a72ff1",
+      "sourceInputsMatched": 30
+    },
+    "deckcraft-host": {
+      "version": "0.13.1+designcraft.host18",
+      "upstreamCommit": "4ce2944630b04188dee8504c14151994d06c416a",
+      "sourceInputsMatched": 151
+    }
+  },
+  "archiveRoundtripBytesMatch": true,
+  "functionalValidation": false,
+  "scope": "File/ZIP integrity only. No engine or source code was executed by this audit."
+}

@@ -1,0 +1,46 @@
+{
+  "status": "passed",
+  "scope": "owned DSH preview with actual local HTML/CSS/JS/PNG and independent local network probe",
+  "checks": [],
+  "preview": {
+    "text": "Local script executed",
+    "color": "rgb(12, 34, 56)",
+    "imageWidth": 2,
+    "blocked": "blocked",
+    "top": "blocked",
+    "host": "blocked"
+  },
+  "conversion": {
+    "slides": 1,
+    "nativeShapes": 1,
+    "textRuns": 1,
+    "pictures": 1,
+    "svgPictures": 0,
+    "rasterPictures": 1,
+    "svgMedia": 0,
+    "embeddedFonts": [
+      "Inter"
+    ],
+    "fontParts": 1,
+    "note": "图片和 SVG 保留为媒体；网页脚本、动画和交互不会成为原生演示行为。已内嵌字体：Inter。",
+    "source": {
+      "slides": 1,
+      "sourceTextElements": 1,
+      "sourceSvg": 0,
+      "sourceImages": 1,
+      "requestedFonts": [
+        "Inter"
+      ],
+      "warnings": [
+        "交互脚本、表单和嵌套页面不会转换为演示行为。"
+      ]
+    },
+    "warnings": [
+      "交互脚本、表单和嵌套页面不会转换为演示行为。"
+    ]
+  },
+  "reopened": true,
+  "resumeSeconds": 0.03,
+  "foreignRequests": 0,
+  "pageErrors": []
+}

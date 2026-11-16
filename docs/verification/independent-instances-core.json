@@ -1,0 +1,66 @@
+{
+  "task": "F2",
+  "status": "verified_independent_png_svg_instances",
+  "asOf": "2026-11-05T10:33:27.254Z",
+  "scope": "已接入的 PNG、SVG 放入海报和演示。复制后独立编辑并应用，原件和其他使用处保留。",
+  "evidence": [
+    {
+      "format": "png",
+      "engine": "vectorcraft",
+      "projectRoot": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\copy-undo-probe\\75c05594-68b8-49cc-9357-c55229111945",
+      "originalSourceId": "work-42d0596a-01c5-4d38-a580-13bdba87ddf3",
+      "originalSourceHash": "60a682e2d53d7e5ca01acf3c9b71b335745e8ec4a9eade66ecc642ca1bf8853d",
+      "editedSourceHash": "4de2976878a11f91f8d3013071b512db943f5e2dd5c30148e89aec38a92945ff",
+      "copyId": "use-0da9c474-1765-01b4-b78a-f6895286f6ef",
+      "originalUses": [
+        "use-a3c74b69-6ba3-4ed3-a9ec-a6721acd19a7"
+      ],
+      "forkRevision": "853f222ac973900deac38c902285f4bd7a43b2d650179aa95a6ebbd672941f91"
+    },
+    {
+      "format": "png",
+      "engine": "deckcraft",
+      "projectRoot": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\copy-undo-probe\\3dd53c99-c6aa-486a-a2ba-5084ec74c235",
+      "originalSourceId": "work-e3368ff6-1b49-4931-9e9d-90ff0eb5f9c7",
+      "originalSourceHash": "8f4473a7d19f244a886a4885fe0356972eab95b0c451b23ef4f619eecf9ce769",
+      "editedSourceHash": "6b5d87cd0f4d6a3290149f09686a456c95a4d762b5db61539965fd37c9c7c1ce",
+      "copyId": "use-f6759ee2-94eb-2615-df49-7391e663d5a3",
+      "originalUses": [
+        "use-25d34d1e-dfcd-4db6-b92f-7e537ef6eecd"
+      ],
+      "forkRevision": "44d9101c4af0d0cf1e71e8d0ddaae5dfc960c3cd5a339a7687ce55b8cbc7c31b"
+    },
+    {
+      "format": "svg",
+      "engine": "vectorcraft",
+      "projectRoot": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\svg-vector-inplace\\3dc3d234-fe8c-4dc5-b0f7-46de5a7d8731",
+      "originalSourceId": "work-2a474be0-f706-4afc-ab8a-3bd984fb04c8",
+      "originalSourceHash": "baf36b3396f52f2e205f8bedc13b9720f85056c5bf51668e3de22ba7e95fe94c",
+      "editedSourceHash": "0951623c2263efc53b0e660a40326ea0182383e6f9e23e5fd60aee0aea7d8c71",
+      "copyId": "use-a8e6506a-6f47-ab5b-01df-89038d54842c",
+      "originalUses": [
+        "use-9e166fd4-2006-45f2-9c68-89bcc66415f1",
+        "use-86c0bd22-4f64-42b1-a9a6-22767ed49275"
+      ],
+      "forkRevision": "a3932ca942bd486d0414500501f6c916c75c2bacfa967c7374b07b250a85b024"
+    },
+    {
+      "format": "svg",
+      "engine": "deckcraft",
+      "projectRoot": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\svg-deck-inplace\\858161f8-820f-4501-9d85-346be7f62fbf",
+      "originalSourceId": "work-e4c0cd5b-e2f0-4ce6-a8f6-dd18f9fb1cc2",
+      "originalSourceHash": "8a7e28779ca6dafe86c43d106f483453cc27800b00be8ee5afccaed82b705d75",
+      "editedSourceHash": "32223324f80a274cd273cd6c5861ea071a1a17249ee4d0e19d99253a517cb762",
+      "copyId": "use-86c160d2-88a8-6c3a-9c22-9635184bad99",
+      "originalUses": [
+        "use-7a3de38e-3bea-4e2f-b60a-20020491f696"
+      ],
+      "forkRevision": "de7c9aec02be3195cf0d0571ad440806945ec3fbbec26cd4dc582829b00ca927"
+    }
+  ],
+  "verification": "用当前项目读取器逐份打开四个隔离项目的实际保存文件，核对素材内容、原对象身份、独立分叉起点、原始源哈希和编辑后的源。结合此前真实界面与原生复制、撤销、重做、重开记录。",
+  "limits": [
+    "PNG 来自可编辑 Photo 源，SVG 来自受支持的可编辑 Vector 源。",
+    "系统剪贴板互操作、跨应用复制属于独立验证范围。"
+  ]
+}

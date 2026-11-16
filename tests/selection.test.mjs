@@ -1,0 +1,7 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {alignmentOffsets,selectionRoots,nativePoint,nativeAtPoint} from '../client/selection.js';
+test('distribution uses equal gaps with differing object sizes and keeps endpoints',()=>{const items=[{id:'a',rect:{x:10,y:1,w:20,h:10}},{id:'b',rect:{x:40,y:2,w:40,h:10}},{id:'c',rect:{x:150,y:3,w:30,h:10}}];assert.deepEqual(alignmentOffsets(items,'distributeX').map(x=>x.dx),[0,30,0]);});
+test('ancestor and child selection cannot transform descendants twice',()=>{const child={id:'child'},group={id:'group',children:[child]};assert.deepEqual(selectionRoots({layers:[group]},['group','child']),[group]);});
+test('rotated cropped source maps canvas coordinates back to the same source point',()=>{const layer={x:100,y:50,w:300,h:150,rotation:35,crop:{x:10,y:20,w:100,h:50},native:{engine:'photocraft'},naturalWidth:400,naturalHeight:200},p={x:43,y:39},q=nativePoint(layer,nativePoint(layer,p),true);assert.ok(Math.abs(p.x-q.x)<1e-8&&Math.abs(p.y-q.y)<1e-8);});
+test('native picking obeys true source stacking and visibility',()=>{const layer={x:0,y:0,w:100,h:100,naturalWidth:100,naturalHeight:100,native:{engine:'photocraft',layers:[{id:2,bounds:[10,10,20,20],visible:false},{id:1,bounds:[0,0,100,100]}]}};assert.equal(nativeAtPoint(layer,{x:15,y:15}).id,1);layer.native.layers[0].visible=true;assert.equal(nativeAtPoint(layer,{x:15,y:15}).id,2);});

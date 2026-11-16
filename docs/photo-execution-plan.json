@@ -1,0 +1,102 @@
+{
+  "schema": 1,
+  "objective": "Continue original unified DSH full50; Photo persistent bridge and native-source closure after verified D1/F1 Vector foundations",
+  "fullScopeComplete": false,
+  "productRoot": "D:\\METIS超级合并\\dsh-plugin\\designcraft",
+  "sourceRevision": "8a87a457abb43ac344deeb3fdb67541b91a72ff1",
+  "sourceVersion": "0.18.0",
+  "livePhotoAdvertised": true,
+  "units": [
+    {
+      "id": "D2.0",
+      "goal": "Bound browser imports before allocation",
+      "files": [
+        "Photo crates/io/src/embedded_import.rs",
+        "Photo crates/io/src/flat.rs"
+      ],
+      "action": "Use genuine native pcraft/PNG/JPEG decoders with explicit encoded/decoded/canvas budgets, preserve source depth/profile/palette",
+      "verification": "Native actual 16-bit PNG and layered pcraft roundtrip; oversized/malformed inputs refuse before session publication",
+      "done": "Only when actual source/manual/tool/output evidence matches this unit",
+      "status": "native3 PASS: actual 16-bit PNG/native pcraft and input/canvas budgets; only pcraft/PNG/JPEG admitted"
+    },
+    {
+      "id": "D2.1",
+      "goal": "Attach raw JSON browser control to the same Photo App",
+      "files": [
+        "Photo apps/photocraft-web/src/api.rs",
+        "Photo apps/photocraft-web/src/web.rs"
+      ],
+      "action": "Connect actual ControlRequest channel; raw JSON replies, bounded queue and binary open inbox",
+      "verification": "Actual compiled WASM/native App readiness, current UI state and physical edits read through this exact channel",
+      "done": "Only when actual source/manual/tool/output evidence matches this unit",
+      "status": "actual source-matched host3 installed, native8 + physical native/browser state1 + DSH tools/imports/reopen9 + actual Kimi4 PASS; full platform/file-menu scope still bounded"
+    },
+    {
+      "id": "D2.2",
+      "goal": "Native Photo identity, real selection descriptors and guarded execution",
+      "files": [
+        "Photo crates/ui-egui/src/control/hosted.rs",
+        "Photo app/control.rs"
+      ],
+      "action": "Use actual session active_generation for live uid, native DocId separately, exact native layers/mask target/channel data and native brush_rev; preserve native mask as an exact source-backed coverage reference",
+      "verification": "Actual native-App tests for stale target/brush/mask, u64 IDs and revisions, genuine source/PNG encoders; no raster mask flattened to vector objects",
+      "done": "Only when actual source/manual/tool/output evidence matches this unit",
+      "status": "actual source-matched host3 installed, native8 + physical native/browser state1 + DSH tools/imports/reopen9 + actual Kimi4 PASS; full platform/file-menu scope still bounded"
+    },
+    {
+      "id": "D2.3",
+      "goal": "Real background completion and hosted file ownership",
+      "files": [
+        "Photo host state",
+        "Photo control dispatch",
+        "Photo menus invoke/App commands"
+      ],
+      "action": "Wrap real native job completions inside the same App; route only actual lifecycle intents through workspace saves and acknowledgements",
+      "verification": "Long command does not report complete before actual application/save; stop/conflict, native save/close/new requests retain sources",
+      "done": "Only when actual source/manual/tool/output evidence matches this unit",
+      "status": "actual source-matched host3 installed, native8 + physical native/browser state1 + DSH tools/imports/reopen9 + actual Kimi4 PASS; full platform/file-menu scope still bounded"
+    },
+    {
+      "id": "D3",
+      "goal": "Integrate native Photo source and real UI",
+      "files": [
+        "client/native-controller.js",
+        "client/native-workspace.js",
+        "host/editor-session.js",
+        "host/native-source-store.js",
+        "Photo source exporter"
+      ],
+      "action": "Advertise Photo only after real bridge build is installed and verified; source is native pcraft, PNG/JPEG input supported within proved budgets; common source/asset navigation retained",
+      "verification": "Physical brush/layer/mask edit -> pcraft save/reopen -> actual registered tool continuation; PNG derivative -> real Vector placement -> enter Photo source -> return",
+      "done": "Only when actual source/manual/tool/output evidence matches this unit",
+      "status": "core pcraft/PNG/real JPEG and 16-bit PNG imports verified; Photo PNG->Vector/source return6 and original pending-relation repair3 PASS; advanced formats/file paths remain pending"
+    },
+    {
+      "id": "D4-D5",
+      "goal": "Complete hand tools and actual current Kimi use",
+      "files": [
+        "Photo native UI/control",
+        "client/native-reference.js",
+        "host/photo-mask.js"
+      ],
+      "action": "Verify crop/brush/erase/layers/soft masks/adjust/filter/composite; exact mask data export and real model layer-scoped continuation",
+      "verification": "Each feature has actual UI/source evidence; use existing configured Kimi; actual image service remains H1-H5 and is not inferred from text model",
+      "done": "Only when actual source/manual/tool/output evidence matches this unit",
+      "status": "physical core9 + one actual configured Kimi mask/layer continuation4 PASS; full upstream specialized tools not inferred from this slice"
+    }
+  ],
+  "keyDecisions": [
+    "Photo native uid is its actual active_document generation; its persistent native Document.id remains a separate exact uint64 field. No invented vector identity or mask object array.",
+    "Native raster selection remains a typed reference to actual full coverage stored in the native source; bounds/preview are not substituted for alpha. Native revision and actual UI mask/channel/tool/brush revision fence execution.",
+    "Use actual background job completion from the displayed App; accepting a command is not completion.",
+    "Hosted reopen preserves profiles and source bytes; unsupported bounded import formats remain unavailable instead of passing through unbounded defaults.",
+    "Only supported actual formats/tools are shown; Photo and Deck remain incomplete until their own gates pass."
+  ],
+  "risks": [
+    "WASM memory: native upstream defaults allow much larger sparse canvases and decoded data than the DSH host budget.",
+    "Native file menus, async imports, live strokes/type and background jobs must not bypass source ownership or acknowledge unsaved data.",
+    "Photo pcraft export byte determinism/source-pair matching must be proved; persist the actual paired source bytes when necessary.",
+    "Do not expose missing mask/service/PSD semantics as completed features."
+  ],
+  "updatedAt": "2026-11-04T16:47:48.215354+00:00"
+}

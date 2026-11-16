@@ -1,0 +1,578 @@
+{
+  "schema": 1,
+  "authority": {
+    "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\outputs\\DesignCraft_DSH统一插件完整方案_含OpenDesign矢量_20261102.txt",
+    "sha256": "4fcbc1e39fb8933ae980409c424f085441c398f40de8479cc90e1ea2bdc4bb73"
+  },
+  "fullScopePreserved": true,
+  "units": [
+    {
+      "id": "U0",
+      "title": "范围和版本基线",
+      "requirements": {
+        "目标": "原始要求可追踪，分清上游已有、Web缺口、插件适配与未实现能力。",
+        "文件": "docs/requirements、docs/capability-matrix、upstream-lock、migration清单。",
+        "动作": "锁四项目、DSH SDK、工具和资源版本；逐项定义界面入口、AI动作、源结构、导出与验收。",
+        "验证": "每项承诺有来源及具体用户动作；旧版包/作品有只读恢复点。",
+        "完成": "不再用技能文件数、命令数或测试总数代表能力覆盖。"
+      },
+      "status": "in_progress",
+      "implementationEvidence": [],
+      "verificationEvidence": [],
+      "progressMatrix": "capability-matrix.json"
+    },
+    {
+      "id": "U1",
+      "title": "DSH承载与故障边界样机（先行门槛）",
+      "requirements": {
+        "目标": "确定专业UI在DSH中的真实可行路线。",
+        "文件": "client/workspace-shell、client/editor-surface、host/surface-runtime；Vector上游web宿主适配。",
+        "动作": "独立开发环境装载真实Vector编辑器，验证GPU/IME/CSP/文件/焦点；建立异常恢复和运行预算。",
+        "验证": "中文输入、选择/节点编辑/缩放、隐藏恢复、保存重开；针对性制造编辑域失败并检查DSH响应及数据。",
+        "完成": "有实际可用表面与隔离证据；SDK不足时产出明确最小宿主接口需求，不假装纯插件已通过。"
+      },
+      "status": "in_progress",
+      "implementationEvidence": [],
+      "verificationEvidence": [],
+      "progressMatrix": "capability-matrix.json"
+    },
+    {
+      "id": "U2",
+      "title": "同会话的人机编辑",
+      "requirements": {
+        "目标": "DSH Kimi与用户操作同一个Vector对象和历史。",
+        "文件": "client/editor-bridge/vector、host/editor-session、host/dsh-tools、host/operation-journal。",
+        "动作": "接实际请求完成事件/修订与语义引用，复用原生选择和工具。",
+        "验证": "真实Kimi改色→用户移动节点/改色→Kimi局部续改；用户改动保留，撤销/停止/保存正确。",
+        "完成": "不是离线CLI改同名文件，也不是伪模型测试；保留真实模型调用和原生源证据。"
+      },
+      "status": "in_progress",
+      "implementationEvidence": [],
+      "verificationEvidence": [],
+      "progressMatrix": "capability-matrix.json"
+    },
+    {
+      "id": "U3",
+      "title": "OpenDesign SVG生成闭环",
+      "requirements": {
+        "目标": "SVG创作真正转为可手工与AI续改的矢量作品。",
+        "文件": "host/opendesign-adapter、host/generated-artifacts、host/svg-handoff、资源注册/完整包清单。",
+        "动作": "接一个完整OD设计工作流，生成SVG，验证结构/依赖，用真实Vector导入并接管权威源。",
+        "验证": "真实生成→路径/文字手改→AI仅改选中部分→SVG导出重开；嵌入位图/字体/转换差异有记录。",
+        "完成": "生成文件、当前原生源和可编辑对象相互对应，不以截图或扩展名验收。"
+      },
+      "status": "pending",
+      "implementationEvidence": [],
+      "verificationEvidence": []
+    },
+    {
+      "id": "U4",
+      "title": "Photo专业上下文",
+      "requirements": {
+        "目标": "图层/蒙版等真实手工与AI图片编辑。",
+        "文件": "Photo上游web/ui-egui宿主适配、client/editor-bridge/photo、host/runtime-services。",
+        "动作": "补控制和事件，接宿主保存/字体/剪贴板及所需平台服务。",
+        "验证": "真实软蒙版/调整层手改，AI针对图层修改；保存重开源仍保留层与蒙版。",
+        "完成": "操作可从界面执行且与AI一致，非只有CLI命令入口。"
+      },
+      "status": "pending",
+      "implementationEvidence": [],
+      "verificationEvidence": []
+    },
+    {
+      "id": "U5",
+      "title": "Deck专业上下文",
+      "requirements": {
+        "目标": "演示内容保持原生结构且可持续手改。",
+        "文件": "Deck上游web/ui-egui宿主适配、client/editor-bridge/deck、host/runtime-services。",
+        "动作": "接真实页面/对象/历史，按承诺补齐字体、媒体、保存和演示服务。",
+        "验证": "文字、形状和至少一种表格/图表等结构化对象的真实操作及导出重开；母版/备注按范围核验。",
+        "完成": "画面和源一致，PPT原生对象未被整页图片替代。"
+      },
+      "status": "pending",
+      "implementationEvidence": [],
+      "verificationEvidence": []
+    },
+    {
+      "id": "U6",
+      "title": "项目关系与修改范围",
+      "requirements": {
+        "目标": "独立复制、明确关联和局部修改行为可预测。",
+        "文件": "host/project-store、host/asset-graph、host/instance-bindings、client/edit-scope。",
+        "动作": "建立源/实例/版本；普通复制独立；仅此处分叉；品牌素材显示并更新明确关联。",
+        "验证": "改一个副本不伤原件；改PPT一处不伤同media其他处；明确更新7处只影响关联目标；旧结果拒绝覆盖。",
+        "完成": "无需用户管理依赖图；源与布局所有权清晰。"
+      },
+      "status": "pending",
+      "implementationEvidence": [],
+      "verificationEvidence": []
+    },
+    {
+      "id": "U7",
+      "title": "图片跨设计/PPT原位编辑",
+      "requirements": {
+        "目标": "下游使用图片时仍可返回真实图层源，布局不丢。",
+        "文件": "host/media-binding、client/edit-context、host/dependency-commit；复用审阅后的media-link事务保护。",
+        "动作": "PPT/海报图片进入Photo内容上下文；退出回原对象；派生图按源修订更新。",
+        "验证": "含裁剪/旋转/组的图片做蒙版与调色后返回；保存/重开仍保留布局、源层和非目标内容。",
+        "完成": "无需用户创建子作品并手动搬运；冲突、失败和比例变化有正确处理。"
+      },
+      "status": "pending",
+      "implementationEvidence": [],
+      "verificationEvidence": []
+    },
+    {
+      "id": "U8",
+      "title": "SVG跨设计/PPT复用",
+      "requirements": {
+        "目标": "保留可进源编辑的矢量，同时区分PPT原生转换。",
+        "文件": "host/vector-media、host/ppt-shape-converter、host/conversion-report、client/edit-context。",
+        "动作": "实现关联SVG媒体路径；另做受支持的原生路径/文字转换清单。",
+        "验证": "存储、编辑器显示、内部编辑、导出、再导入五项分别通过；PPT媒体与原生对象检查分开。",
+        "完成": "复杂SVG不默默降为PNG；PPT原生转换只标记实际通过的语义。"
+      },
+      "status": "pending",
+      "implementationEvidence": [],
+      "verificationEvidence": []
+    },
+    {
+      "id": "U9",
+      "title": "品牌与一套多物料",
+      "requirements": {
+        "目标": "OD完整品牌/模板价值进入真实设计，而不只是配色。",
+        "文件": "host/brand-registry、host/template-registry、host/brand-bindings、host/design-plan。",
+        "动作": "首批共享logo/主视觉/颜色/字体绑定；海报、社交图、PPT分别原生排版。",
+        "验证": "更换主色保留手工位置和裁剪；一处白色logo不改品牌本体；完整包脚本/资产/字体实际可达。",
+        "完成": "三类成品有真实源、共用素材关系与独立布局；其后按矩阵扩充其余OD能力。"
+      },
+      "status": "pending",
+      "implementationEvidence": [],
+      "verificationEvidence": []
+    },
+    {
+      "id": "U10",
+      "title": "DSH已有图片服务与候选",
+      "requirements": {
+        "目标": "真实生图/局部重绘接入可继续手改的图像源。",
+        "文件": "host/provider-capabilities、host/image-jobs、host/image-composite、host/variants。",
+        "动作": "按DSH已配置服务真实探测能力，复用安全凭据；生成/编辑/候选按需调用。",
+        "验证": "真实服务调用、图片解码与语义结果；局部编辑按所承诺的蒙版规则检查；手改后续改及候选采用正确。",
+        "完成": "记录服务和真实结果，不把mock/硬编码图当AI；能力缺失时明确不可用，无强制OpenRouter。"
+      },
+      "status": "pending",
+      "implementationEvidence": [],
+      "verificationEvidence": []
+    },
+    {
+      "id": "U11",
+      "title": "HTML/网页演示与可编辑PPTX",
+      "requirements": {
+        "目标": "复用OD已有路线，同时诚实处理转换损失。",
+        "文件": "host/html-artifacts、host/od-export-service、host/html-deck-migration、host/conversion-report。",
+        "动作": "安全接OD所需渲染/字体服务；实际editable导出→Deck导入；转换后由Deck接管。",
+        "验证": "真实HTML样本的文字/形状可编辑；SVG媒体/栅格效果分别计数；缺服务/字体明确失败；视觉与结构重开核验。",
+        "完成": "既不抹掉上游真实能力，也不冒称通用HTML无损双向转换。"
+      },
+      "status": "pending",
+      "implementationEvidence": [],
+      "verificationEvidence": []
+    },
+    {
+      "id": "U12",
+      "title": "保存、输出与迁移闭环",
+      "requirements": {
+        "目标": "用户拿到真实可继续编辑的项目和准确命名的交付物。",
+        "文件": "host/export-service、host/project-package、host/legacy-adapter、client/export-panel。",
+        "动作": "原生源、PNG/JPG、SVG、PPTX、PDF按实际能力导出；依赖包、字体和来源记录；旧作品只读迁移另存。",
+        "验证": "每种实际承诺的源和成品独立重开，核验结构/画面/引用；旧作品恢复点完整；无密钥和私有会话泄漏。",
+        "完成": "不以“成功写出文件”替代可用性；PSD/PDF/SVG等保留哪些结构写清，失败不得标成功。"
+      },
+      "status": "pending",
+      "implementationEvidence": [],
+      "verificationEvidence": [],
+      "progressMatrix": "capability-matrix.json"
+    },
+    {
+      "id": "U13",
+      "title": "集成故障、冲突和全量覆盖审计",
+      "requirements": {
+        "目标": "收口已承诺范围，不能以总绿灯掩盖专业缺口。",
+        "文件": "针对性integration/roundtrip/recovery tests、capability-matrix、发布与迁移说明。",
+        "动作": "按下列真实用户旅程验证；针对旧结果、同对象争用、中断保存、运行域故障和恢复做精准检查。",
+        "验证": "每项能力都有UI、AI、源、输出及恢复证据；失败先修复、复测，未通过明确不可用。",
+        "完成": "主模型复核辅助结论；所有交付物真实存在，未实现项/上游限制/宿主依赖逐项披露。"
+      },
+      "status": "pending",
+      "implementationEvidence": [],
+      "verificationEvidence": [],
+      "progressMatrix": "capability-matrix.json"
+    }
+  ],
+  "invariants": [
+    {
+      "id": "I01",
+      "requirement": "一个DSH原生对话，当前kimi-for-coding总控，无第二agent循环",
+      "units": [
+        "U2",
+        "U3"
+      ],
+      "status": "unverified",
+      "evidence": []
+    },
+    {
+      "id": "I02",
+      "requirement": "完整专业编辑器真实可达；总览截图不算内层编辑",
+      "units": [
+        "U1",
+        "U4",
+        "U5",
+        "U13"
+      ],
+      "status": "unverified",
+      "evidence": []
+    },
+    {
+      "id": "I03",
+      "requirement": "OpenDesign完整技能、模板、品牌和Craft资源按需接入",
+      "units": [
+        "U3",
+        "U9",
+        "U11"
+      ],
+      "status": "unverified",
+      "evidence": []
+    },
+    {
+      "id": "I04",
+      "requirement": "SVG生成→真实Vector对象→手改→AI续改→导出",
+      "units": [
+        "U2",
+        "U3",
+        "U8"
+      ],
+      "status": "unverified",
+      "evidence": []
+    },
+    {
+      "id": "I05",
+      "requirement": "SVG含位图和缺字/滤镜转换不能混称纯矢量成功",
+      "units": [
+        "U3",
+        "U8",
+        "U12"
+      ],
+      "status": "unverified",
+      "evidence": []
+    },
+    {
+      "id": "I06",
+      "requirement": "图像分层源、真实蒙版及AI结果可继续手工编辑",
+      "units": [
+        "U4",
+        "U10"
+      ],
+      "status": "unverified",
+      "evidence": []
+    },
+    {
+      "id": "I07",
+      "requirement": "现有DSH图片服务真实探测，无OpenRouter硬依赖",
+      "units": [
+        "U10"
+      ],
+      "status": "unverified",
+      "evidence": []
+    },
+    {
+      "id": "I08",
+      "requirement": "演示文字/形状/母版/备注等保留原生语义",
+      "units": [
+        "U5",
+        "U12",
+        "U13"
+      ],
+      "status": "unverified",
+      "evidence": []
+    },
+    {
+      "id": "I09",
+      "requirement": "HTML/网页演示保留真实格式与运行预览",
+      "units": [
+        "U11"
+      ],
+      "status": "unverified",
+      "evidence": []
+    },
+    {
+      "id": "I10",
+      "requirement": "OD HTML→实际可编辑PPTX→Deck接管，报告损失",
+      "units": [
+        "U11",
+        "U12"
+      ],
+      "status": "unverified",
+      "evidence": []
+    },
+    {
+      "id": "I11",
+      "requirement": "同会话版本和选区检查在执行前完成，旧AI不覆盖新手改",
+      "units": [
+        "U1",
+        "U2",
+        "U13"
+      ],
+      "status": "unverified",
+      "evidence": []
+    },
+    {
+      "id": "I12",
+      "requirement": "手工输入/拖动/绘画可接管，AI不按旧坐标盲改",
+      "units": [
+        "U2",
+        "U7",
+        "U13"
+      ],
+      "status": "unverified",
+      "evidence": []
+    },
+    {
+      "id": "I13",
+      "requirement": "已执行步骤及时显示，真实长操作状态，不伪造进度",
+      "units": [
+        "U2",
+        "U4",
+        "U5",
+        "U10"
+      ],
+      "status": "unverified",
+      "evidence": []
+    },
+    {
+      "id": "I14",
+      "requirement": "普通复制逻辑独立，底层去重/mediaID不等于关联授权",
+      "units": [
+        "U6"
+      ],
+      "status": "unverified",
+      "evidence": []
+    },
+    {
+      "id": "I15",
+      "requirement": "改当前使用处默认局部独立；明确整体要求才更新关联源",
+      "units": [
+        "U6",
+        "U9"
+      ],
+      "status": "unverified",
+      "evidence": []
+    },
+    {
+      "id": "I16",
+      "requirement": "图片/矢量在PPT原位进源编辑，保留变换/裁剪/组",
+      "units": [
+        "U7",
+        "U8"
+      ],
+      "status": "unverified",
+      "evidence": []
+    },
+    {
+      "id": "I17",
+      "requirement": "SVG媒体与PPT原生形状转换分别验证，不冒称全部可拆",
+      "units": [
+        "U8",
+        "U12"
+      ],
+      "status": "unverified",
+      "evidence": []
+    },
+    {
+      "id": "I18",
+      "requirement": "品牌绑定更新保留手工布局、局部覆盖及各物料独立排版",
+      "units": [
+        "U6",
+        "U9"
+      ],
+      "status": "unverified",
+      "evidence": []
+    },
+    {
+      "id": "I19",
+      "requirement": "每种专业源唯一可写归属；SVG/HTML转换后不双主覆写",
+      "units": [
+        "U3",
+        "U6",
+        "U11"
+      ],
+      "status": "unverified",
+      "evidence": []
+    },
+    {
+      "id": "I20",
+      "requirement": "源/对象/属性/预览/保存修订一致，状态无虚假完成",
+      "units": [
+        "U1",
+        "U2",
+        "U6",
+        "U13"
+      ],
+      "status": "unverified",
+      "evidence": []
+    },
+    {
+      "id": "I21",
+      "requirement": "保存与任务失败保留旧源、草稿、原始导入及完整检查点",
+      "units": [
+        "U1",
+        "U6",
+        "U12",
+        "U13"
+      ],
+      "status": "unverified",
+      "evidence": []
+    },
+    {
+      "id": "I22",
+      "requirement": "跨物料更新可恢复，不能显示半提交成功",
+      "units": [
+        "U6",
+        "U9",
+        "U13"
+      ],
+      "status": "unverified",
+      "evidence": []
+    },
+    {
+      "id": "I23",
+      "requirement": "撤销较早AI不能整份覆盖后来手改",
+      "units": [
+        "U2",
+        "U6",
+        "U13"
+      ],
+      "status": "unverified",
+      "evidence": []
+    },
+    {
+      "id": "I24",
+      "requirement": "多方案有独立源，采用只影响指定范围",
+      "units": [
+        "U10"
+      ],
+      "status": "unverified",
+      "evidence": []
+    },
+    {
+      "id": "I25",
+      "requirement": "复杂计算和不可信源码受限运行，故障隔离有实测证据",
+      "units": [
+        "U1",
+        "U11",
+        "U13"
+      ],
+      "status": "unverified",
+      "evidence": []
+    },
+    {
+      "id": "I26",
+      "requirement": "文件/网络/字体/凭据范围明确，包不含密钥或私有会话",
+      "units": [
+        "U0",
+        "U1",
+        "U10",
+        "U12"
+      ],
+      "status": "unverified",
+      "evidence": []
+    },
+    {
+      "id": "I27",
+      "requirement": "PNG/JPG/SVG/PPTX/PDF和原生源按能力重开验证",
+      "units": [
+        "U12",
+        "U13"
+      ],
+      "status": "unverified",
+      "evidence": []
+    },
+    {
+      "id": "I28",
+      "requirement": "导出PPT是内嵌快照，继续关联工作另交项目源包",
+      "units": [
+        "U6",
+        "U12"
+      ],
+      "status": "unverified",
+      "evidence": []
+    },
+    {
+      "id": "I29",
+      "requirement": "旧作品保护与只读迁移另存；保留原插件恢复点",
+      "units": [
+        "U0",
+        "U12"
+      ],
+      "status": "unverified",
+      "evidence": []
+    },
+    {
+      "id": "I30",
+      "requirement": "每项承诺按UI/AI/源/输出验收，上游限制与未实现明确",
+      "units": [
+        "U0",
+        "U13"
+      ],
+      "status": "unverified",
+      "evidence": []
+    },
+    {
+      "id": "I31",
+      "requirement": "修图/PPT和品牌多物料旅程真实连贯，用户不搬子项目",
+      "units": [
+        "U7",
+        "U8",
+        "U9",
+        "U13"
+      ],
+      "status": "unverified",
+      "evidence": []
+    },
+    {
+      "id": "I32",
+      "requirement": "任何阶段验收不缩小整个目标，也不替代全部覆盖审计",
+      "units": [
+        "U0",
+        "U13"
+      ],
+      "status": "unverified",
+      "evidence": []
+    }
+  ],
+  "journeys": [
+    {
+      "id": "A标识",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "B图片",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "C多物料",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "D格式",
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": "E恢复",
+      "status": "pending",
+      "evidence": []
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "status": "passed",
+  "scope": "two real owned DSH sessions/native Apps, physical source edit, active-writer refusal and exact newer-source return; no model",
+  "codeRoot": "D:\\METIS超级合并\\dsh-plugin\\designcraft",
+  "checks": [
+    {
+      "name": "a second real conversation can edit the saved parent only while the first App is paused on its source",
+      "pass": true,
+      "detail": {
+        "firstSession": "session-PUBLIC-REDACTED",
+        "secondSession": "owned-secondary-1230eee2-6e4d-450d-ae88-da9db7170d96",
+        "sourceId": "work-97c442fb-ec85-4d32-8171-dae0ae700b22",
+        "newRevision": "cbf97028319d2ffe35353c8b5dd40843f558e313b632942221a63173d5972958"
+      }
+    },
+    {
+      "name": "return while the other real writer holds the parent lease is refused without destroying either saved/current App",
+      "pass": true,
+      "detail": {
+        "sourceRealmUnchanged": true,
+        "returnStillAvailable": true,
+        "error": "此专业源正在另一个窗口编辑"
+      }
+    },
+    {
+      "name": "after the writer releases its lease, return discards the stale cached App and reopens the exact newer source with a visible notice",
+      "pass": true,
+      "detail": {
+        "oldRealm": "2496bc1f-5c42-4cc9-8823-7a7b7bb3018f",
+        "newRealm": "3aeaa6a1-b2fd-4b22-987e-e807cd0d3a80",
+        "sourceRevision": "93eb04f497e9f2f571f2fc1fdea557290239d9ecfac2bb885f1edfb020f9c838",
+        "preservedExactOtherDocument": true
+      }
+    }
+  ],
+  "pageErrors": []
+}

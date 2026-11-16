@@ -1,0 +1,99 @@
+{
+  "status": "passed",
+  "scope": "actual DSH workbench and original native App, real menu actions/files; no model",
+  "codeRoot": "D:\\METIS超级合并\\dsh-plugin\\designcraft",
+  "checks": [
+    {
+      "name": "real New/import/saves use one full-width stage without a permanently occupying works sidebar",
+      "pass": true,
+      "detail": {
+        "stage": 1200,
+        "workspace": 1200,
+        "header": 58,
+        "sourceSidebars": 0
+      }
+    },
+    {
+      "name": "project menu filters actual stored works and selecting the active work retains its live App",
+      "pass": true,
+      "detail": {
+        "sourceId": "import-b2091db9-a5f1-47e7-ab00-12b038b71f8d"
+      }
+    },
+    {
+      "name": "export menu downloads actual editable source, SVG and PNG files",
+      "pass": true,
+      "detail": [
+        {
+          "format": "vectorcraft",
+          "path": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\evidence\\unified-exports\\94310a26-552b-4d0b-83ec-cce381539ed5\\result.vectorcraft",
+          "bytes": 24800,
+          "sha256": "b30712245049b3c09a0a643ca7697456a47c15e8ec24c36b0e2e5fd63739268e"
+        },
+        {
+          "format": "svg",
+          "path": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\evidence\\unified-exports\\94310a26-552b-4d0b-83ec-cce381539ed5\\result.svg",
+          "bytes": 554,
+          "sha256": "a52ed00d3ff289bc8882a1c17eec21176d7b68ae0d3cdcd111003fcdcbf69e8e"
+        },
+        {
+          "format": "png",
+          "path": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\evidence\\unified-exports\\94310a26-552b-4d0b-83ec-cce381539ed5\\result.png",
+          "bytes": 3666,
+          "sha256": "8e970855fde40d5f95e704fd11447e9730a1b8bfd141ab79caa2f22930c32d0c"
+        }
+      ]
+    },
+    {
+      "name": "visible AI action attaches a real source reference to the original DSH composer",
+      "pass": true,
+      "detail": {
+        "sourceId": "import-b2091db9-a5f1-47e7-ab00-12b038b71f8d"
+      }
+    },
+    {
+      "name": "compatibility entry under More returns to the same live native edit session",
+      "pass": true,
+      "detail": {
+        "sameApp": true
+      }
+    }
+  ],
+  "attemptingExport": "png",
+  "hitTests": [
+    {
+      "hit": "<button class=\"dcNativeMenuItem\" role=\"menuitem\" disabled=\"\">可编辑设计源 · .vectorcraft</button>",
+      "portalPointer": "none",
+      "framePointer": "none",
+      "box": {
+        "x": 614,
+        "y": 68,
+        "width": 162.265625,
+        "height": 32
+      }
+    },
+    {
+      "hit": "<button class=\"dcNativeMenuItem\" role=\"menuitem\">SVG 文件</button>",
+      "portalPointer": "none",
+      "framePointer": "none",
+      "box": {
+        "x": 782.265625,
+        "y": 68,
+        "width": 71.0625,
+        "height": 32
+      }
+    },
+    {
+      "hit": "<button class=\"dcNativeMenuItem\" role=\"menuitem\" disabled=\"\">PNG 图片</button>",
+      "portalPointer": "none",
+      "framePointer": "none",
+      "box": {
+        "x": 859.328125,
+        "y": 68,
+        "width": 73.21875,
+        "height": 32
+      }
+    }
+  ],
+  "pageErrors": []
+}

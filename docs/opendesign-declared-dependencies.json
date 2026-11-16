@@ -1,0 +1,58 @@
+{
+  "repository": "nexu-io/open-design",
+  "revision": "12d970eacc8971150e3c76470d2a9afe16dc2ed1",
+  "scope": "three indexed manifests only; no scripts executed or dependencies installed",
+  "items": [
+    {
+      "package": "design-templates/last30days",
+      "path": "scripts/lib/vendor/bird-search/package.json",
+      "source": "https://raw.githubusercontent.com/nexu-io/open-design/12d970eacc8971150e3c76470d2a9afe16dc2ed1/design-templates/last30days/scripts/lib/vendor/bird-search/package.json",
+      "gitSha1": "9446bb3572f10e052d68fde32f6ce876a61fdcf3",
+      "sha256": "96b65305969a179ee7a7735f1b475599d6035f32fda1fd030ea57ee09380cdb5",
+      "bytes": 331,
+      "declaredDependencies": {},
+      "scriptNames": [],
+      "declaredLicense": "MIT"
+    },
+    {
+      "package": "skills/chat-motion-overlay",
+      "path": "assets/remotion-template/package.json",
+      "source": "https://raw.githubusercontent.com/nexu-io/open-design/12d970eacc8971150e3c76470d2a9afe16dc2ed1/skills/chat-motion-overlay/assets/remotion-template/package.json",
+      "gitSha1": "285fcf53f7a1f92ef39ddde44200c8d6229e48e8",
+      "sha256": "f2945a8da7d30725650d788d81d33cf255e0ac85c5eacb7c43d62170796b251a",
+      "bytes": 689,
+      "declaredDependencies": {
+        "dependencies": {
+          "react": "^19.0.0",
+          "react-dom": "^19.0.0",
+          "remotion": "^4.0.0"
+        },
+        "devDependencies": {
+          "@remotion/cli": "^4.0.0",
+          "@types/react": "^19.0.0",
+          "typescript": "^5.5.0"
+        }
+      },
+      "scriptNames": [
+        "render:mov",
+        "render:webm",
+        "start"
+      ],
+      "declaredLicense": null
+    },
+    {
+      "package": "skills/oil-motion",
+      "path": "scripts/requirements.txt",
+      "source": "https://raw.githubusercontent.com/nexu-io/open-design/12d970eacc8971150e3c76470d2a9afe16dc2ed1/skills/oil-motion/scripts/requirements.txt",
+      "gitSha1": "9c224baaee3023af4434311d25d605aaea89099e",
+      "sha256": "cd32978ae25e7d38c84df266f7dd91a1e378dabc3a708ec9e850e4d883f3f91a",
+      "bytes": 43,
+      "requirementLines": [
+        "Pillow>=10.0.0",
+        "numpy>=1.24.0",
+        "PyYAML>=6.0.0"
+      ],
+      "note": "only these manifest lines; transitive dependencies not resolved"
+    }
+  ]
+}

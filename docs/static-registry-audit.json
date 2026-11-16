@@ -1,0 +1,895 @@
+{
+  "schema": 1,
+  "kind": "static-tool-route-and-command-source-audit",
+  "at": "2026-11-13T10:01:21.389740+00:00",
+  "functionalValidation": false,
+  "toolDeclarations": [
+    {
+      "name": "designcraft_plan",
+      "file": "host/design-plan-tool.js",
+      "line": 16,
+      "sourceSha256": "fafe448a2449e5ea133a31bb2abf3e80862cad0f1f1f9ecd5b4556336805a310",
+      "actionLiterals": [
+        "candidate",
+        "create",
+        "history",
+        "link",
+        "links",
+        "list",
+        "migrate_resources",
+        "migration_preview",
+        "read",
+        "recover",
+        "recover_link",
+        "recoverable",
+        "restore",
+        "save",
+        "unlink",
+        "verify_link"
+      ],
+      "runtimeRegistered": "not verified; source declaration only"
+    },
+    {
+      "name": "designcraft_workspace",
+      "file": "host/dsh-tools.js",
+      "line": 12,
+      "sourceSha256": "20197ab54e0e2c89d4a281e79ae4f6c9ab9434a38c0fd3e6ec9c064b0b90a03a",
+      "actionLiterals": [],
+      "runtimeRegistered": "not verified; source declaration only"
+    },
+    {
+      "name": "designcraft_ecommerce",
+      "file": "host/ecommerce-tool.js",
+      "line": 5,
+      "sourceSha256": "2fd723415bca63e3c1b40338161246b1ac279075b886e6e5f05300cae8337737",
+      "actionLiterals": [
+        "cancel_slot",
+        "finalize",
+        "list",
+        "plan",
+        "recover_plan",
+        "start_slot",
+        "status"
+      ],
+      "runtimeRegistered": "not verified; source declaration only"
+    },
+    {
+      "name": "designcraft_editor",
+      "file": "host/editor-tools.js",
+      "line": 32,
+      "sourceSha256": "07c8a3968197524b4d7216bd2467789b61b019c84f519e4519432d05da7c065f",
+      "actionLiterals": [
+        "apply_instance",
+        "apply_linked",
+        "brand",
+        "brand_state",
+        "commands",
+        "convert_svg",
+        "create_svg",
+        "derive",
+        "edit_instance",
+        "execute",
+        "inspect_node",
+        "link_instances",
+        "new",
+        "open",
+        "open_asset",
+        "place",
+        "project",
+        "reconcile_instance_update",
+        "reconcile_placement",
+        "reconcile_svg_conversion",
+        "resume_linked",
+        "return_to_design",
+        "save",
+        "state",
+        "undo",
+        "unlink_instance"
+      ],
+      "runtimeRegistered": "not verified; source declaration only"
+    },
+    {
+      "name": "designcraft_fal_realtime",
+      "file": "host/fal-realtime-tool.js",
+      "line": 6,
+      "sourceSha256": "44e30dad98db245c22efff4c88cd0370127954aa9723c4b9998957a5d8705e4a",
+      "actionLiterals": [
+        "close",
+        "images",
+        "inputs",
+        "inspect",
+        "list",
+        "open",
+        "open_image",
+        "pending",
+        "prepare_image",
+        "reconcile_image",
+        "recover",
+        "recover_image",
+        "send",
+        "status"
+      ],
+      "runtimeRegistered": "not verified; source declaration only"
+    },
+    {
+      "name": "designcraft_fal_workflow",
+      "file": "host/fal-workflow-tool.js",
+      "line": 7,
+      "sourceSha256": "b3b042ca8f6c8b1ae79deac588efc05a9c38c146c2f6c4433271136089e693c8",
+      "actionLiterals": [
+        "cancel_remote",
+        "images",
+        "inspect",
+        "list",
+        "open_image",
+        "pending",
+        "prepare_image",
+        "reconcile_image",
+        "recover",
+        "recover_image",
+        "restore_pending",
+        "resume_storage",
+        "search",
+        "start",
+        "status",
+        "stop"
+      ],
+      "runtimeRegistered": "not verified; source declaration only"
+    },
+    {
+      "name": "designcraft_figma_mcp",
+      "file": "host/figma-mcp-tool.js",
+      "line": 8,
+      "sourceSha256": "17e4c1187daf9efc2c0dedf565cfba0bbd26797c290d9876c32916672ce2e6e1",
+      "actionLiterals": [
+        "assets",
+        "candidates",
+        "capture",
+        "capture_file",
+        "catalog",
+        "file_candidates",
+        "file_native_list",
+        "file_native_open",
+        "file_native_reconcile",
+        "file_native_recover",
+        "files",
+        "html_transfer_recover",
+        "html_transfer_status",
+        "html_transfers",
+        "inspect_html_inline",
+        "links",
+        "list",
+        "open_image",
+        "prompt_capture",
+        "prompt_catalog",
+        "prompt_list",
+        "prompt_messages",
+        "prompt_read",
+        "prompt_recover",
+        "prompt_text",
+        "read",
+        "reconcile",
+        "recover_asset",
+        "recover_file",
+        "recover_saved",
+        "result",
+        "send_html",
+        "snapshot",
+        "start",
+        "status",
+        "stop",
+        "suggest_html_inline",
+        "upload",
+        "upload_inputs",
+        "upload_list",
+        "upload_recover",
+        "upload_status"
+      ],
+      "runtimeRegistered": "not verified; source declaration only"
+    },
+    {
+      "name": "designcraft_figma_source",
+      "file": "host/figma-source-tool.js",
+      "line": 4,
+      "sourceSha256": "9b6d2b7164f128728923076aed975950bcca0b9704e268331425ea13cea93460",
+      "actionLiterals": [
+        "brand_candidates",
+        "export",
+        "inspect",
+        "list",
+        "open_image",
+        "open_svg",
+        "read",
+        "read_snapshot",
+        "reconcile"
+      ],
+      "runtimeRegistered": "not verified; source declaration only"
+    },
+    {
+      "name": "designcraft_html",
+      "file": "host/html-tools.js",
+      "line": 33,
+      "sourceSha256": "7b0b36ad7f2173f7380900af9c117032b2713d9408133f30f486560a932f53ab",
+      "actionLiterals": [],
+      "runtimeRegistered": "not verified; source declaration only"
+    },
+    {
+      "name": "designcraft_native_variants",
+      "file": "host/native-variants.js",
+      "line": 118,
+      "sourceSha256": "97b0664d0c05bd448983323b2a5e5d508f1fcf9f9ce16626dc46e9fbbc2f8227",
+      "actionLiterals": [
+        "adopt",
+        "fork",
+        "list",
+        "undo"
+      ],
+      "runtimeRegistered": "not verified; source declaration only"
+    },
+    {
+      "name": "designcraft_resources",
+      "file": "host/open-design-tools.js",
+      "line": 211,
+      "sourceSha256": "4c8aaa08a1f7a9b75abcc052f5eec2e704bc62041710e68f3b039b44eef68163",
+      "actionLiterals": [
+        "color_audit",
+        "color_contrast",
+        "color_convert",
+        "director_package",
+        "director_read",
+        "director_use",
+        "external_candidate",
+        "external_discover",
+        "external_fetch",
+        "external_font",
+        "external_font_disable",
+        "external_font_enable",
+        "external_font_list",
+        "external_font_quarantine",
+        "external_font_recover",
+        "external_inspect",
+        "external_lfs",
+        "external_list",
+        "external_materialize",
+        "external_open",
+        "external_opens",
+        "external_read",
+        "external_reconcile",
+        "external_recover_open",
+        "external_theme",
+        "import_image",
+        "import_svg",
+        "license",
+        "materialize",
+        "materialize_package",
+        "package",
+        "package_status",
+        "read",
+        "reconcile_image",
+        "reconcile_svg",
+        "search",
+        "style",
+        "user_font",
+        "workflow_attach",
+        "workflow_cancel",
+        "workflow_catalog",
+        "workflow_complete",
+        "workflow_context",
+        "workflow_list",
+        "workflow_prepare",
+        "workflow_publish_html",
+        "workflow_publish_report",
+        "workflow_read",
+        "workflow_recover_lock",
+        "workflow_status"
+      ],
+      "runtimeRegistered": "not verified; source declaration only"
+    },
+    {
+      "name": "designcraft_openai_svg",
+      "file": "host/openai-svg-tool.js",
+      "line": 5,
+      "sourceSha256": "d69e431e5425d983ad07a8158fb41d240aeff028a42bf2caa751bc728d842e82",
+      "actionLiterals": [
+        "catalog",
+        "list",
+        "open",
+        "reconcile",
+        "recover_saved",
+        "start",
+        "status",
+        "stop"
+      ],
+      "runtimeRegistered": "not verified; source declaration only"
+    },
+    {
+      "name": "designcraft_brief",
+      "file": "host/opendesign-brief-tool.js",
+      "line": 7,
+      "sourceSha256": "47ea1d01992daf6b1de1488b72e7f6ec9b0bf247b8a0eb1e94d1ed048eb72e9b",
+      "actionLiterals": [
+        "create",
+        "list",
+        "recover",
+        "resolve",
+        "status"
+      ],
+      "runtimeRegistered": "not verified; source declaration only"
+    },
+    {
+      "name": "designcraft_pixelbin",
+      "file": "host/pixelbin-tool.js",
+      "line": 5,
+      "sourceSha256": "7e93c9c769e1c5a14b5a87baba0dcc0d3d1cf88a4387f8612e667c082545f931",
+      "actionLiterals": [
+        "assets",
+        "auth_begin",
+        "auth_candidates",
+        "auth_check",
+        "auth_disconnect",
+        "auth_recover",
+        "auth_select",
+        "auth_status",
+        "candidates",
+        "capture",
+        "catalog",
+        "estimate",
+        "list",
+        "open",
+        "operation_recover",
+        "operation_result",
+        "operation_status",
+        "operation_stop",
+        "operations",
+        "read",
+        "reconcile",
+        "recover_asset",
+        "refresh",
+        "result",
+        "save_remote",
+        "snapshot",
+        "start",
+        "status",
+        "stop",
+        "upload"
+      ],
+      "runtimeRegistered": "not verified; source declaration only"
+    },
+    {
+      "name": "designcraft_replicate_workflow",
+      "file": "host/replicate-workflow-tool.js",
+      "line": 6,
+      "sourceSha256": "a332a74fb74a8b3673eefc01db5100710a32d505e9b94e7322d286b64ec60bab",
+      "actionLiterals": [
+        "cancel_remote",
+        "images",
+        "inspect",
+        "list",
+        "model",
+        "open_image",
+        "prepare_image",
+        "reconcile_image",
+        "reconcile_upload",
+        "recover",
+        "recover_image",
+        "resume_unsent",
+        "start",
+        "status",
+        "stop",
+        "versions"
+      ],
+      "runtimeRegistered": "not verified; source declaration only"
+    },
+    {
+      "name": "designcraft_selection",
+      "file": "host/selection-tool.js",
+      "line": 11,
+      "sourceSha256": "f2c56f6b33f9b01bcbacf2ec07d1b5d91f53e4babd49b0cc0e1fcef04a5bab60",
+      "actionLiterals": [
+        "capture_mask",
+        "inspect"
+      ],
+      "runtimeRegistered": "not verified; source declaration only"
+    },
+    {
+      "name": "designcraft_stitch",
+      "file": "host/stitch-tool.js",
+      "line": 6,
+      "sourceSha256": "bfc93faf821fa447ca9b01418b023e417a8a5e3aef573fa9f1841dd3cc800d2b",
+      "actionLiterals": [
+        "assets",
+        "candidates",
+        "capture",
+        "catalog",
+        "image_imports",
+        "list",
+        "open_html",
+        "open_image",
+        "read",
+        "reconcile_image",
+        "recover_asset",
+        "recover_image_open",
+        "recover_saved",
+        "result",
+        "snapshot",
+        "start",
+        "status",
+        "stop"
+      ],
+      "runtimeRegistered": "not verified; source declaration only"
+    },
+    {
+      "name": "designcraft_stock",
+      "file": "host/stock-tool.js",
+      "line": 6,
+      "sourceSha256": "2a78bc196a1110f38a05ca9f05fcef21b5e78f7572637e35435869eabaadf463",
+      "actionLiterals": [
+        "capture",
+        "credits",
+        "list",
+        "open",
+        "read",
+        "reconcile",
+        "search",
+        "search_read"
+      ],
+      "runtimeRegistered": "not verified; source declaration only"
+    },
+    {
+      "name": "designcraft_image_studio",
+      "file": "host/studio-image.js",
+      "line": 184,
+      "sourceSha256": "73f4663bbfd03b12b0dfcea6e96e2f1a15b5eb16382b41fa701dfe0aca5d94bb",
+      "actionLiterals": [
+        "adopt",
+        "cancel",
+        "cancel_remote_fal",
+        "catalog",
+        "convert_returned",
+        "list",
+        "recover_fal",
+        "start",
+        "status",
+        "transform_catalog",
+        "undo"
+      ],
+      "runtimeRegistered": "not verified; source declaration only"
+    },
+    {
+      "name": "designcraft_venice_audio",
+      "file": "host/venice-audio-tool.js",
+      "line": 5,
+      "sourceSha256": "b2c86976d6f63ec2aadb6963f88f75bc9a8f25730385228d923238841ba360e5",
+      "actionLiterals": [
+        "cleanup",
+        "list",
+        "models",
+        "quote",
+        "recover",
+        "start",
+        "status",
+        "stop"
+      ],
+      "runtimeRegistered": "not verified; source declaration only"
+    },
+    {
+      "name": "designcraft_venice_video",
+      "file": "host/venice-video-tool.js",
+      "line": 5,
+      "sourceSha256": "e773f5f43edda88204876ff633defd7c766d747474476377419f1b5ba9ba02ff",
+      "actionLiterals": [
+        "cleanup",
+        "list",
+        "models",
+        "quote",
+        "recover",
+        "revoke_link",
+        "start",
+        "status",
+        "stop"
+      ],
+      "runtimeRegistered": "not verified; source declaration only"
+    }
+  ],
+  "initializationCalls": [
+    {
+      "function": "registerEditorTools",
+      "module": "./editor-tools.js",
+      "line": 605
+    },
+    {
+      "function": "registerStockTool",
+      "module": "./stock-tool.js",
+      "line": 606
+    },
+    {
+      "function": "registerOpenDesignTools",
+      "module": "./open-design-tools.js",
+      "line": 610
+    },
+    {
+      "function": "registerHtmlTool",
+      "module": "./html-tools.js",
+      "line": 611
+    },
+    {
+      "function": "registerDesignPlanTool",
+      "module": "./design-plan-tool.js",
+      "line": 612
+    },
+    {
+      "function": "registerDesignBriefTool",
+      "module": "./opendesign-brief-tool.js",
+      "line": 613
+    },
+    {
+      "function": "registerFalWorkflowTool",
+      "module": "./fal-workflow-tool.js",
+      "line": 615
+    },
+    {
+      "function": "registerFalRealtimeTool",
+      "module": "./fal-realtime-tool.js",
+      "line": 617
+    },
+    {
+      "function": "registerVeniceAudioTool",
+      "module": "./venice-audio-tool.js",
+      "line": 619
+    },
+    {
+      "function": "registerVeniceVideoTool",
+      "module": "./venice-video-tool.js",
+      "line": 621
+    },
+    {
+      "function": "registerFigmaSourceTool",
+      "module": "./figma-source-tool.js",
+      "line": 623
+    },
+    {
+      "function": "registerReplicateWorkflowTool",
+      "module": "./replicate-workflow-tool.js",
+      "line": 624
+    },
+    {
+      "function": "registerOpenAiSvgTool",
+      "module": "./openai-svg-tool.js",
+      "line": 626
+    },
+    {
+      "function": "registerFigmaMcpTool",
+      "module": "./figma-mcp-tool.js",
+      "line": 628
+    },
+    {
+      "function": "registerStitchTool",
+      "module": "./stitch-tool.js",
+      "line": 630
+    },
+    {
+      "function": "registerPixelbinTool",
+      "module": "./pixelbin-tool.js",
+      "line": 632
+    },
+    {
+      "function": "registerStudioImageTool",
+      "module": "./studio-image.js",
+      "line": 636
+    },
+    {
+      "function": "registerEcommerceTool",
+      "module": "./ecommerce-tool.js",
+      "line": 637
+    },
+    {
+      "function": "registerNativeVariantTool",
+      "module": "./native-variants.js",
+      "line": 638
+    },
+    {
+      "function": "registerSelectionTool",
+      "module": "./selection-tool.js",
+      "line": 639
+    },
+    {
+      "function": "registerDesignTools",
+      "module": "./dsh-tools.js",
+      "line": 642
+    }
+  ],
+  "composedRouteRegistrations": [
+    {
+      "function": "editorRoutes",
+      "line": 531
+    },
+    {
+      "function": "htmlRoutes",
+      "line": 532
+    },
+    {
+      "function": "pixelbinRoutes",
+      "line": 533
+    },
+    {
+      "function": "figmaMcpRoutes",
+      "line": 534
+    },
+    {
+      "function": "ecommerceRoutes",
+      "line": 535
+    },
+    {
+      "function": "workflowImageRoutes",
+      "line": 536
+    },
+    {
+      "function": "falWorkflowRoutes",
+      "line": 537
+    },
+    {
+      "function": "falRealtimeRoutes",
+      "line": 538
+    },
+    {
+      "function": "stockRoutes",
+      "line": 539
+    },
+    {
+      "function": "studioImageRoutes",
+      "line": 540
+    },
+    {
+      "function": "deckLocalInputRoutes",
+      "line": 541
+    },
+    {
+      "function": "localWorkflowRoutes",
+      "line": 542
+    },
+    {
+      "function": "legacyMigrationRoutes",
+      "line": 543
+    },
+    {
+      "function": "nativeVariantRoutes",
+      "line": 544
+    }
+  ],
+  "upstreamSourceSnapshots": {
+    "vectorcraft": {
+      "recordedCandidateCount": 866,
+      "currentFilesMatchingSnapshot": 310,
+      "changedSinceSnapshot": [
+        {
+          "file": "crates/ui-egui/src/control.rs",
+          "recorded": "bf1815041fc2a545262dba217077419c3559796139e832555713ef4467669eca",
+          "current": "339201925d34c7127839ca0abfe6ad6868a5d6237ad4c2016a2993dda1dab1f8"
+        },
+        {
+          "file": "crates/ui-egui/src/control/hosted.rs",
+          "recorded": "ce300da308c38b2dd86e6e34b811569124ecb066704655ddd1bbaa6c6d9c5b28",
+          "current": "9646183d058b40688805a7c586435776e79c1b9b0b5c75bb9846c9579f38283d"
+        }
+      ],
+      "filesNotLocated": [],
+      "currentCommandAvailability": "not determined by this static command; see separately scoped runtime reports"
+    },
+    "photocraft": {
+      "recordedCandidateCount": 292,
+      "currentFilesMatchingSnapshot": 151,
+      "changedSinceSnapshot": [
+        {
+          "file": "crates/ui-egui/src/canvas/tabs.rs",
+          "recorded": "264d8df393a1ffcd28cb4104b938cbe4975e7fa076680c93aebd6fb566703884",
+          "current": "8f74a75074e11f915148b64390a454e4a7dab24c59461a3f62da8b20919d10dd"
+        },
+        {
+          "file": "crates/ui-egui/src/control/hosted.rs",
+          "recorded": "cc469d3b2b3165f054ac59a27f9ac819f8c0eed24c3660c5cec6764cba5e1f5e",
+          "current": "77a58fd4d65d1f6a316f82a894325b597c4311a4a0b7368c37e82731f649522d"
+        }
+      ],
+      "filesNotLocated": [],
+      "currentCommandAvailability": "not determined by this static command; see separately scoped runtime reports"
+    },
+    "deckcraft": {
+      "recordedCandidateCount": 339,
+      "currentFilesMatchingSnapshot": 54,
+      "changedSinceSnapshot": [
+        {
+          "file": "crates/engine/src/cmd/insert.rs",
+          "recorded": "f17eccfe6c643ee4f1a40ad183b8e5781952ea36b4d66513abf813a3afcd584c",
+          "current": "295385f9bcfebb19392f3b90f3141327cc2bee58f27d4524613cf15d9e10f05f"
+        },
+        {
+          "file": "crates/ui-egui/src/control.rs",
+          "recorded": "2a115b0a7677b17ab16b71d08753bbe50d863d537aa1263bf33c381b755aa8ca",
+          "current": "22ec3265c9f9680c1b0b8c94b61d91a861b5cd811d1e267397c76a19a9b75bca"
+        },
+        {
+          "file": "crates/ui-egui/src/media.rs",
+          "recorded": "ee8c86967b144ccf3bc07d5a1ed37134972650fda7aa7e9ea0b0be98c43a6959",
+          "current": "9e1c025a4196e67382b1585bdfee46c1ffaa9fae9be9a9c69dd2a4a146e56306"
+        },
+        {
+          "file": "crates/ui-egui/src/opening.rs",
+          "recorded": "a0abe58810087d7119b482d8fece220b50a3a1d779294721ad610917697cf3e0",
+          "current": "263d2ed2aa66f2edac9fa15e3183f4cf36412e9dfb722c3df2ffba9cd29da5f0"
+        },
+        {
+          "file": "crates/ui-egui/src/sorter.rs",
+          "recorded": "8d77ffc912ea1195e95eb0738fc4ee6937c61a22721ca351299c0e55da77a11b",
+          "current": "9a8d005536522511815fa5de4ca60fe40d306e476c06b46a5f0dbd7ed9a6356c"
+        },
+        {
+          "file": "crates/ui-egui/src/status.rs",
+          "recorded": "860e8b0f972b5f2a70bd27a5032162b9547d938e88bca20364ff773f4245e292",
+          "current": "a13977dc9e0244feaf2b2ad0c25203d9a173cf9d132e633de590d60fbed1df0e"
+        },
+        {
+          "file": "crates/ui-egui/src/app/commands.rs",
+          "recorded": "fb054a7155a070980d1f8cde47e2ac43e9816679d336d21d88c66414ef1d807e",
+          "current": "fb6cad6110115e7536939f872072212881174f6e000746043358ad0983dfaaab"
+        },
+        {
+          "file": "crates/ui-egui/src/app/files.rs",
+          "recorded": "1823efffe25dbe8e53e6a47e277c12c71f56091d8c4dcc9e29af244ee86ae7f5",
+          "current": "4e32f92a21ef116b47ed36ad6f5329130415d37daafda7dfff8f6b2b0957ccb2"
+        },
+        {
+          "file": "crates/ui-egui/src/app/frame.rs",
+          "recorded": "34b417df5908f32f69373e825e6e1d47e13bb3c8579eed2379f7928dc861b072",
+          "current": "b3160ad3b703a5bb53ccb92743c5593eede2d4e4c862441a5802d3ca6e2301a9"
+        },
+        {
+          "file": "crates/ui-egui/src/app/keys.rs",
+          "recorded": "bbf4df45c1a1a93d08543558b5807457fcd7c3c9b4caef43b1a64e01443d6a91",
+          "current": "ef5d1abe023390292d178ee1c0941e3ccac4c08eb9c92f18119efa03a7149050"
+        },
+        {
+          "file": "crates/ui-egui/src/backstage/files.rs",
+          "recorded": "52154527db740e0d802f4d5f9ff23c4bc305624860629b754de38c4ff4906b15",
+          "current": "e86962ee05fe921448b14a51c9e5041f13309969a22d5927777650e0d78069df"
+        },
+        {
+          "file": "crates/ui-egui/src/backstage/info.rs",
+          "recorded": "797154b4e528369b486310be9f25a2d27de335e849f420c5d6f0b5b005a02e94",
+          "current": "2a13f34ba24f3c41469280d72fd66394d0a8e31dc66d3e3960d7db9348f56cc8"
+        },
+        {
+          "file": "crates/ui-egui/src/canvas/rulers.rs",
+          "recorded": "acf7ab3e6456fec5bebefdeeb96880276119e84ae734e05d2ee3ec1b5e359b2d",
+          "current": "fada9183cfa895433d6277e2d266fdd709cd2cc613256df74610a6ad8b9d42b3"
+        },
+        {
+          "file": "crates/ui-egui/src/control/hosted.rs",
+          "recorded": "1ab502465db9a94c50b1498e4c599be0d19f3b07f31868b90626502ce3a95695",
+          "current": "7e0075fa1f93cd375ceecefc5198213eb103827d6095520d2cbf718ffa8bde2d"
+        },
+        {
+          "file": "crates/ui-egui/src/dialogs/body.rs",
+          "recorded": "2f9a994dc37ce6cd474dc1bd9a46096687c1f5a951af507ac63baea5522fe2b3",
+          "current": "48cb990fdd35caccfc2d6d981abd8639d0db5c5d33d2ffa93c2456a50b476a57"
+        },
+        {
+          "file": "crates/ui-egui/src/dialogs/find.rs",
+          "recorded": "1f960daa4ef5589abd3794b38ebfb2e23e02a9f0373abf55a0f781730674f869",
+          "current": "711ddae2384633fc3166c6f71a4f9f1a3db25ce900845b57b04ee8b86ca86009"
+        },
+        {
+          "file": "crates/ui-egui/src/dialogs/photo_album.rs",
+          "recorded": "1982e7bda8f03a22aaeabbcdfad7631b1415343cbe9f74c9ff65d1ba4491ff02",
+          "current": "0f2bf69f15f9a2fa37923651f1f283467291cf4515790d09c1a3aa20a47ccc00"
+        },
+        {
+          "file": "crates/ui-egui/src/dialogs/size_position.rs",
+          "recorded": "1ac00a2f459f8f98d23e3d357d60cae74bfbb0d0f6ab968e8cc37ec243e25c7e",
+          "current": "6a6f1ec1ae3e0271e88a6b241bfc0a79cc8ba34c0fc3bc4238fe8ba844c7c09a"
+        },
+        {
+          "file": "crates/ui-egui/src/dialogs/tabs.rs",
+          "recorded": "e1c98b500023a4834b8995814d8e1fcdefed742275e4d600aaa4861410b07d3e",
+          "current": "f746c583bfa1f7299223623510157962b025dae4a65a3603ddc21cc2a777798e"
+        },
+        {
+          "file": "crates/ui-egui/src/dialogs/theme_colors.rs",
+          "recorded": "06e1d422c02e51b4328fdc65a31a107c49496682c2da0a0e56b07e8450eb22c2",
+          "current": "7aeeae05b8f44bae3a5d47dcd5289bfd1be24e56ef8783544584d6c6f2d5e1bf"
+        },
+        {
+          "file": "crates/ui-egui/src/dialogs/theme_fonts.rs",
+          "recorded": "4999f852d3d93105c9d0ee10f47225f45e5f0bd23a3c1365eaf6f2da39b74ed8",
+          "current": "5e1ac716ff0a03ff3949c2eb1ce9bbef593342a52066df23476e875a9eff451d"
+        },
+        {
+          "file": "crates/ui-egui/src/panels/animation.rs",
+          "recorded": "ebd66f4f644c3d53eb1afdff018905ece213239ff7bdfa2d8fe675719934a87e",
+          "current": "20f8ef302df1986fb8ee2f039712859b0315ca8179f32509f93f768dcf88393c"
+        },
+        {
+          "file": "crates/ui-egui/src/panels/comments.rs",
+          "recorded": "f12833fb85845a01413064776bb99cd907a7d855ffd0c132d2ed311c6808b3b4",
+          "current": "b8bd43ec80063e0360c4cf749328fb4a867d1353aaf44512dcfa50471a332c65"
+        },
+        {
+          "file": "crates/ui-egui/src/panels/thesaurus.rs",
+          "recorded": "8345ed0a9eee7852ea1331463b4153e3ac69db6330ab71ab54cf1b0c3871ee6f",
+          "current": "c9735eb82efb121d245b476f0ab473a37c3e2433925e14d51e283ddff51819ba"
+        },
+        {
+          "file": "crates/ui-egui/src/panels/thumbs.rs",
+          "recorded": "d7511d208707d950ceb207b79a26eeb37bf3a8342465c48a407d2bbe7a121b03",
+          "current": "fc93de272be28cbfea790b33dc488630da42585720976c385442662c0f420034"
+        },
+        {
+          "file": "crates/ui-egui/src/ribbon/animations.rs",
+          "recorded": "e35ab2750717cdb16ea7ad5fda18d1f73f45fd3ebb3c7001641fe5dfcec014d4",
+          "current": "61a5f21d3e6d3a4e47387dca1ed03dfac291d3b28bff74f40f556b76daa1a138"
+        },
+        {
+          "file": "crates/ui-egui/src/ribbon/design.rs",
+          "recorded": "0a765203d86e5ae569876228bcca455ae7545c1bb1c8be017d8368188bb4b70d",
+          "current": "830095ed32eef70bd8d1b62375694d13bf2b53080cf397c889e4750c9f5855c2"
+        },
+        {
+          "file": "crates/ui-egui/src/ribbon/draw.rs",
+          "recorded": "d38a6c08a686d78b4ead736250cb7383fc270fb7c331a60af3d1623c7768bf14",
+          "current": "9f287320261417f87583989cd1fab963250b833a30e87654f76ddaab1affcdd2"
+        },
+        {
+          "file": "crates/ui-egui/src/ribbon/galleries.rs",
+          "recorded": "994191bd40bc8ef3da22101b88c09d0f0e99d0197b55926d02d2661d8f3b1ddc",
+          "current": "946bac266395a6b4936eddbc6821aa7e7338472d0b817dd920cfdbd427001a84"
+        },
+        {
+          "file": "crates/ui-egui/src/ribbon/home.rs",
+          "recorded": "0a68b7b56968d9abc5a296a134301472e35161a57da61365dbcf255e45fdf4bc",
+          "current": "f767f50ec8bb6255aca73e87b0c3a323c21cd7157bd977ef5de2c5c0caded61a"
+        },
+        {
+          "file": "crates/ui-egui/src/ribbon/insert.rs",
+          "recorded": "2f8e821ac6e1e87f13428d0781b80ba76e0c20ee540613b775e9ef6294fc9599",
+          "current": "0c9a4fd13be1732b672f865eb9caa9c59cf32bca703508d41f6e465bceeb1948"
+        },
+        {
+          "file": "crates/ui-egui/src/ribbon/masters.rs",
+          "recorded": "9fd0dee4123279d761f6661a0b232514250ad3bba02143cc52bcc5fa05c019b2",
+          "current": "ba4cf35b24a6c521f806ab28e6f017ae592e0858f7da9f646e081a8059920ce5"
+        },
+        {
+          "file": "crates/ui-egui/src/ribbon/picture_format.rs",
+          "recorded": "acf12c46aacb0a26efa4c42bfcb4fceb1cc6f3b9b852bb80190e39a26b2a2018",
+          "current": "668e38905bb60ce08812a0832ca3678122359e173b48123f7d90461283fde71d"
+        },
+        {
+          "file": "crates/ui-egui/src/ribbon/qat.rs",
+          "recorded": "600eb0fdd36a0ce31516b5a8b27166d6cbe20846454772becca53eac5451333a",
+          "current": "0c5f5e19b7d44225bda36b80a016c1b7901347d423d9296714b4912da419a9c5"
+        },
+        {
+          "file": "crates/ui-egui/src/ribbon/slide_show.rs",
+          "recorded": "df911aaab151de743646e0142f9f7cf03334bb53ed02f48ac60e367182ec64a7",
+          "current": "6381f7d06dc2c67635de3644ef7f6534c6d9a04511806148ff17a601aa2ee8f5"
+        },
+        {
+          "file": "crates/ui-egui/src/ribbon/table.rs",
+          "recorded": "27b35ea9555260e9de7eda7f7054b1eedfd730c97c15fcca950250c2c1a0b2cf",
+          "current": "464eaec429da14c5a29ac30945d11411a776aff480f5fb1f40a0089b4b598157"
+        },
+        {
+          "file": "crates/ui-egui/src/show/ui.rs",
+          "recorded": "b6ceec3a4a3fdda813ecd24847ad74aa37d47aec1e512df7d6a1e5c1c8704bc0",
+          "current": "37df03077997ce41f8e726b10fcdb56dfae577e0d0deaf668ef9a0780bc17a7a"
+        }
+      ],
+      "filesNotLocated": [],
+      "currentCommandAvailability": "not determined by this static command; see separately scoped runtime reports"
+    }
+  },
+  "limitations": [
+    "Static declarations and literal action enums are not proof of runtime registration or supported parameters.",
+    "Snapshot differences preserve original hashes; no old source inventory was rewritten to match changed UI code.",
+    "This command does not execute the UI or model. Current scoped functional cases are recorded in verification/release-validation-20261113.json."
+  ]
+}

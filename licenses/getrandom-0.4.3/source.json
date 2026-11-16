@@ -1,0 +1,16 @@
+{
+  "name": "getrandom",
+  "version": "0.4.3",
+  "repository": "https://github.com/rust-random/getrandom",
+  "license": "MIT OR Apache-2.0",
+  "vcs": {
+    "git": {
+      "sha1": "5e7cd5733536844a9856dc7259bd4696bbe5e3ae"
+    },
+    "path_in_vcs": ""
+  },
+  "licenseSha256": {
+    "LICENSE-MIT": "523a42c25d245dde9c015f882cec7f4555aad883382a6cf19b4b7d9b2cd5419b",
+    "LICENSE-APACHE": "aaff376532ea30a0cd5330b9502ad4a4c8bf769c539c87ffe78819d188a18ebf"
+  }
+}

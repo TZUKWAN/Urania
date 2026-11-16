@@ -1,0 +1,101 @@
+{
+  "status": "passed_scoped",
+  "at": "2026-11-08T08:49:37.561291+00:00",
+  "scope": "Actual owned headless Photo/Vector/Deck object context controls, selection, focus and held-pointer safety; no user desktop or model request.",
+  "checks": {
+    "ui45-photo-context.json": [
+      "opacity control changed the selected native layer",
+      "mask control added a real mask and disappeared for an already masked layer",
+      "hue adjustment control created a real native adjustment layer",
+      "selection controls clear the native selection or open its actual repaint panel"
+    ],
+    "ui45-photo-multilayer-context.json": [
+      "左对齐 changed actual layers and undo restored them",
+      "水平居中 changed actual layers and undo restored them",
+      "右对齐 changed actual layers and undo restored them",
+      "顶部对齐 changed actual layers and undo restored them",
+      "垂直居中 changed actual layers and undo restored them",
+      "底部对齐 changed actual layers and undo restored them",
+      "水平等距 changed actual layers and undo restored them",
+      "垂直等距 changed actual layers and undo restored them",
+      "group and ungroup changed native layer hierarchy"
+    ],
+    "ui45-vector-context.json": [
+      "左对齐 changed real geometry and undo restored it",
+      "水平居中 changed real geometry and undo restored it",
+      "右对齐 changed real geometry and undo restored it",
+      "顶部对齐 changed real geometry and undo restored it",
+      "垂直居中 changed real geometry and undo restored it",
+      "底部对齐 changed real geometry and undo restored it",
+      "水平等距 changed real geometry and undo restored it",
+      "垂直等距 changed real geometry and undo restored it",
+      "group and ungroup changed actual native hierarchy",
+      "fill and font controls updated actual selected native objects"
+    ],
+    "ui45-deck-context.json": [
+      "左对齐 changed actual slide geometry and undo restored it",
+      "水平居中 changed actual slide geometry and undo restored it",
+      "右对齐 changed actual slide geometry and undo restored it",
+      "顶部对齐 changed actual slide geometry and undo restored it",
+      "垂直居中 changed actual slide geometry and undo restored it",
+      "底部对齐 changed actual slide geometry and undo restored it",
+      "水平等距 changed actual slide geometry and undo restored it",
+      "垂直等距 changed actual slide geometry and undo restored it",
+      "group and ungroup changed actual slide hierarchy",
+      "fill and unified Chinese/Latin font controls updated actual slide objects"
+    ],
+    "ui45-context-text.json": [
+      "Photo text context changed the font in the actual native source",
+      "Deck standard font control changed Latin while retaining separately selected East Asian font"
+    ],
+    "ui45-context-quote.json": "actual Vector context Quote button attaches current selected object to owned DSH draft; no message sent",
+    "ui45-manual-pointer-guard.json": "real held Photo pointer blocks competing edit; no user desktop",
+    "ui45-exclusive-panels.json": [
+      "网页设计",
+      "图片生成与局部重绘",
+      "旧作品迁移"
+    ]
+  },
+  "fixes": [
+    "An exclusive panel now waits for the actual native editor to save/pause before hiding it, allowing the Photo context repaint button to open.",
+    "Canvas blur no longer extends the edit guard by itself; a real held pointer still rejects a competing edit."
+  ],
+  "limits": [
+    "An immediately changing text selection can be safely rejected and requires selection to settle; no stale target is applied.",
+    "The observed controls and sample objects were exercised, not every upstream professional menu or every object type."
+  ],
+  "rawEvidence": [
+    {
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-photo-context.json",
+      "sha256": "a7f6e6f95060bc304ea4ee89f7bcc23fe8637a6b591380cdbaa117767a2cf8c8"
+    },
+    {
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-photo-multilayer-context.json",
+      "sha256": "ceb664993fc5ef0a3cbaff45e73a786c72c7b83fc3731c6b7206da996b837742"
+    },
+    {
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-vector-context.json",
+      "sha256": "fef40e7442586d5465db1c1c58b6c44d732b3207e4e50bb142f977c3ed76f000"
+    },
+    {
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-deck-context.json",
+      "sha256": "0c2c8bec7027d7914b5f87c0275b2909b78c409c2a8c5c9c458d20aac39fbd09"
+    },
+    {
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-context-text.json",
+      "sha256": "9ac8c9b43d1484eff18ca4b9e5b6dea999efe231a5d894194acd31013cd106c5"
+    },
+    {
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-context-quote.json",
+      "sha256": "142e1530831f4b4aef15c5dfabbc1e40a749cbde0d031758b01713f8d4af47a1"
+    },
+    {
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-manual-pointer-guard.json",
+      "sha256": "a6035152fd5981eaab1be6642da6ad6dd754f029c1a258e98cb7982a740232cb"
+    },
+    {
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-exclusive-panels.json",
+      "sha256": "878b3f79e9a3535476fbaa725a897ee9c74b6dfd4dbdaeab9df89673f1cb90a2"
+    }
+  ]
+}

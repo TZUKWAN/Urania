@@ -1,0 +1,93 @@
+{
+  "status": "passed",
+  "scope": "actual registered DSH tool/native App, physical manual input and exact source checkpoints/reopen; no LLM",
+  "codeRoot": "D:\\METIS超级合并\\dsh-plugin\\designcraft",
+  "checks": [
+    {
+      "name": "actual registered tool edits and saves the selected native path, with a proven single-step undo record",
+      "pass": true,
+      "detail": {
+        "jobId": "06397776-2af5-404a-9368-a1b3211f22e4",
+        "id": 2,
+        "sourceId": "import-a566a418-1171-4598-81c6-8a199d6b582d",
+        "revision": "d0a732c326793038009afde6328b958d5cc4869e4e95790e171cdb47b60fb2dc",
+        "path": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\native-handoff-project\\ad7ed6fb-eced-4466-9889-a228140415ab\\design\\.designcraft\\v2\\sources\\import-a566a418-1171-4598-81c6-8a199d6b582d\\versions\\f43bf6d4227ae70adb85fd3ab8fef419a35bb25adfaf71e1109aa2e47b420344.vectorcraft"
+      }
+    },
+    {
+      "name": "older AI-step Undo returns a conflict after a physical manual move, preserving its exact source checkpoint",
+      "pass": true,
+      "detail": {
+        "refusal": {
+          "ok": false,
+          "status": 409,
+          "error": "该 AI 步骤之后已有修改或源已变化，未撤销，也不会覆盖后续手改；请读取当前对象后局部续改",
+          "readStateBeforeRetry": true
+        },
+        "manualRevision": "1ff38e0f5b62b89695ac54b86b2e7dfde1f30020ef6ef252522b8908480b47fb"
+      }
+    },
+    {
+      "name": "bare AI Undo and a batch containing Undo are both rejected without changing the manual source",
+      "pass": true,
+      "detail": {
+        "revision": "1ff38e0f5b62b89695ac54b86b2e7dfde1f30020ef6ef252522b8908480b47fb"
+      }
+    },
+    {
+      "name": "a real held native pointer blocks a competing registered-tool edit before mutation",
+      "pass": true,
+      "detail": {
+        "refusal": {
+          "ok": false,
+          "status": 422,
+          "error": "人工正在编辑，请读取最新状态后重试",
+          "readStateBeforeRetry": true
+        },
+        "revision": "1ff38e0f5b62b89695ac54b86b2e7dfde1f30020ef6ef252522b8908480b47fb"
+      }
+    },
+    {
+      "name": "a fresh registered-tool continuation changes only the intended paint and retains the physical manual geometry and other objects",
+      "pass": true,
+      "detail": {
+        "jobId": "0e5e09bb-d258-4ba1-b618-ff89c0fbe393",
+        "sourceId": "import-a566a418-1171-4598-81c6-8a199d6b582d",
+        "revision": "5808ae3c8eb50b2bed34842a437b9794dd5f2ff29c600ea95b16d504537cca0a",
+        "path": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\native-handoff-project\\ad7ed6fb-eced-4466-9889-a228140415ab\\design\\.designcraft\\v2\\sources\\import-a566a418-1171-4598-81c6-8a199d6b582d\\versions\\eca2be74d3e7e718cb30802b577e55bb92f90d23a279eebb681185b77521bbb9.vectorcraft"
+      }
+    },
+    {
+      "name": "targeted latest AI-step Undo executes native history and durably restores the exact manual baseline",
+      "pass": true,
+      "detail": {
+        "undoneJob": "0e5e09bb-d258-4ba1-b618-ff89c0fbe393",
+        "undoJob": "b293fb2c-d4b0-4e58-8178-37ed4f53a583",
+        "sourceId": "import-a566a418-1171-4598-81c6-8a199d6b582d",
+        "revision": "f2f246999f6fc875f07a3b645d44fe6216887243c9ed0a87fdf36e9f3890f6cb",
+        "path": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\native-handoff-project\\ad7ed6fb-eced-4466-9889-a228140415ab\\design\\.designcraft\\v2\\sources\\import-a566a418-1171-4598-81c6-8a199d6b582d\\versions\\4bf57cd297e992baab7bf8fbe0ea531dd31d4d8f07eecf228fb4529a3f6f6537.vectorcraft"
+      }
+    },
+    {
+      "name": "the same completed AI step cannot be undone twice into earlier manual history",
+      "pass": true,
+      "detail": {
+        "error": "此步骤没有可证明的单步撤销记录，未改动设计；请保留当前版本并明确需要续改的对象"
+      }
+    },
+    {
+      "name": "native reopen retains the exact manual baseline after tool continuation and guarded Undo",
+      "pass": true,
+      "detail": {
+        "ids": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      }
+    }
+  ],
+  "pageErrors": []
+}

@@ -1,0 +1,106 @@
+{
+  "status": "passed_scoped",
+  "at": "2026-11-08T11:16:28.962914+00:00",
+  "scope": "Actual Deck host11 Morph sample plus previously verified native notes, master, theme, media and show samples.",
+  "checks": [
+    "actual Morph transition preserved in native model, PPTX XML and reimport",
+    "rendered matching shape occupied intermediate positions between the two slides during the show"
+  ],
+  "start": [
+    105,
+    356,
+    227,
+    479,
+    15252
+  ],
+  "end": [
+    730,
+    356,
+    852,
+    479,
+    15252
+  ],
+  "samples": [
+    {
+      "seconds": 1.33,
+      "bounds": [
+        129,
+        356,
+        251,
+        479,
+        15252
+      ]
+    },
+    {
+      "seconds": 2.87,
+      "bounds": [
+        333,
+        356,
+        455,
+        479,
+        15252
+      ]
+    },
+    {
+      "seconds": 4.28,
+      "bounds": [
+        595,
+        356,
+        717,
+        479,
+        15252
+      ]
+    },
+    {
+      "seconds": 5.57,
+      "bounds": [
+        730,
+        356,
+        852,
+        479,
+        15252
+      ]
+    },
+    {
+      "seconds": 6.25,
+      "bounds": [
+        730,
+        356,
+        852,
+        479,
+        15252
+      ]
+    }
+  ],
+  "files": [
+    {
+      "file": "verification/ui45-deck-morph.pptx",
+      "sha256": "11b6ee5966a6910e88d9a6c3a069fe112a8010c134b1b641dcb714e7d8f245b7"
+    },
+    {
+      "file": "verification/ui45-deck-morph-start.png",
+      "sha256": "4d842af55e2ec1ad2043d6e5954f0835c07338504976936af87ebeed738991b3"
+    },
+    {
+      "file": "verification/ui45-deck-morph-1.png",
+      "sha256": "106383a01db0ef79ad000c922158b2e06722ef95eb2de25473a2e6ffd693f46a"
+    },
+    {
+      "file": "verification/ui45-deck-morph-2.png",
+      "sha256": "a9b2e8409c112207305cba06fc104b6d4e3f653937e646e2406492f500109fdb"
+    },
+    {
+      "file": "verification/ui45-deck-morph-end.png",
+      "sha256": "a75cf31d271036a0363781f1aa291cd757cd6a350e54b8af46b2c3f17cd31405"
+    }
+  ],
+  "rawEvidence": {
+    "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-deck-morph.json",
+    "sha256": "28a54ecb8403d52a4fb96eb29ab2c6a29b2d1af11e6e18734f495063eee716a6"
+  },
+  "limits": [
+    "Morph was verified for one named rectangular shape moving between two slides; arbitrary paths, text morphs and all transition variants were not tested.",
+    "The transition was set through the real registered native command and played with physical keyboard input in the audience view.",
+    "External PowerPoint playback, multiple displays, all media codecs and all upstream animation effects remain outside these samples."
+  ]
+}

@@ -1,0 +1,359 @@
+{
+  "schema": 1,
+  "at": "2026-11-13T09:28:57.855897+00:00",
+  "status": "passed_scoped_ai_native_resize_history_selection_popup",
+  "version": "1.3.0-dev.147",
+  "uiBuild": 161,
+  "userGoal": "可拖动对话/画布宽度、明确历史作品入口、选中即弹AI输入；内容设计能力通过同一个DSH AI调用",
+  "nativeHosts": {
+    "vectorcraft": "0.19.0+designcraft.host19",
+    "photocraft": "0.18.0+designcraft.host8",
+    "deckcraft": "0.13.1+designcraft.host18"
+  },
+  "nativeInputsChangedThisTask": false,
+  "nativeSourceArchive": "engine-source-snapshots-ui160.zip",
+  "functionalScope": {
+    "dragResizeAndPersist": true,
+    "keyboardResizeAndBounds": true,
+    "sameNativeAppDuringResize": true,
+    "explicitCurrentProjectHistorySearchAndOpen": true,
+    "singleAndMultiSelectionFloatingPrompt": true,
+    "photoLayersAndRealPixelCoveragePopup": true,
+    "deckCurrentPageSelectionPopup": true,
+    "submitCurrentDshConversation": true,
+    "mainDraftUntouchedOnSelection": true,
+    "existingMainDraftStagedForReview": true,
+    "publicSendingPhaseNoPrivateMaps": true,
+    "staleSendRefusedAndChineseDraftRecovered": true,
+    "manualAdvancedEntryRemoved": true,
+    "nativeCapabilitiesRetainedForAiTools": true
+  },
+  "node": {
+    "file": "tests/ai-canvas.test.mjs",
+    "tests": 13,
+    "passed": 13,
+    "failed": 0,
+    "report": "verification/ui161-ai-native-ux-20261113/node/ai-canvas.tap"
+  },
+  "actualUiCases": {
+    "resize-history-vector": {
+      "case": "test_ai_native_ux_ui.py",
+      "status": "passed",
+      "attempt": 4,
+      "seconds": 56.216,
+      "report": "verification/ui161-ai-native-ux-20261113/resize-history-vector/ai-native-ux-ui.json",
+      "reportSha256": "daefa492993707ccfad29b9c1d53e0604f7ebd46135d61c26737ce1010374978"
+    },
+    "current-desktop-photo-deck": {
+      "case": "test_ai_native_selection_engines_ui.py",
+      "status": "passed",
+      "attempt": 2,
+      "seconds": 59.76,
+      "report": "verification/ui161-ai-native-ux-20261113/current-desktop-photo-deck/ai-native-selection-engines.json",
+      "reportSha256": "3ee05d127a805cd839595901549b36495026e69bb6d9dcd9e6508721518a4bf9"
+    }
+  },
+  "actualModel": {
+    "status": "passed",
+    "model": {
+      "provider": "zai-coding-cn",
+      "model": "glm-5.3-flash"
+    },
+    "actualUserTurns": 1,
+    "chatHttpDispatches": 12,
+    "observedHttp200": 12,
+    "newImageRequests": 0,
+    "actualNativeVersion": "0.19.0+designcraft.host19",
+    "actualInstalledDshRuntime": "0.2.2-rc.1",
+    "realFloatingFormSubmitted": true,
+    "manualQuoteClick": false,
+    "promptContainsIds": false,
+    "selectedObjectsChanged": 2,
+    "allNonTargetNativeFieldsExact": true,
+    "sameAppDuringEdit": true,
+    "finalNativeReopenBytesExact": true,
+    "realRefusal": [
+      {
+        "status": 422,
+        "error": "编辑器操作缺少必需字段：epoch。先调用 state，再原样复制 view.sourceId、view.epoch 和完整 view.base 到顶层；不要为补参数重新打开作品。"
+      }
+    ],
+    "recovery": "Generic object.setProps calls returned no mutation. One inspect call omitted epoch and was refused; the model reread state, discovered paint.setFill, and changed the two real selected objects without weakening admission.",
+    "mainModelReadback": "model/popup-model-primary-review.json"
+  },
+  "fixes": [
+    {
+      "id": "UX1",
+      "files": [
+        "client/chat-split.js",
+        "client/ui.js",
+        "client/native-workspace.js"
+      ],
+      "result": "真实可拖动分栏，iframe上拖动不丢指针；键盘和localStorage持久化，保留同一App/源。"
+    },
+    {
+      "id": "UX2",
+      "files": [
+        "client/native-workspace.js"
+      ],
+      "result": "明确历史作品文字入口；打开时读取当前项目保存源，支持搜索和原生重开。"
+    },
+    {
+      "id": "UX3",
+      "files": [
+        "client/selection-ai.js",
+        "client/editor-frame.js",
+        "client/native-controller.js",
+        "client/native-ai-input.js"
+      ],
+      "result": "真实选择完成后浮出AI输入；Shift多选时浮层让出指针，输入不丢；明确Send使用当前DSH会话。"
+    },
+    {
+      "id": "UX4",
+      "files": [
+        "client/native-reference.js",
+        "client/ui.js",
+        "client/native-ai-input.js"
+      ],
+      "result": "修复UI160依赖测试SDK私有Map造成用户桌面错误阻断。改实际桌面公开phase与actions，不要求用户升级DSH；仅在发送时注入真实当前选择并保留全部身份守卫。"
+    }
+  ],
+  "preservedFailures": [
+    {
+      "case": "test_ai_native_ux_ui.py",
+      "attempt": 1,
+      "exitCode": 1,
+      "evidence": [
+        "verification/ui161-ai-native-ux-20261113/prior-failures/resize-history-vector-attempt1/case.log",
+        "verification/ui161-ai-native-ux-20261113/prior-failures/resize-history-vector-attempt1/executed-test.py",
+        "verification/ui161-ai-native-ux-20261113/prior-failures/resize-history-vector-attempt1/ai-native-ux-ui.json"
+      ]
+    },
+    {
+      "case": "test_ai_native_ux_ui.py",
+      "attempt": 2,
+      "exitCode": 1,
+      "evidence": [
+        "verification/ui161-ai-native-ux-20261113/prior-failures/resize-history-vector-attempt2/case.log",
+        "verification/ui161-ai-native-ux-20261113/prior-failures/resize-history-vector-attempt2/executed-test.py",
+        "verification/ui161-ai-native-ux-20261113/prior-failures/resize-history-vector-attempt2/ai-native-ux-ui.json"
+      ]
+    },
+    {
+      "case": "test_ai_native_ux_ui.py",
+      "attempt": 3,
+      "exitCode": 1,
+      "evidence": [
+        "verification/ui161-ai-native-ux-20261113/prior-failures/resize-history-vector-attempt3/case.log",
+        "verification/ui161-ai-native-ux-20261113/prior-failures/resize-history-vector-attempt3/executed-test.py",
+        "verification/ui161-ai-native-ux-20261113/prior-failures/resize-history-vector-attempt3/ai-native-ux-ui.json"
+      ]
+    },
+    {
+      "case": "test_ai_native_selection_engines_ui.py",
+      "attempt": 1,
+      "exitCode": 1,
+      "evidence": [
+        "verification/ui161-ai-native-ux-20261113/prior-failures/current-desktop-photo-deck-attempt1/case.log",
+        "verification/ui161-ai-native-ux-20261113/prior-failures/current-desktop-photo-deck-attempt1/executed-test.py"
+      ]
+    }
+  ],
+  "harnessCorrections": [
+    "初次错误用goto模拟reload，真正window lease正确拒绝新身份；改真正reload并恢复同一owned会话面板，未修改lease guard。",
+    "第三次实际暴露浮动框遮挡Shift下一次点击，产品修复为按住Shift让出指针并保留输入，随后复测通过。",
+    "Photo/Deck首次Python测试含!!拼写错误，在0.292秒内未启动UI；修bool并先py_compile后通过。"
+  ],
+  "mainModelReview": {
+    "singleAgent": true,
+    "model": "gpt-6.1-sol",
+    "reasoningEffort": "max",
+    "actualScreenshotsViewed": true,
+    "actualNativeArtifactsAndHttpReceiptsReadBack": true
+  },
+  "postModelRefinement": {
+    "file": "client/native-ai-input.js",
+    "change": "Recheck human draft after asynchronous checkpoint/reference preparation, before appending a floating request. Text entered during preparation is staged for review.",
+    "verification": "The existing focused staging test now covers this real asynchronous race; all 13 Node cases passed again. The completed actual GLM empty-composer sample is retained without resubmitting it."
+  },
+  "scopeBoundaries": [
+    "历史作品显示当前DSH项目已保存源。其他项目需在DSH切换项目；没有伪造跨项目全局图库。",
+    "扁平图片支持真实图层或像素选区，像素不会自动成为独立语义矢量对象。",
+    "已有主聊天草稿时浮动要求先并入主草稿等待核对；没有主草稿时直接经同一DSH AI发送。",
+    "真实模型验收是一轮指定填充样本，不保证任意提示词、所有模型或全部原生命令。",
+    "使用只读提取的当前已安装DSH运行包做隔离headless验收；不冒充真实Electron IPC或物理输入法验收。",
+    "原48本地UI、4生图、UI158跨引擎和UI159移除证据保持原构建范围；本轮不重复三原生编译。",
+    "用户DSH未重启；新模块需保存工作后重新打开DSH或重载插件后台才加载，旧窗口不保证已更新。",
+    "已放弃平台和四项采集不恢复，旧字体、来源和局部重绘视觉边界仍按已有审计保留。"
+  ],
+  "userDesktopControlled": false,
+  "userDshRestarted": false,
+  "allCoreFunctionsAccepted": false,
+  "rawEvidence": [
+    {
+      "file": "verification/ui161-ai-native-ux-20261113/current-desktop-photo-deck/ai-native-selection-engines.json",
+      "bytes": 1208,
+      "sha256": "3ee05d127a805cd839595901549b36495026e69bb6d9dcd9e6508721518a4bf9"
+    },
+    {
+      "file": "verification/ui161-ai-native-ux-20261113/current-desktop-photo-deck/case.log",
+      "bytes": 451,
+      "sha256": "bc7d16c90dbce4d1f00f1f51f190492fe93ad4ef6628fa6331967ed6e252272b"
+    },
+    {
+      "file": "verification/ui161-ai-native-ux-20261113/current-desktop-photo-deck/deck-multi-ai-popup.png",
+      "bytes": 113877,
+      "sha256": "85009a648d579d00e383b135c5b1a54dcd96b1cad0c877653aa06a091fd21617"
+    },
+    {
+      "file": "verification/ui161-ai-native-ux-20261113/current-desktop-photo-deck/executed-test.py",
+      "bytes": 7894,
+      "sha256": "e26169834b47b0e909405af7ea542b410207518638428c007beb3a75299512b6"
+    },
+    {
+      "file": "verification/ui161-ai-native-ux-20261113/current-desktop-photo-deck/photo-region-ai-popup.png",
+      "bytes": 100910,
+      "sha256": "215f05190d63b6e93609db4660af3d555d23549be45dccb9c861d33d26de7bbb"
+    },
+    {
+      "file": "verification/ui161-ai-native-ux-20261113/model/executed-test.py",
+      "bytes": 8195,
+      "sha256": "e5ab8e323e49d5d7fd4da074e6eb7fd2f4994755c869a3cea2943946114067c6"
+    },
+    {
+      "file": "verification/ui161-ai-native-ux-20261113/model/independent-review.py",
+      "bytes": 4952,
+      "sha256": "ac8f52a81d26ab93f448c6856b05b65770a2714c39e2afb9935eb34f32f64408"
+    },
+    {
+      "file": "verification/ui161-ai-native-ux-20261113/model/popup-model-actual-result.png",
+      "bytes": 144415,
+      "sha256": "31068d6a090a1795779bcd482e363ebbc6832a3f319cb145c18e5a0a4827aac3"
+    },
+    {
+      "file": "verification/ui161-ai-native-ux-20261113/model/popup-model-baseline.vectorcraft",
+      "bytes": 28026,
+      "sha256": "3d86a428a2248529136c57742595247c80a3159d17843f37a027e659d058583b"
+    },
+    {
+      "file": "verification/ui161-ai-native-ux-20261113/model/popup-model-primary-review.json",
+      "bytes": 2083,
+      "sha256": "352b7dc17483e98e8961967e494a09c462485e573dc67acbbd0438b230b8b77e"
+    },
+    {
+      "file": "verification/ui161-ai-native-ux-20261113/model/popup-model-reopened.vectorcraft",
+      "bytes": 28026,
+      "sha256": "5b93a75d9cc40e080b96df6534ad13018120dec723fde493b0c8b5f73b14ebe9"
+    },
+    {
+      "file": "verification/ui161-ai-native-ux-20261113/model/popup-model-reservation.json",
+      "bytes": 479,
+      "sha256": "dfdd1de3aa985082ea47a3063d66d48908360945358322ce19424f6a6f92c96c"
+    },
+    {
+      "file": "verification/ui161-ai-native-ux-20261113/model/popup-model-result.vectorcraft",
+      "bytes": 28026,
+      "sha256": "5b93a75d9cc40e080b96df6534ad13018120dec723fde493b0c8b5f73b14ebe9"
+    },
+    {
+      "file": "verification/ui161-ai-native-ux-20261113/model/popup-real-model.json",
+      "bytes": 87730,
+      "sha256": "6f5ddb4e901a7a2139e334071a20b7d70eb93cc1ba8b61430dc3f90796f51a04"
+    },
+    {
+      "file": "verification/ui161-ai-native-ux-20261113/node/ai-canvas.tap",
+      "bytes": 2627,
+      "sha256": "696281df2ba7afa3e3f6a58f077ed27d279d8605300705475a053c40d0e7d8ac"
+    },
+    {
+      "file": "verification/ui161-ai-native-ux-20261113/node/ai-canvas.test.mjs",
+      "bytes": 7018,
+      "sha256": "740b493501688d8eac6612a2067cc6347bbd62be352939897140c3afa1c22673"
+    },
+    {
+      "file": "verification/ui161-ai-native-ux-20261113/prior-failures/current-desktop-photo-deck-attempt1/case.log",
+      "bytes": 788,
+      "sha256": "e18bff6dd2b09bcac55a5ad6d6a950b8fe3984ccc6c5f58955b87a3ab5d06565"
+    },
+    {
+      "file": "verification/ui161-ai-native-ux-20261113/prior-failures/current-desktop-photo-deck-attempt1/executed-test.py",
+      "bytes": 7890,
+      "sha256": "34e06156cbf0f061d6750362c41394ae59eee927bb5f3d001b077ed0d9d14491"
+    },
+    {
+      "file": "verification/ui161-ai-native-ux-20261113/prior-failures/resize-history-vector-attempt1/ai-native-ux-ui.json",
+      "bytes": 887,
+      "sha256": "a916a9e1f8bd6e95578992e9b7ebfc78b515ffaf1b623847c1514eff7a426d13"
+    },
+    {
+      "file": "verification/ui161-ai-native-ux-20261113/prior-failures/resize-history-vector-attempt1/case.log",
+      "bytes": 2480,
+      "sha256": "0e41bb045c424fae5949a71e891cc49ce778de3a28357b743c96b0e389417cfe"
+    },
+    {
+      "file": "verification/ui161-ai-native-ux-20261113/prior-failures/resize-history-vector-attempt1/executed-test.py",
+      "bytes": 7392,
+      "sha256": "2b4794cf7ca05a8fd67d3d05d8d5d451b6e7f7afa60ef45f0831f617293b9b42"
+    },
+    {
+      "file": "verification/ui161-ai-native-ux-20261113/prior-failures/resize-history-vector-attempt2/ai-native-ux-ui.json",
+      "bytes": 867,
+      "sha256": "3505344b46f51f1431bd18a3e92e94d7c61a5c984bd8bb33cb4390346d7dcc5d"
+    },
+    {
+      "file": "verification/ui161-ai-native-ux-20261113/prior-failures/resize-history-vector-attempt2/case.log",
+      "bytes": 2011,
+      "sha256": "ff2ffad829c2dabb8507f9d87423c79d1249450cdc83ba78e495d3d3befb4fc6"
+    },
+    {
+      "file": "verification/ui161-ai-native-ux-20261113/prior-failures/resize-history-vector-attempt2/executed-test.py",
+      "bytes": 7646,
+      "sha256": "c71a184180ef560448b6c90b9a1a6e064e96e93d87c7802e2000513b8f794e3b"
+    },
+    {
+      "file": "verification/ui161-ai-native-ux-20261113/prior-failures/resize-history-vector-attempt3/ai-native-ux-ui.json",
+      "bytes": 1271,
+      "sha256": "12bf1c0712b6aac6d9c176dec7b6e85dd8afceeba58646eb5e8ea7cd7c98e6e5"
+    },
+    {
+      "file": "verification/ui161-ai-native-ux-20261113/prior-failures/resize-history-vector-attempt3/case.log",
+      "bytes": 1633,
+      "sha256": "d281c7783e32c44ef2a1e716288ff6aa04460ef81eeb3c002c6e7ae5fed79c22"
+    },
+    {
+      "file": "verification/ui161-ai-native-ux-20261113/prior-failures/resize-history-vector-attempt3/executed-test.py",
+      "bytes": 8006,
+      "sha256": "da31fc2dcb8360dbaec129845ea99165a1a17d2af715edad1fabb34fdb05042a"
+    },
+    {
+      "file": "verification/ui161-ai-native-ux-20261113/resize-history-vector/ai-native-ux-ui.json",
+      "bytes": 1321,
+      "sha256": "daefa492993707ccfad29b9c1d53e0604f7ebd46135d61c26737ce1010374978"
+    },
+    {
+      "file": "verification/ui161-ai-native-ux-20261113/resize-history-vector/case.log",
+      "bytes": 607,
+      "sha256": "740f1eddaa5fee5e13562770c0eba7b0d05a25ff6edc58e6254e9fda7ace2bbe"
+    },
+    {
+      "file": "verification/ui161-ai-native-ux-20261113/resize-history-vector/executed-test.py",
+      "bytes": 8006,
+      "sha256": "da31fc2dcb8360dbaec129845ea99165a1a17d2af715edad1fabb34fdb05042a"
+    },
+    {
+      "file": "verification/ui161-ai-native-ux-20261113/resize-history-vector/resize-history-multi-popup.png",
+      "bytes": 99513,
+      "sha256": "2b6046a1685ad5c1a480bbccf2c726bc52b8a1b85f49350de527fd0f4d403d1f"
+    },
+    {
+      "file": "verification/ui161-ai-native-ux-20261113/review/PLAN.md",
+      "bytes": 2132,
+      "sha256": "d093eef83b422a0b88cdf0a41595a3d88d7cceaaeb2ff1cf999888b850abd3ef"
+    },
+    {
+      "file": "verification/ui161-ai-native-ux-20261113/review/desktop-input-contract.json",
+      "bytes": 674,
+      "sha256": "318cad7a7fe56acd643f3e2a5195a78861c5e45495660bd7138461a1c578dad1"
+    }
+  ]
+}

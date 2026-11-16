@@ -1,0 +1,208 @@
+{
+  "status": "passed",
+  "scope": "matching Electron 44.7.0, DSH custom protocol and installed authenticated forwarding, production plugin; no LLM",
+  "codeRoot": "D:\\METIS超级合并\\dsh-plugin\\designcraft",
+  "checks": [
+    {
+      "name": "real dsh-app origin boots authenticated DSH UI in a never-shown matching sandboxed Electron window",
+      "pass": true,
+      "detail": {
+        "origin": "dsh-app://app",
+        "node": "undefined",
+        "require": "undefined",
+        "secure": true
+      }
+    },
+    {
+      "name": "cross-origin real WASM opens editable SVG and streams its native checkpoint through DSH desktop forwarding",
+      "pass": true,
+      "detail": {
+        "sourceId": "work-03ae9e67-2f6f-4f37-bd56-0f3d0d68d60d",
+        "revision": "9af95a7ae1a796dda55435d7048dddd7e02b2b330145cfe931f19f573dae7d96",
+        "runtime": {
+          "origin": "http://designcraft.localhost:58793",
+          "node": "undefined",
+          "secure": true,
+          "visibility": "visible"
+        }
+      }
+    }
+  ],
+  "owned": {
+    "workspaceId": "cc1cffd1-c2f1-4e57-a9e7-57d072c2499c",
+    "sessionId": "PUBLIC-REDACTED"
+  },
+  "nativeDocument": {
+    "artboards": [
+      {
+        "height": 480,
+        "name": "Artboard 1",
+        "width": 640,
+        "x": 0,
+        "y": 0
+      }
+    ],
+    "colorMode": "Rgb",
+    "currentLayer": 1,
+    "dirty": false,
+    "fileInfoTitle": "work-03ae9e67-2f6f-4f37-bd56-0f3d0d68d60d.svg",
+    "history": [],
+    "isolation": null,
+    "key": null,
+    "keyGuide": null,
+    "layerRows": [],
+    "layers": [
+      {
+        "bounds": {
+          "height": 239.216,
+          "width": 160,
+          "x": 80,
+          "y": 80
+        },
+        "children": [
+          {
+            "bounds": {
+              "height": 46.33600000000001,
+              "width": 128,
+              "x": 80,
+              "y": 272.88
+            },
+            "fill": "#000000",
+            "id": 3,
+            "kind": "Type",
+            "locked": false,
+            "name": "编辑验证",
+            "stroke": "None",
+            "strokeOptions": {
+              "align": "center",
+              "alignDashes": false,
+              "arrowAlign": "extend",
+              "cap": "butt",
+              "dash": null,
+              "dashOffset": 0,
+              "endArrow": null,
+              "gradientMode": "within",
+              "join": "miter",
+              "miterLimit": 10,
+              "profile": "uniform",
+              "startArrow": null,
+              "widthPoints": null
+            },
+            "strokeWidth": 0,
+            "text": "编辑验证",
+            "visible": true
+          },
+          {
+            "anchors": 4,
+            "bounds": {
+              "height": 160,
+              "width": 160,
+              "x": 80,
+              "y": 80
+            },
+            "closed": true,
+            "fill": "#287d6c",
+            "id": 2,
+            "kind": "Path",
+            "locked": false,
+            "name": "test-mark",
+            "stroke": "None",
+            "strokeWidth": 0,
+            "visible": true
+          }
+        ],
+        "clip": false,
+        "color": "#4f80ff",
+        "dimImages": null,
+        "id": 1,
+        "kind": "Layer",
+        "locked": false,
+        "name": "Layer 1",
+        "preview": true,
+        "printable": true,
+        "template": false,
+        "visible": true
+      }
+    ],
+    "objects": 3,
+    "paint": {
+      "appearanceItem": null,
+      "fill": "#ffffff",
+      "fillActive": true,
+      "stroke": "#000000",
+      "strokeWidth": 1
+    },
+    "pasteRemembersLayers": false,
+    "path": null,
+    "redo": [],
+    "revision": 1,
+    "selection": [],
+    "selectionBounds": null,
+    "selectionRotation": 0,
+    "target": null,
+    "title": "work-03ae9e67-2f6f-4f37-bd56-0f3d0d68d60d.svg",
+    "tool": "selection",
+    "uid": 1,
+    "units": "Pixels"
+  },
+  "host": {
+    "pid": 71660,
+    "versions": {
+      "node": "24.21.0",
+      "acorn": "8.18.0",
+      "ada": "4.0.0",
+      "amaro": "1.1.11",
+      "ares": "1.34.8",
+      "brotli": "1.2.0",
+      "cldr": "48.0",
+      "icu": "78.2",
+      "llhttp": "9.4.3",
+      "merve": "1.2.2",
+      "modules": "149",
+      "napi": "10",
+      "nbytes": "0.1.4",
+      "ncrypto": "0.0.1",
+      "nghttp2": "1.70.0",
+      "nghttp3": "",
+      "ngtcp2": "",
+      "openssl": "0.0.0",
+      "simdjson": "4.6.7",
+      "simdutf": "7.7.0",
+      "sqlite": "3.53.4",
+      "tz": "2026d",
+      "undici": "7.29.1",
+      "unicode": "17.0",
+      "uv": "1.52.1",
+      "uvwasi": "0.0.23",
+      "v8": "15.2.124.28-electron.0",
+      "zlib": "1.3.2.1-motley",
+      "zstd": "1.6.0",
+      "electron": "44.7.0",
+      "chrome": "152.0.7977.130"
+    },
+    "shown": false,
+    "focused": false,
+    "events": [],
+    "webPreferences": {
+      "allowRunningInsecureContent": false,
+      "contextIsolation": true,
+      "disableDialogs": false,
+      "disablePopups": false,
+      "enableBlinkFeatures": "",
+      "experimentalFeatures": false,
+      "javascript": true,
+      "nodeIntegration": false,
+      "nodeIntegrationInSubFrames": false,
+      "nodeIntegrationInWorker": false,
+      "safeDialogs": false,
+      "safeDialogsMessage": "",
+      "sandbox": true,
+      "webSecurity": true,
+      "webviewTag": true
+    },
+    "preloadUsed": false,
+    "scope": "matching Electron/custom DSH protocol/auth forwarding; full packaged DSH IPC not included"
+  },
+  "hostDirectory": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\electron-host\\runs\\464635e9-86cf-4f51-91db-72c6b3aa2742",
+  "pageErrors": []
+}

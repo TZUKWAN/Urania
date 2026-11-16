@@ -1,0 +1,162 @@
+{
+  "status": "passed",
+  "scope": "actual native Vector/Deck/Photo; 7 explicitly linked originals+independent8th; one local white correction; source PNG320x240->400x240 keeps native frames; real response-loss/physical hand-move resume; no model",
+  "root": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\mixed-seven-project\\a17967ee-7624-4eb9-8c9b-0c8baf5f1515",
+  "codeRoot": "D:\\METIS超级合并\\dsh-plugin\\designcraft",
+  "checks": [
+    {
+      "name": "UI explicitly links seven genuine PNG uses across Vector and Deck, leaving eighth independent",
+      "pass": true,
+      "detail": {
+        "uses": 7,
+        "independent": "use-29d193be-54b9-4808-b0c5-d40be5317613",
+        "engines": [
+          "vectorcraft",
+          "deckcraft"
+        ],
+        "sourceIds": [
+          "work-9a53c3fe-5c53-47b3-85ce-e1359034346e",
+          "work-704cdd55-6f9c-4bc1-b8c1-384248426018"
+        ]
+      }
+    },
+    {
+      "name": "real first-source response loss resumes only unfinished native source; physical hand move and return slide/object context survive",
+      "pass": true,
+      "detail": {
+        "sameCompletedVectorHead": "de50f38e707704b1403cfac0a325c0f6afbe0f1941938f25f4561ebce8ae18ee",
+        "manualX": 366.0,
+        "returnPage": {
+          "id": 265,
+          "index": 1,
+          "kind": "slide"
+        },
+        "returnObjects": [
+          266
+        ]
+      }
+    },
+    {
+      "name": "changed PNG aspect updates exactly seven original IDs; all physical frames/crops/rotation/appearance and eighth use remain exact",
+      "pass": true,
+      "detail": {
+        "sourcePixelSize": [
+          400,
+          240
+        ],
+        "originalPixelSize": [
+          320,
+          240
+        ],
+        "updatedUses": 7,
+        "independentOldPngSha256": "2dba090e21553dfb9b64aff16c441d0a9fbdba288695bca548686b0ea587c143",
+        "allOtherNativeContentExact": true,
+        "originalLayeredSourceUnchanged": true,
+        "newPngSha256": "7bb6ad583c4e1cb4349995a271974a9e1820e049df3a50823bcce05c6cf74899"
+      }
+    },
+    {
+      "name": "local white correction remains visibly white on a dark slide without modifying original shared pixels",
+      "pass": true,
+      "detail": {
+        "nativeBrightness": 1,
+        "renderedSample": [
+          255,
+          255,
+          255,
+          255
+        ],
+        "samplePoint": [
+          186,
+          215
+        ],
+        "sourceAlpha": 255
+      }
+    },
+    {
+      "name": "both real native sources freshly reopen exact, and actual editable PPTX is intact",
+      "pass": true,
+      "detail": {
+        "sourceIds": [
+          "work-9a53c3fe-5c53-47b3-85ce-e1359034346e",
+          "work-704cdd55-6f9c-4bc1-b8c1-384248426018"
+        ],
+        "pptxBytes": 27277,
+        "exactReopen": true
+      }
+    }
+  ],
+  "owned": {
+    "workspaceId": "a6f1aeaa-34b6-42e9-b6d5-3f1a3a18b0de",
+    "sessionId": "PUBLIC-REDACTED"
+  },
+  "update": {
+    "id": "update-dbe444e6-ccab-45d6-9894-dd865db47a26",
+    "editId": "edit-3560ebfc-bd68-4185-9da5-e62bd9629229",
+    "linkId": "link-8784f54e-975e-4d7b-96b1-08f00ac10b51",
+    "assetId": "asset-dbe444e6-ccab-45d6-9894-dd865db47a26",
+    "previousAssetId": "asset-15d70630-0304-4b43-9afa-34dc41174e38",
+    "sources": {
+      "work-9a53c3fe-5c53-47b3-85ce-e1359034346e": {
+        "engine": "vectorcraft",
+        "baseRevision": "dc552f17fd916a1a9bdb2e0b1fd30e3df00e506026d638129cb7e75ece7d631d",
+        "instanceIds": [
+          "use-fab3d25d-9b09-44d0-a81d-4e5501bfdfe9",
+          "use-44262fd4-668b-447c-868d-9e5c998a685d",
+          "use-c323e8ed-0215-4853-b7ee-0af18ac38cea"
+        ]
+      },
+      "work-704cdd55-6f9c-4bc1-b8c1-384248426018": {
+        "engine": "deckcraft",
+        "baseRevision": "a2d4f5113de1f82794e11660d6fbb04a76f705ed42c73fdd6ced53eaf12fb906",
+        "instanceIds": [
+          "use-b226c7af-7bf9-4389-a7b6-b30a1a50a416",
+          "use-82fe0538-0b4a-4121-a793-d4edfaa9ac7b",
+          "use-996e07d9-6cea-4900-a574-92c14cbe872b",
+          "use-a064554b-6095-4f02-8f9e-f77dad0ebb8b"
+        ],
+        "pages": {
+          "use-b226c7af-7bf9-4389-a7b6-b30a1a50a416": {
+            "kind": "slide",
+            "id": 257,
+            "index": 0
+          },
+          "use-82fe0538-0b4a-4121-a793-d4edfaa9ac7b": {
+            "kind": "slide",
+            "id": 257,
+            "index": 0
+          },
+          "use-996e07d9-6cea-4900-a574-92c14cbe872b": {
+            "kind": "slide",
+            "id": 257,
+            "index": 0
+          },
+          "use-a064554b-6095-4f02-8f9e-f77dad0ebb8b": {
+            "kind": "slide",
+            "id": 265,
+            "index": 1
+          }
+        }
+      }
+    },
+    "committed": {
+      "work-9a53c3fe-5c53-47b3-85ce-e1359034346e": "de50f38e707704b1403cfac0a325c0f6afbe0f1941938f25f4561ebce8ae18ee",
+      "work-704cdd55-6f9c-4bc1-b8c1-384248426018": "b1801b40b8518d3430e82163aadea2de6891dc6d9edf64dadadb17565e13f807"
+    },
+    "status": "succeeded",
+    "at": "2026-11-04T22:26:19.813Z"
+  },
+  "newAsset": {
+    "id": "asset-dbe444e6-ccab-45d6-9894-dd865db47a26",
+    "title": "七处共用的原始标记 · 独立编辑",
+    "sourceId": "fork-3560ebfc-bd68-4185-9da5-e62bd9629229",
+    "sourceRevision": "2ad22438430e86b04cf5fbbc88720f13756b5b16ae0817eb62a2dab22579b836",
+    "sourceHash": "85ae56ef59516691980c4077f6ed4c36845b76702d5c8fa0ca9b52f88f026a97",
+    "engine": "photocraft",
+    "format": "png",
+    "sha256": "7bb6ad583c4e1cb4349995a271974a9e1820e049df3a50823bcce05c6cf74899",
+    "bytes": 3997,
+    "at": "2026-11-04T22:26:18.967Z"
+  },
+  "pageErrors": []
+}

@@ -1,0 +1,455 @@
+{
+  "schema": 1,
+  "kind": "frozen-candidate-source-and-native-input-audit",
+  "at": "2026-11-13T10:01:31.108353+00:00",
+  "version": "1.3.0-dev.148",
+  "uiBuild": 162,
+  "status": "passed_scoped_source_integrity_and_syntax_checks",
+  "syntaxFilesChecked": 26,
+  "commands": [
+    {
+      "command": "node --check D:\\METIS超级合并\\dsh-plugin\\designcraft\\host\\color-contrast.js",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check D:\\METIS超级合并\\dsh-plugin\\designcraft\\host\\deck-local-inputs.js",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check D:\\METIS超级合并\\dsh-plugin\\designcraft\\host\\design-assistant-session.js",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check D:\\METIS超级合并\\dsh-plugin\\designcraft\\host\\editor-fence-tickets.js",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check D:\\METIS超级合并\\dsh-plugin\\designcraft\\host\\editor-tools.js",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check D:\\METIS超级合并\\dsh-plugin\\designcraft\\host\\index.js",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check D:\\METIS超级合并\\dsh-plugin\\designcraft\\host\\stock-images.js",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check D:\\METIS超级合并\\dsh-plugin\\designcraft\\client\\ai-canvas.js",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check D:\\METIS超级合并\\dsh-plugin\\designcraft\\client\\chat-split.js",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check D:\\METIS超级合并\\dsh-plugin\\designcraft\\client\\client.js",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check D:\\METIS超级合并\\dsh-plugin\\designcraft\\client\\deck-local-tools.js",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check D:\\METIS超级合并\\dsh-plugin\\designcraft\\client\\design-session.js",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check D:\\METIS超级合并\\dsh-plugin\\designcraft\\client\\dsh-context.js",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check D:\\METIS超级合并\\dsh-plugin\\designcraft\\client\\editor-frame.js",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check D:\\METIS超级合并\\dsh-plugin\\designcraft\\client\\editor-surface.js",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check D:\\METIS超级合并\\dsh-plugin\\designcraft\\client\\html-workspace.js",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check D:\\METIS超级合并\\dsh-plugin\\designcraft\\client\\local-workflow-panel.js",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check D:\\METIS超级合并\\dsh-plugin\\designcraft\\client\\native-ai-input.js",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check D:\\METIS超级合并\\dsh-plugin\\designcraft\\client\\native-context-tools.js",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check D:\\METIS超级合并\\dsh-plugin\\designcraft\\client\\native-contract.js",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check D:\\METIS超级合并\\dsh-plugin\\designcraft\\client\\native-controller.js",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check D:\\METIS超级合并\\dsh-plugin\\designcraft\\client\\native-reference.js",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check D:\\METIS超级合并\\dsh-plugin\\designcraft\\client\\native-workspace.js",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check D:\\METIS超级合并\\dsh-plugin\\designcraft\\client\\selection-ai.js",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check D:\\METIS超级合并\\dsh-plugin\\designcraft\\client\\studio-image-workspace.js",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check D:\\METIS超级合并\\dsh-plugin\\designcraft\\client\\ui.js",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "command": "python C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\audit_client_module_routes.py",
+      "exitCode": 0,
+      "output": "静态核对 47 个声明文件、93 个可识别相对 JS 引用：均在路由表；未运行服务或界面。\n"
+    },
+    {
+      "command": "python C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\static_external_imports.py",
+      "exitCode": 0,
+      "output": "Checked 662 literal relative references in 136 source files; workers exist.\n"
+    }
+  ],
+  "sourceEvidence": [
+    {
+      "file": "README.md",
+      "bytes": 2612,
+      "sha256": "02635b69b079fff3aa9aba8aebf883a9ecd15995d158be4946182e1a2c5c441d"
+    },
+    {
+      "file": "client/ai-canvas.js",
+      "bytes": 2592,
+      "sha256": "7d0ca26720aa822f647c0a4396fc9277cff8c9c9532dd1960c22bf473898365e"
+    },
+    {
+      "file": "client/chat-split.js",
+      "bytes": 2984,
+      "sha256": "8a1a275d01b73fe07ab006940bf7a561423662e4aa1cfa3319ea3748cfe642a6"
+    },
+    {
+      "file": "client/client.js",
+      "bytes": 11089,
+      "sha256": "5f10ecf651430ed902b178175e36d0a19c52f2522dc835938240b9512ade5d32"
+    },
+    {
+      "file": "client/deck-local-tools.js",
+      "bytes": 4424,
+      "sha256": "2eb6e925e81a290e79ad3631c4dbbca713d8a623eef2a77279a2e8c0e199a792"
+    },
+    {
+      "file": "client/design-session.js",
+      "bytes": 6294,
+      "sha256": "2307791d19f4181f428b17a58519a3d610a32034437ad3f74a67a5a7ac60e842"
+    },
+    {
+      "file": "client/dsh-context.js",
+      "bytes": 16949,
+      "sha256": "1bda53bf8c2211b56cd08233bdb8ee8368af29b0f37f340bd45102c8f68b6d4b"
+    },
+    {
+      "file": "client/editor-frame.js",
+      "bytes": 19070,
+      "sha256": "7c5c402472c05221968c6520623e02a1b9d4925eb360152b6d807a76bd67d0b0"
+    },
+    {
+      "file": "client/editor-surface.js",
+      "bytes": 5811,
+      "sha256": "6e41945a48f143d50e1054fcbafe2369ae1c84a1eac7a118a6555ea0b6926b6e"
+    },
+    {
+      "file": "client/html-workspace.js",
+      "bytes": 94885,
+      "sha256": "67d9188703eb661561958a0ca4b18519132824007574476b8f980a5018e03c45"
+    },
+    {
+      "file": "client/local-workflow-panel.js",
+      "bytes": 8687,
+      "sha256": "f2ea1aa642e2bd3524f7aebe9af18c8074c95476053649075f40d9c24bd0fd35"
+    },
+    {
+      "file": "client/native-ai-input.js",
+      "bytes": 2514,
+      "sha256": "8c85f3bda1b55955ad49f87ba9bd504af09e77fce32e9691f7544cd0565f0923"
+    },
+    {
+      "file": "client/native-context-tools.js",
+      "bytes": 3730,
+      "sha256": "53cfc5bfe574607559b0d6ad73122d931c8844ea72c9a16b2a25f5c38e20ccdf"
+    },
+    {
+      "file": "client/native-contract.js",
+      "bytes": 7813,
+      "sha256": "79cdc858ef74f5108e5a799586441cfa573619fce4443ecd6be03a04929688eb"
+    },
+    {
+      "file": "client/native-controller.js",
+      "bytes": 137376,
+      "sha256": "f16728ac70897952547141de5c0eb5015020f35692402be326c5a721ad1db818"
+    },
+    {
+      "file": "client/native-reference.js",
+      "bytes": 8720,
+      "sha256": "45e7502261880d4ceac78dff1eff57e9480b303f5fe8abea218005b967746840"
+    },
+    {
+      "file": "client/native-workspace.js",
+      "bytes": 99885,
+      "sha256": "87ac78c74b43717bef113991871e7cc047a16725086301fc500a580cabaa67b0"
+    },
+    {
+      "file": "client/selection-ai.js",
+      "bytes": 4571,
+      "sha256": "9c87b41852b4ff2e0e07fa686c729a0e24b11f36664c3fe0353434849386d570"
+    },
+    {
+      "file": "client/studio-image-workspace.js",
+      "bytes": 39192,
+      "sha256": "bea3e14cc6c5f58070e95fe84f9004ff592e65529993f1659b1722f3739a767a"
+    },
+    {
+      "file": "client/ui.js",
+      "bytes": 104584,
+      "sha256": "ea2ac48b19fb44f5fe00a72b4d08065bf1567581226ac7524b3d534987142e92"
+    },
+    {
+      "file": "docs/verification/ui162-design-session-isolation-20261113.json",
+      "bytes": 13490,
+      "sha256": "d8e3b319774c4fb5b8c293715cff0c1a1621415dbb3efd3aed6073f8b6209cc0"
+    },
+    {
+      "file": "host/color-contrast.js",
+      "bytes": 2624,
+      "sha256": "82cb8e489aafae640d574a604a2f55967aa3a64dc5473423eb61a2d4f273be06"
+    },
+    {
+      "file": "host/deck-local-inputs.js",
+      "bytes": 5264,
+      "sha256": "5934450bdb664aa3ef436965e41f24c9c7c5d12e2d5dfbc0887476de9b45f281"
+    },
+    {
+      "file": "host/design-assistant-session.js",
+      "bytes": 2050,
+      "sha256": "937ce374c392f8c1a8ea6a295e4b74c1fb1313e14ae32bb101e7afa8189fdf7b"
+    },
+    {
+      "file": "host/editor-fence-tickets.js",
+      "bytes": 2527,
+      "sha256": "17d9d0172d921f1acbb50675c9ace9c2d9aabe8598a4bd3c896b72afd1de876b"
+    },
+    {
+      "file": "host/editor-tools.js",
+      "bytes": 14170,
+      "sha256": "07c8a3968197524b4d7216bd2467789b61b019c84f519e4519432d05da7c065f"
+    },
+    {
+      "file": "host/index.js",
+      "bytes": 39988,
+      "sha256": "5bc523963485615c9acb3d8cb881246612a474312a724270e2c645595b73b82c"
+    },
+    {
+      "file": "host/opendesign-design-brief-v1.js",
+      "bytes": 13574,
+      "sha256": "4e2b71ab859746a242093e1725091c7c9bfe7010746056531e7f2fcb0f61b457"
+    },
+    {
+      "file": "host/stock-images.js",
+      "bytes": 22968,
+      "sha256": "5c6ad19b7690ef86fa57531fe8de6779c75932370cd0465b6cbeda5f9cd3361e"
+    },
+    {
+      "file": "package.json",
+      "bytes": 1356,
+      "sha256": "7199a09a622cee2daac94c9832785a1446073cba1d8bcdedad4e9153d2d89818"
+    },
+    {
+      "file": "runtime-lock.json",
+      "bytes": 2038,
+      "sha256": "5dd4b18786e36e60ccfc3919ca95a1a1649ef7c455dfd141e423f2911c70fb70"
+    },
+    {
+      "file": "runtimes/ink-recognizer.cs",
+      "bytes": 5107,
+      "sha256": "4bca2c34e203529e63f5ca852ef462dffe306033207e1af28d73655d217cd5d6"
+    },
+    {
+      "file": "runtimes/ink-recognizer.exe",
+      "bytes": 10752,
+      "sha256": "7596e605ebf2b8b5908836d2af67d937ee153c79f86304a50f013e61cec11047"
+    },
+    {
+      "file": "runtimes/ink-recognizer.lock.json",
+      "bytes": 373,
+      "sha256": "d9d3cc547076f7dee1fccae6ee72dacb2d27d1a3c397ebe4ceced94bf3f96605"
+    },
+    {
+      "file": "skills/designcraft/SKILL.md",
+      "bytes": 57057,
+      "sha256": "f6bbfefe361558c86d40205aefe2cda95553d593f00f130ebe9c290b2b118f53"
+    },
+    {
+      "file": "tests/ai-canvas.test.mjs",
+      "bytes": 7202,
+      "sha256": "6e6d6619eb952706225d4da2477286a0c37250a846477607aeea2eca6cbebd27"
+    },
+    {
+      "file": "tests/commons-current-response.test.mjs",
+      "bytes": 2887,
+      "sha256": "7bfb5d28e7866436e408909c2e25b22c265416a84cbdf7654f418786558b7f55"
+    },
+    {
+      "file": "tests/deck-local-scope.test.mjs",
+      "bytes": 1576,
+      "sha256": "84743c6a2875596d7e66a5b1b0b79845106e2187634100f526b6b1249976bc89"
+    },
+    {
+      "file": "tests/design-session.test.mjs",
+      "bytes": 7051,
+      "sha256": "0beb8a91a9eb406ee5f47345296dba9481c0b1f82c816cf107b3a1489150a8ac"
+    },
+    {
+      "file": "tests/dsh-context.test.mjs",
+      "bytes": 1320,
+      "sha256": "e2ec561c1bfc594360dc03e9742cb486987fd5887ad536341981a0a4fa035c9a"
+    },
+    {
+      "file": "tests/editor-fence-arguments.test.mjs",
+      "bytes": 4711,
+      "sha256": "be50710f444f3a7e77248dea8dc58192ac911aede182787b7cbe3355d39abcaa"
+    },
+    {
+      "file": "tests/editor-fence-tickets.test.mjs",
+      "bytes": 3013,
+      "sha256": "1bea96d4eafabf70c4fd2eec95c83f41948ae43923117a11613268f4f437f414"
+    },
+    {
+      "file": "tests/fixtures/commons-imageinfo-20261113.json",
+      "bytes": 19071,
+      "sha256": "80a71327c134d54979a1f3225da6c86510872fc3a752c536c716cef88798e5e7"
+    },
+    {
+      "file": "tests/fixtures/editor-long-selection-20261113.json",
+      "bytes": 9150,
+      "sha256": "788759ef09b504403d07fe0c859b1e6fd89971b6665b37a9cd5a98d79738dd0e"
+    },
+    {
+      "file": "tests/fixtures/editor-missing-epoch-20261113.json",
+      "bytes": 705,
+      "sha256": "83323ce88011989169b498762110aafabb5db280e78632add89b00e9cffc08ad"
+    },
+    {
+      "file": "tests/fixtures/editor-open-missing-source-20261113.json",
+      "bytes": 354,
+      "sha256": "fe55c517ca9c6ba7e90bddd239884b24903676c9fa31c8b0d4d3d17374e6583f"
+    },
+    {
+      "file": "web-runtime-lock.json",
+      "bytes": 63710,
+      "sha256": "e7a497673aad706e0f10366c7ed8f34fc9df044a85fa72945731bcc58548a0a1"
+    }
+  ],
+  "nativeSourceInputsMatched": 241,
+  "nativeSourceArchive": {
+    "schema": 1,
+    "kind": "exact-native-source-input-audit",
+    "at": "2026-11-13T08:36:48.663950+00:00",
+    "archive": "engine-source-snapshots-ui160.zip",
+    "bytes": 33418619,
+    "sha256": "74a5d0d2cd46c13d07ef5248c5df82817751fffa1a72526fd6c067508f051740",
+    "sourceInputCount": 241,
+    "archiveFileCount": 252,
+    "engines": {
+      "vectorcraft-host": {
+        "version": "0.19.0+designcraft.host19",
+        "upstreamCommit": "bcebabe3f8c23a376ac68e9e6726590af278f7bb",
+        "sourceInputsMatched": 60
+      },
+      "photocraft-host": {
+        "version": "0.18.0+designcraft.host8",
+        "upstreamCommit": "8a87a457abb43ac344deeb3fdb67541b91a72ff1",
+        "sourceInputsMatched": 30
+      },
+      "deckcraft-host": {
+        "version": "0.13.1+designcraft.host18",
+        "upstreamCommit": "4ce2944630b04188dee8504c14151994d06c416a",
+        "sourceInputsMatched": 151
+      }
+    },
+    "archiveRoundtripBytesMatch": true,
+    "functionalValidation": false,
+    "scope": "File/ZIP integrity only. No engine or source code was executed by this audit."
+  },
+  "helperSourceAndBinaryLocksMatched": true,
+  "legacyV1BytesUnchanged": true,
+  "functionalReport": "release-validation-20261113.json",
+  "actualServiceAddendum": "real-services-validation-20261113.json",
+  "functionalValidationByThisCommand": false,
+  "allCoreFunctionsAccepted": false,
+  "mainModelReview": [
+    "Reviewed ten product fixes and their actual scoped retests; actual model flow failures and test-harness corrections are preserved separately.",
+    "F008/F009/F010 changed two host tool modules after the original UI155 image runs. Actual targeted replays and native reopens are separately scoped; 48 original feature UI cases were not falsely declared rerun on UI158.",
+    "Native host19/8/18 AI-canvas input archive and active build source identities match; helper text recognition remains separately scoped.",
+    "Actual MathML conversion and QA media playback do not substitute for OS recognition or physical devices.",
+    "Source/lock checks do not prove every upstream command or complete transitive build provenance.",
+    "A new actual fourth GLM user turn passed on the exact extracted UI158 archive; three target-only edits, exact reopens and two requested source switches were independently read back. One invalid ticket was safely rejected and recovered by fresh state.",
+    "UI159 / Deck host17 removes the four capture/math entry actions, browser acquisition module and Windows math/screen helper implementations. Targeted real rejection, text, retained media/formula and native tool checks are separate from old tests.",
+    "The current UI162 dedicated-project-session report and every raw evidence digest were checked. Prior UI158 real-model and UI159 removal results keep their historical build scopes; they are not falsely declared rerun."
+  ],
+  "residualLimits": [
+    "The user explicitly removed microphone, camera, screen capture and Windows Math recognition; they are out of scope and not counted as tested. Actual new removal/retained-content checks and prior scoped local/real AI tests remain separately identified.",
+    "User running DSH frontend/backend are unverified and untouched.",
+    "Complete converter-to-lock and WOFF2/Brotli native source provenance, six font reference byte mismatches and historical missing artifacts remain documented."
+  ],
+  "latestRealModelAcceptance": "ui158-final-model-flow-20261113.json",
+  "scopedCoreEditingAndAiFlowAccepted": true,
+  "captureRemovalReport": "ui159-deck-capture-removal-20261113.json",
+  "removedSourceFiles": [
+    "client/local-capture.js"
+  ],
+  "pendingAcceptance": [],
+  "currentUiAcceptance": "ui162-design-session-isolation-20261113.json",
+  "currentUiAcceptanceStatus": "passed_scoped_dedicated_design_session_isolation",
+  "currentUiRawEvidenceMatched": 26,
+  "nativeHostVersions": {
+    "vectorcraft-host": "0.19.0+designcraft.host19",
+    "photocraft-host": "0.18.0+designcraft.host8",
+    "deckcraft-host": "0.13.1+designcraft.host18"
+  }
+}

@@ -1,0 +1,1754 @@
+{
+  "documentaryReportsNotCountedAsRuntimeEvidence": [
+    {
+      "file": "historical-evidence-reconciliation.json",
+      "kind": "static/documentary audit; not runtime acceptance",
+      "sha256": "5b9a36aa0d051557528961b788248266a70dcc7eeb2b9143baa8eb13a58911b5"
+    },
+    {
+      "file": "implementation-source-audit.json",
+      "kind": "static/documentary audit; not runtime acceptance",
+      "sha256": "15337623bf8fadc277195df9d700b9f45e088f7301505ad4de414b609d552226"
+    },
+    {
+      "file": "hosted-ui-source-audit.json",
+      "kind": "static/documentary audit; not runtime acceptance",
+      "sha256": "8d1962259a7c7235b3f60c92cd8035738182c7cdf009886db6d51a7cda2de81a"
+    },
+    {
+      "file": "authorization-requirements.json",
+      "kind": "static/documentary audit; not runtime acceptance",
+      "sha256": "148175d3bb315dd5ec96f230bd13f559e83ffacdeaab37b3481d65e0b73314b0"
+    },
+    {
+      "file": "opendesign-source-audit.json",
+      "kind": "static/documentary audit; not runtime acceptance",
+      "sha256": "5b879d3563a240f3aa3167c78652865b523c2d307ca78f769f5bfe03f899e2ec"
+    },
+    {
+      "file": "dependency-license-audit.json",
+      "kind": "static/documentary audit; not runtime acceptance",
+      "sha256": "c32f044a19c268f1ab5dfe89a6705bd49b91271a3b2513f7646b93201d041b3f"
+    }
+  ],
+  "matrixTasks": 50,
+  "reports": 97,
+  "declaredFilesMissing": [],
+  "hashPairsChecked": 399,
+  "historicalReferencesRecovered": [
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\deck-stage-audit.json",
+      "location": "evidence",
+      "original": "deck-build-result.json",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\8ad1614023be7a54507b57e56d7bd54e1ba80a7fa0fd26285f56a9160acb8b3d.json",
+      "sha256": "8ad1614023be7a54507b57e56d7bd54e1ba80a7fa0fd26285f56a9160acb8b3d"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\deck-stage-audit.json",
+      "location": "evidence",
+      "original": "deck-build.log",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\1336afd189ea5d0ce3a27d4f642d49335d29e08a7f21c16b17fdcd2f9f720379.log",
+      "sha256": "1336afd189ea5d0ce3a27d4f642d49335d29e08a7f21c16b17fdcd2f9f720379"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\instance-stage-audit.json",
+      "location": "evidence",
+      "original": "deck-build-result.json",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\35c0fa60bbaa23cbf32e3dc39e62baa8a207daca910734fd65da950816a6448f.json",
+      "sha256": "35c0fa60bbaa23cbf32e3dc39e62baa8a207daca910734fd65da950816a6448f"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\instance-stage-audit.json",
+      "location": "evidence",
+      "original": "deck-build.log",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\2579e513a49fe6f54a5eb404a5c2c40efa4c4140e1ef9faade534b089b0c8de0.log",
+      "sha256": "2579e513a49fe6f54a5eb404a5c2c40efa4c4140e1ef9faade534b089b0c8de0"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\mixed-instance-stage-audit.json",
+      "location": "evidence",
+      "original": "vector-build-result.json",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\c796eb9ac7a4be578d737c3238ce78e82958b1b4235514b36eede0dd99ee59a7.json",
+      "sha256": "c796eb9ac7a4be578d737c3238ce78e82958b1b4235514b36eede0dd99ee59a7"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\mixed-instance-stage-audit.json",
+      "location": "evidence",
+      "original": "vector-build.log",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\771ad574f26ea70ac93006b437fe7d796529df2827e0add5b0a1839c97488967.log",
+      "sha256": "771ad574f26ea70ac93006b437fe7d796529df2827e0add5b0a1839c97488967"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\mixed-instance-stage-audit.json",
+      "location": "evidence",
+      "original": "mixed-seven-browser.log",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\456380e708c5d5b0352ae39e63de8a483b5e4d674159d9cd7a7705bad7e2afc2.log",
+      "sha256": "456380e708c5d5b0352ae39e63de8a483b5e4d674159d9cd7a7705bad7e2afc2"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\mixed-instance-stage-audit.json",
+      "location": "evidence",
+      "original": "mixed-seven-ui.png",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\728eaf14d1b23575e169e22998aac4f899439e8a6121c314517cc9389215895c.png",
+      "sha256": "728eaf14d1b23575e169e22998aac4f899439e8a6121c314517cc9389215895c"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\mixed-instance-stage-audit.json",
+      "location": "evidence",
+      "original": "mixed-seven-vector.vectorcraft",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\b1d77d680ce92bc607c57de778cba6fda2142aa87c58c399dc53c677786eb8a5.vectorcraft",
+      "sha256": "b1d77d680ce92bc607c57de778cba6fda2142aa87c58c399dc53c677786eb8a5"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\mixed-instance-stage-audit.json",
+      "location": "evidence",
+      "original": "mixed-seven-deck.deckcraft",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\3f7ce43b256430751e8f903131c723fedf9aa11adba3d088cb5cb0efb306acbb.deckcraft",
+      "sha256": "3f7ce43b256430751e8f903131c723fedf9aa11adba3d088cb5cb0efb306acbb"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\mixed-instance-stage-audit.json",
+      "location": "evidence",
+      "original": "mixed-seven-deck.pptx",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\208ec309a182970912cea5135407fd5ee4ff94a0649bebefd856af504c1a19e9.pptx",
+      "sha256": "208ec309a182970912cea5135407fd5ee4ff94a0649bebefd856af504c1a19e9"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\mixed-instance-stage-audit.json",
+      "location": "evidence",
+      "original": "mixed-seven-white-render.png",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\9bb0bc972b620f48f0136f84aaedf92b38f895d4e764be9deb35d966e4e83d98.png",
+      "sha256": "9bb0bc972b620f48f0136f84aaedf92b38f895d4e764be9deb35d966e4e83d98"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\mixed-instance-stage-audit.json",
+      "location": "evidence",
+      "original": "mixed-seven-new-source.png",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\7bb6ad583c4e1cb4349995a271974a9e1820e049df3a50823bcce05c6cf74899.png",
+      "sha256": "7bb6ad583c4e1cb4349995a271974a9e1820e049df3a50823bcce05c6cf74899"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\mixed-instance-stage-audit.json",
+      "location": "evidence",
+      "original": "native-vector8-source/crates/text/web-fonts.txt",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\8e2739ac621b536b82fb388cf0ee3a085dbb3ea786eb2be0bcca6528dc32642a.txt",
+      "sha256": "8e2739ac621b536b82fb388cf0ee3a085dbb3ea786eb2be0bcca6528dc32642a"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\mixed-instance-stage-audit.json",
+      "location": "evidence",
+      "original": "native-vector8-source/crates/ui-egui/src/control.rs",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\db1bd5efb18a427ca552dbe8632a8a1e922dd5bc88ad0c07e4253d55f91f9510.rs",
+      "sha256": "db1bd5efb18a427ca552dbe8632a8a1e922dd5bc88ad0c07e4253d55f91f9510"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\mixed-instance-stage-audit.json",
+      "location": "evidence",
+      "original": "native-vector8-source/crates/ui-egui/src/control/hosted.rs",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\ce300da308c38b2dd86e6e34b811569124ecb066704655ddd1bbaa6c6d9c5b28.rs",
+      "sha256": "ce300da308c38b2dd86e6e34b811569124ecb066704655ddd1bbaa6c6d9c5b28"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\mixed-instance-stage-audit.json",
+      "location": "evidence",
+      "original": "native-vector8-source/crates/ui-egui/src/control/tests.rs",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\c8449f933f1c7616cbd1a0245e83cb631172e56693cbae4d959a47135c6d1684.rs",
+      "sha256": "c8449f933f1c7616cbd1a0245e83cb631172e56693cbae4d959a47135c6d1684"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\mixed-instance-stage-audit.json",
+      "location": "evidence",
+      "original": "native-vector8-source/crates/ui-egui/src/lib.rs",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\4ec91ae2030529195ed011dbecc276af33620d60c3c0cd0558abb93914ef7b55.rs",
+      "sha256": "4ec91ae2030529195ed011dbecc276af33620d60c3c0cd0558abb93914ef7b55"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\mixed-instance-stage-audit.json",
+      "location": "evidence",
+      "original": "native-vector8-source/crates/ui-egui/src/app.rs",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\69f1a3af708cd7d8cab3f6eb40bf4e9ad282e7d3dd2640cbe114cd22b7002c92.rs",
+      "sha256": "69f1a3af708cd7d8cab3f6eb40bf4e9ad282e7d3dd2640cbe114cd22b7002c92"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\mixed-instance-stage-audit.json",
+      "location": "evidence",
+      "original": "native-vector8-source/crates/ui-egui/src/chrome.rs",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\ee38406fc802849f6c82397c261a91bd571b4b7ce2a7623dec4d30110faa8d18.rs",
+      "sha256": "ee38406fc802849f6c82397c261a91bd571b4b7ce2a7623dec4d30110faa8d18"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\mixed-instance-stage-audit.json",
+      "location": "evidence",
+      "original": "native-vector8-source/crates/ui-egui/src/host_files.rs",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\c84c34cfd0624c18aa952bc126ea528bf415656c598f092c2d6ae06bd9ca3cfb.rs",
+      "sha256": "c84c34cfd0624c18aa952bc126ea528bf415656c598f092c2d6ae06bd9ca3cfb"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\mixed-instance-stage-audit.json",
+      "location": "evidence",
+      "original": "native-vector8-source/crates/ui-egui/src/app/commands.rs",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\11b758749c6d3117926086e3c2824f187c2e791887881f3cc62790d7244fbe55.rs",
+      "sha256": "11b758749c6d3117926086e3c2824f187c2e791887881f3cc62790d7244fbe55"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\mixed-instance-stage-audit.json",
+      "location": "evidence",
+      "original": "native-vector8-source/crates/ui-egui/src/shortcuts.rs",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\218d58667c5e18aad46bcf688e37044608c0c45a6d9575a542b3d8ce008c5deb.rs",
+      "sha256": "218d58667c5e18aad46bcf688e37044608c0c45a6d9575a542b3d8ce008c5deb"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\mixed-instance-stage-audit.json",
+      "location": "evidence",
+      "original": "native-vector8-source/crates/ui-egui/src/shortcuts/tests.rs",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\28772ee932b46cc9b372a32e84b9425ca8fb09a8bcf1247b6e69b92723e1ad98.rs",
+      "sha256": "28772ee932b46cc9b372a32e84b9425ca8fb09a8bcf1247b6e69b92723e1ad98"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\mixed-instance-stage-audit.json",
+      "location": "evidence",
+      "original": "native-vector8-source/apps/vectorcraft-web/src/api.rs",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\57811c50f4eba1f8de6773171929a13be10a7626e5226e82384f2515182a7885.rs",
+      "sha256": "57811c50f4eba1f8de6773171929a13be10a7626e5226e82384f2515182a7885"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\mixed-instance-stage-audit.json",
+      "location": "evidence",
+      "original": "native-vector8-source/Cargo.toml",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\6699f02c5454559034b6f7b3900b2851ebb60245cdfaeaff99e8c450087bac0c.toml",
+      "sha256": "6699f02c5454559034b6f7b3900b2851ebb60245cdfaeaff99e8c450087bac0c"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\mixed-instance-stage-audit.json",
+      "location": "evidence",
+      "original": "native-vector8-source/Cargo.lock",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\470b188ffd5d5abd32fada5d49ffc2ce4122e7ae77fd93426d0bdf1fb8cbcd10.lock",
+      "sha256": "470b188ffd5d5abd32fada5d49ffc2ce4122e7ae77fd93426d0bdf1fb8cbcd10"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\mixed-instance-stage-audit.json",
+      "location": "evidence",
+      "original": "native-vector8-source/crates/engine/Cargo.toml",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\4dfc01b0d32397915042712b2e02df5a8266a074104421c94a951c716a81b727.toml",
+      "sha256": "4dfc01b0d32397915042712b2e02df5a8266a074104421c94a951c716a81b727"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\mixed-instance-stage-audit.json",
+      "location": "evidence",
+      "original": "native-vector8-source/crates/engine/src/cmd/place.rs",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\e59428894360c4132c9bd0e43c07a0f813fba4549dc6e19594b749caf4ee7c55.rs",
+      "sha256": "e59428894360c4132c9bd0e43c07a0f813fba4549dc6e19594b749caf4ee7c55"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\mixed-instance-stage-audit.json",
+      "location": "evidence",
+      "original": "native-vector8-source/crates/engine/src/cmd/place/image_content.rs",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\c138672a29809cf445b3e265fa5cc3773349ee2e14b21aa30de16045f5c7780f.rs",
+      "sha256": "c138672a29809cf445b3e265fa5cc3773349ee2e14b21aa30de16045f5c7780f"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\mixed-instance-stage-audit.json",
+      "location": "evidence",
+      "original": "native-vector8-source/crates/engine/src/cmd/place/image_content/tests.rs",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\7af66d90207b9c2661fe6f83b9d09d665886fe6614e7ce1d6c27c1122fba0ef9.rs",
+      "sha256": "7af66d90207b9c2661fe6f83b9d09d665886fe6614e7ce1d6c27c1122fba0ef9"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\mixed-instance-stage-audit.json",
+      "location": "evidence",
+      "original": "native-vector8-source/apps/vectorcraft-web/Trunk.toml",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\4d9eb5cac922ed609afb6b27859919b79076de7d15687dbd899d11c4ebdcf73b.toml",
+      "sha256": "4d9eb5cac922ed609afb6b27859919b79076de7d15687dbd899d11c4ebdcf73b"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\mixed-instance-stage-audit.json",
+      "location": "evidence",
+      "original": "native-vector8-source/apps/vectorcraft-web/index.html",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\91b8e73c505499c1fd909019163576dace67159580b1c797cc41b20aad1a5141.html",
+      "sha256": "91b8e73c505499c1fd909019163576dace67159580b1c797cc41b20aad1a5141"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\mixed-instance-stage-audit.json",
+      "location": "evidence",
+      "original": "native-vector8-source/crates/text/build.rs",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\85d0fdce0d239f268e8662168dfd6880c5b98e06712af65affc277cd38d5c63b.rs",
+      "sha256": "85d0fdce0d239f268e8662168dfd6880c5b98e06712af65affc277cd38d5c63b"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\mixed-instance-stage-audit.json",
+      "location": "evidence",
+      "original": "native-vector8-source/xtask/src/web_fonts.rs",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\89af53796b61ced407c16416d00dd49dd8a08e464f3129d0d6cbd557decb6a5f.rs",
+      "sha256": "89af53796b61ced407c16416d00dd49dd8a08e464f3129d0d6cbd557decb6a5f"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "original": "vector-build-result.json",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\a567a250a342bfc679797a64a82aa793bea3948ad93994e22104f8868221f189.json",
+      "sha256": "a567a250a342bfc679797a64a82aa793bea3948ad93994e22104f8868221f189"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "original": "deck-build-result.json",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\610f2c15212532b5c86e4d7dc5744c6726c1d9e7d8e58257fdaa58b88e464cab.json",
+      "sha256": "610f2c15212532b5c86e4d7dc5744c6726c1d9e7d8e58257fdaa58b88e464cab"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "original": "vector-build.log",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\fad59778975c4dc29030d8618b07bcf645f9d2a761f3b94d0f08662d89cfd60e.log",
+      "sha256": "fad59778975c4dc29030d8618b07bcf645f9d2a761f3b94d0f08662d89cfd60e"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "original": "deck-build.log",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\5229aa64bff8b827834d5ff5e6bd4bb2912445b480e2e87a942424fbf9405040.log",
+      "sha256": "5229aa64bff8b827834d5ff5e6bd4bb2912445b480e2e87a942424fbf9405040"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "original": "verification-scripts/probe_native_copy_undo.py",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\f756fd74937af55d65cd989814d4373a1f857e0f578778fb34f07a2447f32954.py",
+      "sha256": "f756fd74937af55d65cd989814d4373a1f857e0f578778fb34f07a2447f32954"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "original": "verification-scripts/test_origin_postsave_failure.py",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\2311773b237fb2c4b8d2921ac5f03d13e6dbf08b95fcc4d603fe11468b475b56.py",
+      "sha256": "2311773b237fb2c4b8d2921ac5f03d13e6dbf08b95fcc4d603fe11468b475b56"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "original": "verification-scripts/test_legacy_material_origins.py",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\acac7eb90e3dbcbb9a31213576083fb0b387ae0f9918f09b982caef41b028e3f.py",
+      "sha256": "acac7eb90e3dbcbb9a31213576083fb0b387ae0f9918f09b982caef41b028e3f"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "original": "verification-scripts/test_mixed_linked_seven.py",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\04541919afb69a3b5fef6113d48077acdb69763dcf6235af08a1773caf092d6f.py",
+      "sha256": "04541919afb69a3b5fef6113d48077acdb69763dcf6235af08a1773caf092d6f"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "original": "verification-scripts/build_vector.ps1",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\9ccc196d33873fe98c0ea76dee0def34f1d3f45905a89e0ea3cf6b161d2a0ffa.ps1",
+      "sha256": "9ccc196d33873fe98c0ea76dee0def34f1d3f45905a89e0ea3cf6b161d2a0ffa"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "original": "verification-scripts/adopt_vector_build.py",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\163ceca47511f67eb2ad00bdc34993dd0d4a0eec1a70219e617a8b4f18b2308f.py",
+      "sha256": "163ceca47511f67eb2ad00bdc34993dd0d4a0eec1a70219e617a8b4f18b2308f"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "original": "verification-scripts/build_deck.ps1",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\7be65d03b23536fe8879e3946354117f90fd33c96117171c8ea1c4bea9c4e3ae.ps1",
+      "sha256": "7be65d03b23536fe8879e3946354117f90fd33c96117171c8ea1c4bea9c4e3ae"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "original": "verification-scripts/adopt_deck_build.py",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\2d07aedceb153f1f3b4fd31676034939cc9ef9bdd3aa8f9cc9f6290ca1cc2055.py",
+      "sha256": "2d07aedceb153f1f3b4fd31676034939cc9ef9bdd3aa8f9cc9f6290ca1cc2055"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "original": "product-source/host/project-graph.js",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\759f57975c7767a9c10c6eeeddbf64c51fa4b626689756f0af447ab8691a3406.js",
+      "sha256": "759f57975c7767a9c10c6eeeddbf64c51fa4b626689756f0af447ab8691a3406"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "original": "product-source/host/editor-session.js",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\603c83eaf3f4ed5f7d36638f5a057de5295e88b1c30d6885a790f677f72ac3dc.js",
+      "sha256": "603c83eaf3f4ed5f7d36638f5a057de5295e88b1c30d6885a790f677f72ac3dc"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "original": "product-source/host/editor-routes.js",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\0d43096cd726c4b5a876dff705f73b504feccdfdc95a966b363faf76ef66cd18.js",
+      "sha256": "0d43096cd726c4b5a876dff705f73b504feccdfdc95a966b363faf76ef66cd18"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "original": "product-source/client/native-controller.js",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\9ff0cc850265c05f5f8dec1b1264eb219aac94862d554a8bb4e619d79ebdb14d.js",
+      "sha256": "9ff0cc850265c05f5f8dec1b1264eb219aac94862d554a8bb4e619d79ebdb14d"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "original": "product-source/web-runtime-lock.json",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\f8526441bb8bf3dc4a991b01bcd3a56bc053793ec3d265f0ba9600c680badedd.json",
+      "sha256": "f8526441bb8bf3dc4a991b01bcd3a56bc053793ec3d265f0ba9600c680badedd"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "original": "native-source/vectorcraft/crates/text/web-fonts.txt",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\8e2739ac621b536b82fb388cf0ee3a085dbb3ea786eb2be0bcca6528dc32642a.txt",
+      "sha256": "8e2739ac621b536b82fb388cf0ee3a085dbb3ea786eb2be0bcca6528dc32642a"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "original": "native-source/vectorcraft/crates/ui-egui/src/control.rs",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\04cdefb7e48279d83a8249b7ab1a412e853371d0af44ff4420bce366f55616bf.rs",
+      "sha256": "04cdefb7e48279d83a8249b7ab1a412e853371d0af44ff4420bce366f55616bf"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "original": "native-source/vectorcraft/crates/ui-egui/src/control/hosted.rs",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\ce300da308c38b2dd86e6e34b811569124ecb066704655ddd1bbaa6c6d9c5b28.rs",
+      "sha256": "ce300da308c38b2dd86e6e34b811569124ecb066704655ddd1bbaa6c6d9c5b28"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "original": "native-source/vectorcraft/crates/ui-egui/src/control/tests.rs",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\c8449f933f1c7616cbd1a0245e83cb631172e56693cbae4d959a47135c6d1684.rs",
+      "sha256": "c8449f933f1c7616cbd1a0245e83cb631172e56693cbae4d959a47135c6d1684"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "original": "native-source/vectorcraft/crates/ui-egui/src/lib.rs",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\4ec91ae2030529195ed011dbecc276af33620d60c3c0cd0558abb93914ef7b55.rs",
+      "sha256": "4ec91ae2030529195ed011dbecc276af33620d60c3c0cd0558abb93914ef7b55"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "original": "native-source/vectorcraft/crates/ui-egui/src/app.rs",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\69f1a3af708cd7d8cab3f6eb40bf4e9ad282e7d3dd2640cbe114cd22b7002c92.rs",
+      "sha256": "69f1a3af708cd7d8cab3f6eb40bf4e9ad282e7d3dd2640cbe114cd22b7002c92"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "original": "native-source/vectorcraft/crates/ui-egui/src/chrome.rs",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\ee38406fc802849f6c82397c261a91bd571b4b7ce2a7623dec4d30110faa8d18.rs",
+      "sha256": "ee38406fc802849f6c82397c261a91bd571b4b7ce2a7623dec4d30110faa8d18"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "original": "native-source/vectorcraft/crates/ui-egui/src/host_files.rs",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\c84c34cfd0624c18aa952bc126ea528bf415656c598f092c2d6ae06bd9ca3cfb.rs",
+      "sha256": "c84c34cfd0624c18aa952bc126ea528bf415656c598f092c2d6ae06bd9ca3cfb"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "original": "native-source/vectorcraft/crates/ui-egui/src/app/commands.rs",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\11b758749c6d3117926086e3c2824f187c2e791887881f3cc62790d7244fbe55.rs",
+      "sha256": "11b758749c6d3117926086e3c2824f187c2e791887881f3cc62790d7244fbe55"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "original": "native-source/vectorcraft/crates/ui-egui/src/shortcuts.rs",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\218d58667c5e18aad46bcf688e37044608c0c45a6d9575a542b3d8ce008c5deb.rs",
+      "sha256": "218d58667c5e18aad46bcf688e37044608c0c45a6d9575a542b3d8ce008c5deb"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "original": "native-source/vectorcraft/crates/ui-egui/src/shortcuts/tests.rs",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\28772ee932b46cc9b372a32e84b9425ca8fb09a8bcf1247b6e69b92723e1ad98.rs",
+      "sha256": "28772ee932b46cc9b372a32e84b9425ca8fb09a8bcf1247b6e69b92723e1ad98"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "original": "native-source/vectorcraft/apps/vectorcraft-web/src/api.rs",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\57811c50f4eba1f8de6773171929a13be10a7626e5226e82384f2515182a7885.rs",
+      "sha256": "57811c50f4eba1f8de6773171929a13be10a7626e5226e82384f2515182a7885"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "original": "native-source/vectorcraft/Cargo.toml",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\6699f02c5454559034b6f7b3900b2851ebb60245cdfaeaff99e8c450087bac0c.toml",
+      "sha256": "6699f02c5454559034b6f7b3900b2851ebb60245cdfaeaff99e8c450087bac0c"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "original": "native-source/vectorcraft/Cargo.lock",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\d3eac2a6c3ecbd1b56d71acd34e5997c26746cd440c19c4da020579427da6a32.lock",
+      "sha256": "d3eac2a6c3ecbd1b56d71acd34e5997c26746cd440c19c4da020579427da6a32"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "original": "native-source/vectorcraft/crates/engine/Cargo.toml",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\b7befa82f7b5d092ed3df8f4842676693d7faa148d4a8171d881bbc9e3581118.toml",
+      "sha256": "b7befa82f7b5d092ed3df8f4842676693d7faa148d4a8171d881bbc9e3581118"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "original": "native-source/vectorcraft/crates/engine/src/cmd/place.rs",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\bd0ffe63319bc33a831d3c6d42dea403a05c4fd26c716768f0d5ae0bf4d55d0f.rs",
+      "sha256": "bd0ffe63319bc33a831d3c6d42dea403a05c4fd26c716768f0d5ae0bf4d55d0f"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "original": "native-source/vectorcraft/crates/engine/src/cmd/place/image_content.rs",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\22c0335ff1538bce2cf67069973f46032e04e46f367bcb9278d04cc4fd4f943f.rs",
+      "sha256": "22c0335ff1538bce2cf67069973f46032e04e46f367bcb9278d04cc4fd4f943f"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "original": "native-source/vectorcraft/crates/engine/src/cmd/place/image_content/tests.rs",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\7af66d90207b9c2661fe6f83b9d09d665886fe6614e7ce1d6c27c1122fba0ef9.rs",
+      "sha256": "7af66d90207b9c2661fe6f83b9d09d665886fe6614e7ce1d6c27c1122fba0ef9"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "original": "native-source/vectorcraft/apps/vectorcraft-web/Trunk.toml",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\4d9eb5cac922ed609afb6b27859919b79076de7d15687dbd899d11c4ebdcf73b.toml",
+      "sha256": "4d9eb5cac922ed609afb6b27859919b79076de7d15687dbd899d11c4ebdcf73b"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "original": "native-source/vectorcraft/apps/vectorcraft-web/index.html",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\91b8e73c505499c1fd909019163576dace67159580b1c797cc41b20aad1a5141.html",
+      "sha256": "91b8e73c505499c1fd909019163576dace67159580b1c797cc41b20aad1a5141"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "original": "native-source/vectorcraft/crates/text/build.rs",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\85d0fdce0d239f268e8662168dfd6880c5b98e06712af65affc277cd38d5c63b.rs",
+      "sha256": "85d0fdce0d239f268e8662168dfd6880c5b98e06712af65affc277cd38d5c63b"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "original": "native-source/vectorcraft/xtask/src/web_fonts.rs",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\89af53796b61ced407c16416d00dd49dd8a08e464f3129d0d6cbd557decb6a5f.rs",
+      "sha256": "89af53796b61ced407c16416d00dd49dd8a08e464f3129d0d6cbd557decb6a5f"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "original": "native-source/vectorcraft/crates/engine/src/cmd/host_material.rs",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\bc95fa2552dfdf17c3d5cb2456513db4f2a1278ddd0d9eb68c7bfaf1ccd16dce.rs",
+      "sha256": "bc95fa2552dfdf17c3d5cb2456513db4f2a1278ddd0d9eb68c7bfaf1ccd16dce"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "original": "native-source/deckcraft/Cargo.lock",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\f7d96395edd9e8b5379232449f7a78aba7575b22745895f768102885d2008b73.lock",
+      "sha256": "f7d96395edd9e8b5379232449f7a78aba7575b22745895f768102885d2008b73"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "original": "native-source/deckcraft/crates/engine/Cargo.toml",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\6cc4a9954d7c27a07852eb4afc04db7d68d3b389e90c3d788c5f5ec22be46eca.toml",
+      "sha256": "6cc4a9954d7c27a07852eb4afc04db7d68d3b389e90c3d788c5f5ec22be46eca"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "original": "native-source/deckcraft/crates/engine/src/lib.rs",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\6eecf181ad192ce6ac54cbb7224cc444d5fbf87fd093c040afeaf8093f2bf275.rs",
+      "sha256": "6eecf181ad192ce6ac54cbb7224cc444d5fbf87fd093c040afeaf8093f2bf275"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "original": "native-source/deckcraft/crates/engine/src/embedded.rs",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\5e8fa08080be27d973fd3c5bf1c9030e541cbffe38f925520101bebd918c4163.rs",
+      "sha256": "5e8fa08080be27d973fd3c5bf1c9030e541cbffe38f925520101bebd918c4163"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "original": "native-source/deckcraft/crates/ui-egui/src/control.rs",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\2a115b0a7677b17ab16b71d08753bbe50d863d537aa1263bf33c381b755aa8ca.rs",
+      "sha256": "2a115b0a7677b17ab16b71d08753bbe50d863d537aa1263bf33c381b755aa8ca"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "original": "native-source/deckcraft/crates/ui-egui/src/control/hosted.rs",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\bd1dfdd0be7ffa07ff6c5f4b7bdab3814aa7928886080b537a3fc7537f893c6f.rs",
+      "sha256": "bd1dfdd0be7ffa07ff6c5f4b7bdab3814aa7928886080b537a3fc7537f893c6f"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "original": "native-source/deckcraft/crates/ui-egui/src/control/hosted_tests.rs",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\1e704c5a186b91bec38f7b2343d8c4b11679f5e75fc523eea04a891f67ee2d6a.rs",
+      "sha256": "1e704c5a186b91bec38f7b2343d8c4b11679f5e75fc523eea04a891f67ee2d6a"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "original": "native-source/deckcraft/apps/deckcraft-web/Cargo.toml",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\011890ba657c20f2bfe3dc6f0a248d83c23d526af575095bf104f8ae9e348633.toml",
+      "sha256": "011890ba657c20f2bfe3dc6f0a248d83c23d526af575095bf104f8ae9e348633"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "original": "native-source/deckcraft/apps/deckcraft-web/src/main.rs",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\b1fa74496f2983e7a7c21170666f06cc92cfd5ee799d48cb13bf8d0c9a4d2208.rs",
+      "sha256": "b1fa74496f2983e7a7c21170666f06cc92cfd5ee799d48cb13bf8d0c9a4d2208"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "original": "native-source/deckcraft/apps/deckcraft-web/src/web.rs",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\d73a6761d1f27da948eb6971bca765a09d7bae4258ab37d29d4e34d642745ec1.rs",
+      "sha256": "d73a6761d1f27da948eb6971bca765a09d7bae4258ab37d29d4e34d642745ec1"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "original": "native-source/deckcraft/apps/deckcraft-web/index.html",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\5ff552301bfde3d5d369c93ad1a7a886f7aa639c021692269677c12f68e132be.html",
+      "sha256": "5ff552301bfde3d5d369c93ad1a7a886f7aa639c021692269677c12f68e132be"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "original": "native-source/deckcraft/ATTRIBUTION.md",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\b905f20f0afe75a061134fda3c0487add7272de9968f2fd714867c28b946ff9f.md",
+      "sha256": "b905f20f0afe75a061134fda3c0487add7272de9968f2fd714867c28b946ff9f"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "original": "native-source/deckcraft/crates/engine/src/cmd/shape.rs",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\9f9c53bcd1eac464f617b9bfd45a500d3e375e165e3565e90002754064f66443.rs",
+      "sha256": "9f9c53bcd1eac464f617b9bfd45a500d3e375e165e3565e90002754064f66443"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "original": "native-source/deckcraft/crates/engine/src/cmd/shape/picture.rs",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\b7890b8a232c0437419af97783b248f8391e2018c9d03af1cd145d0cf6c3247e.rs",
+      "sha256": "b7890b8a232c0437419af97783b248f8391e2018c9d03af1cd145d0cf6c3247e"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "original": "native-source/deckcraft/crates/engine/src/cmd/host_material.rs",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\1fc062dac86b8dc53785a96c5a8e391e078fe3f5a7e21552ce8782f1ec2a7b43.rs",
+      "sha256": "1fc062dac86b8dc53785a96c5a8e391e078fe3f5a7e21552ce8782f1ec2a7b43"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "original": "native-source/deckcraft/crates/engine/src/cmd/edit.rs",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\835b87b5f485611548fca50921e15e84e9dbcdefcb601c90c48ea44dfe32ea06.rs",
+      "sha256": "835b87b5f485611548fca50921e15e84e9dbcdefcb601c90c48ea44dfe32ea06"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\photo-stage-audit.json",
+      "location": "evidence",
+      "original": "photo-build-result.json",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\3c74ab415a39d2dda4cd1dcad99540e0858bf8b90fc46003ad531a2232abcf2a.json",
+      "sha256": "3c74ab415a39d2dda4cd1dcad99540e0858bf8b90fc46003ad531a2232abcf2a"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\photo-stage-audit.json",
+      "location": "evidence",
+      "original": "photo-build.log",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\37270ae248734aabbd350fc005302ede1b907dc83c2578a1f9e16d29e5ab7dac.log",
+      "sha256": "37270ae248734aabbd350fc005302ede1b907dc83c2578a1f9e16d29e5ab7dac"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\svg-deck-stage-audit.json",
+      "location": "evidence",
+      "original": "svg-deck-browser.json",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\bfa2a664afb3d8c3c4666e24e470d5b35993c1a508e6bf0d467036ed299366fd.json",
+      "sha256": "bfa2a664afb3d8c3c4666e24e470d5b35993c1a508e6bf0d467036ed299366fd"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\svg-deck-stage-audit.json",
+      "location": "evidence",
+      "original": "svg-deck-browser.log",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\667645a4519af693a70f33ed2b4be7d26346c9af3f070fa52ea0f5a58626229f.log",
+      "sha256": "667645a4519af693a70f33ed2b4be7d26346c9af3f070fa52ea0f5a58626229f"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\svg-deck-stage-audit.json",
+      "location": "evidence",
+      "original": "svg-deck-before.deckcraft",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\a99ac64802ca23754dd172c3f0a57b577c82eb806b6fa4838cfcbfcde3feb2d1.deckcraft",
+      "sha256": "a99ac64802ca23754dd172c3f0a57b577c82eb806b6fa4838cfcbfcde3feb2d1"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\svg-deck-stage-audit.json",
+      "location": "evidence",
+      "original": "svg-deck-after.deckcraft",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\dd8b952a81654c5ae1797b2fb08d45c15d4f7d41f920ac5ffca719bfd285224e.deckcraft",
+      "sha256": "dd8b952a81654c5ae1797b2fb08d45c15d4f7d41f920ac5ffca719bfd285224e"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\svg-deck-stage-audit.json",
+      "location": "evidence",
+      "original": "deck-build-result.json",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\61456c96cdf19e92a77d8ded11b15377d782e74b8875a0189065183ebb960407.json",
+      "sha256": "61456c96cdf19e92a77d8ded11b15377d782e74b8875a0189065183ebb960407"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\svg-deck-stage-audit.json",
+      "location": "evidence",
+      "original": "deck-build.log",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\8811fc7a4dc121ed05cc54203c634573aa0dd0500461c2d3d353de5e96a67e9d.log",
+      "sha256": "8811fc7a4dc121ed05cc54203c634573aa0dd0500461c2d3d353de5e96a67e9d"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\svg-inplace-core-audit.json",
+      "location": "evidence",
+      "original": "svg-deck-after.deckcraft",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\cc1a8a1b69bdf01d6f74086438fa6693cda83390a79697ee069b6c163c460e93.deckcraft",
+      "sha256": "cc1a8a1b69bdf01d6f74086438fa6693cda83390a79697ee069b6c163c460e93"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\svg-inplace-core-audit.json",
+      "location": "evidence",
+      "original": "vector-build-result.json",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\bc7f2c172fa90ffd544a44a0f930f5b38cbc60e763ccbf83015d3da51b7c318b.json",
+      "sha256": "bc7f2c172fa90ffd544a44a0f930f5b38cbc60e763ccbf83015d3da51b7c318b"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\svg-inplace-core-audit.json",
+      "location": "evidence",
+      "original": "vector-build.log",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\67dec27ee7b0baa2c8cc8f2a97226344ca2b4ab890dd7bb063a2e19e5db94db5.log",
+      "sha256": "67dec27ee7b0baa2c8cc8f2a97226344ca2b4ab890dd7bb063a2e19e5db94db5"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\svg-inplace-core-audit.json",
+      "location": "evidence",
+      "original": "client-editor-frame.js",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\f78204acf2bdc7b17ecbec55985722cc59abddf78af95f3c6c205d0ce6004c62.js",
+      "sha256": "f78204acf2bdc7b17ecbec55985722cc59abddf78af95f3c6c205d0ce6004c62"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\svg-linked-stage-audit.json",
+      "location": "evidence",
+      "original": "client-native-controller.js",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\55be98019d40198cf356029d0d38179798c70e4f70a8e989a8cca69a202f4ac4.js",
+      "sha256": "55be98019d40198cf356029d0d38179798c70e4f70a8e989a8cca69a202f4ac4"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\svg-linked-stage-audit.json",
+      "location": "evidence",
+      "original": "test_svg_linked_seven.py",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\a57bc6e283517aa4a902d11789b1aaa9b87b4575b91890ef4a6983c8116b4d68.py",
+      "sha256": "a57bc6e283517aa4a902d11789b1aaa9b87b4575b91890ef4a6983c8116b4d68"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\svg-linked-stage-audit.json",
+      "location": "evidence",
+      "original": "test_mixed_linked_ui35.py",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\6e38ed86bd094c413f277335a7a544a36ceb7383a2ea6e0a3caa97fd3231e4dd.py",
+      "sha256": "6e38ed86bd094c413f277335a7a544a36ceb7383a2ea6e0a3caa97fd3231e4dd"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\svg-native-ppt-core-audit.json",
+      "location": "evidence",
+      "original": "deck-build-result.json",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\203206f21a0a49030fa0a1f8babef6ff86651c8b408110ee6584af7a685e63f2.json",
+      "sha256": "203206f21a0a49030fa0a1f8babef6ff86651c8b408110ee6584af7a685e63f2"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\svg-native-ppt-core-audit.json",
+      "location": "evidence",
+      "original": "deck-build.log",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\36f192934702818860a790b408b6237357db9aa5e481387e11f260ebf26c3613.log",
+      "sha256": "36f192934702818860a790b408b6237357db9aa5e481387e11f260ebf26c3613"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\svg-native-ppt-core-audit.json",
+      "location": "evidence",
+      "original": "client-native-workspace.js",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\6d54f645529b19519f8b514a7d4ff4f47f162b1e4de7d9e1e13b94368bf54cb7.js",
+      "sha256": "6d54f645529b19519f8b514a7d4ff4f47f162b1e4de7d9e1e13b94368bf54cb7"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\svg-vector-stage-audit.json",
+      "location": "evidence",
+      "original": "svg-vector-browser.json",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\4c1f5014c12cbc88d13fb1f92fab0e749e3cbc4249edb55a0672f52e6eb0db7e.json",
+      "sha256": "4c1f5014c12cbc88d13fb1f92fab0e749e3cbc4249edb55a0672f52e6eb0db7e"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\svg-vector-stage-audit.json",
+      "location": "evidence",
+      "original": "svg-vector-browser.log",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\68b3b1e1d1599bc263d323436d501ba67380283eb7e0dc9547d6d9a3d723ccad.log",
+      "sha256": "68b3b1e1d1599bc263d323436d501ba67380283eb7e0dc9547d6d9a3d723ccad"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\svg-vector-stage-audit.json",
+      "location": "evidence",
+      "original": "svg-vector-before.vectorcraft",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\45349af4eaa22488b800b3bcdcf434a671d7d3ceea5e1efb699a553d234add22.vectorcraft",
+      "sha256": "45349af4eaa22488b800b3bcdcf434a671d7d3ceea5e1efb699a553d234add22"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\svg-vector-stage-audit.json",
+      "location": "evidence",
+      "original": "svg-vector-after.vectorcraft",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\b9b623b00bb8c168bb19b04d7752613cd3b95318c8670079825839e6b760ccf6.vectorcraft",
+      "sha256": "b9b623b00bb8c168bb19b04d7752613cd3b95318c8670079825839e6b760ccf6"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\svg-vector-stage-audit.json",
+      "location": "evidence",
+      "original": "svg-vector-after.svg",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\941fc8634d688020414587ff921e2ae2c907b32dfb568a8e28463bc8a645ecf4.svg",
+      "sha256": "941fc8634d688020414587ff921e2ae2c907b32dfb568a8e28463bc8a645ecf4"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\svg-vector-stage-audit.json",
+      "location": "evidence",
+      "original": "vector-build-result.json",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\4f756730fd96c34611ea9a131c19d32dc8754e617d4ccea9762a68b1518bfe26.json",
+      "sha256": "4f756730fd96c34611ea9a131c19d32dc8754e617d4ccea9762a68b1518bfe26"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\svg-vector-stage-audit.json",
+      "location": "evidence",
+      "original": "vector-build.log",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\fe7d8f284b3bdc2f6ad57e2da543b027a82bbb3d9b4bd9652a19da40c34c3a57.log",
+      "sha256": "fe7d8f284b3bdc2f6ad57e2da543b027a82bbb3d9b4bd9652a19da40c34c3a57"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\svg-vector-stage-audit.json",
+      "location": "evidence",
+      "original": "client-native-workspace.js",
+      "archive": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\historical\\379e739b071e94f8174d0afa6dd1b80d8acdc5e669a616852d33b622b5ea3191.js",
+      "sha256": "379e739b071e94f8174d0afa6dd1b80d8acdc5e669a616852d33b622b5ea3191"
+    }
+  ],
+  "hashMismatches": [
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\instance-stage-audit.json",
+      "location": "evidence",
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\deck-host-build.json",
+      "bytes": 5785,
+      "expected": "ee04bba00249b1af9035e1bbd949b15f7869d236ff15693b1152dc21d560200f",
+      "actual": "54ac14dbc5b4b6f3881eae5a8d3dd0780a6ca368c9405837e457b12ef6d4d769"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\mixed-instance-stage-audit.json",
+      "location": "evidence",
+      "file": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\vector-host-build.json",
+      "bytes": 4320,
+      "expected": "4177c57c723a4d8d92ecedda9faf53e9a96a3f73929dc0680bf1ebc41c6a4751",
+      "actual": "8184ed2d30c2142d41a5e960727eed1fb1878235c7fa40a12d964741b48b713b"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\opendesign-model-audit.json",
+      "location": "codeAudit",
+      "file": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\host\\open-design-library.js",
+      "bytes": null,
+      "expected": "cabe0b4cc190bac06da95bdc3bad02fd46dcd013e9f7bf8928c5725625dc77c4",
+      "actual": "4efb209cc58aeb9ac29c89db8c9083db4481a951c0a7c8c0faf0641c88b16f5a"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\opendesign-model-audit.json",
+      "location": "codeAudit",
+      "file": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\host\\open-design-tools.js",
+      "bytes": null,
+      "expected": "f9dc41eacc544466bad95e2594c60b83dbe7b882202a519ab6cd1127c518120c",
+      "actual": "1fa01c9107249cc84c76aa9c5ab09adf36aaf8bcfcbf9b230f620b288a944433"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\opendesign-model-audit.json",
+      "location": "codeAudit",
+      "file": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\host\\index.js",
+      "bytes": null,
+      "expected": "46c5cee5dfb04b5ada9c98a6d073729ce0de3bab28d20630e5cac267f032b7d4",
+      "actual": "a5810fb3dc4da490b220724aa4621af3b7115060ee622a256ce6b209c2d36b47"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\opendesign-model-audit.json",
+      "location": "codeAudit",
+      "file": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\host\\dsh-tools.js",
+      "bytes": null,
+      "expected": "20ed6ff91b6cc44eaa90021e9a250d3be27dcabbf1156e1ae91647e891862608",
+      "actual": "20197ab54e0e2c89d4a281e79ae4f6c9ab9434a38c0fd3e6ec9c064b0b90a03a"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\svg-deck-stage-audit.json",
+      "location": "evidence",
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\svg-deck-after.pptx",
+      "bytes": 36175,
+      "expected": "aaa318e98f311a0fcc3e6a5a7afb673db5ea27822cfb493581780a6746e6411a",
+      "actual": "c70e507947a1575cbf904922d6debd3be1d7d9a0fb6c936d967b75f3a9636636"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\svg-inplace-core-audit.json",
+      "location": "evidence",
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\svg-deck-browser.json",
+      "bytes": 4850,
+      "expected": "a857573030bd6c8a47a32228375b4a1a19a68e53adc04f603095bf6a2a44295c",
+      "actual": "025314bb6736988fce50a1932574298d6eff8cd3d3eea293de1214829841204f"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\svg-inplace-core-audit.json",
+      "location": "evidence",
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\svg-deck-browser.log",
+      "bytes": 317,
+      "expected": "79f63cd83486bdbd0ded3d1c7635f156a54c79d4dc16f1220344e1d862c3d4c3",
+      "actual": "4e8670d9cb4afaf6ef20478d31bcbbf75a04810cfa2d1d8d3656b29ee9d83d2a"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\svg-inplace-core-audit.json",
+      "location": "evidence",
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\svg-deck-after.pptx",
+      "bytes": 36513,
+      "expected": "6fa43c0c96130008d9d971027fc1c78addebc2af24c5f45c4867eef0c28af09b",
+      "actual": "c70e507947a1575cbf904922d6debd3be1d7d9a0fb6c936d967b75f3a9636636"
+    }
+  ],
+  "unresolvedFileReferences": [
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\mixed-instance-stage-audit.json",
+      "location": "evidence",
+      "file": "native-vector8-source/crates/text/build/web_fonts.rs",
+      "bytes": 4724,
+      "expected": "59197fff8c7b185c3387515fd87bb06f66232f8cebab9be4cb0c9bb9684d8263"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\mixed-instance-stage-audit.json",
+      "location": "evidence",
+      "file": "native-vector8-source/LICENSE-MIT",
+      "bytes": 1103,
+      "expected": "8b6025dc4b707e0fb08b9c2054096f1be3ae61529399aa2c348dec676562dc71"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\mixed-instance-stage-audit.json",
+      "location": "evidence",
+      "file": "native-vector8-source/LICENSE-APACHE",
+      "bytes": 10174,
+      "expected": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\mixed-instance-stage-audit.json",
+      "location": "evidence",
+      "file": "native-vector8-source/NOTICE",
+      "bytes": 8174,
+      "expected": "ffb54183b2b44903f64736cdc9b50abb834ee6dac7059d2c9631692dd13c754b"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "file": "verification-scripts/vector-host-sources.json",
+      "bytes": 1029,
+      "expected": "afaeae45b0c343bc0c4830129ed1360d9eb5d7cb7ecc0b4ec7026d6b9efdf616"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "file": "verification-scripts/deck-host-sources.json",
+      "bytes": 1089,
+      "expected": "75d5f8ad0f5c5499a55c859adabb9ceff5ab69bae992eb7e75d27a78c7ec654a"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "file": "product-source/host/material-origin.js",
+      "bytes": 3511,
+      "expected": "d738b7450a162d553f4afcad5b7c1dde61c9b7ec52754dfa70cb868456e178e4"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "file": "product-source/host/native-source-store.js",
+      "bytes": 16355,
+      "expected": "5563bc045bbffdf9f303a51713c551d41fef9a319f1f4c6903b65bb2cb5f8ed2"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "file": "product-source/host/native-vector-header.js",
+      "bytes": 6408,
+      "expected": "8cac1030e7a0754e88810d58e0191ef0eba6fc567f2432edc61b259e4cc7b380"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "file": "product-source/host/native-deck-header.js",
+      "bytes": 4379,
+      "expected": "ce61bbf5f6eaff550d5c3ae9cce85ae9e076fd7ec97168884468d8aabfb4ac8d"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "file": "product-source/host/linked-updates.js",
+      "bytes": 7486,
+      "expected": "0e6a2d22dcfe9b37f9cdf4888fd2f59eea8833dd2884607c6f3a0813ca42d375"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "file": "product-source/tests/material-origin.test.mjs",
+      "bytes": 3515,
+      "expected": "7172db38eede19323476c6288c7ada3b93a65eac273b4ce7123f5667824e4e16"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "file": "product-source/tests/origin-sync.test.mjs",
+      "bytes": 10240,
+      "expected": "63e5ffe8b8c03dd276536434fc8a067fa7cad14baffcdb073d9c16123ac41e20"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "file": "product-source/tests/project-graph.test.mjs",
+      "bytes": 7857,
+      "expected": "25956751a5a6c187382db5976af8f957fdb022ddc1336be969e267a5637a1ff9"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "file": "product-source/tests/instance-fork.test.mjs",
+      "bytes": 5712,
+      "expected": "ed2ae7dfa18464f24dce03b337c71b20875faaa705503b31f6803cd8ec933866"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "file": "product-source/tests/linked-update.test.mjs",
+      "bytes": 7559,
+      "expected": "ad5a09d13aebbb76c66ed6a057675a178f2afde3b665cf91520a294defb4cf0a"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "file": "product-source/tests/vector-apply-storage.test.mjs",
+      "bytes": 4113,
+      "expected": "ec29ee4b01de7c7c88ae0e8d7e45ede842f7fb53349b3599d91bac10be41be1d"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "file": "product-source/THIRD_PARTY_NOTICES.md",
+      "bytes": 2640,
+      "expected": "db3c03f21519da742116fc78d27993a768eb23812d8d997469c7e4ffc8947f0f"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "file": "product-source/licenses/getrandom-0.4.3/LICENSE-MIT",
+      "bytes": 1130,
+      "expected": "523a42c25d245dde9c015f882cec7f4555aad883382a6cf19b4b7d9b2cd5419b"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "file": "product-source/licenses/getrandom-0.4.3/LICENSE-APACHE",
+      "bytes": 10849,
+      "expected": "aaff376532ea30a0cd5330b9502ad4a4c8bf769c539c87ffe78819d188a18ebf"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "file": "product-source/licenses/getrandom-0.4.3/source.json",
+      "bytes": 475,
+      "expected": "229f52bc8540723a7bbeafbc8d50c0dd2d6c9e51d7dc7089b8273c906895903e"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "file": "native-source/vectorcraft/crates/text/build/web_fonts.rs",
+      "bytes": 4724,
+      "expected": "59197fff8c7b185c3387515fd87bb06f66232f8cebab9be4cb0c9bb9684d8263"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "file": "native-source/vectorcraft/apps/vectorcraft-web/Cargo.toml",
+      "bytes": 1588,
+      "expected": "8a3912fc1764cd1cf979534910d823b9d3c1d979a48b41888ea3f2d715396d1b"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "file": "native-source/vectorcraft/crates/engine/src/cmd.rs",
+      "bytes": 26972,
+      "expected": "f0b8ee1c033c3750ab6214b08858c85b59f4406d84053faa536a3621d9437731"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "file": "native-source/vectorcraft/crates/engine/src/cmd/edit.rs",
+      "bytes": 52448,
+      "expected": "22828b93c9a9876457d9c0f7a2ff978b85bc17915da0317edf17325ed60b6035"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "file": "native-source/vectorcraft/crates/engine/tests/host_material.rs",
+      "bytes": 5682,
+      "expected": "c74b78903f168847b6aa745985c8d2a156c0542783c1df27a2f958430107f6f8"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "file": "native-source/vectorcraft/LICENSE-MIT",
+      "bytes": 1103,
+      "expected": "8b6025dc4b707e0fb08b9c2054096f1be3ae61529399aa2c348dec676562dc71"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "file": "native-source/vectorcraft/LICENSE-APACHE",
+      "bytes": 10174,
+      "expected": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "file": "native-source/deckcraft/Cargo.toml",
+      "bytes": 5920,
+      "expected": "95e2e1f6cc9eaf8e3f95f43757416df362a3c40b409f4cff704e35c2305a7135"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "file": "native-source/deckcraft/crates/engine/src/fonts.rs",
+      "bytes": 7565,
+      "expected": "1e7db2d436d229d70df5775afb26f7066f4f1744611a8a0fcc2fa8d17405e2d8"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "file": "native-source/deckcraft/crates/ui-egui/src/lib.rs",
+      "bytes": 22723,
+      "expected": "5030b4ae4707627c42ffc3e2f3c5716f426bdb27075787e7845f78e4bf56dab4"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "file": "native-source/deckcraft/crates/ui-egui/src/app.rs",
+      "bytes": 15772,
+      "expected": "d298bfaf00c97f5fcf8632b867933397364057128eca629ccb5ce9a90ab8f290"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "file": "native-source/deckcraft/crates/ui-egui/src/app/commands.rs",
+      "bytes": 14714,
+      "expected": "fb054a7155a070980d1f8cde47e2ac43e9816679d336d21d88c66414ef1d807e"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "file": "native-source/deckcraft/crates/ui-egui/src/app/frame.rs",
+      "bytes": 4942,
+      "expected": "440150433ea988d5c9183ead83ad2e06e3d507dc808dd8ef1063b6144a696800"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "file": "native-source/deckcraft/crates/fonts/build.rs",
+      "bytes": 25854,
+      "expected": "692cbe7723d5860c3b35816c5a274ae04919d80d6147cdf7d6288bb429f45bdf"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "file": "native-source/deckcraft/apps/deckcraft-web/src/api.rs",
+      "bytes": 5007,
+      "expected": "0430364aaabaa18748249fa84a3d27815eca0450dfc85b07043ae9bae41d8b83"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "file": "native-source/deckcraft/apps/deckcraft-web/Trunk.toml",
+      "bytes": 199,
+      "expected": "a996cb61144f4f961e8a44d8df04ef329620c12928aea4a4f328d1fcaf055ec8"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "file": "native-source/deckcraft/crates/engine/src/cmd/artistic.rs",
+      "bytes": 8884,
+      "expected": "006743ed76a3a63be3c66646136651182b9ae93be69f2feb9d01c0b49138fcdd"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "file": "native-source/deckcraft/crates/engine/src/cmd/shape/picture_replace_tests.rs",
+      "bytes": 7537,
+      "expected": "6363798988211eef3feb26b12a2abf122863c05fa0b0a5543e95097fd8ac4b55"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "file": "native-source/deckcraft/crates/engine/src/cmd.rs",
+      "bytes": 29789,
+      "expected": "87dd83b430a171883a9ed17142cd837b29433dea65f270a3615d87e3b038bb2b"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "file": "native-source/deckcraft/crates/engine/src/cmd/insert/picture.rs",
+      "bytes": 12088,
+      "expected": "ec08befc1fdefdaddbf75fa9e408300f7045cd896674adcaf97160c413375a66"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "file": "native-source/deckcraft/crates/engine/tests/host_material.rs",
+      "bytes": 5407,
+      "expected": "6ad1e44b958484c36424e35ad438b1788aa8451a8ce8176c66d7997d266fbe2b"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "file": "native-source/deckcraft/LICENSE-MIT",
+      "bytes": 1101,
+      "expected": "90e96fef569474cd526350e716e4b05dd32f179ca96d39d61e6b928485e35406"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\native-origins-stage-audit.json",
+      "location": "evidence",
+      "file": "native-source/deckcraft/LICENSE-APACHE",
+      "bytes": 10174,
+      "expected": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\svg-deck-stage-audit.json",
+      "location": "evidence",
+      "file": "host-native-deck-header.js",
+      "bytes": 5534,
+      "expected": "c7b3d0f0ad14f82ee2e9417da6b0bcca64c77f51c5e345d4b9346a5f623d3033"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\svg-deck-stage-audit.json",
+      "location": "evidence",
+      "file": "host-project-graph.js",
+      "bytes": 48886,
+      "expected": "500c69b3483d2a10450d40d14e2eb3212fd43c14ee86589e3b04933e7b620375"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\svg-deck-stage-audit.json",
+      "location": "evidence",
+      "file": "host-editor-session.js",
+      "bytes": 50417,
+      "expected": "7150da18a2f377de5c1d8af1c2a21069d31d8bf3ce84ecda579d0ec5086d5bf0"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\svg-deck-stage-audit.json",
+      "location": "evidence",
+      "file": "host-editor-routes.js",
+      "bytes": 8216,
+      "expected": "452310a6c043cbaf86121d55d8ed97de3075bc9c2d95822fe07366e4a2e477ff"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\svg-deck-stage-audit.json",
+      "location": "evidence",
+      "file": "native-controller.js",
+      "bytes": 72456,
+      "expected": "98aba554b35d201b1c4498a65705218ac6680ca8264ed7b76701b2f8b093e42c"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\svg-deck-stage-audit.json",
+      "location": "evidence",
+      "file": "native-workspace.js",
+      "bytes": 33976,
+      "expected": "fbc1c987f665bb9106faaca0240c239396698b7ac9a10fc506fc899afd8545ba"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\svg-inplace-core-audit.json",
+      "location": "evidence",
+      "file": "host-native-vector-header.js",
+      "bytes": 12037,
+      "expected": "dae61990309a30de76506605c1690001a899cb5f45f96b8f6d3f6938e0fe2099"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\svg-inplace-core-audit.json",
+      "location": "evidence",
+      "file": "host-native-vector-legacy.js",
+      "bytes": 3551,
+      "expected": "ab491ed2f53038e82233f840578b669aa1be075b4c185b1ef0947d8823c84748"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\svg-inplace-core-audit.json",
+      "location": "evidence",
+      "file": "host-project-graph.js",
+      "bytes": 53872,
+      "expected": "6704973575c8622e8da79a7af4b2e2fe25012735e3bc3b9f10983d746a36517d"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\svg-inplace-core-audit.json",
+      "location": "evidence",
+      "file": "host-native-source-store.js",
+      "bytes": 16587,
+      "expected": "6c3405292ff07504ca8099bc0d7f36a935e5f647af7f3c29813981d13445cd7f"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\svg-inplace-core-audit.json",
+      "location": "evidence",
+      "file": "host-editor-session.js",
+      "bytes": 51720,
+      "expected": "d7ea718048a2aa9f8e673f1cad107f13dccddde80422299536b2fe045a973cfa"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\svg-inplace-core-audit.json",
+      "location": "evidence",
+      "file": "host-editor-routes.js",
+      "bytes": 8449,
+      "expected": "5dc5782b95dd0d9a0cec27bdd2ed4663b2c45c7c6470f0c657926c971deaa4b0"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\svg-inplace-core-audit.json",
+      "location": "evidence",
+      "file": "client-native-controller.js",
+      "bytes": 74915,
+      "expected": "dd7feb5b0d58d2f6931eb79517679e82bac965c2c33b04970fc72881d489ba4c"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\svg-linked-stage-audit.json",
+      "location": "evidence",
+      "file": "host-native-deck-header.js",
+      "bytes": 6967,
+      "expected": "c04b881d049460caea4f107ec8f7549a02facc956122511d1f4683804f22884c"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\svg-linked-stage-audit.json",
+      "location": "evidence",
+      "file": "host-native-vector-header.js",
+      "bytes": 12266,
+      "expected": "7b2c8cb421319a37162410827b236b81133618bd2839cd33aa3e90ceaa347ed8"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\svg-linked-stage-audit.json",
+      "location": "evidence",
+      "file": "host-project-graph.js",
+      "bytes": 57550,
+      "expected": "bf0c6909722661010f86aaba68a5b63051c576a1770480cd7bd0197dbbfc9d53"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\svg-linked-stage-audit.json",
+      "location": "evidence",
+      "file": "tests-svg-linked-mixed.test.mjs",
+      "bytes": 6617,
+      "expected": "4b644b1f3ed0e5e705175bb119b32e34c2d49ff8a998e4f8152953c7235cf3a8"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\svg-linked-stage-audit.json",
+      "location": "evidence",
+      "file": "tests-deck-svg-header.test.mjs",
+      "bytes": 4243,
+      "expected": "a0143dfaca8e2f2bf4669f91ab81586e9f8d2fe9ec29847f0091b75e90e6b133"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\svg-linked-stage-audit.json",
+      "location": "evidence",
+      "file": "tests-vector-embedded-svg-header.test.mjs",
+      "bytes": 3479,
+      "expected": "c1109ee09d108605e82788e01c27d4f1ad52373755ed71aa628e47fb39a21c55"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\svg-native-ppt-core-audit.json",
+      "location": "evidence",
+      "file": "host-native-deck-conversion.js",
+      "bytes": 4382,
+      "expected": "22ad590645d9db3e8e507fd605c67af0be7f50162257c749a8003b1ddfe1df73"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\svg-native-ppt-core-audit.json",
+      "location": "evidence",
+      "file": "host-project-graph.js",
+      "bytes": 56988,
+      "expected": "b477350b5f69f784cff0f7b0bfb1c111826a197f27dc13ef6c1679643be03107"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\svg-native-ppt-core-audit.json",
+      "location": "evidence",
+      "file": "host-native-source-store.js",
+      "bytes": 17601,
+      "expected": "93cab4de0f980464ec79a206905153bef3ec8a6b9e07affe68664f24478a2f30"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\svg-native-ppt-core-audit.json",
+      "location": "evidence",
+      "file": "host-editor-session.js",
+      "bytes": 59963,
+      "expected": "c40e2d1bfeec7408d0dcd4b313cd25b2e8b4833365dde14529b72e7ccf703025"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\svg-native-ppt-core-audit.json",
+      "location": "evidence",
+      "file": "host-editor-routes.js",
+      "bytes": 8753,
+      "expected": "14c86d773aa7f0ff8ea80953549974c8e3117d8dccd130094877bc95a8e326e9"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\svg-native-ppt-core-audit.json",
+      "location": "evidence",
+      "file": "host-editor-tools.js",
+      "bytes": 7671,
+      "expected": "c3e2ef432616f80f2021b2a626fe0c4e177df581b850421b82ae4d1b8fa333a7"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\svg-native-ppt-core-audit.json",
+      "location": "evidence",
+      "file": "host-editor-policy.js",
+      "bytes": 2141,
+      "expected": "ca93aa7843bc4cd45ab3a179cf02102ad4b92cda65de6a9fce3b4363dca4e41d"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\svg-native-ppt-core-audit.json",
+      "location": "evidence",
+      "file": "client-native-controller.js",
+      "bytes": 79747,
+      "expected": "c9c79382ab91e0dff0482e4fd4facae22fb30366b4a65596e07895355de275ab"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\svg-native-ppt-core-audit.json",
+      "location": "evidence",
+      "file": "native-svg_convert.rs",
+      "bytes": 30895,
+      "expected": "b9cf30f24664370337fe8b0bb16dddc4c30dabe6aa745128b6372e81e7d9715a"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\svg-vector-stage-audit.json",
+      "location": "evidence",
+      "file": "host-native-vector-header.js",
+      "bytes": 10002,
+      "expected": "5e182dbac95f88cd1db96fca3a6e8ff85408c7658537f2dbf1a8bb46da2c41b0"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\svg-vector-stage-audit.json",
+      "location": "evidence",
+      "file": "host-project-graph.js",
+      "bytes": 50290,
+      "expected": "99b5068e1621ba05388c9fa3d7bdc9a0e5d34de309a2ce5168fe5e6c39fbd7fb"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\svg-vector-stage-audit.json",
+      "location": "evidence",
+      "file": "host-editor-routes.js",
+      "bytes": 8348,
+      "expected": "75a750b7c16e4904a86cf8aa31b197aa1c15ff91b861cce27330599abc3ff2cd"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\svg-vector-stage-audit.json",
+      "location": "evidence",
+      "file": "client-native-controller.js",
+      "bytes": 73908,
+      "expected": "360cb7f31e90bb4d1060a90eee256dcba4ea8badf10475c94947f9010e58ddf8"
+    }
+  ],
+  "historicalSourceSnapshotsNotComparedToCurrentFiles": [
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\instance-stage-audit.json",
+      "file": "host/native-source-store.js",
+      "sha256": "1cacabcfe1a9fb0a95ad9d4d0a13fd3f31ca0051b23f71e87f4fe2d682d1b14a"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\instance-stage-audit.json",
+      "file": "host/project-graph.js",
+      "sha256": "99df7eb342837d5722d47c30603a4e689cb3708ed5cd5eb68d643cfef9e3f8bb"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\instance-stage-audit.json",
+      "file": "host/native-deck-header.js",
+      "sha256": "5cd297044144aa751d3472e338e5f8e3c9ba20519bc7dc1103edebf5052b656a"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\instance-stage-audit.json",
+      "file": "host/linked-updates.js",
+      "sha256": "bd400444810e0c553f76ebed7932706fa46d6588fe17ec0a3b68dd6eed35ed39"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\instance-stage-audit.json",
+      "file": "host/editor-session.js",
+      "sha256": "999fcb4175e305c4b7dd41de315d4fdd8f852df1da62d2573d1a59eca32a6ce7"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\instance-stage-audit.json",
+      "file": "host/editor-routes.js",
+      "sha256": "9732494290832bd783820125612b3e9648f128a169dfb1f0c630aaee9194785b"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\instance-stage-audit.json",
+      "file": "host/editor-tools.js",
+      "sha256": "c8e5e08e21de89492ddec471931b08f25ae9fb86c54dc3786e4acd7e14f5adbc"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\instance-stage-audit.json",
+      "file": "client/native-controller.js",
+      "sha256": "a4b8ec5517956e06ea01a0ae5c6906801a694b38f9b022f81acd9eb43cceb418"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\instance-stage-audit.json",
+      "file": "client/native-workspace.js",
+      "sha256": "4d4ab426b52e81049ae325994f2323788938a69c3be48bd110130a209cc34a64"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\instance-stage-audit.json",
+      "file": "tests/instance-fork.test.mjs",
+      "sha256": "ed2ae7dfa18464f24dce03b337c71b20875faaa705503b31f6803cd8ec933866"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\instance-stage-audit.json",
+      "file": "tests/linked-update.test.mjs",
+      "sha256": "423b41efff3242b6d2808884f368ac38fa753ad9c12fcf64962de6d938662fcc"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\instance-stage-audit.json",
+      "file": "tests/native-deck-header.test.mjs",
+      "sha256": "4a58d9d516ffdcd0e1a45ff83cc97ec78d94c3a8e0f4699f0a1e5d6f6fcfd3a3"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\mixed-instance-stage-audit.json",
+      "file": "host/native-vector-header.js",
+      "sha256": "27daa648e1088e9e7997f6bc457483df1f5d12d3f42caad721eec76af9aded48"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\mixed-instance-stage-audit.json",
+      "file": "host/project-graph.js",
+      "sha256": "eb414baf01d82167f7ffa9f091cc375e82f45e2794e71d39ae482a17fbd657fc"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\mixed-instance-stage-audit.json",
+      "file": "host/linked-updates.js",
+      "sha256": "f7522dc1808474eefde603aa3ff9e602899e53ad0e1239120ede3b51563d8352"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\mixed-instance-stage-audit.json",
+      "file": "host/native-source-store.js",
+      "sha256": "1cacabcfe1a9fb0a95ad9d4d0a13fd3f31ca0051b23f71e87f4fe2d682d1b14a"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\mixed-instance-stage-audit.json",
+      "file": "host/editor-session.js",
+      "sha256": "999fcb4175e305c4b7dd41de315d4fdd8f852df1da62d2573d1a59eca32a6ce7"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\mixed-instance-stage-audit.json",
+      "file": "host/editor-routes.js",
+      "sha256": "9732494290832bd783820125612b3e9648f128a169dfb1f0c630aaee9194785b"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\mixed-instance-stage-audit.json",
+      "file": "host/editor-tools.js",
+      "sha256": "fc5285cafc32b341245a054cc8c8726cbe9fef498b0e7a5f2fcb1ca6247101b4"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\mixed-instance-stage-audit.json",
+      "file": "client/native-controller.js",
+      "sha256": "dad3ce048a3300c8d4fd677a20a64035b8386381373b6c1d04d34bea367233a2"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\mixed-instance-stage-audit.json",
+      "file": "client/native-workspace.js",
+      "sha256": "4d4ab426b52e81049ae325994f2323788938a69c3be48bd110130a209cc34a64"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\mixed-instance-stage-audit.json",
+      "file": "web-runtime-lock.json",
+      "sha256": "81cba296a9ce7963e28a33810abc505cc0ed29a85774e8a94ac0794508060fdc"
+    }
+  ],
+  "upstreamResourceReferences": [
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\kimi-opendesign-resume.json",
+      "file": "DESIGN.md",
+      "sha256": "3c8c80294a48d3295738d8575e93f0cd5d85f092eae3fc9e192cb39864f0453b"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\kimi-opendesign-resume.json",
+      "file": "manifest.json",
+      "sha256": "8d6989073a79c6733838c13b3cd4f2f8bd37d1b502dbe22b61ffc1d0dfac322a"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\kimi-opendesign-resume.json",
+      "file": "design-tokens.json",
+      "sha256": "6573ae98648ad98c81fbf3e6b0c257c6f155ab0d1bb83570c106156e1d1e9143"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\kimi-opendesign-resume.json",
+      "file": "design-tokens.json",
+      "sha256": "6573ae98648ad98c81fbf3e6b0c257c6f155ab0d1bb83570c106156e1d1e9143"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\kimi-opendesign-resume.json",
+      "file": "SKILL.md",
+      "sha256": "7109e64b8f9e7154d4c688ec38058567d78df53025ada0adbf3b2e1f40e87384"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\opendesign-source-fetch.json",
+      "file": "SKILL.md",
+      "sha256": "7109e64b8f9e7154d4c688ec38058567d78df53025ada0adbf3b2e1f40e87384"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\opendesign-source-fetch.json",
+      "file": "SKILL.md",
+      "sha256": "01866407bf0fc74a7cfac48bd2b4579ea2b1238f4d80bb7a24e698c848168a34"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\opendesign-source-fetch.json",
+      "file": "DESIGN.md",
+      "sha256": "3c8c80294a48d3295738d8575e93f0cd5d85f092eae3fc9e192cb39864f0453b"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\opendesign-source-fetch.json",
+      "file": "USAGE.md",
+      "sha256": "b482cf110efe4d94661e1b6f864fa0fbfa4d07e9f8a1237c85762ac7fa52572e"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\opendesign-source-fetch.json",
+      "file": "components.html",
+      "sha256": "0f3a33584f85a093e15b4242765359c45b86b5595cae55a50cf457fa36dc74f2"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\opendesign-source-fetch.json",
+      "file": "components.manifest.json",
+      "sha256": "6c76ecf4941433225f4a40df0ac81b3484a5656c053965559167733d5756d47c"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\opendesign-source-fetch.json",
+      "file": "design-tokens.json",
+      "sha256": "6573ae98648ad98c81fbf3e6b0c257c6f155ab0d1bb83570c106156e1d1e9143"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\opendesign-source-fetch.json",
+      "file": "manifest.json",
+      "sha256": "8d6989073a79c6733838c13b3cd4f2f8bd37d1b502dbe22b61ffc1d0dfac322a"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\opendesign-source-fetch.json",
+      "file": "preview/colors.html",
+      "sha256": "f95ff3922a52e74bc7c8d40842d6a89a94fdafcd1f3ff6419c6f685b79e832e7"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\opendesign-source-fetch.json",
+      "file": "preview/spacing.html",
+      "sha256": "c15680a80fd23780de385c74196102c40f53887e796b7ae6140f085cff0323d8"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\opendesign-source-fetch.json",
+      "file": "preview/typography.html",
+      "sha256": "d0f7b86a0347baf58cd6ff2c09eabfb9c85274afb36d2c25f535ee2163811f38"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\opendesign-source-fetch.json",
+      "file": "source/evidence.md",
+      "sha256": "e004d26ae7964dc409cf0aadf1a0823c96ec235c9325242a52af44f8f9dbb54d"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\opendesign-source-fetch.json",
+      "file": "source/token-contract.report.json",
+      "sha256": "c2ce7a3eb9d387484ae67c5c8fe1e9eb12d49fdca998b1aca065dd02b152b209"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\opendesign-source-fetch.json",
+      "file": "source/tokens.source.json",
+      "sha256": "964c81c65c1fe88ac14de7141744c13fb4bf96752617cdf88817e64acc5d4c3f"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\opendesign-source-fetch.json",
+      "file": "system/artifacts/deck.html",
+      "sha256": "c4655fff331a289df4cded27954dd0c2f5e4bba62e84779ab5c32bb87534fbed"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\opendesign-source-fetch.json",
+      "file": "system/artifacts/email.html",
+      "sha256": "25bb834f220be789b1d666808991105e1b542ec6ab928b04201f431de6235672"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\opendesign-source-fetch.json",
+      "file": "system/artifacts/form.html",
+      "sha256": "ddfa0a7ff68f9d7e5d90d056c63dfec24b23bad2bccf3aff6f52e758311c3621"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\opendesign-source-fetch.json",
+      "file": "system/artifacts/landing.html",
+      "sha256": "b83b5cf22f8367f2c76e49649f30ece769e7cf39a8d49c27f29a66e17312c311"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\opendesign-source-fetch.json",
+      "file": "system/artifacts/newsletter.html",
+      "sha256": "2132588752f88c67420f67419bb4479b79b60a594251d1b6dcf80b66e6ba2b44"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\opendesign-source-fetch.json",
+      "file": "system/artifacts/poster.html",
+      "sha256": "9a0c511a651edd840dab4a0907fdb16e3fcb9a6ba520af85b92d640d97e0dab8"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\opendesign-source-fetch.json",
+      "file": "system/index.html",
+      "sha256": "f1b82607be40c399daf600ca2f11353a7d202adbf92db5d76cccc629bdb66b2f"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\opendesign-source-fetch.json",
+      "file": "system/kit.dark.html",
+      "sha256": "55b69085a589764ff19ef1ab1e19b139e40a37db32692f779ac5068fd1b84f5b"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\opendesign-source-fetch.json",
+      "file": "system/kit.html",
+      "sha256": "f69b7cae929af904e5485c66299bd8c7599623c77df50b84b13aad400ef0407c"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\opendesign-source-fetch.json",
+      "file": "system/tokens.default.json",
+      "sha256": "b1b45eb90f18734a6bc2fbc90da9ef9687a4e3fd9c99afc0dfa3f711c7d7b017"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\opendesign-source-fetch.json",
+      "file": "tailwind-v4.css",
+      "sha256": "a7b994dcb47b5b3e53f25f2b1de2bac12e2db95e8d09237a3d115e26806ece0b"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\opendesign-source-fetch.json",
+      "file": "tokens.css",
+      "sha256": "4f9e32beb95f1e701146b6023fb96300df51254e50c7a558bd38c161199e0f12"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\ui45-od-import-acceptance.json",
+      "file": "assets/icon.svg",
+      "sha256": "534da2592db7c261dc27c42b9bb94f56e3d49832cacb449e03f55a389c5bcf41"
+    },
+    {
+      "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\ui45-od-import-acceptance.json",
+      "file": "scripts/verify-output/animation-showcase/animation-showcase_01.png",
+      "sha256": "fcbe8582141463fed44b4b430f3592a2513968ae48f1e4c4929afc61c4d45b06"
+    }
+  ]
+}

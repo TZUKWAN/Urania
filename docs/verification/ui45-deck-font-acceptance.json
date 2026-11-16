@@ -1,0 +1,44 @@
+{
+  "status": "passed_scoped",
+  "at": "2026-11-08T09:40:32.223876+00:00",
+  "scope": "Owned DSH, actual Deck host9 native/PPTX interchange with samples of editable structured content, embedded font, unavailable font and media.",
+  "checks": [
+    "actual Inter embedded font and editable text survive native save/reopen, PPTX export and reimport",
+    "unavailable family is reported in visible import notice and retained in the native source",
+    "physical keyboard edited an actual native table cell",
+    "registered native chart data operation changed the structured chart",
+    "native source reopened and python-pptx read real table, chart and edited values",
+    "exported PPTX reimported as structured objects; table keyboard edit and chart data edit remained possible",
+    "actual WAV and H264/AAC media embedded byte-for-byte in native source",
+    "actual WebAudio output callback emitted nonzero samples while muted externally",
+    "native source and exported PPTX reopen with the original audio and video bytes"
+  ],
+  "fontSha256": "3852d71b2bab165ef4dbb339d6ba7b3522499afe0e3b05fca32e8aa649ebe99e",
+  "missingFont": "DesignCraftMissingFont-84D20C",
+  "missingFontWarnings": [
+    "Fonts unavailable for rendering: DesignCraftMissingFont-84D20C"
+  ],
+  "pptx": {
+    "file": "verification/ui45-deck-font-roundtrip.pptx",
+    "sha256": "f2d4686f633893a9d3938ee72d2bddf1124a95646d0192cb896c799f759f16df"
+  },
+  "rawEvidence": [
+    {
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-deck-font-roundtrip.json",
+      "sha256": "19c6982233ce800c71001595db3f7c65d243c6098c39647b49cebba8f85c43f8"
+    },
+    {
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-deck-structured.json",
+      "sha256": "3bbbe4cdb108d5397a98131666fcb9e448fcffc211e0c9b5c7c8bc7caea545a3"
+    },
+    {
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-deck-media-host9.json",
+      "sha256": "edbbd31a312181baa25fd327e7e95f5682e9073243ea4c436c99b31d0941cacc"
+    }
+  ],
+  "limits": [
+    "Samples cover an embedded Inter face, one unavailable family, one editable table and chart, one WAV and one H264/AAC file.",
+    "Font appearance and playback in external PowerPoint/Office installations, other codecs, and every font or structure subtype were not tested.",
+    "Advanced presentation semantics remain separately tracked under E3."
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "name": "designcraft",
+  "version": "1.3.0-dev.148",
+  "designcraftUiBuild": 163,
+  "description": "Urania — unified AI-native design workspace (images, PPT, vector, motion video) for DSH, with revisioned collaboration and pinned open-source engines/resources.",
+  "type": "module",
+  "license": "MIT",
+  "author": "DesignCraft for DSH",
+  "exports": {
+    ".": "./host/index.js",
+    "./client": "./client/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "host",
+    "client",
+    "motion-worker",
+    "skills",
+    "resources",
+    "docs",
+    "runtimes",
+    "runtime-lock.json",
+    "web-runtime-lock.json",
+    "icon.svg",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE",
+    "licenses",
+    "THIRD_PARTY_NOTICES.md",
+    "VERIFICATION.json",
+    "tests/*.test.mjs",
+    "tests/run-current.mjs",
+    "tests/check-source.mjs",
+    "tests/fixtures"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  },
+  "os": [
+    "win32"
+  ],
+  "cpu": [
+    "x64"
+  ],
+  "scripts": {
+    "test": "node tests/run-current.mjs",
+    "check": "node tests/check-source.mjs",
+    "build:runner": "pwsh -NoProfile -File runtimes/build-runner.ps1"
+  },
+  "displayName": "Urania"
+}

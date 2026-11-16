@@ -1,0 +1,45 @@
+{
+  "status": "passed",
+  "scope": "actual registered DSH resource tool + pinned primary-source bytes + unchanged continuous native App; no LLM",
+  "codeRoot": "D:\\METIS超级合并\\dsh-plugin\\designcraft",
+  "checks": [
+    {
+      "name": "actual registered DSH tool searches the pinned original system and returns all 24 source files without claiming execution",
+      "pass": true,
+      "detail": {
+        "id": "design-systems/corporate",
+        "revision": "12d970eacc8971150e3c76470d2a9afe16dc2ed1",
+        "files": 24,
+        "workflowReady": false
+      }
+    },
+    {
+      "name": "actual DSH resource reads reconstruct the exact primary-source token file across a page boundary",
+      "pass": true,
+      "detail": {
+        "bytes": 20280,
+        "sha256": "6573ae98648ad98c81fbf3e6b0c257c6f155ab0d1bb83570c106156e1d1e9143",
+        "gitSha1": "8f89d482b38661587bc6041c1eade1d39206f2c0"
+      }
+    },
+    {
+      "name": "a real catalogue-only skill explicitly reports its missing external original bundle instead of claiming the full skill runs",
+      "pass": true,
+      "detail": {
+        "id": "skills/canvas-design",
+        "catalogueEntryOnly": true,
+        "requiredExternalBundle": "https://github.com/anthropics/skills/tree/main/skills/canvas-design",
+        "sha256": "01866407bf0fc74a7cfac48bd2b4579ea2b1238f4d80bb7a24e698c848168a34"
+      }
+    },
+    {
+      "name": "resource/path failure and successful reads change neither the current native App nor its exact saved design",
+      "pass": true,
+      "detail": {
+        "sourceRevision": "b43410278395cfd5e25d6aa3882941f001aa8ff46d4684c5767c59bd98e48cad",
+        "deniedStatus": 404
+      }
+    }
+  ],
+  "pageErrors": []
+}

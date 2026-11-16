@@ -1,0 +1,312 @@
+{
+  "status": "verified_scoped_new_svg_poster_inplace",
+  "asOf": "2026-11-05T05:12:04.744471+00:00",
+  "fullScopeComplete": false,
+  "scope": "New embedded SVG source placed in Vector poster; independent native duplicate, real path edit, same-object apply, visual change and preserved other uses and outer properties; physical undo/redo, vector export, and fresh reopen.",
+  "installedDisk": {
+    "plugin": "1.3.0-dev.12",
+    "uiBuild": 26,
+    "vector": "0.19.0+designcraft.host11",
+    "photo": "0.18.0+designcraft.host3",
+    "deck": "0.13.1+designcraft.host5"
+  },
+  "userWindowVersion": "unverified; user desktop and process were not controlled or restarted",
+  "actualUi": {
+    "status": "passed",
+    "scope": "real Vector source and poster, independent duplicate, same-object SVG apply/undo/redo, native/SVG/PNG and reopen; no user desktop/OS clipboard/model",
+    "root": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\svg-vector-inplace\\58c1005c-dedc-412e-91af-a9b1b647c249",
+    "owned": {
+      "workspaceId": "513f05e2-b176-429a-aabe-a93c50333f1e",
+      "sessionId": "PUBLIC-REDACTED"
+    },
+    "checks": [
+      {
+        "name": "two uses and native copy are independent",
+        "detail": {
+          "copyId": "6",
+          "originalAsset": "asset-78894f73-1126-40e8-84d8-1fb1d746d597"
+        }
+      },
+      {
+        "name": "same native object changed with layout and other uses retained",
+        "detail": {
+          "editedAsset": "asset-a7f46732-8887-4e1e-ad75-b6429dbd36d8",
+          "renderedPixelDifference": [
+            263,
+            171,
+            337,
+            244
+          ]
+        }
+      },
+      {
+        "name": "physical undo/redo, vector export and fresh reopen succeed",
+        "detail": {
+          "sameObject": "6",
+          "sourceHash": "237e456e26a4bbef3777c4751c5d555d24c9e13068256c3f3e0bc2b43be304b9"
+        }
+      }
+    ],
+    "asset": {
+      "id": "asset-78894f73-1126-40e8-84d8-1fb1d746d597",
+      "title": "可编辑 SVG 标志",
+      "sourceId": "work-24b4d07c-aa4f-4c53-9d77-4334c9378381",
+      "sourceRevision": "59b26fcc0b61181e918399267e431e361a3214d33baf6d3a60808ecabd25f850",
+      "sourceHash": "f0eea69bf14a4636603cbcd688b38c7aff53699699d29f465952348389a8c739",
+      "engine": "vectorcraft",
+      "format": "svg",
+      "sha256": "2f8608348c2555fae1b17e77d894aea6018e4d33fee026224422b48b2a11526b",
+      "bytes": 1017,
+      "preview": {
+        "format": "png",
+        "sha256": "e72019c244e6c06408f95a6d02d051e7b5612075a5cc185883d30c681bbc1356",
+        "bytes": 5276,
+        "width": 320,
+        "height": 240
+      },
+      "at": "2026-11-05T05:08:59.640Z"
+    },
+    "replacement": {
+      "id": "asset-a7f46732-8887-4e1e-ad75-b6429dbd36d8",
+      "title": "可编辑 SVG 标志 · 独立编辑",
+      "sourceId": "fork-07d0780f-fd93-441f-8916-aabd869ae98d",
+      "sourceRevision": "410bff710356f66c7dae41c428af3ef58cceb209a6135a9e93d2762c0f4755a7",
+      "sourceHash": "237e456e26a4bbef3777c4751c5d555d24c9e13068256c3f3e0bc2b43be304b9",
+      "engine": "vectorcraft",
+      "format": "svg",
+      "sha256": "d2f470cc3bcfd47130f5973f489614176b83a13349812c7de7c2754af7916fda",
+      "bytes": 1017,
+      "preview": {
+        "format": "png",
+        "sha256": "18db977a20d3bf657d673bb83244048f31e7d51e81fa9212c1297ae28400a45d",
+        "bytes": 5297,
+        "width": 320,
+        "height": 240
+      },
+      "at": "2026-11-05T05:09:35.533Z"
+    },
+    "first": {
+      "id": "use-2e0de8f0-88c6-438e-8000-fdc85077684f",
+      "assetId": "asset-78894f73-1126-40e8-84d8-1fb1d746d597",
+      "sourceId": "work-03178d75-ca2a-438c-a5f0-d5d59c1fe6bf",
+      "nativeId": "2",
+      "boundAtRevision": "c9e31ea8c0c0a9398e4f7af91540b9cb2338efc3b3822a9cdb772f2664219b97",
+      "nativeNodeHash": "f22f2a312fe4c16d47abe8516066bf094403f8d130e76a4610f81d98523cd63c",
+      "originToken": "PUBLIC-REDACTED",
+      "at": "2026-11-05T05:09:05.331Z"
+    },
+    "other": {
+      "id": "use-bdf5597b-b89f-41bb-baea-cd9414baaa1b",
+      "assetId": "asset-78894f73-1126-40e8-84d8-1fb1d746d597",
+      "sourceId": "work-03178d75-ca2a-438c-a5f0-d5d59c1fe6bf",
+      "nativeId": "3",
+      "boundAtRevision": "310d9b50cad2f9debc2c39b10801f0812bc874dc8e87f7fc640649be493eadf6",
+      "nativeNodeHash": "6ecff778ca1516e12b017af4f7c55fd1b8ee10b646f98e23b538a383568e3dd2",
+      "originToken": "PUBLIC-REDACTED",
+      "at": "2026-11-05T05:09:08.002Z"
+    },
+    "editedCopy": {
+      "id": "use-0daf2b9b-199f-022c-43eb-437d681f3cc8",
+      "assetId": "asset-78894f73-1126-40e8-84d8-1fb1d746d597",
+      "sourceId": "work-03178d75-ca2a-438c-a5f0-d5d59c1fe6bf",
+      "nativeId": "6",
+      "originToken": "PUBLIC-REDACTED",
+      "boundAtRevision": "aab1f15d7405edc68c485bca1fa701ce889c90c02650696d35eed010e4290a09",
+      "nativeNodeHash": "255e696d398c7f4d6221cc71c888c2ca3ffe4328d486c6f9a9d51571ddbc8aaf",
+      "origin": "native-copy",
+      "at": "2026-11-05T05:09:17.755Z",
+      "status": "present",
+      "currentSourceRevision": "aab1f15d7405edc68c485bca1fa701ce889c90c02650696d35eed010e4290a09",
+      "nativeObject": {
+        "id": 6,
+        "name": null,
+        "kind": "placeddocument"
+      },
+      "changedSincePlacement": false
+    },
+    "visualDifference": [
+      263,
+      171,
+      337,
+      244
+    ],
+    "exactNativeReopen": true,
+    "physicalUndoRedoAndGraph": true,
+    "vectorSvgExport": true
+  },
+  "nativeTests": 9,
+  "focusedNodeTests": 20,
+  "postVersionNodeTests": 8,
+  "packageChecks": "71 JavaScript syntax, 4 native executable checksums, 36 resource checksums passed",
+  "legacyOneCase": {
+    "result": "actual SVG-group and embedded source rendered with identical pixels in one owned test case",
+    "comparison": {
+      "status": "observed",
+      "scope": "actual native rendering comparison for ONE known unchanged legacy SVG fixture; no automatic migration or user desktop",
+      "root": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\legacy-svg-comparison\\9e981aa6-8924-47e9-97d0-ef7885134be2",
+      "owned": {
+        "workspaceId": "c9131006-86ec-4e5d-a36a-20f45415bfc2",
+        "sessionId": "PUBLIC-REDACTED"
+      },
+      "legacyId": "6",
+      "temporaryGroupId": 6,
+      "temporaryEmbeddedId": 7,
+      "equalPixels": true,
+      "changedPixels": 0,
+      "differenceBounds": null,
+      "sourceHash": "3d86a428a2248529136c57742595247c80a3159d17843f37a027e659d058583b"
+    },
+    "generalMigrationProven": false
+  },
+  "fixes": [
+    "SVG-in-Vector stores original self-contained native source and renders/export as vector",
+    "Same native object source replacement is atomic and preserves placement and other uses",
+    "Test wait corrected for same-engine design transitions after real first-run selection conflict"
+  ],
+  "remaining": [
+    "Safe migration of older SVG groups remains unimplemented; original data remains and apply is disabled",
+    "SVG linked/brand updates remain",
+    "SVG-to-editable-native-PPT conversion remains",
+    "Nested or linked sources and native source above 4 MiB are explicitly refused",
+    "Remaining original checklist work and final installed user-process verification remain"
+  ],
+  "primaryReview": {
+    "actualBrowserAndNativeOutputsReviewed": true,
+    "copiedEvidenceRehashed": true,
+    "nativeSourceAndFontPinsMatch": true,
+    "fullCompletionNotClaimed": true
+  },
+  "evidenceDirectory": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\outputs\\DesignCraft_SVG海报原位编辑阶段证据_20261105",
+  "evidence": [
+    {
+      "file": "svg-vector-browser.json",
+      "bytes": 4756,
+      "sha256": "4c1f5014c12cbc88d13fb1f92fab0e749e3cbc4249edb55a0672f52e6eb0db7e"
+    },
+    {
+      "file": "svg-vector-browser.log",
+      "bytes": 491,
+      "sha256": "68b3b1e1d1599bc263d323436d501ba67380283eb7e0dc9547d6d9a3d723ccad"
+    },
+    {
+      "file": "svg-vector-before.vectorcraft",
+      "bytes": 61697,
+      "sha256": "45349af4eaa22488b800b3bcdcf434a671d7d3ceea5e1efb699a553d234add22"
+    },
+    {
+      "file": "svg-vector-after.vectorcraft",
+      "bytes": 95592,
+      "sha256": "b9b623b00bb8c168bb19b04d7752613cd3b95318c8670079825839e6b760ccf6"
+    },
+    {
+      "file": "svg-vector-after.svg",
+      "bytes": 3899,
+      "sha256": "941fc8634d688020414587ff921e2ae2c907b32dfb568a8e28463bc8a645ecf4"
+    },
+    {
+      "file": "svg-vector-before.png",
+      "bytes": 28177,
+      "sha256": "4177c35234affe60d27fe906998e45d7e797c118bffdaa38e658908d759a4e86"
+    },
+    {
+      "file": "svg-vector-after.png",
+      "bytes": 28400,
+      "sha256": "ca32133bb80458ba597617c7ccdd978ccfea24521d51da732a3c291d43a396b0"
+    },
+    {
+      "file": "vector-embedded-svg-native-final.log",
+      "bytes": 2405,
+      "sha256": "e296b4d20044737258ca913034582bc803cd8ba62a54dd42995636e2243bed11"
+    },
+    {
+      "file": "vector-embedded-svg-wasm-check.log",
+      "bytes": 5369,
+      "sha256": "5dcde4ed83727be8fa7787d3662dcce5152a4b54b430b3f05389de97eaf3d5d9"
+    },
+    {
+      "file": "vector-svg-final-core.tap",
+      "bytes": 2330,
+      "sha256": "5814225e90a780d1d083ba69f1af94d2ab61a5a8ef3868f8462a3033138d577e"
+    },
+    {
+      "file": "ui26-svg-regression.tap",
+      "bytes": 969,
+      "sha256": "4700884adac19b241458290f97a08b859cfe6a332baa22c1a4b9c100721a41d2"
+    },
+    {
+      "file": "ui26-web11-package-check.log",
+      "bytes": 200,
+      "sha256": "c7e01e3d510c98dfce1c972b4174197aa5b89fa1d1973fe61d7986b9e7cf0be6"
+    },
+    {
+      "file": "vector-build-result.json",
+      "bytes": 5826,
+      "sha256": "4f756730fd96c34611ea9a131c19d32dc8754e617d4ccea9762a68b1518bfe26"
+    },
+    {
+      "file": "vector-build.log",
+      "bytes": 7401,
+      "sha256": "fe7d8f284b3bdc2f6ad57e2da543b027a82bbb3d9b4bd9652a19da40c34c3a57"
+    },
+    {
+      "file": "legacy-svg-render-comparison.json",
+      "bytes": 734,
+      "sha256": "0bf662d12873f071da85c4317dcd1b944012ed2247fd3e5532afea3f8be7ae61"
+    },
+    {
+      "file": "legacy-svg-render-comparison.log",
+      "bytes": 812,
+      "sha256": "1606ab4f6b06f2de068b895cd352575f5211c54948009352ac2b3300a74e9faa"
+    },
+    {
+      "file": "legacy-svg-group-render.png",
+      "bytes": 4363,
+      "sha256": "73578b95b7616bf90e016050ebfc6cdf5b3b69323910c784bb93746428cb8914"
+    },
+    {
+      "file": "legacy-svg-embedded-render.png",
+      "bytes": 4363,
+      "sha256": "73578b95b7616bf90e016050ebfc6cdf5b3b69323910c784bb93746428cb8914"
+    },
+    {
+      "file": "legacy-vector-svg-inspection.json",
+      "bytes": 4502,
+      "sha256": "cbefdabe2cb27fdddfba531c3916653d1685b982d91c989c2bb87bfccb86a3ec"
+    },
+    {
+      "file": "svg-vector-browser-first-failed.json",
+      "bytes": 932,
+      "sha256": "09a41c04c292ae5712cbceb7af3107245b323f9efc41ad9eea8ed6fbc32dca3b"
+    },
+    {
+      "file": "svg-vector-browser-first-failed.log",
+      "bytes": 2702,
+      "sha256": "b4b809d67f052f4a3df3a65f6a987b1148643ff5f5dd9e67afa0c44a504743eb"
+    },
+    {
+      "file": "host-native-vector-header.js",
+      "bytes": 10002,
+      "sha256": "5e182dbac95f88cd1db96fca3a6e8ff85408c7658537f2dbf1a8bb46da2c41b0"
+    },
+    {
+      "file": "host-project-graph.js",
+      "bytes": 50290,
+      "sha256": "99b5068e1621ba05388c9fa3d7bdc9a0e5d34de309a2ce5168fe5e6c39fbd7fb"
+    },
+    {
+      "file": "host-editor-routes.js",
+      "bytes": 8348,
+      "sha256": "75a750b7c16e4904a86cf8aa31b197aa1c15ff91b861cce27330599abc3ff2cd"
+    },
+    {
+      "file": "client-native-controller.js",
+      "bytes": 73908,
+      "sha256": "360cb7f31e90bb4d1060a90eee256dcba4ea8badf10475c94947f9010e58ddf8"
+    },
+    {
+      "file": "client-native-workspace.js",
+      "bytes": 34015,
+      "sha256": "379e739b071e94f8174d0afa6dd1b80d8acdc5e669a616852d33b622b5ea3191"
+    }
+  ]
+}

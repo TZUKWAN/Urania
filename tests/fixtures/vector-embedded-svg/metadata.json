@@ -1,0 +1,17 @@
+{
+  "originAfter": {
+    "assetId": "asset-edited",
+    "instanceId": "7834eb0cbcefa49be88e2a8acbdf39f1",
+    "projectId": "project-fixture",
+    "schema": 1
+  },
+  "originBefore": {
+    "assetId": "asset-original",
+    "instanceId": "7834eb0cbcefa49be88e2a8acbdf39f1",
+    "projectId": "project-fixture",
+    "schema": 1
+  },
+  "otherId": 3,
+  "producer": "actual svg.placeSource/svg.replaceSource integration test",
+  "targetId": 2
+}

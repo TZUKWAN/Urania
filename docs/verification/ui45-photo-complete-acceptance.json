@@ -1,0 +1,29 @@
+{
+  "status": "passed_scoped",
+  "at": "2026-11-08T09:30:15.661563+00:00",
+  "scope": "actual layered Photo with text, soft mask and adjustment saved and reopened",
+  "checks": [
+    "all native layer/text/mask/adjustment fields and RGBA pixels persisted after reopen"
+  ],
+  "layerKinds": [
+    "raster",
+    "raster",
+    "text",
+    "adjustment"
+  ],
+  "maskedLayers": 2,
+  "rawEvidence": {
+    "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-photo-complete-source.json",
+    "sha256": "d366d8b3a038db7cbc2e191887d1d68d3d20a82d612e65c18048b6a8527f2d4c"
+  },
+  "relatedEvidence": [
+    "verification/photo-stage-audit.json",
+    "verification/ui45-export-acceptance.json",
+    "verification/ui45-transformed-mask.json",
+    "verification/ui45-context-tools-acceptance.json"
+  ],
+  "limits": [
+    "The system clipboard was not used or verified, in accordance with the user boundary.",
+    "The sample covers the listed native tools, not every upstream Photo command or format."
+  ]
+}

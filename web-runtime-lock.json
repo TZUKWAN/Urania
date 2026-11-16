@@ -1,0 +1,1045 @@
+{
+  "schema": 1,
+  "engines": {
+    "vectorcraft": {
+      "version": "0.19.0",
+      "url": "https://github.com/storytold/vectorcraft/releases/download/v0.19.0/vectorcraft-web-0.19.0.zip",
+      "archiveSha256": "d9c7a2695d15f83a268b1be3be94592db4beb04326825e174cb5e3cb239c64d6",
+      "files": {
+        "OFL-shippori-mincho.txt": {
+          "sha256": "41fba056279be5f45ff9a99e44b7b53897b42732f5806d8e666e0ab49ac6bd38",
+          "bytes": 4399
+        },
+        "LICENSE-MIT": {
+          "sha256": "8b6025dc4b707e0fb08b9c2054096f1be3ae61529399aa2c348dec676562dc71",
+          "bytes": 1103
+        },
+        "fonts/dc591156f36842d3/OFL.txt": {
+          "sha256": "8c02263c5d73d40544f9ed91e30c4e947407057a3cc430d7b786189aeceff6df",
+          "bytes": 4384
+        },
+        "fonts/dc591156f36842d3/NotoSansGeorgian.ttf": {
+          "sha256": "dc591156f36842d38996c4a7a17fee9bb58e45da3e2cac7a31b7d33de700adb9",
+          "bytes": 231988
+        },
+        "fonts/63111b5b2e074dd4/OFL.txt": {
+          "sha256": "07fc70bfeb985cc1a87a8587d0a0c80bab11c86c9dc3fd95b6f0cb332f983e96",
+          "bytes": 4382
+        },
+        "fonts/63111b5b2e074dd4/NotoSansArabic.ttf": {
+          "sha256": "63111b5b2e074dd48cc67692e0a2726d86ee94c1c37fe8598257b7b4e87e869e",
+          "bytes": 844676
+        },
+        "fonts/5a1c559bb539583c/OFL.txt": {
+          "sha256": "2e98fd23a52d253db8612cd5942c8f2ff4111b21d2367050fdca91d8ccc374a0",
+          "bytes": 4380
+        },
+        "fonts/5a1c559bb539583c/NotoSansThai.ttf": {
+          "sha256": "5a1c559bb539583c8a1fd99d1c5b9491e5e14478c9cd2bd0970d5c3096cc9ef8",
+          "bytes": 218652
+        },
+        "OFL-noto-sans-hebrew.txt": {
+          "sha256": "9b9fe028b5ba74d231659a1bbaf0ed09b11e759d1ca6a070999e16d151616b47",
+          "bytes": 4382
+        },
+        "vectorcraft-web-56f8f562d77855f1_bg.wasm": {
+          "sha256": "a9f13507a8e6e6f83c8780f82692d5fe6e6dff51ed1239c51967456b3d269e49",
+          "bytes": 83866776
+        },
+        "ASSETS.md": {
+          "sha256": "6a42e5ac5773bef86894ce4e317d3ab05c3fb3e0c7b4b2411fc66565314cc7f9",
+          "bytes": 63414
+        },
+        "OFL-biz-ud-mincho.txt": {
+          "sha256": "ef0ed524b3bd012f37015e986809eed6f67905456ebfc1ebd7fcc2765282ee01",
+          "bytes": 4408
+        },
+        "LICENSE-APACHE": {
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+          "bytes": 10174
+        },
+        "OFL-noto-sans-georgian.txt": {
+          "sha256": "8c02263c5d73d40544f9ed91e30c4e947407057a3cc430d7b786189aeceff6df",
+          "bytes": 4384
+        },
+        "_headers": {
+          "sha256": "dbca09da27d94b05de8b5f3ca1b933d3390f18f5cf64669b0910acb672e39968",
+          "bytes": 414
+        },
+        "OFL-biz-ud-pgothic.txt": {
+          "sha256": "e753d7155d53c747d037a445e584c8ecfca6dd79846db610417e282a736b28bc",
+          "bytes": 4408
+        },
+        "OFL-noto-sans-symbols-2.txt": {
+          "sha256": "b118dd41337806a5d4797052c77caf3bd096aed783e5eb21b4d11154351e1ac0",
+          "bytes": 4383
+        },
+        "OFL-noto-sans-symbols.txt": {
+          "sha256": "b118dd41337806a5d4797052c77caf3bd096aed783e5eb21b4d11154351e1ac0",
+          "bytes": 4383
+        },
+        "icons/32/ai.storyteller.vectorcraft.png": {
+          "sha256": "da8689a9ea40b176e2167fe3d4f2b9c87144771d583e5d4033a8b2c0f185f7bd",
+          "bytes": 1985
+        },
+        "icons/ai.storyteller.vectorcraft.svg": {
+          "sha256": "caf794e769614d2661e31c2b549f39777474157905c75ffac2c0f72d529ab496",
+          "bytes": 374130
+        },
+        "icons/256/ai.storyteller.vectorcraft.png": {
+          "sha256": "440a9a0d31ea3e098a6bd2806046ea936005a008742e4cc97c0adba2574a0825",
+          "bytes": 56885
+        },
+        "HOSTING.md": {
+          "sha256": "73aa2e811441de59c633718b479f2bc9427942998eb752b65b5a6a6646ea4cd4",
+          "bytes": 5107
+        },
+        "OFL-noto-sans-cjk-sc.txt": {
+          "sha256": "6a73f9541c2de74158c0e7cf6b0a58ef774f5a780bf191f2d7ec9cc53efe2bf2",
+          "bytes": 4301
+        },
+        "vectorcraft-web-56f8f562d77855f1.js": {
+          "sha256": "2527424dd9c98c62dad53d826ff614d1133fbe9c34c676cbc274364fe65bdef6",
+          "bytes": 183021
+        },
+        "README.md": {
+          "sha256": "68eaaa4d2d58ab7edc8cd1ac9048b4baaa8b2dc37e9cfa0288a21f6e67cf76f2",
+          "bytes": 25138
+        },
+        "snippets/eframe-d31a8450ea12dfc1/inline0.js": {
+          "sha256": "22a98f9d0c5a0532d291bdc9a3050439420b3d11143b4568fcfd3c66fff36995",
+          "bytes": 280
+        },
+        "OFL-noto-sans-arabic.txt": {
+          "sha256": "07fc70bfeb985cc1a87a8587d0a0c80bab11c86c9dc3fd95b6f0cb332f983e96",
+          "bytes": 4382
+        },
+        "licenses/pdf-backend/hayro-interpret/assets/CGATS_LICENSE.txt": {
+          "sha256": "469d87b5fa48f8aaf69e25f4fcac3a309c97dbb7d561b917638abdb640e004d9",
+          "bytes": 6552
+        },
+        "licenses/pdf-backend/hayro-interpret/assets/LICENSE_FOXIT": {
+          "sha256": "b578cdd2345840ada550bd12519533812320d5f1d21cf4c1c7e1b1b0a31c98b7",
+          "bytes": 1553
+        },
+        "licenses/pdf-backend/hayro-interpret/LICENSE-MIT": {
+          "sha256": "51b50e6120c344dcc146bbd6375ca1c78e079d97c8bea76e67a53d6ff0efebac",
+          "bytes": 1063
+        },
+        "licenses/pdf-backend/hayro-interpret/LICENSE-APACHE": {
+          "sha256": "0cec06e0e55fbc3dc5cee4fca9b607f66cb8f4e4dbcf3b3c013594dd156732e9",
+          "bytes": 10173
+        },
+        "licenses/pdf-backend/hayro-cmap/LICENSE-MIT": {
+          "sha256": "51b50e6120c344dcc146bbd6375ca1c78e079d97c8bea76e67a53d6ff0efebac",
+          "bytes": 1063
+        },
+        "licenses/pdf-backend/hayro-cmap/LICENSE-APACHE": {
+          "sha256": "0cec06e0e55fbc3dc5cee4fca9b607f66cb8f4e4dbcf3b3c013594dd156732e9",
+          "bytes": 10173
+        },
+        "licenses/pdf-backend/hayro-cmap/LICENSE.txt": {
+          "sha256": "742665db9c8e1bc72603c6d319ca3e90b83bd6d95202f0cd4ef11068a07a9c29",
+          "bytes": 1453
+        },
+        "licenses/pdf-backend/hayro-syntax/LICENSE-MIT": {
+          "sha256": "51b50e6120c344dcc146bbd6375ca1c78e079d97c8bea76e67a53d6ff0efebac",
+          "bytes": 1063
+        },
+        "licenses/pdf-backend/hayro-syntax/LICENSE-APACHE": {
+          "sha256": "0cec06e0e55fbc3dc5cee4fca9b607f66cb8f4e4dbcf3b3c013594dd156732e9",
+          "bytes": 10173
+        },
+        "licenses/pdf-backend/hayro-jbig2/LICENSE-MIT": {
+          "sha256": "51b50e6120c344dcc146bbd6375ca1c78e079d97c8bea76e67a53d6ff0efebac",
+          "bytes": 1063
+        },
+        "licenses/pdf-backend/hayro-jbig2/LICENSE-APACHE": {
+          "sha256": "0cec06e0e55fbc3dc5cee4fca9b607f66cb8f4e4dbcf3b3c013594dd156732e9",
+          "bytes": 10173
+        },
+        "OFL-noto-sans-devanagari.txt": {
+          "sha256": "a216f6f8d85c7228093e0ee5e258d9d377e6671f68acb4db1930b29583d0f331",
+          "bytes": 4386
+        },
+        "index.html": {
+          "sha256": "5aadeea66ab8053116ce88f193af54c24235643bf7130c7f1e13aced16f734de",
+          "bytes": 3086
+        },
+        "NOTICE": {
+          "sha256": "ffb54183b2b44903f64736cdc9b50abb834ee6dac7059d2c9631692dd13c754b",
+          "bytes": 8174
+        },
+        "OFL-noto-sans-thai.txt": {
+          "sha256": "2e98fd23a52d253db8612cd5942c8f2ff4111b21d2367050fdca91d8ccc374a0",
+          "bytes": 4380
+        },
+        "OFL-lxgw-wenkai-lite.txt": {
+          "sha256": "0333a85fe077b6849f8e417acc44e8bd879442ceb681e271acf93e2d57fd4e2e",
+          "bytes": 5176
+        },
+        "OFL-nanum-gothic.txt": {
+          "sha256": "eeacf16032901d0ed0456876ec77b8f0fda6b3fecec7d972f8543eb602e6c30f",
+          "bytes": 4534
+        },
+        ".htaccess": {
+          "sha256": "2660940c9af97845dfd475cf1daa2ff1df18afb0bd91471e74e60d677fab2c6a",
+          "bytes": 530
+        }
+      }
+    },
+    "vectorcraft-host": {
+      "version": "0.19.0+designcraft.host19",
+      "provenance": {
+        "engineVersion": "0.19.0",
+        "sourceRevision": "bcebabe3f8c23a376ac68e9e6726590af278f7bb",
+        "hostProtocol": 1,
+        "status": "real Rust/Trunk build: transient AI canvas presentation; runtime acceptance recorded separately",
+        "fontRevision": "b076417b5880bd4154bd22f00695b1d28c6bea83",
+        "rustToolchain": "1.95.0",
+        "buildLogSha256": "873d2de2d03fe1f8a31c2dfd6d42249df17e2cee7c06251d1929e79a91926232",
+        "sourceFiles": {
+          "crates/text/web-fonts.txt": "8e2739ac621b536b82fb388cf0ee3a085dbb3ea786eb2be0bcca6528dc32642a",
+          "crates/ui-egui/src/control.rs": "339201925d34c7127839ca0abfe6ad6868a5d6237ad4c2016a2993dda1dab1f8",
+          "crates/ui-egui/src/control/hosted.rs": "9646183d058b40688805a7c586435776e79c1b9b0b5c75bb9846c9579f38283d",
+          "crates/ui-egui/src/control/tests.rs": "c8449f933f1c7616cbd1a0245e83cb631172e56693cbae4d959a47135c6d1684",
+          "crates/ui-egui/src/lib.rs": "c8685bbf14cc8fab3458b024fd64da16e50943e68089928a23f93371f2e38fd6",
+          "crates/ui-egui/src/app.rs": "b77b66e551870b0f0deba41af9cd5095adaab71293096651e6e20db4ecbce95e",
+          "crates/ui-egui/src/chrome.rs": "ee38406fc802849f6c82397c261a91bd571b4b7ce2a7623dec4d30110faa8d18",
+          "crates/ui-egui/src/host_files.rs": "e5cd6afdb785d46c0bbf00fef3f6799bd56ddedc45838344ffb1263fa468b251",
+          "crates/ui-egui/src/app/commands.rs": "11b758749c6d3117926086e3c2824f187c2e791887881f3cc62790d7244fbe55",
+          "crates/ui-egui/src/shortcuts.rs": "218d58667c5e18aad46bcf688e37044608c0c45a6d9575a542b3d8ce008c5deb",
+          "crates/ui-egui/src/shortcuts/tests.rs": "28772ee932b46cc9b372a32e84b9425ca8fb09a8bcf1247b6e69b92723e1ad98",
+          "apps/vectorcraft-web/src/api.rs": "1592c498d025b54c5562e9836211cebd3f5ecc8eb86cdbe82ccf5c2a716d0624",
+          "Cargo.toml": "6699f02c5454559034b6f7b3900b2851ebb60245cdfaeaff99e8c450087bac0c",
+          "Cargo.lock": "92671ad51c6a9428711e34ae1ba6ede92b9ce1aad41277d89b3f30171d5ef318",
+          "crates/engine/Cargo.toml": "55755b932577f6917ac756cf0107f0c1fa899b2bbb0e1ee63802734e25cd88e3",
+          "crates/engine/src/cmd/place.rs": "9b500e0c36b00d85ee2b143a6c61f2497fa937fad3641b75528e644609369a4c",
+          "crates/engine/src/cmd/place/image_content.rs": "51e4f51fc52115dd23fd15574f204b71080f3439aa1eeeb83441aba777b89d61",
+          "crates/engine/src/cmd/place/image_content/tests.rs": "7af66d90207b9c2661fe6f83b9d09d665886fe6614e7ce1d6c27c1122fba0ef9",
+          "apps/vectorcraft-web/Trunk.toml": "4d9eb5cac922ed609afb6b27859919b79076de7d15687dbd899d11c4ebdcf73b",
+          "apps/vectorcraft-web/index.html": "91b8e73c505499c1fd909019163576dace67159580b1c797cc41b20aad1a5141",
+          "crates/text/build.rs": "85d0fdce0d239f268e8662168dfd6880c5b98e06712af65affc277cd38d5c63b",
+          "crates/text/build/web_fonts.rs": "59197fff8c7b185c3387515fd87bb06f66232f8cebab9be4cb0c9bb9684d8263",
+          "xtask/src/web_fonts.rs": "89af53796b61ced407c16416d00dd49dd8a08e464f3129d0d6cbd557decb6a5f",
+          "apps/vectorcraft-web/Cargo.toml": "8a3912fc1764cd1cf979534910d823b9d3c1d979a48b41888ea3f2d715396d1b",
+          "crates/engine/src/cmd.rs": "f0b8ee1c033c3750ab6214b08858c85b59f4406d84053faa536a3621d9437731",
+          "crates/engine/src/cmd/host_material.rs": "2755a9694af48c49569d1b2b1939219a3e4d97224d87a876f97f262efa419599",
+          "crates/engine/src/cmd/edit.rs": "22828b93c9a9876457d9c0f7a2ff978b85bc17915da0317edf17325ed60b6035",
+          "crates/engine/tests/host_material.rs": "c74b78903f168847b6aa745985c8d2a156c0542783c1df27a2f958430107f6f8",
+          "crates/doc/src/placed_document.rs": "78390a6b07f648b1090a00e8b13cdcec538ad0d770466aaa02ef04999dd56a8e",
+          "crates/doc/src/links.rs": "5f3120ff17f949189eb3604bc4383e4e943622ec1a7daf61b8424aef06cf7e86",
+          "crates/render/src/tests/placed_document.rs": "fceb244675ff517944a948651fc8eafbcd539264d591881388514b3d3f7a588a",
+          "crates/engine/src/cmd/place/document.rs": "523d158f4f25ec2641a3cf716d01ec2e68bd9219c2b5112b73d6811f01290b97",
+          "crates/engine/src/cmd/links.rs": "b73e0597844d6293ac1a4194700c753acebc592c61c34b96d874f67bb77117fa",
+          "crates/engine/src/cmd/place/embedded_svg.rs": "97d535d935f6349cf1f9e69f0ebc84e433696b29ea331c23a1d0578e6cf43ca9",
+          "crates/engine/tests/embedded_svg.rs": "d050321f08fa0ecf933e2165dee065dd38b92fabdbc9e0d46bbcfa3d807abb64",
+          "ASSETS.md": "fc776f55720d88fee2ccaacfa9d097c721e3b6155a477947afa38ac80c7d6e1f",
+          "crates/engine/tests/fixtures/dsh-svg-source/edited-source.vectorcraft": "33a882659d321c749810ae9098899084d50c57454d790046ee08839b343332e8",
+          "crates/engine/tests/fixtures/dsh-svg-source/source.vectorcraft": "8b59a20b4ac7cdbdff2d5336d761786589b178430e395d4ac28b92e752b6f5b2",
+          "crates/engine/src/cmd/place/legacy_svg.rs": "9f0444fa475346cd5cb511f54125920cc50cb2fb2e7a00b73679ab3f275ef6cf",
+          "crates/engine/tests/legacy_svg.rs": "8851b655b6d91e655dbe92c2dcc2012c79eb0fa38d0fbd0a8d56281e240e1db8",
+          "crates/engine/tests/fixtures/dsh-legacy-svg/bound.vectorcraft": "155c5c326e98cdeccf2fee17ca5cadbfa82b5a0f85121bc39a7f749aa2371054",
+          "crates/engine/tests/fixtures/dsh-legacy-svg/current.vectorcraft": "f9e2f3549354bbddeffa447c9e51fdafcb7af8267deab206c79bb3fc752cab52",
+          "crates/engine/tests/fixtures/dsh-legacy-svg/source.vectorcraft": "3d86a428a2248529136c57742595247c80a3159d17843f37a027e659d058583b",
+          "crates/engine/tests/fixtures/dsh-legacy-svg/source.svg": "6a857a152816c6f5451159bf6a6837aaf79b00709a1d89f3dcbcfadf312b66f6",
+          "crates/engine/tests/host_brand.rs": "20c77a3de7ec582e348c0ced7bfd84e2cddba0bf4cfc393182b4a8a52326e75d",
+          "crates/ui-egui/src/menus/bar.rs": "d54f9101b675985d165c5023f2481c722109c0f12684b20374218803714351c8",
+          "crates/text/src/fontdb/db.rs": "bcbf52a922f7555ee18faf8f0f8aba1503fbad6104b18bbc244e1f2939ebef3c",
+          "crates/ui-egui/src/canvas.rs": "931dcd821808553767d99576c079b0286c8bd39caa4de77ee2f654510838de61",
+          "font-input/fonts/biz-ud-pgothic/BIZUDPGothic-Regular.ttf": "258d7156c165f2ff774b6efee637c22c3b950de0d8a10e501137061bc8085d01",
+          "font-input/fonts/biz-ud-pgothic/OFL.txt": "e753d7155d53c747d037a445e584c8ecfca6dd79846db610417e282a736b28bc",
+          "font-input/fonts/manifest.txt": "e825709cd46ff7abe213c141e981c0c11e098195a134951e95dada85eaea778a",
+          "font-input/fonts/noto-sans-arabic/NotoSansArabic.ttf": "63111b5b2e074dd48cc67692e0a2726d86ee94c1c37fe8598257b7b4e87e869e",
+          "font-input/fonts/noto-sans-arabic/OFL.txt": "07fc70bfeb985cc1a87a8587d0a0c80bab11c86c9dc3fd95b6f0cb332f983e96",
+          "font-input/fonts/noto-sans-cjk-sc/NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+          "font-input/fonts/noto-sans-cjk-sc/OFL.txt": "6a73f9541c2de74158c0e7cf6b0a58ef774f5a780bf191f2d7ec9cc53efe2bf2",
+          "font-input/fonts/noto-sans-georgian/NotoSansGeorgian.ttf": "dc591156f36842d38996c4a7a17fee9bb58e45da3e2cac7a31b7d33de700adb9",
+          "font-input/fonts/noto-sans-georgian/OFL.txt": "8c02263c5d73d40544f9ed91e30c4e947407057a3cc430d7b786189aeceff6df",
+          "font-input/fonts/noto-sans-thai/NotoSansThai.ttf": "5a1c559bb539583c8a1fd99d1c5b9491e5e14478c9cd2bd0970d5c3096cc9ef8",
+          "font-input/fonts/noto-sans-thai/OFL.txt": "2e98fd23a52d253db8612cd5942c8f2ff4111b21d2367050fdca91d8ccc374a0",
+          "font-input/source-lock.json": "74b04373c12913d842ed0564d6ae6ab4a23af892d1789c66c52da24b0bf70f06"
+        },
+        "retainedCompatibilityFiles": [
+          "vectorcraft-web-2061eac70a809dc0.js",
+          "vectorcraft-web-2061eac70a809dc0_bg.wasm",
+          "vectorcraft-web-208dd8bf8428f171.js",
+          "vectorcraft-web-208dd8bf8428f171_bg.wasm",
+          "vectorcraft-web-320678c2d1214f15.js",
+          "vectorcraft-web-320678c2d1214f15_bg.wasm",
+          "vectorcraft-web-33baa8716f7bdefa.js",
+          "vectorcraft-web-33baa8716f7bdefa_bg.wasm",
+          "vectorcraft-web-35ab59bcb836b0f7.js",
+          "vectorcraft-web-35ab59bcb836b0f7_bg.wasm",
+          "vectorcraft-web-4f8333919875e9b7.js",
+          "vectorcraft-web-4f8333919875e9b7_bg.wasm",
+          "vectorcraft-web-66c6f0f42a32473b.js",
+          "vectorcraft-web-66c6f0f42a32473b_bg.wasm",
+          "vectorcraft-web-712f45399d29871.js",
+          "vectorcraft-web-712f45399d29871_bg.wasm",
+          "vectorcraft-web-7ef0fcb67b7491c8.js",
+          "vectorcraft-web-7ef0fcb67b7491c8_bg.wasm",
+          "vectorcraft-web-82a844e0755eb0d5.js",
+          "vectorcraft-web-82a844e0755eb0d5_bg.wasm",
+          "vectorcraft-web-97e5c727b2a36b00.js",
+          "vectorcraft-web-97e5c727b2a36b00_bg.wasm",
+          "vectorcraft-web-a6b129ea64536e96.js",
+          "vectorcraft-web-a6b129ea64536e96_bg.wasm",
+          "vectorcraft-web-a76678203ab30411.js",
+          "vectorcraft-web-a76678203ab30411_bg.wasm",
+          "vectorcraft-web-be0d2010a9ef5d5d.js",
+          "vectorcraft-web-be0d2010a9ef5d5d_bg.wasm",
+          "vectorcraft-web-bf3d4524f0f4e9ec.js",
+          "vectorcraft-web-bf3d4524f0f4e9ec_bg.wasm",
+          "vectorcraft-web-c333aafd53fa0fe3.js",
+          "vectorcraft-web-c333aafd53fa0fe3_bg.wasm",
+          "vectorcraft-web-c8fdc860fd30d914.js",
+          "vectorcraft-web-c8fdc860fd30d914_bg.wasm",
+          "vectorcraft-web-d8cffe9600254fd9.js",
+          "vectorcraft-web-d8cffe9600254fd9_bg.wasm",
+          "vectorcraft-web-e15e745743f12977.js",
+          "vectorcraft-web-e15e745743f12977_bg.wasm",
+          "vectorcraft-web-f28c74aaf617aaa0.js",
+          "vectorcraft-web-f28c74aaf617aaa0_bg.wasm"
+        ]
+      },
+      "files": {
+        "fonts/2c76254f6fc379fd/NotoSansCJKsc-Regular.otf": {
+          "bytes": 16437364,
+          "sha256": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b"
+        },
+        "fonts/2c76254f6fc379fd/OFL.txt": {
+          "bytes": 4301,
+          "sha256": "6a73f9541c2de74158c0e7cf6b0a58ef774f5a780bf191f2d7ec9cc53efe2bf2"
+        },
+        "fonts/5a1c559bb539583c/NotoSansThai.ttf": {
+          "bytes": 218652,
+          "sha256": "5a1c559bb539583c8a1fd99d1c5b9491e5e14478c9cd2bd0970d5c3096cc9ef8"
+        },
+        "fonts/5a1c559bb539583c/OFL.txt": {
+          "bytes": 4380,
+          "sha256": "2e98fd23a52d253db8612cd5942c8f2ff4111b21d2367050fdca91d8ccc374a0"
+        },
+        "fonts/63111b5b2e074dd4/NotoSansArabic.ttf": {
+          "bytes": 844676,
+          "sha256": "63111b5b2e074dd48cc67692e0a2726d86ee94c1c37fe8598257b7b4e87e869e"
+        },
+        "fonts/63111b5b2e074dd4/OFL.txt": {
+          "bytes": 4382,
+          "sha256": "07fc70bfeb985cc1a87a8587d0a0c80bab11c86c9dc3fd95b6f0cb332f983e96"
+        },
+        "fonts/dc591156f36842d3/NotoSansGeorgian.ttf": {
+          "bytes": 231988,
+          "sha256": "dc591156f36842d38996c4a7a17fee9bb58e45da3e2cac7a31b7d33de700adb9"
+        },
+        "fonts/dc591156f36842d3/OFL.txt": {
+          "bytes": 4384,
+          "sha256": "8c02263c5d73d40544f9ed91e30c4e947407057a3cc430d7b786189aeceff6df"
+        },
+        "icons/256/ai.storyteller.vectorcraft.png": {
+          "bytes": 56885,
+          "sha256": "440a9a0d31ea3e098a6bd2806046ea936005a008742e4cc97c0adba2574a0825"
+        },
+        "icons/32/ai.storyteller.vectorcraft.png": {
+          "bytes": 1985,
+          "sha256": "da8689a9ea40b176e2167fe3d4f2b9c87144771d583e5d4033a8b2c0f185f7bd"
+        },
+        "icons/ai.storyteller.vectorcraft.svg": {
+          "bytes": 374130,
+          "sha256": "caf794e769614d2661e31c2b549f39777474157905c75ffac2c0f72d529ab496"
+        },
+        "index.html": {
+          "bytes": 3086,
+          "sha256": "1a9f22f34e5e9c42436ed0b1255433e6c1313ec43f5e7dfbc318727d2bd07c4d"
+        },
+        "LICENSE-APACHE": {
+          "bytes": 10174,
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+        },
+        "LICENSE-MIT": {
+          "bytes": 1103,
+          "sha256": "8b6025dc4b707e0fb08b9c2054096f1be3ae61529399aa2c348dec676562dc71"
+        },
+        "NOTICE": {
+          "bytes": 8174,
+          "sha256": "ffb54183b2b44903f64736cdc9b50abb834ee6dac7059d2c9631692dd13c754b"
+        },
+        "snippets/eframe-d31a8450ea12dfc1/inline0.js": {
+          "bytes": 280,
+          "sha256": "22a98f9d0c5a0532d291bdc9a3050439420b3d11143b4568fcfd3c66fff36995"
+        },
+        "vectorcraft-web-1a4f1888c82e6869.js": {
+          "bytes": 181135,
+          "sha256": "ba3e17363385c177c8a9493b1b32fc968294bd4bf550ab86e8860d3c07b009f4"
+        },
+        "vectorcraft-web-1a4f1888c82e6869_bg.wasm": {
+          "bytes": 84273989,
+          "sha256": "bee669cdd1eb601d12e957628e30b3e2769afbd9c117900c50d5a837c112dc4d"
+        },
+        "vectorcraft-web-2061eac70a809dc0.js": {
+          "bytes": 180367,
+          "sha256": "4e848c94dcd7934fa15ffcb86115bec63e83fc9ae2be4ce28b0c408a42274e62"
+        },
+        "vectorcraft-web-2061eac70a809dc0_bg.wasm": {
+          "bytes": 83964689,
+          "sha256": "a173208bf34d1925156fdf36a5e5f856d66ba3d6e8e29d97000065e8164c6076"
+        },
+        "vectorcraft-web-208dd8bf8428f171.js": {
+          "bytes": 180367,
+          "sha256": "1f85c8527c87b7c002a789599c6304618f173f3096028009a2a8d671f197f5b9"
+        },
+        "vectorcraft-web-208dd8bf8428f171_bg.wasm": {
+          "bytes": 84269919,
+          "sha256": "11bd55c874b30076c3e172f936fb1e6ba689249b9b1b8a229b2b35c2d50c1f1e"
+        },
+        "vectorcraft-web-320678c2d1214f15.js": {
+          "bytes": 179275,
+          "sha256": "8504d336dbb0150307c865ab20f8c18de516882c0a6d2daf8e80c1d7380b2093"
+        },
+        "vectorcraft-web-320678c2d1214f15_bg.wasm": {
+          "bytes": 83949599,
+          "sha256": "08edc5994aae336c3fb5a99aa03c559d6c0526da8ee295abc5b08c1ed4031469"
+        },
+        "vectorcraft-web-33baa8716f7bdefa.js": {
+          "bytes": 179275,
+          "sha256": "8504d336dbb0150307c865ab20f8c18de516882c0a6d2daf8e80c1d7380b2093"
+        },
+        "vectorcraft-web-33baa8716f7bdefa_bg.wasm": {
+          "bytes": 83940300,
+          "sha256": "20a7c0c4dce7fc100eaf887b230a614bfd3f9ebdb8019fb27d63d14301d40e70"
+        },
+        "vectorcraft-web-35ab59bcb836b0f7.js": {
+          "bytes": 179275,
+          "sha256": "1fa309479aa6f48784f76b72b5e62c57bb7011be96741a87eab0acc02fd77d45"
+        },
+        "vectorcraft-web-35ab59bcb836b0f7_bg.wasm": {
+          "bytes": 83935375,
+          "sha256": "051bd5c1515e121cc7bab40def068fd1a375aa2fee8ebdc95e876172271ba1ff"
+        },
+        "vectorcraft-web-4f8333919875e9b7.js": {
+          "bytes": 180367,
+          "sha256": "1301f3d894e3e95c7560edbd037941f6a494bd69f89cd5f985704e074fb11927"
+        },
+        "vectorcraft-web-4f8333919875e9b7_bg.wasm": {
+          "bytes": 84194077,
+          "sha256": "029e638a8af8c6b42f3f34e27e67cb8b772d17701af63e42a6b6311f17ef82ac"
+        },
+        "vectorcraft-web-66c6f0f42a32473b.js": {
+          "bytes": 180367,
+          "sha256": "e12afcf3f579453b80c3975726a33143cce1bd292f1a52be3e0dc403ae0cec0d"
+        },
+        "vectorcraft-web-66c6f0f42a32473b_bg.wasm": {
+          "bytes": 84220161,
+          "sha256": "345b3a708f1676e45d30e8936640e4e21847f98c13b925b105197aa440273c16"
+        },
+        "vectorcraft-web-712f45399d29871.js": {
+          "bytes": 180367,
+          "sha256": "fd073cde7022c6a159cf3b8744a2ea795e19a28125ad97b6f509fddcd5d4764a"
+        },
+        "vectorcraft-web-712f45399d29871_bg.wasm": {
+          "bytes": 84244450,
+          "sha256": "3b16da4186a0505c17fea4b0441ead61ab45dcd8a64f7831fefab6427240675c"
+        },
+        "vectorcraft-web-7ef0fcb67b7491c8.js": {
+          "bytes": 179275,
+          "sha256": "8504d336dbb0150307c865ab20f8c18de516882c0a6d2daf8e80c1d7380b2093"
+        },
+        "vectorcraft-web-7ef0fcb67b7491c8_bg.wasm": {
+          "bytes": 83949613,
+          "sha256": "d6959e785daaab9d317cdcd6e6f194f222d29ffc3f0721fb824d8fd661cb1e15"
+        },
+        "vectorcraft-web-82a844e0755eb0d5.js": {
+          "bytes": 179275,
+          "sha256": "1fa309479aa6f48784f76b72b5e62c57bb7011be96741a87eab0acc02fd77d45"
+        },
+        "vectorcraft-web-82a844e0755eb0d5_bg.wasm": {
+          "bytes": 83937201,
+          "sha256": "8491bda5b945e9d72ca96578fc289a89ece9412b9b29c4591cc6e6aae8c4fa2f"
+        },
+        "vectorcraft-web-97e5c727b2a36b00.js": {
+          "bytes": 181135,
+          "sha256": "ba3e17363385c177c8a9493b1b32fc968294bd4bf550ab86e8860d3c07b009f4"
+        },
+        "vectorcraft-web-97e5c727b2a36b00_bg.wasm": {
+          "bytes": 84273116,
+          "sha256": "e29beff640f362b5f6ea17fd5297df0e2b1b71c14ca2399a7a0330e3ba9d39b9"
+        },
+        "vectorcraft-web-a6b129ea64536e96.js": {
+          "bytes": 181135,
+          "sha256": "ba3e17363385c177c8a9493b1b32fc968294bd4bf550ab86e8860d3c07b009f4"
+        },
+        "vectorcraft-web-a6b129ea64536e96_bg.wasm": {
+          "bytes": 84273933,
+          "sha256": "525c7baae1ff1fe70518d3342d635d4d6db70db151657d59aa087fb2f152ebdb"
+        },
+        "vectorcraft-web-a76678203ab30411.js": {
+          "bytes": 181135,
+          "sha256": "ba3e17363385c177c8a9493b1b32fc968294bd4bf550ab86e8860d3c07b009f4"
+        },
+        "vectorcraft-web-a76678203ab30411_bg.wasm": {
+          "bytes": 84273077,
+          "sha256": "5bc6d94db71f040a7e37312481e2d34e6ea45945ca69c0536084fc06e2594faf"
+        },
+        "vectorcraft-web-be0d2010a9ef5d5d.js": {
+          "bytes": 180367,
+          "sha256": "e12afcf3f579453b80c3975726a33143cce1bd292f1a52be3e0dc403ae0cec0d"
+        },
+        "vectorcraft-web-be0d2010a9ef5d5d_bg.wasm": {
+          "bytes": 84220252,
+          "sha256": "39a817eeef8129980257e8b3b5f41abd64b87db08ed9e15d827625d1df821d24"
+        },
+        "vectorcraft-web-bf3d4524f0f4e9ec.js": {
+          "bytes": 180367,
+          "sha256": "4e848c94dcd7934fa15ffcb86115bec63e83fc9ae2be4ce28b0c408a42274e62"
+        },
+        "vectorcraft-web-bf3d4524f0f4e9ec_bg.wasm": {
+          "bytes": 83969305,
+          "sha256": "5b8bf90c6df85d89b7d5f87a566acd06b4333fbbe51ed5f4d8f1bd6f586be5b8"
+        },
+        "vectorcraft-web-c333aafd53fa0fe3.js": {
+          "bytes": 179275,
+          "sha256": "8504d336dbb0150307c865ab20f8c18de516882c0a6d2daf8e80c1d7380b2093"
+        },
+        "vectorcraft-web-c333aafd53fa0fe3_bg.wasm": {
+          "bytes": 83946618,
+          "sha256": "4438c7431e390bca5c4e8d4f3994dfaa574405f138f5463d7256e4202f47d777"
+        },
+        "vectorcraft-web-c8fdc860fd30d914.js": {
+          "bytes": 180367,
+          "sha256": "1f85c8527c87b7c002a789599c6304618f173f3096028009a2a8d671f197f5b9"
+        },
+        "vectorcraft-web-c8fdc860fd30d914_bg.wasm": {
+          "bytes": 84268131,
+          "sha256": "119a60c219d36ccc98ffece5f2b77596d081346fb8da8801e3fb518162644483"
+        },
+        "vectorcraft-web-d8cffe9600254fd9.js": {
+          "bytes": 180367,
+          "sha256": "1f85c8527c87b7c002a789599c6304618f173f3096028009a2a8d671f197f5b9"
+        },
+        "vectorcraft-web-d8cffe9600254fd9_bg.wasm": {
+          "bytes": 84265791,
+          "sha256": "17327bdc62342d59304ae60b8802f2ffa5ed6cbbaf1aa78a4722d8a9845e94dc"
+        },
+        "vectorcraft-web-e15e745743f12977.js": {
+          "bytes": 180367,
+          "sha256": "4e848c94dcd7934fa15ffcb86115bec63e83fc9ae2be4ce28b0c408a42274e62"
+        },
+        "vectorcraft-web-e15e745743f12977_bg.wasm": {
+          "bytes": 83964211,
+          "sha256": "1ee92302489be5d01f3b4ec9eb74cc530ad125a671ffa06e0123b169d1f26e7f"
+        },
+        "vectorcraft-web-f28c74aaf617aaa0.js": {
+          "bytes": 180367,
+          "sha256": "1f85c8527c87b7c002a789599c6304618f173f3096028009a2a8d671f197f5b9"
+        },
+        "vectorcraft-web-f28c74aaf617aaa0_bg.wasm": {
+          "bytes": 84272168,
+          "sha256": "902f15d011d931dd32e713379dfdccf3d58ba4f0cfb77a8ce2d7093793684a6e"
+        }
+      }
+    },
+    "photocraft-host": {
+      "version": "0.18.0+designcraft.host8",
+      "provenance": {
+        "engineVersion": "0.18.0",
+        "sourceRevision": "8a87a457abb43ac344deeb3fdb67541b91a72ff1",
+        "hostProtocol": 1,
+        "contextProtocol": 2,
+        "status": "real Rust/Trunk build: transient AI canvas presentation; runtime acceptance recorded separately",
+        "rustToolchain": "1.95.0",
+        "sourceFiles": {
+          "Cargo.lock": "7e19051711d78d853a616a72d332f5448a4bd92c3898cc658763b01af414af80",
+          "apps/photocraft-web/Cargo.toml": "24745697d1c8836ea5a85b74fe0c52f3be711dd46a20faf7626565527e424f84",
+          "apps/photocraft-web/Trunk.toml": "ad91d60bdce8772c36982df9f9b32f5673714da1ca32a525fd4c2536d34727d3",
+          "apps/photocraft-web/index.html": "c391361272bbc10d3e9bc1675c61b11acf9d8b2557e22770b3425f67c2737806",
+          "apps/photocraft-web/src/api.rs": "cfca17485fbf366751b09a8c1898350a31e6450b0cf5726f0f648ab6538eba7c",
+          "apps/photocraft-web/src/main.rs": "a4fecd2009f99b07cd2071d33ecdf42534d7fdff311f2efd71b464274ce0a7fd",
+          "apps/photocraft-web/src/web.rs": "fdb6f0829616b669f372582cb2a43c9625679b325c1efbfe3958042420cf930f",
+          "crates/io/src/embedded_import.rs": "804c0b96d87d61687209978f28eade05dbe3a10f4f9ad826fbbba87d98a11193",
+          "crates/io/src/flat.rs": "073142f95df5c28c387b39a1bc6249daf8db86404fd13c4a5a3f9ecb73663791",
+          "crates/io/src/lib.rs": "28ee836b72c595f92e3f518db52795083098823c76cf9fe5a94732dcc106517d",
+          "crates/io/src/pcraft_cache.rs": "2d06ea7642b399edf8c79749360fd7ae66d85c2c22905287b7b3a5e489b54c71",
+          "crates/text/src/fonts.rs": "0aff0c628c599aea7ef8c35f525c4040a3891a29f61b9239c91f8c3241ccfb35",
+          "crates/text/src/lib.rs": "52aadd61b0514d0d4502eddd6d8321c3731e621f7e23aa9ddff0cb551490fc6c",
+          "crates/ui-egui/src/app.rs": "7ede804fe6a88b1b3ec166a99731b5c96fa066b1a6847c531e623aac9729c5f7",
+          "crates/ui-egui/src/app/commands.rs": "b9bfbf51c44355d85141bac627ffd61328cbb44e7fcfd407ab1aac7cb72fea8d",
+          "crates/ui-egui/src/app/control.rs": "279aa79e3819338ab898e68dbd9866d233310b9a1c258f8a55c272723c909fae",
+          "crates/ui-egui/src/app/frame.rs": "f906d7404fab113c2aed483794d0f5421a15feedc1ffaf02307b0954f44cf2f5",
+          "crates/ui-egui/src/app/prefs.rs": "71c5951efa788ddf1239ebb0a7f1a04dfb60d43f9b8448d54b1d0ed77a210a4e",
+          "crates/ui-egui/src/control.rs": "30e2540e44fd6f821a78270558c470f0e206e224116ad4002aa813408edc08a3",
+          "crates/ui-egui/src/control/dispatch.rs": "900b6138ba3fd0771a1dbae9e942c5fd3b0c86d9d7489afb4a51025f07981dbe",
+          "crates/ui-egui/src/control/hosted.rs": "77a58fd4d65d1f6a316f82a894325b597c4311a4a0b7368c37e82731f649522d",
+          "crates/ui-egui/src/control/hosted_tests.rs": "c66f62b8e8d2756e1c1db421b2672589e917c93c9978808fd3ad1823b9078af8",
+          "crates/ui-egui/src/control/inspect.rs": "e80833a09b39947c84db2c18aabfd36bd44cae3ee0905125558a0ea84c16771e",
+          "crates/ui-egui/src/lib.rs": "ac35381e361bb9719a5b1002e2b5044bff2ac7eb9e22f550856e12e1402702df",
+          "crates/ui-egui/src/menus/bar.rs": "c1015a0ebf7a38b91b9dd9f9f78f509af78564a3f29aaf32a74bffdd8782ecb4",
+          "crates/ui-egui/src/menus/invoke.rs": "84367dbcfd73776a5c518cb1a7754a1f5cb5ebbc7091a71dd8419a8c56808418",
+          "crates/ui-egui/src/panels/title_bar.rs": "85624d1b4e3e4049d6280bdba366b03db023cf250edc129d13e1f1832a48a3f8",
+          "crates/ui-egui/src/prefs/prefs_ui/appearance.rs": "8c3a0391a9ea21c9b99fb7dcd3c072c59466cc540bf08e4f437c42687adc8a95",
+          "crates/ui-egui/src/theme.rs": "dd9ca4b932c800f0f789ecc05cc98798d274fea90fd8c9ef8771964df3fce768",
+          "crates/ui-egui/src/canvas/tabs.rs": "8f74a75074e11f915148b64390a454e4a7dab24c59461a3f62da8b20919d10dd"
+        },
+        "buildLogSha256": "77af74d1352802c94f35069a271d618c73a61144768a7197bb649c0aee6fe41b",
+        "fontRevision": "b076417b5880bd4154bd22f00695b1d28c6bea83",
+        "servedManifestSha256": "31b7e0993012cf8631b2d1ed5b0aa8ee89dfe5335ca44c5d02232b2cc604b944",
+        "retainedCompatibilityFiles": [
+          "fonts/biz-ud-pgothic/BIZUDPGothic-Regular.ttf",
+          "fonts/biz-ud-pgothic/OFL.txt",
+          "fonts/manifest.txt",
+          "fonts/noto-sans-arabic/NotoSansArabic.ttf",
+          "fonts/noto-sans-arabic/OFL.txt",
+          "fonts/noto-sans-cjk-sc/NotoSansCJKsc-Regular.otf",
+          "fonts/noto-sans-cjk-sc/OFL.txt",
+          "fonts/noto-sans-georgian/NotoSansGeorgian.ttf",
+          "fonts/noto-sans-georgian/OFL.txt",
+          "fonts/noto-sans-thai/NotoSansThai.ttf",
+          "fonts/noto-sans-thai/OFL.txt",
+          "photocraft-web-27700c220bf83b54.js",
+          "photocraft-web-27700c220bf83b54_bg.wasm",
+          "photocraft-web-2bdea6dd55084a1d.js",
+          "photocraft-web-2bdea6dd55084a1d_bg.wasm",
+          "photocraft-web-742943628811480c.js",
+          "photocraft-web-742943628811480c_bg.wasm",
+          "photocraft-web-7f1d0af5b0884140.js",
+          "photocraft-web-7f1d0af5b0884140_bg.wasm",
+          "photocraft-web-8cc93d6825b1429f.js",
+          "photocraft-web-8cc93d6825b1429f_bg.wasm",
+          "photocraft-web-c21ca435b4f2522c.js",
+          "photocraft-web-c21ca435b4f2522c_bg.wasm",
+          "photocraft-web-df380fadd9bada0b.js",
+          "photocraft-web-df380fadd9bada0b_bg.wasm"
+        ]
+      },
+      "files": {
+        "ATTRIBUTION.md": {
+          "bytes": 29440,
+          "sha256": "c87330f332d0b17a7620cfd8ed2fed5708ad2b95f82fe8e252752f5960f2917a"
+        },
+        "fonts/biz-ud-pgothic/BIZUDPGothic-Regular.ttf": {
+          "bytes": 4669688,
+          "sha256": "258d7156c165f2ff774b6efee637c22c3b950de0d8a10e501137061bc8085d01"
+        },
+        "fonts/biz-ud-pgothic/OFL.txt": {
+          "bytes": 4408,
+          "sha256": "e753d7155d53c747d037a445e584c8ecfca6dd79846db610417e282a736b28bc"
+        },
+        "fonts/manifest.txt": {
+          "bytes": 1556,
+          "sha256": "31b7e0993012cf8631b2d1ed5b0aa8ee89dfe5335ca44c5d02232b2cc604b944"
+        },
+        "fonts/noto-sans-arabic/NotoSansArabic.ttf": {
+          "bytes": 844676,
+          "sha256": "63111b5b2e074dd48cc67692e0a2726d86ee94c1c37fe8598257b7b4e87e869e"
+        },
+        "fonts/noto-sans-arabic/OFL.txt": {
+          "bytes": 4382,
+          "sha256": "07fc70bfeb985cc1a87a8587d0a0c80bab11c86c9dc3fd95b6f0cb332f983e96"
+        },
+        "fonts/noto-sans-cjk-sc/NotoSansCJKsc-Regular.otf": {
+          "bytes": 16437364,
+          "sha256": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b"
+        },
+        "fonts/noto-sans-cjk-sc/OFL.txt": {
+          "bytes": 4301,
+          "sha256": "6a73f9541c2de74158c0e7cf6b0a58ef774f5a780bf191f2d7ec9cc53efe2bf2"
+        },
+        "fonts/noto-sans-georgian/NotoSansGeorgian.ttf": {
+          "bytes": 231988,
+          "sha256": "dc591156f36842d38996c4a7a17fee9bb58e45da3e2cac7a31b7d33de700adb9"
+        },
+        "fonts/noto-sans-georgian/OFL.txt": {
+          "bytes": 4384,
+          "sha256": "8c02263c5d73d40544f9ed91e30c4e947407057a3cc430d7b786189aeceff6df"
+        },
+        "fonts/noto-sans-thai/NotoSansThai.ttf": {
+          "bytes": 218652,
+          "sha256": "5a1c559bb539583c8a1fd99d1c5b9491e5e14478c9cd2bd0970d5c3096cc9ef8"
+        },
+        "fonts/noto-sans-thai/OFL.txt": {
+          "bytes": 4380,
+          "sha256": "2e98fd23a52d253db8612cd5942c8f2ff4111b21d2367050fdca91d8ccc374a0"
+        },
+        "index.html": {
+          "bytes": 2507,
+          "sha256": "5a8bae979c76ea0bae60a7a6b44e1c844ed33f30685b0a0706eea5fbeb5c8cfa"
+        },
+        "LICENSE-APACHE": {
+          "bytes": 10174,
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+        },
+        "LICENSE-MIT": {
+          "bytes": 1102,
+          "sha256": "1a8f66d8a86b146f5336fa0d4b1186576c8aa98e60823080c85c7811cfd810af"
+        },
+        "NOTICE": {
+          "bytes": 3247,
+          "sha256": "bfb4e2d258b2db6aa3e9d2a33914212817745926ac836aa268e4208f13ed3fdf"
+        },
+        "photocraft-web-27700c220bf83b54.js": {
+          "bytes": 177541,
+          "sha256": "c2631142da4da9545d61247cdb85ff64eb51e495cc01577be8cd7ddc4d50514c"
+        },
+        "photocraft-web-27700c220bf83b54_bg.wasm": {
+          "bytes": 29628952,
+          "sha256": "919d1115bd4b1f983a43cd3af439870c6f2b70aa779922dfe2813b3697bcdd82"
+        },
+        "photocraft-web-2bdea6dd55084a1d.js": {
+          "bytes": 177541,
+          "sha256": "c2631142da4da9545d61247cdb85ff64eb51e495cc01577be8cd7ddc4d50514c"
+        },
+        "photocraft-web-2bdea6dd55084a1d_bg.wasm": {
+          "bytes": 29669502,
+          "sha256": "ed3a1f33c61caa84340d92e633b1eab083b0d034cbdfe97cddddd11a12686a57"
+        },
+        "photocraft-web-742943628811480c.js": {
+          "bytes": 177541,
+          "sha256": "c2631142da4da9545d61247cdb85ff64eb51e495cc01577be8cd7ddc4d50514c"
+        },
+        "photocraft-web-742943628811480c_bg.wasm": {
+          "bytes": 29668445,
+          "sha256": "be4153954270943bf90bb6fe45dff00c81a675ef129fb64f8e374c9e3f81746b"
+        },
+        "photocraft-web-7f1d0af5b0884140.js": {
+          "bytes": 178306,
+          "sha256": "ae78631f252495f1c23613c73b21a5d74bd001e7a12fbaf28663a5a15ede1387"
+        },
+        "photocraft-web-7f1d0af5b0884140_bg.wasm": {
+          "bytes": 29671070,
+          "sha256": "4703483d174b8d085399a493f64f06f90ddbe4ab793e61a63ccff349dfbd9f5b"
+        },
+        "photocraft-web-8cc93d6825b1429f.js": {
+          "bytes": 178306,
+          "sha256": "ae78631f252495f1c23613c73b21a5d74bd001e7a12fbaf28663a5a15ede1387"
+        },
+        "photocraft-web-8cc93d6825b1429f_bg.wasm": {
+          "bytes": 29670408,
+          "sha256": "b7abe7b003d7b45d13b8e18b8d5e6442d80f86298450d4a46212cf558d8c181d"
+        },
+        "photocraft-web-c21ca435b4f2522c.js": {
+          "bytes": 177541,
+          "sha256": "c2631142da4da9545d61247cdb85ff64eb51e495cc01577be8cd7ddc4d50514c"
+        },
+        "photocraft-web-c21ca435b4f2522c_bg.wasm": {
+          "bytes": 29668793,
+          "sha256": "1f5bbb8aea20c3d2b9b28662b5790df07f51f2e3680a14d8b26827bf3c18b508"
+        },
+        "photocraft-web-df380fadd9bada0b.js": {
+          "bytes": 177541,
+          "sha256": "c2631142da4da9545d61247cdb85ff64eb51e495cc01577be8cd7ddc4d50514c"
+        },
+        "photocraft-web-df380fadd9bada0b_bg.wasm": {
+          "bytes": 29629851,
+          "sha256": "8a1e36a3f15c8ec32965773e4061725c6754904c01f98d3d630c287ccced3faf"
+        },
+        "photocraft-web-e6ff4a387667476a.js": {
+          "bytes": 178306,
+          "sha256": "ae78631f252495f1c23613c73b21a5d74bd001e7a12fbaf28663a5a15ede1387"
+        },
+        "photocraft-web-e6ff4a387667476a_bg.wasm": {
+          "bytes": 29671196,
+          "sha256": "dd5a9bbf818f351ae4c5d43bdd803843db47cde500bc92d377771abc880acfa5"
+        },
+        "snippets/eframe-d31a8450ea12dfc1/inline0.js": {
+          "bytes": 280,
+          "sha256": "22a98f9d0c5a0532d291bdc9a3050439420b3d11143b4568fcfd3c66fff36995"
+        }
+      }
+    },
+    "deckcraft-host": {
+      "version": "0.13.1+designcraft.host18",
+      "provenance": {
+        "engineVersion": "0.13.1",
+        "sourceRevision": "4ce2944630b04188dee8504c14151994d06c416a",
+        "hostProtocol": 1,
+        "contextProtocol": 2,
+        "status": "real Rust/Trunk build: transient AI canvas presentation; runtime acceptance recorded separately",
+        "sourceFiles": {
+          "ATTRIBUTION.md": "816b9eab869f45b27719b7f638625cb746b10e959fead1c4788cb786cbf92e5e",
+          "Cargo.lock": "c920928a7c964bd7998c35f0ba63a4dede6833df905018c2fe687a4a9f799364",
+          "Cargo.toml": "95e2e1f6cc9eaf8e3f95f43757416df362a3c40b409f4cff704e35c2305a7135",
+          "apps/deckcraft-web/Cargo.toml": "9807b6d6513755ec79b394c2c40dccb3a418c8e18c0c81f4aa3b471b92449369",
+          "apps/deckcraft-web/Trunk.toml": "a996cb61144f4f961e8a44d8df04ef329620c12928aea4a4f328d1fcaf055ec8",
+          "apps/deckcraft-web/index.html": "5ff552301bfde3d5d369c93ad1a7a886f7aa639c021692269677c12f68e132be",
+          "apps/deckcraft-web/src/api.rs": "da8734620b55c6f9928242cf1fbe01e059e0c8c24f9d94df22ebc9471bd265e6",
+          "apps/deckcraft-web/src/audio.rs": "34c7102f6591080758c8bfdd3208f77dc2f25fab0c78f542bd1f30a24a4e7eba",
+          "apps/deckcraft-web/src/main.rs": "6631e810eccf762abf0a550147accc5cdf0fa622b250b4d2ed2d5092a8485101",
+          "apps/deckcraft-web/src/web.rs": "6e9b326eb7d8bf891280f457c24287ad95cb5cbf8857bfb786faefceb261f610",
+          "crates/anim/src/interact.rs": "d5039045fe7173c5d271e40f20101c4bf57669520afb3e8bfdb5ebf788e05c9e",
+          "crates/engine/Cargo.toml": "45274002ee5d7ad7e59115e537a0f96e05f0ea443079344ea7d8d56bfef56780",
+          "crates/engine/src/cmd.rs": "dae2cee773e4437b56826b81302814227f32b565602fd09ab759d017610ac004",
+          "crates/engine/src/cmd/artistic.rs": "006743ed76a3a63be3c66646136651182b9ae93be69f2feb9d01c0b49138fcdd",
+          "crates/engine/src/cmd/edit.rs": "07cd586f1f36e7a2fc660e10cd4b2583fcd64feae1787396c4e319d77c501275",
+          "crates/engine/src/cmd/format.rs": "de93eeca2026ca84464ce48542825cc09ac5b528f5444eae84b7cc7d7024d540",
+          "crates/engine/src/cmd/format/font.rs": "27cd6293aaf71d82bb797add788815362660c791b5d6fe7b0caf3523fc97735e",
+          "crates/engine/src/cmd/host_brand.rs": "f5a08742ffe4e9ce400ee62e3fe8bacbbf1fcd75b6ecd8439d8007e5bc70d059",
+          "crates/engine/src/cmd/host_font.rs": "3ff4b32ff37d0b373e8119456c757e881899a0b5725f315db0c1d7ab209cc7ad",
+          "crates/engine/src/cmd/host_material.rs": "98b0497a2847fc70e15fdd1476d16a4ffbc6867de7b597469d400512f488b7ee",
+          "crates/engine/src/cmd/ink_recognition.rs": "2497b119e1c00d8a185413cf2421c10f2fe705f9da4c439d9bb7c1ab3d4908fd",
+          "crates/engine/src/cmd/insert.rs": "295385f9bcfebb19392f3b90f3141327cc2bee58f27d4524613cf15d9e10f05f",
+          "crates/engine/src/cmd/insert/picture.rs": "7c6d89ba1e7e502799a621b701073170d4bc46a8b645e5c1146725f3f90eb883",
+          "crates/engine/src/cmd/shape.rs": "c5ef2fc09faad76c3b940c7e8c61e32c9d9fb9ab42cbfb01370c457de630d45d",
+          "crates/engine/src/cmd/shape/picture.rs": "27ba8d5e97403c66d23eada29052981414a24d13c4065ea223fa0b7174ed5d03",
+          "crates/engine/src/cmd/shape/picture_replace_tests.rs": "6363798988211eef3feb26b12a2abf122863c05fa0b0a5543e95097fd8ac4b55",
+          "crates/engine/src/cmd/svg_convert.rs": "b9cf30f24664370337fe8b0bb16dddc4c30dabe6aa745128b6372e81e7d9715a",
+          "crates/engine/src/cmd/svg_picture.rs": "ccba859f7deb29f9ad436f75cb69b1407412ddd5e49c108bb6c3479253945a9e",
+          "crates/engine/src/cmd/text/autocorrect.rs": "ee17e31f302dd68957f0d0d78fb2e605ace21ae6f96df0dc7f8a2954bf5f42cf",
+          "crates/engine/src/embedded.rs": "1dd4d44adba25d9a7f71465f052911d9236fe1ea16d2e1ba0c3609ca9b7964a8",
+          "crates/engine/src/fonts.rs": "1e7db2d436d229d70df5775afb26f7066f4f1744611a8a0fcc2fa8d17405e2d8",
+          "crates/engine/src/lib.rs": "d86f86109074e85626dcb60b5d5cd5cbfe4d640affdb4865c23e19682fb61b97",
+          "crates/engine/src/media_refs.rs": "6063a8c37d31d79691238b9b053cb4b57bc015fe74d63a56e4f1ca4769233ffb",
+          "crates/engine/src/svg_media.rs": "f951a28d36b956671f749df747d23532676b63e0663440602d01e41fdd835d50",
+          "crates/engine/tests/fixtures/dsh-svg-conversion/preview.png": "a0dae6730ec0ed7cfc2cb65a429f8120497f19d5e687cff7054c0e1e9edb76cd",
+          "crates/engine/tests/fixtures/dsh-svg-conversion/source.svg": "7bc6fd0e8b05dedcd0c3aceeb17c342de194da2446271458abfab646b8367917",
+          "crates/engine/tests/fixtures/dsh-svg-conversion/text-preview.png": "44530ba83a3fa07c67183a154e34df3d44f7ad94a5db41668ec4bc9b74a9f8c0",
+          "crates/engine/tests/fixtures/dsh-svg-conversion/text.svg": "ddbe38ed80f5017bdb1c6e79c3b89c10b6a28c4e11ffae9990e7942979abb28c",
+          "crates/engine/tests/fixtures/host-svg/edited-origin.json": "6edc6bf363a7169db5b76ccacabc41f84cb9542e3e45d2a6a701873d59a1ff2b",
+          "crates/engine/tests/fixtures/host-svg/edited-preview.png": "2a7110f2d12611c4df07eda48e06d856f800ae864cbe2019beb1d0955539d950",
+          "crates/engine/tests/fixtures/host-svg/edited-source.svg": "267c8e94cfb8abaa738285fb26423d4c0db475a918fd84b6dde498c405921243",
+          "crates/engine/tests/fixtures/host-svg/edited-source.vectorcraft": "33a882659d321c749810ae9098899084d50c57454d790046ee08839b343332e8",
+          "crates/engine/tests/fixtures/host-svg/input.svg": "c04818c956219f5f18f0ee48612bf85c97d9fd90e3d9423da1b9e599d75b40ca",
+          "crates/engine/tests/fixtures/host-svg/origin.json": "e45a9f7cc5d4305b29049a90893a1b80ad5ba57540df8fa6ad041ce687d2c138",
+          "crates/engine/tests/fixtures/host-svg/preview.png": "c9555c168a9d0bbac75cdc0f558e84cec2425f4ca8292359e470910434ad3920",
+          "crates/engine/tests/fixtures/host-svg/source.svg": "8f85b883ee5e0cfa5473b711333cfef1c63413b442297fadbd4f8bce380217ea",
+          "crates/engine/tests/fixtures/host-svg/source.vectorcraft": "8b59a20b4ac7cdbdff2d5336d761786589b178430e395d4ac28b92e752b6f5b2",
+          "crates/engine/tests/host_brand.rs": "c1334fabeaff914bd3299d825a136215db5d0228203638fb3c7be047c5d7d8d6",
+          "crates/engine/tests/host_material.rs": "6ad1e44b958484c36424e35ad438b1788aa8451a8ce8176c66d7997d266fbe2b",
+          "crates/engine/tests/svg_commands.rs": "58e8b075e1ee1b3ce24acb6a07911143a8ef96fb2e78cf0fc18c2471ae2da415",
+          "crates/engine/tests/svg_convert_inspect.rs": "224856b235261443a8f9f6046c362869d9caaec68f7422bf0b3b898e19a1282b",
+          "crates/engine/tests/svg_convert_shapes.rs": "11e3ccaa9c871f9f15d080a9e6d00ffcf08ae2d9c711d0bb245058f826938fe8",
+          "crates/engine/tests/svg_media.rs": "68bc1571a5be717c47ed32208d92d257aa8de4f0a706dbfc6ee26cb5814ba6df",
+          "crates/fonts/build.rs": "692cbe7723d5860c3b35816c5a274ae04919d80d6147cdf7d6288bb429f45bdf",
+          "crates/fonts/src/fontdb.rs": "bce2264f3781c38b8ee60c3e3b39322c5d42a6d9236c01f835297dfb957869bd",
+          "crates/media/src/player.rs": "2f18ac2be1d4b9e5409703e8569dc87fdbf732147784a773512172e435909145",
+          "crates/model/src/style.rs": "d0f7f149f63d37cf6c62eb5abfadc304a6144dff7f8b92c9701d21c95f0fa665",
+          "crates/pptx/src/read/chart.rs": "a3e7588bfb62368d42eb14807ec9820d968117482f375b8264f1d16b59ae19b7",
+          "crates/pptx/src/read/dml.rs": "f9bdd3471c4ddae02973ad389e2e9d9a4bdff729ca66841827074ab92362278e",
+          "crates/pptx/src/write/dml.rs": "676c2d0bea6099111bae12570d9b27abe557224362fb33149419049c4a68f836",
+          "crates/ui-egui/src/app.rs": "60b55fe3cba45871a31a45682b29e2f7ae23dee7b562666dee5d3c562bb81278",
+          "crates/ui-egui/src/app/commands.rs": "fb6cad6110115e7536939f872072212881174f6e000746043358ad0983dfaaab",
+          "crates/ui-egui/src/app/files.rs": "4e32f92a21ef116b47ed36ad6f5329130415d37daafda7dfff8f6b2b0957ccb2",
+          "crates/ui-egui/src/app/frame.rs": "b3160ad3b703a5bb53ccb92743c5593eede2d4e4c862441a5802d3ca6e2301a9",
+          "crates/ui-egui/src/app/keys.rs": "ef5d1abe023390292d178ee1c0941e3ccac4c08eb9c92f18119efa03a7149050",
+          "crates/ui-egui/src/app/playback.rs": "5f59c6d67b2e950dc1f5e6b186fe2caba3cb4824a31c94fc276483fac7c50303",
+          "crates/ui-egui/src/backstage.rs": "09f6b7ceb3201b8fac372feeab98dd70935b8c19cc0c12addf72ea5ddf697ce8",
+          "crates/ui-egui/src/backstage/files.rs": "e86962ee05fe921448b14a51c9e5041f13309969a22d5927777650e0d78069df",
+          "crates/ui-egui/src/backstage/info.rs": "2a13f34ba24f3c41469280d72fd66394d0a8e31dc66d3e3960d7db9348f56cc8",
+          "crates/ui-egui/src/backstage/print.rs": "e387d83abd3bbbf235691a4297a75a8b46207a96dd06a34a65412f8055418d84",
+          "crates/ui-egui/src/canvas/context_menu.rs": "b8fbec137d42939d65e648ce311b174cbd6e8032f33b7a79dfebb8f87faae78c",
+          "crates/ui-egui/src/canvas/rulers.rs": "fada9183cfa895433d6277e2d266fdd709cd2cc613256df74610a6ad8b9d42b3",
+          "crates/ui-egui/src/control.rs": "22ec3265c9f9680c1b0b8c94b61d91a861b5cd811d1e267397c76a19a9b75bca",
+          "crates/ui-egui/src/control/hosted.rs": "7e0075fa1f93cd375ceecefc5198213eb103827d6095520d2cbf718ffa8bde2d",
+          "crates/ui-egui/src/control/hosted_tests.rs": "a296d49ba2077e7cfd37aedfba67a4ff3c22fccc19833889025f409093a732a7",
+          "crates/ui-egui/src/dialogs.rs": "8606567985730ced45720dea1797a00500c054f7bda5b822d09c6f70cebd1f3c",
+          "crates/ui-egui/src/dialogs/about.rs": "5d919d0f4da70335ada0db0f408f5b7f746082b77f4a1898d45fe96c9343e1f1",
+          "crates/ui-egui/src/dialogs/body.rs": "48cb990fdd35caccfc2d6d981abd8639d0db5c5d33d2ffa93c2456a50b476a57",
+          "crates/ui-egui/src/dialogs/credits.rs": "383d4992e96a72e99bc01a18eccea8c4326409a688ba34fdef267b3351f5ee5c",
+          "crates/ui-egui/src/dialogs/date_time.rs": "cfda59d5e42d1337a053901d84fedd1d03e2db5090d4d2f4ebb0f68969ad2b5e",
+          "crates/ui-egui/src/dialogs/export.rs": "161921a666298c7d44b7dcb64ee4db2fde7b9de86de09350257355bbeb0c6da0",
+          "crates/ui-egui/src/dialogs/find.rs": "711ddae2384633fc3166c6f71a4f9f1a3db25ce900845b57b04ee8b86ca86009",
+          "crates/ui-egui/src/dialogs/font.rs": "31ec3f666a7414aa3b89e3b46f21dc8ca5da595cd2ea62d10735fa4ea88cb751",
+          "crates/ui-egui/src/dialogs/grid_options.rs": "ce497616d6a69718c93b948d6d2f2d85040c19b40e1848d09de18e9b4ae552fe",
+          "crates/ui-egui/src/dialogs/paragraph.rs": "86f1556fc57d507747758abb9f09a975432682304c4acab9fad3cbdf66a0e88f",
+          "crates/ui-egui/src/dialogs/photo_album.rs": "0f2bf69f15f9a2fa37923651f1f283467291cf4515790d09c1a3aa20a47ccc00",
+          "crates/ui-egui/src/dialogs/size_position.rs": "6a6f1ec1ae3e0271e88a6b241bfc0a79cc8ba34c0fc3bc4238fe8ba844c7c09a",
+          "crates/ui-egui/src/dialogs/tabs.rs": "f746c583bfa1f7299223623510157962b025dae4a65a3603ddc21cc2a777798e",
+          "crates/ui-egui/src/dialogs/theme_colors.rs": "7aeeae05b8f44bae3a5d47dcd5289bfd1be24e56ef8783544584d6c6f2d5e1bf",
+          "crates/ui-egui/src/dialogs/theme_fonts.rs": "5e1ac716ff0a03ff3949c2eb1ce9bbef593342a52066df23476e875a9eff451d",
+          "crates/ui-egui/src/dialogs/updates_ui.rs": "7ba18fe253080309f6552240742215ea354b3cb13c22bb5455ba67e6123e5e66",
+          "crates/ui-egui/src/dialogs/zoom.rs": "7593a33fc6de959cf0c3762f687c7baeebee8a86cbf2e1bfb7e23708f35e3751",
+          "crates/ui-egui/src/doc_window.rs": "b5a7287b1a265ce85ada97047f3f6ee0f217c4e8ba3471ad9d77c61f890a60c1",
+          "crates/ui-egui/src/host_ui.rs": "3b6268d4dbc13f0c1241bb38a73a8fb1fc46a01b19810fd495beced714ed7cc5",
+          "crates/ui-egui/src/lib.rs": "c8c584a49f965be85183b55f14b8b74fc55eadbfc95ce0a21f94c8f99e1266fe",
+          "crates/ui-egui/src/media.rs": "9e1c025a4196e67382b1585bdfee46c1ffaa9fae9be9a9c69dd2a4a146e56306",
+          "crates/ui-egui/src/menus.rs": "be362216c79dc460c0d3b5acc315ec52617d79661f869df8acfb844bbe47abe6",
+          "crates/ui-egui/src/opening.rs": "263d2ed2aa66f2edac9fa15e3183f4cf36412e9dfb722c3df2ffba9cd29da5f0",
+          "crates/ui-egui/src/panels/animation.rs": "20f8ef302df1986fb8ee2f039712859b0315ca8179f32509f93f768dcf88393c",
+          "crates/ui-egui/src/panels/animtimeline.rs": "e47c5f7523d0dd258007b4bbead97c001ecd03fd97d5100b077d9e48ed1af981",
+          "crates/ui-egui/src/panels/background.rs": "8686cdde6a1e6686c9ede7728f1fec941b26326e03e245a9e4d93ee14f34c464",
+          "crates/ui-egui/src/panels/comments.rs": "b8bd43ec80063e0360c4cf749328fb4a867d1353aaf44512dcfa50471a332c65",
+          "crates/ui-egui/src/panels/designer.rs": "b18955386d572c30321e852a579d7cdb55e1bc9c14a4e5d2a6d912a19edde4d2",
+          "crates/ui-egui/src/panels/effect_presets.rs": "a156e57841ff6d65293f7800d87d06fee85f7ceceaf65d14448b2232ebf452a7",
+          "crates/ui-egui/src/panels/fillui.rs": "bb2d126d6a0d504663a9878b4666d1d5b7f1b98e90c3786775a4c425448b49af",
+          "crates/ui-egui/src/panels/format_shape.rs": "22d55e8f014465bb0560a0fc2a58400600a50fcf7a038d6f4610534cbf99b883",
+          "crates/ui-egui/src/panels/selpane.rs": "6cb5254cd7ce2333aedd6986cb60dc743c0750bfcc685bdcf9a7920ca261f10e",
+          "crates/ui-egui/src/panels/smartart.rs": "336f9a0467da828b99ccb82a44e6718fbca9a9acd33ac70b019d70b11b352321",
+          "crates/ui-egui/src/panels/thesaurus.rs": "c9735eb82efb121d245b476f0ab473a37c3e2433925e14d51e283ddff51819ba",
+          "crates/ui-egui/src/panels/thumbs.rs": "fc93de272be28cbfea790b33dc488630da42585720976c385442662c0f420034",
+          "crates/ui-egui/src/ribbon.rs": "a84dad6435734242fd8289af8ea11f6ae42512e401fe38e29e6511c6bae328e8",
+          "crates/ui-egui/src/ribbon/animations.rs": "61a5f21d3e6d3a4e47387dca1ed03dfac291d3b28bff74f40f556b76daa1a138",
+          "crates/ui-egui/src/ribbon/arrange.rs": "841ad2cd8529b4865dc805f9e3f3ecc823f70e42e7b386ec4fb4a02605d906fc",
+          "crates/ui-egui/src/ribbon/design.rs": "830095ed32eef70bd8d1b62375694d13bf2b53080cf397c889e4750c9f5855c2",
+          "crates/ui-egui/src/ribbon/draw.rs": "9f287320261417f87583989cd1fab963250b833a30e87654f76ddaab1affcdd2",
+          "crates/ui-egui/src/ribbon/galleries.rs": "946bac266395a6b4936eddbc6821aa7e7338472d0b817dd920cfdbd427001a84",
+          "crates/ui-egui/src/ribbon/home.rs": "f767f50ec8bb6255aca73e87b0c3a323c21cd7157bd977ef5de2c5c0caded61a",
+          "crates/ui-egui/src/ribbon/insert.rs": "0c9a4fd13be1732b672f865eb9caa9c59cf32bca703508d41f6e465bceeb1948",
+          "crates/ui-egui/src/ribbon/masters.rs": "ba4cf35b24a6c521f806ab28e6f017ae592e0858f7da9f646e081a8059920ce5",
+          "crates/ui-egui/src/ribbon/picture_format.rs": "668e38905bb60ce08812a0832ca3678122359e173b48123f7d90461283fde71d",
+          "crates/ui-egui/src/ribbon/playback.rs": "fc1fbf4cc833cdd52ab65676842da6e048f630c7142e4d3727f3ade6fb643f70",
+          "crates/ui-egui/src/ribbon/qat.rs": "0c5f5e19b7d44225bda36b80a016c1b7901347d423d9296714b4912da419a9c5",
+          "crates/ui-egui/src/ribbon/review.rs": "6f74ef8ae5773d9ad87a32f520b672269c6c940a0f8f4e8614783904c28fe6e1",
+          "crates/ui-egui/src/ribbon/shape_format.rs": "2467fc15368016173dbdca0f353fd1a18a0705768d1970869ff27c2bece24add",
+          "crates/ui-egui/src/ribbon/slide_show.rs": "6381f7d06dc2c67635de3644ef7f6534c6d9a04511806148ff17a601aa2ee8f5",
+          "crates/ui-egui/src/ribbon/smartart.rs": "46a03f4ac89249b77d8f38aae5acb061ffef4bf523bdc79e85a409e0f39c1d5e",
+          "crates/ui-egui/src/ribbon/table.rs": "464eaec429da14c5a29ac30945d11411a776aff480f5fb1f40a0089b4b598157",
+          "crates/ui-egui/src/ribbon/title_bar.rs": "7af637ae0ec87042deaf7b94bfa38a0bd7ed8b8c7074c945fb79450781f8958f",
+          "crates/ui-egui/src/ribbon/transitions.rs": "67c3e838083c354cd4aed0c58141bac360aac78d391493ea0780b19891794b6e",
+          "crates/ui-egui/src/ribbon/view.rs": "d3692c59dcae39ce4a6d23959973906b59fa378f6b4a79128432f344a86049f6",
+          "crates/ui-egui/src/services.rs": "b8c2ffab6c8c022ec5b31c858e1e28dbe16bb71a30a5490a7f1cfbb3cb909e7f",
+          "crates/ui-egui/src/show/presenter.rs": "7e8c0107dc6e2d81e1f0e590f31d94684cc5bc7f697cf8095956815ffbd148c2",
+          "crates/ui-egui/src/show/ui.rs": "37df03077997ce41f8e726b10fcdb56dfae577e0d0deaf668ef9a0780bc17a7a",
+          "crates/ui-egui/src/show/zoom.rs": "a3a2ca86324caf5567e75c09de0ee1fba08f470f4f874b33c6f4a1194de3565f",
+          "crates/ui-egui/src/sorter.rs": "9a8d005536522511815fa5de4ca60fe40d306e476c06b46a5f0dbd7ed9a6356c",
+          "crates/ui-egui/src/status.rs": "a13977dc9e0244feaf2b2ad0c25203d9a173cf9d132e633de590d60fbed1df0e",
+          "crates/ui-egui/src/theme.rs": "227925ba5d648193e8980ce681db3cee1a66920aac8113b47861d2c9121eb8d2",
+          "crates/ui-egui/src/toast.rs": "78f7ae1c009b5e4c1104d6c2a395e3293edb9f0f10833f57acf6b530bf6ac2e1",
+          "crates/ui-egui/src/widgets.rs": "21a206a600360bb0d3a606f7f6001edfc534df5498378d7b43aedb40de91b224",
+          "font-input/fonts\\biz-ud-pgothic\\BIZUDPGothic-Bold.ttf": "30eba52fc837e8b62c97d4b82e6706583149fb7294e3712dd71a655eaea80a90",
+          "font-input/fonts\\biz-ud-pgothic\\BIZUDPGothic-Regular.ttf": "258d7156c165f2ff774b6efee637c22c3b950de0d8a10e501137061bc8085d01",
+          "font-input/fonts\\biz-ud-pgothic\\OFL.txt": "e753d7155d53c747d037a445e584c8ecfca6dd79846db610417e282a736b28bc",
+          "font-input/fonts\\inter\\Inter-Bold.ttf": "288316099b1e0a47a4716d159098005eef7c0066921f34e3200393dbdb01947f",
+          "font-input/fonts\\inter\\Inter-Regular.ttf": "40d692fce188e4471e2b3cba937be967878f631ad3ebbbdcd587687c7ebe0c82",
+          "font-input/fonts\\inter\\OFL.txt": "262481e844521b326f5ecd053e59b98c8b2da78c8ee1bdbb6e8174305e54935a",
+          "font-input/fonts\\latin-manifest.txt": "8bdc66b47cb1a8d13e04240ab5e0c54601db05bda10a9f567e7f4cb1bdc5c58d",
+          "font-input/fonts\\lxgw-wenkai-lite\\LXGWWenKaiLite-Regular.ttf": "f799a538a3355877e597a0ae04050e897932c9ae7689eb9227c2953c5dd549ea",
+          "font-input/fonts\\lxgw-wenkai-lite\\OFL.txt": "0333a85fe077b6849f8e417acc44e8bd879442ceb681e271acf93e2d57fd4e2e",
+          "font-input/fonts\\manifest.txt": "a70cf3b8c08be4e90ec40841c860d0e2ff25bc6566ce03a473d4fa1dc4b38958",
+          "font-input/fonts\\simplified-chinese-manifest.txt": "dff6d22a8e3162d02e7e7c4bd058a36b117485e135e362a060ce68734649ea35",
+          "font-input/source-lock.json": "0da094ff887ee881bcd2cbb9b12cda5b73a9f9258b9447172c4d45d834b8d16b"
+        },
+        "buildLogSha256": "cf9725e65e6a7c781eb7c251ec0fb89dc38c52e2b93a3d24938a9486a5a44fbe",
+        "fonts": {
+          "status": "genuine_hash_verified_fonts",
+          "sourceRevision": "aced4137c022f1f587624d48e81ec77e1914a9cc",
+          "wasmEmbeddedFamilies": [
+            "Inter Regular",
+            "Inter Bold",
+            "BIZ UDPGothic Regular"
+          ],
+          "runtimeFaces": [
+            {
+              "family": "LXGW WenKai Lite",
+              "style": "Regular",
+              "file": "fonts/lxgw-wenkai-lite/LXGWWenKaiLite-Regular.ttf",
+              "sha256": "f799a538a3355877e597a0ae04050e897932c9ae7689eb9227c2953c5dd549ea",
+              "bytes": 13949472,
+              "license": "OFL-1.1",
+              "licenseFile": "fonts/lxgw-wenkai-lite/OFL.txt",
+              "licenseSha256": "0333a85fe077b6849f8e417acc44e8bd879442ceb681e271acf93e2d57fd4e2e",
+              "origin": "https://github.com/lxgw/LxgwWenKai-Lite/releases/tag/v1.530"
+            }
+          ],
+          "licenses": [
+            {
+              "file": "fonts/biz-ud-pgothic/OFL.txt",
+              "sha256": "e753d7155d53c747d037a445e584c8ecfca6dd79846db610417e282a736b28bc"
+            },
+            {
+              "file": "fonts/inter/OFL.txt",
+              "sha256": "262481e844521b326f5ecd053e59b98c8b2da78c8ee1bdbb6e8174305e54935a"
+            },
+            {
+              "file": "fonts/lxgw-wenkai-lite/OFL.txt",
+              "sha256": "0333a85fe077b6849f8e417acc44e8bd879442ceb681e271acf93e2d57fd4e2e"
+            }
+          ],
+          "nativeOnlyManifestEnteredWasmAllowlist": false
+        },
+        "hostedLanguage": {
+          "code": "zh-Hans",
+          "guard": "embedded frame only; command IDs and document text unchanged",
+          "sourceAudit": "docs/hosted-ui-source-audit.json"
+        },
+        "retainedCompatibilityFiles": [
+          "deckcraft-web-3af43b3107cc67a2.js",
+          "deckcraft-web-3af43b3107cc67a2_bg.wasm",
+          "deckcraft-web-92ed1924339b915f.js",
+          "deckcraft-web-92ed1924339b915f_bg.wasm",
+          "deckcraft-web-eef554a06985b703.js",
+          "deckcraft-web-eef554a06985b703_bg.wasm"
+        ]
+      },
+      "files": {
+        "ATTRIBUTION.md": {
+          "bytes": 15650,
+          "sha256": "816b9eab869f45b27719b7f638625cb746b10e959fead1c4788cb786cbf92e5e"
+        },
+        "deckcraft-b8fcbb36ecec0385.ico": {
+          "bytes": 22252,
+          "sha256": "ceb73e008aa2cdf4d05d6375da32c5536a2bc2637bee59cdf441e2f9f792a9cd"
+        },
+        "deckcraft-web-178e3ee8573c1ac0.js": {
+          "bytes": 170007,
+          "sha256": "e50f020176b5e2ea6855ff9d44e27fff3906644c405fce0261a4a02aea39085e"
+        },
+        "deckcraft-web-178e3ee8573c1ac0_bg.wasm": {
+          "bytes": 38323827,
+          "sha256": "aab07ab28d07c46fe812be9ba911d8140e32e24146a20fb735874b7a4727a9a0"
+        },
+        "deckcraft-web-3af43b3107cc67a2.js": {
+          "bytes": 170007,
+          "sha256": "e50f020176b5e2ea6855ff9d44e27fff3906644c405fce0261a4a02aea39085e"
+        },
+        "deckcraft-web-3af43b3107cc67a2_bg.wasm": {
+          "bytes": 38372516,
+          "sha256": "f4d6cd373a5611fdbfd29b536a0d9fee0030a9c716c20eafed77061e286a31b9"
+        },
+        "deckcraft-web-92ed1924339b915f.js": {
+          "bytes": 170007,
+          "sha256": "e50f020176b5e2ea6855ff9d44e27fff3906644c405fce0261a4a02aea39085e"
+        },
+        "deckcraft-web-92ed1924339b915f_bg.wasm": {
+          "bytes": 38378547,
+          "sha256": "64630d25193347eb46b8d337b1777a1790a6128f5eb35df9089790d19d3bbb8d"
+        },
+        "deckcraft-web-eef554a06985b703.js": {
+          "bytes": 170007,
+          "sha256": "2cc625ce3f4e9e8014f3d4e71dd3c5923997c7d1d1dcc0f0afa770fb1aa70a9b"
+        },
+        "deckcraft-web-eef554a06985b703_bg.wasm": {
+          "bytes": 38128284,
+          "sha256": "2e315b69b915c76f6cf978f55168b8c33f8bdc1e66e13a8ff91e64cc16f047ba"
+        },
+        "fonts/biz-ud-pgothic/OFL.txt": {
+          "bytes": 4408,
+          "sha256": "e753d7155d53c747d037a445e584c8ecfca6dd79846db610417e282a736b28bc"
+        },
+        "fonts/inter/OFL.txt": {
+          "bytes": 4380,
+          "sha256": "262481e844521b326f5ecd053e59b98c8b2da78c8ee1bdbb6e8174305e54935a"
+        },
+        "fonts/lxgw-wenkai-lite/LXGWWenKaiLite-Regular.ttf": {
+          "bytes": 13949472,
+          "sha256": "f799a538a3355877e597a0ae04050e897932c9ae7689eb9227c2953c5dd549ea"
+        },
+        "fonts/lxgw-wenkai-lite/OFL.txt": {
+          "bytes": 5176,
+          "sha256": "0333a85fe077b6849f8e417acc44e8bd879442ceb681e271acf93e2d57fd4e2e"
+        },
+        "fonts/runtime-provenance.json": {
+          "bytes": 1264,
+          "sha256": "3a8a156dea6cfc5613c5c44d721db78afd34c68b21a29839683b3c5e3c233e2b"
+        },
+        "index.html": {
+          "bytes": 1794,
+          "sha256": "ef2dce03da8573dd885ec6c849adce20c108cdd56ae13b047019ddbab9e12d2d"
+        },
+        "LICENSE-APACHE": {
+          "bytes": 10174,
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+        },
+        "LICENSE-MIT": {
+          "bytes": 1101,
+          "sha256": "90e96fef569474cd526350e716e4b05dd32f179ca96d39d61e6b928485e35406"
+        },
+        "NOTICE": {
+          "bytes": 6550,
+          "sha256": "2ce764ed5d83f2453a7dba485092c0c41b465fe795b31c2c59bc5279332bc4f3"
+        },
+        "snippets/eframe-d31a8450ea12dfc1/inline0.js": {
+          "bytes": 280,
+          "sha256": "22a98f9d0c5a0532d291bdc9a3050439420b3d11143b4568fcfd3c66fff36995"
+        }
+      }
+    }
+  }
+}

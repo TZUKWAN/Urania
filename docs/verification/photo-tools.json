@@ -1,0 +1,115 @@
+{
+  "status": "passed",
+  "scope": "physical Photo browser tools, actual registered DSH tools and source/pixel checks; no model",
+  "codeRoot": "D:\\METIS超级合并\\dsh-plugin\\designcraft",
+  "root": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\photo-tools-project\\e186b7aa-0324-4abf-b329-263d29782c1f",
+  "checks": [
+    {
+      "name": "physical brush and eraser change actual native alpha pixels while retaining surrounding paint",
+      "pass": true,
+      "detail": {
+        "beforeAlpha": 255,
+        "erasedAlpha": 0
+      }
+    },
+    {
+      "name": "physical crop owns its uncommitted preview, refuses competing tool edit, cancels losslessly and commits real dimensions",
+      "pass": true,
+      "detail": {
+        "pendingCrop": [
+          25,
+          20,
+          279.5,
+          210
+        ],
+        "rejectedStatus": 409,
+        "committedSize": [
+          255,
+          190
+        ]
+      }
+    },
+    {
+      "name": "actual native layer creation and Multiply composition retain separate editable raster sources",
+      "pass": true,
+      "detail": {
+        "baseLayer": 2,
+        "overlayLayer": 3,
+        "renderedPixel": [
+          26,
+          51,
+          77,
+          255
+        ]
+      }
+    },
+    {
+      "name": "native feathered layer mask has visible fractional coverage and physical brush edits only that actual mask",
+      "pass": true,
+      "detail": {
+        "edgeColorCount": 16,
+        "maskChanged": true,
+        "rasterContentUnchanged": true,
+        "baseLayerUnchanged": true
+      }
+    },
+    {
+      "name": "physical Free Transform owns its native preview and competing registered mutation is refused",
+      "pass": true,
+      "detail": {
+        "rejectedStatus": 409
+      }
+    },
+    {
+      "name": "real adjustment and completed Gaussian filter change only target raster content while preserving mask and base",
+      "pass": true,
+      "detail": {
+        "sourceRevision": "dbc6112d8639caca8548afbb555d5c5bbfbf033b640580e913900debefff3562",
+        "basePreserved": true,
+        "maskPreserved": true
+      }
+    },
+    {
+      "name": "fresh Photo App reopens exact native crop, layer order, blend, painted soft mask and filtered pixels",
+      "pass": true,
+      "detail": {
+        "sameDocument": true,
+        "samePixels": true,
+        "sourceHash": "0eb89657be2b6562f23ca7f1a2250ef59741ef6dc9690a1516eb214c55f6a423",
+        "sourceRevision": "dbc6112d8639caca8548afbb555d5c5bbfbf033b640580e913900debefff3562"
+      }
+    },
+    {
+      "name": "actual JPEG browser import creates a real editable Photo source and renders the decoded original color",
+      "pass": true,
+      "detail": {
+        "sourceId": "import-22d52f98-83e3-4616-b697-6843386db566",
+        "size": [
+          64,
+          48
+        ],
+        "depth": 8
+      }
+    },
+    {
+      "name": "actual 16-bit PNG browser import retains native U16 layer storage in layered source",
+      "pass": true,
+      "detail": {
+        "sourceId": "import-8cc73111-0d40-4131-81f0-57a2b25acaa8",
+        "size": [
+          32,
+          24
+        ],
+        "depth": 16
+      }
+    }
+  ],
+  "owned": {
+    "workspaceId": "cc551999-bbbc-4782-9a2a-a6607dd72770",
+    "sessionId": "PUBLIC-REDACTED"
+  },
+  "sourceId": "work-10559217-4271-428c-b729-58ab6db06616",
+  "baseLayerId": 2,
+  "targetLayerId": 3,
+  "pageErrors": []
+}

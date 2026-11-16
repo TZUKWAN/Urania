@@ -1,0 +1,130 @@
+{
+  "status": "passed_scoped",
+  "at": "2026-11-08T08:21:01.773302+00:00",
+  "scope": "Actual seven linked uses across Vector/Deck, PNG top-left on current UI45 and SVG bottom-right historical test, plus nine-anchor geometry tests.",
+  "results": {
+    "png": {
+      "status": "passed",
+      "format": "png",
+      "policy": "fit-0",
+      "linkedCount": 7,
+      "anchors": [
+        {
+          "engine": "vectorcraft",
+          "id": "2",
+          "drift": 0.0,
+          "ratioError": 0.0
+        },
+        {
+          "engine": "vectorcraft",
+          "id": "3",
+          "drift": 0.0,
+          "ratioError": 0.0
+        },
+        {
+          "engine": "vectorcraft",
+          "id": "4",
+          "drift": 0.0,
+          "ratioError": 0.0
+        },
+        {
+          "engine": "deckcraft",
+          "id": "262",
+          "drift": 0.0,
+          "ratioError": 0.0
+        },
+        {
+          "engine": "deckcraft",
+          "id": "263",
+          "drift": 0.0,
+          "ratioError": 0.0
+        },
+        {
+          "engine": "deckcraft",
+          "id": "264",
+          "drift": 0.0,
+          "ratioError": 0.0
+        },
+        {
+          "engine": "deckcraft",
+          "id": "266",
+          "drift": 0.0,
+          "ratioError": 0.0
+        }
+      ],
+      "independentPreserved": true,
+      "updateId": "update-09b0c9fe-6910-46c4-ab9f-eccd9d52e847"
+    },
+    "svg": {
+      "status": "passed",
+      "format": "svg",
+      "policy": "fit-8",
+      "linkedCount": 7,
+      "anchors": [
+        {
+          "engine": "vectorcraft",
+          "id": "2",
+          "drift": 0.0,
+          "ratioError": 2.220446049250313e-16
+        },
+        {
+          "engine": "vectorcraft",
+          "id": "3",
+          "drift": 0.0,
+          "ratioError": 0.0
+        },
+        {
+          "engine": "vectorcraft",
+          "id": "4",
+          "drift": 0.0,
+          "ratioError": 0.0
+        },
+        {
+          "engine": "deckcraft",
+          "id": "262",
+          "drift": 0.0,
+          "ratioError": 0.0
+        },
+        {
+          "engine": "deckcraft",
+          "id": "264",
+          "drift": 0.0,
+          "ratioError": 0.0
+        },
+        {
+          "engine": "deckcraft",
+          "id": "265",
+          "drift": 0.0,
+          "ratioError": 0.0
+        },
+        {
+          "engine": "deckcraft",
+          "id": "267",
+          "drift": 0.0,
+          "ratioError": 0.0
+        }
+      ],
+      "independentPreserved": true,
+      "updateId": "update-57b29a46-63d3-4077-bd28-d9bb8d70ee15"
+    }
+  },
+  "fontEvidence": "verification/ui45-brand-font-acceptance.json",
+  "rawEvidence": [
+    {
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\f6-anchor-png.json",
+      "sha256": "32e4d21ff2459aa8bc501a64d48ce1817ab4f908225e9d876a4f1c3645bc432c"
+    },
+    {
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\f6-anchor-svg.json",
+      "sha256": "ff71768f6b67364cbe115928277d4a6e8006af534d8c23640737ab91f0175326"
+    },
+    {
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-material-layout.tap",
+      "sha256": "0fca24cb36771c41fa503d7e503a35f5f1951efc3b4d2d2de7717b1a47c77828"
+    }
+  ],
+  "limits": [
+    "Only the two indicated anchors were exercised end-to-end across seven uses; all nine were checked mathematically with rotated/skewed/cropped test inputs.",
+    "Brand font metadata updates were checked across Vector and Deck; font availability remains environment-dependent."
+  ]
+}

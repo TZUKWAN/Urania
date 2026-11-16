@@ -1,0 +1,11 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {mkdirSync,mkdtempSync} from 'node:fs';
+import {join,resolve} from 'node:path';
+import {openPresentation} from '../client/deck.js';
+import {normalizeDoc} from '../client/engine.js';
+import * as store from '../host/docstore.js';
+import {executeCommands} from '../host/commands.js';
+test('unimplemented local Morph is refused before opening a fake fade preview',async()=>{await assert.rejects(openPresentation({pages:[{transition:{kind:'morph'}}]}),/未实现真实 Morph/);});
+test('new invisible component instances cannot be reported as successfully added',()=>{const base=resolve(process.env.DESIGNCRAFT_TEST_ROOT||'tests/.work');mkdirSync(base,{recursive:true});const root=mkdtempSync(join(base,'truth-')),doc=store.createDoc(root,{id:'work',canvas:{width:100,height:100},pages:[{id:'p',layers:[]}]});const result=executeCommands(root,[{op:'layer.add',id:'work',pageId:'p',layer:{id:'unsupported',type:'instance'}}],{requireRevision:true,baseRevisions:{work:doc.revision},stopOnError:true});assert.equal(result.results[0].ok,false);assert.equal(store.readDoc(root,'work').doc.pages[0].layers.length,0);});
+test('image and vector presets remain their actual document types after frontend normalization',()=>{for(const type of ['photo','image','vector','deck','canvas'])assert.equal(normalizeDoc({type}).type,type);});

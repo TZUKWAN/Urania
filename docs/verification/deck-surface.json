@@ -1,0 +1,68 @@
+{
+  "status": "passed",
+  "scope": "actual installed Deck WASM + production Surface/Frame before registry; physical shape key/text/page input and native source/PPTX/PNG/reopen; no model",
+  "codeRoot": "D:\\METIS超级合并\\dsh-plugin\\designcraft",
+  "checks": [
+    {
+      "name": "actual installed Deck starts empty, verifies genuine font families and creates a real native presentation",
+      "pass": true,
+      "detail": {
+        "protocol": {
+          "atomicBundle": true,
+          "atomicSnapshot": true,
+          "contextOrdering": true,
+          "engine": "deckcraft",
+          "guardedExecute": true,
+          "hostFileRouting": true,
+          "hostPresentation": true,
+          "identityKind": "native-document-instance-uid",
+          "losslessJson": true,
+          "nativeContext": 2,
+          "protocol": 1,
+          "saveAcknowledgement": true,
+          "selectionKind": "deckcraft",
+          "activityControl": true,
+          "nativeInspection": true
+        },
+        "nativeUid": 1426861166952448,
+        "fonts": [
+          "Inter",
+          "BIZ UDPGothic",
+          "LXGW WenKai Lite"
+        ]
+      }
+    },
+    {
+      "name": "physical key/text edits use the same native App and retain real editable rectangle/Chinese text",
+      "pass": true,
+      "detail": {
+        "sameRealm": true,
+        "shapeId": 260,
+        "textId": 261,
+        "movedX": 106
+      }
+    },
+    {
+      "name": "physical page navigation preserves presentation bytes, publishes actual native page context and refuses the old command",
+      "pass": true,
+      "detail": {
+        "revisionBefore": 17,
+        "revisionAfter": 18,
+        "nativeSourceUnchanged": true,
+        "refusal": "native conflict: revision changed"
+      }
+    },
+    {
+      "name": "real native source and editable PPTX/PNG are produced, and a fresh native App reopens exact presentation/pixels",
+      "pass": true,
+      "detail": {
+        "nativeBytes": 4813,
+        "pptxBytes": 22753,
+        "sameModel": true,
+        "samePixels": true,
+        "sourceSha256": "d5892f2b8ecb6a9b34e3244c1d1d12a463f3963f37da7fe455e5eec11aa2b891"
+      }
+    }
+  ],
+  "pageErrors": []
+}

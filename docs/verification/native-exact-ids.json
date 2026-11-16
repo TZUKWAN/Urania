@@ -1,0 +1,88 @@
+{
+  "status": "passed",
+  "scope": "actual native high-ID file and gestures, production MessageChannel/raw JSON, registered DSH tool, exact source/reopen; no LLM",
+  "codeRoot": "D:\\METIS超级合并\\dsh-plugin\\designcraft",
+  "checks": [
+    {
+      "name": "actual native file opens distinct uint64 object IDs that ordinary JS numbers would alias",
+      "pass": true,
+      "detail": {
+        "ids": {
+          "alpha": 9007199254740993,
+          "beta": 18446744073709551001,
+          "gamma": 9007199254740992
+        },
+        "sourceId": "import-3df69331-acaf-4bbc-8f0d-85bb992ce873",
+        "revision": "f1f05e4e709cc35b8fb425e1bced2c5883e739bdc2ee89c5fe38085d21958159",
+        "path": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\native-exact-id-project\\9494deca-2c48-4f69-bd7f-6ee294693f66\\design\\.designcraft\\v2\\sources\\import-3df69331-acaf-4bbc-8f0d-85bb992ce873\\versions\\1af357b10516b9f8a3d4ec9fa248388346dbfa5c88c5ef03bb501e560892786d.vectorcraft"
+      }
+    },
+    {
+      "name": "physical editing and actual registered tool use the exact high ID, preserving its aliased neighbour and manual geometry in saved source",
+      "pass": true,
+      "detail": {
+        "target": "9007199254740993",
+        "untouchedNeighbour": "9007199254740992",
+        "inspectedU64": "18446744073709551001",
+        "sourceId": "import-3df69331-acaf-4bbc-8f0d-85bb992ce873",
+        "revision": "c00ab0ad3ed9879b613d976dd003ceaedc833da7de42324ea992bb9a4db78239",
+        "path": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\native-exact-id-project\\9494deca-2c48-4f69-bd7f-6ee294693f66\\design\\.designcraft\\v2\\sources\\import-3df69331-acaf-4bbc-8f0d-85bb992ce873\\versions\\53cd70e3ea34add3e20a342ce8160d6aeab124225d1f10f5e891b8461f02be41.vectorcraft"
+      }
+    },
+    {
+      "name": "genuine native anchor changes remain in nativeSelection and refuse the prior complete execution base without changing source content",
+      "pass": true,
+      "detail": {
+        "sameSelectedObjectIds": true,
+        "revisionChanged": true,
+        "refusal": {
+          "ok": false,
+          "status": 409,
+          "error": "设计版本、引擎或完整选区已改变，请先读取当前状态",
+          "readStateBeforeRetry": true
+        }
+      }
+    },
+    {
+      "name": "replaying an actual old native response cannot replace newer controller/backend selection despite a later client report number",
+      "pass": true,
+      "detail": {
+        "oldNativeSequence": 38,
+        "currentNativeSequence": 43,
+        "backendStaleIgnored": true
+      }
+    },
+    {
+      "name": "native source reopens with all exact uint64 IDs and edited content, and extra context reads do not create false conflicts",
+      "pass": true,
+      "detail": {
+        "ids": {
+          "alpha": 9007199254740993,
+          "beta": 18446744073709551001,
+          "gamma": 9007199254740992
+        },
+        "sourceRevision": "15166225c50d69cc852a12f5c316a3380b200db61a06ec5b1c499cc7a8ac4ce4"
+      }
+    },
+    {
+      "name": "a different source containing the same high IDs and an incorrect engine cannot receive the old operation",
+      "pass": true,
+      "detail": {
+        "sourceRefusal": {
+          "ok": false,
+          "status": 409,
+          "error": "专业源引用已过期，请先读取当前状态",
+          "readStateBeforeRetry": true
+        },
+        "engineRefusal": {
+          "ok": false,
+          "status": 409,
+          "error": "设计版本、引擎或完整选区已改变，请先读取当前状态",
+          "readStateBeforeRetry": true
+        },
+        "newSource": "import-55af9a5a-67e0-4bc2-b617-d4c4e21bec3c"
+      }
+    }
+  ],
+  "pageErrors": []
+}

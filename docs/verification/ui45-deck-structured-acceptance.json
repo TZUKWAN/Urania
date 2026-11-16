@@ -1,0 +1,46 @@
+{
+  "status": "passed_scoped",
+  "at": "2026-11-08T09:40:01.333438+00:00",
+  "scope": "Actual Deck host9 table, chart and page operations in owned DSH; independent PPTX structure read.",
+  "checks": [
+    "physical keyboard edited an actual native table cell",
+    "registered native chart data operation changed the structured chart",
+    "native source reopened and python-pptx read real table, chart and edited values",
+    "exported PPTX reimported as structured objects; table keyboard edit and chart data edit remained possible",
+    "actual native slides created, reordered, deleted and reopened"
+  ],
+  "pages": {
+    "initial": [
+      257,
+      260,
+      261
+    ],
+    "reordered": [
+      261,
+      257,
+      260
+    ],
+    "remaining": [
+      261,
+      260
+    ]
+  },
+  "pptx": {
+    "file": "verification/ui45-deck-structured.pptx",
+    "sha256": "69bc2a32cf2a7017b0b06f44eb405e32d6eb84c114e4baa23f997a0ecafcb571"
+  },
+  "rawEvidence": [
+    {
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-deck-structured.json",
+      "sha256": "3bbbe4cdb108d5397a98131666fcb9e448fcffc211e0c9b5c7c8bc7caea545a3"
+    },
+    {
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-deck-pages.json",
+      "sha256": "e9871e4f826233501e4d18421f73dfff013c516816fbde6285df222e7f66bf1f"
+    }
+  ],
+  "limits": [
+    "Table cell text was entered by real keyboard; chart data and page reorder/delete were exercised through the actual registered DSH/native command route.",
+    "Every chart subtype and every native editor menu were not tested."
+  ]
+}

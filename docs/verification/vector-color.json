@@ -1,0 +1,44 @@
+{
+  "status": "passed",
+  "scope": "physical Color panel hex fields -> native editable paints -> source save/reopen; no model",
+  "codeRoot": "D:\\METIS超级合并\\dsh-plugin\\designcraft",
+  "checks": [
+    {
+      "name": "physical custom hex field sets a real native solid fill",
+      "pass": true,
+      "detail": {
+        "id": 2,
+        "hex": "#a855f7",
+        "sourceId": "import-17046868-1c88-4525-a276-21db68d9ce3c",
+        "revision": "f2cdd5e79fba48c367984d99a6f3d92f7757dc12efb88ae8f4bce619464d41e3",
+        "path": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\vector-color-project\\ce8f4d2c-ac39-43e2-905a-46f2de373ec0\\design\\.designcraft\\v2\\sources\\import-17046868-1c88-4525-a276-21db68d9ce3c\\versions\\f43bf6d4227ae70adb85fd3ab8fef419a35bb25adfaf71e1109aa2e47b420344.vectorcraft"
+      }
+    },
+    {
+      "name": "physical Stroke proxy and hex field set an independent native stroke without changing paths or other objects",
+      "pass": true,
+      "detail": {
+        "id": 2,
+        "hex": "#14b8a6",
+        "width": 1.0,
+        "sourceId": "import-17046868-1c88-4525-a276-21db68d9ce3c",
+        "revision": "ce5b23310bbc64c0b0c9b821218d24094389850c48b990511aa27782104f341c",
+        "path": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\vector-color-project\\ce8f4d2c-ac39-43e2-905a-46f2de373ec0\\design\\.designcraft\\v2\\sources\\import-17046868-1c88-4525-a276-21db68d9ce3c\\versions\\9acd7791491ad8f030c6439ccbf257802e7ba37eb91875e7359211d66f0a398d.vectorcraft"
+      }
+    },
+    {
+      "name": "native reopen preserves custom solid fill/stroke and all exact object structures",
+      "pass": true,
+      "detail": {
+        "ids": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      }
+    }
+  ],
+  "pageErrors": []
+}

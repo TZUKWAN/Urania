@@ -1,0 +1,149 @@
+{
+ "schemaVersion": 1,
+ "updatedAt": "2026-11-14T08:02:10.752Z",
+ "productVersionAtLock": "1.3.0-dev.148 / UI162",
+ "policy": "No floating latest. Versions pinned here; changing a version requires re-running the affected MV0/MV contracts and updating this lock with reason.",
+ "hyperframes": {
+  "family": "0.9.44",
+  "registry": "https://registry.npmjs.org",
+  "packages": [
+   {
+    "name": "@hyperframes/sdk",
+    "version": "0.9.44",
+    "tarball": "https://registry.npmjs.org/@hyperframes/sdk/-/sdk-0.9.44.tgz",
+    "integrity": "sha512-VM5vrdeVLDHumoY59fawyt41s/hhcSzyeYvmHsnHTYfq/5rbTVVqX/UJqzKuzzaFSLH3rJDu4s8uEz8NN+8P6g==",
+    "shasum": "be9ef8f0963173cb95b1352783c1885b0c1f922e",
+    "licenseVerifiedInPackage": "Apache-2.0 (LICENSE file inside published tarball; package.json license field empty — file is authoritative)",
+    "verified": {
+     "at": "2026-11-14T08:02:10.751Z",
+     "method": "downloaded tarball sha512 compared to registry dist.integrity",
+     "result": "OK"
+    },
+    "packageJsonLicenseField": null,
+    "engines": null,
+    "usedFor": "edit-time composition SDK (openComposition, HfId, typed edits, serialize/flush) inside trusted Node worker"
+   },
+   {
+    "name": "@hyperframes/player",
+    "version": "0.9.44",
+    "tarball": "https://registry.npmjs.org/@hyperframes/player/-/player-0.9.44.tgz",
+    "integrity": "sha512-p9ooq4Mkxh3/iyoq3fzdDidTOozfSMxUtfgRsOZX63Hzajknhd3GE8dz8mg4Jq/SOajpIpYJNHMqLkFEEhRvwA==",
+    "shasum": "1b0d3c69857ebe68fa117e9eb66dde9a550bbbb2",
+    "licenseVerifiedInPackage": "Apache-2.0 (LICENSE file inside published tarball; package.json license field empty — file is authoritative)",
+    "verified": {
+     "at": "2026-11-14T08:02:10.752Z",
+     "method": "downloaded tarball sha512 compared to registry dist.integrity",
+     "result": "OK"
+    },
+    "packageJsonLicenseField": null,
+    "engines": null,
+    "usedFor": "same-origin player inside unprivileged preview origin"
+   },
+   {
+    "name": "@hyperframes/producer",
+    "version": "0.9.44",
+    "tarball": "https://registry.npmjs.org/@hyperframes/producer/-/producer-0.9.44.tgz",
+    "integrity": "sha512-PouHQr3vtIrsqzSauvCimUGiMax96cVJJMuAn4G+SBWaMNNNkwKwRtE/pEs8f5XSO1gpojGM50XPatFj/ndiyg==",
+    "shasum": "e77023d312082739cb68816cad92feb0d680d51c",
+    "licenseVerifiedInPackage": "Apache-2.0 (LICENSE file inside published tarball; package.json license field empty — file is authoritative)",
+    "verified": {
+     "at": "2026-11-14T08:02:10.752Z",
+     "method": "downloaded tarball sha512 compared to registry dist.integrity",
+     "result": "OK"
+    },
+    "packageJsonLicenseField": null,
+    "engines": {
+     "node": ">=22"
+    },
+    "usedFor": "render pipeline (createRenderJob/executeRenderJob, AbortSignal) inside trusted render worker; Node>=22"
+   },
+   {
+    "name": "@hyperframes/core",
+    "version": "0.9.44",
+    "tarball": "https://registry.npmjs.org/@hyperframes/core/-/core-0.9.44.tgz",
+    "integrity": "sha512-7A63p38Oa3hdFLIMjkoGbGfdJcZzRFokk0s736x/yF/V/JtluVnO8jw5FvHeyf5yTv+VIMAZx40FfMdm9JQyTA==",
+    "shasum": "8e6ead897608f08477a3b90575da9ae3ac2f18fa",
+    "licenseVerifiedInPackage": "Apache-2.0 (LICENSE file inside published tarball; package.json license field empty — file is authoritative)",
+    "verified": {
+     "at": "2026-11-14T08:02:10.752Z",
+     "method": "downloaded tarball sha512 compared to registry dist.integrity",
+     "result": "OK"
+    },
+    "packageJsonLicenseField": null,
+    "engines": null,
+    "usedFor": "shared composition core/runtime"
+   }
+  ],
+  "githubResearchPin": "https://github.com/heygen-com/hyperframes/tree/58ef24c6d88634ff42f60b0435f3685ccfa2d459 (research-only; published dist/*.js exports are the product install form, not workspace:*)",
+  "cliNote": "hyperframes CLI latest is 0.9.43 and is NOT used as product runtime.",
+  "producerTransitiveDeps": "puppeteer ~25.13.0, hono ^4.13.16, @hono/node-server ^2.1.6, postcss ^8.4.0, linkedom ^0.18.12, @hyperframes/{core,engine,parsers,lint,studio-server} 0.9.44 — locked in MV0-03 package-lock after install with scripts reviewed",
+  "packageScriptsReviewed": "package.json scripts are upstream build/test commands (tsc/tsup/vitest/bun); install path never runs them"
+ },
+ "openmontage": {
+  "repo": "https://github.com/OpenMontageInc/OpenMontage",
+  "commit": "fecb9a1e3cc23ef84de30b272059457a427f16f8",
+  "license": "AGPL-3.0",
+  "licenseFile": "licenses/motion/OpenMontage-AGPL-3.0.txt",
+  "adoptedFiles": [
+   "pipeline_defs/animation.yaml",
+   "schemas/artifacts/asset_manifest.schema.json",
+   "lib/pipeline_loader.py"
+  ],
+  "adoptedCopies": "resources/motion-workflows/upstream/ (byte-identical originals; adaptations will be separate files with diff records in MV5-02)",
+  "licenseNote": "AGPL adoption authorized by 刘总 (project is open source); corresponding source obligations tracked in MV6-03",
+  "notAdopted": "Python platform, providers, skills collection, screenshot capture, extended execution, extra agents"
+ },
+ "claudeMotion": {
+  "repo": "https://github.com/whaleyxbt/claude-motion",
+  "commit": "6f80380b91858dad66524a5b34e027dad656d538",
+  "license": "MIT",
+  "licenseFile": "licenses/motion/claude-motion-MIT.txt",
+  "adoptedFiles": [
+   ".claude/skills/review-loop/SKILL.md (review method reference)",
+   "sims/capture.mjs (single-HTML capture reference)"
+  ],
+  "adoptedCopies": "resources/motion-workflows/upstream/",
+  "notAdopted": "Remotion 4.0.529/React19.2.0 boilerplate as executable code; Python sound effects; Unix capture paths"
+ },
+ "videoShotcraft": {
+  "repo": "https://github.com/Vincentwei1021/video-shotcraft",
+  "commit": "6700db2ba80572ebc777b99d72049679fed9840c",
+  "license": "Apache-2.0",
+  "licenseFile": "licenses/motion/video-shotcraft-Apache-2.0.txt",
+  "adoptedFiles": [
+   "workbench/src/cards/types.ts (shot card metadata reference)"
+  ],
+  "adoptedCopies": "resources/motion-workflows/upstream/",
+  "notAdopted": "manual editing UI, 剪映 export, screenshot capture, Remotion workbench"
+ },
+ "motionharness": {
+  "installed": false,
+  "reason": "npm metadata UNLICENSED; associated repo 404; reference-only"
+ },
+ "remotion": {
+  "installed": false,
+  "reason": "skills repo has no root LICENSE; engine licensing for automated end-user products not asserted; future optional adapter"
+ },
+ "externalFfmpeg": {
+  "found": "9.0.2-essentials_build-www.gyan.dev (--enable-gpl --enable-version3 --enable-libx264)",
+  "policy": "Development validation uses installed external FFmpeg configured by absolute path. Bundling requires choosing a build and shipping its license/source/build materials; GPLv3 must never be mislabeled LGPL. Finalized in MV6-03."
+ },
+ "pending": {
+  "chromium": "MV0-04/05 lock the browser build used by Producer/puppeteer",
+  "webRuntimeHosts": "runtimes/motion-host/ contents locked when created"
+ },
+ "resolvedRuntime": {
+  "at": "2026-11-14T08:12:57.519Z",
+  "workerEntry": "runtimes/motion-worker/entry.mjs",
+  "workerNode": {
+   "path": "C:/Program Files/nodejs/node.exe",
+   "version": "v25.6.0",
+   "sha256": "1448db441895712bf3eb8210…(full in runtime-probe.json)",
+   "major": 25,
+   "satisfies": ">=22 (producer engines)"
+  },
+  "workerDependencies": "runtimes/motion-worker/package-lock.json (145 packages, all pinned; 2 install-script packages: esbuild binary, puppeteer browser download — both expected, scripts reviewed)",
+  "envContract": "supervisor spawns worker with explicit whitelist (SYSTEMROOT/PATH/TEMP/...); NODE_OPTIONS and any DC_* keys dropped; verified by runtime-probe.json",
+  "finding": "inherited bad NODE_OPTIONS kills node (exit 9) — whitelist is mandatory, not optional"
+ }
+}

@@ -1,0 +1,44 @@
+{
+  "scope": "actual native Web/Photo UI apply journey fixtures; test IDs/engine state used for filesystem provenance only",
+  "nativeTarget": 261,
+  "files": {
+    "instance-before.deckcraft": {
+      "sha256": "24fe639a2e08b69afbfc72140d529ce547952e85cdb82b1399ed207de32d783f",
+      "engineState": {
+        "uid": 6490392560140288,
+        "revision": 8
+      },
+      "originSourceId": "work-9655d5ac-4dfb-432d-8792-e6ab1588b27b",
+      "originRevision": "d45c4f0c0e7cbacb44273377d7b74dee5178166e8b9e9f1089393bc0d37e70fe"
+    },
+    "instance-old.pcraft": {
+      "sha256": "d3da165308d2cde89f25ac2305af8bc6331d11ba25df6f6b26bcde9fd915197e",
+      "engineState": {
+        "uid": 1,
+        "revision": 3,
+        "nativeDocumentId": 1
+      },
+      "originSourceId": "work-9a9d6695-bf47-420f-b0e2-32eb62397d59",
+      "originRevision": "935453a0c6d9fbb766cad8ff4c8b6b957b4c96a38893baf9f4b5d1e2ac648c73"
+    },
+    "instance-edited.pcraft": {
+      "sha256": "55099f7f4f1bac799840906b87be7008dd2f1bf0be514d62bc1bca2124f7f824",
+      "engineState": {
+        "uid": 1,
+        "revision": 3,
+        "nativeDocumentId": 1
+      },
+      "originSourceId": "fork-65e11c1d-43ca-452f-88a6-c93bdbceb4a8",
+      "originRevision": "4b284cfed6cfa827e2213ff6c58eb258aa500497d9e54630a8d1c653bf40eb3c"
+    },
+    "instance-after.deckcraft": {
+      "sha256": "e30af1d4159e8cd8e51efb5d4ac3574c522402914284c67e3a3a751a3c193079"
+    },
+    "instance-old.png": {
+      "sha256": "23defb9f7b4225f3686a2f9e156da308cdb20889119fe9e5af125091fb97ec35"
+    },
+    "instance-edited.png": {
+      "sha256": "54fb51609a7723449589b412e4a34c750750452d29dda8b4e5ab93ea1053c306"
+    }
+  }
+}

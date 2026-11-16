@@ -1,0 +1,53 @@
+{
+  "status": "passed",
+  "scope": "actual child renderer Page.crash in owned headless Chromium, real saved-source restore and parent return; not full packaged desktop/GPU verification",
+  "codeRoot": "D:\\METIS超级合并\\dsh-plugin\\designcraft",
+  "checks": [
+    {
+      "name": "confirmed native renderer crash leaves the actual parent DSH page/backend responsive and surfaces an honest unresponsive state",
+      "pass": true,
+      "detail": {
+        "targetType": "iframe",
+        "crashEvents": [
+          {
+            "domain": "Target",
+            "targetId": "A7430A5EE40C16B0689698B0147486B3"
+          },
+          {
+            "domain": "Inspector",
+            "targetId": "89B3820B78E89037CF3389C76FC23B42"
+          },
+          {
+            "domain": "Target",
+            "targetId": "89B3820B78E89037CF3389C76FC23B42"
+          }
+        ],
+        "parentResponsive": {
+          "body": true,
+          "health": 200
+        }
+      }
+    },
+    {
+      "name": "physical saved-source recovery keeps the real source return target while invalidating the old cached renderer",
+      "pass": true,
+      "detail": {
+        "sourceId": "import-53c8b20f-189c-4bfa-bc52-48dee8fcd3e3",
+        "returnAvailable": true,
+        "cachedDisposed": true
+      }
+    },
+    {
+      "name": "return after crash opens the exact saved parent in a fresh App with an explicit lost-history notice and no stale-cache loop",
+      "pass": true,
+      "detail": {
+        "sourceId": "work-97c442fb-ec85-4d32-8171-dae0ae700b22",
+        "sourceRevision": "dbdd7fbdff83748f582b9d8b72bb9a3cdbd06c74139bd1133eba371ec72ce46d",
+        "savedDocumentAndImagesPreserved": true,
+        "freshRealm": true,
+        "nativeFrames": 1
+      }
+    }
+  ],
+  "pageErrors": []
+}

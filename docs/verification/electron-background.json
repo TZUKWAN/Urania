@@ -1,0 +1,168 @@
+{
+  "status": "passed",
+  "scope": "actual matching hidden Electron/custom DSH protocol, dirty native editor parking; no LLM",
+  "codeRoot": "D:\\METIS超级合并\\dsh-plugin\\designcraft",
+  "checks": [
+    {
+      "name": "switching away from a dirty native surface reaches an actual saved checkpoint",
+      "pass": true,
+      "detail": {
+        "parked": {
+          "left": "-100000px",
+          "revision": "09b061ed1c423a4bb6de63e864b6f3775e47b4c91bb0343f91afcd73498a280d",
+          "anchorConnected": false
+        },
+        "actualFileColor": {
+          "model": "rgb",
+          "r": 0.14509805,
+          "g": 0.3882353,
+          "b": 0.92156863
+        }
+      }
+    },
+    {
+      "name": "parked editor starts no new native polling requests",
+      "pass": true,
+      "detail": {
+        "callsBefore": 14,
+        "callsAfter": 14
+      }
+    },
+    {
+      "name": "return restores the same live native App and exact edited content",
+      "pass": true,
+      "detail": {
+        "fill": "#2563eb",
+        "revision": 2
+      }
+    },
+    {
+      "name": "a deferred save acknowledgement cannot clear a genuinely newer native edit",
+      "pass": true,
+      "detail": {
+        "active": true,
+        "saveAcknowledgement": {
+          "acknowledged": false,
+          "newerEdits": true
+        }
+      }
+    },
+    {
+      "name": "saved parked editor releases its real surface without waiting for a throttled frame",
+      "pass": true,
+      "detail": {
+        "removed": true,
+        "disposed": true
+      }
+    }
+  ],
+  "parkingObservations": [
+    {
+      "saving": true,
+      "dirty": false,
+      "revision": "09b061ed1c423a4bb6de63e864b6f3775e47b4c91bb0343f91afcd73498a280d",
+      "parking": true,
+      "elapsed": 7.3113210999872535
+    },
+    {
+      "saving": true,
+      "dirty": false,
+      "revision": "09b061ed1c423a4bb6de63e864b6f3775e47b4c91bb0343f91afcd73498a280d",
+      "parking": true,
+      "elapsed": 7.425430699950084
+    },
+    {
+      "saving": true,
+      "dirty": false,
+      "revision": "09b061ed1c423a4bb6de63e864b6f3775e47b4c91bb0343f91afcd73498a280d",
+      "parking": true,
+      "elapsed": 7.535579000017606
+    },
+    {
+      "saving": true,
+      "dirty": false,
+      "revision": "09b061ed1c423a4bb6de63e864b6f3775e47b4c91bb0343f91afcd73498a280d",
+      "parking": true,
+      "elapsed": 7.646021799999289
+    },
+    {
+      "saving": true,
+      "dirty": false,
+      "revision": "09b061ed1c423a4bb6de63e864b6f3775e47b4c91bb0343f91afcd73498a280d",
+      "parking": true,
+      "elapsed": 7.7583389999344945
+    },
+    {
+      "saving": true,
+      "dirty": false,
+      "revision": "09b061ed1c423a4bb6de63e864b6f3775e47b4c91bb0343f91afcd73498a280d",
+      "parking": true,
+      "elapsed": 7.867180199944414
+    },
+    {
+      "saving": false,
+      "dirty": false,
+      "revision": "09b061ed1c423a4bb6de63e864b6f3775e47b4c91bb0343f91afcd73498a280d",
+      "parking": false,
+      "elapsed": 7.975827899994329
+    }
+  ],
+  "host": {
+    "pid": 5908,
+    "versions": {
+      "node": "24.21.0",
+      "acorn": "8.18.0",
+      "ada": "4.0.0",
+      "amaro": "1.1.11",
+      "ares": "1.34.8",
+      "brotli": "1.2.0",
+      "cldr": "48.0",
+      "icu": "78.2",
+      "llhttp": "9.4.3",
+      "merve": "1.2.2",
+      "modules": "149",
+      "napi": "10",
+      "nbytes": "0.1.4",
+      "ncrypto": "0.0.1",
+      "nghttp2": "1.70.0",
+      "nghttp3": "",
+      "ngtcp2": "",
+      "openssl": "0.0.0",
+      "simdjson": "4.6.7",
+      "simdutf": "7.7.0",
+      "sqlite": "3.53.4",
+      "tz": "2026d",
+      "undici": "7.29.1",
+      "unicode": "17.0",
+      "uv": "1.52.1",
+      "uvwasi": "0.0.23",
+      "v8": "15.2.124.28-electron.0",
+      "zlib": "1.3.2.1-motley",
+      "zstd": "1.6.0",
+      "electron": "44.7.0",
+      "chrome": "152.0.7977.130"
+    },
+    "shown": false,
+    "focused": false,
+    "events": [],
+    "webPreferences": {
+      "allowRunningInsecureContent": false,
+      "contextIsolation": true,
+      "disableDialogs": false,
+      "disablePopups": false,
+      "enableBlinkFeatures": "",
+      "experimentalFeatures": false,
+      "javascript": true,
+      "nodeIntegration": false,
+      "nodeIntegrationInSubFrames": false,
+      "nodeIntegrationInWorker": false,
+      "safeDialogs": false,
+      "safeDialogsMessage": "",
+      "sandbox": true,
+      "webSecurity": true,
+      "webviewTag": true
+    },
+    "preloadUsed": false,
+    "scope": "matching Electron/custom DSH protocol/auth forwarding; full packaged DSH IPC not included"
+  }
+}

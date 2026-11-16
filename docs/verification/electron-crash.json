@@ -1,0 +1,125 @@
+{
+  "status": "passed",
+  "scope": "real child Page.crash in matching hidden Electron with default site isolation; source recovery; no user desktop or LLM",
+  "codeRoot": "D:\\METIS超级合并\\dsh-plugin\\designcraft",
+  "checks": [
+    {
+      "name": "default matching Electron creates an independent cross-site iframe renderer target",
+      "pass": true,
+      "detail": {
+        "type": "iframe",
+        "url": "http://designcraft.localhost:52554/designcraft/editor/vectorcraft-host/host.html?webgl="
+      }
+    },
+    {
+      "name": "confirmed real child crash leaves parent DSH UI/authenticated backend responsive and no main-renderer-gone event",
+      "pass": true,
+      "detail": {
+        "parent": {
+          "body": true,
+          "health": 200
+        },
+        "crashEvents": [
+          {
+            "domain": "Inspector",
+            "targetId": "E44FB6D7E41330B19574371E48B2AD76"
+          },
+          {
+            "domain": "Target",
+            "targetId": "E44FB6D7E41330B19574371E48B2AD76",
+            "status": "crashed",
+            "errorCode": 0
+          }
+        ]
+      }
+    },
+    {
+      "name": "actual unresponsive warning/recovery button reopens the exact saved source with preserved editable path identity/content",
+      "pass": true,
+      "detail": {
+        "sourceId": "work-8b92a8ea-bf2a-49ce-96be-68be3e3e9e24",
+        "revision": "f14a8f6890fccc5317079d466a88d0e18985670acac76003031fe6cd6b072a00",
+        "path": {
+          "anchors": 4,
+          "bounds": {
+            "height": 160,
+            "width": 160,
+            "x": 80,
+            "y": 80
+          },
+          "closed": true,
+          "fill": "#2563eb",
+          "id": 2,
+          "kind": "Path",
+          "locked": false,
+          "name": "crash-mark",
+          "stroke": "None",
+          "strokeWidth": 0,
+          "visible": true
+        }
+      }
+    }
+  ],
+  "host": {
+    "pid": 52288,
+    "versions": {
+      "node": "24.21.0",
+      "acorn": "8.18.0",
+      "ada": "4.0.0",
+      "amaro": "1.1.11",
+      "ares": "1.34.8",
+      "brotli": "1.2.0",
+      "cldr": "48.0",
+      "icu": "78.2",
+      "llhttp": "9.4.3",
+      "merve": "1.2.2",
+      "modules": "149",
+      "napi": "10",
+      "nbytes": "0.1.4",
+      "ncrypto": "0.0.1",
+      "nghttp2": "1.70.0",
+      "nghttp3": "",
+      "ngtcp2": "",
+      "openssl": "0.0.0",
+      "simdjson": "4.6.7",
+      "simdutf": "7.7.0",
+      "sqlite": "3.53.4",
+      "tz": "2026d",
+      "undici": "7.29.1",
+      "unicode": "17.0",
+      "uv": "1.52.1",
+      "uvwasi": "0.0.23",
+      "v8": "15.2.124.28-electron.0",
+      "zlib": "1.3.2.1-motley",
+      "zstd": "1.6.0",
+      "electron": "44.7.0",
+      "chrome": "152.0.7977.130"
+    },
+    "shown": false,
+    "focused": false,
+    "events": [],
+    "webPreferences": {
+      "allowRunningInsecureContent": false,
+      "contextIsolation": true,
+      "disableDialogs": false,
+      "disablePopups": false,
+      "enableBlinkFeatures": "",
+      "experimentalFeatures": false,
+      "javascript": true,
+      "nodeIntegration": false,
+      "nodeIntegrationInSubFrames": false,
+      "nodeIntegrationInWorker": false,
+      "safeDialogs": false,
+      "safeDialogsMessage": "",
+      "sandbox": true,
+      "webSecurity": true,
+      "webviewTag": true
+    },
+    "preloadUsed": false,
+    "scope": "matching Electron/custom DSH protocol/auth forwarding; full packaged DSH IPC not included"
+  },
+  "owned": {
+    "workspaceId": "eb833295-b6de-44fa-97f1-54ab66fa806d",
+    "sessionId": "PUBLIC-REDACTED"
+  }
+}

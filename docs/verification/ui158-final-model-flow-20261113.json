@@ -1,0 +1,213 @@
+{
+  "schema": 1,
+  "kind": "post-package-real-model-flow-acceptance-addendum",
+  "generatedAt": "2026-11-13T05:08:24.215579+00:00",
+  "version": "1.3.0-dev.144",
+  "uiBuild": 158,
+  "status": "passed_real_three_engine_model_flow_physical_inputs_unverified",
+  "scopedCoreEditingAndAiFlowAccepted": true,
+  "allCoreFunctionsAccepted": false,
+  "executionScope": "Existing actual zai-coding-cn / glm-5.3-flash in a separately owned no-open DSH loading the exact extracted UI158 npm archive; headless real native editors, no user desktop control.",
+  "modelResult": {
+    "status": "passed",
+    "photoOpacity": 0.65,
+    "deckFill": "#006e55",
+    "vectorFill": "#c2410c",
+    "actualNativeEdits": 3,
+    "actualSourceSwitches": 2,
+    "sameAppWithinEachSourceSegment": true,
+    "allNonTargetNativeFieldsPreserved": true,
+    "nativeReopensExact": 3,
+    "pageErrors": [],
+    "recoveredGuardRefusals": [
+      {
+        "step": 7,
+        "status": 409,
+        "error": "执行凭据已变化、缺失或回收；请调用 state 并完整复制新的 view.sourceId、view.epoch、view.base，保留当前编辑器。"
+      }
+    ],
+    "guardBoundary": "The model supplied a non-issued Deck ticket before fresh state; the real tool refused it with 409. It then read state, copied the issued ticket and completed. No guard weakening, lost manual data or extra App rebuild occurred. This is a recovered tool refusal, not a zero-error model-call claim."
+  },
+  "totals": {
+    "featureUiCasesPassed": 48,
+    "ui155PackageLoad": "passed",
+    "ui158PackageLoad": "passed",
+    "nodeFilesPassed": 78,
+    "nodeTapCasesPassed": 286,
+    "realImageRequests": 4,
+    "realModelUserTurns": 4,
+    "providerChatHttpRequestsObserved": 60,
+    "latestBatchProviderChatHttpRequests": 14,
+    "allObservedProviderHttpStatus": 200,
+    "providerUsageOrBill": "not verified"
+  },
+  "newUserAuthorization": {
+    "userReply": "允许你根据需要随时调用",
+    "relatedModelAndServiceCallsAsNeeded": true,
+    "perCallApprovalNoLongerRequired": true,
+    "physicalDeviceOrDesktopActivationApproved": false
+  },
+  "supersedesPendingModelAcceptanceIn": [
+    "release-validation-20261113.json",
+    "real-services-validation-20261113.json",
+    "the immutable UI158 package internal snapshot"
+  ],
+  "historicalFailures": "Original first three model reports retain their failed_or_unconfirmed scopes. Current pass is a new real user turn, not a recoloring of those failures.",
+  "testHarnessCorrection": "A fresh owned server restored no transient active source. The test now explicitly opens its prepared Photo input before submitting; original pre-submit timeout is retained and made no provider request.",
+  "rawEvidence": [
+    {
+      "file": "verification/ui158-final-model-20261113/additional-one-turn-approval.json",
+      "sha256": "af18a7a91c5e3fb2d9588ad8a2875832cf891815e19beae1d3eaeae4a9731c2b",
+      "bytes": 773
+    },
+    {
+      "file": "verification/ui158-final-model-20261113/model-ui158-additional-one-turn.json",
+      "sha256": "49c5434c42a5948d963178a249868be27439178c3592c774f05f2c5d232508ee",
+      "bytes": 539550
+    },
+    {
+      "file": "verification/ui158-final-model-20261113/model-ui158-primary-review.json",
+      "sha256": "6cf265a0b44e1ec43b5ee484d20adc86557b4870939b74cee62190210b873c78",
+      "bytes": 3582
+    },
+    {
+      "file": "verification/ui158-final-model-20261113/model-ui158-additional-one-turn.pre-submit-attempt1.json",
+      "sha256": "9c78414ee14c43f99f2cccd08158c6ce7f0c2f26dda88782a9d98bb15d479cd1",
+      "bytes": 406869
+    },
+    {
+      "file": "verification/ui158-final-model-20261113/model-ui158-success-executed.py",
+      "sha256": "e3563bcbbc8d9c3968572775629562d6d1930d1983892102dc5c91a80a6d969c",
+      "bytes": 11090
+    }
+  ],
+  "pendingAcceptance": [
+    {
+      "id": "windows-math-and-screen",
+      "state": "not_enabled_user_asked_purpose_only",
+      "scope": [
+        "actual Windows Math recognizer dialog",
+        "real screen/region capture"
+      ],
+      "priorEvidenceBoundary": "Supplied MathML conversion/insertion does not prove OS recognition or screen capture."
+    },
+    {
+      "id": "microphone-and-camera",
+      "state": "not_enabled_user_asked_purpose_only",
+      "scope": [
+        "physical microphone narration",
+        "physical camera photo/video"
+      ],
+      "priorEvidenceBoundary": "Real QA-media insertion/playback/export does not prove physical device capture."
+    }
+  ],
+  "sourceAndVisualLimits": [
+    "Last warm-lighting image sample has a visible localized rectangular/yellow boundary; real API/pixel preservation success is not a seamless-quality guarantee.",
+    "Converter-to-lock, exact WOFF2/Brotli native provenance, six font reference byte differences and historical evidence gaps remain documented.",
+    "Headless tests do not establish physical-device capture, full desktop preload/IPC, OS IME candidate-window or hardware GPU behavior."
+  ],
+  "mainModelReview": {
+    "schema": 1,
+    "status": "passed_independent_native_and_flow_readback",
+    "at": "2026-11-13T05:07:30.312428+00:00",
+    "actualUiBuild": 158,
+    "actualModel": {
+      "provider": "zai-coding-cn",
+      "model": "glm-5.3-flash"
+    },
+    "results": {
+      "photocraft": {
+        "inputSha256": "c7dfd478b2808e4c849ca10e9c23aa0ac40d073e21e584314b8f51c374ac354f",
+        "outputSha256": "9fb20dc7a39687de1fb3d72618fdc1de8ccc442d04008d9e23e38faff227bc94",
+        "targetId": 3,
+        "before": 1.0,
+        "after": 0.65,
+        "allNonTargetNativeFieldsEqual": true,
+        "nativeReopenReportedAndVerified": true
+      },
+      "deckcraft": {
+        "inputSha256": "db63dfb70a6342498b1f1b9ecc785ca9386d28e41499bb9cef26134a6ae96272",
+        "outputSha256": "c366f4990ffcd7c95ad7f6c55acfcda6eab4c7b25eefc4651a8ee339b7de481e",
+        "targetId": 260,
+        "before": {
+          "kind": "solid",
+          "color": {
+            "base": {
+              "kind": "rgb",
+              "rgb": {
+                "r": 40,
+                "g": 125,
+                "b": 108,
+                "a": 255
+              }
+            }
+          }
+        },
+        "after": {
+          "kind": "solid",
+          "color": {
+            "base": {
+              "kind": "rgb",
+              "rgb": {
+                "r": 0,
+                "g": 110,
+                "b": 85,
+                "a": 255
+              }
+            }
+          }
+        },
+        "allNonTargetNativeFieldsEqual": true,
+        "nativeReopenReportedAndVerified": true
+      },
+      "vectorcraft": {
+        "inputSha256": "fb5317977a34e60c4885b3e17787c8d03cf3ca4db800b0ac2271e835ee5b2572",
+        "outputSha256": "bfc8e39f61503eff3b6e26a1dfa0d2de6b0fb6fd4ee71e94c20da2b97e486d2e",
+        "targetId": 2,
+        "before": {
+          "type": "solid",
+          "color": {
+            "model": "rgb",
+            "r": 0.15686275,
+            "g": 0.49019608,
+            "b": 0.42352942
+          }
+        },
+        "after": {
+          "type": "solid",
+          "color": {
+            "model": "rgb",
+            "r": 0.7607843,
+            "g": 0.25490198,
+            "b": 0.047058824
+          }
+        },
+        "allNonTargetNativeFieldsEqual": true,
+        "nativeReopenReportedAndVerified": true
+      }
+    },
+    "sourceSwitches": 2,
+    "sameAppWithinEachNativeEdit": true,
+    "actualModelUserTurnTotal": 4,
+    "additionalUserTurnsThisBatch": 1,
+    "additionalProviderChatHttpRequests": 14,
+    "recoveredGuardRefusals": [
+      {
+        "step": 7,
+        "status": 409,
+        "error": "执行凭据已变化、缺失或回收；请调用 state 并完整复制新的 view.sourceId、view.epoch、view.base，保留当前编辑器。"
+      }
+    ],
+    "guardReview": "The model supplied a non-issued Deck ticket before fresh state; the real tool refused it with 409. It then read state, copied the issued ticket and completed. No guard weakening, lost manual data or extra App rebuild occurred. This is a recovered tool refusal, not a zero-error model-call claim.",
+    "preSubmissionHarnessFailure": "A fresh owned server restored no transient active source. The test now explicitly opens its prepared Photo input before submitting; original pre-submit timeout is retained and made no provider request.",
+    "rawReportSha256": "49c5434c42a5948d963178a249868be27439178c3592c774f05f2c5d232508ee",
+    "actualNativeFilesReadBack": 3,
+    "oldFailedModelReportsPreserved": true,
+    "deviceActivation": false,
+    "imageRequestsAdded": 0,
+    "remaining": "Physical microphone/camera, real screen capture and Windows Math recognizer dialog have not been exercised."
+  },
+  "archiveCodeChangedByThisTurn": false,
+  "userDesktopControlled": false,
+  "userDshRestarted": false
+}

@@ -1,0 +1,24 @@
+{
+  "binding": {
+    "id": "use-58baec81-546c-4ccd-8e61-dd71724e7802",
+    "assetId": "asset-2f8ee7e3-ac02-41cf-9cc5-c26db2d47fbf",
+    "sourceId": "work-97c442fb-ec85-4d32-8171-dae0ae700b22",
+    "nativeId": "6",
+    "boundAtRevision": "b350a4559d7ae943a8769eaca0cb826c06368c12811bc96b3425cc56b91127f8",
+    "nativeNodeHash": "a268014adb38d7da3ecaad5553b820bd2c75d2a0166bec4d1a865c8809b6c5d2"
+  },
+  "receipt": {
+    "action": "place",
+    "id": "58baec81-546c-4ccd-8e61-dd71724e7802",
+    "assetId": "asset-2f8ee7e3-ac02-41cf-9cc5-c26db2d47fbf",
+    "nativeId": 6
+  },
+  "asset": {
+    "id": "asset-2f8ee7e3-ac02-41cf-9cc5-c26db2d47fbf",
+    "sourceId": "import-53c8b20f-189c-4bfa-bc52-48dee8fcd3e3",
+    "sourceRevision": "5124e1492765226232842d4dd1655e5e8d0877ecec03867d50e20f3e667698d0",
+    "sourceHash": "3d86a428a2248529136c57742595247c80a3159d17843f37a027e659d058583b",
+    "sha256": "6a857a152816c6f5451159bf6a6837aaf79b00709a1d89f3dcbcfadf312b66f6",
+    "format": "svg"
+  }
+}

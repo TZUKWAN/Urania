@@ -1,0 +1,137 @@
+{
+  "status": "passed",
+  "scope": "actual native Photo/Deck UI and real background WASM; 3 explicitly linked pictures across 3 pages/2 sources plus independent 4th use; optional real response-loss injection",
+  "codeRoot": "D:\\METIS超级合并\\dsh-plugin\\designcraft",
+  "root": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\linked-update-project\\c3f22a8a-6153-4c79-bdb7-b3adfc883745",
+  "checks": [
+    {
+      "name": "four actual uses remain independent until UI explicitly links exactly three across two saved sources",
+      "pass": true,
+      "detail": {
+        "linkedInstanceIds": [
+          "use-da3360d3-c7b3-4142-a0b5-75a1a53433a7",
+          "use-d6442579-0884-493c-abb3-7c4146b26f00",
+          "use-1e7e660f-94d8-44bc-8f10-6953516072a8"
+        ],
+        "independentInstanceId": "use-63c6d3c0-fb74-4ff7-b212-8dbf8a57fcf7",
+        "pages": [
+          {
+            "kind": "slide",
+            "id": 257,
+            "index": 0
+          },
+          {
+            "kind": "slide",
+            "id": 263,
+            "index": 1
+          },
+          {
+            "kind": "slide",
+            "id": 257,
+            "index": 0
+          }
+        ],
+        "sourceIds": [
+          "work-82719315-3e7d-41d6-8de1-a112a243a27f",
+          "work-1aea47f3-30ed-4ac3-b70c-804e42a76fcb"
+        ]
+      }
+    },
+    {
+      "name": "lost first committed-source response resumes remaining source and never replays completed native update",
+      "pass": true,
+      "detail": {
+        "firstSource": "work-82719315-3e7d-41d6-8de1-a112a243a27f",
+        "sameFirstSourceHead": "f7093bd02a5a1990e6d462bf60c83ddd7a751d4c914b381d90f36e8848a4cda9",
+        "completedSources": 2,
+        "latestPhysicalManualGeometryPreserved": true
+      }
+    },
+    {
+      "name": "real native workers update three picture identities across pages/sources while all other presentation properties and independent use stay exact",
+      "pass": true,
+      "detail": {
+        "updatedUses": 3,
+        "savedSources": 2,
+        "newPngSha256": "a33c209fd390ca4bb4b78fcbe02069e497f45215fc2aa28f4fb5adaa00998dc3",
+        "exactPresentationsExceptTargetContent": true,
+        "originalPhotoSourceUnchanged": true
+      }
+    },
+    {
+      "name": "both actual saved native presentations reopen exactly after linked update",
+      "pass": true,
+      "detail": {
+        "sourceIds": [
+          "work-82719315-3e7d-41d6-8de1-a112a243a27f",
+          "work-1aea47f3-30ed-4ac3-b70c-804e42a76fcb"
+        ],
+        "exactReopen": true
+      }
+    }
+  ],
+  "owned": {
+    "workspaceId": "ca2a2964-7b6e-4963-8380-46bbef90a3d5",
+    "sessionId": "PUBLIC-REDACTED"
+  },
+  "update": {
+    "id": "update-71872654-7758-4bf2-af21-baca64304ed2",
+    "editId": "edit-25b4be2c-5f35-4f9f-ae86-d4873f708f1a",
+    "linkId": "link-dcbab768-f414-45b2-bad1-6dd9bd683d75",
+    "assetId": "asset-71872654-7758-4bf2-af21-baca64304ed2",
+    "previousAssetId": "asset-5ebee932-4572-4cee-97b8-09c3e7f7b83c",
+    "sources": {
+      "work-82719315-3e7d-41d6-8de1-a112a243a27f": {
+        "baseRevision": "674cf987662f01e6c72d9714ecb17bb0f83cbb84eabb092d249ea8267091e80c",
+        "instanceIds": [
+          "use-da3360d3-c7b3-4142-a0b5-75a1a53433a7",
+          "use-d6442579-0884-493c-abb3-7c4146b26f00"
+        ],
+        "pages": {
+          "use-da3360d3-c7b3-4142-a0b5-75a1a53433a7": {
+            "kind": "slide",
+            "id": 257,
+            "index": 0
+          },
+          "use-d6442579-0884-493c-abb3-7c4146b26f00": {
+            "kind": "slide",
+            "id": 263,
+            "index": 1
+          }
+        }
+      },
+      "work-1aea47f3-30ed-4ac3-b70c-804e42a76fcb": {
+        "baseRevision": "9e328a172df44547e7abca839c047ec735d14e32678d7c78dab7713347c3f017",
+        "instanceIds": [
+          "use-1e7e660f-94d8-44bc-8f10-6953516072a8"
+        ],
+        "pages": {
+          "use-1e7e660f-94d8-44bc-8f10-6953516072a8": {
+            "kind": "slide",
+            "id": 257,
+            "index": 0
+          }
+        }
+      }
+    },
+    "committed": {
+      "work-82719315-3e7d-41d6-8de1-a112a243a27f": "f7093bd02a5a1990e6d462bf60c83ddd7a751d4c914b381d90f36e8848a4cda9",
+      "work-1aea47f3-30ed-4ac3-b70c-804e42a76fcb": "5f4d11f6b4b5c5eae23cadc523469876767d3d12d06d7ac04f8ea0eda06eecef"
+    },
+    "status": "succeeded",
+    "at": "2026-11-04T21:03:10.977Z"
+  },
+  "asset": {
+    "id": "asset-71872654-7758-4bf2-af21-baca64304ed2",
+    "title": "显式关联素材 · 独立编辑",
+    "sourceId": "fork-25b4be2c-5f35-4f9f-ae86-d4873f708f1a",
+    "sourceRevision": "c2df30deb8884a2245abad8ee4110da33958d8c7f3eff4cd6c7982acc066e1fd",
+    "sourceHash": "2b595110403ca78cf91fa277ef1fafa99e2a0697e7dd4d7ab2f00a88f2ef056b",
+    "engine": "photocraft",
+    "format": "png",
+    "sha256": "a33c209fd390ca4bb4b78fcbe02069e497f45215fc2aa28f4fb5adaa00998dc3",
+    "bytes": 4437,
+    "at": "2026-11-04T21:03:10.376Z"
+  },
+  "pageErrors": []
+}

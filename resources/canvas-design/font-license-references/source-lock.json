@@ -1,0 +1,62 @@
+{
+  "schema": 1,
+  "repository": "google/fonts",
+  "revision": "5bb28733cec313b63fbd415b574b5ae35c8aa8b8",
+  "scope": "official Google Fonts reference snapshot; exact bytes comparison is recorded per font",
+  "licenses": [
+    {
+      "file": "ibmplexserif-OFL.txt",
+      "source": "https://raw.githubusercontent.com/google/fonts/5bb28733cec313b63fbd415b574b5ae35c8aa8b8/ofl/ibmplexserif/OFL.txt",
+      "sha256": "7e6b2818edbd8f6a01ae80641cc8f16a51080d08fb4e532be3a0b6f74adb07da"
+    },
+    {
+      "file": "instrumentserif-OFL.txt",
+      "source": "https://raw.githubusercontent.com/google/fonts/5bb28733cec313b63fbd415b574b5ae35c8aa8b8/ofl/instrumentserif/OFL.txt",
+      "sha256": "129ed7618959716959f2941fdd5b49e0ad6e6c1d78726761786a00253d865521"
+    }
+  ],
+  "fonts": [
+    {
+      "file": "IBMPlexSerif-Regular.ttf",
+      "source": "https://raw.githubusercontent.com/google/fonts/5bb28733cec313b63fbd415b574b5ae35c8aa8b8/ofl/ibmplexserif/IBMPlexSerif-Regular.ttf",
+      "archiveSha256": "77cd233a2af8dc6b1022faea3bb3b01f3c75af68bcf530cb6aeb15982ff3dbb7",
+      "referenceSha256": "e882efa9c41949a528ac2369079ec5ef050c1c996bbd0bacce3c3326d44cf80d",
+      "bytesMatch": false
+    },
+    {
+      "file": "IBMPlexSerif-Italic.ttf",
+      "source": "https://raw.githubusercontent.com/google/fonts/5bb28733cec313b63fbd415b574b5ae35c8aa8b8/ofl/ibmplexserif/IBMPlexSerif-Italic.ttf",
+      "archiveSha256": "b11f1048745e715a55c9d837b3f10226ca3d78867b7db7251ddad8f98dcf0f38",
+      "referenceSha256": "4b75b38be4673527231f49c48818d090c913d5042dd5c747b525bf6185d29ecb",
+      "bytesMatch": false
+    },
+    {
+      "file": "IBMPlexSerif-Bold.ttf",
+      "source": "https://raw.githubusercontent.com/google/fonts/5bb28733cec313b63fbd415b574b5ae35c8aa8b8/ofl/ibmplexserif/IBMPlexSerif-Bold.ttf",
+      "archiveSha256": "b8d294e9b5c5a0940f167c3ced0f7ef2e3f57082ca3ff096ef30e86e26c1c159",
+      "referenceSha256": "534c02c295999dd86e770457ece1d43db0de9256dd98bf741426f63ae904209e",
+      "bytesMatch": false
+    },
+    {
+      "file": "IBMPlexSerif-BoldItalic.ttf",
+      "source": "https://raw.githubusercontent.com/google/fonts/5bb28733cec313b63fbd415b574b5ae35c8aa8b8/ofl/ibmplexserif/IBMPlexSerif-BoldItalic.ttf",
+      "archiveSha256": "da64b75f4284f53e7b5c71fa190a35b8bf3494fe19f1804c81c3a53340bca570",
+      "referenceSha256": "2a32b76ac19c1942bf5942dbbd2a1566e5f1ae9833e421ebcf36d3522715e153",
+      "bytesMatch": false
+    },
+    {
+      "file": "InstrumentSerif-Regular.ttf",
+      "source": "https://raw.githubusercontent.com/google/fonts/5bb28733cec313b63fbd415b574b5ae35c8aa8b8/ofl/instrumentserif/InstrumentSerif-Regular.ttf",
+      "archiveSha256": "56ac3be03ac3ba283196b3e77850ab2ffcf56cfb6fd3212c5620109a972f8c99",
+      "referenceSha256": "498efd461f6ddfcb7a111bf9a565709d2085d48201d501ead960d93e84ffbb88",
+      "bytesMatch": false
+    },
+    {
+      "file": "InstrumentSerif-Italic.ttf",
+      "source": "https://raw.githubusercontent.com/google/fonts/5bb28733cec313b63fbd415b574b5ae35c8aa8b8/ofl/instrumentserif/InstrumentSerif-Italic.ttf",
+      "archiveSha256": "9c86e4d5a47b50224a2463a9eca8535835257c8e85c470c2c6b454b1af6f046e",
+      "referenceSha256": "08939b8bdf534afec24ae0ef5e03f948940cd9a8fe08e7fecbad040e62327385",
+      "bytesMatch": false
+    }
+  ]
+}

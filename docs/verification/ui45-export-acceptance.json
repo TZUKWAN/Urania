@@ -1,0 +1,215 @@
+{
+  "status": "passed_scoped",
+  "at": "2026-11-08T08:26:20.739310+00:00",
+  "scope": "Advertised native, PNG/JPEG, SVG, PPTX, PDF and Photo PSD/WebP/TIFF menu outputs, with independent decoders and selected native reimports.",
+  "photoExchange": {
+    "png": {
+      "bytes": 3592,
+      "format": "PNG",
+      "size": [
+        255,
+        190
+      ],
+      "warnings": [
+        "2 layer(s) flattened; layers, masks and blend modes are not kept"
+      ]
+    },
+    "psd": {
+      "bytes": 48121,
+      "format": "PSD",
+      "size": [
+        255,
+        190
+      ],
+      "warnings": [],
+      "layerRecords": 2,
+      "reimportedLayers": 2
+    },
+    "webp": {
+      "bytes": 3952,
+      "format": "WEBP",
+      "size": [
+        255,
+        190
+      ],
+      "warnings": [
+        "2 layer(s) flattened; layers, masks and blend modes are not kept"
+      ],
+      "reimportedLayers": 1
+    },
+    "tiff": {
+      "bytes": 146240,
+      "format": "TIFF",
+      "size": [
+        255,
+        190
+      ],
+      "warnings": [
+        "2 layer(s) flattened; layers, masks and blend modes are not kept"
+      ],
+      "reimportedLayers": 1
+    }
+  },
+  "pdf": {
+    "vectorcraft": {
+      "pages": 1,
+      "textCharacters": 249,
+      "drawings": 11,
+      "images": 0,
+      "menuDescription": "矢量和文字按原生导出器支持的范围保留，图片和部分效果为栅格内容",
+      "warnings": [
+        "font styles that aren't available were written in the closest style: Inter Bold was drawn in Inter SemiBold (pick a style the family has)"
+      ]
+    },
+    "deckcraft": {
+      "pages": 1,
+      "textCharacters": 160,
+      "drawings": 0,
+      "images": 2,
+      "menuDescription": "每页为渲染图，并附可搜索、选择和复制的文字层；保留原生形状请使用 PPTX。",
+      "warnings": []
+    }
+  },
+  "pptxObjects": {
+    "charts": 1,
+    "tables": 1,
+    "text": true,
+    "consumer": "python-pptx"
+  },
+  "nativeSourcesReopened": {
+    "vectorcraft": true,
+    "deckcraft": true,
+    "photocraft": true
+  },
+  "artifacts": [
+    {
+      "file": "verification/export-formats/vectorcraft.png",
+      "sha256": "b73cd7d2b9b4e35549a75b7d818ab8d7b2a393560dc48980b142ab4e778ea742",
+      "bytes": 42377,
+      "format": "PNG"
+    },
+    {
+      "file": "verification/export-formats/vectorcraft.jpg",
+      "sha256": "2bbe2c619638f6278143bfceb40ecf7585d1d064a55262d3413e248990a8f5af",
+      "bytes": 77889,
+      "format": "JPEG"
+    },
+    {
+      "file": "verification/export-formats/deckcraft.png",
+      "sha256": "a3b9762e69564ca7d424ba6f326e0e00f76f27da5e8b81a35bacbb437028a757",
+      "bytes": 68441,
+      "format": "PNG"
+    },
+    {
+      "file": "verification/export-formats/deckcraft.jpg",
+      "sha256": "a9d7b8d36f0ff1d0e43fae15b5f32406fa95b8d18578bcec5c7e51c42dfdba16",
+      "bytes": 50461,
+      "format": "JPEG"
+    },
+    {
+      "file": "verification/export-formats/photocraft.png",
+      "sha256": "07e7e2bee105e066dfb51f3588120b46ad5f51e09f7c7bb731123bfb39128e6c",
+      "bytes": 3592,
+      "format": "PNG"
+    },
+    {
+      "file": "verification/export-formats/photocraft.jpg",
+      "sha256": "fd41df020a44b915eb9cca8af93052aa6e1bbedddfdddd117cd4c76d1c7576d7",
+      "bytes": 3199,
+      "format": "JPEG"
+    },
+    {
+      "file": "verification/export-formats/vectorcraft.svg",
+      "sha256": "d5cd152de14cc40ad0acedf32492aab0fa8559e7e8908a0021b5257e96fe3049",
+      "bytes": 3903,
+      "format": "SVG"
+    },
+    {
+      "file": "verification/export-formats/ui45-vectorcraft.pdf",
+      "sha256": "b6eee577d005fe0f152539423375f082b3fd76cc1cc47dcfc54e6587c2a8a927",
+      "bytes": 26008,
+      "format": "PDF"
+    },
+    {
+      "file": "verification/export-formats/ui45-deckcraft.pdf",
+      "sha256": "37c6b892c822cf4bd4e9886f857ad7a291c63dc830415369c597282faa1da99a",
+      "bytes": 158134,
+      "format": "PDF"
+    },
+    {
+      "file": "verification/export-formats/deck-native-objects.pptx",
+      "sha256": "1ed1b630886cd9dd91c2a11057f6451f290afbcf9758d7dec153b5ab95543553",
+      "bytes": 28886,
+      "format": "PPTX"
+    },
+    {
+      "file": "verification/export-formats/ui45-photo-exchange.psd",
+      "sha256": "e489594a26d45b8aa150ba57b2262f1f027f03888a82739c62033046458cf957",
+      "bytes": 48121,
+      "format": "PSD"
+    },
+    {
+      "file": "verification/export-formats/ui45-photo-exchange.webp",
+      "sha256": "3b47758ba13cd494f885889780c1304050a5ba866f55cc8ec8427fb8967b0157",
+      "bytes": 3952,
+      "format": "WEBP"
+    },
+    {
+      "file": "verification/export-formats/ui45-photo-exchange.tiff",
+      "sha256": "4637a1d398727b479e4931937b0d63e3ad3b986382e5673d8e6a007749757131",
+      "bytes": 146240,
+      "format": "TIFF"
+    },
+    {
+      "file": "verification/export-formats/vectorcraft.vectorcraft",
+      "sha256": "6f099b8a40af205c47a31d35bce94fe1d6575396807f828d5c1189de0ec059f3",
+      "bytes": 103743,
+      "format": "native or PPTX"
+    },
+    {
+      "file": "verification/export-formats/photocraft.pcraft",
+      "sha256": "1e91bcd041be7e657638160714135f6050c00b6ea0503ff84786c61346a0f3b4",
+      "bytes": 9268,
+      "format": "native or PPTX"
+    },
+    {
+      "file": "verification/export-formats/deckcraft.deckcraft",
+      "sha256": "413971f49556770da7d4ef7f8ef4eada2b428b457c61a5c25e2b216776ac9625",
+      "bytes": 13449,
+      "format": "native or PPTX"
+    },
+    {
+      "file": "verification/export-formats/deckcraft.pptx",
+      "sha256": "1de3e9b58ca8d5f7e61d74bf536b530863fb346d7daaf3d5504a7dcb629583c6",
+      "bytes": 32337,
+      "format": "native or PPTX"
+    }
+  ],
+  "limits": [
+    "PSD composite decoded in Pillow; two layer records and PhotoCraft reimport were checked, but Adobe Photoshop was not available as a consumer.",
+    "Deck PDF is rendered slide artwork plus searchable invisible text; Vector PDF sample has actual paths and text.",
+    "Earlier PNG/JPEG/SVG/native-source menu downloads were produced by the recorded historical UI run; current PDF/Photo exchange and native PPTX object samples were freshly verified."
+  ],
+  "rawEvidence": [
+    {
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-export-independent.json",
+      "sha256": "b205510a813c03a28d031e82f36d133db5dee54e989bef85207df745e30eea12"
+    },
+    {
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-photo-exchange.json",
+      "sha256": "71f7d31ce5091deaa4d64b6620a6274f94bea594a7735e48e45edb0a4aa6e41b"
+    },
+    {
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-pdf-export.json",
+      "sha256": "91d63ee47d4e2ab0cb01f879b42fdef82374770c5ae9ba6e0f2fa17a4eeb77c8"
+    },
+    {
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-deck-native.tap",
+      "sha256": "73a714b63bd5dcff36526d7a1a94d341bcc469d278fc7307c41da15889f62de1"
+    },
+    {
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\export-menu.json",
+      "sha256": "8b70f8b0e69de28e81d492b36fb68912fe2f7381b1b68c2938909210275da92c"
+    }
+  ]
+}

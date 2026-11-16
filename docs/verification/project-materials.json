@@ -1,0 +1,84 @@
+{
+  "status": "passed",
+  "scope": "actual current DSH material UI, real native source/derivative pair and placements, registered tool, source files; explicit finish HTTP503 fault; no model",
+  "codeRoot": "D:\\METIS超级合并\\dsh-plugin\\designcraft",
+  "checks": [
+    {
+      "name": "physical material save pairs a genuine native source version and actual editable SVG derivative",
+      "pass": true,
+      "detail": {
+        "projectId": "project-82bc1d2f-2e73-40e3-97bd-b8270bf26927",
+        "assetId": "asset-2f8ee7e3-ac02-41cf-9cc5-c26db2d47fbf",
+        "sourceId": "import-53c8b20f-189c-4bfa-bc52-48dee8fcd3e3",
+        "sourceRevision": "5124e1492765226232842d4dd1655e5e8d0877ecec03867d50e20f3e667698d0",
+        "sourceHash": "3d86a428a2248529136c57742595247c80a3159d17843f37a027e659d058583b",
+        "derivativeHash": "6a857a152816c6f5451159bf6a6837aaf79b00709a1d89f3dcbcfadf312b66f6"
+      }
+    },
+    {
+      "name": "physical image material save produces a real decodable PNG tied to its exact native source",
+      "pass": true,
+      "detail": {
+        "assetId": "asset-84c0ba45-fac9-4fef-b3b6-db3c4c99b3c0",
+        "size": [
+          640,
+          480
+        ],
+        "sourceRevision": "80f9cd2dc0ce14255bf4c813e98f8b4f83bad8121f81bb16fbff991f323d360b",
+        "sha256": "3ccdd784c5ab03fb9bc183f9db1f819d0556eef6af78ca01fcbc790b385bb947"
+      }
+    },
+    {
+      "name": "later physical source edits do not silently rewrite an earlier material snapshot",
+      "pass": true,
+      "detail": {
+        "currentSourceRevision": "9197fb16c0c257e86db19d4e6a77283fb8c2c6c3501abc61da8ffc57d32c06d9",
+        "materialSourceRevision": "5124e1492765226232842d4dd1655e5e8d0877ecec03867d50e20f3e667698d0"
+      }
+    },
+    {
+      "name": "physical placement creates actual native editable SVG objects and a saved owning-source/node binding",
+      "pass": true,
+      "detail": {
+        "instanceId": "use-58baec81-546c-4ccd-8e61-dd71724e7802",
+        "sourceId": "work-97c442fb-ec85-4d32-8171-dae0ae700b22",
+        "nativeId": "6",
+        "nativeKinds": [
+          "group",
+          "path",
+          "path",
+          "path",
+          "text"
+        ],
+        "boundAtRevision": "b350a4559d7ae943a8769eaca0cb826c06368c12811bc96b3425cc56b91127f8"
+      }
+    },
+    {
+      "name": "actual registered DSH place/project tools use the same layout and a real embedded PNG object",
+      "pass": true,
+      "detail": {
+        "instanceId": "use-e4ffbe43-ccca-4d23-93df-e690070a1e34",
+        "nativeId": "7",
+        "nativeKind": "image",
+        "sourceRevision": "b7b41886191b26522936479960869eb12e7ccc03c4c5646bc280513ea18c9fd3"
+      }
+    },
+    {
+      "name": "an actual finish-delivery HTTP503 leaves a real saved object and an atomic source receipt without falsely completing its relation",
+      "pass": true,
+      "detail": {
+        "jobId": "d502bad9-53cd-4c28-b378-814ef33f3804",
+        "savedSourceRevision": "65229e7b6d9e4fde8b85a143128edccb73956340ae49a310fac23e45e0058560",
+        "nativeId": "12",
+        "recoverable": true,
+        "toolResult": {
+          "ok": false,
+          "status": 422,
+          "error": "intentional owned test: finish delivery blocked after saved source",
+          "readStateBeforeRetry": true
+        }
+      }
+    }
+  ],
+  "pageErrors": []
+}

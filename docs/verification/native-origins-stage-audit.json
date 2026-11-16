@@ -1,0 +1,1083 @@
+{
+  "status": "verified_scoped_stage",
+  "at": "2026-11-04T23:56:35.699786+00:00",
+  "fullScopeComplete": false,
+  "originalTaskCount": 50,
+  "codeRoot": "D:\\METIS超级合并\\dsh-plugin\\designcraft",
+  "scope": "Native PNG duplicate independence, one-edit provenance, undo/redo/reopen relations, genuine legacy migration and real post-save relation failure recovery; latest mixed-seven regression",
+  "runtime": {
+    "vectorcraft-host": "0.19.0+designcraft.host10",
+    "photocraft-host": "0.18.0+designcraft.host3",
+    "deckcraft-host": "0.13.1+designcraft.host4"
+  },
+  "nativeTests": {
+    "vectorcraft": 4,
+    "deckcraft": 3
+  },
+  "focusedNodeTests": 25,
+  "uiCases": {
+    "vectorcraft": {
+      "status": "passed",
+      "scope": "actual registered tools/native duplicate plus physical Ctrl+Z; observes saved PNG/provenance consistency; no clipboard, model or user desktop",
+      "codeRoot": "D:\\METIS超级合并\\dsh-plugin\\designcraft",
+      "cases": [
+        {
+          "engine": "vectorcraft",
+          "root": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\copy-undo-probe\\75c05594-68b8-49cc-9357-c55229111945",
+          "owned": {
+            "workspaceId": "1ab707a3-55ec-4864-8941-161f0e86ccf0",
+            "sessionId": "PUBLIC-REDACTED"
+          },
+          "nativeCopiedId": "3",
+          "actualCopiedPngSha256": "540fbe5984111c7aee64345ebf2313816cd87b35cff6a00ff32bf83c7db13e28",
+          "copyProvenancePresent": true,
+          "copyLinked": false,
+          "actualNativeUndoRestoredOldPixels": true,
+          "undoRelationCorrect": true,
+          "graphAssetAfterUndo": "asset-0592c031-7eba-445d-ba03-41fe20bcf6d0",
+          "expectedAssetAfterUndo": "asset-0592c031-7eba-445d-ba03-41fe20bcf6d0",
+          "appliedAsset": "asset-87325cef-0386-424e-b545-a0f5e27329d7",
+          "actualCopiedInstanceEditedIndependently": true,
+          "actualNativeRedoRelationCorrect": true,
+          "nativeSourceReopenAndRelationStable": true,
+          "gaps": []
+        }
+      ],
+      "gapsReproduced": 0
+    },
+    "deckcraft": {
+      "status": "passed",
+      "scope": "actual registered tools/native duplicate plus physical Ctrl+Z; observes saved PNG/provenance consistency; no clipboard, model or user desktop",
+      "codeRoot": "D:\\METIS超级合并\\dsh-plugin\\designcraft",
+      "cases": [
+        {
+          "engine": "deckcraft",
+          "root": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\copy-undo-probe\\3dd53c99-c6aa-486a-a2ba-5084ec74c235",
+          "owned": {
+            "workspaceId": "a464aadc-b22e-43ee-a7a6-5185f7afa484",
+            "sessionId": "PUBLIC-REDACTED"
+          },
+          "nativeCopiedId": "262",
+          "actualCopiedPngSha256": "da14a16eabd798696c26494162a6d9e153e71e55946378a207973b7171648351",
+          "copyProvenancePresent": true,
+          "copyLinked": false,
+          "actualNativeUndoRestoredOldPixels": true,
+          "undoRelationCorrect": true,
+          "graphAssetAfterUndo": "asset-f579357c-70b6-49b6-b413-1ac8c3e1f86e",
+          "expectedAssetAfterUndo": "asset-f579357c-70b6-49b6-b413-1ac8c3e1f86e",
+          "appliedAsset": "asset-73042f4b-8b29-4b9c-9043-9d6a290e8693",
+          "actualCopiedInstanceEditedIndependently": true,
+          "actualNativeRedoRelationCorrect": true,
+          "nativeSourceReopenAndRelationStable": true,
+          "gaps": []
+        }
+      ],
+      "gapsReproduced": 0
+    }
+  },
+  "legacyCases": {
+    "vectorcraft": {
+      "status": "passed",
+      "scope": "real copied legacy seven-use project opened and annotated by native engine, exact byte/model/instance identity checks",
+      "engine": "vectorcraft",
+      "root": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\legacy-origin-probe\\7ab7980a-ff09-41bd-bd06-bfc49407c7c6",
+      "owned": {
+        "workspaceId": "8b79258e-d6bb-447a-8221-34da11d0f85b",
+        "sessionId": "PUBLIC-REDACTED"
+      },
+      "sourceId": "work-9a53c3fe-5c53-47b3-85ce-e1359034346e",
+      "baseRevision": "283c91724def96fc414efb6422885da18c27d21463932a10992156615aed6c4c",
+      "revision": "9efc0c538288305f07d1a65cddaad989b4a0761ae1386a720fda6019c7e11adc",
+      "reopenCheckpointRevision": "4fb3da9333787262b6203215021af692d34d43c9fefa79be2b1fee58847441f0",
+      "trackedUses": 4,
+      "allExistingInstanceIdsRetained": true,
+      "explicitLinkMembershipRetained": true,
+      "allTokensFreshAndDistinct": true,
+      "wholeNativeModelProof": "whole native model preserved except verified origins",
+      "secondOpenNoExtraAnnotationOrGraphCommit": true,
+      "beforeSha256": "b1d77d680ce92bc607c57de778cba6fda2142aa87c58c399dc53c677786eb8a5",
+      "afterSha256": "9bcdb485b989ab2432ee047da3c47eca9a8c05da26e7cec114d62fd3a5660c5e"
+    },
+    "deckcraft": {
+      "status": "passed",
+      "scope": "real copied legacy seven-use project opened and annotated by native engine, exact byte/model/instance identity checks",
+      "engine": "deckcraft",
+      "root": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\legacy-origin-probe\\51a34d76-cbb3-49ea-bdb4-82c51fc92467",
+      "owned": {
+        "workspaceId": "57be151c-b22a-4ccb-a097-0b84eecbfec3",
+        "sessionId": "PUBLIC-REDACTED"
+      },
+      "sourceId": "work-704cdd55-6f9c-4bc1-b8c1-384248426018",
+      "baseRevision": "08ce552483f014c587fbf3a65f3a5b5cd9be3bdbc53020302e425999ffa66500",
+      "revision": "47aff59ed3da61d4625f4dabece952641cc8671a0a6a5374cbb26a5d30a26666",
+      "reopenCheckpointRevision": "fa99ecf882ffc43af2ca1cdb6e08df9ac32515c8df4fd986a518f10f695f4085",
+      "trackedUses": 4,
+      "allExistingInstanceIdsRetained": true,
+      "explicitLinkMembershipRetained": true,
+      "allTokensFreshAndDistinct": true,
+      "wholeNativeModelProof": "whole native model preserved except verified origins",
+      "secondOpenNoExtraAnnotationOrGraphCommit": true,
+      "beforeSha256": "3f7ce43b256430751e8f903131c723fedf9aa11adba3d088cb5cb0efb306acbb",
+      "afterSha256": "cfde3d28d400aee391ef5a3fd657cd8c80220044bbefd222e410e88da55afbef"
+    }
+  },
+  "faultCase": {
+    "status": "passed",
+    "scope": "owned Deck native duplicate/save with a real exclusive read lock on its Photo source, then committed-source relation repair; no desktop/OS clipboard/model calls",
+    "toolResult": {
+      "ok": false,
+      "status": 503,
+      "error": "原生文件已保存，来源关系尚未确认；请核对素材而不要重复原生动作：EBUSY: resource busy or locked, open 'C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\copy-undo-probe\\3dd53c99-c6aa-486a-a2ba-5084ec74c235\\design\\.designcraft\\v2\\sources\\fork-43f01489-3616-4570-9c1a-a64784db0a99\\versions\\6b5d87cd0f4d6a3290149f09686a456c95a4d762b5db61539965fd37c9c7c1ce.pcraft'",
+      "readStateBeforeRetry": true
+    },
+    "root": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\copy-undo-probe\\3dd53c99-c6aa-486a-a2ba-5084ec74c235",
+    "owned": {
+      "sessionId": "PUBLIC-REDACTED"
+    },
+    "sourceId": "work-82b26c45-7b54-4162-b5a7-3bfa1edb70f1",
+    "beforeRevision": "56b6d013dd45ff8923b8671f24feaf6a86ba48175902ca99820cf2ebca9089dc",
+    "committedRevision": "a415d38aaa8783c33095d4b08cebe2a3745b07a1642b936b488efef76e0ff130",
+    "actualNativeShapeCountIncreasedOnce": true,
+    "sourceSaveAcknowledgedDespiteRelationFailure": true,
+    "pendingSaveResponse": {
+      "ok": true,
+      "meta": {
+        "schema": 1,
+        "id": "work-82b26c45-7b54-4162-b5a7-3bfa1edb70f1",
+        "engine": "deckcraft",
+        "title": "原生复制与撤销",
+        "sourceHash": "996dbbc680457e2e44447f06fb823abe780c5247a0dca0aec57aad903bab56ab",
+        "bytes": 13410,
+        "parentRevision": "56b6d013dd45ff8923b8671f24feaf6a86ba48175902ca99820cf2ebca9089dc",
+        "engineState": {
+          "uid": 4516230320881664,
+          "revision": 2
+        },
+        "actor": "ai",
+        "at": "2026-11-04T23:36:16.999Z"
+      },
+      "revision": "a415d38aaa8783c33095d4b08cebe2a3745b07a1642b936b488efef76e0ff130",
+      "originSync": {
+        "pending": true,
+        "error": "EBUSY: resource busy or locked, open 'C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\copy-undo-probe\\3dd53c99-c6aa-486a-a2ba-5084ec74c235\\design\\.designcraft\\v2\\sources\\fork-43f01489-3616-4570-9c1a-a64784db0a99\\versions\\6b5d87cd0f4d6a3290149f09686a456c95a4d762b5db61539965fd37c9c7c1ce.pcraft'"
+      }
+    },
+    "actualClientState": {
+      "revision": "a415d38aaa8783c33095d4b08cebe2a3745b07a1642b936b488efef76e0ff130",
+      "dirty": false,
+      "error": "原生文件已保存，图片来源关系尚未确认，请在素材中重试核对。",
+      "sourceRevision": "a415d38aaa8783c33095d4b08cebe2a3745b07a1642b936b488efef76e0ff130"
+    },
+    "graphUnchangedDuringFault": true,
+    "recoveredInstance": {
+      "id": "use-73a2e0c1-672f-a031-6037-5629893cbe5f",
+      "assetId": "asset-73042f4b-8b29-4b9c-9043-9d6a290e8693",
+      "sourceId": "work-82b26c45-7b54-4162-b5a7-3bfa1edb70f1",
+      "nativeId": "265",
+      "originToken": "PUBLIC-REDACTED",
+      "boundAtRevision": "a415d38aaa8783c33095d4b08cebe2a3745b07a1642b936b488efef76e0ff130",
+      "nativeNodeHash": "c6de9b3e303d57e486e1dfe45814b18a311be546bdad22cfab6fe9f333aab98a",
+      "origin": "native-copy",
+      "nativePage": {
+        "kind": "slide",
+        "id": 257,
+        "index": 0
+      },
+      "at": "2026-11-04T23:36:20.102Z",
+      "status": "present",
+      "currentSourceRevision": "a415d38aaa8783c33095d4b08cebe2a3745b07a1642b936b488efef76e0ff130",
+      "nativeObject": {
+        "id": 265,
+        "name": "Picture 6",
+        "kind": "picture",
+        "page": {
+          "kind": "slide",
+          "id": 257,
+          "index": 0
+        }
+      },
+      "changedSincePlacement": false
+    },
+    "sourceRevisionUnchangedDuringRecovery": true,
+    "noNativeActionReplayed": true,
+    "secondRecoveryIdempotent": true,
+    "lockedSourceUnmodified": true
+  },
+  "mixedSeven": {
+    "status": "passed",
+    "scope": "actual native Vector/Deck/Photo; 7 explicitly linked originals+independent8th; one local white correction; source PNG320x240->400x240 keeps native frames; real response-loss/physical hand-move resume; no model",
+    "root": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\mixed-seven-project\\b3e6b756-949d-40a1-946b-e155a7f359fd",
+    "codeRoot": "D:\\METIS超级合并\\dsh-plugin\\designcraft",
+    "checks": [
+      {
+        "name": "UI explicitly links seven genuine PNG uses across Vector and Deck, leaving eighth independent",
+        "pass": true,
+        "detail": {
+          "uses": 7,
+          "independent": "use-f46f6f3c-502a-4853-a811-df6cd587e186",
+          "engines": [
+            "vectorcraft",
+            "deckcraft"
+          ],
+          "sourceIds": [
+            "work-25050706-762d-468f-933b-7179e71d05a7",
+            "work-4d327ff7-c355-4fcf-ba4d-5dc4570785a3"
+          ]
+        }
+      },
+      {
+        "name": "real first-source response loss resumes only unfinished native source; physical hand move and return slide/object context survive",
+        "pass": true,
+        "detail": {
+          "sameCompletedVectorHead": "102f71a5c1ccd33fdb640af1a50e824b91d668817d7159ddb289dfd934db39cb",
+          "manualX": 366.0,
+          "returnPage": {
+            "id": 265,
+            "index": 1,
+            "kind": "slide"
+          },
+          "returnObjects": [
+            266
+          ]
+        }
+      },
+      {
+        "name": "changed PNG aspect updates exactly seven original IDs; all physical frames/crops/rotation/appearance and eighth use remain exact",
+        "pass": true,
+        "detail": {
+          "sourcePixelSize": [
+            400,
+            240
+          ],
+          "originalPixelSize": [
+            320,
+            240
+          ],
+          "updatedUses": 7,
+          "independentOldPngSha256": "76959459cab30207d150951e90d674d3a14810792e858dfc184a582105f33a23",
+          "allOtherNativeContentExact": true,
+          "originalLayeredSourceUnchanged": true,
+          "newPngSha256": "5c180c67ae91e8a694a66d879f7321408fb40151ca649fe74d9e13681a2316a6"
+        }
+      },
+      {
+        "name": "local white correction remains visibly white on a dark slide without modifying original shared pixels",
+        "pass": true,
+        "detail": {
+          "nativeBrightness": 1,
+          "renderedSample": [
+            255,
+            255,
+            255,
+            255
+          ],
+          "samplePoint": [
+            186,
+            215
+          ],
+          "sourceAlpha": 255
+        }
+      },
+      {
+        "name": "both real native sources freshly reopen exact, and actual editable PPTX is intact",
+        "pass": true,
+        "detail": {
+          "sourceIds": [
+            "work-25050706-762d-468f-933b-7179e71d05a7",
+            "work-4d327ff7-c355-4fcf-ba4d-5dc4570785a3"
+          ],
+          "pptxBytes": 29167,
+          "exactReopen": true
+        }
+      }
+    ],
+    "owned": {
+      "workspaceId": "ff218080-cd49-4a20-a669-d5e2945a9edb",
+      "sessionId": "PUBLIC-REDACTED"
+    },
+    "update": {
+      "id": "update-58249fec-44e1-402d-96e1-c6d4740398ea",
+      "editId": "edit-0420645c-260d-492a-8936-15adc43def1f",
+      "linkId": "link-adc75701-da02-4720-b5e5-701505a26cec",
+      "assetId": "asset-58249fec-44e1-402d-96e1-c6d4740398ea",
+      "previousAssetId": "asset-c1bb347e-9717-4cc7-aea1-b428c5943fc2",
+      "sources": {
+        "work-25050706-762d-468f-933b-7179e71d05a7": {
+          "engine": "vectorcraft",
+          "baseRevision": "8bb48838cff4628edc188c22dc3e3f078bbb9885b7206c45e3c45c94988f23ee",
+          "instanceIds": [
+            "use-24023708-1716-4800-9076-7379a52d066c",
+            "use-902bedf2-b381-430a-aa8e-f09086ad188a",
+            "use-af064406-a8d9-4d26-b513-b0f9bcfd8b03"
+          ]
+        },
+        "work-4d327ff7-c355-4fcf-ba4d-5dc4570785a3": {
+          "engine": "deckcraft",
+          "baseRevision": "3d40ea6bc2253f78a91ad6133b99e24a3faea8f9aecdf757d364a010b2340a95",
+          "instanceIds": [
+            "use-6e67624e-b681-4fe5-916f-8e39a6c1d4fa",
+            "use-68ce3058-d21f-4567-9076-d6b83a84e1ea",
+            "use-fa226f1f-f6e4-4f55-8f46-70fc4824d668",
+            "use-30a3a629-2861-407e-8c96-f517d27f9f11"
+          ],
+          "pages": {
+            "use-6e67624e-b681-4fe5-916f-8e39a6c1d4fa": {
+              "kind": "slide",
+              "id": 257,
+              "index": 0
+            },
+            "use-68ce3058-d21f-4567-9076-d6b83a84e1ea": {
+              "kind": "slide",
+              "id": 257,
+              "index": 0
+            },
+            "use-fa226f1f-f6e4-4f55-8f46-70fc4824d668": {
+              "kind": "slide",
+              "id": 257,
+              "index": 0
+            },
+            "use-30a3a629-2861-407e-8c96-f517d27f9f11": {
+              "kind": "slide",
+              "id": 265,
+              "index": 1
+            }
+          }
+        }
+      },
+      "committed": {
+        "work-25050706-762d-468f-933b-7179e71d05a7": "102f71a5c1ccd33fdb640af1a50e824b91d668817d7159ddb289dfd934db39cb",
+        "work-4d327ff7-c355-4fcf-ba4d-5dc4570785a3": "5740d4acfb5634754b3cad8619f29e1bd9416e1013a326ca1cd8b30eaca77303"
+      },
+      "status": "succeeded",
+      "at": "2026-11-04T23:54:21.370Z"
+    },
+    "newAsset": {
+      "id": "asset-58249fec-44e1-402d-96e1-c6d4740398ea",
+      "title": "七处共用的原始标记 · 独立编辑",
+      "sourceId": "fork-0420645c-260d-492a-8936-15adc43def1f",
+      "sourceRevision": "a5d1eba4ae6fa10e2a2a537e25ef581f6e89b94ccab6be942a3908e0f4b2e41e",
+      "sourceHash": "9258c6b6cc79561f42ca4b953fd0c71ba430c9b46bae7b61f1b6ed679f5e546b",
+      "engine": "photocraft",
+      "format": "png",
+      "sha256": "5c180c67ae91e8a694a66d879f7321408fb40151ca649fe74d9e13681a2316a6",
+      "bytes": 4001,
+      "at": "2026-11-04T23:54:20.290Z"
+    },
+    "pageErrors": []
+  },
+  "modifiedProductFiles": [
+    "host/material-origin.js",
+    "host/native-source-store.js",
+    "host/native-vector-header.js",
+    "host/native-deck-header.js",
+    "host/project-graph.js",
+    "host/editor-session.js",
+    "host/editor-routes.js",
+    "host/linked-updates.js",
+    "client/native-controller.js",
+    "tests/material-origin.test.mjs",
+    "tests/origin-sync.test.mjs",
+    "tests/project-graph.test.mjs",
+    "tests/instance-fork.test.mjs",
+    "tests/linked-update.test.mjs",
+    "tests/vector-apply-storage.test.mjs",
+    "web-runtime-lock.json",
+    "THIRD_PARTY_NOTICES.md",
+    "licenses/getrandom-0.4.3/LICENSE-MIT",
+    "licenses/getrandom-0.4.3/LICENSE-APACHE",
+    "licenses/getrandom-0.4.3/source.json"
+  ],
+  "commands": [
+    "cargo test --locked --offline -p vectorcraft-engine --test host_material",
+    "cargo test --locked --offline -p deckcraft-engine --test host_material",
+    "cargo check --locked --offline --target wasm32-unknown-unknown -p vectorcraft-web",
+    "cargo check --locked --offline --target wasm32-unknown-unknown -p deckcraft-web",
+    "pwsh -NoProfile -File work/build_vector.ps1",
+    "pwsh -NoProfile -File work/build_deck.ps1",
+    "python work/adopt_vector_build.py --host-build 10",
+    "python work/adopt_deck_build.py --host-build 4",
+    "python work/probe_native_copy_undo.py --engine vectorcraft --require-fixed",
+    "python work/probe_native_copy_undo.py --engine deckcraft --require-fixed",
+    "python work/test_origin_postsave_failure.py",
+    "python work/test_legacy_material_origins.py --engine deckcraft",
+    "python work/test_legacy_material_origins.py --engine vectorcraft",
+    "python work/test_mixed_linked_seven.py",
+    "node --test tests/material-origin.test.mjs tests/origin-sync.test.mjs tests/project-graph.test.mjs tests/instance-fork.test.mjs tests/linked-update.test.mjs tests/vector-apply-storage.test.mjs",
+    "npm run check"
+  ],
+  "fixedProblems": [
+    "Copied native PNG previously had no independent source relationship",
+    "Native undo previously restored pixels without restoring source binding",
+    "Vector external strict parameter documentation omitted hostMaterial",
+    "Legacy pre-epoch graph annotation previously dropped explicit link membership",
+    "A committed native source must acknowledge its real revision even when subsequent source-relation sync fails"
+  ],
+  "primaryReview": {
+    "allEvidenceFilesExistAndRehashed": true,
+    "nativeSourceAndFontPinsMatchedCurrentVendors": true,
+    "actualNativePixelsAndGraphRelationsReviewed": true,
+    "full50CompletionNotClaimed": true
+  },
+  "limitations": [
+    "Ordinary native duplicate is browser-tested; internal Session copy/paste is native-tested; OS clipboard and user desktop were not touched",
+    "User window loaded version unknown; only authoritative disk install and owned no-open backend verified",
+    "Registered fresh open may add a native identity checkpoint while retaining exact source bytes; it does not repeat origin annotation",
+    "F3 double-click entry and return text/cell/master/camera/history cases are not fully accepted",
+    "Original F4 SVG in-place and F5 SVG to native editable PPT shapes remain; Deck currently accepts SVG media but its raster renderer needs genuine SVG display support before claiming completion",
+    "Original remaining specialized tools/formats/OD/HTML/brand/configured image-service/inpaint/variants/projectpack/migration/five journeys/final full50 delivery remain",
+    "No external PowerPoint rendering was performed"
+  ],
+  "evidenceDirectory": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\outputs\\DesignCraft_原生复制与撤销阶段证据_20261105",
+  "evidence": [
+    {
+      "file": "vector-material-origin-native.log",
+      "bytes": 1948,
+      "sha256": "37dd81c522fda32417a35fcfd32a8c07056c8304f191325cc94523412099341e"
+    },
+    {
+      "file": "deck-material-origin-native.log",
+      "bytes": 1804,
+      "sha256": "372a7c1f5c8010f3ab58620a09b595f34c9449dda89add98036a9a8e8fe241a8"
+    },
+    {
+      "file": "vector-origin-paramfix-wasm-check.log",
+      "bytes": 2434,
+      "sha256": "1f36c2f34cfff1e58f219524a61476e3af4d2108cdd045dbf8d270273bf5f01a"
+    },
+    {
+      "file": "deck-origins-wasm-check.log",
+      "bytes": 2173,
+      "sha256": "e20001a9532004e5bc5a50826494eddfd0d8c53b1633bb825a5ca01302d63ded"
+    },
+    {
+      "file": "vector-build-result.json",
+      "bytes": 4671,
+      "sha256": "a567a250a342bfc679797a64a82aa793bea3948ad93994e22104f8868221f189"
+    },
+    {
+      "file": "deck-build-result.json",
+      "bytes": 4855,
+      "sha256": "610f2c15212532b5c86e4d7dc5744c6726c1d9e7d8e58257fdaa58b88e464cab"
+    },
+    {
+      "file": "vector-build.log",
+      "bytes": 4467,
+      "sha256": "fad59778975c4dc29030d8618b07bcf645f9d2a761f3b94d0f08662d89cfd60e"
+    },
+    {
+      "file": "deck-build.log",
+      "bytes": 2264,
+      "sha256": "5229aa64bff8b827834d5ff5e6bd4bb2912445b480e2e87a942424fbf9405040"
+    },
+    {
+      "file": "vector-origin-ui-accept.json",
+      "bytes": 1369,
+      "sha256": "fc8c31ba91987fe608b5c739eb121299f6b2b1b6aafdf369d7133c9ac4fb41a8"
+    },
+    {
+      "file": "vector-origin-ui-accept.log",
+      "bytes": 927,
+      "sha256": "736a94e9b9e6e7bbd8af8b111911ad06656b9831b2f081e2bd5a0d94a5b3d0ab"
+    },
+    {
+      "file": "deck-origin-ui-accept.json",
+      "bytes": 1369,
+      "sha256": "7c61404a1f00513e24fb87b79914ad17050996211f37ee29dba0bad36d48936f"
+    },
+    {
+      "file": "deck-origin-ui-accept.log",
+      "bytes": 927,
+      "sha256": "01a4c9ccaa20f3c76cf387fc900a4b5b61bd65112addaa9269b6292e2cc18c65"
+    },
+    {
+      "file": "legacy-origin-vectorcraft.json",
+      "bytes": 1306,
+      "sha256": "235a90f2b1507d2267380f6940fa512b8dc74d320f4137b1fba145ce76e3ef4b"
+    },
+    {
+      "file": "legacy-origin-vectorcraft.log",
+      "bytes": 1239,
+      "sha256": "64fd7b07098fc9ff5973188391948852c9c39ab4eafda703f697235b6c0f0736"
+    },
+    {
+      "file": "legacy-origin-vectorcraft-before.vectorcraft",
+      "bytes": 33142,
+      "sha256": "b1d77d680ce92bc607c57de778cba6fda2142aa87c58c399dc53c677786eb8a5"
+    },
+    {
+      "file": "legacy-origin-vectorcraft-after.vectorcraft",
+      "bytes": 34646,
+      "sha256": "9bcdb485b989ab2432ee047da3c47eca9a8c05da26e7cec114d62fd3a5660c5e"
+    },
+    {
+      "file": "legacy-origin-deckcraft.json",
+      "bytes": 1304,
+      "sha256": "6f09f4a39920e2909bd43fae2ea9007a830eb705c40988a9ad433b06bd887a7f"
+    },
+    {
+      "file": "legacy-origin-deckcraft.log",
+      "bytes": 1237,
+      "sha256": "1c9c8b18da2d3d7b9cfdb769c46ea870a1c4f000abf5183193708c5fdd36245e"
+    },
+    {
+      "file": "legacy-origin-deckcraft-before.deckcraft",
+      "bytes": 12449,
+      "sha256": "3f7ce43b256430751e8f903131c723fedf9aa11adba3d088cb5cb0efb306acbb"
+    },
+    {
+      "file": "legacy-origin-deckcraft-after.deckcraft",
+      "bytes": 12694,
+      "sha256": "cfde3d28d400aee391ef5a3fd657cd8c80220044bbefd222e410e88da55afbef"
+    },
+    {
+      "file": "origin-postsave-failure.json",
+      "bytes": 4024,
+      "sha256": "b8de6cc6e9500d93ae715d02d1257a588e2baf858350b436216639dd0831c593"
+    },
+    {
+      "file": "origin-postsave-failure.log",
+      "bytes": 355,
+      "sha256": "f91a8f356e1435bed2500fcc4561af214a22d411eb9dabfb2afb10fd89585880"
+    },
+    {
+      "file": "origin-final-focused.tap",
+      "bytes": 2906,
+      "sha256": "caadfb6917999511f6dce56cb337f4a69584629c5fbbb7bbeffd7e7d474d9d03"
+    },
+    {
+      "file": "origin-package-check.log",
+      "bytes": 200,
+      "sha256": "5a0d659ed87820fc0eeb6ddba7ef01926bd9cc90a089db36e4f76e4a279ff099"
+    },
+    {
+      "file": "mixed-seven-browser.json",
+      "bytes": 5879,
+      "sha256": "04066ce6fc8c1b9daea02a89c136473d05f04988cb1c3949c1c5cfaf5a9d403e"
+    },
+    {
+      "file": "mixed-seven-browser.log",
+      "bytes": 1734,
+      "sha256": "472f29d3704e2f391e1171d7cfcd180c2c360542822f6d3afabff4601e971517"
+    },
+    {
+      "file": "mixed-seven-vector.vectorcraft",
+      "bytes": 34654,
+      "sha256": "e98c611b9d87481dd4e4f1f15ad8558d384d6d6313f511e463acd5e676caf9fb"
+    },
+    {
+      "file": "mixed-seven-deck.deckcraft",
+      "bytes": 12700,
+      "sha256": "3106cc909de4a2eb355a67b1a9ab26eda9f64bd619290bbe794dc4dd70be0cfa"
+    },
+    {
+      "file": "mixed-seven-deck.pptx",
+      "bytes": 29167,
+      "sha256": "667cc2c06dc5baab806febb5903245692e629bc630d3941f8cb49803d0d10e93"
+    },
+    {
+      "file": "mixed-seven-white-render.png",
+      "bytes": 19157,
+      "sha256": "add11403ce4dae3e0691f66eee5ea001744d48bfd2c78bd1235cc9f88b3efe13"
+    },
+    {
+      "file": "mixed-seven-new-source.png",
+      "bytes": 4001,
+      "sha256": "5c180c67ae91e8a694a66d879f7321408fb40151ca649fe74d9e13681a2316a6"
+    },
+    {
+      "file": "mixed-seven-ui.png",
+      "bytes": 134312,
+      "sha256": "f7e066d36aabdbdf65a8dc36b00d889b6e0c23f18ed348d08d3419e40abf2403"
+    },
+    {
+      "file": "native-copy-undo-original-gaps.json",
+      "bytes": 2287,
+      "sha256": "e6f8d3b24636ca0f32a9ae57b09dc56eabe85187275b324f0c0eae72e05b9ab3"
+    },
+    {
+      "file": "native-copy-undo-original-gaps.log",
+      "bytes": 1680,
+      "sha256": "dd6a27d67b9dd13c57fe46cf86280aa7045feaac30ac1bfc95c5555f6375cabf"
+    },
+    {
+      "file": "vector-origin-param-contract-failed-777a9163aa.json",
+      "bytes": 894,
+      "sha256": "777a9163aaa3e744ddaaaea84132979b846bc9284fe466f5b7df1c53a77678cf"
+    },
+    {
+      "file": "vector-origin-param-contract-failed-6365879f34.log",
+      "bytes": 888,
+      "sha256": "6365879f34dcb55a7fb34d33ca7cbbfa1a8f203a57221543b6d8f254211735e2"
+    },
+    {
+      "file": "legacy-origin-links-before-fix.json",
+      "bytes": 219,
+      "sha256": "9740b4f52d7f8d1032932a61b38b9c3e226ed7b1c4e4a4bd586f8157c0382cfc"
+    },
+    {
+      "file": "legacy-origin-links-before-fix.log",
+      "bytes": 811,
+      "sha256": "ea793aa5b91ba00c9ccf5ff91f71a1c12a674e7ffcb52dce4e9db57e442cc782"
+    },
+    {
+      "file": "verification-scripts/probe_native_copy_undo.py",
+      "bytes": 7917,
+      "sha256": "f756fd74937af55d65cd989814d4373a1f857e0f578778fb34f07a2447f32954"
+    },
+    {
+      "file": "verification-scripts/test_origin_postsave_failure.py",
+      "bytes": 6570,
+      "sha256": "2311773b237fb2c4b8d2921ac5f03d13e6dbf08b95fcc4d603fe11468b475b56"
+    },
+    {
+      "file": "verification-scripts/test_legacy_material_origins.py",
+      "bytes": 6132,
+      "sha256": "acac7eb90e3dbcbb9a31213576083fb0b387ae0f9918f09b982caef41b028e3f"
+    },
+    {
+      "file": "verification-scripts/test_mixed_linked_seven.py",
+      "bytes": 15088,
+      "sha256": "04541919afb69a3b5fef6113d48077acdb69763dcf6235af08a1773caf092d6f"
+    },
+    {
+      "file": "verification-scripts/build_vector.ps1",
+      "bytes": 3727,
+      "sha256": "9ccc196d33873fe98c0ea76dee0def34f1d3f45905a89e0ea3cf6b161d2a0ffa"
+    },
+    {
+      "file": "verification-scripts/adopt_vector_build.py",
+      "bytes": 5080,
+      "sha256": "163ceca47511f67eb2ad00bdc34993dd0d4a0eec1a70219e617a8b4f18b2308f"
+    },
+    {
+      "file": "verification-scripts/build_deck.ps1",
+      "bytes": 3604,
+      "sha256": "7be65d03b23536fe8879e3946354117f90fd33c96117171c8ea1c4bea9c4e3ae"
+    },
+    {
+      "file": "verification-scripts/adopt_deck_build.py",
+      "bytes": 3688,
+      "sha256": "2d07aedceb153f1f3b4fd31676034939cc9ef9bdd3aa8f9cc9f6290ca1cc2055"
+    },
+    {
+      "file": "verification-scripts/vector-host-sources.json",
+      "bytes": 1029,
+      "sha256": "afaeae45b0c343bc0c4830129ed1360d9eb5d7cb7ecc0b4ec7026d6b9efdf616"
+    },
+    {
+      "file": "verification-scripts/deck-host-sources.json",
+      "bytes": 1089,
+      "sha256": "75d5f8ad0f5c5499a55c859adabb9ceff5ab69bae992eb7e75d27a78c7ec654a"
+    },
+    {
+      "file": "product-source/host/material-origin.js",
+      "bytes": 3511,
+      "sha256": "d738b7450a162d553f4afcad5b7c1dde61c9b7ec52754dfa70cb868456e178e4"
+    },
+    {
+      "file": "product-source/host/native-source-store.js",
+      "bytes": 16355,
+      "sha256": "5563bc045bbffdf9f303a51713c551d41fef9a319f1f4c6903b65bb2cb5f8ed2"
+    },
+    {
+      "file": "product-source/host/native-vector-header.js",
+      "bytes": 6408,
+      "sha256": "8cac1030e7a0754e88810d58e0191ef0eba6fc567f2432edc61b259e4cc7b380"
+    },
+    {
+      "file": "product-source/host/native-deck-header.js",
+      "bytes": 4379,
+      "sha256": "ce61bbf5f6eaff550d5c3ae9cce85ae9e076fd7ec97168884468d8aabfb4ac8d"
+    },
+    {
+      "file": "product-source/host/project-graph.js",
+      "bytes": 46594,
+      "sha256": "759f57975c7767a9c10c6eeeddbf64c51fa4b626689756f0af447ab8691a3406"
+    },
+    {
+      "file": "product-source/host/editor-session.js",
+      "bytes": 49421,
+      "sha256": "603c83eaf3f4ed5f7d36638f5a057de5295e88b1c30d6885a790f677f72ac3dc"
+    },
+    {
+      "file": "product-source/host/editor-routes.js",
+      "bytes": 8022,
+      "sha256": "0d43096cd726c4b5a876dff705f73b504feccdfdc95a966b363faf76ef66cd18"
+    },
+    {
+      "file": "product-source/host/linked-updates.js",
+      "bytes": 7486,
+      "sha256": "0e6a2d22dcfe9b37f9cdf4888fd2f59eea8833dd2884607c6f3a0813ca42d375"
+    },
+    {
+      "file": "product-source/client/native-controller.js",
+      "bytes": 70558,
+      "sha256": "9ff0cc850265c05f5f8dec1b1264eb219aac94862d554a8bb4e619d79ebdb14d"
+    },
+    {
+      "file": "product-source/tests/material-origin.test.mjs",
+      "bytes": 3515,
+      "sha256": "7172db38eede19323476c6288c7ada3b93a65eac273b4ce7123f5667824e4e16"
+    },
+    {
+      "file": "product-source/tests/origin-sync.test.mjs",
+      "bytes": 10240,
+      "sha256": "63e5ffe8b8c03dd276536434fc8a067fa7cad14baffcdb073d9c16123ac41e20"
+    },
+    {
+      "file": "product-source/tests/project-graph.test.mjs",
+      "bytes": 7857,
+      "sha256": "25956751a5a6c187382db5976af8f957fdb022ddc1336be969e267a5637a1ff9"
+    },
+    {
+      "file": "product-source/tests/instance-fork.test.mjs",
+      "bytes": 5712,
+      "sha256": "ed2ae7dfa18464f24dce03b337c71b20875faaa705503b31f6803cd8ec933866"
+    },
+    {
+      "file": "product-source/tests/linked-update.test.mjs",
+      "bytes": 7559,
+      "sha256": "ad5a09d13aebbb76c66ed6a057675a178f2afde3b665cf91520a294defb4cf0a"
+    },
+    {
+      "file": "product-source/tests/vector-apply-storage.test.mjs",
+      "bytes": 4113,
+      "sha256": "ec29ee4b01de7c7c88ae0e8d7e45ede842f7fb53349b3599d91bac10be41be1d"
+    },
+    {
+      "file": "product-source/web-runtime-lock.json",
+      "bytes": 38135,
+      "sha256": "f8526441bb8bf3dc4a991b01bcd3a56bc053793ec3d265f0ba9600c680badedd"
+    },
+    {
+      "file": "product-source/THIRD_PARTY_NOTICES.md",
+      "bytes": 2640,
+      "sha256": "db3c03f21519da742116fc78d27993a768eb23812d8d997469c7e4ffc8947f0f"
+    },
+    {
+      "file": "product-source/licenses/getrandom-0.4.3/LICENSE-MIT",
+      "bytes": 1130,
+      "sha256": "523a42c25d245dde9c015f882cec7f4555aad883382a6cf19b4b7d9b2cd5419b"
+    },
+    {
+      "file": "product-source/licenses/getrandom-0.4.3/LICENSE-APACHE",
+      "bytes": 10849,
+      "sha256": "aaff376532ea30a0cd5330b9502ad4a4c8bf769c539c87ffe78819d188a18ebf"
+    },
+    {
+      "file": "product-source/licenses/getrandom-0.4.3/source.json",
+      "bytes": 475,
+      "sha256": "229f52bc8540723a7bbeafbc8d50c0dd2d6c9e51d7dc7089b8273c906895903e"
+    },
+    {
+      "file": "native-source/vectorcraft/crates/text/web-fonts.txt",
+      "bytes": 1615,
+      "sha256": "8e2739ac621b536b82fb388cf0ee3a085dbb3ea786eb2be0bcca6528dc32642a"
+    },
+    {
+      "file": "native-source/vectorcraft/crates/ui-egui/src/control.rs",
+      "bytes": 32988,
+      "sha256": "04cdefb7e48279d83a8249b7ab1a412e853371d0af44ff4420bce366f55616bf"
+    },
+    {
+      "file": "native-source/vectorcraft/crates/ui-egui/src/control/hosted.rs",
+      "bytes": 11206,
+      "sha256": "ce300da308c38b2dd86e6e34b811569124ecb066704655ddd1bbaa6c6d9c5b28"
+    },
+    {
+      "file": "native-source/vectorcraft/crates/ui-egui/src/control/tests.rs",
+      "bytes": 35745,
+      "sha256": "c8449f933f1c7616cbd1a0245e83cb631172e56693cbae4d959a47135c6d1684"
+    },
+    {
+      "file": "native-source/vectorcraft/crates/ui-egui/src/lib.rs",
+      "bytes": 15652,
+      "sha256": "4ec91ae2030529195ed011dbecc276af33620d60c3c0cd0558abb93914ef7b55"
+    },
+    {
+      "file": "native-source/vectorcraft/crates/ui-egui/src/app.rs",
+      "bytes": 25935,
+      "sha256": "69f1a3af708cd7d8cab3f6eb40bf4e9ad282e7d3dd2640cbe114cd22b7002c92"
+    },
+    {
+      "file": "native-source/vectorcraft/crates/ui-egui/src/chrome.rs",
+      "bytes": 19216,
+      "sha256": "ee38406fc802849f6c82397c261a91bd571b4b7ce2a7623dec4d30110faa8d18"
+    },
+    {
+      "file": "native-source/vectorcraft/crates/ui-egui/src/host_files.rs",
+      "bytes": 2979,
+      "sha256": "c84c34cfd0624c18aa952bc126ea528bf415656c598f092c2d6ae06bd9ca3cfb"
+    },
+    {
+      "file": "native-source/vectorcraft/crates/ui-egui/src/app/commands.rs",
+      "bytes": 9681,
+      "sha256": "11b758749c6d3117926086e3c2824f187c2e791887881f3cc62790d7244fbe55"
+    },
+    {
+      "file": "native-source/vectorcraft/crates/ui-egui/src/shortcuts.rs",
+      "bytes": 45981,
+      "sha256": "218d58667c5e18aad46bcf688e37044608c0c45a6d9575a542b3d8ce008c5deb"
+    },
+    {
+      "file": "native-source/vectorcraft/crates/ui-egui/src/shortcuts/tests.rs",
+      "bytes": 112187,
+      "sha256": "28772ee932b46cc9b372a32e84b9425ca8fb09a8bcf1247b6e69b92723e1ad98"
+    },
+    {
+      "file": "native-source/vectorcraft/apps/vectorcraft-web/src/api.rs",
+      "bytes": 8644,
+      "sha256": "57811c50f4eba1f8de6773171929a13be10a7626e5226e82384f2515182a7885"
+    },
+    {
+      "file": "native-source/vectorcraft/Cargo.toml",
+      "bytes": 9762,
+      "sha256": "6699f02c5454559034b6f7b3900b2851ebb60245cdfaeaff99e8c450087bac0c"
+    },
+    {
+      "file": "native-source/vectorcraft/Cargo.lock",
+      "bytes": 191805,
+      "sha256": "d3eac2a6c3ecbd1b56d71acd34e5997c26746cd440c19c4da020579427da6a32"
+    },
+    {
+      "file": "native-source/vectorcraft/crates/engine/Cargo.toml",
+      "bytes": 2503,
+      "sha256": "b7befa82f7b5d092ed3df8f4842676693d7faa148d4a8171d881bbc9e3581118"
+    },
+    {
+      "file": "native-source/vectorcraft/crates/engine/src/cmd/place.rs",
+      "bytes": 47283,
+      "sha256": "bd0ffe63319bc33a831d3c6d42dea403a05c4fd26c716768f0d5ae0bf4d55d0f"
+    },
+    {
+      "file": "native-source/vectorcraft/crates/engine/src/cmd/place/image_content.rs",
+      "bytes": 4123,
+      "sha256": "22c0335ff1538bce2cf67069973f46032e04e46f367bcb9278d04cc4fd4f943f"
+    },
+    {
+      "file": "native-source/vectorcraft/crates/engine/src/cmd/place/image_content/tests.rs",
+      "bytes": 5860,
+      "sha256": "7af66d90207b9c2661fe6f83b9d09d665886fe6614e7ce1d6c27c1122fba0ef9"
+    },
+    {
+      "file": "native-source/vectorcraft/apps/vectorcraft-web/Trunk.toml",
+      "bytes": 539,
+      "sha256": "4d9eb5cac922ed609afb6b27859919b79076de7d15687dbd899d11c4ebdcf73b"
+    },
+    {
+      "file": "native-source/vectorcraft/apps/vectorcraft-web/index.html",
+      "bytes": 2715,
+      "sha256": "91b8e73c505499c1fd909019163576dace67159580b1c797cc41b20aad1a5141"
+    },
+    {
+      "file": "native-source/vectorcraft/crates/text/build.rs",
+      "bytes": 7476,
+      "sha256": "85d0fdce0d239f268e8662168dfd6880c5b98e06712af65affc277cd38d5c63b"
+    },
+    {
+      "file": "native-source/vectorcraft/crates/text/build/web_fonts.rs",
+      "bytes": 4724,
+      "sha256": "59197fff8c7b185c3387515fd87bb06f66232f8cebab9be4cb0c9bb9684d8263"
+    },
+    {
+      "file": "native-source/vectorcraft/xtask/src/web_fonts.rs",
+      "bytes": 7406,
+      "sha256": "89af53796b61ced407c16416d00dd49dd8a08e464f3129d0d6cbd557decb6a5f"
+    },
+    {
+      "file": "native-source/vectorcraft/apps/vectorcraft-web/Cargo.toml",
+      "bytes": 1588,
+      "sha256": "8a3912fc1764cd1cf979534910d823b9d3c1d979a48b41888ea3f2d715396d1b"
+    },
+    {
+      "file": "native-source/vectorcraft/crates/engine/src/cmd.rs",
+      "bytes": 26972,
+      "sha256": "f0b8ee1c033c3750ab6214b08858c85b59f4406d84053faa536a3621d9437731"
+    },
+    {
+      "file": "native-source/vectorcraft/crates/engine/src/cmd/host_material.rs",
+      "bytes": 6493,
+      "sha256": "bc95fa2552dfdf17c3d5cb2456513db4f2a1278ddd0d9eb68c7bfaf1ccd16dce"
+    },
+    {
+      "file": "native-source/vectorcraft/crates/engine/src/cmd/edit.rs",
+      "bytes": 52448,
+      "sha256": "22828b93c9a9876457d9c0f7a2ff978b85bc17915da0317edf17325ed60b6035"
+    },
+    {
+      "file": "native-source/vectorcraft/crates/engine/tests/host_material.rs",
+      "bytes": 5682,
+      "sha256": "c74b78903f168847b6aa745985c8d2a156c0542783c1df27a2f958430107f6f8"
+    },
+    {
+      "file": "native-source/vectorcraft/LICENSE-MIT",
+      "bytes": 1103,
+      "sha256": "8b6025dc4b707e0fb08b9c2054096f1be3ae61529399aa2c348dec676562dc71"
+    },
+    {
+      "file": "native-source/vectorcraft/LICENSE-APACHE",
+      "bytes": 10174,
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+    },
+    {
+      "file": "native-source/deckcraft/Cargo.toml",
+      "bytes": 5920,
+      "sha256": "95e2e1f6cc9eaf8e3f95f43757416df362a3c40b409f4cff704e35c2305a7135"
+    },
+    {
+      "file": "native-source/deckcraft/Cargo.lock",
+      "bytes": 158976,
+      "sha256": "f7d96395edd9e8b5379232449f7a78aba7575b22745895f768102885d2008b73"
+    },
+    {
+      "file": "native-source/deckcraft/crates/engine/Cargo.toml",
+      "bytes": 1268,
+      "sha256": "6cc4a9954d7c27a07852eb4afc04db7d68d3b389e90c3d788c5f5ec22be46eca"
+    },
+    {
+      "file": "native-source/deckcraft/crates/engine/src/lib.rs",
+      "bytes": 36029,
+      "sha256": "6eecf181ad192ce6ac54cbb7224cc444d5fbf87fd093c040afeaf8093f2bf275"
+    },
+    {
+      "file": "native-source/deckcraft/crates/engine/src/embedded.rs",
+      "bytes": 19977,
+      "sha256": "5e8fa08080be27d973fd3c5bf1c9030e541cbffe38f925520101bebd918c4163"
+    },
+    {
+      "file": "native-source/deckcraft/crates/engine/src/fonts.rs",
+      "bytes": 7565,
+      "sha256": "1e7db2d436d229d70df5775afb26f7066f4f1744611a8a0fcc2fa8d17405e2d8"
+    },
+    {
+      "file": "native-source/deckcraft/crates/ui-egui/src/lib.rs",
+      "bytes": 22723,
+      "sha256": "5030b4ae4707627c42ffc3e2f3c5716f426bdb27075787e7845f78e4bf56dab4"
+    },
+    {
+      "file": "native-source/deckcraft/crates/ui-egui/src/app.rs",
+      "bytes": 15772,
+      "sha256": "d298bfaf00c97f5fcf8632b867933397364057128eca629ccb5ce9a90ab8f290"
+    },
+    {
+      "file": "native-source/deckcraft/crates/ui-egui/src/control.rs",
+      "bytes": 24814,
+      "sha256": "2a115b0a7677b17ab16b71d08753bbe50d863d537aa1263bf33c381b755aa8ca"
+    },
+    {
+      "file": "native-source/deckcraft/crates/ui-egui/src/control/hosted.rs",
+      "bytes": 20269,
+      "sha256": "bd1dfdd0be7ffa07ff6c5f4b7bdab3814aa7928886080b537a3fc7537f893c6f"
+    },
+    {
+      "file": "native-source/deckcraft/crates/ui-egui/src/control/hosted_tests.rs",
+      "bytes": 7911,
+      "sha256": "1e704c5a186b91bec38f7b2343d8c4b11679f5e75fc523eea04a891f67ee2d6a"
+    },
+    {
+      "file": "native-source/deckcraft/crates/ui-egui/src/app/commands.rs",
+      "bytes": 14714,
+      "sha256": "fb054a7155a070980d1f8cde47e2ac43e9816679d336d21d88c66414ef1d807e"
+    },
+    {
+      "file": "native-source/deckcraft/crates/ui-egui/src/app/frame.rs",
+      "bytes": 4942,
+      "sha256": "440150433ea988d5c9183ead83ad2e06e3d507dc808dd8ef1063b6144a696800"
+    },
+    {
+      "file": "native-source/deckcraft/crates/fonts/build.rs",
+      "bytes": 25854,
+      "sha256": "692cbe7723d5860c3b35816c5a274ae04919d80d6147cdf7d6288bb429f45bdf"
+    },
+    {
+      "file": "native-source/deckcraft/apps/deckcraft-web/Cargo.toml",
+      "bytes": 1213,
+      "sha256": "011890ba657c20f2bfe3dc6f0a248d83c23d526af575095bf104f8ae9e348633"
+    },
+    {
+      "file": "native-source/deckcraft/apps/deckcraft-web/src/main.rs",
+      "bytes": 1482,
+      "sha256": "b1fa74496f2983e7a7c21170666f06cc92cfd5ee799d48cb13bf8d0c9a4d2208"
+    },
+    {
+      "file": "native-source/deckcraft/apps/deckcraft-web/src/api.rs",
+      "bytes": 5007,
+      "sha256": "0430364aaabaa18748249fa84a3d27815eca0450dfc85b07043ae9bae41d8b83"
+    },
+    {
+      "file": "native-source/deckcraft/apps/deckcraft-web/src/web.rs",
+      "bytes": 13957,
+      "sha256": "d73a6761d1f27da948eb6971bca765a09d7bae4258ab37d29d4e34d642745ec1"
+    },
+    {
+      "file": "native-source/deckcraft/apps/deckcraft-web/index.html",
+      "bytes": 931,
+      "sha256": "5ff552301bfde3d5d369c93ad1a7a886f7aa639c021692269677c12f68e132be"
+    },
+    {
+      "file": "native-source/deckcraft/apps/deckcraft-web/Trunk.toml",
+      "bytes": 199,
+      "sha256": "a996cb61144f4f961e8a44d8df04ef329620c12928aea4a4f328d1fcaf055ec8"
+    },
+    {
+      "file": "native-source/deckcraft/ATTRIBUTION.md",
+      "bytes": 12390,
+      "sha256": "b905f20f0afe75a061134fda3c0487add7272de9968f2fd714867c28b946ff9f"
+    },
+    {
+      "file": "native-source/deckcraft/crates/engine/src/cmd/artistic.rs",
+      "bytes": 8884,
+      "sha256": "006743ed76a3a63be3c66646136651182b9ae93be69f2feb9d01c0b49138fcdd"
+    },
+    {
+      "file": "native-source/deckcraft/crates/engine/src/cmd/shape.rs",
+      "bytes": 31936,
+      "sha256": "9f9c53bcd1eac464f617b9bfd45a500d3e375e165e3565e90002754064f66443"
+    },
+    {
+      "file": "native-source/deckcraft/crates/engine/src/cmd/shape/picture.rs",
+      "bytes": 7459,
+      "sha256": "b7890b8a232c0437419af97783b248f8391e2018c9d03af1cd145d0cf6c3247e"
+    },
+    {
+      "file": "native-source/deckcraft/crates/engine/src/cmd/shape/picture_replace_tests.rs",
+      "bytes": 7537,
+      "sha256": "6363798988211eef3feb26b12a2abf122863c05fa0b0a5543e95097fd8ac4b55"
+    },
+    {
+      "file": "native-source/deckcraft/crates/engine/src/cmd.rs",
+      "bytes": 29789,
+      "sha256": "87dd83b430a171883a9ed17142cd837b29433dea65f270a3615d87e3b038bb2b"
+    },
+    {
+      "file": "native-source/deckcraft/crates/engine/src/cmd/host_material.rs",
+      "bytes": 5672,
+      "sha256": "1fc062dac86b8dc53785a96c5a8e391e078fe3f5a7e21552ce8782f1ec2a7b43"
+    },
+    {
+      "file": "native-source/deckcraft/crates/engine/src/cmd/insert/picture.rs",
+      "bytes": 12088,
+      "sha256": "ec08befc1fdefdaddbf75fa9e408300f7045cd896674adcaf97160c413375a66"
+    },
+    {
+      "file": "native-source/deckcraft/crates/engine/src/cmd/edit.rs",
+      "bytes": 32068,
+      "sha256": "835b87b5f485611548fca50921e15e84e9dbcdefcb601c90c48ea44dfe32ea06"
+    },
+    {
+      "file": "native-source/deckcraft/crates/engine/tests/host_material.rs",
+      "bytes": 5407,
+      "sha256": "6ad1e44b958484c36424e35ad438b1788aa8451a8ce8176c66d7997d266fbe2b"
+    },
+    {
+      "file": "native-source/deckcraft/LICENSE-MIT",
+      "bytes": 1101,
+      "sha256": "90e96fef569474cd526350e716e4b05dd32f179ca96d39d61e6b928485e35406"
+    },
+    {
+      "file": "native-source/deckcraft/LICENSE-APACHE",
+      "bytes": 10174,
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+    }
+  ]
+}

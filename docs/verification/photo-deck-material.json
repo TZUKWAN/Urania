@@ -1,0 +1,88 @@
+{
+  "status": "passed",
+  "scope": "actual registered DSH Photo native source/PNG -> real native Deck picture/media/page/use -> physical Photo source edit -> same Deck parent return; no model or automatic replacement claim",
+  "codeRoot": "D:\\METIS超级合并\\dsh-plugin\\designcraft",
+  "root": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\photo-deck-material-project\\bd0d0fb1-e53f-4664-80ba-ab19a39148fc",
+  "checks": [
+    {
+      "name": "actual layered Photo version/PNG is bound to a real native Deck picture, page and exact media bytes",
+      "pass": true,
+      "detail": {
+        "photoSourceId": "work-9bfaca11-0922-46b0-8faa-62162ef7fec4",
+        "photoSourceRevision": "26067d2b9fac8aa448c3d4697d44657cc565ec4ca35db0fa09e0e3136e50708b",
+        "deckSourceId": "work-f204cd46-ffdc-4fd6-b06d-cc31f957b06f",
+        "nativePicture": "261",
+        "nativePage": {
+          "kind": "slide",
+          "id": 257,
+          "index": 0
+        },
+        "mediaSha256": "e1d75bdfcf45044ee39e94ea90016af28e90911e5c139b1db0894ff7a0467442"
+      }
+    },
+    {
+      "name": "physical source navigation edits the actual Photo source then returns to the same Deck App with exact layout/frozen media",
+      "pass": true,
+      "detail": {
+        "sameParentApp": true,
+        "exactPresentationPreserved": true,
+        "frozenPngPreserved": true,
+        "sourceNewRevision": "f4e1150d9aa2fffeaa7ca27c9a15662dfb9a804b646f66246d3cb82ff476eab6",
+        "automaticReplacementImplemented": false
+      }
+    },
+    {
+      "name": "durable project inspection traces one actual PPT usage to its original native image version without duplicate placement",
+      "pass": true,
+      "detail": {
+        "uses": 1,
+        "nativeObject": "261"
+      }
+    }
+  ],
+  "owned": {
+    "workspaceId": "e9a75f13-4aaa-4362-818a-401941624cb1",
+    "sessionId": "PUBLIC-REDACTED"
+  },
+  "deckSourceId": "work-f204cd46-ffdc-4fd6-b06d-cc31f957b06f",
+  "asset": {
+    "id": "asset-23db7348-4736-495f-b30d-3858c9ae93c9",
+    "title": "修图进入演示",
+    "sourceId": "work-9bfaca11-0922-46b0-8faa-62162ef7fec4",
+    "sourceRevision": "26067d2b9fac8aa448c3d4697d44657cc565ec4ca35db0fa09e0e3136e50708b",
+    "sourceHash": "27d4742e3128211153397352f1b9513cb7a45ab9622a8aacb7371b7e81f54e2d",
+    "engine": "photocraft",
+    "format": "png",
+    "sha256": "e1d75bdfcf45044ee39e94ea90016af28e90911e5c139b1db0894ff7a0467442",
+    "bytes": 3590,
+    "at": "2026-11-04T19:20:58.234Z"
+  },
+  "instance": {
+    "id": "use-baf88125-4ded-4640-9d98-d499d6ad1f00",
+    "assetId": "asset-23db7348-4736-495f-b30d-3858c9ae93c9",
+    "sourceId": "work-f204cd46-ffdc-4fd6-b06d-cc31f957b06f",
+    "nativeId": "261",
+    "boundAtRevision": "971cb7c119dfa0d79421dd816cc808f9d6886ec366aff4c23d467c45c3f3c84f",
+    "nativeNodeHash": "5a98f03fbd15ab00c7c92b41a259a13c84d91680fd312fa4902eeb33e9566dc3",
+    "nativePage": {
+      "kind": "slide",
+      "id": 257,
+      "index": 0
+    },
+    "at": "2026-11-04T19:21:02.734Z",
+    "status": "present",
+    "currentSourceRevision": "971cb7c119dfa0d79421dd816cc808f9d6886ec366aff4c23d467c45c3f3c84f",
+    "nativeObject": {
+      "id": 261,
+      "name": "Picture 3",
+      "kind": "picture",
+      "page": {
+        "kind": "slide",
+        "id": 257,
+        "index": 0
+      }
+    },
+    "changedSincePlacement": false
+  },
+  "pageErrors": []
+}

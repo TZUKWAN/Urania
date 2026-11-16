@@ -1,0 +1,58 @@
+{
+  "schema": 1,
+  "date": "2026-11-13",
+  "at": "2026-11-13T05:47:11.527417+00:00",
+  "authority": "刘总本会话：放弃额外授权平台作为必做项，并批准默认界面收敛、独立生图API配置。；刘总最新明确取消Deck麦克风、摄像头、截图和Windows公式识别。",
+  "requiredCore": [
+    "本地Photo/Vector/Deck及网页编辑和原位回写",
+    "真实源文件保存、重开、输出与项目保护",
+    "图片生成和选区重绘：独立生图API或已有DSH连接",
+    "本地资源、Commons图片来源及许可元数据代码保留"
+  ],
+  "optionalOutsideMandatoryScope": [
+    "原版OpenDesign/Vela图库授权项目绑定",
+    "Figma/Figma MCP",
+    "Google Stitch",
+    "PixelBin",
+    "额外fal/Replicate/Venice音视频或通用外部平台工作流"
+  ],
+  "optionalBehavior": "现有代码、任务和用户连接保留；相关界面放入更多服务，不作为核心产品验收前置条件。用户可自行选择图片API提供商。",
+  "notDropped": [
+    "AI驱动Photo/Vector/Deck编辑、生图与局部重绘、原位回写、真实源保存导出和保护",
+    "已过的本地/真实AI验收与必要变更定向复测",
+    "保留已验证的笔迹文字识别、普通媒体插入/播放和可编辑公式模型",
+    "转换器/字体来源证据和历史缺档边界"
+  ],
+  "functionalValidationThisContinuation": true,
+  "allCoreFunctionsAccepted": false,
+  "currentValidationReport": "verification/release-validation-20261113.json",
+  "currentValidationAddendum": "verification/real-services-validation-20261113.json",
+  "removedFeaturesByUser": [
+    {
+      "id": "local_narration",
+      "feature": "麦克风旁白录制"
+    },
+    {
+      "id": "local_camera",
+      "feature": "摄像头照片/录像与Cameo采集"
+    },
+    {
+      "id": "local_screenshot",
+      "feature": "屏幕与区域截图"
+    },
+    {
+      "id": "local_ink_math",
+      "feature": "Windows手写公式识别"
+    }
+  ],
+  "removedFeaturesInterpretation": "从新版本入口、采集实现及当前验收待办中撤销；不记作设备测试通过。保留普通图片/音视频及可编辑公式和AI编辑。",
+  "currentRemovalStatus": "removed_and_targeted_validation_passed",
+  "currentRemovalReport": "verification/ui159-deck-capture-removal-20261113.json",
+  "aiCanvasInteraction": {
+    "default": "selection-driven current DSH conversation with a real floating prompt",
+    "professionalControls": "native/backend capabilities retained for AI; visible manual advanced entry removed",
+    "history": "explicit current-project saved works",
+    "report": "verification/ui162-design-session-isolation-20261113.json",
+    "conversation": "explicit dedicated DSH SessionProvider per workspace; ordinary conversations never automatically reused"
+  }
+}

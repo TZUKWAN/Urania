@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="320" height="240" viewBox="0 0 320 240">
+  <defs>
+    <clipPath id="clip-path-1">
+      <path d="M50 24 L270 24 C279.941 24 288 32.059 288 42 L288 198 C288 207.941 279.941 216 270 216 L50 216 C40.059 216 32 207.941 32 198 L32 42 C32 32.059 40.059 24 50 24 Z"/>
+    </clipPath>
+    <linearGradient id="linear-gradient-1" x1="16" y1="12" x2="304" y2="12" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#138d87"/>
+      <stop offset="1" stop-color="#ec8b3d"/>
+    </linearGradient>
+  </defs>
+  <title>work-a33449db-08f3-4d73-8f5a-be4492f2af5f.svg</title>
+  <g id="Layer_1" data-name="Layer 1">
+    <g clip-path="url(#clip-path-1)">
+      <rect x="16" y="12" width="288" height="216" fill="url(#linear-gradient-1)"/>
+      <polygon points="48,180 128,48 208,180" fill="#ffffff" opacity="0.8"/>
+      <circle cx="230" cy="82" r="36" fill="#27445f"/>
+    </g>
+  </g>
+</svg>

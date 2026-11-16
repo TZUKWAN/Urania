@@ -1,0 +1,296 @@
+{
+  "status": "passed",
+  "scope": "real pinned OpenDesign source data fetched through production reader; no upstream code, renderer, image service or model execution",
+  "checks": [
+    {
+      "name": "all real source files readable and hash-verified for skills/creative-director",
+      "pass": true,
+      "detail": {
+        "id": "skills/creative-director",
+        "files": [
+          {
+            "id": "skills/creative-director",
+            "file": "SKILL.md",
+            "bytes": 2857,
+            "gitSha1": "9152d39408590bd65d82d34218640378bff4f2cd",
+            "sha256": "7109e64b8f9e7154d4c688ec38058567d78df53025ada0adbf3b2e1f40e87384",
+            "verified": true,
+            "executed": false,
+            "binary": false
+          }
+        ],
+        "workflowExecuted": false
+      }
+    },
+    {
+      "name": "all real source files readable and hash-verified for skills/canvas-design",
+      "pass": true,
+      "detail": {
+        "id": "skills/canvas-design",
+        "files": [
+          {
+            "id": "skills/canvas-design",
+            "file": "SKILL.md",
+            "bytes": 1359,
+            "gitSha1": "1dea249fdf2ec1f5dbd1562e21b3eab7e892a707",
+            "sha256": "01866407bf0fc74a7cfac48bd2b4579ea2b1238f4d80bb7a24e698c848168a34",
+            "verified": true,
+            "executed": false,
+            "binary": false
+          }
+        ],
+        "workflowExecuted": false
+      }
+    },
+    {
+      "name": "all real source files readable and hash-verified for design-systems/corporate",
+      "pass": true,
+      "detail": {
+        "id": "design-systems/corporate",
+        "files": [
+          {
+            "id": "design-systems/corporate",
+            "file": "DESIGN.md",
+            "bytes": 3077,
+            "gitSha1": "cae8b26307043cabb09cfbf9e5e9945adf495403",
+            "sha256": "3c8c80294a48d3295738d8575e93f0cd5d85f092eae3fc9e192cb39864f0453b",
+            "verified": true,
+            "executed": false,
+            "binary": false
+          },
+          {
+            "id": "design-systems/corporate",
+            "file": "USAGE.md",
+            "bytes": 1511,
+            "gitSha1": "43698fe55973cde6059f518bc5ebd43c00fbba04",
+            "sha256": "b482cf110efe4d94661e1b6f864fa0fbfa4d07e9f8a1237c85762ac7fa52572e",
+            "verified": true,
+            "executed": false,
+            "binary": false
+          },
+          {
+            "id": "design-systems/corporate",
+            "file": "components.html",
+            "bytes": 10399,
+            "gitSha1": "90508f096aa92a316828c69286bbf20c16298dac",
+            "sha256": "0f3a33584f85a093e15b4242765359c45b86b5595cae55a50cf457fa36dc74f2",
+            "verified": true,
+            "executed": false,
+            "binary": false
+          },
+          {
+            "id": "design-systems/corporate",
+            "file": "components.manifest.json",
+            "bytes": 8009,
+            "gitSha1": "ad8a18866a18eaef541ba47f34f2db993697b59a",
+            "sha256": "6c76ecf4941433225f4a40df0ac81b3484a5656c053965559167733d5756d47c",
+            "verified": true,
+            "executed": false,
+            "binary": false
+          },
+          {
+            "id": "design-systems/corporate",
+            "file": "design-tokens.json",
+            "bytes": 20280,
+            "gitSha1": "8f89d482b38661587bc6041c1eade1d39206f2c0",
+            "sha256": "6573ae98648ad98c81fbf3e6b0c257c6f155ab0d1bb83570c106156e1d1e9143",
+            "verified": true,
+            "executed": false,
+            "binary": false
+          },
+          {
+            "id": "design-systems/corporate",
+            "file": "manifest.json",
+            "bytes": 1345,
+            "gitSha1": "fa4e3a6483a874459cb12105e0683548eb65a86a",
+            "sha256": "8d6989073a79c6733838c13b3cd4f2f8bd37d1b502dbe22b61ffc1d0dfac322a",
+            "verified": true,
+            "executed": false,
+            "binary": false
+          },
+          {
+            "id": "design-systems/corporate",
+            "file": "preview/colors.html",
+            "bytes": 2656,
+            "gitSha1": "5dcf41e3909589985ed6316e8dd81a9534795e4a",
+            "sha256": "f95ff3922a52e74bc7c8d40842d6a89a94fdafcd1f3ff6419c6f685b79e832e7",
+            "verified": true,
+            "executed": false,
+            "binary": false
+          },
+          {
+            "id": "design-systems/corporate",
+            "file": "preview/spacing.html",
+            "bytes": 2341,
+            "gitSha1": "8afd9eba468412e1cd0017597f5d2bf005b1a92a",
+            "sha256": "c15680a80fd23780de385c74196102c40f53887e796b7ae6140f085cff0323d8",
+            "verified": true,
+            "executed": false,
+            "binary": false
+          },
+          {
+            "id": "design-systems/corporate",
+            "file": "preview/typography.html",
+            "bytes": 1778,
+            "gitSha1": "c44e2e3e0dadf0f281a4bee0eea5cbf59959c1e0",
+            "sha256": "d0f7b86a0347baf58cd6ff2c09eabfb9c85274afb36d2c25f535ee2163811f38",
+            "verified": true,
+            "executed": false,
+            "binary": false
+          },
+          {
+            "id": "design-systems/corporate",
+            "file": "source/evidence.md",
+            "bytes": 661,
+            "gitSha1": "1239999299aa98a6a6aa05dea32ca71232b26ac1",
+            "sha256": "e004d26ae7964dc409cf0aadf1a0823c96ec235c9325242a52af44f8f9dbb54d",
+            "verified": true,
+            "executed": false,
+            "binary": false
+          },
+          {
+            "id": "design-systems/corporate",
+            "file": "source/token-contract.report.json",
+            "bytes": 18747,
+            "gitSha1": "84eb6c9c1baf8b4d853403bb6032d197876daee9",
+            "sha256": "c2ce7a3eb9d387484ae67c5c8fe1e9eb12d49fdca998b1aca065dd02b152b209",
+            "verified": true,
+            "executed": false,
+            "binary": false
+          },
+          {
+            "id": "design-systems/corporate",
+            "file": "source/tokens.source.json",
+            "bytes": 7465,
+            "gitSha1": "7741619f5cca74ce86a9bc8cc602b98b5ede2133",
+            "sha256": "964c81c65c1fe88ac14de7141744c13fb4bf96752617cdf88817e64acc5d4c3f",
+            "verified": true,
+            "executed": false,
+            "binary": false
+          },
+          {
+            "id": "design-systems/corporate",
+            "file": "system/artifacts/deck.html",
+            "bytes": 5698,
+            "gitSha1": "c9e18460527a5bdb5439f84b3a999ac6a457c5e1",
+            "sha256": "c4655fff331a289df4cded27954dd0c2f5e4bba62e84779ab5c32bb87534fbed",
+            "verified": true,
+            "executed": false,
+            "binary": false
+          },
+          {
+            "id": "design-systems/corporate",
+            "file": "system/artifacts/email.html",
+            "bytes": 5687,
+            "gitSha1": "d9d00e9ab1468d9ba2b91f0caf1feb792a8e40ee",
+            "sha256": "25bb834f220be789b1d666808991105e1b542ec6ab928b04201f431de6235672",
+            "verified": true,
+            "executed": false,
+            "binary": false
+          },
+          {
+            "id": "design-systems/corporate",
+            "file": "system/artifacts/form.html",
+            "bytes": 5697,
+            "gitSha1": "7081ca2470a70d2205976001c577f58a5a43b266",
+            "sha256": "ddfa0a7ff68f9d7e5d90d056c63dfec24b23bad2bccf3aff6f52e758311c3621",
+            "verified": true,
+            "executed": false,
+            "binary": false
+          },
+          {
+            "id": "design-systems/corporate",
+            "file": "system/artifacts/landing.html",
+            "bytes": 5719,
+            "gitSha1": "bb03ab818fc9c910bd7a4c6db7c5b36cf3be38fd",
+            "sha256": "b83b5cf22f8367f2c76e49649f30ece769e7cf39a8d49c27f29a66e17312c311",
+            "verified": true,
+            "executed": false,
+            "binary": false
+          },
+          {
+            "id": "design-systems/corporate",
+            "file": "system/artifacts/newsletter.html",
+            "bytes": 5710,
+            "gitSha1": "e193f7c035daea22503ac38a500fc352cde39525",
+            "sha256": "2132588752f88c67420f67419bb4479b79b60a594251d1b6dcf80b66e6ba2b44",
+            "verified": true,
+            "executed": false,
+            "binary": false
+          },
+          {
+            "id": "design-systems/corporate",
+            "file": "system/artifacts/poster.html",
+            "bytes": 5704,
+            "gitSha1": "626a3718d882cb2b7a7a54929f47341db525b771",
+            "sha256": "9a0c511a651edd840dab4a0907fdb16e3fcb9a6ba520af85b92d640d97e0dab8",
+            "verified": true,
+            "executed": false,
+            "binary": false
+          },
+          {
+            "id": "design-systems/corporate",
+            "file": "system/index.html",
+            "bytes": 5659,
+            "gitSha1": "ff02239a1875ad5b1688572c270e27094d93c2ca",
+            "sha256": "f1b82607be40c399daf600ca2f11353a7d202adbf92db5d76cccc629bdb66b2f",
+            "verified": true,
+            "executed": false,
+            "binary": false
+          },
+          {
+            "id": "design-systems/corporate",
+            "file": "system/kit.dark.html",
+            "bytes": 6398,
+            "gitSha1": "f73259bfe8d85786ff51af754b49e0b9cbbdfc88",
+            "sha256": "55b69085a589764ff19ef1ab1e19b139e40a37db32692f779ac5068fd1b84f5b",
+            "verified": true,
+            "executed": false,
+            "binary": false
+          },
+          {
+            "id": "design-systems/corporate",
+            "file": "system/kit.html",
+            "bytes": 6393,
+            "gitSha1": "68e9253271fbddb3c3a363c83bfd0c78c2f9c36a",
+            "sha256": "f69b7cae929af904e5485c66299bd8c7599623c77df50b84b13aad400ef0407c",
+            "verified": true,
+            "executed": false,
+            "binary": false
+          },
+          {
+            "id": "design-systems/corporate",
+            "file": "system/tokens.default.json",
+            "bytes": 247,
+            "gitSha1": "a1beb9985c4d05fcb4cf3ee64c10e64494954f35",
+            "sha256": "b1b45eb90f18734a6bc2fbc90da9ef9687a4e3fd9c99afc0dfa3f711c7d7b017",
+            "verified": true,
+            "executed": false,
+            "binary": false
+          },
+          {
+            "id": "design-systems/corporate",
+            "file": "tailwind-v4.css",
+            "bytes": 2235,
+            "gitSha1": "8bb2e09ae308f0ffa084f6e32e58c998d45dabe9",
+            "sha256": "a7b994dcb47b5b3e53f25f2b1de2bac12e2db95e8d09237a3d115e26806ece0b",
+            "verified": true,
+            "executed": false,
+            "binary": false
+          },
+          {
+            "id": "design-systems/corporate",
+            "file": "tokens.css",
+            "bytes": 1728,
+            "gitSha1": "d3a7c401a6759b14f9af9aad248db5ce25542bd1",
+            "sha256": "4f9e32beb95f1e701146b6023fb96300df51254e50c7a558bd38c161199e0f12",
+            "verified": true,
+            "executed": false,
+            "binary": false
+          }
+        ],
+        "workflowExecuted": false
+      }
+    }
+  ]
+}

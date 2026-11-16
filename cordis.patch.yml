@@ -1,0 +1,10 @@
+- insert:
+  - id: designcraft
+    name: designcraft
+    config:
+      imageConnections:
+        - id: easy-cliproxyapi
+          name: CLIProxyAPI · DSH 现有连接
+          baseURL: http://127.0.0.1:8317/v1
+          credentialRef: EASYCLIPROXYAPI_API_KEY
+          protocol: gemini

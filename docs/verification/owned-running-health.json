@@ -1,0 +1,48 @@
+{
+  "scope": "owned DSH test process only; not the user window",
+  "codeRoot": "D:\\METIS超级合并\\dsh-plugin\\designcraft",
+  "health": {
+    "ok": true,
+    "plugin": "designcraft",
+    "version": "1.3.0-dev.4",
+    "uiBuild": 20,
+    "hostLoadedAt": "2026-11-02T20:50:36.907Z",
+    "protocolVersion": 2,
+    "workspaceCapabilities": {
+      "studio": {
+        "engines": [
+          "vectorcraft"
+        ],
+        "imageServiceIntegrated": false,
+        "openDesignWorkflowIntegrated": false,
+        "linkedMediaIntegrated": false
+      },
+      "compatibility": {
+        "imageGeneration": true,
+        "localRepaint": true,
+        "workVariants": true,
+        "linkedMedia": true
+      }
+    },
+    "legacyCapabilityScope": "Flat capabilities except professionalEditor/editorExecutionAdmission/nativeLiveness/nativeFileActions describe compatibility workflows; see workspaceCapabilities.studio for the live professional workspace.",
+    "capabilities": {
+      "professionalEditor": 1,
+      "editorExecutionAdmission": true,
+      "nativeLiveness": true,
+      "nativeFileActions": true,
+      "revisionedWrites": true,
+      "recoveryHistory": true,
+      "nativeObjects": true,
+      "designResources": true,
+      "dshTool": true,
+      "streamAssets": true,
+      "preciseReferences": 2,
+      "nativeDirectEditing": true,
+      "multiSelection": true,
+      "imageGeneration": true,
+      "localRepaint": true,
+      "workVariants": true,
+      "linkedMedia": true
+    }
+  }
+}

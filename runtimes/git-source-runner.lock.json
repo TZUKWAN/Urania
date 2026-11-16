@@ -1,0 +1,9 @@
+{
+  "file": "git-source-runner.exe",
+  "sourceSha256": "00abb81fc89af124625115e7c3c95157080f31c7d74c440de759e2c20415b51c",
+  "memoryMiB": 384,
+  "source": "GitSourceRunner.cs",
+  "processLimit": 8,
+  "sha256": "955a25da69d34a0b85b98b00a4a54eeacd142bbdac6114b829d74bdbd74ef20e",
+  "schema": 1
+}

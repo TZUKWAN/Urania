@@ -1,0 +1,40 @@
+{
+  "status": "passed_scoped",
+  "at": "2026-11-08T11:01:04.474340+00:00",
+  "scope": "Installed Deck host11 in owned headless DSH: physical ribbon media buttons and real browser file selection.",
+  "fix": "Hosted interception no longer blocks audio/video dialogs; the existing bounded browser picker and native media-admission/target checks remain in force.",
+  "checks": [
+    "Physical Video and Audio clicks each opened a real browser file chooser and embedded the selected H264/AAC MP4 and WAV bytes.",
+    "Both insertion orders completed; native source reopen and PowerPoint export retained the exact media bytes."
+  ],
+  "runtime": {
+    "version": "0.13.1+designcraft.host11",
+    "wasmFile": "deckcraft-web-4538d4dd0463035b_bg.wasm",
+    "sha256": "0f86414eb35783d1c60e5210598ce0459972d1c8e95a7f8ffad2cc5a4c91efe0",
+    "valid": true
+  },
+  "files": [
+    {
+      "file": "verification/ui45-deck-host11-picked-media.pptx",
+      "sha256": "b87fb2c6e3a7053b1488c0340ea3e74f2f1a4b741c430446074fa009538eb452"
+    },
+    {
+      "file": "verification/ui45-deck-host11-picked-media-audio-first.pptx",
+      "sha256": "aa51452bcfa20373fe188b351245bd6a11c7f20348a20b0d739f18c1d8146823"
+    }
+  ],
+  "rawEvidence": [
+    {
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-deck-host11-media-picker.json",
+      "sha256": "9e6248e1df1fb11ed07e49d7b2f0f9e39fe6c5bfe17b03282daef4f4e65a0328"
+    },
+    {
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-deck-host11-media-picker-audio-first.json",
+      "sha256": "dea2869dd90217e91acccdb8f4a2b9372f8378aeed7cc5b440e76f9f053eac69"
+    }
+  ],
+  "limits": [
+    "The samples cover one WAV and one H264/AAC MP4; other codecs and external PowerPoint playback were not established.",
+    "The first attempts exposed test timing and iframe-position issues; both insertion orders subsequently passed after waiting for the actual ribbon paint and remeasuring the frame."
+  ]
+}

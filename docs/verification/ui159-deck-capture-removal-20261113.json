@@ -1,0 +1,252 @@
+{
+  "schema": 1,
+  "kind": "user-requested-four-deck-capture-feature-removal",
+  "at": "2026-11-13T05:57:19.087715+00:00",
+  "version": "1.3.0-dev.145",
+  "uiBuild": 159,
+  "deckHost": "0.13.1+designcraft.host17",
+  "status": "passed_removed_four_capture_features_and_retained_content",
+  "requestedRemovalComplete": true,
+  "allCoreFunctionsAccepted": false,
+  "authority": "刘总：这几个不要了，这屁用没有，这个插件原生的AI驱动的。Scope refers to microphone, camera, screenshots and Windows Math recognition discussed immediately before the request.",
+  "removedFeatures": [
+    {
+      "action": "local_narration",
+      "name": "麦克风旁白采集"
+    },
+    {
+      "action": "local_camera",
+      "name": "摄像头照片/录像、Cameo采集"
+    },
+    {
+      "action": "local_screenshot",
+      "name": "屏幕、窗口和区域截图"
+    },
+    {
+      "action": "local_ink_math",
+      "name": "Windows公式识别"
+    }
+  ],
+  "implementation": [
+    "Removed four actual native ribbon buttons and hosted command mappings, rebuilt Deck from the real source.",
+    "Deleted browser acquisition implementation client/local-capture.js and its served-module registration; local panel/controller only admit retained text recognition.",
+    "Host rejects former capture/math modes before spawning. Recompiled Windows helper contains only text recognition; removed Math COM/system window and screen capture implementation.",
+    "Preserved ordinary media insertion/playback/export and editable OfficeMath model/commands; actual old native inputs and exports were checked."
+  ],
+  "validation": {
+    "newNodeCasesPassed": 3,
+    "cumulativeNodeFilesPassed": 79,
+    "cumulativeTapCasesPassed": 289,
+    "newActualUiCasesPassed": 2,
+    "removedNativeCommandsRejected": 4,
+    "oldHttpOperationsRejected": 4,
+    "retainedRealWindowsInkText": "工",
+    "retainedNativeModelsAndReopens": 3,
+    "retainedMediaPptxBytes": "exact original QA audio/video bytes",
+    "retainedEquationPptx": "actual editable OfficeMath element",
+    "registeredObjectEdit": "target fill only; same App, manual geometry, two slides, Ember theme and notes unchanged",
+    "actualUiScreenshotsViewed": 4,
+    "pageErrors": [],
+    "physicalDevicesActivated": false,
+    "systemMathOrScreenWindowOpened": false,
+    "newModelOrImageRequests": 0
+  },
+  "executedUiCases": [
+    {
+      "case": "test_deck_removed_capture_ui.py",
+      "executedSource": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\release-validation-20261113\\ui\\test_deck_removed_capture_ui\\attempt2\\test_deck_removed_capture_ui.py",
+      "seconds": 36.297,
+      "rawReport": "verification/ui159-deck-capture-removal/deck-local-removal-ui.json"
+    },
+    {
+      "case": "test_deck_retained_content_ui.py",
+      "executedSource": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\release-validation-20261113\\ui\\test_deck_retained_content_ui\\attempt1\\test_deck_retained_content_ui.py",
+      "seconds": 39.546,
+      "rawReport": "verification/ui159-deck-capture-removal/deck-retained-content-ui.json"
+    }
+  ],
+  "harnessFailureRetained": "First removal test assumed an ok:false return; the real native JS API throws unknown-command rejection. The harness was corrected to assert the specific real rejection. Failed attempt remains in the original ledger. Visual review uses the separate retained-content case with actual case-sensitive native tab IDs; earlier lowercase-tab images are not used as visual proof.",
+  "sourceBuild": {
+    "installed": "0.13.1+designcraft.host17",
+    "files": 18,
+    "retainedCompatibilityFiles": 4,
+    "overwrittenFilesBackedUp": [
+      "index.html"
+    ],
+    "sourceInputs": 151,
+    "sourceMatches": true,
+    "logSha256": "f3bb066f73c7d5326d6e15729a6215248c1af2df88d038175524c4123cbcd005",
+    "userDshRestarted": false,
+    "functionalValidation": false
+  },
+  "nativeInputArchive": {
+    "schema": 1,
+    "kind": "exact-native-source-input-audit",
+    "at": "2026-11-13T05:48:42.710709+00:00",
+    "archive": "engine-source-snapshots-ui159.zip",
+    "bytes": 33392125,
+    "sha256": "34f4221d30e7a97f3a97c6e9091933609fe7ee8ebf43f0933174dc73b3af6883",
+    "sourceInputCount": 239,
+    "archiveFileCount": 250,
+    "engines": {
+      "vectorcraft-host": {
+        "version": "0.19.0+designcraft.host17",
+        "upstreamCommit": "bcebabe3f8c23a376ac68e9e6726590af278f7bb",
+        "sourceInputsMatched": 59
+      },
+      "photocraft-host": {
+        "version": "0.18.0+designcraft.host6",
+        "upstreamCommit": "8a87a457abb43ac344deeb3fdb67541b91a72ff1",
+        "sourceInputsMatched": 29
+      },
+      "deckcraft-host": {
+        "version": "0.13.1+designcraft.host17",
+        "upstreamCommit": "4ce2944630b04188dee8504c14151994d06c416a",
+        "sourceInputsMatched": 151
+      }
+    },
+    "archiveRoundtripBytesMatch": true,
+    "functionalValidation": false,
+    "scope": "File/ZIP integrity only. No engine or source code was executed by this audit."
+  },
+  "helper": {
+    "schema": 1,
+    "file": "ink-recognizer.exe",
+    "platform": "win32-x64",
+    "scope": "local Windows Ink text recognition only",
+    "sha256": "7596e605ebf2b8b5908836d2af67d937ee153c79f86304a50f013e61cec11047",
+    "source": "ink-recognizer.cs",
+    "sourceSha256": "4bca2c34e203529e63f5ca852ef462dffe306033207e1af28d73655d217cd5d6",
+    "functionalValidation": false
+  },
+  "codeEvidence": [
+    {
+      "file": "client/deck-local-tools.js",
+      "sha256": "70d04fc9a22dfe215634495fe221c63ec0dc86a9c2cb337c5ad5459bdd980c06"
+    },
+    {
+      "file": "client/native-controller.js",
+      "sha256": "2879f913c9f35228634d5492ddaaadb146b3ba29ef674e06740a207c0e421887"
+    },
+    {
+      "file": "host/deck-local-inputs.js",
+      "sha256": "5934450bdb664aa3ef436965e41f24c9c7c5d12e2d5dfbc0887476de9b45f281"
+    },
+    {
+      "file": "host/index.js",
+      "sha256": "ad9e5953bd453fd60d9e44af0e4e5113efbaa32dcffed8132f9b2f28c1e12df4"
+    },
+    {
+      "file": "runtimes/ink-recognizer.cs",
+      "sha256": "4bca2c34e203529e63f5ca852ef462dffe306033207e1af28d73655d217cd5d6"
+    },
+    {
+      "file": "runtimes/ink-recognizer.exe",
+      "sha256": "7596e605ebf2b8b5908836d2af67d937ee153c79f86304a50f013e61cec11047"
+    },
+    {
+      "file": "runtimes/ink-recognizer.lock.json",
+      "sha256": "d9d3cc547076f7dee1fccae6ee72dacb2d27d1a3c397ebe4ceced94bf3f96605"
+    },
+    {
+      "file": "runtime-lock.json",
+      "sha256": "5dd4b18786e36e60ccfc3919ca95a1a1649ef7c455dfd141e423f2911c70fb70"
+    },
+    {
+      "file": "web-runtime-lock.json",
+      "sha256": "5cbe7ca06789545f16e40315611be772e27d259d599000c83826aa1f109af920"
+    },
+    {
+      "file": "package.json",
+      "sha256": "20c83e33f3763a06cb40f2319f6ab88bdfb8e41b674fba3ff7693a1accce81f2"
+    }
+  ],
+  "deletedSourceFiles": [
+    {
+      "file": "client/local-capture.js",
+      "sha256Before": "82a88d7ff05073a3f42e5420cda44412f091be93fd2dcbdfdfedd798b993cac2"
+    }
+  ],
+  "aiFenceCodeUnchangedSinceActualUi158ModelFlow": [
+    {
+      "file": "host/editor-tools.js",
+      "sha256": "07c8a3968197524b4d7216bd2467789b61b019c84f519e4519432d05da7c065f"
+    },
+    {
+      "file": "host/editor-fence-tickets.js",
+      "sha256": "17d9d0172d921f1acbb50675c9ace9c2d9aabe8598a4bd3c896b72afd1de876b"
+    }
+  ],
+  "priorActualModelFlow": "ui158-final-model-flow-20261113.json",
+  "priorActualImages": "real-services-validation-20261113.json",
+  "testReuseBoundary": "Four actual image requests and the fourth real model user turn retain their original UI155/UI158 scopes. No claim that either was repeated on UI159. Current UI159 registered native tool and preservation checks cover this change.",
+  "pendingAcceptance": [],
+  "cancelledAcceptance": [
+    "local_ink_math",
+    "local_screenshot",
+    "local_narration",
+    "local_camera"
+  ],
+  "cancelledNotCountedAsPassed": true,
+  "retainedBoundaries": [
+    "Source provenance/font differences and historical evidence gaps remain documented.",
+    "Warm-lighting sample has a visible localized rectangular/yellow boundary.",
+    "Prior-model theme sample warns Lato is not installed and renders through existing fallback.",
+    "No full upstream-command, every-model, external Office visual, full desktop IPC/IME or hardware GPU acceptance is claimed."
+  ],
+  "rawEvidence": [
+    {
+      "file": "verification/ui159-deck-capture-removal/deck-local-removal-ui.json",
+      "sha256": "ff3378249c83932b1faff5567598a873851d6e28f51c61c47b17ae1866019666"
+    },
+    {
+      "file": "verification/ui159-deck-capture-removal/deck-retained-content-ui.json",
+      "sha256": "bffd6675e9b99563429b65164685fbb4cfa2c8d46a5524a18cdae9da27386b2d"
+    },
+    {
+      "file": "verification/ui159-deck-capture-removal/actual-removed-draw.png",
+      "sha256": "63d87a12495a11a27932c87b327d8b9509659e4cd45aa0b699405b4afaa5fd9e"
+    },
+    {
+      "file": "verification/ui159-deck-capture-removal/actual-removed-insert.png",
+      "sha256": "465139c475c1bd4b3f7a28b66468b791da3fe3a8c5ac7bb2d7aec9f40b6861df"
+    },
+    {
+      "file": "verification/ui159-deck-capture-removal/actual-removed-slide-show.png",
+      "sha256": "ae8b8b77cfcd9742b5ac61dacb42b04f9899fdf64030d9ca3e4077bd1cba7468"
+    },
+    {
+      "file": "verification/ui159-deck-capture-removal/actual-removed-record.png",
+      "sha256": "0eb6c949ec7ac1d48102f215e367a3aa5ceb02cd0fa2d826d63b332173089360"
+    },
+    {
+      "file": "verification/ui159-deck-capture-removal/node-deck-local-scope.json",
+      "sha256": "ca7cc8ca639a9c123eafad7ec6c03b3e7876b2e474556d7ca6d990d8d260c6d0"
+    },
+    {
+      "file": "verification/ui159-deck-capture-removal/deck-build-result.json",
+      "sha256": "563d2c3fd3282bc4856f3ecd3b2dde6539537d95d37349f88f172a44c7a4bc33"
+    },
+    {
+      "file": "verification/ui159-deck-capture-removal/installed-deck-host17.json",
+      "sha256": "d50209b4102ac89677438cfa412fb53cebe6e9dfe3128231a8b7282450ec16db"
+    },
+    {
+      "file": "verification/ui159-deck-capture-removal/node-results.json",
+      "sha256": "58b286e00e642ac0c1c76315f411d4510c59311086a0ec598de01dcbc8d48f2f"
+    },
+    {
+      "file": "verification/ui159-deck-capture-removal/primary-visual-review.json",
+      "sha256": "3d00f7f5480b1eafd32966cfe7ab55c3bf73de399f554c92425731a8fe8ae9ca"
+    }
+  ],
+  "userDesktopControlled": false,
+  "userDshRestarted": false,
+  "userWindowLoadedVersion": "unverified; reload needed to adopt the changed build",
+  "mainModelReview": [
+    "Reviewed actual command rejections, real Host 422 responses and unchanged native source contents.",
+    "Viewed four correct actual ribbon tabs and confirmed absent capture controls while retained content controls remain.",
+    "Read actual source/build/helper and integrity evidence; no fake recognizer/device response or model result was substituted.",
+    "The four items were removed by user scope change and are not relabeled as tested devices."
+  ]
+}

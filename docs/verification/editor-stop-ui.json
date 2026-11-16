@@ -1,0 +1,43 @@
+{
+  "status": "passed",
+  "scope": "actual registered DSH tool and real native App; no model request",
+  "codeRoot": "D:\\METIS超级合并\\dsh-plugin\\designcraft",
+  "checks": [
+    {
+      "name": "Stop after polling but before native begin changes neither native document nor saved checkpoint",
+      "pass": true,
+      "detail": {
+        "sourceRevision": "2e878e04c0d13dd8ff72fdb055ebb7ccf71856b564b1d7025bca5a63825c6c7a"
+      }
+    },
+    {
+      "name": "normal registered tool execution enters the same native App and persists its actual source",
+      "pass": true,
+      "detail": {
+        "sourceRevision": "520c64f168ad8ca4f88f6c8d42a63aa7caa160f3650fea40fb918bd8ddf3d76b",
+        "target": 2,
+        "actualColor": {
+          "b": 0.0470588244497776,
+          "g": 0.2549019753932953,
+          "model": "rgb",
+          "r": 0.7607843279838562
+        }
+      }
+    },
+    {
+      "name": "Stop after native execution preserves and discloses the completed durable step",
+      "pass": true,
+      "detail": {
+        "id": "ef6eddd0-15cc-4304-ac47-e75f0afa51b0",
+        "action": "execute",
+        "sourceId": "work-cb9fc0e5-cb93-4ea0-b792-4ed8977d0bc8",
+        "status": "succeeded",
+        "error": null,
+        "cancelRequested": true,
+        "executionStarted": true,
+        "appliedAfterCancel": true
+      }
+    }
+  ],
+  "pageErrors": []
+}

@@ -1,0 +1,56 @@
+{
+  "status": "passed_scoped",
+  "at": "2026-11-08T09:23:53.136483+00:00",
+  "scope": "Actual Photo and Deck host9 keyboard file routing and current Photo/Deck precise references in owned DSH.",
+  "fileChecks": [
+    {
+      "engine": "photocraft",
+      "original": "work-969f995d-edf4-4232-89f2-fb4f41cf0e7e",
+      "savedAs": "work-3f665f60-58ad-4d0f-ae56-d0afff8dae82",
+      "saveRevision": "54e0f295ab3f55167e97ecc39f4ff81497fd68dec43a6e7b190d870f5351c12d",
+      "openCancelledWithoutSwitch": true
+    },
+    {
+      "engine": "deckcraft",
+      "original": "work-9f9f1ac1-673a-4063-baad-fa8a8654cc47",
+      "savedAs": "work-225d0015-9481-42ca-a605-b7b09d8e66b1",
+      "saveRevision": "f5031fd91f827212f37ad5a97d11443d4506689bb2a9dd2ba99f7a2e5ad1fe42",
+      "openCancelledWithoutSwitch": true
+    }
+  ],
+  "referenceChecks": [
+    "registered selection tool captured actual full feathered alpha in image coordinates",
+    "old Photo selection tool request and DSH reference are rejected after selection changes",
+    "old Deck page reference is rejected after switching the actual slide"
+  ],
+  "maskFractionalPixels": 13748,
+  "deckBuild": {
+    "version": "0.13.1+designcraft.host9",
+    "sourceMatches": true,
+    "logSha256": "659c347afc2c201fc100046a9dddb6ae763d16953862d70fa44167386a4afe31",
+    "backup": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\before-deck-host9"
+  },
+  "mediaRegression": [
+    "actual WAV and H264/AAC media embedded byte-for-byte in native source",
+    "actual WebAudio output callback emitted nonzero samples while muted externally",
+    "native source and exported PPTX reopen with the original audio and video bytes"
+  ],
+  "rawEvidence": [
+    {
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-photo-deck-files.json",
+      "sha256": "b99018eaad9add2abbec91fdd3185d6ed1bb8c171d7e036232c2858156200c7e"
+    },
+    {
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-deck-media-host9.json",
+      "sha256": "edbbd31a312181baa25fd327e7e95f5682e9073243ea4c436c99b31d0941cacc"
+    },
+    {
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-photo-deck-references.json",
+      "sha256": "e15bb709753774a79e3dc15e390861a3f86a49769b5a7d1bd679d376eb2a6958"
+    }
+  ],
+  "limits": [
+    "The actual user DSH process/window was not restarted or inspected; its loaded build is unknown.",
+    "OS-native file pickers and every specialized file-menu action are outside these observed samples."
+  ]
+}

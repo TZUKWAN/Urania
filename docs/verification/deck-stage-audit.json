@@ -1,0 +1,255 @@
+{
+  "schema": 1,
+  "status": "passed_scoped_deck_and_material_stage",
+  "updatedAt": "2026-11-04T19:27:01.600822+00:00",
+  "productRoot": "D:\\METIS超级合并\\dsh-plugin\\designcraft",
+  "fullScopeComplete": false,
+  "originalTaskCount": 50,
+  "diskBuild": {
+    "version": "1.3.0-dev.11",
+    "uiBuild": 25,
+    "liveEngines": [
+      "vectorcraft",
+      "photocraft",
+      "deckcraft"
+    ],
+    "deckRuntime": "0.13.1+designcraft.host2",
+    "userWindowLoadedVersionVerified": false
+  },
+  "actualChecks": {
+    "boundedNativePptxImports": 5,
+    "nativeHostedBridge": 7,
+    "realWasmSurface": 4,
+    "actualDshCore": 4,
+    "realConfiguredKimi": 4,
+    "photoToDeckMaterial": 3,
+    "targetedNodeCases": 32,
+    "sourceIntegrity": {
+      "javascriptFiles": 69,
+      "syntax": "passed",
+      "nativeBinaries": 4,
+      "runtimeHashes": "passed",
+      "resourceFiles": 36,
+      "resourceHashes": "passed"
+    }
+  },
+  "model": {
+    "provider": "kimi-coding",
+    "model": "kimi-for-coding",
+    "newDeckTurns": 1,
+    "actualSupportedToolCalls": 2,
+    "newImageApiCalls": 0
+  },
+  "changedFiles": [
+    "client/native-contract.js",
+    "client/editor-frame.js",
+    "client/native-controller.js",
+    "client/native-workspace.js",
+    "host/editor-session.js",
+    "host/native-source-store.js",
+    "host/project-graph.js",
+    "host/native-deck-header.js",
+    "host/zip.js",
+    "tests/native-contract.test.mjs",
+    "tests/native-deck-header.test.mjs",
+    "tests/fixtures/deck-web.deckcraft",
+    "runtimes/web/deckcraft-host/*",
+    "web-runtime-lock.json",
+    "docs/capability-matrix.json",
+    "README.md",
+    "pinned native Deck engine/UI/Web source patches listed by runtime provenance"
+  ],
+  "commands": [
+    "cargo test --locked -p deckcraft-engine --lib embedded::tests",
+    "cargo test --locked -p deckcraft-ui-egui --lib control::hosted::tests",
+    "cargo check --locked --target wasm32-unknown-unknown -p deckcraft-web",
+    "pwsh -NoProfile -File work/build_deck.ps1",
+    "python -u work/adopt_deck_build.py --host-build 2",
+    "python -u work/probe_deck_surface.py",
+    "python -u work/test_deck_workspace.py",
+    "python -u work/test_deck_kimi.py",
+    "python -u work/test_photo_deck_material.py",
+    "npm run check",
+    "node --test tests/native-deck-header.test.mjs tests/project-graph.test.mjs tests/native-source-store.test.mjs tests/native-contract.test.mjs tests/native-protocol.test.mjs"
+  ],
+  "realFixes": [
+    "Native archive/JSON/default-container/picture admission bounds use genuine readers; invalid CRC, ZIP64, sparse defaults and false MIME do not publish a document.",
+    "Hosted native Selection retains actual slide/master/layout/text/cell targets and ordered context; old context refuses. Native notes draft blocks mutation/snapshot/clean ack.",
+    "Raw Web JSON connects to same actual SlideApp, hosted startup empty, no sample as user work. Native source/PPTX/PNG use actual serializers/renderer.",
+    "Enabled locked rfd file-handle-inner feature for real pre-read File.size guard.",
+    "Font startup originally timed out because gzip/chunked response omitted Content-Length. Fixed header requirement; actual font bytes remain capped and served through pinned size/hash verification. Runtime2 startup/font/Chinese editing truly passed.",
+    "Deck stored-source reopen now shows the human source title instead of internal source UUID; actual Kimi test asserts title.",
+    "Real native Deck metadata/PNG media selectively inspected without decoding unrelated payloads. Saved picture SHA must equal actual project PNG before binding. Actual native picture id/page/layout receipt is durable."
+  ],
+  "mainModelReview": "Reviewed actual logs, saved native presentation structure/pixels, actual OOXML two-slide text/color parts, real registered-tool/model events, asset/native-media SHA and inspected native UI screenshots. All stated slices pass; source/core fixtures do not establish full upstream parity.",
+  "runtimeIntegrity": {
+    "files": 16,
+    "allHashesMatch": true,
+    "buildLogSha256": "1336afd189ea5d0ce3a27d4f642d49335d29e08a7f21c16b17fdcd2f9f720379",
+    "sourceFiles": {
+      "Cargo.toml": "95e2e1f6cc9eaf8e3f95f43757416df362a3c40b409f4cff704e35c2305a7135",
+      "Cargo.lock": "b2b117de77cce31ed833efe8271191c9e35ed57af93fc82f84478662ab08b34e",
+      "crates/engine/Cargo.toml": "b6fb04d29c1abf5f8f85bf89aa5edd616147b3675b5091141abc288f6aaf49ea",
+      "crates/engine/src/lib.rs": "6eecf181ad192ce6ac54cbb7224cc444d5fbf87fd093c040afeaf8093f2bf275",
+      "crates/engine/src/embedded.rs": "5e8fa08080be27d973fd3c5bf1c9030e541cbffe38f925520101bebd918c4163",
+      "crates/engine/src/fonts.rs": "1e7db2d436d229d70df5775afb26f7066f4f1744611a8a0fcc2fa8d17405e2d8",
+      "crates/ui-egui/src/lib.rs": "5030b4ae4707627c42ffc3e2f3c5716f426bdb27075787e7845f78e4bf56dab4",
+      "crates/ui-egui/src/app.rs": "d298bfaf00c97f5fcf8632b867933397364057128eca629ccb5ce9a90ab8f290",
+      "crates/ui-egui/src/control.rs": "2a115b0a7677b17ab16b71d08753bbe50d863d537aa1263bf33c381b755aa8ca",
+      "crates/ui-egui/src/control/hosted.rs": "ed4639258fc387bd6542f25366e8182ad0a16057e1a947ebb777e5ac313c3ae1",
+      "crates/ui-egui/src/control/hosted_tests.rs": "1e704c5a186b91bec38f7b2343d8c4b11679f5e75fc523eea04a891f67ee2d6a",
+      "crates/ui-egui/src/app/commands.rs": "fb054a7155a070980d1f8cde47e2ac43e9816679d336d21d88c66414ef1d807e",
+      "crates/ui-egui/src/app/frame.rs": "440150433ea988d5c9183ead83ad2e06e3d507dc808dd8ef1063b6144a696800",
+      "crates/fonts/build.rs": "692cbe7723d5860c3b35816c5a274ae04919d80d6147cdf7d6288bb429f45bdf",
+      "apps/deckcraft-web/Cargo.toml": "136f98cb6607553c49cedfa34245e7f8ba0a1a43689daedcc67061a56f214cfd",
+      "apps/deckcraft-web/src/main.rs": "b1fa74496f2983e7a7c21170666f06cc92cfd5ee799d48cb13bf8d0c9a4d2208",
+      "apps/deckcraft-web/src/api.rs": "0430364aaabaa18748249fa84a3d27815eca0450dfc85b07043ae9bae41d8b83",
+      "apps/deckcraft-web/src/web.rs": "d73a6761d1f27da948eb6971bca765a09d7bae4258ab37d29d4e34d642745ec1",
+      "apps/deckcraft-web/index.html": "5ff552301bfde3d5d369c93ad1a7a886f7aa639c021692269677c12f68e132be",
+      "apps/deckcraft-web/Trunk.toml": "a996cb61144f4f961e8a44d8df04ef329620c12928aea4a4f328d1fcaf055ec8",
+      "ATTRIBUTION.md": "b905f20f0afe75a061134fda3c0487add7272de9968f2fd714867c28b946ff9f",
+      "font-input/fonts\\biz-ud-pgothic\\BIZUDPGothic-Bold.ttf": "30eba52fc837e8b62c97d4b82e6706583149fb7294e3712dd71a655eaea80a90",
+      "font-input/fonts\\biz-ud-pgothic\\BIZUDPGothic-Regular.ttf": "258d7156c165f2ff774b6efee637c22c3b950de0d8a10e501137061bc8085d01",
+      "font-input/fonts\\biz-ud-pgothic\\OFL.txt": "e753d7155d53c747d037a445e584c8ecfca6dd79846db610417e282a736b28bc",
+      "font-input/fonts\\inter\\Inter-Bold.ttf": "288316099b1e0a47a4716d159098005eef7c0066921f34e3200393dbdb01947f",
+      "font-input/fonts\\inter\\Inter-Regular.ttf": "40d692fce188e4471e2b3cba937be967878f631ad3ebbbdcd587687c7ebe0c82",
+      "font-input/fonts\\inter\\OFL.txt": "262481e844521b326f5ecd053e59b98c8b2da78c8ee1bdbb6e8174305e54935a",
+      "font-input/fonts\\latin-manifest.txt": "8bdc66b47cb1a8d13e04240ab5e0c54601db05bda10a9f567e7f4cb1bdc5c58d",
+      "font-input/fonts\\lxgw-wenkai-lite\\LXGWWenKaiLite-Regular.ttf": "f799a538a3355877e597a0ae04050e897932c9ae7689eb9227c2953c5dd549ea",
+      "font-input/fonts\\lxgw-wenkai-lite\\OFL.txt": "0333a85fe077b6849f8e417acc44e8bd879442ceb681e271acf93e2d57fd4e2e",
+      "font-input/fonts\\manifest.txt": "a70cf3b8c08be4e90ec40841c860d0e2ff25bc6566ce03a473d4fa1dc4b38958",
+      "font-input/fonts\\simplified-chinese-manifest.txt": "dff6d22a8e3162d02e7e7c4bd058a36b117485e135e362a060ce68734649ea35",
+      "font-input/source-lock.json": "0da094ff887ee881bcd2cbb9b12cda5b73a9f9258b9447172c4d45d834b8d16b"
+    }
+  },
+  "uncompleted": [
+    "Original full50 is not complete.",
+    "F2-F6 instance forks, in-place content application, explicit linked propagation and SVG-to-native-PPT-object conversion remain unfinished; current material flow is a frozen snapshot.",
+    "All specialized Photo/Deck native tools, full native file menus, complete masters/layouts/theme/notes/show/animation UI coverage and all formats are not inferred from core tests.",
+    "PPT import currently admits native/PPTX family with verified raster media; SVG/font/audio/video payloads beyond the connected path explicitly reject.",
+    "Complete OpenDesign external packages/templates/brands/HTML-to-PPTX, real image service/inpaint/variants, extra exports/projectpack/legacy migration and final five journeys remain pending.",
+    "Only owned headless/software rendering verified; user desktop/original DSH never controlled or restarted, actual user loaded version unknown."
+  ],
+  "evidence": [
+    {
+      "file": "deck-surface.json",
+      "bytes": 2256,
+      "sha256": "4b3149061d183bae998b8eead49ebc1fb07d08cc73b39264f1a0e32c45d88da5"
+    },
+    {
+      "file": "deck-surface-ui.png",
+      "bytes": 142355,
+      "sha256": "7585f2be12cc0044f2af039f08c06cde0e27d9248b1a892e169519de2f1948f6"
+    },
+    {
+      "file": "deck-surface-render.png",
+      "bytes": 16032,
+      "sha256": "34a70f3f97fb749c1b0fc284b201fe252bff06148a82b8eec263f19f94913663"
+    },
+    {
+      "file": "deck-surface.deckcraft",
+      "bytes": 4813,
+      "sha256": "d5892f2b8ecb6a9b34e3244c1d1d12a463f3963f37da7fe455e5eec11aa2b891"
+    },
+    {
+      "file": "deck-surface.pptx",
+      "bytes": 22753,
+      "sha256": "e633d4cdfe491e973c09a81ecc553e339396505ec501b003a96f0cd668cf76e1"
+    },
+    {
+      "file": "deck-workspace.json",
+      "bytes": 2099,
+      "sha256": "9a150513bea79174b36255351145f9ff4aa70676bba803f4e0c55b37fe13db91"
+    },
+    {
+      "file": "deck-workspace-ui.png",
+      "bytes": 139362,
+      "sha256": "b9e0e7e31b00b2df40f9c9e8031d93af8bf6becfef337b82f8c39c5dda8c5166"
+    },
+    {
+      "file": "deck-workspace-export.pptx",
+      "bytes": 22649,
+      "sha256": "7ff7bb858c367226d5d8c68fcfddd26096027262dfb8c53152b2d78245b5b4e5"
+    },
+    {
+      "file": "deck-workspace-export.png",
+      "bytes": 11436,
+      "sha256": "62a8534626d1dfd441f54103722d64b5f6d24e17181a1c1cde2c53505a6beced"
+    },
+    {
+      "file": "deck-kimi.json",
+      "bytes": 17286,
+      "sha256": "0b5caf5cdb26af6db4305e563dfa766dca9a1d4d453b3a5ed4102883bbda56c7"
+    },
+    {
+      "file": "deck-kimi-ui.png",
+      "bytes": 185726,
+      "sha256": "7989f2fe0d879bf9827dc1a86797404cf55f0d763ff35eb377a5a01b1a28ac92"
+    },
+    {
+      "file": "deck-kimi-transcript.txt",
+      "bytes": 988,
+      "sha256": "4e5a1b828d6aee5c6ba39223107962fe476a3c024c9567fa8b914f223460a0f1"
+    },
+    {
+      "file": "photo-deck-material.json",
+      "bytes": 3553,
+      "sha256": "0734f4cac9455b84f605883b5dbcfbe374ba964dd178ee69e93e76f5bc6a4337"
+    },
+    {
+      "file": "photo-deck-material-ui.png",
+      "bytes": 146030,
+      "sha256": "c2579801e41ffde28228e1fb9499ef145e8daf2af2075e641441b18e08d0b9fb"
+    },
+    {
+      "file": "deck-bounded-import-final.log",
+      "bytes": 3055,
+      "sha256": "4b3132dd57926dd7adfbfa5df20b11f13d939f3287fac99447629d7f63f793ff"
+    },
+    {
+      "file": "deck-hosted-native-final.log",
+      "bytes": 3571,
+      "sha256": "09ce157d3d00bac3caff71158e25e5da3beb61f4a2eddd735d3cee9a3e0dd813"
+    },
+    {
+      "file": "deck-final-targeted.tap",
+      "bytes": 7902,
+      "sha256": "df8bfd12c43e2845561185a770534a26d949df6e17e63715891e9c9707bfc174"
+    },
+    {
+      "file": "source-check-after-deck-material.log",
+      "bytes": 200,
+      "sha256": "70eb61c9b121f8071b729c624bcee5cead1dec6c6c27554e9065c5f06922ae6c"
+    },
+    {
+      "file": "deck-build-result.json",
+      "bytes": 3843,
+      "sha256": "8ad1614023be7a54507b57e56d7bd54e1ba80a7fa0fd26285f56a9160acb8b3d"
+    },
+    {
+      "file": "deck-build.log",
+      "bytes": 1783,
+      "sha256": "1336afd189ea5d0ce3a27d4f642d49335d29e08a7f21c16b17fdcd2f9f720379"
+    },
+    {
+      "file": "deck-fonts-package.json",
+      "bytes": 1264,
+      "sha256": "3a8a156dea6cfc5613c5c44d721db78afd34c68b21a29839683b3c5e3c233e2b"
+    },
+    {
+      "file": "deck-fonts-prepared.json",
+      "bytes": 2768,
+      "sha256": "1354977112c7a379f3ed5880de0694bed2adf5bb61d77e44ecf8c2b44476f4a2"
+    },
+    {
+      "file": "deck-boot-diagnostic.json",
+      "bytes": 5618,
+      "sha256": "0236454dd559a8927275f7fb18387cf055090abbfc8dff8e15a4ecc8f3f71964"
+    },
+    {
+      "file": "deck-surface-boot-failed.json",
+      "bytes": 451,
+      "sha256": "e98228e4644868afc0faa22f7c9ca64edc56b0776c47a0c5f6fcdf1b2bd63cfc"
+    }
+  ]
+}

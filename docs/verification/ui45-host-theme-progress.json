@@ -1,0 +1,64 @@
+{
+  "status": "passed_scoped",
+  "at": "2026-11-08T10:32:48.277290+00:00",
+  "scope": "Installed Deck host10 and Photo host4 in owned DSH, light/dark palette and Photo hosted Chinese UI.",
+  "checks": [
+    "both native theme screenshots include the host accent color",
+    "theme switch kept the same App, selected object and exact native source",
+    "native show still starts and returns after a theme change",
+    "both screenshots contain the hosted accent color",
+    "theme switch kept the same native App, layered source and all RGBA pixels",
+    "actual Photo/Deck keyboard save, Save As and Open cancel still work"
+  ],
+  "loadedRuntimes": {
+    "deck": {
+      "version": "0.13.1+designcraft.host10",
+      "wasmFile": "deckcraft-web-a1091a45c38dbc9c_bg.wasm",
+      "sha256": "e29207b2c8cba96614ff1444ab73bcb283501d7373fb8e9f00eca4a7f9d7ea4e",
+      "valid": true
+    },
+    "photo": {
+      "version": "0.18.0+designcraft.host4",
+      "wasmFile": "photocraft-web-c21ca435b4f2522c_bg.wasm",
+      "sha256": "1f5bbb8aea20c3d2b9b28662b5790df07f51f2e3680a14d8b26827bf3c18b508",
+      "valid": true
+    }
+  },
+  "screenshots": [
+    {
+      "file": "verification/ui45-deck-host10-theme-light.png",
+      "sha256": "17737ad2e12521bd0cd9a98dd3a05563bd7774264caaf046e0e353b8f9054fb9"
+    },
+    {
+      "file": "verification/ui45-deck-host10-theme-dark.png",
+      "sha256": "4168e14840fd0862f6c2b2ac46205202ec08e187766109c32841187c5473df62"
+    },
+    {
+      "file": "verification/ui45-photo-host4-theme-light.png",
+      "sha256": "d3c715961fdccca18c7cc659c3c86600efd53d83126297b656a9bba0c2ef8a99"
+    },
+    {
+      "file": "verification/ui45-photo-host4-theme-dark.png",
+      "sha256": "34fabe7c65f6c1427f59198aca9d73de5ba95dc7ecf693ae01855672caae4970"
+    }
+  ],
+  "rawEvidence": [
+    {
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-deck-host10-theme.json",
+      "sha256": "c92e9929bf08381f02f745d2c9797424874e8333fa608babb638fa53e63d2358"
+    },
+    {
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-photo-host4-theme.json",
+      "sha256": "556f737a8211b1e2fe597354f2368f17184a934f4c0d20fd059d65ae6f3b6d84"
+    },
+    {
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-photo4-deck10-files.json",
+      "sha256": "f78b4ed74175e7d69568cac0dd5fdd1dc11d9ebcfa1c9cc161396dae41096cba"
+    }
+  ],
+  "limits": [
+    "The Photo hosted Chinese labels were reviewed visually; native preferences and standalone palette are protected by targeted Rust tests.",
+    "Deck upstream does not yet have a localized interface; many Deck controls remain English and individual engine control styles still differ.",
+    "Only the owned DSH/browser loaded these builds; the user window was not restarted or inspected."
+  ]
+}

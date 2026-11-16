@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "sources": [
+    {
+      "id": "cloudflare-kumo",
+      "repository": "cloudflare/kumo",
+      "revision": "0c5832575c99988917b81cd752002e10f3dc9c7a",
+      "path": "LICENSE",
+      "source": "https://raw.githubusercontent.com/cloudflare/kumo/0c5832575c99988917b81cd752002e10f3dc9c7a/LICENSE",
+      "sha256": "df3e141c129d1804bea95fe087b157b156241b3bb1a4664808630aa85f2cd8fc",
+      "note": "revision named in the pinned OpenDesign manifest"
+    },
+    {
+      "id": "tom-modern",
+      "repository": "Tom-Opencart/tom-modern-html-style-rule",
+      "revision": "0ef8506584a1759ab8d6df163a48e8418b74fdec",
+      "path": "LICENSE",
+      "source": "https://raw.githubusercontent.com/Tom-Opencart/tom-modern-html-style-rule/0ef8506584a1759ab8d6df163a48e8418b74fdec/LICENSE",
+      "sha256": "603513fe37c4744395a6d06886d5cf4b7bbe46dc12952d2c423c9c38b0b7fdd5",
+      "note": "upstream HEAD licence snapshot; OpenDesign manifest does not pin the source revision"
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "status": "passed",
+  "scope": "actual DSH controller/native WASM file actions, physical save/open shortcuts, filesystem checkpoints and browser downloads; no model",
+  "codeRoot": "D:\\METIS超级合并\\dsh-plugin\\designcraft",
+  "checks": [
+    {
+      "name": "physical native Ctrl+S confirms the real durable source containing the manual edit",
+      "pass": true,
+      "detail": {
+        "sourceId": "import-4255da8b-33c8-49d8-ab99-bf35eccf9988",
+        "revision": "956073a2d43ef2640d0b98fa4dae38044b5645ff688df481ddaddcf65a95b69d",
+        "objectId": 2,
+        "x": 81
+      }
+    },
+    {
+      "name": "native Save a Copy creates an independent real source and keeps the current design open",
+      "pass": true,
+      "detail": {
+        "original": "import-4255da8b-33c8-49d8-ab99-bf35eccf9988",
+        "copy": "work-6ec05035-ef3d-4a45-a6ed-fece39bded58"
+      }
+    },
+    {
+      "name": "native Save As adopts the new independently saved source without overwriting the original",
+      "pass": true,
+      "detail": {
+        "original": "import-4255da8b-33c8-49d8-ab99-bf35eccf9988",
+        "savedAs": "work-35c88703-bafc-4d57-b17a-47dc7bc22fa6"
+      }
+    },
+    {
+      "name": "physical native Open uses the workspace chooser and cancellation keeps the same App/source",
+      "pass": true,
+      "detail": {
+        "sourceId": "work-35c88703-bafc-4d57-b17a-47dc7bc22fa6",
+        "sameApp": true
+      }
+    },
+    {
+      "name": "native export produces an actual independently decoded browser download",
+      "pass": true,
+      "detail": {
+        "path": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\evidence\\native-files-output\\cb84ec6a-5a31-4e62-90e8-cd7eb8c13cb8\\native-export.png",
+        "bytes": 3663,
+        "size": [
+          640,
+          480
+        ]
+      }
+    },
+    {
+      "name": "exported editable source reopens through native Open with exact original bytes preserved",
+      "pass": true,
+      "detail": {
+        "savedAs": "work-35c88703-bafc-4d57-b17a-47dc7bc22fa6",
+        "imported": "import-927e0c4c-d43f-4b5c-9d49-be9eeb442f0c",
+        "objectId": 2
+      }
+    },
+    {
+      "name": "a failed SVG import preserves exact input and leaves the current live App and saved source unchanged",
+      "pass": true,
+      "detail": {
+        "sourceId": "import-927e0c4c-d43f-4b5c-9d49-be9eeb442f0c",
+        "original": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\native-files-project\\9aecebdf-e2fc-4fa3-9d4c-a34e4d5fba39\\design\\.designcraft\\v2\\sources\\import-c576cbb1-baa8-4d49-9133-e4938bee8642\\originals\\9618f0dfc45fe29ce35fbaee19febb3155803974156bd339fb4e8fc370add176.svg"
+      }
+    },
+    {
+      "name": "native Close keeps saved works and the project menu reopens the correct independent source",
+      "pass": true,
+      "detail": {
+        "closed": "import-927e0c4c-d43f-4b5c-9d49-be9eeb442f0c",
+        "reopened": "work-35c88703-bafc-4d57-b17a-47dc7bc22fa6"
+      }
+    },
+    {
+      "name": "native New dialog creates the requested actual source and artboard while retaining the previous design",
+      "pass": true,
+      "detail": {
+        "sourceId": "work-9743a3e0-f60a-4ac7-8b63-27ad4b1173bd",
+        "artboard": {
+          "height": 280,
+          "name": "Artboard 1",
+          "width": 420,
+          "x": 0,
+          "y": 0
+        }
+      }
+    }
+  ],
+  "pageErrors": []
+}

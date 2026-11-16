@@ -1,0 +1,384 @@
+{
+  "status": "verified_svg_to_native_ppt_core",
+  "asOf": "2026-11-05T07:51:16.389329+00:00",
+  "fullScopeComplete": false,
+  "originalTaskCount": 50,
+  "scope": "Explicit actual UI conversion of eligible SVG into separately editable native PowerPoint paths/text, with hidden original SVG, durable checkpoint, native/PPTX reopen and response-loss recovery.",
+  "installedDisk": {
+    "plugin": "1.3.0-dev.20",
+    "uiBuild": 34,
+    "vector": "0.19.0+designcraft.host12",
+    "photo": "0.18.0+designcraft.host3",
+    "deck": "0.13.1+designcraft.host6"
+  },
+  "userWindowVersion": "unverified; user desktop and process not controlled or restarted",
+  "actualShapes": {
+    "status": "passed",
+    "scope": "real UI simple SVG to editable PPT native paths, original SVG retained, edit/undo/redo/reopen/PPTX import; no desktop or model",
+    "root": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\f5-ui-shapes\\d374ae47-f596-4164-a84c-2722c0a71984",
+    "owned": {
+      "workspaceId": "4720cece-5696-447a-8f17-1d9a4e18c69c",
+      "sessionId": "PUBLIC-REDACTED"
+    },
+    "checks": [
+      {
+        "name": "real native paths created and one manually selected and moved",
+        "detail": {
+          "original": 261,
+          "created": [
+            263,
+            264,
+            265
+          ],
+          "changedPixels": 1024
+        }
+      },
+      {
+        "name": "physical undo/redo, native reopen and PPTX native paths passed",
+        "detail": {
+          "sameOriginal": 261
+        }
+      },
+      {
+        "name": "PPTX re-import retains native paths and hidden SVG",
+        "detail": {}
+      }
+    ],
+    "assetId": "asset-fefd3f74-41ed-430a-b876-6aa66eceaaad",
+    "originalId": 261,
+    "generatedIds": [
+      263,
+      264,
+      265
+    ],
+    "actualUiPlacement": true,
+    "actualUiConversion": true,
+    "independentNativeEdit": true,
+    "physicalUndoRedo": true,
+    "nativeFreshReopen": true,
+    "pptxNativeShapesAndOriginalSvg": true,
+    "pptxReimport": true,
+    "renderedPixelDifferences": 1024
+  },
+  "actualText": {
+    "status": "passed",
+    "scope": "actual UI SVG text to editable native text box with visible font warning and original SVG retained",
+    "root": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\f5-ui-text\\22ae7add-19b8-4646-bc53-4a97605f1e5d",
+    "originalId": "261",
+    "textShapeId": 263,
+    "actualText": "Edited in PPT",
+    "independentNativeTextEdit": true,
+    "fontWarningVisible": true,
+    "originalSvgRetained": true,
+    "pptxTextBody": true
+  },
+  "unsupported": {
+    "status": "passed",
+    "scope": "actual UI refuses unsupported gradient/clip SVG without mutation; no user desktop or model",
+    "root": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\f5-ui-unsupported\\a5910a38-b43e-4305-a9d1-b7a926b3e73f",
+    "sourceUnchanged": true,
+    "sourceRevision": "9c89a835dba658da2eb77d8e75d404f976be2ef021515f0a5557b6064a108dd5",
+    "actualError": "此 SVG 的内容或图片属性超出当前转换范围，原 SVG 已保留。unsupported SVG element defs"
+  },
+  "responseLoss": {
+    "status": "passed",
+    "scope": "one deliberately dropped acknowledgement after actual Deck save; reconcile without replay, then real later edit retained; owned headless environment only",
+    "root": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\f5-response-loss\\7835044e-8ea4-4c63-b2f7-0947643bbfa8",
+    "owned": {
+      "workspaceId": "dc18d7ee-eec6-4deb-950b-14ceee81fae2",
+      "sessionId": "PUBLIC-REDACTED"
+    },
+    "faultInjected": "one save response dropped after actual committed source",
+    "conversionRevision": "b479dde5756a2bde42c820205d903b2d2b2d1746e1cf268b15e82a293aa01d15",
+    "laterRevision": "0397c5c02b785266008c084278981fbfa920042c8cace9ca3899105842b4f4ad",
+    "jobId": "c7ae7adc-98e9-4efc-a714-d412e71faf13",
+    "savedConversionReconciled": true,
+    "currentCanvasSynced": true,
+    "noDuplicateConversion": true,
+    "laterManualEditRetained": true
+  },
+  "sessionReload": {
+    "status": "passed",
+    "scope": "one deliberately dropped save acknowledgement followed by session reload and draft reconciliation in owned headless DSH",
+    "root": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\f5-response-reload\\f8797148-ed2e-42d0-afcb-82be4d838fa3",
+    "owned": {
+      "workspaceId": "49e68efc-9d2f-4d09-8a78-e6965173ca32",
+      "sessionId": "PUBLIC-REDACTED"
+    },
+    "faultInjected": "one save acknowledgement dropped after committed conversion",
+    "jobId": "bc5d6147-426e-4669-8e1c-4505bf0c48f4",
+    "savedRevision": "308185ffccca8c8a1add4f67e135d9d8e1f4eea60c6459f2130a3c97eb5d67b0",
+    "sessionReloaded": true,
+    "savedDraftReconciled": true,
+    "noDuplicateConversion": true
+  },
+  "pixelComparison": {
+    "scope": "actual UI conversion before/after RGB; not a claim of pixel identity",
+    "size": [
+      960,
+      540
+    ],
+    "changedInteriorPixels": 1024,
+    "changedBorderPixels": 0,
+    "changedInUniform3x3Areas": 0,
+    "maxChannelDifference": 50,
+    "beforeSha256": "9a9747e820eb37dc7d0d7ce092023e9a8c3f058382d66d606cb479d6af2d5a1e",
+    "afterSha256": "84909e6218d87de9a73f0f12aebbba7deed9a62c25302078c322f091047ca47e"
+  },
+  "verification": {
+    "deckNativeTests": 15,
+    "targetedNodeTests": 30,
+    "strictClippy": "passed",
+    "wasmCheck": "passed with previously existing unused-field warning",
+    "javascriptSyntaxFiles": 73,
+    "nativeBinaryChecksums": 4,
+    "resourceChecksums": 36,
+    "installedDeckWebFilesRehashed": 24,
+    "deckSourceAndFontPinsMatch": true,
+    "pptxXmlAndSvgBytesRechecked": true
+  },
+  "limitations": [
+    "This is the explicitly supported core subset, not conversion of every SVG",
+    "Only eligible top-level, unrotated, unflipped, uncropped, uniformly scaled SVG pictures without picture effects or explicit links are converted; explicitly linked uses must first be unlinked",
+    "Supported geometry is limited to filled closed single-subpath basic paths/rectangles/circles/ellipses/polygons and simple text; strokes, gradients, clipping, filters and other unsupported features are refused with the original unchanged",
+    "Converted text remains editable but font metrics/baseline may differ; the interface warns and keeps the original SVG hidden",
+    "The actual 960×540 shape sample changed 1024 edge pixels, max channel difference 50/255, with no changed pixels in uniform 3×3 regions; vector and preview rasterization are not pixel identical",
+    "SVG linked/brand updates (F6) and the remaining original tasks are not completed by this audit"
+  ],
+  "primaryReview": {
+    "actualUiAndSavedPptxReviewed": true,
+    "copiedEvidenceRehashed": true,
+    "sourceAndFontPinsMatch": true,
+    "installedWebFilesRehashed": true,
+    "lossAndReloadRecoveryVerified": true,
+    "fullCompletionNotClaimed": true
+  },
+  "evidenceDirectory": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\outputs\\DesignCraft_SVG转可编辑PPT阶段证据_20261105",
+  "evidence": [
+    {
+      "file": "f5-ui-shapes.json",
+      "bytes": 1431,
+      "sha256": "943942e2e46f45fd7aca2df29653ea00f1568c9e3af7c2c253458aa264c2410f"
+    },
+    {
+      "file": "f5-ui-shapes.log",
+      "bytes": 304,
+      "sha256": "4f852243db283a35ac991b113d1ac4448d4b537f6f383213af7796f167ab8719"
+    },
+    {
+      "file": "f5-ui-before.deckcraft",
+      "bytes": 7949,
+      "sha256": "9eb5b8d77ea1639cfaf33494c9ba2c3ba237fa7228751eb948635b7b69facf13"
+    },
+    {
+      "file": "f5-ui-after.deckcraft",
+      "bytes": 8206,
+      "sha256": "cdb9bff4772e976899d3c21ddbc07cdea1d106acfd8b14089038cbc4f88b526d"
+    },
+    {
+      "file": "f5-ui-converted.pptx",
+      "bytes": 26047,
+      "sha256": "92ad9a28510b78a3e9da2ea1e36c3ec8dd45be39e6cddb6aedb6cb6be01f73e4"
+    },
+    {
+      "file": "f5-ui-before.png",
+      "bytes": 14417,
+      "sha256": "9a9747e820eb37dc7d0d7ce092023e9a8c3f058382d66d606cb479d6af2d5a1e"
+    },
+    {
+      "file": "f5-ui-after.png",
+      "bytes": 13875,
+      "sha256": "84909e6218d87de9a73f0f12aebbba7deed9a62c25302078c322f091047ca47e"
+    },
+    {
+      "file": "f5-ui-pixel-diff.json",
+      "bytes": 428,
+      "sha256": "8d365d72aa00760661bc0d6bf7ba29dc0ee7421f80b0d0ab1deb34ef6a378f1f"
+    },
+    {
+      "file": "f5-ui-text.json",
+      "bytes": 528,
+      "sha256": "360e4db6ce609ab2548d483953c5df3255010cc8ed17b451216f2d1022ce4e4c"
+    },
+    {
+      "file": "f5-ui-text.log",
+      "bytes": 167,
+      "sha256": "dbd7cc53553d18b014282f82dcd325efe7e363c3beefd9bc8afbc2dcd79b6400"
+    },
+    {
+      "file": "f5-ui-text.deckcraft",
+      "bytes": 8466,
+      "sha256": "9340fe25c28149cc03bb2c0c09cd3c1f50894f2c78f7bfacefb57130f6286d2a"
+    },
+    {
+      "file": "f5-ui-text.pptx",
+      "bytes": 26221,
+      "sha256": "529f5c0b8048c207d7775c0a6f109f6a9f9b29dd0276f058e02a7f8dcd2496ad"
+    },
+    {
+      "file": "f5-ui-unsupported.json",
+      "bytes": 566,
+      "sha256": "2cd99cc1132dac959e3a47e084c0bfbff17246b2dd870e79106b380deb73c4a3"
+    },
+    {
+      "file": "f5-ui-unsupported.log",
+      "bytes": 173,
+      "sha256": "b4ad05fb48b9e6ee1616ec8af73bf1c0fe5ff1acb2cda62abdad6d33b85d87a2"
+    },
+    {
+      "file": "f5-response-loss.json",
+      "bytes": 979,
+      "sha256": "2811ef1827a30f16dd591a57d3090d0dcbe63d432d874865f2774a52fa474929"
+    },
+    {
+      "file": "f5-response-loss.log",
+      "bytes": 150,
+      "sha256": "66bffb3a4760a9a4e707f35977db2d5cfa1e00070822e58b9c20f7a3c2e6123d"
+    },
+    {
+      "file": "f5-reload.json",
+      "bytes": 813,
+      "sha256": "8ed70f7f6da9cf736f991dbd08db22b292153cd40f8858d7c239a0be49f3cf93"
+    },
+    {
+      "file": "f5-reload.log",
+      "bytes": 108,
+      "sha256": "24f7f3ce30d81c18d5da1a921e2693a171d1045f90ed209bc96ff683e96f872f"
+    },
+    {
+      "file": "f5-reload-navigation-failed.json",
+      "bytes": 676,
+      "sha256": "0fe9d73f6486c8d47d4f4e5df7294f5fed12066250a7b1a7fa86a95a17b79b18"
+    },
+    {
+      "file": "f5-clippy-first-failed.log",
+      "bytes": 6711,
+      "sha256": "361eb351e926db55f0c0f230bab39e7f20cb20cc0c926bced2d3092daf0ac917"
+    },
+    {
+      "file": "f5-real-svg-fixture.json",
+      "bytes": 1510,
+      "sha256": "54882d4e1f49e1396d2ebf72c5e8ea7488c7134f46a7e5b805aacaa5022fdcbb"
+    },
+    {
+      "file": "f5-original.svg",
+      "bytes": 496,
+      "sha256": "7bc6fd0e8b05dedcd0c3aceeb17c342de194da2446271458abfab646b8367917"
+    },
+    {
+      "file": "f5-preview.png",
+      "bytes": 2428,
+      "sha256": "a0dae6730ec0ed7cfc2cb65a429f8120497f19d5e687cff7054c0e1e9edb76cd"
+    },
+    {
+      "file": "f5-text-fixture.json",
+      "bytes": 1344,
+      "sha256": "5bf9cf3a135ff2dc0a0adbae14de1cf4141e774e67cd2716b2a2bc119a8c0cfe"
+    },
+    {
+      "file": "f5-text.svg",
+      "bytes": 486,
+      "sha256": "ddbe38ed80f5017bdb1c6e79c3b89c10b6a28c4e11ffae9990e7942979abb28c"
+    },
+    {
+      "file": "f5-text-preview.png",
+      "bytes": 2763,
+      "sha256": "44530ba83a3fa07c67183a154e34df3d44f7ad94a5db41668ec4bc9b74a9f8c0"
+    },
+    {
+      "file": "f5-native-final.log",
+      "bytes": 3830,
+      "sha256": "1817985af3decde39ec6c58845c1e2a0bd0830317c706441a99b88c2693cfd5b"
+    },
+    {
+      "file": "f5-clippy.log",
+      "bytes": 1303,
+      "sha256": "ac2fe94ad60b2ad28f1863b1accd7b4e45ec44f3e307ee09ac24b2deef714cf9"
+    },
+    {
+      "file": "f5-wasm-check.log",
+      "bytes": 3913,
+      "sha256": "0e75df37fc4070ccf47c144387a939566383207f4ce0682400c6336db6d98ec3"
+    },
+    {
+      "file": "f5-final-targeted.tap",
+      "bytes": 3202,
+      "sha256": "9312083a024b4804b5b45f3fb3b519695764fb62e92a6fc858472d2d64adb2ae"
+    },
+    {
+      "file": "ui34-host-check.log",
+      "bytes": 200,
+      "sha256": "7d4813acec3a78b2df65266f83482cf3a949aa22dfd5a7315b8a0ba3d7c3238d"
+    },
+    {
+      "file": "deck-build-result.json",
+      "bytes": 8218,
+      "sha256": "203206f21a0a49030fa0a1f8babef6ff86651c8b408110ee6584af7a685e63f2"
+    },
+    {
+      "file": "deck-build.log",
+      "bytes": 2233,
+      "sha256": "36f192934702818860a790b408b6237357db9aa5e481387e11f260ebf26c3613"
+    },
+    {
+      "file": "svg-deck-browser.json",
+      "bytes": 4850,
+      "sha256": "025314bb6736988fce50a1932574298d6eff8cd3d3eea293de1214829841204f"
+    },
+    {
+      "file": "svg-deck-browser.log",
+      "bytes": 317,
+      "sha256": "4e8670d9cb4afaf6ef20478d31bcbbf75a04810cfa2d1d8d3656b29ee9d83d2a"
+    },
+    {
+      "file": "host-native-deck-conversion.js",
+      "bytes": 4382,
+      "sha256": "22ad590645d9db3e8e507fd605c67af0be7f50162257c749a8003b1ddfe1df73"
+    },
+    {
+      "file": "host-project-graph.js",
+      "bytes": 56988,
+      "sha256": "b477350b5f69f784cff0f7b0bfb1c111826a197f27dc13ef6c1679643be03107"
+    },
+    {
+      "file": "host-native-source-store.js",
+      "bytes": 17601,
+      "sha256": "93cab4de0f980464ec79a206905153bef3ec8a6b9e07affe68664f24478a2f30"
+    },
+    {
+      "file": "host-editor-session.js",
+      "bytes": 59963,
+      "sha256": "c40e2d1bfeec7408d0dcd4b313cd25b2e8b4833365dde14529b72e7ccf703025"
+    },
+    {
+      "file": "host-editor-routes.js",
+      "bytes": 8753,
+      "sha256": "14c86d773aa7f0ff8ea80953549974c8e3117d8dccd130094877bc95a8e326e9"
+    },
+    {
+      "file": "host-editor-tools.js",
+      "bytes": 7671,
+      "sha256": "c3e2ef432616f80f2021b2a626fe0c4e177df581b850421b82ae4d1b8fa333a7"
+    },
+    {
+      "file": "host-editor-policy.js",
+      "bytes": 2141,
+      "sha256": "ca93aa7843bc4cd45ab3a179cf02102ad4b92cda65de6a9fce3b4363dca4e41d"
+    },
+    {
+      "file": "client-native-controller.js",
+      "bytes": 79747,
+      "sha256": "c9c79382ab91e0dff0482e4fd4facae22fb30366b4a65596e07895355de275ab"
+    },
+    {
+      "file": "client-native-workspace.js",
+      "bytes": 36850,
+      "sha256": "6d54f645529b19519f8b514a7d4ff4f47f162b1e4de7d9e1e13b94368bf54cb7"
+    },
+    {
+      "file": "native-svg_convert.rs",
+      "bytes": 30895,
+      "sha256": "b9cf30f24664370337fe8b0bb16dddc4c30dabe6aa745128b6372e81e7d9715a"
+    }
+  ]
+}

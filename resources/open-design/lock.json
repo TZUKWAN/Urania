@@ -1,0 +1,230 @@
+{
+  "repository": "nexu-io/open-design",
+  "revision": "12d970eacc8971150e3c76470d2a9afe16dc2ed1",
+  "license": "Apache-2.0",
+  "styles": [
+    "default",
+    "editorial",
+    "corporate",
+    "clean",
+    "bold"
+  ],
+  "files": [
+    {
+      "path": "LICENSE",
+      "source": "https://raw.githubusercontent.com/nexu-io/open-design/12d970eacc8971150e3c76470d2a9afe16dc2ed1/LICENSE",
+      "bytes": 11296,
+      "sha256": "9d95806a26532623360eb84bb17d298f394b55ef73fb4c0796d99b4319b2b0da"
+    },
+    {
+      "path": "design-systems/default/manifest.json",
+      "source": "https://raw.githubusercontent.com/nexu-io/open-design/12d970eacc8971150e3c76470d2a9afe16dc2ed1/design-systems/default/manifest.json",
+      "bytes": 1684,
+      "sha256": "3341b0456a8ec0917c0ba11233b58ccd4e0c02d2d8d5e1cbbd4e0ebbf1af5ff4"
+    },
+    {
+      "path": "design-systems/default/DESIGN.md",
+      "source": "https://raw.githubusercontent.com/nexu-io/open-design/12d970eacc8971150e3c76470d2a9afe16dc2ed1/design-systems/default/DESIGN.md",
+      "bytes": 2839,
+      "sha256": "aeba1b5aa9db00f7e08616c0ffb2ee3408ff96edaa2fc26709743eecf13045d7"
+    },
+    {
+      "path": "design-systems/default/design-tokens.json",
+      "source": "https://raw.githubusercontent.com/nexu-io/open-design/12d970eacc8971150e3c76470d2a9afe16dc2ed1/design-systems/default/design-tokens.json",
+      "bytes": 20433,
+      "sha256": "8e85abb0e1bda9841efac02674003909f5073b7d23d5b306dbdc56612ed9a36f"
+    },
+    {
+      "path": "design-systems/default/tokens.css",
+      "source": "https://raw.githubusercontent.com/nexu-io/open-design/12d970eacc8971150e3c76470d2a9afe16dc2ed1/design-systems/default/tokens.css",
+      "bytes": 10963,
+      "sha256": "af18264f698dd2ee30f1227108fd7dee9eb94d08aaa2570d83a5a5bb85d0b321"
+    },
+    {
+      "path": "design-systems/default/USAGE.md",
+      "source": "https://raw.githubusercontent.com/nexu-io/open-design/12d970eacc8971150e3c76470d2a9afe16dc2ed1/design-systems/default/USAGE.md",
+      "bytes": 1436,
+      "sha256": "75240e73f72bb0f29bfe870db4582d954def1879816ccca51aa66ffb55b56f00"
+    },
+    {
+      "path": "design-systems/default/system/artifacts/poster.html",
+      "source": "https://raw.githubusercontent.com/nexu-io/open-design/12d970eacc8971150e3c76470d2a9afe16dc2ed1/design-systems/default/system/artifacts/poster.html",
+      "bytes": 5881,
+      "sha256": "2b1edce59ee73512b080014432dc5eb5d6eaf7d78341696be4fa015193473b79"
+    },
+    {
+      "path": "design-systems/default/system/artifacts/deck.html",
+      "source": "https://raw.githubusercontent.com/nexu-io/open-design/12d970eacc8971150e3c76470d2a9afe16dc2ed1/design-systems/default/system/artifacts/deck.html",
+      "bytes": 5875,
+      "sha256": "9119ad0ef42edf07ed06e9ae9c240ec8e7db2de615e9dc92477f0600a8b90f8d"
+    },
+    {
+      "path": "design-systems/editorial/manifest.json",
+      "source": "https://raw.githubusercontent.com/nexu-io/open-design/12d970eacc8971150e3c76470d2a9afe16dc2ed1/design-systems/editorial/manifest.json",
+      "bytes": 1340,
+      "sha256": "05146d509397e0a56452a1263d4e356ac3dc5a3e9101a3346ced6339c3436d03"
+    },
+    {
+      "path": "design-systems/editorial/DESIGN.md",
+      "source": "https://raw.githubusercontent.com/nexu-io/open-design/12d970eacc8971150e3c76470d2a9afe16dc2ed1/design-systems/editorial/DESIGN.md",
+      "bytes": 3053,
+      "sha256": "fc2b9e3dddf4911796911cd0d11b8a02f039d74a96a361e67fea4fc2b1775e31"
+    },
+    {
+      "path": "design-systems/editorial/design-tokens.json",
+      "source": "https://raw.githubusercontent.com/nexu-io/open-design/12d970eacc8971150e3c76470d2a9afe16dc2ed1/design-systems/editorial/design-tokens.json",
+      "bytes": 20300,
+      "sha256": "896cf9f004ad3de2d0ba6416a27d66adde2769343db1ab63a94959d112de08b5"
+    },
+    {
+      "path": "design-systems/editorial/tokens.css",
+      "source": "https://raw.githubusercontent.com/nexu-io/open-design/12d970eacc8971150e3c76470d2a9afe16dc2ed1/design-systems/editorial/tokens.css",
+      "bytes": 1748,
+      "sha256": "47f3dea08a51dac4781b790b9bf4096ef7965d597358fe956aed23f0577308e9"
+    },
+    {
+      "path": "design-systems/editorial/USAGE.md",
+      "source": "https://raw.githubusercontent.com/nexu-io/open-design/12d970eacc8971150e3c76470d2a9afe16dc2ed1/design-systems/editorial/USAGE.md",
+      "bytes": 1503,
+      "sha256": "465156eecc7ed8872ca85d03411542f29cca284abe6d9b1ba49bc31fdcdaf458"
+    },
+    {
+      "path": "design-systems/editorial/system/artifacts/poster.html",
+      "source": "https://raw.githubusercontent.com/nexu-io/open-design/12d970eacc8971150e3c76470d2a9afe16dc2ed1/design-systems/editorial/system/artifacts/poster.html",
+      "bytes": 5730,
+      "sha256": "659890681d6bb9f137378c821be66748c4a76bc611dab0479ddf240a55c3dd54"
+    },
+    {
+      "path": "design-systems/editorial/system/artifacts/deck.html",
+      "source": "https://raw.githubusercontent.com/nexu-io/open-design/12d970eacc8971150e3c76470d2a9afe16dc2ed1/design-systems/editorial/system/artifacts/deck.html",
+      "bytes": 5724,
+      "sha256": "e6abcd46940debe1a0a17310c1f3ae7e3b0c197966a00bb9ef32a836aa9b445b"
+    },
+    {
+      "path": "design-systems/corporate/manifest.json",
+      "source": "https://raw.githubusercontent.com/nexu-io/open-design/12d970eacc8971150e3c76470d2a9afe16dc2ed1/design-systems/corporate/manifest.json",
+      "bytes": 1345,
+      "sha256": "8d6989073a79c6733838c13b3cd4f2f8bd37d1b502dbe22b61ffc1d0dfac322a"
+    },
+    {
+      "path": "design-systems/corporate/DESIGN.md",
+      "source": "https://raw.githubusercontent.com/nexu-io/open-design/12d970eacc8971150e3c76470d2a9afe16dc2ed1/design-systems/corporate/DESIGN.md",
+      "bytes": 3077,
+      "sha256": "3c8c80294a48d3295738d8575e93f0cd5d85f092eae3fc9e192cb39864f0453b"
+    },
+    {
+      "path": "design-systems/corporate/design-tokens.json",
+      "source": "https://raw.githubusercontent.com/nexu-io/open-design/12d970eacc8971150e3c76470d2a9afe16dc2ed1/design-systems/corporate/design-tokens.json",
+      "bytes": 20280,
+      "sha256": "6573ae98648ad98c81fbf3e6b0c257c6f155ab0d1bb83570c106156e1d1e9143"
+    },
+    {
+      "path": "design-systems/corporate/tokens.css",
+      "source": "https://raw.githubusercontent.com/nexu-io/open-design/12d970eacc8971150e3c76470d2a9afe16dc2ed1/design-systems/corporate/tokens.css",
+      "bytes": 1728,
+      "sha256": "4f9e32beb95f1e701146b6023fb96300df51254e50c7a558bd38c161199e0f12"
+    },
+    {
+      "path": "design-systems/corporate/USAGE.md",
+      "source": "https://raw.githubusercontent.com/nexu-io/open-design/12d970eacc8971150e3c76470d2a9afe16dc2ed1/design-systems/corporate/USAGE.md",
+      "bytes": 1511,
+      "sha256": "b482cf110efe4d94661e1b6f864fa0fbfa4d07e9f8a1237c85762ac7fa52572e"
+    },
+    {
+      "path": "design-systems/corporate/system/artifacts/poster.html",
+      "source": "https://raw.githubusercontent.com/nexu-io/open-design/12d970eacc8971150e3c76470d2a9afe16dc2ed1/design-systems/corporate/system/artifacts/poster.html",
+      "bytes": 5704,
+      "sha256": "9a0c511a651edd840dab4a0907fdb16e3fcb9a6ba520af85b92d640d97e0dab8"
+    },
+    {
+      "path": "design-systems/corporate/system/artifacts/deck.html",
+      "source": "https://raw.githubusercontent.com/nexu-io/open-design/12d970eacc8971150e3c76470d2a9afe16dc2ed1/design-systems/corporate/system/artifacts/deck.html",
+      "bytes": 5698,
+      "sha256": "c4655fff331a289df4cded27954dd0c2f5e4bba62e84779ab5c32bb87534fbed"
+    },
+    {
+      "path": "design-systems/clean/manifest.json",
+      "source": "https://raw.githubusercontent.com/nexu-io/open-design/12d970eacc8971150e3c76470d2a9afe16dc2ed1/design-systems/clean/manifest.json",
+      "bytes": 1325,
+      "sha256": "01271a88c31251ea8c57bdc10d4f896062b9575d6a0aa5caf944950334f9e72a"
+    },
+    {
+      "path": "design-systems/clean/DESIGN.md",
+      "source": "https://raw.githubusercontent.com/nexu-io/open-design/12d970eacc8971150e3c76470d2a9afe16dc2ed1/design-systems/clean/DESIGN.md",
+      "bytes": 3060,
+      "sha256": "a24ab35183490435c5a7aad7d372155a82a8d36c65872433385cebdbe02bfd54"
+    },
+    {
+      "path": "design-systems/clean/design-tokens.json",
+      "source": "https://raw.githubusercontent.com/nexu-io/open-design/12d970eacc8971150e3c76470d2a9afe16dc2ed1/design-systems/clean/design-tokens.json",
+      "bytes": 20274,
+      "sha256": "47eac4c1f040f2d64821028e3aefb4de902fd47eaff6ff55639c04c37db71cf4"
+    },
+    {
+      "path": "design-systems/clean/tokens.css",
+      "source": "https://raw.githubusercontent.com/nexu-io/open-design/12d970eacc8971150e3c76470d2a9afe16dc2ed1/design-systems/clean/tokens.css",
+      "bytes": 1697,
+      "sha256": "f3ad1e89d3074a542d61f207ad5825167984d020fa9d788791883ad41d0bc928"
+    },
+    {
+      "path": "design-systems/clean/USAGE.md",
+      "source": "https://raw.githubusercontent.com/nexu-io/open-design/12d970eacc8971150e3c76470d2a9afe16dc2ed1/design-systems/clean/USAGE.md",
+      "bytes": 1502,
+      "sha256": "f22d8a2b91a404a227130d3d719af0a0fb7e9b583ab7b817f3426e20298a8134"
+    },
+    {
+      "path": "design-systems/clean/system/artifacts/poster.html",
+      "source": "https://raw.githubusercontent.com/nexu-io/open-design/12d970eacc8971150e3c76470d2a9afe16dc2ed1/design-systems/clean/system/artifacts/poster.html",
+      "bytes": 5681,
+      "sha256": "50b9eb4712c3644362f4df09246858be8efb21ec4ab8c88bd4c2b2c452c1def7"
+    },
+    {
+      "path": "design-systems/clean/system/artifacts/deck.html",
+      "source": "https://raw.githubusercontent.com/nexu-io/open-design/12d970eacc8971150e3c76470d2a9afe16dc2ed1/design-systems/clean/system/artifacts/deck.html",
+      "bytes": 5675,
+      "sha256": "6ee96e3c8af9b05c902bd618b6e7e36c1f9731031d3fefe6cadc96a5329f6d93"
+    },
+    {
+      "path": "design-systems/bold/manifest.json",
+      "source": "https://raw.githubusercontent.com/nexu-io/open-design/12d970eacc8971150e3c76470d2a9afe16dc2ed1/design-systems/bold/manifest.json",
+      "bytes": 1323,
+      "sha256": "778d0cc91d40602f13c6f3cfad630e364da7336896d579987784f3a010c01df2"
+    },
+    {
+      "path": "design-systems/bold/DESIGN.md",
+      "source": "https://raw.githubusercontent.com/nexu-io/open-design/12d970eacc8971150e3c76470d2a9afe16dc2ed1/design-systems/bold/DESIGN.md",
+      "bytes": 3003,
+      "sha256": "91ccb39dbfdf2388d28c4dad2a8b88bf4340a98c0e72dd2a829d26507ecc1f8c"
+    },
+    {
+      "path": "design-systems/bold/design-tokens.json",
+      "source": "https://raw.githubusercontent.com/nexu-io/open-design/12d970eacc8971150e3c76470d2a9afe16dc2ed1/design-systems/bold/design-tokens.json",
+      "bytes": 20277,
+      "sha256": "a99e6a83f578ecbbe2e04f7d8fc100811023587a9c2cfe183bd046c0cc97c8df"
+    },
+    {
+      "path": "design-systems/bold/tokens.css",
+      "source": "https://raw.githubusercontent.com/nexu-io/open-design/12d970eacc8971150e3c76470d2a9afe16dc2ed1/design-systems/bold/tokens.css",
+      "bytes": 1699,
+      "sha256": "29c81cda0ecfbb41cd0b6be50127ca8ef52479759332c078f4c61efdbcc81568"
+    },
+    {
+      "path": "design-systems/bold/USAGE.md",
+      "source": "https://raw.githubusercontent.com/nexu-io/open-design/12d970eacc8971150e3c76470d2a9afe16dc2ed1/design-systems/bold/USAGE.md",
+      "bytes": 1467,
+      "sha256": "e6ce6ef19e3f679b1a1ff7016498cb22799f626432e1967e9b2cad6d3497cc0d"
+    },
+    {
+      "path": "design-systems/bold/system/artifacts/poster.html",
+      "source": "https://raw.githubusercontent.com/nexu-io/open-design/12d970eacc8971150e3c76470d2a9afe16dc2ed1/design-systems/bold/system/artifacts/poster.html",
+      "bytes": 5683,
+      "sha256": "43e8d69df3a48f16e044d025c6cb964e21ebc26a7ca24a5a6d755aaa1e8dfd1e"
+    },
+    {
+      "path": "design-systems/bold/system/artifacts/deck.html",
+      "source": "https://raw.githubusercontent.com/nexu-io/open-design/12d970eacc8971150e3c76470d2a9afe16dc2ed1/design-systems/bold/system/artifacts/deck.html",
+      "bytes": 5677,
+      "sha256": "c4fb259dc1f9197611b4c3209ed5d7385528cf2f9276267ddb8b5e15aa391572"
+    }
+  ]
+}

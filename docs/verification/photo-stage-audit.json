@@ -1,0 +1,204 @@
+{
+  "schema": 1,
+  "status": "passed_scoped_photo_stage",
+  "updatedAt": "2026-11-04T16:47:48.215354+00:00",
+  "originalChat": "01a19111-0093-71d1-9b87-ff7f32fe796c",
+  "productRoot": "D:\\METIS超级合并\\dsh-plugin\\designcraft",
+  "fullScopeComplete": false,
+  "diskBuild": {
+    "version": "1.3.0-dev.11",
+    "uiBuild": 25,
+    "photoRuntime": "0.18.0+designcraft.host3",
+    "userWindowLoadedVersionVerified": false
+  },
+  "freshChecks": {
+    "nativeVectorHeaderAndGraph": 10,
+    "photoCoreProjectJourney": 6,
+    "originalPlacementRepair": 3,
+    "nativeHosted": 8,
+    "statePublicationSurface": 1,
+    "physicalToolsSourceReopenAndImports": 9,
+    "actualConfiguredKimiMaskLayerRoute": 4
+  },
+  "commands": [
+    "node --test --test-reporter=tap tests/native-vector-header.test.mjs tests/project-graph.test.mjs",
+    "python -u work/designcraft-unified/test_photo_workspace.py",
+    "python -u work/repair_photo_placement.py",
+    "cargo test -p photocraft-ui-egui --lib control::hosted::tests",
+    "pwsh -NoProfile -File work/designcraft-unified/build_photo.ps1",
+    "python -u work/designcraft-unified/adopt_photo_build.py --host-build 3",
+    "node --check client/editor-frame.js",
+    "python -u work/test_photo_state_publication.py",
+    "python -u work/test_photo_tools.py",
+    "python -u work/test_photo_kimi.py",
+    "npm run check"
+  ],
+  "sourceCheck": {
+    "javascriptFiles": 68,
+    "syntax": "passed",
+    "nativeBinaries": 4,
+    "runtimeHashes": "passed",
+    "resourceFiles": 36,
+    "resourceHashes": "passed"
+  },
+  "fixes": [
+    "Inherited native Vector v4 binary-image header inspection fix verified in real Photo-to-Vector placement; original pending receipt repaired without replay or changed source bytes.",
+    "Native pending crop/transform ownership guard now refuses competing edits and checkpoint acknowledgement until actual completion.",
+    "Frame state publication now includes pendingInteraction, so actual cancellation is reported even when content revision is unchanged.",
+    "Removed repeated --converge compression while retaining standard -Oz and all build/source/font/hash/runtime gates."
+  ],
+  "failuresResolved": [
+    "Native pending-crop regression failed on old source, then focused native8 passed.",
+    "JSON macro recursion after inspection fields was fixed by inserting fields outside the large macro; native build/tests pass.",
+    "Regression transform setup corrected to call the genuine native transform entry point.",
+    "Surface regression focus was corrected to the actual canvas; before-fix ended native context had pending=false while published events stayed true, then after-fix published true->false at the same revision.",
+    "Tool harness now waits for actual native/backend/foreground completion; deselect is not called when no selection exists.",
+    "Filter validation explicitly targets pixels with actual Ctrl+2 after hand mask work; native masks correctly stay selected until changed.",
+    "Repeated-convergence build was intentionally canceled and never published; subsequent real build finished with sourceMatches=true."
+  ],
+  "mainModelReview": "Reviewed actual native source/pixels, original source hash, production state-event code, real registered-tool implementation and model tool events; scoped assertions pass and rendered UI inspected. No full50 completion inference.",
+  "model": {
+    "provider": "kimi-coding",
+    "model": "kimi-for-coding",
+    "newActualTurns": 1,
+    "observedSupportedToolCalls": 2,
+    "imageServiceCalls": 0
+  },
+  "runtimeIntegrity": {
+    "files": 23,
+    "allHashesMatch": true,
+    "sourceFiles": {
+      "crates/io/src/lib.rs": "28ee836b72c595f92e3f518db52795083098823c76cf9fe5a94732dcc106517d",
+      "crates/io/src/flat.rs": "073142f95df5c28c387b39a1bc6249daf8db86404fd13c4a5a3f9ecb73663791",
+      "crates/io/src/embedded_import.rs": "804c0b96d87d61687209978f28eade05dbe3a10f4f9ad826fbbba87d98a11193",
+      "crates/ui-egui/src/lib.rs": "ac35381e361bb9719a5b1002e2b5044bff2ac7eb9e22f550856e12e1402702df",
+      "crates/ui-egui/src/app.rs": "7ede804fe6a88b1b3ec166a99731b5c96fa066b1a6847c531e623aac9729c5f7",
+      "crates/ui-egui/src/app/control.rs": "279aa79e3819338ab898e68dbd9866d233310b9a1c258f8a55c272723c909fae",
+      "crates/ui-egui/src/app/commands.rs": "b9bfbf51c44355d85141bac627ffd61328cbb44e7fcfd407ab1aac7cb72fea8d",
+      "crates/ui-egui/src/control.rs": "30e2540e44fd6f821a78270558c470f0e206e224116ad4002aa813408edc08a3",
+      "crates/ui-egui/src/control/dispatch.rs": "900b6138ba3fd0771a1dbae9e942c5fd3b0c86d9d7489afb4a51025f07981dbe",
+      "crates/ui-egui/src/control/inspect.rs": "e80833a09b39947c84db2c18aabfd36bd44cae3ee0905125558a0ea84c16771e",
+      "crates/ui-egui/src/control/hosted.rs": "cc469d3b2b3165f054ac59a27f9ac819f8c0eed24c3660c5cec6764cba5e1f5e",
+      "crates/ui-egui/src/control/hosted_tests.rs": "5551848e524dc76afc06f408c7128695424c675c5a23577323907bd2e94ef24e",
+      "crates/ui-egui/src/menus/invoke.rs": "84367dbcfd73776a5c518cb1a7754a1f5cb5ebbc7091a71dd8419a8c56808418",
+      "crates/ui-egui/src/panels/title_bar.rs": "85624d1b4e3e4049d6280bdba366b03db023cf250edc129d13e1f1832a48a3f8",
+      "apps/photocraft-web/Cargo.toml": "e8474cd920d4b45a0dc221683fadde350a5d463c06476d7dc79594f96d8cff5b",
+      "apps/photocraft-web/src/main.rs": "a4fecd2009f99b07cd2071d33ecdf42534d7fdff311f2efd71b464274ce0a7fd",
+      "apps/photocraft-web/src/api.rs": "759d2e295b3e20bcddce26560a19a57c1e76172a5ad1ea3de39182f898b5fd66",
+      "apps/photocraft-web/src/web.rs": "fdb6f0829616b669f372582cb2a43c9625679b325c1efbfe3958042420cf930f",
+      "apps/photocraft-web/index.html": "c391361272bbc10d3e9bc1675c61b11acf9d8b2557e22770b3425f67c2737806",
+      "apps/photocraft-web/Trunk.toml": "ad91d60bdce8772c36982df9f9b32f5673714da1ca32a525fd4c2536d34727d3",
+      "crates/io/src/pcraft_cache.rs": "2d06ea7642b399edf8c79749360fd7ae66d85c2c22905287b7b3a5e489b54c71",
+      "crates/ui-egui/src/prefs/prefs_ui/appearance.rs": "8c3a0391a9ea21c9b99fb7dcd3c072c59466cc540bf08e4f437c42687adc8a95"
+    },
+    "buildLogSha256": "37270ae248734aabbd350fc005302ede1b907dc83c2578a1f9e16d29e5ab7dac"
+  },
+  "scopeBoundaries": [
+    "Project/PNG-to-Vector journey6 was observed on host2 earlier in this continuation; host3 physical tools/imports/reopen9, native8, state publication1 and Kimi4 are the new gates.",
+    "pcraft/PNG/JPEG core source paths and native U16 import are verified; PSD/TIFF/other advanced hosted formats and complete native file menus are not declared complete.",
+    "Photo coverage is a genuine native source-backed surface; standalone exact-alpha export/inpaint/image services remain pending.",
+    "Deck persistent editing, copy-on-write and in-place/live linked updates, complete OD/brand/HTML-PPTX/image services/variants/exports/projectpack/migration and full50 audit remain unfinished.",
+    "Owned headless DSH with software rendering; no user desktop or user DSH restart, actual user-window loaded version unknown."
+  ],
+  "evidence": [
+    {
+      "file": "photo-workspace.json",
+      "bytes": 3452,
+      "sha256": "4fe8bf3e5c4dd06e4b51e6193e6e115871566e25f2b537b5c1daa7ff755287f5"
+    },
+    {
+      "file": "photo-original-placement-repair.json",
+      "bytes": 1277,
+      "sha256": "18501a30059bf763575f3a9c0f802f3c704a5bef4bf1c9f720d46039987f1d00"
+    },
+    {
+      "file": "photo-state-publication.json",
+      "bytes": 62567,
+      "sha256": "87f37f5ec7bb9d21ee8083e0c55bea5b0963ce974205ea3aa057873e6060a51e"
+    },
+    {
+      "file": "photo-tools.json",
+      "bytes": 3602,
+      "sha256": "e6cf44e80664cb5b241f9aeb7dea8eddefda14a5f910768f82fa0f27690dbfa9"
+    },
+    {
+      "file": "photo-kimi.json",
+      "bytes": 53032,
+      "sha256": "5400bbb656e0c09583973a49017431f173f250571e872d3f927bf45d606d2ba4"
+    },
+    {
+      "file": "photo-hosted-after-fix.log",
+      "bytes": 2319,
+      "sha256": "f245590730333c7631fbacd145c377e4e9dbdc00fa08b45859612f83732fc770"
+    },
+    {
+      "file": "source-check-after-photo.log",
+      "bytes": 200,
+      "sha256": "e0dcb78248668b47d79753e37d12cbd1ec8d553701f6e30729233550b82fdee0"
+    },
+    {
+      "file": "photo-crop-before-fix.log",
+      "bytes": 2848,
+      "sha256": "227ffc9200dfb1cf195897a84b7615d031159fd873329736923df5d91645eee1"
+    },
+    {
+      "file": "photo-state-before-fix.json",
+      "bytes": 62392,
+      "sha256": "ef9ae4b2aad909f6a6868d04c24a6830cf5e849d3e216449fc9a9c6127268118"
+    },
+    {
+      "file": "photo-optimization-decision.json",
+      "bytes": 3360,
+      "sha256": "925afdc92236fe7c1bee587057376cdfe284658947ef1e36aa8496cd63d9e9a1"
+    },
+    {
+      "file": "photo-build-result.json",
+      "bytes": 2628,
+      "sha256": "3c74ab415a39d2dda4cd1dcad99540e0858bf8b90fc46003ad531a2232abcf2a"
+    },
+    {
+      "file": "photo-build.log",
+      "bytes": 3274,
+      "sha256": "37270ae248734aabbd350fc005302ede1b907dc83c2578a1f9e16d29e5ab7dac"
+    },
+    {
+      "file": "photo-tools-ui.png",
+      "bytes": 162292,
+      "sha256": "ebe808b5387c917db8a8b7fb629f36295b1ebba7793664439177fe0fefd24ae5"
+    },
+    {
+      "file": "photo-tools-render.png",
+      "bytes": 3367,
+      "sha256": "54d0eaf63105d9bcd163dba33e5229ba16f9a1a8cadb632b93d081f56fd4c239"
+    },
+    {
+      "file": "photo-tools.pcraft",
+      "bytes": 8362,
+      "sha256": "0eb89657be2b6562f23ca7f1a2250ef59741ef6dc9690a1516eb214c55f6a423"
+    },
+    {
+      "file": "photo-kimi-ui.png",
+      "bytes": 214684,
+      "sha256": "0d97cdc4166e0cfe6fe4d88245f5c8b41984944561805c9aa32fbfd19469452c"
+    },
+    {
+      "file": "photo-kimi-transcript.txt",
+      "bytes": 1060,
+      "sha256": "82e0dd79b6fbbeba2ed0aba5c1c09edc0575f39254a6e8a003209dc45cbcddc1"
+    },
+    {
+      "file": "photo-kimi.pcraft",
+      "bytes": 9268,
+      "sha256": "1e91bcd041be7e657638160714135f6050c00b6ea0503ff84786c61346a0f3b4"
+    }
+  ],
+  "modifiedProductFileHashes": {
+    "client/editor-frame.js": "4a2ce79f555233e7ed5766dcf39963f57cd40305f8e96fabb17095622c73d7f4",
+    "host/native-vector-header.js": "dbf26ef41ddfbbec6740b57e0f21bb7ff76894e850b5d6516eb21d895fc166eb",
+    "host/project-graph.js": "bd90951eda4abd1eaa25a52c50884f63530a84ea29e9976314a597919938ae5d",
+    "web-runtime-lock.json": "b440ed4291b5806a35b0a5eb9712928b770a41864d5199fc14e2fa0c5e7fad60",
+    "README.md": "ea89ce4a5358790c6eb200a0a9766ab3a6beeacbcc17f965ba2639a231cc7cb2",
+    "docs/capability-matrix.json": "601c6778327cb42a0fa53588680d476d69d5f9e515c3cc368407b752d07e8400",
+    "docs/photo-execution-plan.json": "2d656cd6b27edf735a2b019d7518bf7718656a439b6845d69e071d819c86d6a8"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "status": "partial",
+  "at": "2026-11-08T10:21:20.481274+00:00",
+  "scope": "Verified segments of the five approved user journeys, not a claim that any whole journey passed.",
+  "segments": [
+    {
+      "journey": "A",
+      "verified": "Historical actual Kimi/OD SVG creation, physical text/path edits, targeted Kimi continuation and SVG export/reimport.",
+      "evidence": "verification/kimi-opendesign-resume.json",
+      "remaining": "The exact specified color/node/outline sequence plus independent copy and brand placement in the same single journey has not been proven."
+    },
+    {
+      "journey": "B",
+      "verified": "Historical real Kimi-edited, manually refined Photo source matched its saved SHA, was imported, placed in Deck, physically moved, exported and reimported with exact media.",
+      "evidence": "verification/ui45-kimi-photo-deck.pptx",
+      "remaining": "The prescribed page-3 in-place cleanup, soft-edge repair, preserved crop/rotation/group and subsequent actual AI layout have not all been demonstrated in one run."
+    },
+    {
+      "journey": "C",
+      "verified": "One real branded poster, social graphic and deck with bound colors, manual changes, local override and project-package roundtrip.",
+      "evidence": "verification/brand-package-audit.json",
+      "remaining": "The complete requested five-slide agenda and all specified manual edits in the same journey remain to be checked."
+    },
+    {
+      "journey": "D",
+      "verified": "Actual HTML preview, PPTX conversion report, native text editing and PPTX reimport; SVG and raster media recorded separately.",
+      "evidence": "verification/ui45-html-acceptance.json",
+      "remaining": "Confirm the exact original OD example and all requested structure checks together."
+    },
+    {
+      "journey": "E",
+      "verified": "Actual manual takeover, stale edit refusal, saved-source recovery, parent return and renderer-failure samples in the owned DSH.",
+      "evidence": "verification/ui45-data-protection-acceptance.json",
+      "remaining": "Confirm the prescribed conflict, interrupted save, failed editor and restored instance layout together in one end-to-end journey."
+    }
+  ],
+  "photoDeckRaw": {
+    "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-kimi-photo-deck-journey.json",
+    "sha256": "185bab9a16ca587ffe41c4f361d0595ce3b6d7d74f81775d000d60b68a4d4788"
+  },
+  "historicalPhotoSourceSha256": "1e91bcd041be7e657638160714135f6050c00b6ea0503ff84786c61346a0f3b4",
+  "limitations": [
+    "The Photo-to-Deck segment reused a source from an earlier actual Kimi turn; no new model call occurred.",
+    "Current Kimi requests have returned a real quota 429, so new model-dependent steps remain blocked until the service is available."
+  ]
+}

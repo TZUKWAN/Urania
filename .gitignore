@@ -1,0 +1,38 @@
+# Local credentials and user projects
+.env
+.env.*
+!.env.example
+.npmrc
+.pypirc
+auth.json
+credentials.json
+*.pem
+*.key
+
+# Local dependencies, build caches and private validation sessions
+node_modules/
+**/node_modules/
+.work/
+**/.work/
+.cache/
+__pycache__/
+target/
+.venv/
+CLAUDE_STATE.md
+.claude/
+.runtime-download/
+
+# Compiled runtimes are provided as a checksummed GitHub Release archive
+runtimes/**/*.exe
+runtimes/**/*.dll
+runtimes/**/*.wasm
+runtimes/**/*.pdb
+runtimes/*.exe
+
+# Raw local validation captures and user conversation plans
+docs/approved-plan.txt
+docs/verification/*/
+tests/tmp-*
+tests/ui-*.png
+tests/dsh-*.png
+*.log

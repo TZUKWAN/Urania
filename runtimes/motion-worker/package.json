@@ -1,0 +1,14 @@
+{
+  "name": "designcraft-motion-worker",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Trusted motion edit/render worker runtime — pinned HyperFrames 0.9.44 family. Never imported by, or resolved from, user-editable projects.",
+  "type": "module",
+  "dependencies": {
+    "@hyperframes/sdk": "0.9.44",
+    "@hyperframes/player": "0.9.44",
+    "@hyperframes/producer": "0.9.44",
+    "@hyperframes/core": "0.9.44"
+  },
+  "engines": { "node": ">=22" }
+}

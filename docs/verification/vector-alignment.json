@@ -1,0 +1,384 @@
+{
+  "status": "passed",
+  "scope": "actual native browser mouse/keyboard edits in current DSH App, independent saved path geometry and source reopen; no model",
+  "codeRoot": "D:\\METIS超级合并\\dsh-plugin\\designcraft",
+  "checks": [
+    {
+      "name": "physical Shift-click selects three actual native objects and reports the exact same DSH reference IDs",
+      "pass": true,
+      "detail": {
+        "ids": [
+          2,
+          3,
+          4
+        ],
+        "sourceId": "import-6f9039e1-1664-451b-90b7-5db7f3f6938d"
+      }
+    },
+    {
+      "name": "the actual native Align Left button aligns all three path geometries and preserves the other text",
+      "pass": true,
+      "detail": {
+        "bounds": {
+          "alpha": {
+            "height": 60,
+            "width": 60,
+            "x": 60,
+            "y": 80
+          },
+          "beta": {
+            "height": 70,
+            "width": 80,
+            "x": 60,
+            "y": 200
+          },
+          "gamma": {
+            "height": 50,
+            "width": 100,
+            "x": 60,
+            "y": 110
+          }
+        },
+        "sourceId": "import-6f9039e1-1664-451b-90b7-5db7f3f6938d",
+        "revision": "73ccad4700f1ef66f05ab27b78429569f5a75926a13687a55763a409f88f1fa8",
+        "path": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\vector-alignment-project\\5ad29e86-94b4-4eca-aade-802b79f60966\\design\\.designcraft\\v2\\sources\\import-6f9039e1-1664-451b-90b7-5db7f3f6938d\\versions\\e44d7313ddc14448b9348f9271dd2cb76d8a326201502deb3b9ee7211b0bc5cc.vectorcraft"
+      }
+    },
+    {
+      "name": "physical Undo restores the exact pre-align geometry in both the App and saved source",
+      "pass": true,
+      "detail": {
+        "bounds": {
+          "alpha": {
+            "height": 60,
+            "width": 60,
+            "x": 60,
+            "y": 80
+          },
+          "beta": {
+            "height": 70,
+            "width": 80,
+            "x": 220,
+            "y": 200
+          },
+          "gamma": {
+            "height": 50,
+            "width": 100,
+            "x": 450,
+            "y": 110
+          }
+        }
+      }
+    },
+    {
+      "name": "physical Horizontal Center changes the expected native geometry, saves it and undoes cleanly",
+      "pass": true,
+      "detail": {
+        "bounds": {
+          "alpha": {
+            "height": 60,
+            "width": 60,
+            "x": 275.0,
+            "y": 80
+          },
+          "beta": {
+            "height": 70,
+            "width": 80,
+            "x": 265.0,
+            "y": 200
+          },
+          "gamma": {
+            "height": 50,
+            "width": 100,
+            "x": 255.0,
+            "y": 110
+          }
+        },
+        "sourceId": "import-6f9039e1-1664-451b-90b7-5db7f3f6938d",
+        "revision": "447f3ab9186cd8caf082e81628f12d27c45f25e7746393fb137478348103bcf4",
+        "path": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\vector-alignment-project\\5ad29e86-94b4-4eca-aade-802b79f60966\\design\\.designcraft\\v2\\sources\\import-6f9039e1-1664-451b-90b7-5db7f3f6938d\\versions\\9e8e8a42fbf177b19366ca621cb9c6c291a7c9c4c032780f775e272964730b69.vectorcraft"
+      }
+    },
+    {
+      "name": "physical Align Right changes the expected native geometry, saves it and undoes cleanly",
+      "pass": true,
+      "detail": {
+        "bounds": {
+          "alpha": {
+            "height": 60,
+            "width": 60,
+            "x": 490,
+            "y": 80
+          },
+          "beta": {
+            "height": 70,
+            "width": 80,
+            "x": 470,
+            "y": 200
+          },
+          "gamma": {
+            "height": 50,
+            "width": 100,
+            "x": 450,
+            "y": 110
+          }
+        },
+        "sourceId": "import-6f9039e1-1664-451b-90b7-5db7f3f6938d",
+        "revision": "b6cce066406a414a46b6f1eb464094633f712c002976ca4ee556bbce9761864c",
+        "path": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\vector-alignment-project\\5ad29e86-94b4-4eca-aade-802b79f60966\\design\\.designcraft\\v2\\sources\\import-6f9039e1-1664-451b-90b7-5db7f3f6938d\\versions\\e4aa7023f9ecbe795098694bb98eeb2883394b58129ea4227983af6f10d8c487.vectorcraft"
+      }
+    },
+    {
+      "name": "physical Align Top changes the expected native geometry, saves it and undoes cleanly",
+      "pass": true,
+      "detail": {
+        "bounds": {
+          "alpha": {
+            "height": 60,
+            "width": 60,
+            "x": 60,
+            "y": 80
+          },
+          "beta": {
+            "height": 70,
+            "width": 80,
+            "x": 220,
+            "y": 80
+          },
+          "gamma": {
+            "height": 50,
+            "width": 100,
+            "x": 450,
+            "y": 80
+          }
+        },
+        "sourceId": "import-6f9039e1-1664-451b-90b7-5db7f3f6938d",
+        "revision": "4d7d1615c333e3cdbbf2dd6ee26046040540efdf3ee9ab2c52fd7c2b4125fe80",
+        "path": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\vector-alignment-project\\5ad29e86-94b4-4eca-aade-802b79f60966\\design\\.designcraft\\v2\\sources\\import-6f9039e1-1664-451b-90b7-5db7f3f6938d\\versions\\6513ae841900db206cb510da7b7830e894491b5bf9e48337deff8cd9589fd895.vectorcraft"
+      }
+    },
+    {
+      "name": "physical Vertical Center changes the expected native geometry, saves it and undoes cleanly",
+      "pass": true,
+      "detail": {
+        "bounds": {
+          "alpha": {
+            "height": 60,
+            "width": 60,
+            "x": 60,
+            "y": 145.0
+          },
+          "beta": {
+            "height": 70,
+            "width": 80,
+            "x": 220,
+            "y": 140.0
+          },
+          "gamma": {
+            "height": 50,
+            "width": 100,
+            "x": 450,
+            "y": 150.0
+          }
+        },
+        "sourceId": "import-6f9039e1-1664-451b-90b7-5db7f3f6938d",
+        "revision": "fca0dd4e4713fc553c21249b59a7560e514ea87a4f14927c10b2774c6c246342",
+        "path": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\vector-alignment-project\\5ad29e86-94b4-4eca-aade-802b79f60966\\design\\.designcraft\\v2\\sources\\import-6f9039e1-1664-451b-90b7-5db7f3f6938d\\versions\\89c058ffdadc67a6e755224357bd184d0d0b881cc3dd0320249583ead8edad6c.vectorcraft"
+      }
+    },
+    {
+      "name": "physical Align Bottom changes the expected native geometry, saves it and undoes cleanly",
+      "pass": true,
+      "detail": {
+        "bounds": {
+          "alpha": {
+            "height": 60,
+            "width": 60,
+            "x": 60,
+            "y": 210
+          },
+          "beta": {
+            "height": 70,
+            "width": 80,
+            "x": 220,
+            "y": 200
+          },
+          "gamma": {
+            "height": 50,
+            "width": 100,
+            "x": 450,
+            "y": 220
+          }
+        },
+        "sourceId": "import-6f9039e1-1664-451b-90b7-5db7f3f6938d",
+        "revision": "fb456d9559c9c861422a4ee02fdc74397492128067a8eeaf69da31f9ad3dd3d6",
+        "path": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\vector-alignment-project\\5ad29e86-94b4-4eca-aade-802b79f60966\\design\\.designcraft\\v2\\sources\\import-6f9039e1-1664-451b-90b7-5db7f3f6938d\\versions\\570c1920ec788e5d0fa799192d7dbae6b6d6b381023ebf5c4d072326a1c6840c.vectorcraft"
+      }
+    },
+    {
+      "name": "physical Align Both Centers changes the expected native geometry, saves it and undoes cleanly",
+      "pass": true,
+      "detail": {
+        "bounds": {
+          "alpha": {
+            "height": 60,
+            "width": 60,
+            "x": 275.0,
+            "y": 145.0
+          },
+          "beta": {
+            "height": 70,
+            "width": 80,
+            "x": 265.0,
+            "y": 140.0
+          },
+          "gamma": {
+            "height": 50,
+            "width": 100,
+            "x": 255.0,
+            "y": 150.0
+          }
+        },
+        "sourceId": "import-6f9039e1-1664-451b-90b7-5db7f3f6938d",
+        "revision": "6bb1ac55225704c5aeaaf57f6c8e4c56934bcdacb8cd9000ccf0f82ab133a9f3",
+        "path": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\vector-alignment-project\\5ad29e86-94b4-4eca-aade-802b79f60966\\design\\.designcraft\\v2\\sources\\import-6f9039e1-1664-451b-90b7-5db7f3f6938d\\versions\\0e5f6f92266db1cfe17ec817948e25713d524f075852a74c85058d166ddc893d.vectorcraft"
+      }
+    },
+    {
+      "name": "the physical horizontal spacing button makes equal edge gaps without moving the outer limits",
+      "pass": true,
+      "detail": {
+        "gaps": [
+          125,
+          125
+        ],
+        "bounds": {
+          "alpha": {
+            "height": 60,
+            "width": 60,
+            "x": 60,
+            "y": 80
+          },
+          "beta": {
+            "height": 70,
+            "width": 80,
+            "x": 245,
+            "y": 200
+          },
+          "gamma": {
+            "height": 50,
+            "width": 100,
+            "x": 450,
+            "y": 110
+          }
+        },
+        "sourceId": "import-6f9039e1-1664-451b-90b7-5db7f3f6938d",
+        "revision": "2b9cda5a8e94306daa6dc2f56876d05509e2cf9fdf3714d98106262a90b45a67",
+        "path": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\vector-alignment-project\\5ad29e86-94b4-4eca-aade-802b79f60966\\design\\.designcraft\\v2\\sources\\import-6f9039e1-1664-451b-90b7-5db7f3f6938d\\versions\\77e0f62b6e571ef1700fa8d8685e8a450f525e4e0ddeb15e5bf4d81dfc420a02.vectorcraft"
+      }
+    },
+    {
+      "name": "the physical vertical spacing button makes equal edge gaps and persists them",
+      "pass": true,
+      "detail": {
+        "gaps": [
+          5,
+          5
+        ],
+        "bounds": {
+          "alpha": {
+            "height": 60,
+            "width": 60,
+            "x": 60,
+            "y": 80
+          },
+          "beta": {
+            "height": 70,
+            "width": 80,
+            "x": 245,
+            "y": 200
+          },
+          "gamma": {
+            "height": 50,
+            "width": 100,
+            "x": 450,
+            "y": 145
+          }
+        },
+        "sourceId": "import-6f9039e1-1664-451b-90b7-5db7f3f6938d",
+        "revision": "c2b4ff8c3b781df22ee5654738e28fb3b03e9ee08d90efa101c0f0227d9fdc3d",
+        "path": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\vector-alignment-project\\5ad29e86-94b4-4eca-aade-802b79f60966\\design\\.designcraft\\v2\\sources\\import-6f9039e1-1664-451b-90b7-5db7f3f6938d\\versions\\da69497e62a3fb3ae51e377ca04bbb68b1a979ce3c6f0159bd100802f1f10f56.vectorcraft"
+      }
+    },
+    {
+      "name": "physical Group creates a real native group containing the same three editable paths",
+      "pass": true,
+      "detail": {
+        "groupId": 6,
+        "children": [
+          2,
+          3,
+          4
+        ],
+        "sourceId": "import-6f9039e1-1664-451b-90b7-5db7f3f6938d",
+        "revision": "91862146ff2fe9a06be23cc6ee6d793a26eb6e67151262122aaa09f49d8b1306",
+        "path": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\vector-alignment-project\\5ad29e86-94b4-4eca-aade-802b79f60966\\design\\.designcraft\\v2\\sources\\import-6f9039e1-1664-451b-90b7-5db7f3f6938d\\versions\\73fc396839a046f9ff46055c1aa14246345b2347cb93a53c5844c032b2db0425.vectorcraft"
+      }
+    },
+    {
+      "name": "physical Ungroup restores the editable children without changing their geometry or the text",
+      "pass": true,
+      "detail": {
+        "sourceId": "import-6f9039e1-1664-451b-90b7-5db7f3f6938d",
+        "revision": "774987d34846e853c71f6ea37b607bd30eb7d215ef7a4a5fdd57e9156e090d41",
+        "path": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\vector-alignment-project\\5ad29e86-94b4-4eca-aade-802b79f60966\\design\\.designcraft\\v2\\sources\\import-6f9039e1-1664-451b-90b7-5db7f3f6938d\\versions\\ed63efcc43cf11a17a45cf9dd006704b77bbd67a77ec48b991ef2e9e7273ea53.vectorcraft"
+      }
+    },
+    {
+      "name": "reopening the actual saved native source retains path IDs, both spacing operations and editable text",
+      "pass": true,
+      "detail": {
+        "bounds": {
+          "alpha": {
+            "height": 60,
+            "width": 60,
+            "x": 60,
+            "y": 80
+          },
+          "beta": {
+            "height": 70,
+            "width": 80,
+            "x": 245,
+            "y": 200
+          },
+          "gamma": {
+            "height": 50,
+            "width": 100,
+            "x": 450,
+            "y": 145
+          }
+        },
+        "ids": [
+          2,
+          3,
+          4
+        ]
+      }
+    }
+  ],
+  "navigation": [
+    {
+      "path": "/",
+      "child": false
+    },
+    {
+      "path": "/designcraft/editor/vectorcraft-host/host.html",
+      "child": true
+    },
+    {
+      "path": "/designcraft/editor/vectorcraft-host/host.html",
+      "child": true
+    }
+  ],
+  "pageErrors": []
+}

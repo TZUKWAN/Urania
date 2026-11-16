@@ -1,0 +1,108 @@
+{
+  "status": "passed",
+  "scope": "physical native layer visibility/lock/name/create/order/reparent/delete/undo -> exact source/reopen; no model",
+  "codeRoot": "D:\\METIS超级合并\\dsh-plugin\\designcraft",
+  "checks": [
+    {
+      "name": "physical layer eye hides the layer while preserving every editable child in the saved source",
+      "pass": true,
+      "detail": {
+        "layer": 1,
+        "sourceId": "import-e153fc4d-6e2a-48ec-a4f6-5afc31853c48",
+        "revision": "4102e5a419f179d192e7fc164740bd3f55971b49437199fb58523cc1365027bd",
+        "path": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\vector-layers-project\\d153c148-67e2-482b-baec-e354f730d612\\design\\.designcraft\\v2\\sources\\import-e153fc4d-6e2a-48ec-a4f6-5afc31853c48\\versions\\6de188a5f7011022cac5b28ce49ba2155f2a258bfb2390281e25848ee188a888.vectorcraft"
+      }
+    },
+    {
+      "name": "physical layer lock prevents selecting its canvas paths and persists without altering children",
+      "pass": true,
+      "detail": {
+        "layer": 1,
+        "sourceId": "import-e153fc4d-6e2a-48ec-a4f6-5afc31853c48",
+        "revision": "8afcc9b2918afb5172d53881a97c3cd819693635e9e716ad7f6f33d03aeb460a",
+        "path": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\vector-layers-project\\d153c148-67e2-482b-baec-e354f730d612\\design\\.designcraft\\v2\\sources\\import-e153fc4d-6e2a-48ec-a4f6-5afc31853c48\\versions\\d23114f2b24eab1a8c6f04b842c0534c1736cd902513828f6f05d9062be3f858.vectorcraft"
+      }
+    },
+    {
+      "name": "physical unlock restores selection and the exact original layer structure",
+      "pass": true,
+      "detail": {
+        "layer": 1,
+        "selected": 2,
+        "sourceId": "import-e153fc4d-6e2a-48ec-a4f6-5afc31853c48",
+        "revision": "66dadde8c78f8a37520040d760db5d094fc0da84ac4fc6c2fbd1f89f74ffbbc7",
+        "path": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\vector-layers-project\\d153c148-67e2-482b-baec-e354f730d612\\design\\.designcraft\\v2\\sources\\import-e153fc4d-6e2a-48ec-a4f6-5afc31853c48\\versions\\3d86a428a2248529136c57742595247c80a3159d17843f37a027e659d058583b.vectorcraft"
+      }
+    },
+    {
+      "name": "physical inline layer rename persists a real Layer name without renaming its objects",
+      "pass": true,
+      "detail": {
+        "layer": 1,
+        "name": "基础图层",
+        "sourceId": "import-e153fc4d-6e2a-48ec-a4f6-5afc31853c48",
+        "revision": "a8c443b83a3b15423633a0dbc3bc64c1353326c3f91d28e0baddcad8f7568e2c",
+        "path": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\vector-layers-project\\d153c148-67e2-482b-baec-e354f730d612\\design\\.designcraft\\v2\\sources\\import-e153fc4d-6e2a-48ec-a4f6-5afc31853c48\\versions\\ace41f33354838325807ef6a8a62242476cce93429bd1e3e32b196aca72424fb.vectorcraft"
+      }
+    },
+    {
+      "name": "physical layer-row reorder changes stacking order while retaining exact object structures",
+      "pass": true,
+      "detail": {
+        "order": [
+          3,
+          4,
+          5,
+          2
+        ],
+        "sourceId": "import-e153fc4d-6e2a-48ec-a4f6-5afc31853c48",
+        "revision": "9b1663e36ddd3fc464a046a20c920d894d703ad312f23794aefd38e47872759f",
+        "path": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\vector-layers-project\\d153c148-67e2-482b-baec-e354f730d612\\design\\.designcraft\\v2\\sources\\import-e153fc4d-6e2a-48ec-a4f6-5afc31853c48\\versions\\21858be714fe076432a1b9f45e463b6413d7018773ef380700b917af5b0a5801.vectorcraft"
+      }
+    },
+    {
+      "name": "physical New Layer dialog creates a genuine named root layer rather than a group",
+      "pass": true,
+      "detail": {
+        "id": 6,
+        "name": "品牌图层",
+        "sourceId": "import-e153fc4d-6e2a-48ec-a4f6-5afc31853c48",
+        "revision": "8bc578718b2dbcffd687f84ea31c46b17186b8653e020e5c39c5c4d03f45cca9",
+        "path": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\vector-layers-project\\d153c148-67e2-482b-baec-e354f730d612\\design\\.designcraft\\v2\\sources\\import-e153fc4d-6e2a-48ec-a4f6-5afc31853c48\\versions\\4d4a1e5ac0ca2068c6197263c971aa5b629d689771f52afaa442d26683a2dd91.vectorcraft"
+      }
+    },
+    {
+      "name": "physical drag moves the original path into the new layer with its identity, geometry and paint unchanged",
+      "pass": true,
+      "detail": {
+        "object": 2,
+        "from": 1,
+        "to": 6,
+        "sourceId": "import-e153fc4d-6e2a-48ec-a4f6-5afc31853c48",
+        "revision": "523979ac097be24fff467339fb0c56abc4d6e19cfd65a0a49aace71a6a36bcbb",
+        "path": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\vector-layers-project\\d153c148-67e2-482b-baec-e354f730d612\\design\\.designcraft\\v2\\sources\\import-e153fc4d-6e2a-48ec-a4f6-5afc31853c48\\versions\\0b9962c1b0ced0c40142a18bb789beeb1945926545c19db484477e4b8e2814d6.vectorcraft"
+      }
+    },
+    {
+      "name": "physical layer deletion and Undo restore the exact layer and child subtree",
+      "pass": true,
+      "detail": {
+        "layer": 6,
+        "sourceId": "import-e153fc4d-6e2a-48ec-a4f6-5afc31853c48",
+        "revision": "6e44e3f96877c5ab678c6e0872aeaa6b318aab0dc5f7a0e66f9508ec1123eda2",
+        "path": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\vector-layers-project\\d153c148-67e2-482b-baec-e354f730d612\\design\\.designcraft\\v2\\sources\\import-e153fc4d-6e2a-48ec-a4f6-5afc31853c48\\versions\\0b9962c1b0ced0c40142a18bb789beeb1945926545c19db484477e4b8e2814d6.vectorcraft"
+      }
+    },
+    {
+      "name": "native reopen preserves both genuine layers and all exact reordered/reparented structures",
+      "pass": true,
+      "detail": {
+        "layers": [
+          1,
+          6
+        ]
+      }
+    }
+  ],
+  "pageErrors": []
+}

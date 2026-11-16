@@ -1,0 +1,1808 @@
+{
+  "schema": 1,
+  "asOf": "2026-11-13T10:01:25.466626+00:00",
+  "authority": "requirements.json and capability-matrix.json",
+  "fullScopeComplete": false,
+  "interpretation": "verified_* 表示该任务列出的明确样本范围有证据，不表示整个上游项目或所有功能已完成。",
+  "staticCommandCandidates": {
+    "file": "upstream-command-candidates.json",
+    "state": "source_candidates_not_acceptance",
+    "note": "仅列出静态能识别的声明与字面引用；动态注册不完整，不能视为可用或通过。"
+  },
+  "openDesignSourceClassification": {
+    "file": "opendesign-source-classification.json",
+    "declaredDependencies": "opendesign-declared-dependencies.json",
+    "skillEntries": "opendesign-skill-entry-map.json",
+    "state": "source_inventory_not_execution",
+    "note": "928 个包按固定索引文件路径分类；169 个技能入口按 Git blob 核对，但脚本、其他依赖及工作流是否可运行未确定。"
+  },
+  "units": [
+    {
+      "id": "U0",
+      "title": "范围和版本基线",
+      "checklist": [
+        "A1",
+        "A2"
+      ]
+    },
+    {
+      "id": "U1",
+      "title": "DSH承载与故障边界样机（先行门槛）",
+      "checklist": [
+        "A6",
+        "B1",
+        "B2",
+        "B3"
+      ]
+    },
+    {
+      "id": "U2",
+      "title": "同会话的人机编辑",
+      "checklist": [
+        "C1",
+        "C2",
+        "C3"
+      ]
+    },
+    {
+      "id": "U3",
+      "title": "OpenDesign SVG生成闭环",
+      "checklist": [
+        "G1",
+        "G2",
+        "G3"
+      ]
+    },
+    {
+      "id": "U4",
+      "title": "Photo专业上下文",
+      "checklist": [
+        "D1",
+        "D2",
+        "D3",
+        "D4",
+        "D5"
+      ]
+    },
+    {
+      "id": "U5",
+      "title": "Deck专业上下文",
+      "checklist": [
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5"
+      ]
+    },
+    {
+      "id": "U6",
+      "title": "项目关系与修改范围",
+      "checklist": [
+        "F1",
+        "F2"
+      ]
+    },
+    {
+      "id": "U7",
+      "title": "图片跨设计/PPT原位编辑",
+      "checklist": [
+        "F3"
+      ]
+    },
+    {
+      "id": "U8",
+      "title": "SVG跨设计/PPT复用",
+      "checklist": [
+        "F4",
+        "F5"
+      ]
+    },
+    {
+      "id": "U9",
+      "title": "品牌与一套多物料",
+      "checklist": [
+        "F6",
+        "G6"
+      ]
+    },
+    {
+      "id": "U10",
+      "title": "DSH已有图片服务与候选",
+      "checklist": [
+        "H1",
+        "H2",
+        "H3",
+        "H4",
+        "H5"
+      ]
+    },
+    {
+      "id": "U11",
+      "title": "HTML/网页演示与可编辑PPTX",
+      "checklist": [
+        "G4",
+        "G5"
+      ]
+    },
+    {
+      "id": "U12",
+      "title": "保存、输出与迁移闭环",
+      "checklist": [
+        "I1",
+        "I2",
+        "I3",
+        "I4"
+      ]
+    },
+    {
+      "id": "U13",
+      "title": "集成故障、冲突和全量覆盖审计",
+      "checklist": [
+        "A3",
+        "A4",
+        "A5",
+        "B4",
+        "B5",
+        "B6",
+        "C4",
+        "J1",
+        "J2",
+        "J3"
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "id": "A1",
+      "goal": "建立真实能力和证据清单",
+      "status": "in_progress",
+      "scope": "50项、250个UI/AI/源/输出/恢复源码引用已对应实际文件，历史差异与精确找回独立记录；完整上游能力不作完成声明；本轮逐项验收以release-validation-20261113.json为准。",
+      "implementationNote": "50项和250个UI/AI/源/输出/恢复源码引用已静态对应真实文件；历史证据差异和精确找回单列，当前动态注册/功能核验暂缓。",
+      "action": "将四项目能力逐项对应到界面入口、AI 动作、真实源结构、输出和恢复；修正进度文件落后于已有证据的条目。",
+      "acceptance": "每项标明已实现已验证、已有但未接入、部分实现、未实现、上游限制或未验证；命令目录与历史测试不能自动算新工作区完成。",
+      "evidence": [
+        "capability-inventory.json",
+        "historical-evidence-reconciliation.json",
+        "implementation-source-audit.json",
+        "static-registry-audit.json",
+        "upstream-command-candidates.json"
+      ]
+    },
+    {
+      "id": "A2",
+      "goal": "确认磁盘代码与实际加载版本",
+      "status": "verified_disk_frontend_host_runtime_diagnostics",
+      "scope": "实际旧后台与新界面同时存在时提示双方版本，原生作品保留；重新加载后重开原作品，分别核对三种实际 WASM 文件与安装清单。",
+      "implementationNote": "",
+      "action": "让诊断显示实际后端、前端、运行时与构建标识，并处理版本不一致；只读取必要元数据，不接管用户窗口。",
+      "acceptance": "能区分磁盘已更新与当前进程已加载；不匹配时保留作品并给出准确状态。本轮未重新确认用户窗口实际加载版本。",
+      "evidence": [
+        "verification/editor-assets-current.tap",
+        "verification/live-version-diagnostics.json",
+        "verification/owned-running-health.json"
+      ]
+    },
+    {
+      "id": "A3",
+      "goal": "补齐切换作品、会话和页面的数据保护",
+      "status": "verified_scope_switch_and_draft_protection_scoped",
+      "scope": "真实快速切换和保存失败切换保留原编辑与草稿；旧表面晚到事件不污染新作品。",
+      "implementationNote": "",
+      "action": "将未完成操作、保存队列、草稿和对象身份统一纳入切换协议，拒绝旧表面的回报。",
+      "acceptance": "针对快速切换、未保存切换、保存失败切换各验证一次：旧结果不写入新作品，原草稿可恢复。",
+      "evidence": [
+        "verification/editor-draft-ui.json",
+        "verification/editor-scope-ui.json",
+        "verification/ui45-data-protection-acceptance.json"
+      ]
+    },
+    {
+      "id": "A4",
+      "goal": "接通停止、超时和断连的真实语义",
+      "status": "verified_stop_timeout_and_late_result_scoped",
+      "scope": "真实原生动作执行前停止不改文件，执行后停止如实记录已保存；当前会话测试验证超时 watchdog 和晚到回报隔离。",
+      "implementationNote": "",
+      "action": "对未执行、执行中、完成但尚未确认的步骤分别处理；对结果不确定的操作先读取状态再决定恢复。",
+      "acceptance": "停止后不继续执行未开始步骤；晚到结果不覆盖后来手改；超时不冒称失败未生效，也不盲目重复调用。",
+      "evidence": [
+        "verification/editor-stop-admission.tap",
+        "verification/editor-stop-ui.json",
+        "verification/ui45-data-protection-acceptance.json"
+      ]
+    },
+    {
+      "id": "A5",
+      "goal": "补齐保存失败和草稿恢复闭环",
+      "status": "verified_save_failure_draft_and_ack_scoped",
+      "scope": "真实保存断连、重开、本地草稿独立恢复、并发草稿写入和旧确认不清除新手改均按 Vector 样本核验。",
+      "implementationNote": "",
+      "action": "在已有原子检查点与保存确认上补齐断连、存储失败、重开和本地草稿冲突处理。",
+      "acceptance": "中断保存仍能重开上一完整源；新草稿保留；只有实际落盘对应修订才显示已保存，旧确认不能清除新修改。",
+      "evidence": [
+        "verification/editor-draft-ui.json",
+        "verification/native-file-failure.json",
+        "verification/native-file-host.tap",
+        "verification/native-files-ui.json",
+        "verification/native-origins-stage-audit.json",
+        "verification/ui45-data-protection-acceptance.json"
+      ]
+    },
+    {
+      "id": "A6",
+      "goal": "验证实际 DSH 桌面承载和故障边界",
+      "status": "verified_owned_electron_hardware_and_recovery_scoped",
+      "scope": "同版本隐藏 Electron 加载真实 DSH Web 宿主和认证转发；中文组合、物理缩放、AMD GPU、实际 WebGL 丢失、子渲染进程故障及保存源恢复按样本核验。完整打包版 preload/IPC 和系统候选窗未验证。",
+      "implementationNote": "",
+      "action": "在不接管用户桌面的同版本测试宿主中验证中文输入、焦点、缩放、GPU/编辑域异常和运行预算；直接加载 D: 运行目录代码。",
+      "acceptance": "有实际 DSH/Electron 证据才标记桌面宿主通过；编辑域故障后检查 DSH 响应、恢复源与资源释放。必要宿主接口缺口须明确记录。",
+      "evidence": [
+        "verification/electron-background.json",
+        "verification/electron-crash.json",
+        "verification/electron-ime.json",
+        "verification/electron-surface.json",
+        "verification/ui45-electron-hardware-acceptance.json"
+      ]
+    },
+    {
+      "id": "B1",
+      "goal": "重排主界面与画布空间",
+      "status": "verified_three_engine_responsive_workspace_scoped",
+      "scope": "真实 Vector、Photo、Deck 在 1280×800 与 1600×900 下聊天区与全宽主舞台不重叠，缩放窗口保持同一源、修订与 App；边界见截图和报告。",
+      "implementationNote": "",
+      "action": "保留一个 DSH 对话和主设计舞台；作品、素材、属性按需展开，去掉外层长期占位的重复区域。",
+      "acceptance": "实际编辑页面中画布不再被多层固定栏挤压；常用窗口尺寸下聊天、选区与工具仍可操作，尺寸变化不丢文档。",
+      "evidence": [
+        "verification/electron-background.json",
+        "verification/ui160-ai-canvas-20261113.json",
+        "verification/ui161-ai-native-ux-20261113.json",
+        "verification/ui162-design-session-isolation-20261113.json",
+        "verification/ui45-layout-acceptance.json",
+        "verification/unified-workspace.json"
+      ]
+    },
+    {
+      "id": "B2",
+      "goal": "给专业编辑器增加真正的宿主模式",
+      "status": "in_progress",
+      "scope": "三引擎宿主已提供自定义尺寸新建、导入、导出、保存、另存、副本和关闭；共享文件操作及原生快捷键按样本通过。原生重复文件入口仍需收拢，专业功能不能裁切。",
+      "implementationNote": "三套文件入口收拢源码已构建装盘；Vector 模板菜单转交工作区选择与原件保护代码已构建，宿主菜单及专业入口尚未功能验证。",
+      "action": "在原生 UI 层处理重复首页、文件菜单、工具栏和宿主功能分工；保留专业命令的可达入口。",
+      "acceptance": "用户只有一套主文件和导航入口；节点、图层、文字等专业编辑仍能真实操作，不能靠 CSS 裁切隐藏功能。",
+      "evidence": [
+        "verification/native-files-ui.json",
+        "verification/rust-host-files-tests.log",
+        "verification/ui160-ai-canvas-20261113.json",
+        "verification/ui161-ai-native-ux-20261113.json",
+        "verification/ui162-design-session-isolation-20261113.json",
+        "verification/ui45-shared-file-menu-progress.json"
+      ]
+    },
+    {
+      "id": "B3",
+      "goal": "统一外层和原生编辑器视觉",
+      "status": "in_progress",
+      "scope": "Vector 既有宿主主题；Photo host4 和 Deck host10 已按外层绿色/明暗配色接入并实测，Photo 嵌入界面使用中文且不改原生偏好。Deck 原生控件仍为英文，三引擎控件样式尚未完全一致。",
+      "implementationNote": "Deck host16已真实构建装盘：保留原固定中文，新增130动态文案位点及笔迹文字/公式、屏幕截图、旁白、摄像头五入口；只在embedded启用，实际功能/视觉与系统组件待验证。",
+      "action": "统一主题、字体、间距、按钮、图标、选中、错误和加载状态，形成可复用的宿主视觉规则。",
+      "acceptance": "以实际运行页面检查整体效果；外层与编辑域主题协调、文字可读、状态可辨，静态效果图不算完成。",
+      "evidence": [
+        "five-gaps-and-deck.md",
+        "five-gaps-code-audit.json",
+        "hosted-ui-source-audit.json",
+        "verification/ui160-ai-canvas-20261113.json",
+        "verification/ui161-ai-native-ux-20261113.json",
+        "verification/ui162-design-session-isolation-20261113.json",
+        "verification/ui45-host-theme-progress.json",
+        "verification/unified-workspace.json"
+      ]
+    },
+    {
+      "id": "B4",
+      "goal": "实现对象上下文工具",
+      "status": "verified_native_context_controls_scoped",
+      "scope": "真实 Photo/Vector/Deck 对象工具栏按样本核验：六种对齐、两种分布、编组/解组、文字与填色；Photo 蒙版/调整层/不透明度/选区、引用及手工拖动保护通过。",
+      "implementationNote": "",
+      "action": "按当前图片、路径、文字、演示对象显示对应真实工具；多选时显示对齐和分布。",
+      "acceptance": "切换对象后工具与真实选区一致；每个可用按钮改变原生对象，未接入的能力不得显示为可用。",
+      "evidence": [
+        "verification/ui160-ai-canvas-20261113.json",
+        "verification/ui161-ai-native-ux-20261113.json",
+        "verification/ui162-design-session-isolation-20261113.json",
+        "verification/ui45-context-tools-acceptance.json"
+      ]
+    },
+    {
+      "id": "B5",
+      "goal": "实现项目总览与连续进入、返回",
+      "status": "verified_three_engine_overview_and_return_scoped",
+      "scope": "三引擎实际作品总览、真实内容缩略图及逐项进入；Vector 和 Deck 从素材来源返回原 App 时保留所选对象、视图与撤销历史，故障恢复按提示重开。独立作品切换不承诺保留内存历史。",
+      "implementationNote": "",
+      "action": "用派生缩略图组织作品；进入实际编辑上下文，提供作品与内部素材的返回路径。",
+      "acceptance": "总览只承担导航；返回时恢复当前作品、视口、历史与草稿，无需用户搬运子项目。此项依赖 F1 与对应原生桥。",
+      "evidence": [
+        "verification/project-navigation-conflict.json",
+        "verification/project-navigation-crash.json",
+        "verification/project-navigation.json",
+        "verification/ui45-data-protection-acceptance.json",
+        "verification/ui45-three-engine-navigation-acceptance.json"
+      ]
+    },
+    {
+      "id": "B6",
+      "goal": "统一聊天、引用、快捷键和焦点",
+      "status": "verified_chat_focus_ime_and_status_scoped",
+      "scope": "真实 DSH 聊天删除不改变已选矢量对象；隐藏同版本 Electron 中文组合输入与保存保护通过，停止状态按真实执行回执显示。系统候选窗和其他所有快捷键不在此样本内。",
+      "implementationNote": "",
+      "action": "沿用原生 DSH 输入框；正确路由文字输入、删除、撤销、缩放和保存；呈现真实 AI 等待与完成状态。",
+      "acceptance": "聊天输入不触发画布删除，编辑文字不丢中文组合输入；工具状态只反映实际执行，不伪造绘制或百分比。",
+      "evidence": [
+        "verification/electron-ime.json",
+        "verification/menu-handoff.json",
+        "verification/native-origins-stage-audit.json",
+        "verification/native-reference-live.json",
+        "verification/rust-shortcut-modifiers.log",
+        "verification/ui160-ai-canvas-20261113.json",
+        "verification/ui161-ai-native-ux-20261113.json",
+        "verification/ui162-design-session-isolation-20261113.json",
+        "verification/ui45-chat-focus-acceptance.json",
+        "verification/ui45-data-protection-acceptance.json"
+      ]
+    },
+    {
+      "id": "C1",
+      "goal": "逐项验收真实矢量手工操作",
+      "status": "verified_requested_vector_basics",
+      "scope": "Physical rectangle/pen/one-anchor/text/custom paint/layer controls/Boolean/multiselect/align/equal gaps/group/undo/source reopen; full upstream parity not claimed",
+      "implementationNote": "",
+      "action": "覆盖文字、路径和节点、填色描边、图层、组合、布尔运算、多选对齐与等距分布等已承诺能力。",
+      "acceptance": "每项从界面实际操作并核对原生结构；有界面但未生效、只有命令入口、无法重开的条目均不能通过。",
+      "evidence": [
+        "verification/vector-alignment.json",
+        "verification/vector-editing.json",
+        "verification/vector-color.json",
+        "verification/vector-layers.json",
+        "verification/vector-boolean.json"
+      ]
+    },
+    {
+      "id": "C2",
+      "goal": "补齐精确引用与过期检查",
+      "status": "verified_precise_native_reference_guards_scoped",
+      "scope": "真实 Vector 对象/画板旧引用拒绝，Photo 羽化选区完整 alpha 导出及选区变化拒绝，Deck 切换页面后旧引用拒绝；均使用原生坐标和源身份。",
+      "implementationNote": "",
+      "action": "完善作品、页面、对象、多选和区域/蒙版引用；携带源身份和真实修订；区分预览与源坐标。",
+      "acceptance": "引用后删除对象、换源或换页会被拒绝或重新读取；AI 对当前目标操作，不按过期屏幕位置猜测。区域能力随 Photo/Deck 接入分别验收。",
+      "evidence": [
+        "verification/native-reference-live.json",
+        "verification/native-reference-pages.json",
+        "verification/ui160-ai-canvas-20261113.json",
+        "verification/ui161-ai-native-ux-20261113.json",
+        "verification/ui45-host9-files-references.json"
+      ]
+    },
+    {
+      "id": "C3",
+      "goal": "补完人机接管与安全撤销",
+      "status": "verified_cross_engine_guarded_handoff_scoped",
+      "scope": "历史真实 Kimi 对 Vector、Photo、Deck 的同会话续改与手工保留；当前三个引擎注册工具的较早步骤在手改后安全拒绝撤销，最新可证明单步可撤销。当前 Photo/Deck 检查没有新的模型调用。",
+      "implementationNote": "",
+      "action": "在已验证的两轮 Kimi 基础上补同对象竞争、人工接管、分步骤状态和较早 AI 修改的撤销规则。",
+      "acceptance": "AI 操作后手改，再请求局部续改保留非目标内容；撤销较早 AI 不覆盖后来的手改，不能证明安全时明确冲突。",
+      "evidence": [
+        "verification/deck-kimi.json",
+        "verification/editor-history-policy.log",
+        "verification/editor-session-current.tap",
+        "verification/kimi-opendesign-resume.json",
+        "verification/native-handoff.json",
+        "verification/photo-kimi.json",
+        "verification/ui45-cross-engine-handoff-acceptance.json"
+      ]
+    },
+    {
+      "id": "C4",
+      "goal": "打通原生文件菜单与宿主保存、导出",
+      "status": "verified_native_file_routes_three_engines_scoped",
+      "scope": "Vector 历史真实保存/另存/打开/导出与重开，当前 Photo/Deck 真实快捷键保存、另存、取消打开及独立原作保留；导出文件按格式报告核验。",
+      "implementationNote": "",
+      "action": "解决 captureDownloads 仅留在内存、编辑器内部另开文件与当前源身份脱节等缺口；统一原生源和成品输出入口。",
+      "acceptance": "原生保存、另存、导入、SVG/PNG 导出得到实际可重开的文件；不能写回错误作品，也不能只显示成功通知。",
+      "evidence": [
+        "verification/native-file-failure.json",
+        "verification/native-file-host.tap",
+        "verification/native-files-ui.json",
+        "verification/ui45-export-acceptance.json",
+        "verification/ui45-host9-files-references.json"
+      ]
+    },
+    {
+      "id": "G1",
+      "goal": "补齐 OD 技能、模板、品牌和 Craft 资源",
+      "status": "partially_verified_source_data",
+      "scope": "Pinned own-source package trees and actual safe reader verified; selected Corporate24 + two entry files downloaded. External original bundles, fonts/services and package-specific execution still incomplete.；实际固定 SVG 与 PNG 已分别导入原生 Vector/Photo 并核对来源、回执与项目包；未接入的上游脚本与外部依赖仍明确标记。；两份实际 HTML 模板按完整文件树导入，逐个 Git 摘要一致，源码和 LICENSE 原名、项目包及停止回执已核验；其他包和外部工作流仍未全量接入。；新增按需搜索上游设计系统、读取真实主色和首选字体、创建品牌并保留原件，Agentic 样本及既有 Corporate 包回归通过；其他上游脚本/服务仍未全量接入。",
+      "implementationNote": "固定原包、GitHub 外部目录发现与 Git 回退、fal/Replicate 通用队列、Venice 图片、OpenAI/Gemini 图片、产品参考图工作流以及独立 Commons 搜图与来源保存部分代码已写入；此前额外添加的 Figma 等适配为可选，原方案不以其为前提。其他外部原包/服务和精确字体来源未全接入或证实，新增路径未验证。 原版OD/Vela图库和额外平台按刘总决定退出核心必做范围，保留可选入口，详见core-product-scope.json。 UI150补当前DSH本地规则/计划/实际产物编排及APCA/OKLCH/完整原生源颜色检查；不执行上游脚本，不接已放弃平台。",
+      "action": "按已锁定上游逐项登记完整包及脚本、素材、字体和依赖；按需加载实际需要的内容。",
+      "acceptance": "资源清单对得上上游；每个已标可用的包能真实读取并运行其必要部分，缺文件或依赖不能装作完整支持。",
+      "evidence": [
+        "authorization-requirements.json",
+        "external-native-import.md",
+        "external-resource-download.md",
+        "fal-image-adapter.md",
+        "fal-remote-outputs.md",
+        "fal-storage-adapter.md",
+        "fal-workflow-adapter.md",
+        "figma-source-adapter.md",
+        "five-gaps-and-deck.md",
+        "five-gaps-code-audit.json",
+        "html-project-assets.md",
+        "openai-image-svg-adapter.md",
+        "opendesign-declared-dependencies.json",
+        "opendesign-design-brief.md",
+        "opendesign-html-import.md",
+        "opendesign-skill-entry-map.json",
+        "opendesign-source-audit.json",
+        "opendesign-source-classification.json",
+        "opendesign-theme-factory.md",
+        "opendesign-workflow-context.md",
+        "opendesign-workflow-ledger.json",
+        "replicate-workflow-adapter.md",
+        "venice-audio-adapter.md",
+        "venice-image-adapter.md",
+        "venice-video-adapter.md",
+        "verification/opendesign-inventory.json",
+        "verification/opendesign-library.tap",
+        "verification/opendesign-registered.json",
+        "verification/opendesign-source-fetch.json",
+        "verification/ui45-od-dynamic-brand-acceptance.json",
+        "verification/ui45-od-html-package-acceptance.json",
+        "verification/ui45-od-import-acceptance.json"
+      ]
+    },
+    {
+      "id": "G2",
+      "goal": "把设计简报与生成规则接进当前 DSH 模型",
+      "status": "partially_verified_corporate_svg_route",
+      "scope": "Actual current configured Kimi reads original rules/tokens, uses OD orchestration paragraph, plans and creates native SVG. Final first narration hit QA deadline; actual saved generation reused after recovery. Full external director bundle not executed.",
+      "implementationNote": "设计计划可引用固定资源、已保存外部原包文件、固定 creative-director 文件及 Figma 导出，并可显式声明与已保存作品版本的关系；该声明不能证明模型行为，新关联和模型工作流未验证。 UI150补中文简报v2、图片任务精确计划绑定、历史指导原包兼容及显式迁移，均未功能验证。",
+      "action": "由当前 kimi-for-coding 读取实际规则、品牌、模板和素材，完成简报、版式计划与产物生成；复用 DSH 停止和权限。",
+      "acceptance": "真实对话中的产物能对应所用资源和设计计划；没有第二个 OD 聊天或独立 agent 循环。",
+      "evidence": [
+        "design-plan-links.md",
+        "design-plan-manual.md",
+        "five-gaps-and-deck.md",
+        "five-gaps-code-audit.json",
+        "verification/kimi-opendesign-resume.json",
+        "verification/kimi-opendesign.json",
+        "verification/opendesign-model-audit.json"
+      ]
+    },
+    {
+      "id": "G3",
+      "goal": "闭合 OD SVG 到原生可编辑设计的链路",
+      "status": "verified_native_svg_core_route",
+      "scope": "Actual generated original retained by hash; native text/path hand edit, actual selected-only Kimi continuation, physical SVG download, independent MuPDF decode and editable native reimport. Advanced dependencies/fonts/filter differences not fully audited.",
+      "implementationNote": "",
+      "action": "保留原始 SVG，经安全与依赖检查后交真实 Vector 导入；采用后的唯一可写源为原生文档。",
+      "acceptance": "OD 生成→手改路径/文字→AI 仅续改选中部分→SVG 导出重开；位图嵌入、缺字体、轮廓化和滤镜差异分别记录。",
+      "evidence": [
+        "verification/kimi-opendesign-resume.json",
+        "verification/kimi-opendesign-export.svg",
+        "verification/opendesign-model-audit.json"
+      ]
+    },
+    {
+      "id": "D1",
+      "goal": "扩展多引擎身份和选区协议",
+      "status": "verified_vector_photo_core_foundation",
+      "scope": "Exact u64/raw JSON/full Vector context and ordering are verified in original foundation evidence. Actual Photo persistent DocId/generation/layer/image-pixel/source-backed selection and old-reference rejection are now verified in core6/native8/tools9/Kimi4. Complete Deck slide/text/cell/target context remains gated by its unfinished bridge.",
+      "implementationNote": "",
+      "action": "去掉仅适配 Vector 的类型假设；原生 u64 身份精确传输，保留各引擎真实选区结构和能力描述。",
+      "acceptance": "超出 JS 安全整数的 UID 不丢精度；不同引擎、源与旧选区不能互相误认；既有 Vector 路径保持有效。",
+      "evidence": [
+        "verification/native-exact-ids.json",
+        "verification/native-reference-pages.json",
+        "verification/vector-editing.json",
+        "verification/native-handoff.json",
+        "verification/native-protocol.tap",
+        "verification/native-contract.tap",
+        "verification/native-source-u64.tap",
+        "verification/native-history-u64.tap",
+        "verification/editor-protocol.tap",
+        "verification/editor-session-context2.tap",
+        "verification/editor-assets-context2.tap",
+        "verification/native-context-ordering-rust.log",
+        "verification/photo-workspace.json",
+        "verification/photo-original-placement-repair.json",
+        "verification/photo-core-stage.json"
+      ]
+    },
+    {
+      "id": "D2",
+      "goal": "接通同一 Photo App 的持续控制桥",
+      "status": "verified_photo_core_bridge",
+      "scope": "Actual source-matched Photo host3 and one real DSH persistent App: physical tools, current registered tools, full pcraft/pixels fresh reopen, ordered pending-state publication and genuine Kimi continuation verified. Broader formats/native file-menu paths are separate incomplete gates.",
+      "implementationNote": "",
+      "action": "实现真实 ready/open 完成、状态、选择、执行、失败、历史和释放；所有操作进入正在显示的同一 App。",
+      "acceptance": "鼠标改图后 AI 读到同一图层状态；切面板再返回仍为同一文档，不能以逐命令短开 CLI 代替。",
+      "evidence": [
+        "verification/photo-workspace.json",
+        "verification/photo-original-placement-repair.json",
+        "verification/photo-core-stage.json"
+      ]
+    },
+    {
+      "id": "D3",
+      "goal": "接通 Photo 原生源和宿主平台服务",
+      "status": "verified_photo_layered_source_and_file_scoped",
+      "scope": "真实 .pcraft 同时含图层、文字、蒙版与调整层；重开后完整结构和 RGBA 一致，PNG/PSD/WebP/TIFF 按导出报告核验。系统剪贴板未使用。",
+      "implementationNote": "",
+      "action": "提供真实源快照、保存确认、文件和所需剪贴板/字体服务，按来源限制选用许可兼容资源。",
+      "acceptance": "含图层、文字、软蒙版和调整的 .pcraft 保存重开仍保留对应结构；PNG/实际支持的分层交换格式按语义验证。",
+      "evidence": [
+        "verification/photo-core-stage.json",
+        "verification/photo-original-placement-repair.json",
+        "verification/photo-tools.json",
+        "verification/photo-workspace.json",
+        "verification/ui45-export-acceptance.json",
+        "verification/ui45-photo-complete-acceptance.json"
+      ]
+    },
+    {
+      "id": "D4",
+      "goal": "接入图片手工工具",
+      "status": "verified_photo_manual_tools_scoped",
+      "scope": "实际画笔、擦除、裁剪、选择、羽化蒙版、图层、调整、滤镜和混合及保存重开按报告核验；不宣称全部上游专业菜单完成。",
+      "implementationNote": "",
+      "action": "逐项接入选择、裁剪、画笔、擦除、图层、蒙版、调整、滤镜和合成等原项目中承诺的功能。",
+      "acceptance": "真实绘制、软边选区和蒙版可见且改变源；选区 alpha、层顺序和参数重开保持，图片预览不能替代这些操作。",
+      "evidence": [
+        "verification/photo-stage-audit.json",
+        "verification/photo-state-publication.json",
+        "verification/photo-tools.json",
+        "verification/ui45-context-tools-acceptance.json",
+        "verification/ui45-photo-complete-acceptance.json"
+      ]
+    },
+    {
+      "id": "D5",
+      "goal": "让 Kimi 精确编辑 Photo 图层和选区",
+      "status": "verified_photo_mask_layer_kimi_route",
+      "scope": "one actual current kimi-for-coding turn changes only target opacity, preserves hand mask/all other native fields; physical refinement and fresh reopen verified4",
+      "implementationNote": "",
+      "action": "向当前 DSH 模型暴露真实图层、选区、蒙版和可用命令，遵守同源版本检查与人工优先。",
+      "acceptance": "用户手刷蒙版→Kimi 只调指定层→用户继续补边；原图、其他层和后续手改保留，保存后结构可核对。",
+      "evidence": [
+        "verification/photo-kimi.json",
+        "verification/photo-stage-audit.json",
+        "verification/ui160-ai-canvas-20261113.json",
+        "verification/ui161-ai-native-ux-20261113.json"
+      ]
+    },
+    {
+      "id": "E1",
+      "goal": "接通同一 Deck App 的持续控制桥",
+      "status": "verified_deck_core_bridge",
+      "scope": "Actual same SlideApp control/native UID/typed page/text/cell/master targets and ordered state; native7 + actual Surface4 + DSH4 verified. No short-lived CLI replacement.",
+      "implementationNote": "",
+      "action": "宿主模式避免自动载入样例覆盖工作；连接真实文档、当前页、选区、操作完成与历史。",
+      "acceptance": "打开真实演示后手工和 AI 操作同一页面/对象；切回后对象身份、源和页面状态一致。依赖 D1。",
+      "evidence": [
+        "verification/deck-surface.json",
+        "verification/deck-workspace.json",
+        "verification/deck-stage-audit.json"
+      ]
+    },
+    {
+      "id": "E2",
+      "goal": "接入演示常用原生对象的手工编辑",
+      "status": "verified_deck_native_structured_objects_scoped",
+      "scope": "真实表格单元格键盘编辑、图表数据修改及 PPTX 独立读取结构/数据；原生页面新增、排序、删除和重开通过，结合既有文字、形状和图片实测。",
+      "implementationNote": "",
+      "action": "实现页面增删排序、文字、形状、图片，以及上游实际支持的表格和图表入口。",
+      "acceptance": "分别修改文字、形状和结构化对象并核对源；页面不能被整页图片替代，不能用图片装作可编辑表格或图表。",
+      "evidence": [
+        "verification/deck-stage-audit.json",
+        "verification/deck-surface.json",
+        "verification/deck-workspace.json",
+        "verification/photo-deck-material.json",
+        "verification/ui45-deck-structured-acceptance.json"
+      ]
+    },
+    {
+      "id": "E3",
+      "goal": "逐项接入演示专有语义",
+      "status": "verified_deck_semantics_and_morph_samples_scoped",
+      "scope": "实际备注、主题、母版/版式、放映、淡入动画、Morph 形状移动及 WAV/MP4 文件选择与保存按样本核验。其他效果、编码、外部 Office 和多屏未全量验证。",
+      "implementationNote": "",
+      "action": "核对并接入母版、版式、主题、备注、演示和已承诺的转场/动画等上游能力，记录尚缺的 Web 平台服务。",
+      "acceptance": "按上游实际语义逐项验收；能力缺失须补齐或列明边界，不能用简单效果冒称复杂转场或完整演示支持。",
+      "evidence": [
+        "verification/deck-stage-audit.json",
+        "verification/deck-surface.json",
+        "verification/ui45-deck-media-acceptance.json",
+        "verification/ui45-deck-media-picker-acceptance.json",
+        "verification/ui45-deck-morph-acceptance.json",
+        "verification/ui45-deck-semantics-acceptance.json"
+      ]
+    },
+    {
+      "id": "E4",
+      "goal": "让 Kimi 局部修改真实演示",
+      "status": "verified_deck_targeted_kimi_route",
+      "scope": "One actual configured Kimi turn changes only requested shape.fill, preserves preceding manual move and every other native field; physical continuation + fresh source reopen verified4.",
+      "implementationNote": "",
+      "action": "绑定当前页面、形状和范围；直接创建和编辑原生内容，复用当前素材和设计规则。",
+      "acceptance": "真实对话只改指定标题或对象，不重做整页；用户之前的对齐、文字和摆放保持。",
+      "evidence": [
+        "verification/deck-kimi.json",
+        "verification/deck-stage-audit.json",
+        "verification/ui160-ai-canvas-20261113.json",
+        "verification/ui161-ai-native-ux-20261113.json"
+      ]
+    },
+    {
+      "id": "E5",
+      "goal": "闭合 Deck 原生源与可编辑 PPTX",
+      "status": "verified_deck_source_pptx_samples_scoped",
+      "scope": "真实 .deckcraft 源及 PPTX 的文字、表格、图表重开和续改；Inter 内嵌字体字节往返、缺字提示及 WAV/H264 样本媒体保留通过。其他字体/编码及外部 Office 未全面验证。",
+      "implementationNote": "",
+      "action": "接通 .deckcraft 保存和实际 PPTX 输出，处理真实字体、媒体和平台依赖。",
+      "acceptance": ".deckcraft 与 .pptx 分别重开；核验文字、形状和已承诺结构化对象可编辑，媒体与缺字体变化有报告。",
+      "evidence": [
+        "verification/deck-stage-audit.json",
+        "verification/deck-surface.json",
+        "verification/deck-workspace.json",
+        "verification/ui45-deck-font-acceptance.json",
+        "verification/ui45-deck-media-acceptance.json",
+        "verification/ui45-deck-structured-acceptance.json"
+      ]
+    },
+    {
+      "id": "F1",
+      "goal": "建立项目、源、实例与版本关系",
+      "status": "verified_three_engine_snapshot_foundation",
+      "scope": "actual immutable Photo native-source version/PNG -> real Vector and Deck native picture/page/media uses; source navigation and same-parent return; in-place/copy-on-write/live updates pending",
+      "implementationNote": "",
+      "action": "分别保存专业源、派生物和布局实例，记录来源、修订与唯一可写归属；预览不是权威源。",
+      "acceptance": "能追溯一张 PPT 图片和一个 SVG 的原生源；源更新与实例布局职责明确，同名文件或相同 hash 不自动关联。",
+      "evidence": [
+        "verification/project-materials.json",
+        "verification/project-material-recovery.json",
+        "verification/project-navigation.json",
+        "verification/project-navigation-conflict.json",
+        "verification/project-navigation-crash.json",
+        "verification/native-handoff.json",
+        "verification/native-source-placement.tap",
+        "verification/project-graph-storage.tap",
+        "verification/project-graph-protocol.tap",
+        "verification/editor-session-project-navigation.tap",
+        "verification/native-bundle-rust.log",
+        "verification/project-material-journal-fault.json",
+        "verification/photo-workspace.json",
+        "verification/photo-original-placement-repair.json",
+        "verification/photo-core-stage.json",
+        "verification/photo-deck-material.json",
+        "verification/deck-stage-audit.json"
+      ]
+    },
+    {
+      "id": "F2",
+      "goal": "实现普通复制独立和当前使用处分叉",
+      "status": "verified_independent_png_svg_instances",
+      "scope": "已接入的 PNG、SVG 放入海报和演示。复制后独立编辑并应用，原件和其他使用处保留。",
+      "implementationNote": "",
+      "action": "普通复制逻辑独立；修改共享素材的当前实例时自动独立成源；明确建立关联才联动。",
+      "acceptance": "同一 media 的两处使用中只改一处，另一处和品牌原件不变；用户无需手动建立、搬运子作品。",
+      "evidence": [
+        "verification/independent-instances-core.json",
+        "verification/instance-stage-audit.json",
+        "verification/mixed-instance-stage-audit.json",
+        "verification/native-origins-stage-audit.json",
+        "verification/svg-inplace-core-audit.json"
+      ]
+    },
+    {
+      "id": "F3",
+      "goal": "在海报/PPT 中原位编辑图片",
+      "status": "verified_photo_double_click_inplace",
+      "scope": "海报、幻灯片双击已绑定 PNG 进入原生分层 Photo，实际软边蒙版回写同一对象，两份文件重开后再次双击均恢复相同蒙版。原位布局、裁剪、旋转、组与其他内容均按保存文件核对。",
+      "implementationNote": "",
+      "action": "双击图片进入其 Photo 内容上下文，再回到原版式，按新源修订更新派生图。",
+      "acceptance": "蒙版/调色后返回：位置、裁剪、旋转、组关系、层级和非目标内容保持；保存重开仍可进入分层源。",
+      "evidence": [
+        "verification/instance-stage-audit.json",
+        "verification/mixed-instance-stage-audit.json",
+        "verification/native-origins-stage-audit.json",
+        "verification/photo-double-click-inplace.json",
+        "verification/ui45-photo-inplace-reverification.json"
+      ]
+    },
+    {
+      "id": "F4",
+      "goal": "在海报/PPT 中原位编辑 SVG",
+      "status": "verified_svg_inplace_core",
+      "scope": "Actual new and eligible unchanged legacy SVG poster same-object edit/apply/undo/redo/reopen; actual Deck SVG+preview/PPTX; hosted SVG 7-decimal export and tested exact re-import. Self-contained/size and legacy subset limitations remain.",
+      "implementationNote": "",
+      "action": "保留关联的 Vector 源与 SVG 派生物；进入路径编辑并返回原实例，不要求手动导出回贴。",
+      "acceptance": "修改一个内部节点或文字后，源、显示、保存、导出、再导入分别一致；复杂 SVG 不静默转 PNG。",
+      "evidence": [
+        "verification/svg-deck-stage-audit.json",
+        "verification/svg-inplace-core-audit.json",
+        "verification/svg-vector-stage-audit.json",
+        "verification/ui45-svg-current-reverification.json"
+      ]
+    },
+    {
+      "id": "F5",
+      "goal": "提供明确的 SVG 到 PPT 原生对象转换",
+      "status": "verified_svg_to_native_ppt_core",
+      "scope": "Actual UI simple SVG to editable native paths/text, hidden original, native/PPTX export-reimport, physical edit/undo-redo and response-loss/reload recovery. Strict subset, text layout warning and edge-render differences remain.",
+      "implementationNote": "",
+      "action": "对实际支持的简单路径、形状和文字做有语义范围的转换，保留原 SVG 和转换前版本。",
+      "acceptance": "检查 PPTX 内确有对应可编辑原生对象；复杂滤镜、剪切或字体不等价时明确保留 SVG 或报告选择，不能把 SVG 媒体称为已拆形状。",
+      "evidence": [
+        "verification/svg-native-ppt-core-audit.json",
+        "verification/ui45-svg-current-reverification.json"
+      ]
+    },
+    {
+      "id": "F6",
+      "goal": "实现明确关联更新与局部覆盖",
+      "status": "verified_linked_updates_anchor_and_override_scoped",
+      "scope": "实际 PNG/SVG 七处显式关联更新、独立第八处、局部白色及人工位置/失败恢复；PNG 左上与历史 SVG 右下锚点实测零偏移，九锚点旋转/裁剪几何测试通过；品牌字体按证据范围核验。",
+      "implementationNote": "",
+      "action": "显式更新所有关联处时保留各实例布局、裁剪和手工覆盖；以可恢复版本提交多目标更新。",
+      "acceptance": "更新关联 7 处只影响这 7 处，普通副本不变；一处白色 logo 和人工位置保留；中途失败不显示半套成功，比例变化按锚点处理。",
+      "evidence": [
+        "verification/instance-stage-audit.json",
+        "verification/mixed-instance-stage-audit.json",
+        "verification/native-origins-stage-audit.json",
+        "verification/svg-linked-stage-audit.json",
+        "verification/ui45-brand-font-acceptance.json",
+        "verification/ui45-f6-anchor-acceptance.json"
+      ]
+    },
+    {
+      "id": "G4",
+      "goal": "保留 HTML 设计源与真实安全预览",
+      "status": "verified_html_source_preview_scoped",
+      "scope": "Owned headless DSH: actual HTML/CSS/JS/image source saved and reopened; scoped preview loaded local resources, blocked foreign network, parent DOM and host API; concurrent/stale writes refused. This is not a universal sandbox proof or evidence of the user window.",
+      "implementationNote": "",
+      "action": "管理 HTML/CSS、必要资源和原始产物，在受限运行域中真实渲染，处理外链、脚本、字体与文件边界。",
+      "acceptance": "可运行、可保存和重开原始网页设计；权限范围清楚，不能用截图代替 HTML 能力，也不扩展为网站发布工程。",
+      "evidence": [
+        "verification/ui45-html-acceptance.json",
+        "verification/ui45-html-preview.json",
+        "verification/ui45-html-source.tap"
+      ]
+    },
+    {
+      "id": "G5",
+      "goal": "接入 OD HTML 到可编辑 PPTX 服务",
+      "status": "verified_html_pptx_roundtrip_scoped",
+      "scope": "Owned headless DSH: actual converter produced native editable text/shapes, separate SVG and raster pictures; a physical text edit survived native reopen and PPTX export/reimport; local Inter font embedded, invalid font produced a persisted warning. Arbitrary HTML fidelity and converter dependency/license audit remain outside this evidence.",
+      "implementationNote": "",
+      "action": "提供真实渲染、字体和导出依赖，执行实际转换；转换后由 Deck 接管新版本，来源 HTML 保留。",
+      "acceptance": "真实样本中原生文字/形状能手改；SVG 媒体和栅格效果分别报告；导出、导入、续改、重开通过，不承诺通用双向无损同步。",
+      "evidence": [
+        "verification/ui45-html-acceptance.json",
+        "verification/ui45-html-font-missing.json",
+        "verification/ui45-html-font.json",
+        "verification/ui45-html-raster-conversion.json",
+        "verification/ui45-html-raster-report.tap"
+      ]
+    },
+    {
+      "id": "G6",
+      "goal": "完成一套品牌的海报、社交图和 PPT",
+      "status": "verified_three_native_brand_layouts",
+      "scope": "独立海报、社交图与演示共享两组明确关联的原创 SVG、Inter 与 Corporate 主色。实测跨源换色、手动局部配色、白色标志、人工位置与中断恢复。字体使用共享字族，当前自动更新限于纯色填充。",
+      "implementationNote": "新文字身份绑定及保守恢复代码已构建装盘；复制、手改和故障恢复尚未验证，旧绑定仍按保守规则处理。",
+      "action": "共享 logo、主视觉、字体和颜色，按目标尺寸分别生成原生版式，支持继承与局部覆盖。",
+      "acceptance": "三种物料各有可编辑源；改主色只动绑定属性且保留人工位置，一处 logo 改白不污染品牌本体；不能用同一海报缩放图充当三种排版。",
+      "evidence": [
+        "verification/brand-package-audit.json"
+      ]
+    },
+    {
+      "id": "H1",
+      "goal": "复用 DSH 已配置图片服务和安全凭据",
+      "status": "in_progress",
+      "scope": "实际本机代理目录及真实图片请求、凭据隔离检查通过；本轮 Kimi 对话工具调用返回额度 429，尚未通过。",
+      "implementationNote": "新增 Venice、fal、OpenAI 及 Gemini 图片协议入口和部分请求恢复代码；此前真实调用证据保留，本续接未调用模型或图片服务，最近 Kimi 记录为额度 429。 独立生图API的配置/切换/清除及请求绑定代码已写入，功能验证仍按用户要求暂缓。",
+      "action": "读取当前服务元数据和真实能力，按需核验生成/编辑协议；沿用安全引用，不额外强制 OpenRouter。",
+      "acceptance": "实际服务与所宣称能力对应；密钥不进入浏览器、项目或日志；kimi-for-coding 做总控，不能凭模型名字断言其能生图。",
+      "evidence": [
+        "five-gaps-and-deck.md",
+        "five-gaps-code-audit.json",
+        "verification/ui45-image-acceptance.json"
+      ]
+    },
+    {
+      "id": "H2",
+      "goal": "把真实生图接入可编辑图片源",
+      "status": "verified_real_image_editable_source_scoped",
+      "scope": "真实双候选成为可编辑 Photo 源；蒙版、文字、裁剪及重开通过，后续补做 RGB 与 alpha 全通道复核。",
+      "implementationNote": "",
+      "action": "真实调用现有可用服务，解码结果后建立实际 Photo 图片层，并允许继续人工合成。",
+      "acceptance": "真实响应、图片语义、源图层和保存结果可核验；结果能裁剪、加文字和蒙版，不只是预览卡片。",
+      "evidence": [
+        "verification/ui45-image-acceptance.json"
+      ]
+    },
+    {
+      "id": "H3",
+      "goal": "把真实局部重绘接入图层和蒙版",
+      "status": "verified_real_masked_repaint_transform_scoped",
+      "scope": "真实服务按提示将红苹果改绿；原生羽化选区外 866832 像素未变化。另以真实旋转、缩放、羽化选区复用该服务结果，1022606 个选区外像素未变化；采用、撤销及冲突保护通过。",
+      "implementationNote": "",
+      "action": "使用实际选区 alpha 和坐标，保留原图，以新结果层/蒙版采用；区分服务原生硬蒙版与参考图生成后受控合成。",
+      "acceptance": "真实服务修改指定内容；按承诺检查区域内变化与区域外保护；软边和变换正确，不能把无语义的覆盖操作当 AI 重绘。",
+      "evidence": [
+        "verification/ui45-image-acceptance.json",
+        "verification/ui45-transformed-mask.json"
+      ]
+    },
+    {
+      "id": "H4",
+      "goal": "打通人工修边后的 AI 继续修改",
+      "status": "verified_manual_edge_ai_continuation_scoped",
+      "scope": "真实生图后物理画笔修整苹果边缘，下一次真实 AI 编辑把叶子改为金黄；原手工层逐字段不变、1049904 选区外像素不变，原生源保存重开并按 RGBA 复核。",
+      "implementationNote": "",
+      "action": "下一次 AI 操作读取当前真实图层、最新蒙版与人工修订；保护未采用结果和未目标图层。",
+      "acceptance": "生成/重绘→用户修边→AI 续改→保存重开，人工改动与非目标内容保持；不重新覆盖整个文档。",
+      "evidence": [
+        "verification/ui45-image-acceptance.json"
+      ]
+    },
+    {
+      "id": "H5",
+      "goal": "接入真实多方案与安全采用",
+      "status": "verified_real_image_and_native_variants_scoped",
+      "scope": "真实图片候选与 Photo 作品方案均独立；采用、撤销、再次采用无需重复生图，后续真实手改被保留且旧候选返回 409；补做全通道复核。",
+      "implementationNote": "",
+      "action": "图片和作品候选各有独立源与基线；提供对比、采用、撤销和冲突处理；恢复时不自动重发付费请求。",
+      "acceptance": "真实生成候选互不覆盖；用户之后手改仍保留；采用只影响指定范围，撤销再采用不无故重复调用服务。",
+      "evidence": [
+        "verification/ui45-image-acceptance.json"
+      ]
+    },
+    {
+      "id": "I1",
+      "goal": "统一实际可用的导出入口和格式说明",
+      "status": "verified_export_entries_and_semantics_scoped",
+      "scope": "原生源、PNG/JPEG、SVG、PPTX、PDF、分层 PSD 和 WebP/TIFF 的实际入口与产物按样本核对；演示 PDF 标明页面位图及可搜索文字层。",
+      "implementationNote": "",
+      "action": "提供原生源、PNG/JPG、SVG、PPTX、PDF 及实际支持的分层交换格式；注明具体保留语义与可用范围。",
+      "acceptance": "入口、格式和真实产物一致；PDF 的矢量/文字、PSD 图层、PPTX 原生对象分别说明，不能仅换扩展名或整页图冒充。",
+      "evidence": [
+        "verification/ui45-export-acceptance.json"
+      ]
+    },
+    {
+      "id": "I2",
+      "goal": "为每种承诺格式完成重开验收",
+      "status": "verified_export_reopen_scoped",
+      "scope": "已承诺格式按报告用原生编辑器或独立 Pillow、PyMuPDF、python-pptx 读取；PSD 两层记录及 Photo 重开、PPTX 真实图表/表格均核对，Adobe/Office 桌面消费者未测。",
+      "implementationNote": "",
+      "action": "独立解码或用合适消费者重开产物，核验画面、字体、结构、媒体和页面；有损处保留具体报告。",
+      "acceptance": "格式文件实际可用；能被本插件重读不自动代表外部兼容，外部消费者未验证须明确说明。",
+      "evidence": [
+        "verification/ui45-export-acceptance.json"
+      ]
+    },
+    {
+      "id": "I3",
+      "goal": "生成可继续编辑的完整项目包",
+      "status": "verified_portable_native_project_core",
+      "scope": "真实导出项目 ZIP，独立解压至空目录后在 DSH 重开并实际编辑、复用共享 SVG。含已发布源版本、素材关系、依赖/许可、来源；排除聊天状态和操作日志。",
+      "implementationNote": "",
+      "action": "包含原生源、素材关系、实际依赖、来源及许可；导出 PPTX 内嵌当前媒体快照。",
+      "acceptance": "干净目录解包可继续编辑和关联复用；项目包无密钥/私有会话；外部 PPT 不冒称继承 DSH 的实时关联。",
+      "evidence": [
+        "verification/brand-package-audit.json"
+      ]
+    },
+    {
+      "id": "I4",
+      "goal": "迁移旧作品并保留恢复能力",
+      "status": "verified_legacy_migration_recovery_scoped",
+      "scope": "真实旧画板样本含 Photo/Vector 专业源：原件与备份字节核对、独立迁移、画板可编辑、项目包干净目录重开；缺失素材、版本冲突、损坏备份及旧演示结构按报告验证。",
+      "implementationNote": "",
+      "action": "旧数据只读解析后另存新项目，能恢复源的保留源，不能恢复的明确标注；保留旧版包和迁移来源。",
+      "acceptance": "旧作品和唯一原件不被覆盖；迁移失败可回原版，真实已有源不被无故扁平化。",
+      "evidence": [
+        "verification/ui45-legacy-acceptance.json"
+      ]
+    },
+    {
+      "id": "J1",
+      "goal": "完成五条真实端到端旅程",
+      "status": "in_progress",
+      "scope": "五条旅程已有真实分段证据；各旅程的原方案完整步骤尚未在同一条实际流程中全部通过，见逐条缺口。",
+      "implementationNote": "五条原方案完整旅程仍需实际执行；按用户指示暂缓。",
+      "action": "按标识生成续改、修图入 PPT、多品牌物料、HTML/PPTX 转换、冲突中断恢复五条旅程检查完整交互。",
+      "acceptance": "每条从原生 DSH 对话/手工入口走通到源和输出；精确复用现有证据，只为新增风险运行必要测试，不用 mock 证明 AI。",
+      "evidence": [
+        "verification/ui45-partial-journeys.json"
+      ]
+    },
+    {
+      "id": "J2",
+      "goal": "逐项收口四项目能力覆盖",
+      "status": "pending",
+      "scope": "",
+      "implementationNote": "全项目功能逐项运行验证仍需执行；静态声明不能替代验收。",
+      "action": "复核每项承诺是否有真实界面、AI 操作、源结构、输出与恢复证据；补齐矩阵内剩余缺口。",
+      "acceptance": "已承诺项逐一通过；上游限制、宿主依赖和未完成项逐项公开，任何关键项未通过不得称完整完成。",
+      "evidence": []
+    },
+    {
+      "id": "J3",
+      "goal": "核对运行版发布产物与最终交付",
+      "status": "pending",
+      "scope": "",
+      "implementationNote": "运行时/供应商/许可摘要和开发包静态交付审计已补；预构建转换器精确源码关系、历史缺档及字体参考差异明确保留，用户运行窗口和最终功能验收仍未确认。",
+      "action": "核对实际部署来源、构建版本、文件完整性、资源许可、迁移与回退；执行最终对应检查。",
+      "acceptance": "交付可加载的真实插件、清单和证据；明确磁盘版本与加载版本，未经验证不声称用户窗口已更新；不操作用户桌面。",
+      "evidence": [
+        "core-closeout.md",
+        "dependency-license-audit.json",
+        "five-gaps-and-deck.md",
+        "five-gaps-code-audit.json",
+        "native-source-input-audit.json"
+      ]
+    }
+  ],
+  "directEvidence": {
+    "historical-evidence-reconciliation.json": {
+      "bytes": 12607,
+      "sha256": "5b9a36aa0d051557528961b788248266a70dcc7eeb2b9143baa8eb13a58911b5"
+    },
+    "implementation-source-audit.json": {
+      "bytes": 917011,
+      "sha256": "5c60ca83bf0215f956a5091af518557f732fbc61fbe79317cfabde44fdbf58bc"
+    },
+    "static-registry-audit.json": {
+      "bytes": 29174,
+      "sha256": "c8b57ceb829963fb30857ddb74ef5844f8f3470de69fa13e13b483d765307d8e"
+    },
+    "upstream-command-candidates.json": {
+      "bytes": 1176393,
+      "sha256": "79546cf44eec1d45fed47492d4b86cfe513073bf2643581625014872527f1ab9"
+    },
+    "verification/editor-assets-current.tap": {
+      "bytes": 517,
+      "sha256": "de781b859c2ed7805037a76688abbc1ed223a820b791e0103f81b6847e010cb3"
+    },
+    "verification/live-version-diagnostics.json": {
+      "bytes": 2291,
+      "sha256": "27d1c82505553b60db75b606860cf967934e1508e67e06273621cd5539382f7a"
+    },
+    "verification/owned-running-health.json": {
+      "bytes": 1547,
+      "sha256": "007b2c35bcd2ba58fe84b8d5f4c9c01ef1722a13c7813026e09b7b6747844dd5"
+    },
+    "verification/editor-draft-ui.json": {
+      "bytes": 7797,
+      "sha256": "521cd0c35d6bf0dcc5bd7618a5ece9e3191b01c50a3c4145d19f2391d59ca433"
+    },
+    "verification/editor-scope-ui.json": {
+      "bytes": 1717,
+      "sha256": "1bb4b8184afbd75d5de78ac241e98347492b2112eba9dd55fc61651f321209af"
+    },
+    "verification/ui45-data-protection-acceptance.json": {
+      "bytes": 3471,
+      "sha256": "5047ec9d6abdc1fad527d9b5afa27d1c60aa75ba3414a9146500d3ef5454e91c"
+    },
+    "verification/editor-stop-admission.tap": {
+      "bytes": 2221,
+      "sha256": "72c4641af2103f6ada8f531ed5b191034990143239455841f97fe8eb2dbf03e3"
+    },
+    "verification/editor-stop-ui.json": {
+      "bytes": 1418,
+      "sha256": "dcec4493875cd5744fc00372dd7871904f5bf45f18d4d35c0bc06cc36265adf4"
+    },
+    "verification/native-file-failure.json": {
+      "bytes": 916,
+      "sha256": "378dd945e96c2d6ae297de09ac3b2863976dda69a70b845f01c61538c2b5e9f3"
+    },
+    "verification/native-file-host.tap": {
+      "bytes": 473,
+      "sha256": "28772d003c940259c2f491ccd34ece79512bf46bbb97b8fbffe475a1a373729b"
+    },
+    "verification/native-files-ui.json": {
+      "bytes": 3623,
+      "sha256": "25821c9edfa85b1800f2fdded039759d449bb0d5a23e4be19a51f6b1484d6b1f"
+    },
+    "verification/native-origins-stage-audit.json": {
+      "bytes": 44744,
+      "sha256": "291792ee5419c3bde7e0c55f9ddd8f6d9b4f64c9240cff04aa1f409cf71c148c"
+    },
+    "verification/electron-background.json": {
+      "bytes": 4708,
+      "sha256": "15be3691491876ee5337b75f168de755b47a45e9c76169e74284060c54529d5d"
+    },
+    "verification/electron-crash.json": {
+      "bytes": 3709,
+      "sha256": "1e96e2ed0a7794f75ff8eda9f85773117c589367c3d03235524f4cd077e83c8a"
+    },
+    "verification/electron-ime.json": {
+      "bytes": 3349,
+      "sha256": "2aa1b4190d58bc32ff7ab6d3dbdf54aa650a2baf08677e79d947593c7fbb42a3"
+    },
+    "verification/electron-surface.json": {
+      "bytes": 5897,
+      "sha256": "108c5a3e9dbd73d8c2bdb816b7c66949975c0b77a2bca8efa53f32b91c17cd4f"
+    },
+    "verification/ui45-electron-hardware-acceptance.json": {
+      "bytes": 2230,
+      "sha256": "3ede344a928e3367be89060d343565d0b942871930b2ad831e35f4e81d4fa37a"
+    },
+    "verification/ui160-ai-canvas-20261113.json": {
+      "bytes": 21585,
+      "sha256": "8d1b73e38b01f892e0bc2d12953bb4ff69cf45dfc71dd72fea20b6bca4242d5f"
+    },
+    "verification/ui161-ai-native-ux-20261113.json": {
+      "bytes": 16256,
+      "sha256": "e1989c9ba3e1e5c4641df5ab47a097b2d7964f91eea91a69a501019b79054698"
+    },
+    "verification/ui162-design-session-isolation-20261113.json": {
+      "bytes": 13490,
+      "sha256": "d8e3b319774c4fb5b8c293715cff0c1a1621415dbb3efd3aed6073f8b6209cc0"
+    },
+    "verification/ui45-layout-acceptance.json": {
+      "bytes": 2820,
+      "sha256": "140b74e84526019a64d28d8e3570da8ec96b9e017951eb421a2bd38708e324be"
+    },
+    "verification/unified-workspace.json": {
+      "bytes": 3422,
+      "sha256": "cbbb821dc843ef8f0cb2777e9e8296a56a778357e1a6db0f778b531ed296b5bf"
+    },
+    "verification/rust-host-files-tests.log": {
+      "bytes": 5852,
+      "sha256": "81fecf0174090253d7e4d0f60eff1f88160426ee08615d95853d3bbef236cd9e"
+    },
+    "verification/ui45-shared-file-menu-progress.json": {
+      "bytes": 1993,
+      "sha256": "471899b0c94868ad3ef7d8635a1bcccf8f2e215d0908882fcb2a800a1ec332e3"
+    },
+    "five-gaps-and-deck.md": {
+      "bytes": 6598,
+      "sha256": "41a382853d311bca8eec18d2086280c5b60567b545ca9392c2007a2dda39962c"
+    },
+    "five-gaps-code-audit.json": {
+      "bytes": 41654,
+      "sha256": "0c771991f17b4ac8fbc7af7055ee0f1ab09c699942676cd2a2dc9a017e6f39d7"
+    },
+    "hosted-ui-source-audit.json": {
+      "bytes": 37120,
+      "sha256": "e1549c5dfbdd19556345ac587379cd8f9347cb0d38d33aa0b7abb7cc1478cfd4"
+    },
+    "verification/ui45-host-theme-progress.json": {
+      "bytes": 3012,
+      "sha256": "6bf5018fdf526d74271128732c9b7c818f386ad725dc8d24af8debd615934922"
+    },
+    "verification/ui45-context-tools-acceptance.json": {
+      "bytes": 5874,
+      "sha256": "af1b5fe79815e9106a47570901cec9b534a3bc79dede1f2da902bebb77a76a94"
+    },
+    "verification/project-navigation-conflict.json": {
+      "bytes": 1576,
+      "sha256": "89550d6dc13a824f86e50ee8545b9a60971956b9b1e6cb73d6237165c93f7c14"
+    },
+    "verification/project-navigation-crash.json": {
+      "bytes": 1829,
+      "sha256": "cd1f4c99c5df590af379ba533516cbef3bb20390530e0c05e7c5e6841762423d"
+    },
+    "verification/project-navigation.json": {
+      "bytes": 2667,
+      "sha256": "8010f5956582833dfb776d6ad186b93de7a6c9d660a04da4f0bbcfa1654e5605"
+    },
+    "verification/ui45-three-engine-navigation-acceptance.json": {
+      "bytes": 2538,
+      "sha256": "7b630fe55e00134cbcdbcb813c18ef2732a48c11579888ec610b548efbf9ada9"
+    },
+    "verification/menu-handoff.json": {
+      "bytes": 1138,
+      "sha256": "2ae2a8f00bdf3129e73e7fd3b344242d63828fb42ce9b3538fd1d31cb570483d"
+    },
+    "verification/native-reference-live.json": {
+      "bytes": 9831,
+      "sha256": "9a0c9200ba0453cf7d0225e85425341f3e19143bb316248216a465a1126a910f"
+    },
+    "verification/rust-shortcut-modifiers.log": {
+      "bytes": 7482,
+      "sha256": "7d123746fdb99124171e38cfa986534f68bf91000ef0f6a62144de7f3e245940"
+    },
+    "verification/ui45-chat-focus-acceptance.json": {
+      "bytes": 1350,
+      "sha256": "ccabfb33b3aee2eca052402727aad1b82d26dc90b9e49ddff6bb9c0263f3be10"
+    },
+    "verification/vector-alignment.json": {
+      "bytes": 13950,
+      "sha256": "c4d2abe37e05c93199610cdc4d1e2be9b0eba32b1c231554838ccc56eb4b41b5"
+    },
+    "verification/vector-editing.json": {
+      "bytes": 7858,
+      "sha256": "1996938028a85a680d1b3851e879dee97dc9548344e29282e7fc281f4c051a01"
+    },
+    "verification/vector-color.json": {
+      "bytes": 1982,
+      "sha256": "b38686b2976c0b1d65a8204b316ede645dd2cf1001f33ea1dc0bf9679323944e"
+    },
+    "verification/vector-layers.json": {
+      "bytes": 6378,
+      "sha256": "36b042006a61677d101fb39e291a1c975b02069708d4589a9efd6e8728210a94"
+    },
+    "verification/vector-boolean.json": {
+      "bytes": 4328,
+      "sha256": "907aee86f4115f84e4d1ff8014b9bc19037fa116a3556ec010992f4444e3a3fa"
+    },
+    "verification/native-reference-pages.json": {
+      "bytes": 3721,
+      "sha256": "c29f95d279863dff727543f8657a25b2839e4b51fb0741c38788d96f75ecff93"
+    },
+    "verification/ui45-host9-files-references.json": {
+      "bytes": 2760,
+      "sha256": "4617f9adabc1f9f505024265aab4b90731041a50bf4dcce431748ba632f5dfb4"
+    },
+    "verification/deck-kimi.json": {
+      "bytes": 17286,
+      "sha256": "0b5caf5cdb26af6db4305e563dfa766dca9a1d4d453b3a5ed4102883bbda56c7"
+    },
+    "verification/editor-history-policy.log": {
+      "bytes": 410,
+      "sha256": "65053eadf27d627c7d8269263079cad0528e2b17d2a9397dc380126aba55cd6c"
+    },
+    "verification/editor-session-current.tap": {
+      "bytes": 3110,
+      "sha256": "aa39b22a983b9f64df59c5f2fa083f34a0c13cafb83332cad317b3c9109b06fa"
+    },
+    "verification/kimi-opendesign-resume.json": {
+      "bytes": 194120,
+      "sha256": "10c8bb53dd35ec04d5e5e4c295eec0c9bcd601650927bf6387ad135923e4830c"
+    },
+    "verification/native-handoff.json": {
+      "bytes": 4495,
+      "sha256": "b3edcb90e34b4fce47ca0c9568122512cc5a5616e0f64d26e32073d5f3550d97"
+    },
+    "verification/photo-kimi.json": {
+      "bytes": 53032,
+      "sha256": "5400bbb656e0c09583973a49017431f173f250571e872d3f927bf45d606d2ba4"
+    },
+    "verification/ui45-cross-engine-handoff-acceptance.json": {
+      "bytes": 2579,
+      "sha256": "f4f1ded98cfe166f2a79d922279f0f469c85ff423a66e55c85d7ddb004931f1c"
+    },
+    "verification/ui45-export-acceptance.json": {
+      "bytes": 7528,
+      "sha256": "95f4faf663f99586adaf031b5fb8a0f0a16ec311be104c2f03e1a58b79483d40"
+    },
+    "authorization-requirements.json": {
+      "bytes": 2590,
+      "sha256": "7749129fe5bc30a610b29be1f14ea0a6de091ba9ea922ba937546fa46c8476d4"
+    },
+    "external-native-import.md": {
+      "bytes": 3513,
+      "sha256": "cc9867232cca87f9c9f331d553c7e3e6b3d62a8aaf3f5af94a0460ab995adbb4"
+    },
+    "external-resource-download.md": {
+      "bytes": 1198,
+      "sha256": "dad1ff69e51dda6a033cdab3c465cd60d538f661a2c607a1a62e3590b4780a07"
+    },
+    "fal-image-adapter.md": {
+      "bytes": 2091,
+      "sha256": "fdf393609d442112c1a09215cad30a3a2a4c4f3a17c3311dbef53012cc226904"
+    },
+    "fal-remote-outputs.md": {
+      "bytes": 3145,
+      "sha256": "edba88bb925f35a6dc28f601b4f2409c57eda7d10715dd6b949942070cecc7bf"
+    },
+    "fal-storage-adapter.md": {
+      "bytes": 3765,
+      "sha256": "28b18702a1811a3714046df3d2259202d79dafab4a5b8f65d96208c049a73f4a"
+    },
+    "fal-workflow-adapter.md": {
+      "bytes": 4078,
+      "sha256": "72bf5c55eca893e9e0e8ced2e5683e7f4301f2190515d8ef14789de626569cb9"
+    },
+    "figma-source-adapter.md": {
+      "bytes": 2808,
+      "sha256": "85a796b4084877c8b47157f15a7865ea3d725b47c3a36694cba4505a8576095b"
+    },
+    "html-project-assets.md": {
+      "bytes": 1875,
+      "sha256": "da62d3dd14b84f8cdbd35b590ae437947abefef9b0b19d3e1fa052c0b6fd704c"
+    },
+    "openai-image-svg-adapter.md": {
+      "bytes": 3566,
+      "sha256": "7bf13f0480c2bfc0fd88f4733f388d61606a236b22e69b5cbc4bd80535bdda97"
+    },
+    "opendesign-declared-dependencies.json": {
+      "bytes": 2335,
+      "sha256": "91cf8bcf9ff3af31b2fb9869eb25ef275f87a16f7b8bfaeb3928a1a244cb9a5b"
+    },
+    "opendesign-design-brief.md": {
+      "bytes": 3303,
+      "sha256": "e8add5392d4a58a52567ca3608d743c588898d6c5843701df79ba3745b20475e"
+    },
+    "opendesign-html-import.md": {
+      "bytes": 2210,
+      "sha256": "8baab8478223cc47530f098ae671adad3b232826b0d59926b62b0b3cfffc14e5"
+    },
+    "opendesign-skill-entry-map.json": {
+      "bytes": 91489,
+      "sha256": "43fd9bf56bc10fdac17587ae9f4f54206c24e29567dbca6d72026ea650796106"
+    },
+    "opendesign-source-audit.json": {
+      "bytes": 591361,
+      "sha256": "5b879d3563a240f3aa3167c78652865b523c2d307ca78f769f5bfe03f899e2ec"
+    },
+    "opendesign-source-classification.json": {
+      "bytes": 443286,
+      "sha256": "97ae5305f549dc62054c03f96d119db5748011ce4c77f215be734df802b52617"
+    },
+    "opendesign-theme-factory.md": {
+      "bytes": 2100,
+      "sha256": "d9f7cbd01e2e2b957654eddebb3fea9ffbda9916b30b75e6e7609c6596553c11"
+    },
+    "opendesign-workflow-context.md": {
+      "bytes": 2042,
+      "sha256": "e43df80cabee84da332b94cc8512302848dffc66307bee09e72678449220da2b"
+    },
+    "opendesign-workflow-ledger.json": {
+      "bytes": 267380,
+      "sha256": "5ab43ab02a09f0da9878d388d44e7fb367b13270a325606f1ca86cefd1434cda"
+    },
+    "replicate-workflow-adapter.md": {
+      "bytes": 4158,
+      "sha256": "7fcecebc8efb7e16800e0f57c23dcb43b485eb607c1b414ec6cd21d87a285172"
+    },
+    "venice-audio-adapter.md": {
+      "bytes": 1852,
+      "sha256": "fab1dca901957d595f79b19a191d7b88acaafcdf5a31b27139073d0759cbb781"
+    },
+    "venice-image-adapter.md": {
+      "bytes": 6492,
+      "sha256": "915a322247372b3ee265739fb098aaaa8d85bac8ab958b66718b830d9d3baf49"
+    },
+    "venice-video-adapter.md": {
+      "bytes": 2179,
+      "sha256": "fb5b245cb61cd2a9aba54cb6c9b1892f465cfa7141e48c41df34c5c520ecdac3"
+    },
+    "verification/opendesign-inventory.json": {
+      "bytes": 844,
+      "sha256": "e680d1b383153192a2ee37c6fa5ee42f533ae211316ce0cf6158bdf6d57641da"
+    },
+    "verification/opendesign-library.tap": {
+      "bytes": 929,
+      "sha256": "89048ff5f26fb3b4f73060fcf92d9d8444d9739a89e5885f527a8dff888550b1"
+    },
+    "verification/opendesign-registered.json": {
+      "bytes": 1763,
+      "sha256": "b7951e8532bd01129b8dea590768f0d4cb2bec1a4727f1913546987713502e92"
+    },
+    "verification/opendesign-source-fetch.json": {
+      "bytes": 11033,
+      "sha256": "5c37d153bc73cba2169203005cd71572b494906bcaa70833033085a4c3989be7"
+    },
+    "verification/ui45-od-dynamic-brand-acceptance.json": {
+      "bytes": 2130,
+      "sha256": "b5d3848f92808ab6008c6ea11475fb928d64a2b18df82d772c7d71c0e764abc7"
+    },
+    "verification/ui45-od-html-package-acceptance.json": {
+      "bytes": 2506,
+      "sha256": "e8db8b3c91bee3aa65b06b7641b4514cc03d26f4a172c7c8e20a049f0ffa8441"
+    },
+    "verification/ui45-od-import-acceptance.json": {
+      "bytes": 1615,
+      "sha256": "da2a77c12399eedd07a120839ae17544a2070469d24e50c3a3840199a32a156c"
+    },
+    "design-plan-links.md": {
+      "bytes": 1703,
+      "sha256": "120f84bd914ba975733e91d6eae384eeffec4bb23fc97e607776b6bf70877ba9"
+    },
+    "design-plan-manual.md": {
+      "bytes": 2014,
+      "sha256": "abab013841da3bfd36dabbffafb976c35ddd6c033a47d9d899174e70ef0686e7"
+    },
+    "verification/kimi-opendesign.json": {
+      "bytes": 149777,
+      "sha256": "e2dfeae4f69e20ebb8818e4b4defafba8e733ee404e949d07fb4da5db5b92276"
+    },
+    "verification/opendesign-model-audit.json": {
+      "bytes": 6294,
+      "sha256": "73eb199ea5523ac4af7722424350d56df313d08a62f5b5b94ba0b319b257ddc4"
+    },
+    "verification/kimi-opendesign-export.svg": {
+      "bytes": 6324,
+      "sha256": "743748136c613d0d7ca4e4fd3a05095164fa260b0b7b5c351058e69a19023d78"
+    },
+    "verification/native-exact-ids.json": {
+      "bytes": 3951,
+      "sha256": "3dbc44062202277b1a3d488ed6227bd4c4093142df9e99a9b3ab9d6cd9bf2ba6"
+    },
+    "verification/native-protocol.tap": {
+      "bytes": 1109,
+      "sha256": "4cd6847077d5b8375800fc4bbd5e31cf89336ac8fec5c524e8daffc789cb58e2"
+    },
+    "verification/native-contract.tap": {
+      "bytes": 1115,
+      "sha256": "4ca8084fa04042dcda94fb2fe85c97bd26c0a353870b804d786bc4ea85f7121a"
+    },
+    "verification/native-source-u64.tap": {
+      "bytes": 2223,
+      "sha256": "4a4c6ff8e59595b0b35f63a60e963372ef9e1f313b2b86cf0038c698bc6a60e6"
+    },
+    "verification/native-history-u64.tap": {
+      "bytes": 1066,
+      "sha256": "e221ec5b302b833c6591c431ccbad580d0eb0f3f038189605b10c75841c81da1"
+    },
+    "verification/editor-protocol.tap": {
+      "bytes": 658,
+      "sha256": "f99c0654294369ba2cbbd1a98f01a39b5c35120028735f25fb108103ab192bb5"
+    },
+    "verification/editor-session-context2.tap": {
+      "bytes": 3110,
+      "sha256": "3965fc4abb05c90a9ce437acf7b51bb4aeffe75406858a605b2eef554d8164b9"
+    },
+    "verification/editor-assets-context2.tap": {
+      "bytes": 1082,
+      "sha256": "dc625df475d85ecca9809bf31d7edd2291cc2da0841c3dfab3648bbd74ee4bf2"
+    },
+    "verification/native-context-ordering-rust.log": {
+      "bytes": 3743,
+      "sha256": "f29216c4ebf7a081fa842ea3c9717ea1911c026c36d1232668fe7da4e7540711"
+    },
+    "verification/photo-workspace.json": {
+      "bytes": 3452,
+      "sha256": "4fe8bf3e5c4dd06e4b51e6193e6e115871566e25f2b537b5c1daa7ff755287f5"
+    },
+    "verification/photo-original-placement-repair.json": {
+      "bytes": 1277,
+      "sha256": "18501a30059bf763575f3a9c0f802f3c704a5bef4bf1c9f720d46039987f1d00"
+    },
+    "verification/photo-core-stage.json": {
+      "bytes": 3825,
+      "sha256": "d7596c16ef05b0d0ecd6704beb1207ff8c54d97a05b6569ece7ce3f90e16e70e"
+    },
+    "verification/photo-tools.json": {
+      "bytes": 3602,
+      "sha256": "e6cf44e80664cb5b241f9aeb7dea8eddefda14a5f910768f82fa0f27690dbfa9"
+    },
+    "verification/ui45-photo-complete-acceptance.json": {
+      "bytes": 1085,
+      "sha256": "4fabe2e05855145c30ac0b5f1ddb480ba88da501b86db31cc407cba04e026b6b"
+    },
+    "verification/photo-stage-audit.json": {
+      "bytes": 10794,
+      "sha256": "09eb2622544c51a281bd2abce8f8d12126fd32ae8f4f4fb69d2f09febd54e3dc"
+    },
+    "verification/photo-state-publication.json": {
+      "bytes": 62567,
+      "sha256": "87f37f5ec7bb9d21ee8083e0c55bea5b0963ce974205ea3aa057873e6060a51e"
+    },
+    "verification/deck-surface.json": {
+      "bytes": 2256,
+      "sha256": "4b3149061d183bae998b8eead49ebc1fb07d08cc73b39264f1a0e32c45d88da5"
+    },
+    "verification/deck-workspace.json": {
+      "bytes": 2099,
+      "sha256": "9a150513bea79174b36255351145f9ff4aa70676bba803f4e0c55b37fe13db91"
+    },
+    "verification/deck-stage-audit.json": {
+      "bytes": 12826,
+      "sha256": "c61e42fdd395fd4d8fdbf6b4775bdccc8bf5c642f4ff030aa36ce707df762bc2"
+    },
+    "verification/photo-deck-material.json": {
+      "bytes": 3553,
+      "sha256": "0734f4cac9455b84f605883b5dbcfbe374ba964dd178ee69e93e76f5bc6a4337"
+    },
+    "verification/ui45-deck-structured-acceptance.json": {
+      "bytes": 1740,
+      "sha256": "28081b775ead38e1bda73ade6ec554bd12caf009ea437259549310793f6b9bd1"
+    },
+    "verification/ui45-deck-media-acceptance.json": {
+      "bytes": 2910,
+      "sha256": "82dcf0b962f71abd1f391855031071ced391fda52c786de23b84d6957170275c"
+    },
+    "verification/ui45-deck-media-picker-acceptance.json": {
+      "bytes": 2106,
+      "sha256": "68142ba74dc6667e63cc77a0e921b6071246e8ea92ac3e2815df15ee2eba8242"
+    },
+    "verification/ui45-deck-morph-acceptance.json": {
+      "bytes": 2748,
+      "sha256": "3771ceed7eb77d56280debe6ba28d5c4a404beca80caf6f1229686a3e3d1e074"
+    },
+    "verification/ui45-deck-semantics-acceptance.json": {
+      "bytes": 3740,
+      "sha256": "bd570791a88013a25b2a5ea7b5cfc02495fbb8c051d5bfb24664900d48955124"
+    },
+    "verification/ui45-deck-font-acceptance.json": {
+      "bytes": 2598,
+      "sha256": "02e4736655a51d3c10bb343ec6c868c713d98fb9c4e88515241a5aec0a764324"
+    },
+    "verification/project-materials.json": {
+      "bytes": 3419,
+      "sha256": "fa702e15f20fa3d67482b4bdcba0700aa302281db08c3cc4993926909d6f295d"
+    },
+    "verification/project-material-recovery.json": {
+      "bytes": 1807,
+      "sha256": "9f690cef3b499beed7ad21325e330a073cb2fc10048bd25a22ba6b9322ff7c14"
+    },
+    "verification/native-source-placement.tap": {
+      "bytes": 2717,
+      "sha256": "ca0b5e2d3b239b129d518dae911297cd0306d588dbaa1ac553feab3960a6f3fc"
+    },
+    "verification/project-graph-storage.tap": {
+      "bytes": 2068,
+      "sha256": "e9e1ccca830ce95d83681fcf5402e8f98b7287005c660c5c72b36de5ca6b5e73"
+    },
+    "verification/project-graph-protocol.tap": {
+      "bytes": 3055,
+      "sha256": "3c019b13147b65a4b0162c2ccceea744712a25f49f22b7eda83fe6592c2c6cbb"
+    },
+    "verification/editor-session-project-navigation.tap": {
+      "bytes": 3111,
+      "sha256": "f721c76d335d5a9d0c8def7521e642bb6aa3553d3f1330fcfecf0fe309e8dfff"
+    },
+    "verification/native-bundle-rust.log": {
+      "bytes": 3968,
+      "sha256": "4b78b932af472198cddf516f35eb138aeaa5132503a1b2cf891e03cda920f805"
+    },
+    "verification/project-material-journal-fault.json": {
+      "bytes": 371,
+      "sha256": "bc8c9ec8404f4a351e4716b872a6a41158d29614d3cecce469041512429b158b"
+    },
+    "verification/independent-instances-core.json": {
+      "bytes": 3790,
+      "sha256": "79c9ea878afbcc0f466c0a4f44ec2406d80d9ff4d69b77717751146b1723c2a6"
+    },
+    "verification/instance-stage-audit.json": {
+      "bytes": 11953,
+      "sha256": "60a1ef036c653539b5a75a661ed1ba3bd25ed386d628a25775cbdb7f04c84783"
+    },
+    "verification/mixed-instance-stage-audit.json": {
+      "bytes": 15311,
+      "sha256": "c927d2febcf087768af0965724332a18b559a39e71f76507b5faae425dc4e9a2"
+    },
+    "verification/svg-inplace-core-audit.json": {
+      "bytes": 23188,
+      "sha256": "6aa27d110f858197800d9c6c5a30875e1a60ce095bb374d79f5af8e96e24b448"
+    },
+    "verification/photo-double-click-inplace.json": {
+      "bytes": 2513,
+      "sha256": "c6061cfdf6e5c0429a8449dcb8b236b2d0dc79ea0fe9409b2c4ad3e540d8a1ec"
+    },
+    "verification/ui45-photo-inplace-reverification.json": {
+      "bytes": 2339,
+      "sha256": "fb510f7c84a94839dca5047b60061ec8417248b1bb2c414a29dd17b44252d7a5"
+    },
+    "verification/svg-deck-stage-audit.json": {
+      "bytes": 20064,
+      "sha256": "19a50a518b6f71e774c54e364c44f8b237a1ee88ba797f83a70a1d18f92c70c8"
+    },
+    "verification/svg-vector-stage-audit.json": {
+      "bytes": 12332,
+      "sha256": "b339a257bb678311fcf6d83b71fa4b6506290da01ee3fb27b04d30c4a47744cd"
+    },
+    "verification/ui45-svg-current-reverification.json": {
+      "bytes": 2972,
+      "sha256": "d01ded787abc5c3583cbdbe970c819d1027fa17a7790e125c52afd445f220a02"
+    },
+    "verification/svg-native-ppt-core-audit.json": {
+      "bytes": 14795,
+      "sha256": "922b5691d65190e2b08581e5bfe0a234fa418693beb9a9f1a02f9577e23a3c49"
+    },
+    "verification/svg-linked-stage-audit.json": {
+      "bytes": 18415,
+      "sha256": "9659eab3031343b53bcf50df292b93c570b6d495519b294ca48bf8ca4a550088"
+    },
+    "verification/ui45-brand-font-acceptance.json": {
+      "bytes": 1606,
+      "sha256": "30be32fa7139271973c24de0360ae3379e9f6262556956fc756a83737a0e68d7"
+    },
+    "verification/ui45-f6-anchor-acceptance.json": {
+      "bytes": 3801,
+      "sha256": "3c339e98158bc2127f0155ae21bc24455772a834e1438586cae635a686b402a7"
+    },
+    "verification/ui45-html-acceptance.json": {
+      "bytes": 1272,
+      "sha256": "2cec3bc3954beca59926f02bc7228a834329a269c77c411f4412f05ee9a75435"
+    },
+    "verification/ui45-html-preview.json": {
+      "bytes": 1196,
+      "sha256": "187522c7ff0f0132e99961245eb8cf685cfe0b793fe937226ce6fb6d2be09277"
+    },
+    "verification/ui45-html-source.tap": {
+      "bytes": 343,
+      "sha256": "f64f0af459d6d182f00619b85ebeb20e71a830db74658fa90ed22a1db9d8454d"
+    },
+    "verification/ui45-html-font-missing.json": {
+      "bytes": 1329,
+      "sha256": "a8862614fe0d5f6534fe7ef251bfa2c992a50230edb23fe5533dd9693f7d5705"
+    },
+    "verification/ui45-html-font.json": {
+      "bytes": 1201,
+      "sha256": "d437baef1554668e6ccdd49ad09b1d4e57a39a421915edcc7841ad9bc5447fb6"
+    },
+    "verification/ui45-html-raster-conversion.json": {
+      "bytes": 1958,
+      "sha256": "703e40aefd909a792e90c1dc96fa802ba0666d4b178d2c95d8ca0d0589859c28"
+    },
+    "verification/ui45-html-raster-report.tap": {
+      "bytes": 635,
+      "sha256": "6378af577dec1d74d6c7f4127403ccdce5b340019f28dd846bdc6e3d9baec446"
+    },
+    "verification/brand-package-audit.json": {
+      "bytes": 5739,
+      "sha256": "a87b0ffa8fe1ff63835f60e36acffd9fe07bc956710c20c1dc01eac8907cb710"
+    },
+    "verification/ui45-image-acceptance.json": {
+      "bytes": 10391,
+      "sha256": "2ed482096df3fefb0b189b6ab3a67c68b98929c104c33743930489f366a7de02"
+    },
+    "verification/ui45-transformed-mask.json": {
+      "bytes": 454,
+      "sha256": "8dba4ae0c9a368ad51f6f69edcd3abc63c9d19f28d2007c2be41636f0d82fe02"
+    },
+    "verification/ui45-legacy-acceptance.json": {
+      "bytes": 3052,
+      "sha256": "8f02d7ea042b433d35894547a705eb9ceca0c3a9cd1e69a2c851af065ee33ea8"
+    },
+    "verification/ui45-partial-journeys.json": {
+      "bytes": 2877,
+      "sha256": "9e77b35f73788f6f8c23c6de61f455c711a623d23f4690e5e0125860df51000c"
+    },
+    "core-closeout.md": {
+      "bytes": 3922,
+      "sha256": "846d1ca5116bfc081a69e64f48df6697d8f12f1e031a93c9b7e98e40744d2eb5"
+    },
+    "dependency-license-audit.json": {
+      "bytes": 195234,
+      "sha256": "728faf7378ce659ef494e9b814d65cbf51f3d8a3f8ccde9387a963f58830f01c"
+    },
+    "native-source-input-audit.json": {
+      "bytes": 1058,
+      "sha256": "ba53a1b846c6c20033e94cdbd5585343e5945f638676b70e2e7b4cef2fa6739e"
+    }
+  },
+  "historicalAudit": {
+    "report": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\matrix-evidence-audit.json",
+    "matchingPairs": 399,
+    "recoveredReferences": 117,
+    "mismatches": 10,
+    "unresolvedReferences": 76,
+    "preservedExactHistoricalHashes": 100,
+    "excludedCredentialByteMatches": 2,
+    "note": "旧报告可能引用同名后续覆盖文件、历史源码或不再位于记录路径的产物；未恢复者不能作为当前文件散列已匹配。"
+  },
+  "openBoundaries": [
+    "UI162修复设计助手继承普通聊天：真实项目身份预留、DSH专用session及显式SessionProvider，显示/草稿/AI工具均同一设计会话；25定向Node、真实项目切换/重载/原聊天字节不变及1轮真实GLM专用发送通过。旧UI161分栏/历史/浮动输入和其他功能证据保留原构建范围；不把普通聊天迁入设计助手。",
+    "原版OD/Vela图库和额外独立平台已按刘总决定退出核心必做范围；已有代码/任务保留为可选，不能因而跳过核心生图、编辑与后续验证。",
+    "已读54个原包字体的OFL声明；6个字体参考字节差异、预构建转换器与WOFF2/Brotli准确源修订仍有证据边界，详见dependency-license-audit.json。",
+    "旧报告差异和未定位身份单列；精确找回不冒充新版功能测试。",
+    "交付包实测状态见当前根VERIFICATION与candidate-package-load报告；用户窗口未检查或重启，整体功能验收未完成。"
+  ],
+  "codeOnlyCloseout": {
+    "items": [
+      "A1",
+      "B3",
+      "G1",
+      "J3"
+    ],
+    "report": "core-closeout.md",
+    "sourceAudit": "implementation-source-audit.json",
+    "dependencyAudit": "dependency-license-audit.json",
+    "authorization": "PUBLIC-REDACTED",
+    "functionalValidation": false
+  },
+  "coreProductScope": {
+    "file": "core-product-scope.json",
+    "imageApiSettings": "image-api-settings.md",
+    "staticAudit": "image-api-settings-audit.json",
+    "functionalValidation": false
+  },
+  "fiveGapsAndDeck": {
+    "report": "five-gaps-code-audit.json",
+    "details": "five-gaps-and-deck.md",
+    "codeUnits": [
+      "K1",
+      "K2",
+      "K3",
+      "K4",
+      "K5",
+      "D1",
+      "D2",
+      "D3",
+      "D4",
+      "D5"
+    ],
+    "functionalValidation": false,
+    "allCoreFunctionsAccepted": false
+  },
+  "historicalProjectSamples": {
+    "VectorCraft": {
+      "ui": {
+        "state": "sample_verified",
+        "description": "真实画布、路径、文字、节点与对象工具。",
+        "evidence": [
+          "verification/ui45-context-tools-acceptance.json",
+          "verification/kimi-opendesign-resume.json"
+        ]
+      },
+      "ai": {
+        "state": "sample_verified",
+        "description": "历史真实 Kimi 在同一源上读取引用并局部修改；当前 Kimi 额度受限。",
+        "evidence": [
+          "verification/kimi-opendesign-resume.json",
+          "verification/ui45-cross-engine-handoff-acceptance.json"
+        ]
+      },
+      "source": {
+        "state": "sample_verified",
+        "description": ".vectorcraft 原生源保存、编辑和重开；SVG 嵌入媒体另有边界。",
+        "evidence": [
+          "verification/ui45-svg-current-reverification.json"
+        ]
+      },
+      "output": {
+        "state": "sample_verified",
+        "description": "实际 SVG、PNG、JPEG 和 PDF 样本输出与独立读取。",
+        "evidence": [
+          "verification/ui45-export-acceptance.json"
+        ]
+      },
+      "recovery": {
+        "state": "sample_verified",
+        "description": "保存失败、草稿、过期回执、来源返回及故障恢复样本。",
+        "evidence": [
+          "verification/ui45-data-protection-acceptance.json",
+          "verification/project-navigation-crash.json"
+        ]
+      }
+    },
+    "PhotoCraft": {
+      "ui": {
+        "state": "sample_verified",
+        "description": "实际画笔、蒙版、选区、调整层和上下文控件；并非每个上游命令。",
+        "evidence": [
+          "verification/ui45-photo-complete-acceptance.json",
+          "verification/ui45-context-tools-acceptance.json"
+        ]
+      },
+      "ai": {
+        "state": "sample_verified",
+        "description": "历史真实 Kimi 图层编辑及此前图片服务生成、选区重绘；本次续接未请求服务。",
+        "evidence": [
+          "verification/photo-kimi.json",
+          "verification/ui45-image-acceptance.json"
+        ]
+      },
+      "source": {
+        "state": "sample_verified",
+        "description": ".pcraft 分层、文字、蒙版和调整层的保存重开。",
+        "evidence": [
+          "verification/ui45-photo-complete-acceptance.json"
+        ]
+      },
+      "output": {
+        "state": "sample_verified",
+        "description": "PSD 图层样本与合成 WebP、TIFF、PNG、JPEG 样本。",
+        "evidence": [
+          "verification/ui45-export-acceptance.json"
+        ]
+      },
+      "recovery": {
+        "state": "partial",
+        "description": "候选采用、撤销和手改冲突按样本检查；断电前未捕获的数据不保证恢复。",
+        "evidence": [
+          "verification/ui45-image-acceptance.json",
+          "verification/ui45-cross-engine-handoff-acceptance.json"
+        ]
+      }
+    },
+    "DeckCraft": {
+      "ui": {
+        "state": "partial",
+        "description": "文字、形状、表格、图表、备注、母版、版式和样本放映有历史证据；新宿主菜单与中文标签尚未验证。",
+        "evidence": [
+          "verification/ui45-deck-structured-acceptance.json",
+          "verification/ui45-deck-semantics-acceptance.json"
+        ]
+      },
+      "ai": {
+        "state": "sample_verified",
+        "description": "历史真实 Kimi 定向修改同一演示对象，其他结构保留。",
+        "evidence": [
+          "verification/deck-kimi.json",
+          "verification/ui45-cross-engine-handoff-acceptance.json"
+        ]
+      },
+      "source": {
+        "state": "sample_verified",
+        "description": ".deckcraft 原生源、内嵌字体与媒体按样本保存重开。",
+        "evidence": [
+          "verification/ui45-deck-font-acceptance.json",
+          "verification/ui45-deck-media-acceptance.json"
+        ]
+      },
+      "output": {
+        "state": "sample_verified",
+        "description": "可编辑 PPTX 文字、图表、表格和媒体样本，PDF 的栅格页面加文字层如实说明。",
+        "evidence": [
+          "verification/ui45-export-acceptance.json",
+          "verification/ui45-deck-font-acceptance.json"
+        ]
+      },
+      "recovery": {
+        "state": "sample_verified",
+        "description": "从 Photo 素材返回原演示的相同 App、选区、视图和撤销；冲突时拒绝覆盖。",
+        "evidence": [
+          "verification/ui45-three-engine-navigation-acceptance.json",
+          "verification/ui45-cross-engine-handoff-acceptance.json"
+        ]
+      }
+    },
+    "OpenDesign": {
+      "ui": {
+        "state": "partial",
+        "description": "固定资源可检索，实际 SVG/PNG 和两份 HTML 模板有历史导入证据；新增资源面板原生导入/核对代码尚未验证，并非所有外部工作流。",
+        "evidence": [
+          "verification/ui45-od-import-acceptance.json",
+          "verification/ui45-od-html-package-acceptance.json"
+        ]
+      },
+      "ai": {
+        "state": "partial",
+        "description": "历史真实 Kimi 读取 Corporate 原规则与令牌并生成可编辑 SVG；外部 director 原包及计划工具代码已接入，尚未做实际模型验证。",
+        "evidence": [
+          "verification/kimi-opendesign-resume.json"
+        ]
+      },
+      "source": {
+        "state": "partial",
+        "description": "固定 Git 提交与文件散列、HTML 原始目录和安全预算内素材已有历史证据；完整资源包保存及离线读取代码尚未验证，未自动执行上游脚本。",
+        "evidence": [
+          "verification/opendesign-inventory.json",
+          "verification/ui45-od-html-package-acceptance.json"
+        ]
+      },
+      "output": {
+        "state": "sample_verified",
+        "description": "实际 SVG 和 HTML 到可编辑 PPTX 样本；转换损失单独报告。",
+        "evidence": [
+          "verification/ui45-html-acceptance.json",
+          "verification/kimi-opendesign-resume.json"
+        ]
+      },
+      "recovery": {
+        "state": "partial",
+        "description": "HTML 版本、项目包和已保存资源关联可恢复；未接入工作流不宣称可恢复。",
+        "evidence": [
+          "verification/ui45-od-html-package-acceptance.json",
+          "verification/ui45-od-import-acceptance.json"
+        ]
+      }
+    }
+  },
+  "historicalProjectSamplesInterpretation": "These descriptions refer to their explicitly linked historical evidence; the current scoped report supersedes old deferred-work statements.",
+  "currentFunctionalValidation": {
+    "report": "verification/release-validation-20261113.json",
+    "actualServiceAddendum": "verification/real-services-validation-20261113.json",
+    "allCoreFunctionsAccepted": false,
+    "historicalEvidenceReusedAsCurrentPass": false,
+    "latestModelAcceptance": "verification/ui158-final-model-flow-20261113.json",
+    "scopedCoreEditingAndAiFlowAccepted": true,
+    "scopeChange": "verification/ui159-deck-capture-removal-20261113.json",
+    "requestedCaptureRemovalComplete": true,
+    "latestInteractionAcceptance": "verification/ui162-design-session-isolation-20261113.json",
+    "aiCanvasSelectionDriven": true,
+    "resizableChat": true,
+    "explicitProjectHistory": true,
+    "selectionPopup": true,
+    "dedicatedDesignConversation": true,
+    "ordinaryConversationNotReused": true
+  }
+}

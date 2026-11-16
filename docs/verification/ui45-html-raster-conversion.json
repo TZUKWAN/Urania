@@ -1,0 +1,56 @@
+{
+  "status": "passed",
+  "scope": "owned DSH headless HTML source, actual sandbox preview/conversion, physical Deck text edit, source reopen and PPTX inspection; no AI call",
+  "checks": [
+    {
+      "name": "actual HTML source saved"
+    },
+    {
+      "name": "actual converter imported editable Deck",
+      "shapes": 4,
+      "textRuns": 2
+    },
+    {
+      "name": "physical text editing and fresh native source reopen succeeded",
+      "shapeId": 3
+    },
+    {
+      "name": "original HTML retained and real native PPTX export contains manually edited text",
+      "sha256": "7098b40ec97eeb1e48997160ebdb690f9d8aacd9db09158c51efb0a532d8f056"
+    },
+    {
+      "name": "exported PPTX reopened as a separate native editable presentation",
+      "sourceId": "import-8518ac5e-2da8-4604-8924-0dd99af7edb5"
+    }
+  ],
+  "conversion": {
+    "slides": 1,
+    "nativeShapes": 4,
+    "textRuns": 2,
+    "pictures": 2,
+    "svgPictures": 1,
+    "rasterPictures": 1,
+    "svgMedia": 1,
+    "embeddedFonts": [],
+    "fontParts": 0,
+    "note": "图片和 SVG 保留为媒体；网页脚本、动画和交互不会成为原生演示行为。未检测到内嵌字体，目标环境可能需要提供字体。",
+    "source": {
+      "slides": 1,
+      "sourceTextElements": 2,
+      "sourceSvg": 1,
+      "sourceImages": 0,
+      "requestedFonts": [],
+      "warnings": [
+        "交互脚本、表单和嵌套页面不会转换为演示行为。"
+      ]
+    },
+    "warnings": [
+      "交互脚本、表单和嵌套页面不会转换为演示行为。",
+      "演示含 1 个位图对象；部分网页效果可能已栅格化，不能按原生形状编辑。"
+    ]
+  },
+  "htmlId": "html-7e585bd2-26d1-4c8f-b504-e39ad73e5cb9",
+  "sourceRevision": "d88bca69d7fc6c463a135c4bbe1dfd89828ebc0841b98951cb840a5916def569",
+  "deckSource": "import-8518ac5e-2da8-4604-8924-0dd99af7edb5",
+  "pageErrors": []
+}

@@ -1,0 +1,549 @@
+{
+  "schema": 1,
+  "kind": "image-api-settings-source-and-static-audit",
+  "at": "2026-11-12T18:06:23.439753+00:00",
+  "version": "1.3.0-dev.135",
+  "uiBuild": 149,
+  "scope": "Independent image API settings and default optional-service menu simplification only.",
+  "codeWorkComplete": true,
+  "functionalValidation": false,
+  "runtimeOutcome": "not_executed_by_user_instruction",
+  "userDesktopControlled": false,
+  "userDshRestarted": false,
+  "userLoadedVersion": "unverified",
+  "realCredentialsReadOrWritten": false,
+  "externalProviderCalls": false,
+  "syntaxFilesChecked": 17,
+  "sourceFacetReferencesReconciled": 250,
+  "commands": [
+    {
+      "argv": [
+        "node",
+        "--check",
+        "D:\\METIS超级合并\\dsh-plugin\\designcraft\\client\\client.js"
+      ],
+      "cwd": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "",
+      "kind": "static_source_check"
+    },
+    {
+      "argv": [
+        "node",
+        "--check",
+        "D:\\METIS超级合并\\dsh-plugin\\designcraft\\client\\editor-frame.js"
+      ],
+      "cwd": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "",
+      "kind": "static_source_check"
+    },
+    {
+      "argv": [
+        "node",
+        "--check",
+        "D:\\METIS超级合并\\dsh-plugin\\designcraft\\client\\editor-surface.js"
+      ],
+      "cwd": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "",
+      "kind": "static_source_check"
+    },
+    {
+      "argv": [
+        "node",
+        "--check",
+        "D:\\METIS超级合并\\dsh-plugin\\designcraft\\client\\html-workspace.js"
+      ],
+      "cwd": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "",
+      "kind": "static_source_check"
+    },
+    {
+      "argv": [
+        "node",
+        "--check",
+        "D:\\METIS超级合并\\dsh-plugin\\designcraft\\client\\image-api-settings.js"
+      ],
+      "cwd": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "",
+      "kind": "static_source_check"
+    },
+    {
+      "argv": [
+        "node",
+        "--check",
+        "D:\\METIS超级合并\\dsh-plugin\\designcraft\\client\\native-context-tools.js"
+      ],
+      "cwd": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "",
+      "kind": "static_source_check"
+    },
+    {
+      "argv": [
+        "node",
+        "--check",
+        "D:\\METIS超级合并\\dsh-plugin\\designcraft\\client\\native-contract.js"
+      ],
+      "cwd": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "",
+      "kind": "static_source_check"
+    },
+    {
+      "argv": [
+        "node",
+        "--check",
+        "D:\\METIS超级合并\\dsh-plugin\\designcraft\\client\\native-controller.js"
+      ],
+      "cwd": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "",
+      "kind": "static_source_check"
+    },
+    {
+      "argv": [
+        "node",
+        "--check",
+        "D:\\METIS超级合并\\dsh-plugin\\designcraft\\client\\native-reference.js"
+      ],
+      "cwd": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "",
+      "kind": "static_source_check"
+    },
+    {
+      "argv": [
+        "node",
+        "--check",
+        "D:\\METIS超级合并\\dsh-plugin\\designcraft\\client\\native-workspace.js"
+      ],
+      "cwd": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "",
+      "kind": "static_source_check"
+    },
+    {
+      "argv": [
+        "node",
+        "--check",
+        "D:\\METIS超级合并\\dsh-plugin\\designcraft\\client\\studio-image-workspace.js"
+      ],
+      "cwd": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "",
+      "kind": "static_source_check"
+    },
+    {
+      "argv": [
+        "node",
+        "--check",
+        "D:\\METIS超级合并\\dsh-plugin\\designcraft\\client\\ui.js"
+      ],
+      "cwd": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "",
+      "kind": "static_source_check"
+    },
+    {
+      "argv": [
+        "node",
+        "--check",
+        "D:\\METIS超级合并\\dsh-plugin\\designcraft\\host\\image-api-settings.js"
+      ],
+      "cwd": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "",
+      "kind": "static_source_check"
+    },
+    {
+      "argv": [
+        "node",
+        "--check",
+        "D:\\METIS超级合并\\dsh-plugin\\designcraft\\host\\image-jobs.js"
+      ],
+      "cwd": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "",
+      "kind": "static_source_check"
+    },
+    {
+      "argv": [
+        "node",
+        "--check",
+        "D:\\METIS超级合并\\dsh-plugin\\designcraft\\host\\image-provider.js"
+      ],
+      "cwd": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "",
+      "kind": "static_source_check"
+    },
+    {
+      "argv": [
+        "node",
+        "--check",
+        "D:\\METIS超级合并\\dsh-plugin\\designcraft\\host\\index.js"
+      ],
+      "cwd": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "",
+      "kind": "static_source_check"
+    },
+    {
+      "argv": [
+        "node",
+        "--check",
+        "D:\\METIS超级合并\\dsh-plugin\\designcraft\\host\\studio-image.js"
+      ],
+      "cwd": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "",
+      "kind": "static_source_check"
+    },
+    {
+      "argv": [
+        "C:\\Python314\\python.exe",
+        "work/static_external_imports.py"
+      ],
+      "cwd": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093",
+      "exitCode": 0,
+      "stdout": "Checked 585 literal relative references in 115 source files; workers exist.",
+      "stderr": "",
+      "kind": "static_source_check"
+    },
+    {
+      "argv": [
+        "C:\\Python314\\python.exe",
+        "work/audit_client_module_routes.py"
+      ],
+      "cwd": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093",
+      "exitCode": 0,
+      "stdout": "静态核对 39 个声明文件、71 个可识别相对 JS 引用：均在路由表；未运行服务或界面。",
+      "stderr": "",
+      "kind": "static_source_check"
+    }
+  ],
+  "changedFiles": [
+    {
+      "file": "README.md",
+      "bytes": 25096,
+      "sha256": "afd07070ac02daeedef375d1175f916baed3f316fbf3b5c68707a6e7026d85d2",
+      "beforeSha256": "64d423b25495b7b0d90b985764beeb84f6505614df8dc08f4090b79c4ac6ab08",
+      "status": "modified"
+    },
+    {
+      "file": "client/client.js",
+      "bytes": 10465,
+      "sha256": "959bd871e35935ac91bd613a1cc8adbf1a0c8cc5dc7fdd07b5482815c332efc2",
+      "beforeSha256": "844fdd2be99c5de4f6894ea59d786a47bfb0c8ffba273cb1688e6e66f368a0f3",
+      "status": "modified"
+    },
+    {
+      "file": "client/editor-frame.js",
+      "bytes": 17827,
+      "sha256": "c95b4c7a501142ed50bb361a7da9d76a046f242acced6b54728bbff6333417de",
+      "beforeSha256": "dc0281b95b414fdc2df5c44b5dbcad8feb7c8e5258daa3a471f699a5a06a639a",
+      "status": "modified"
+    },
+    {
+      "file": "client/editor-surface.js",
+      "bytes": 5811,
+      "sha256": "d18bf093ef799ea671b11f7d679e526e1f1f4303853e540a50b06bf6324675bc",
+      "beforeSha256": "a3c6bb3f3488b973e7da3ef808a2cff626f41ca271be07d78d6efab9498df85f",
+      "status": "modified"
+    },
+    {
+      "file": "client/html-workspace.js",
+      "bytes": 94885,
+      "sha256": "c237ea720e4232f5acba8b8f3577479fa8ce589c29ae11ca434db10503c7520c",
+      "beforeSha256": "a7f8205c9975716e0421a243fd581fb1eb1e1fab31b45cbe0b1263942cb1da3c",
+      "status": "modified"
+    },
+    {
+      "file": "client/image-api-settings.js",
+      "bytes": 7505,
+      "sha256": "147ea1e05fd7bf118d6e4efef45c9f593ae2f59de912df95d952e83487ce7999",
+      "beforeSha256": null,
+      "status": "added"
+    },
+    {
+      "file": "client/native-context-tools.js",
+      "bytes": 3730,
+      "sha256": "a08e59d5e556be423b8463b939a6579d40b58db2dbd832a583dc6b6e616eb4c3",
+      "beforeSha256": "aa15415749d179e54e912f929f643ba09fac28c1e66453e8b1041f07bed4b7c3",
+      "status": "modified"
+    },
+    {
+      "file": "client/native-contract.js",
+      "bytes": 7813,
+      "sha256": "ced9dab86c3860c8201f832d5d841136364beae3430b605d05a7ca8dc4633002",
+      "beforeSha256": "bd661efbd8a1e0074a3e0dc107fb46bd4a282e545d4ba0489eb512928c8224d4",
+      "status": "modified"
+    },
+    {
+      "file": "client/native-controller.js",
+      "bytes": 130888,
+      "sha256": "4189ff69f7116bfe4c3f891662d1c74b99c69a96267a9cc6d97ba8e92ec2eebd",
+      "beforeSha256": "66c2284d84752581119587e11d2380fa04e16609027ef18e95d8cee16e7574a5",
+      "status": "modified"
+    },
+    {
+      "file": "client/native-reference.js",
+      "bytes": 6531,
+      "sha256": "298d3274c2a80ed48fc970273ccf68dabe15dff43ab11baa8751b2b1944c910f",
+      "beforeSha256": "1e9a88b75971d1a2340345d1b2ea3b5bcbd68268b264b0dd0d1e1db6cb95c958",
+      "status": "modified"
+    },
+    {
+      "file": "client/native-workspace.js",
+      "bytes": 94015,
+      "sha256": "d95f2ea38c2b3860a48d6e15187a5b51bd4962228cc9840efa60394be2bc800c",
+      "beforeSha256": "8b390d9132684ee18962dd9f40ee40355e2f070d0635b907970f50f2fad9094b",
+      "status": "modified"
+    },
+    {
+      "file": "client/studio-image-workspace.js",
+      "bytes": 37950,
+      "sha256": "434cbb883739bacb86cbb646caad63de936a100d4df4b5bb4c59300484dda97c",
+      "beforeSha256": "c81c425c48ea216aea54d9b8b47753593e33ed77ee2c2546e4c05240b1930ae4",
+      "status": "modified"
+    },
+    {
+      "file": "client/ui.js",
+      "bytes": 101124,
+      "sha256": "fa74f2b6001e2f446c452d1518aceb8c848bfcdc6ca61d5d9cc713e761d35e34",
+      "beforeSha256": "73fa05f2c05d171a6cd27ca0b4e56dd097111370fac9b8444992d29a5dd33862",
+      "status": "modified"
+    },
+    {
+      "file": "docs/authorization-requirements.json",
+      "bytes": 2590,
+      "sha256": "7749129fe5bc30a610b29be1f14ea0a6de091ba9ea922ba937546fa46c8476d4",
+      "beforeSha256": "148175d3bb315dd5ec96f230bd13f559e83ffacdeaab37b3481d65e0b73314b0",
+      "status": "modified"
+    },
+    {
+      "file": "docs/capability-inventory.json",
+      "bytes": 86250,
+      "sha256": "843dc1714ac41568d94269b45de270d9ab065ff54ebe13e10d9042764b50a126",
+      "beforeSha256": "92f79f47b754cc82168f00a7f0c2e3782858dd6f44b67ff3558e3356bcf00e81",
+      "status": "modified"
+    },
+    {
+      "file": "docs/capability-matrix.json",
+      "bytes": 90609,
+      "sha256": "ab698e04063948bbd860a3fc9ed06f3bd671d7311c7223a86be5b8de3d42d45c",
+      "beforeSha256": "e7d6fc7fd5be034118d985b02072038cba619e10698941693038b16b0754b752",
+      "status": "modified"
+    },
+    {
+      "file": "docs/core-product-scope.json",
+      "bytes": 1247,
+      "sha256": "ad8dd377db0146671f510d9460b5bcf0534262ab123eac2e395f9681a56c3dc0",
+      "beforeSha256": null,
+      "status": "added"
+    },
+    {
+      "file": "docs/image-api-settings.md",
+      "bytes": 3263,
+      "sha256": "4d0110cd2580d87379465736223f8576697cf072e5d917a9f814a0dc62ca0748",
+      "beforeSha256": null,
+      "status": "added"
+    },
+    {
+      "file": "docs/implementation-source-audit.json",
+      "bytes": 880692,
+      "sha256": "98cfdf507a7811bab57a06f0302f303c6a4a5f91ba64b734ce4b8136e077767e",
+      "beforeSha256": "778a3548bd71e7fe07a29b530dfad99052b1a31ead68fd042918dc18aef3692b",
+      "status": "modified"
+    },
+    {
+      "file": "docs/static-registry-audit.json",
+      "bytes": 17729,
+      "sha256": "9ec2a91c7d493183453e0bad8c40a21c70921f518c86374f8d2d651f45df1f0e",
+      "beforeSha256": "9afb00bf1422d53c56033023fcbfbbc40ca2da278d80bc4c2a3952405f6d4cfb",
+      "status": "modified"
+    },
+    {
+      "file": "host/image-api-settings.js",
+      "bytes": 9409,
+      "sha256": "8a5c6b5d7d56b985d84b15ce2cd6284baed58aa5373bad040c7f7d52e6e70195",
+      "beforeSha256": null,
+      "status": "added"
+    },
+    {
+      "file": "host/image-jobs.js",
+      "bytes": 56803,
+      "sha256": "881e7806f6e160bfb26b254c9949aabe0518e1fec748a2242365532b821cc594",
+      "beforeSha256": "31cae60f540f804a1f10c452e3ca15134c62a2184ef9825328bb4a393cf97492",
+      "status": "modified"
+    },
+    {
+      "file": "host/image-provider.js",
+      "bytes": 39933,
+      "sha256": "48585979e53aa53672661b87e0ecd7a881d3fc13682a34dcdc04b7dc94885e5b",
+      "beforeSha256": "e55020db1d8920395ff280aebeee8fbe3528f3553fefc95565ef90b79708f84c",
+      "status": "modified"
+    },
+    {
+      "file": "host/index.js",
+      "bytes": 38413,
+      "sha256": "108b4fc8f868595b31d28c14f1c6cad9c0a970016c1ad73bac215e86e2e6456b",
+      "beforeSha256": "a5810fb3dc4da490b220724aa4621af3b7115060ee622a256ce6b209c2d36b47",
+      "status": "modified"
+    },
+    {
+      "file": "host/studio-image.js",
+      "bytes": 25771,
+      "sha256": "0fef50505f7614a9c396eeaad0a6742da06d590b2f2e84e0ed142b265554b107",
+      "beforeSha256": "858750211acbe1d5087c461933db5c5c91f8830c6dd0d8cf29acb3531651b0d4",
+      "status": "modified"
+    },
+    {
+      "file": "package.json",
+      "bytes": 1356,
+      "sha256": "6f416bef4adc3653799b44d9eb4b9eb67c6263685363dd6e281cc53c80ac62c6",
+      "beforeSha256": "99ee75a578f59c55a7a3d9f4d771fda6bc8a6a03b42b6f030697471067ef0b4a",
+      "status": "modified"
+    },
+    {
+      "file": "skills/designcraft/SKILL.md",
+      "bytes": 54160,
+      "sha256": "472656ba30d36e2527b4150cbdb923684cf514052a59e561012ba74c41d9c34a",
+      "beforeSha256": "7b01b943efbb2326b9f4a0e999a0c7041bbb5e7290d09af3a775c9300e588236",
+      "status": "modified"
+    }
+  ],
+  "sdkSourcesRead": [
+    {
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\AppData\\Roaming\\npm\\node_modules\\@deepseek-ai\\dsh\\node_modules\\@deepseek-ai\\dsh-credentials\\lib\\types\\index.d.ts",
+      "bytes": 10954,
+      "sha256": "b7930c064aa63f9028deccab8c3a71b215e0e5cbb95422ad7b5f52cf86ecac92"
+    },
+    {
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\AppData\\Roaming\\npm\\node_modules\\@deepseek-ai\\dsh\\node_modules\\@deepseek-ai\\dsh-credentials\\lib\\types\\types.d.ts",
+      "bytes": 4710,
+      "sha256": "70506d2392f0d80cd2f29ff58776b9e05b0bc626402b49c1e7226c4525c90c35"
+    },
+    {
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\AppData\\Roaming\\npm\\node_modules\\@deepseek-ai\\dsh\\node_modules\\@deepseek-ai\\dsh-settings\\lib\\types\\index.d.ts",
+      "bytes": 18285,
+      "sha256": "9c3aa0aaa4c41d2c9bbdb2ca6ab77b0c8c11cdf0a40e946f6b66e1c9237e8aae"
+    },
+    {
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\AppData\\Roaming\\npm\\node_modules\\@deepseek-ai\\dsh\\node_modules\\@deepseek-ai\\dsh-settings-file\\lib\\index.js",
+      "bytes": 10256,
+      "sha256": "b44bf0a905ff47bd7d4de357839225a44714cc0083850187fa7ff116c605e753"
+    }
+  ],
+  "sourceReview": {
+    "kind": "main-model manual source inspection; not runtime or security testing",
+    "items": [
+      {
+        "finding": "Configuration read responses project only metadata and credential presence/writability; secret values are not returned.",
+        "files": [
+          "host/image-api-settings.js",
+          "client/image-api-settings.js"
+        ]
+      },
+      {
+        "finding": "The settings routes use the existing owner admission and same-origin wrapper plus view capability and epoch checks.",
+        "files": [
+          "host/index.js",
+          "host/studio-image.js"
+        ]
+      },
+      {
+        "finding": "New secrets are staged under independent DSH credential references before metadata commit. Conflict, rollback cleanup, old-reference cleanup and lock cleanup paths have explicit outcomes.",
+        "files": [
+          "host/image-api-settings.js"
+        ]
+      },
+      {
+        "finding": "Endpoint/protocol changes require re-entering the key. URL credentials, queries, fragments and non-loopback HTTP are refused; provider requests retain redirect refusal.",
+        "files": [
+          "host/image-api-settings.js",
+          "host/image-provider.js"
+        ]
+      },
+      {
+        "finding": "Dedicated catalogue and UI submission carry the connection fingerprint. The host compares it before queueing and provider dispatch compares it again. Metadata revisions invalidate the model cache.",
+        "files": [
+          "client/studio-image-workspace.js",
+          "host/studio-image.js",
+          "host/image-jobs.js",
+          "host/image-provider.js"
+        ]
+      },
+      {
+        "finding": "Manually supplied model IDs are visibly marked as unverified configuration; no model response or successful API call is fabricated. Custom OpenAI hosts do not inherit canonical-host capability flags.",
+        "files": [
+          "host/image-provider.js",
+          "client/image-api-settings.js"
+        ]
+      },
+      {
+        "finding": "Optional service buttons are nested in details menus. Existing integrations and saved tasks are retained; original OD/Vela stock is outside mandatory core scope.",
+        "files": [
+          "client/studio-image-workspace.js",
+          "client/html-workspace.js",
+          "docs/core-product-scope.json"
+        ]
+      }
+    ]
+  },
+  "correctedDuringImplementation": [
+    "Missing client-route declaration was caught during partial edit and completed; final module route check passes.",
+    "Edit-script ambiguous string matches were fixed before continuing; final syntax/reference checks are recorded here.",
+    "Address/protocol changes cannot silently reuse a saved key.",
+    "Stale panels and queued dedicated image jobs bind to the configuration fingerprint.",
+    "Unavailable settings/credential storage, cleanup failures and profile-scoped persistence have explicit handling."
+  ],
+  "deferred": [
+    "Actual settings UI rendering, credential writes, save/reload, conflict, clear and DSH-mode switch",
+    "Real image model catalogue, generation, reference editing, billing/quota/account authorization",
+    "Core edit/writeback/reopen/export journeys and the remaining accepted-scope functional checks"
+  ],
+  "residualRisks": [
+    "Protocol-compatible custom hosts and manually configured models require actual service confirmation; no compatibility guarantee was tested.",
+    "Credential storage uses DSH policies; no separate at-rest encryption claim is made.",
+    "Existing source/provenance and historical-evidence gaps remain documented in the corresponding reports."
+  ],
+  "delivery": "Current files updated in the product directory. No UI149 TGZ or user-window activation performed; the prior UI148 archive is a separate historical delivery.",
+  "plan": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\IMAGE_API_SETTINGS_PLAN_20261113.md",
+  "rollbackCheckpoint": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\before-image-api-settings-20261113",
+  "sourceFacetHashesCompared": 243,
+  "unhashedLiveMetadataReferences": [
+    "docs/capability-matrix.json",
+    "docs/capability-matrix.json",
+    "docs/capability-inventory.json",
+    "docs/capability-matrix.json",
+    "docs/capability-matrix.json",
+    "docs/capability-inventory.json",
+    "docs/capability-matrix.json"
+  ],
+  "metadataUpdates": {
+    "file": "VERIFICATION.json",
+    "hashPolicy": "Root verification references the hash of this audit; root hash is captured only in the separate workspace completion report to avoid a circular self-hash."
+  }
+}

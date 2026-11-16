@@ -1,0 +1,237 @@
+{
+  "status": "passed_scoped",
+  "at": "2026-11-08T07:49:17.190690+00:00",
+  "scope": "Actual configured local image provider, native Photo editing, image adoption/undo/conflict and independent work variants in a separate headless DSH profile; not the user window.",
+  "catalogue": [
+    {
+      "id": "gemini-3.1-flash-image",
+      "name": "Gemini 3.1 Flash Image",
+      "inputImage": true,
+      "capabilitySource": "provider_declared",
+      "parameters": {}
+    }
+  ],
+  "actualImageRequests": 4,
+  "generation": {
+    "candidateCount": 2,
+    "candidates": [
+      {
+        "width": 1408,
+        "height": 768,
+        "previewSha256": "ce55f02b63b6c732fe168c0d1719245f257b560b6ccf5343e83e7c36ddc0577d",
+        "sourceSha256": "2b832f6a6554d06b24c55eb8e7b88daddc1daec04bfc07000f031be86d26dabd",
+        "providerRequestIdPresent": true
+      },
+      {
+        "width": 1408,
+        "height": 768,
+        "previewSha256": "df59b64d05eda809363276e9a6a407108a641e5bdc4977e1ff9cde8f56cc1086",
+        "sourceSha256": "ac575eaf2ef77dc3955737c94b44b83d0067552657898ea824856a0e3d02fb27",
+        "providerRequestIdPresent": true
+      }
+    ],
+    "nativeLayers": 1
+  },
+  "edit": {
+    "verification": {
+      "outsidePixels": 866832,
+      "mismatchedOutside": 0,
+      "changedInside": 188446,
+      "width": 1408,
+      "height": 768,
+      "jobId": "job-88695b59-248c-4704-b2c9-535ee4e5c162"
+    },
+    "fractionalMaskPixels": 73148,
+    "checks": [
+      "actual manual brush mark and feathered native selection saved before AI request",
+      "real generated result composited with saved feathered native alpha; outside mask pixel comparison passed",
+      "same Photo source adopted verified candidate and retained manual mark",
+      "undo restored the pre-adoption image including manual mark without another provider request"
+    ],
+    "actualVisualReview": "red apple changed to green while the blue manually painted mark remained"
+  },
+  "reopen": [
+    "saved adopted source imported, reopened and retained original, manual and generated layers with identical pixels"
+  ],
+  "editable": [
+    "real native layer mask, editable text and crop saved and reopened"
+  ],
+  "readoption": [
+    "same saved candidate reapplied after undo with no new generation",
+    "later manual edits refuse stale candidate and remain untouched"
+  ],
+  "newRequestsDuringReadoption": 0,
+  "workVariants": [
+    "separate native branch starts from original and saves independent edit",
+    "adopting branch updates original while retaining branch",
+    "undo restores original; later manual original edit is retained",
+    "stale branch cannot overwrite newer manual original"
+  ],
+  "credentialAudit": {
+    "status": "passed",
+    "filesScanned": 194,
+    "archiveMembersScanned": 1089,
+    "secretValuesPrinted": false
+  },
+  "kimiCurrentTurn": {
+    "status": "blocked",
+    "reason": "Configured service returned HTTP 429 monthly usage limit; no fallback or retry was made."
+  },
+  "images": [
+    {
+      "file": "verification/ui45-image-candidate-1.png",
+      "sha256": "ce55f02b63b6c732fe168c0d1719245f257b560b6ccf5343e83e7c36ddc0577d",
+      "bytes": 1192954
+    },
+    {
+      "file": "verification/ui45-image-candidate-2.png",
+      "sha256": "df59b64d05eda809363276e9a6a407108a641e5bdc4977e1ff9cde8f56cc1086",
+      "bytes": 1004813
+    },
+    {
+      "file": "verification/ui45-image-edit-baseline.png",
+      "sha256": "96da889a1bfa69275ef3ff390949935e8bf363ef098df502c498a3f3e454adbe",
+      "bytes": 1191752
+    },
+    {
+      "file": "verification/ui45-image-edit-candidate.png",
+      "sha256": "167bbc3adc4f224e59b0aa86eb0568b19b5a3a478842c6d4000d70ac9883b06f",
+      "bytes": 1175202
+    },
+    {
+      "file": "verification/ui45-edge-manual.png",
+      "sha256": "5b8d7bb56979f79aecbf369116ba98509ecf974d6847834dcdc56af0430414fe",
+      "bytes": 1174469
+    },
+    {
+      "file": "verification/ui45-edge-ai.png",
+      "sha256": "b5ccd503257cad02b0998f27dcf70eb38e9ac2c573e8d7d34635cd7757a8af11",
+      "bytes": 1176651
+    }
+  ],
+  "rawReports": [
+    {
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-image-catalog.json",
+      "sha256": "303e42217b51095e0ddbec47bc9ca455c606dbf88056669458477d9d2dc4e4a5",
+      "status": "passed"
+    },
+    {
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-image-generation.json",
+      "sha256": "7c5dfb92ffc0d6c5f78b289a8d0776624b864456fbd9336b8bf06c64b427228b",
+      "status": "passed"
+    },
+    {
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-image-edit.json",
+      "sha256": "16e0bb40f832191b5afdc8d553c290fed091cb009b0d4561ef0857695998defa",
+      "status": "passed"
+    },
+    {
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-image-reopen.json",
+      "sha256": "9f729cacbbbc93471177879144e4158978961da3afcb008d2fcc1127e47eb948",
+      "status": "passed"
+    },
+    {
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-image-editable.json",
+      "sha256": "e704a7fc0aebca849864390f84796b5ddd6d2d0da8fc6821f22ecf66ce7f5f58",
+      "status": "passed"
+    },
+    {
+      "status": "superseded",
+      "historicalSha256": "31ae9e21d12b2af007bbe0addee51b3008924d14701acdff897f7bcebd0c357e",
+      "note": "Earlier audit output was overwritten by the later recorded scan; only the later file is available for independent review."
+    },
+    {
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-image-old-receipt-recovery.json",
+      "sha256": "6f5c0615368dc041ba8968655561f7603b1ae9c70eb77e47e2ebabbf01785734",
+      "status": "passed"
+    },
+    {
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-image-readopt.json",
+      "sha256": "9bafeaa305b91600316177dca3fa729168932c45fa18da1bc35cd5952d5463e7",
+      "status": "passed"
+    },
+    {
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-native-variants.json",
+      "sha256": "1514119881f3c9ac3d36df2683eb65fc1762f66a0e7f05da58e6e80a8dd93526",
+      "status": "passed"
+    },
+    {
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-kimi-image-catalog.json",
+      "sha256": "c0ceba9fa94af98983ef165f10e29c482902387fe810c5fbc951cdeda0aa9c98",
+      "status": "failed"
+    },
+    {
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-image-rgba-reaudit.json",
+      "sha256": "5ec01b1b55fdcd1d36c862b2494a00ed2ce3e9761ad3ea62b3da1bdddad9054f",
+      "status": "passed"
+    },
+    {
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-image-conflict.json",
+      "sha256": "7716de57b02b815b5adba45abf0c013aaaabb4176c62ff94205979e969b655e5",
+      "status": "passed"
+    },
+    {
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-image-edge-continuation.json",
+      "sha256": "2c63507f5caf766091ed88fdd52a0a245099fe2288ff01d5d0fa2f7ec810ab4f",
+      "status": "passed"
+    },
+    {
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-image-secret-audit.json",
+      "sha256": "de820632a9b13c4de0edef79bcbbe950ed71f30cfa2c5c0e92e0f206e6030e9d",
+      "status": "passed"
+    }
+  ],
+  "limits": [
+    "An earlier test rejected an unchanged undo revision; that over-strict behavior was corrected and the current test instead confirms refusal after a real manual change.",
+    "The current Kimi image-tool turn is blocked by the configured account quota; direct manual image tool flow was verified.",
+    "Image output quality depends on the provider; the provider is reference-based with local exact mask composition, not a native hard-mask API.",
+    "The transformed-selection test reused an earlier actual provider response; it did not issue a second transformed-selection model request.",
+    "The first independent RGBA comparison omitted color channels; the later full-channel re-audit and conflict check passed and supersede it."
+  ],
+  "transformedSelection": {
+    "maskBounds": {
+      "x": 522,
+      "y": 247,
+      "w": 346,
+      "h": 286
+    },
+    "fractionalPixels": 33826,
+    "verification": {
+      "outsidePixels": 1022606,
+      "mismatchedOutside": 0,
+      "changedInside": 56902,
+      "width": 1408,
+      "height": 768
+    },
+    "newProviderRequests": 0,
+    "source": "verification/ui45-transformed-mask.json"
+  },
+  "rgbaReaudit": {
+    "checks": [
+      "adopted real saved native source matches expected PNG in all RGBA channels",
+      "baseline real saved native source matches expected PNG in all RGBA channels",
+      "adopted independent source reopened with identical RGBA"
+    ],
+    "staleConflictStatus": 409,
+    "note": "The initial independent Pillow RGBA comparison was corrected to compare color and alpha; this later audit is authoritative."
+  },
+  "edgeContinuation": {
+    "checks": [
+      "physical background-colored brush refined the apple edge on an independent native layer",
+      "AI continued from the manually refined source; exact edge layer and outside pixels survived adoption and reopen"
+    ],
+    "verification": {
+      "outsidePixels": 1049904,
+      "mismatchedOutside": 0,
+      "changedInside": 24178,
+      "width": 1408,
+      "height": 768,
+      "jobId": "job-e238110e-b7b6-4f23-8c6f-8f9860759be3"
+    },
+    "manualPoint": [
+      880,
+      404
+    ],
+    "visualReview": "The apple edge contains a manually painted background-colored refinement; the leaf changed from green to golden yellow."
+  }
+}

@@ -1,0 +1,530 @@
+{
+  "schema": 1,
+  "baseline": {
+    "version": "1.2.0",
+    "uiBuild": 16,
+    "source": "D:\\METIS超级合并\\dsh-plugin\\designcraft",
+    "integrity": [
+      {
+        "path": "LICENSE",
+        "sha256": "670516c7ee3b6b14f508f7168ad888db8d42eb7ff6d43c628ef3b614f22deca1",
+        "matches": true
+      },
+      {
+        "path": "README.md",
+        "sha256": "8d92e3d0ebae602ff97fb1cf275c7aa4095de588b01fdf6c209fce228c5707ad",
+        "matches": true
+      },
+      {
+        "path": "THIRD_PARTY_NOTICES.md",
+        "sha256": "933cc757d9737e832cba3cdd0d884bb6c80eef3f4a669c445777205802314200",
+        "matches": true
+      },
+      {
+        "path": "client/actions.js",
+        "sha256": "4574eb55977c11ee7217a953cec1fdef012081680e889f0001d32e471187dc44",
+        "matches": true
+      },
+      {
+        "path": "client/client.js",
+        "sha256": "157019f6fa8900405649e74864dbb95b1bdbf5b57dfd35465ae8e8fa447da9c0",
+        "matches": true
+      },
+      {
+        "path": "client/deck.js",
+        "sha256": "4fddd29d095f339ad57eb257a3dfa218d305d037fa64bf5a36ff3387171b6be0",
+        "matches": true
+      },
+      {
+        "path": "client/dsh-context.js",
+        "sha256": "8e481711d810d7c2aaf6618f7e01878146001e8711d88b3f957b7afecfbdfeb1",
+        "matches": true
+      },
+      {
+        "path": "client/engine.js",
+        "sha256": "54a743a606939e90171bcd2432101cda84ae7fc9a42d1c502780469586fc8237",
+        "matches": true
+      },
+      {
+        "path": "client/image-ui.js",
+        "sha256": "3307b6b3e2b46d3e2a981457c2d50d425d6fe53834e8ed2c74ca3f27e4266a19",
+        "matches": true
+      },
+      {
+        "path": "client/merge.js",
+        "sha256": "8cf6d0aa45a9de1faf8ec1ea38a0e22cb8a06106e5943f4eae8f2489dc0b2e2f",
+        "matches": true
+      },
+      {
+        "path": "client/path.js",
+        "sha256": "c87eb59beb5384a284bf12dfe330687c1eb2ae03473a6be7447a8d5c7b24e231",
+        "matches": true
+      },
+      {
+        "path": "client/preview-view.js",
+        "sha256": "0119215ae3129403620353904eeb1d1c5754145f0e9a33ed49b795a3f5eb1f5b",
+        "matches": true
+      },
+      {
+        "path": "client/recovery.js",
+        "sha256": "23107ebccc6d208b43d56dc0a74a39c62c47f882bad8f6164922ee9d26c6af37",
+        "matches": true
+      },
+      {
+        "path": "client/selection.js",
+        "sha256": "635398eec52e103e09eeaab881a829eed4c0de79969af98332a19ab4b20d6108",
+        "matches": true
+      },
+      {
+        "path": "client/svg-export.js",
+        "sha256": "6f83a6276ef30ae1e4883858bf64824d86cef12ff008ec465e0a87db21ff69fb",
+        "matches": true
+      },
+      {
+        "path": "client/svgtools.js",
+        "sha256": "6a2321de8322b39ebbe54ee532d86053f8004349b5fef44b28e4895879ad6194",
+        "matches": true
+      },
+      {
+        "path": "client/sync.js",
+        "sha256": "13fa12eb889e148bdac999567888c787a0afe08b0f8d12eccea2291b2de79a91",
+        "matches": true
+      },
+      {
+        "path": "client/tools.js",
+        "sha256": "29235185ef3e037b8907fe2142cd3ce15cd5ddd38814807a3538817f79841f7f",
+        "matches": true
+      },
+      {
+        "path": "client/ui.js",
+        "sha256": "5c9d334f590a88641af1e2e53a43c31a2eae7b8a853f12fadd66645d30f6b636",
+        "matches": true
+      },
+      {
+        "path": "client/variant-ui.js",
+        "sha256": "3b0d337ea502584a90e86bb87d4190083bd8bd9fd39ea892a059b1563e94f3b9",
+        "matches": true
+      },
+      {
+        "path": "client/vector-nodes.js",
+        "sha256": "afebc891584b290ffc9ac300f45773b81a90aa9f9b327f78368a3e2d0aadd5a3",
+        "matches": true
+      },
+      {
+        "path": "cordis.patch.yml",
+        "sha256": "b1e2fcc6862c35bfec67b24badebeb0d7e9371ca44a7fc23fd81d3f3c103e7b4",
+        "matches": true
+      },
+      {
+        "path": "host/asset-stream.js",
+        "sha256": "00ceefb65f45c295678ce283a8c80f5b40d1142a02c744f6b0629c0943900cd5",
+        "matches": true
+      },
+      {
+        "path": "host/commands.js",
+        "sha256": "2e91f4aeb06177c59e816c48592c28ded7f53f10454245527586468f625a29cd",
+        "matches": true
+      },
+      {
+        "path": "host/deck-native.js",
+        "sha256": "db07d23e3e41ea9c0a15619a9c276332b82ac241d9b26d95c99dc919ff88d579",
+        "matches": true
+      },
+      {
+        "path": "host/deck-source.js",
+        "sha256": "831500bc92c076717642dfce949d0399999ddd2b3bfd1c1ca50133c39397203f",
+        "matches": true
+      },
+      {
+        "path": "host/decklayouts.js",
+        "sha256": "0636895b89e146dd58bb4cf35e921c5874d7e24cce0b1db9dc5b15a1ff5db006",
+        "matches": true
+      },
+      {
+        "path": "host/design-resources.js",
+        "sha256": "089ad875050fc8177c8afc2cc2f5792317c662446b2d3d9fe74902107a942629",
+        "matches": true
+      },
+      {
+        "path": "host/designsystems.js",
+        "sha256": "060808c39f6f5397a8a6c4764c1b53f5a7716001e4b21f9488334525126ba851",
+        "matches": true
+      },
+      {
+        "path": "host/docstore.js",
+        "sha256": "63867a2e1d0fd0205c0f692119b1e54e9e1636638b52ec9a90b0e2d248d1c6e1",
+        "matches": true
+      },
+      {
+        "path": "host/dsh-tools.js",
+        "sha256": "36e488deb0116706a62595487c7f067e9ac03a93d8b10c4bb8bf9b574b35e16c",
+        "matches": true
+      },
+      {
+        "path": "host/font.js",
+        "sha256": "06be22152e78df584217ead1ca5a447ab26ff1d5e856bee380a3cfd5b8b78863",
+        "matches": true
+      },
+      {
+        "path": "host/image-composite.js",
+        "sha256": "789bedf9dbc320045793f6a05a3e0379affbe50183af62eb524b0b78b95c51e3",
+        "matches": true
+      },
+      {
+        "path": "host/image-header.js",
+        "sha256": "6038d4cc0845fb24555504ad0964139da709df991a3d44acc4cbcb598015114f",
+        "matches": true
+      },
+      {
+        "path": "host/image-jobs.js",
+        "sha256": "1ddcba508831121d5b1a112e4158c6e5233fb4a96b5ddf71b0271a6bb04353fa",
+        "matches": true
+      },
+      {
+        "path": "host/image-provider.js",
+        "sha256": "66dd691f9892f814f536807ada0b0d0ab664e7eb16c510b4020e1145d775b6e0",
+        "matches": true
+      },
+      {
+        "path": "host/index.js",
+        "sha256": "50dfc1e8edc804790876c29a4c50884c3b98ec7a70c9c35e994d0939dc12f014",
+        "matches": true
+      },
+      {
+        "path": "host/job-worker.js",
+        "sha256": "1eb83c180c03539ca9cb523767bc0aaa34ec0d154a4b799c214a46625e35d473",
+        "matches": true
+      },
+      {
+        "path": "host/jobs.js",
+        "sha256": "5c61ac992271e25a0c15f1319d62013d410bd4c1936d6a9c473cd6b779a0a4fc",
+        "matches": true
+      },
+      {
+        "path": "host/jpeg.js",
+        "sha256": "8975a122c6ad39493dc6a9155c0724821fd412307aa250a08d764552ab05ddbe",
+        "matches": true
+      },
+      {
+        "path": "host/media-link.js",
+        "sha256": "0b4fc31260dc5e82af83478dfaa004692f9c6d3857504c928cc0b6cdda343e2d",
+        "matches": true
+      },
+      {
+        "path": "host/native.js",
+        "sha256": "db693093cdc56f6103f0b08d5f5e0ed9da1c21fa6b46a1747f5676168d7adcac",
+        "matches": true
+      },
+      {
+        "path": "host/pdf.js",
+        "sha256": "ecf37e268b2ad6e903183ea18416b4714aef30674c5da9f22c6fcfa2dcb9a5c5",
+        "matches": true
+      },
+      {
+        "path": "host/persistence.js",
+        "sha256": "f8f0e069ad23b657df5c8069f85241e5ab690653f81bcf6d8f7849f1d1b37f59",
+        "matches": true
+      },
+      {
+        "path": "host/photo-mask.js",
+        "sha256": "cb8c055cef5f1ddcd745fbd1509ee127d44d730c2c9faa9464258cc014dfc5b4",
+        "matches": true
+      },
+      {
+        "path": "host/pptx.js",
+        "sha256": "926427ec56824ae937fa03a7c370ef5f76724e7aa8995afcf3cb0bc83f568192",
+        "matches": true
+      },
+      {
+        "path": "host/preview-info.js",
+        "sha256": "701e23f15579f5a9dace869aecf1389ea1c541df55c179d1dde7ddf4b232047c",
+        "matches": true
+      },
+      {
+        "path": "host/psd.js",
+        "sha256": "73bbe8845305f041b1dce35f5e9b85b3c099e0f57a5a206f743df3ee7c1c567b",
+        "matches": true
+      },
+      {
+        "path": "host/raster.js",
+        "sha256": "1d364fefe0078b056e403050cb70a7eec2206f0b7425d6e361a119b831e75e27",
+        "matches": true
+      },
+      {
+        "path": "host/safety.js",
+        "sha256": "dd0f9a8157ef86a91adc1ec31cb28c4ac64d9ed947eb407cf2e0409e3a2ed1dd",
+        "matches": true
+      },
+      {
+        "path": "host/svgtools.js",
+        "sha256": "7e42791122cd3beffe00cf9180fc207b120f80368ce40d0bd4aa72997aef407c",
+        "matches": true
+      },
+      {
+        "path": "host/templates.js",
+        "sha256": "9c2762a87fd724c5fa0458538af2c9c2731cd727a7683e2fd1c90a930ccfba33",
+        "matches": true
+      },
+      {
+        "path": "host/variants.js",
+        "sha256": "8cb2c66ccff12b3e3ec73bef6bceec99a5f80d16fe78bb2969fd933ec9f29b62",
+        "matches": true
+      },
+      {
+        "path": "host/workspace-native.js",
+        "sha256": "b1d0dcb1f040d3ea76f554607df381d9b62f3e1f22949e229c2f1b1becf26459",
+        "matches": true
+      },
+      {
+        "path": "host/zip.js",
+        "sha256": "8be46d26712599ad8462b4c61f0f8d96007609e697b5fce2124f18020b23d796",
+        "matches": true
+      },
+      {
+        "path": "icon.svg",
+        "sha256": "b61dc216b4ee0d80a2dbb76d7e10279379025b7fe594af40dfd1ee282f4498c3",
+        "matches": true
+      },
+      {
+        "path": "package.json",
+        "sha256": "0bcb37490a44d0f87bc1152475907e3aed3353972d073b4041a4572bb461d1cd",
+        "matches": true
+      },
+      {
+        "path": "runtime-lock.json",
+        "sha256": "670aa4f4c525d201c69a256a4c90adf6768affbf89f57b5b60f9164d9168bb49",
+        "matches": true
+      },
+      {
+        "path": "skills/designcraft/SKILL.md",
+        "sha256": "6afeab40e3e025583af980511ab3a4e3f026440348a54729f025be5f93bf0aa9",
+        "matches": true
+      },
+      {
+        "path": "tests/api-store.test.mjs",
+        "sha256": "58454cb69f16fe33e8d5a07dc2d3f7d774ef21a0bc286a5f7b5ec750391be9de",
+        "matches": true
+      },
+      {
+        "path": "tests/asset-stream.test.mjs",
+        "sha256": "eaf814198729340397746f79f0fe6e4fd74bbbf07f6a0d919cb3c0c9685f2ce2",
+        "matches": true
+      },
+      {
+        "path": "tests/assets.test.mjs",
+        "sha256": "87a1b90ce4a037bdee4d314c6f68448c0464e585692bdca7a747bd5e34a92273",
+        "matches": true
+      },
+      {
+        "path": "tests/batch-commit.test.mjs",
+        "sha256": "bf1e40aa4bd2bdb13b8de54d5d1b7d5685dae26fc7025d7c3264ac132bc47b0c",
+        "matches": true
+      },
+      {
+        "path": "tests/blend.test.mjs",
+        "sha256": "b181edb3cfd0aa9c41d94376284c29a879f626fbbcf89420e719d71b62a1dc79",
+        "matches": true
+      },
+      {
+        "path": "tests/check-source.mjs",
+        "sha256": "e4c9f1bd63def95a4cb66a9692b93234093613f3f281b88d28f522c0d438422f",
+        "matches": true
+      },
+      {
+        "path": "tests/client.test.mjs",
+        "sha256": "d8c3d583bac03333362afe3d541822bc32de408d846e6cc72ace23270baa35c2",
+        "matches": true
+      },
+      {
+        "path": "tests/composite.test.mjs",
+        "sha256": "0337df1e95084a939fc475c3bebf4d25ac3b85afb785ab3e98c9261207c27398",
+        "matches": true
+      },
+      {
+        "path": "tests/deck-native.test.mjs",
+        "sha256": "8e767c05591b0d32046add13c7beb2e6a3c547f7686cd031c04f131836bf2b33",
+        "matches": true
+      },
+      {
+        "path": "tests/deck-source.test.mjs",
+        "sha256": "3618ea8e52cb6a82b17e88d46179f1913b6f4dca0edf11b755de19faabb6d9d5",
+        "matches": true
+      },
+      {
+        "path": "tests/design-resources.test.mjs",
+        "sha256": "e5e170e5020387699275887775ce545ada9388d42351c9921c76ca84e794c5ff",
+        "matches": true
+      },
+      {
+        "path": "tests/dsh-chat.test.mjs",
+        "sha256": "3a675b40803913675080396d29c9f54cd50ec6f5e62c9019e1546ae1ef1e1ab0",
+        "matches": true
+      },
+      {
+        "path": "tests/dsh-context.test.mjs",
+        "sha256": "09be110750ae5d749e6ad209eb59586674e0c33dd34cefc8fb62d5878f29bff2",
+        "matches": true
+      },
+      {
+        "path": "tests/fixtures/blocked-worker.mjs",
+        "sha256": "62d160682a1a58d296fc18a82c36c206e0e34c8effc20587a1043e55bb1596d8",
+        "matches": true
+      },
+      {
+        "path": "tests/geometry.test.mjs",
+        "sha256": "b95f09cde4ac4c3f81a2a077e255ba98d0c8fd30ccb77a3553d44fa2c24e664d",
+        "matches": true
+      },
+      {
+        "path": "tests/host.test.mjs",
+        "sha256": "c575c46642f4d1187525bd567632c936609f32bb8d98a07e3cd1ff4cb0b0a1a6",
+        "matches": true
+      },
+      {
+        "path": "tests/image-composite.test.mjs",
+        "sha256": "e870c48b61cf6815b5117a5f7c658147c32a968625f0a1e9da0f74a2dc29f68e",
+        "matches": true
+      },
+      {
+        "path": "tests/image-header.test.mjs",
+        "sha256": "75d74d189b4879359e67b423ddfd598aa7d68b3516c78482faa2583c801c320b",
+        "matches": true
+      },
+      {
+        "path": "tests/jobs.test.mjs",
+        "sha256": "47716229c074be6f66c531a4d0e5e12c64085bbb8fb82810b9aad84705178db4",
+        "matches": true
+      },
+      {
+        "path": "tests/merge.test.mjs",
+        "sha256": "e4d9b4d3695784d0f1566d5c087bafa396e2e4eb8cde0400e7b2c2d7ccfc2eb8",
+        "matches": true
+      },
+      {
+        "path": "tests/native-isolation.test.mjs",
+        "sha256": "46288e48a19ce7e535007b393bcbca7d8486b91ffda871551884dcac84d546ff",
+        "matches": true
+      },
+      {
+        "path": "tests/native-pool.test.mjs",
+        "sha256": "7c040911d20fe2d9653574a1a5952133906da7f136294f6f5427436bdb8a7d4d",
+        "matches": true
+      },
+      {
+        "path": "tests/native-zip.test.mjs",
+        "sha256": "b12a04d77ec3acc17130ef54562dbb40dff9acb29898450f1aaa03b241b99b93",
+        "matches": true
+      },
+      {
+        "path": "tests/native.test.mjs",
+        "sha256": "e968c49bead4700ef9a601a8be83b8680d5b5d3ea1c659d2d1124b1df377038f",
+        "matches": true
+      },
+      {
+        "path": "tests/object-copy.test.mjs",
+        "sha256": "dab530590747deb53e2332841ef5da2513c24bb1084c454114b2adb9bbdbe814",
+        "matches": true
+      },
+      {
+        "path": "tests/path-parser.test.mjs",
+        "sha256": "0baf3e3b09cc3585b66e97e5af8f580f28bd8d65b28c47d2854bcab9f454dadd",
+        "matches": true
+      },
+      {
+        "path": "tests/png-safety.test.mjs",
+        "sha256": "05a63337ff85958d08cadbc90fe1940f79a9eece5ba22b1fbb6afe3f80fb577c",
+        "matches": true
+      },
+      {
+        "path": "tests/precise-reference.test.mjs",
+        "sha256": "2292273b2e2c03ee57d1a13fa8d3f5e8f63233e973e5153e0d679dfc54e446ad",
+        "matches": true
+      },
+      {
+        "path": "tests/run-current.mjs",
+        "sha256": "dd58f50cfaf8f768248d6bd3dc0e52913f5d7dcbb62424afe4f1f8254da5a6b4",
+        "matches": true
+      },
+      {
+        "path": "tests/selection.test.mjs",
+        "sha256": "518a247ac5a85403207f30ef6f4f4f5a3c5e1523bbfe14e338657e50f149203a",
+        "matches": true
+      },
+      {
+        "path": "tests/store-safety.test.mjs",
+        "sha256": "55ff43655e9fe159bfe44ebf85cd8c72c427846e97d63db8236980785f7805f0",
+        "matches": true
+      },
+      {
+        "path": "tests/svg-import.test.mjs",
+        "sha256": "899d248188881732864f2530e2bdb609adc8de04c8d34a4c47941c8692b8e0b2",
+        "matches": true
+      },
+      {
+        "path": "tests/sync.test.mjs",
+        "sha256": "ebdf3c06e6547d7c3da7053d924ab8130963b2f167ddda8ec6241c5d754b0326",
+        "matches": true
+      },
+      {
+        "path": "tests/tools.test.mjs",
+        "sha256": "147548df3d79a71cae0fde77fad3ae741cd31913af63875acb6a655de0d5bb97",
+        "matches": true
+      },
+      {
+        "path": "tests/unsupported-truth.test.mjs",
+        "sha256": "1aa0c5af0a8a74f9df3f726ab6eae8335916f532a41dd716b783daf1304e3e17",
+        "matches": true
+      },
+      {
+        "path": "tests/variants.test.mjs",
+        "sha256": "ac33f2e0804a76df00ae184997ed25277ff27a1c97b3152e0c1883c4bae26f84",
+        "matches": true
+      },
+      {
+        "path": "tests/vector-nodes.test.mjs",
+        "sha256": "f141ca4c1d3b97133f5221a2a3b9bb58d237304bebd0985886f3c5610775ae05",
+        "matches": true
+      },
+      {
+        "path": "tests/workspace-native.test.mjs",
+        "sha256": "6456d1f30d65059dabdc0d7c556cbbcbbfc1122b33adc476206a81c57d4e58ca",
+        "matches": true
+      }
+    ]
+  },
+  "webReleases": {
+    "photocraft": {
+      "version": "0.18.0",
+      "archiveSha256": "270b1212e5babb3a79480d09e264e6d073f14aa24113f3c0fd384f6c61971602",
+      "url": "https://github.com/storytold/photocraft/releases/download/v0.18.0/photocraft-web-0.18.0.zip",
+      "extracted": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-implementation\\upstream-runtimes\\photocraft\\v0.18.0\\web\\photocraft-web-0.18.0",
+      "sourceRevision": "8a87a457abb43ac344deeb3fdb67541b91a72ff1"
+    },
+    "vectorcraft": {
+      "version": "0.19.0",
+      "archiveSha256": "d9c7a2695d15f83a268b1be3be94592db4beb04326825e174cb5e3cb239c64d6",
+      "url": "https://github.com/storytold/vectorcraft/releases/download/v0.19.0/vectorcraft-web-0.19.0.zip",
+      "extracted": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-implementation\\upstream-runtimes\\vectorcraft\\v0.19.0\\web\\vectorcraft-web-0.19.0",
+      "sourceRevision": "bcebabe3f8c23a376ac68e9e6726590af278f7bb"
+    },
+    "deckcraft": {
+      "version": "0.13.1",
+      "archiveSha256": "12a678c7b5b8d45ff247d9e090d850532410d7638da342c858758aae9ff4b9ce",
+      "url": "https://github.com/storytold/deckcraft/releases/download/v0.13.1/deckcraft-web-0.13.1.zip",
+      "extracted": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-implementation\\upstream-runtimes\\deckcraft\\v0.13.1\\web\\deckcraft-web-0.13.1",
+      "sourceRevision": "4ce2944630b04188dee8504c14151994d06c416a"
+    }
+  },
+  "sourceReferences": {
+    "open-design": "12d970eacc8971150e3c76470d2a9afe16dc2ed1",
+    "vectorcraft": "01b498c4789832ed9202ab7aaa80dc26cd3f9cc8",
+    "photocraft": "422ca7beda90d927643bcd074646ebbd37706d75",
+    "deckcraft": "a3fbf02952839c223df600dc33106a2dbc65be1b"
+  },
+  "note": "Source-reference commits are research references, not claims that older web releases match them.",
+  "dsh": {
+    "version": "0.2.1-rc.5",
+    "hostProtocolVersion": 4,
+    "mode": "installed SDK; isolated development context"
+  }
+}

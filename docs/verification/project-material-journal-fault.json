@@ -1,0 +1,8 @@
+{
+  "scope": "intentional fault only in owned QA workspace after stopping owned backend",
+  "jobId": "d502bad9-53cd-4c28-b378-814ef33f3804",
+  "journalExisted": true,
+  "sourceHash": "7d12287434e94cc3eb9400f1bb93667a069016fe107f7414b6ad3d5045b20349",
+  "journalSha256": "5980586028bfb8d481580e2a460176b0e6770cbfbff83db3a801aba641a7f2f7",
+  "journalRemoved": true
+}

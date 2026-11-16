@@ -1,0 +1,40 @@
+{
+  "status": "passed_scoped",
+  "at": "2026-11-08T09:58:13.113798+00:00",
+  "scope": "Actual Vector/Photo/Deck native takeover and guarded undo; historical real Kimi turns plus current registered-tool tests.",
+  "checks": [
+    "Photo rejects older tool undo after a real brush stroke and safely undoes the latest targeted opacity change while preserving native model and RGBA",
+    "Deck rejects older tool undo after a real object move and safely undoes the latest targeted fill while preserving the manual source"
+  ],
+  "historical": [
+    {
+      "file": "verification/kimi-opendesign-resume.json",
+      "sha256": "10c8bb53dd35ec04d5e5e4c295eec0c9bcd601650927bf6387ad135923e4830c",
+      "scope": "real existing kimi-coding/kimi-for-coding, native DSH Send and tools, real pinned OD data, native source/manual/targeted continuation/export/reopen; not the full external creative-director bundle"
+    },
+    {
+      "file": "verification/native-handoff.json",
+      "sha256": "b3edcb90e34b4fce47ca0c9568122512cc5a5616e0f64d26e32073d5f3550d97",
+      "scope": "actual registered DSH tool/native App, physical manual input and exact source checkpoints/reopen; no LLM"
+    },
+    {
+      "file": "verification/photo-kimi.json",
+      "sha256": "5400bbb656e0c09583973a49017431f173f250571e872d3f927bf45d606d2ba4",
+      "scope": "one real configured kimi-coding/kimi-for-coding turn through original DSH composer and actual native reference; real physical mask edits on both sides; no image service, replacement reply or regeneration"
+    },
+    {
+      "file": "verification/deck-kimi.json",
+      "sha256": "0b5caf5cdb26af6db4305e563dfa766dca9a1d4d453b3a5ed4102883bbda56c7",
+      "scope": "one actual configured kimi-for-coding native DSH turn, real Deck quote and registered tool events, physical edits on both sides; no regenerated presentation or substituted response"
+    }
+  ],
+  "currentRaw": {
+    "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-cross-engine-handoff.json",
+    "sha256": "99a4a728f935b0bd85272fa52f694bd48ed3cfec509cb39e8b11b2a43e01c657"
+  },
+  "limits": [
+    "The current Photo and Deck undo checks used actual registered tool calls, not new model turns.",
+    "The historical Vector Kimi generation was recovered after the first turn exceeded its QA deadline; its second model turn completed.",
+    "Only the demonstrated single-step changes are automatically undoable; uncertain or older history is refused to protect later edits."
+  ]
+}

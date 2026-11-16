@@ -1,0 +1,60 @@
+{
+  "status": "passed_scoped",
+  "at": "2026-11-08T10:42:38.371820+00:00",
+  "scope": "Current owned DSH and installed Vector host13/Deck host10, actual SVG in-place edit, undo/redo and PPT native-path conversion.",
+  "checks": [
+    "Poster SVG duplicate edited independently, wrote back to the same native object, preserved the other use and layout, and survived physical undo/redo and reopen.",
+    "Deck SVG duplicate preserved its frame, crop, rotation and opacity; both original SVG and preview changed, other use remained exact, and PPTX retained SVG.",
+    "Simple SVG generated three actual native custom paths, preserved the original hidden SVG, supported physical edit/undo/redo, and survived PPTX reimport."
+  ],
+  "files": [
+    {
+      "file": "verification/ui45-reverified-svg-vector-after.vectorcraft",
+      "bytes": 95592,
+      "sha256": "ab410588ab4cfa924496b97809ede4b1e0aabcfa4b1c5423dfbe34389870be4d"
+    },
+    {
+      "file": "verification/ui45-reverified-svg-vector-after.svg",
+      "bytes": 4734,
+      "sha256": "657f6b9c30a20eda53eeab796ef3da0a1d7e392e863fc2750d9c10d30475b403"
+    },
+    {
+      "file": "verification/ui45-reverified-svg-deck-after.deckcraft",
+      "bytes": 17375,
+      "sha256": "db3637a9eab7a6251fc8aca06d647f037e4a2d0e0128304f9b70f208becfa895"
+    },
+    {
+      "file": "verification/ui45-reverified-svg-deck-after.pptx",
+      "bytes": 36514,
+      "sha256": "9d50063117a5feec614c6f8aad8631bcaa1870162f8f236921cb361aa959fec1"
+    },
+    {
+      "file": "verification/ui45-reverified-f5-ui-after.deckcraft",
+      "bytes": 8204,
+      "sha256": "059d09e30990bd0108160be8ec0398d7a3ddfe356563681ca0865a3a9bba18d3"
+    },
+    {
+      "file": "verification/ui45-reverified-f5-ui-converted.pptx",
+      "bytes": 26048,
+      "sha256": "8c950ea7fdf4a6292094f8a16ed10aa9f6f5592b40307ff8b1d9cb7d2493a304"
+    }
+  ],
+  "rawEvidence": [
+    {
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\reverify-svg\\evidence\\svg-vector-browser.json",
+      "sha256": "b4ebf0e457771cfccc86332fb905232ea69f5b06b7bceeb179b6b5d5c095f66a"
+    },
+    {
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\reverify-svg\\evidence\\svg-deck-browser.json",
+      "sha256": "22916108fee27e8308348a6c4628c8f56fed1b19a5864bf54422bd982c02850f"
+    },
+    {
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\reverify-svg\\evidence\\f5-ui-shapes.json",
+      "sha256": "345b8f333c3c16a92d0243f0b93ec6d2214290066d234c1380586c000ef13e24"
+    }
+  ],
+  "limits": [
+    "The samples do not establish lossless conversion for arbitrary SVG filters, fonts or effects.",
+    "Some older named artifacts remain unavailable at their original recorded hashes; this fresh evidence does not recreate those historical files."
+  ]
+}

@@ -1,0 +1,17 @@
+import {mkdirSync,writeFileSync} from 'node:fs';
+import {resolve,join} from 'node:path';
+import {exportPptx} from '../host/pptx.js';
+import {exportPdfHeadless,exportPdfFromClientPages} from '../host/pdf.js';
+import {createImage,toPNG} from '../host/raster.js';
+const dir=resolve(process.argv[2]);mkdirSync(dir,{recursive:true});
+const png=toPNG(createImage(8,8,[255,0,0,255]));
+const doc=layers=>({id:'export-check',title:'中文导出',canvas:{width:64,height:64},pages:[{id:'p1',background:{kind:'solid',color:'#ffffff'},layers}]});
+writeFileSync(join(dir,'text.pptx'),exportPptx(doc([{type:'text',id:'t',text:'中文 & Latin',x:2,y:2,w:50,h:20,fontSize:12,color:'#000000',opacity:.5}]),()=>null).buffer);
+const image={id:'image',type:'image',asset:'red.png',x:8,y:8,w:16,h:16};
+writeFileSync(join(dir,'image.pptx'),exportPptx(doc([image]),()=>png).buffer);
+writeFileSync(join(dir,'hidden.pptx'),exportPptx(doc([{id:'hidden',type:'group',hidden:true,children:[{id:'child',name:'HIDDEN_SENTINEL',type:'shape',shape:'rect',fill:'#ff0000',x:1,y:1,w:4,h:4}]}]),()=>null).buffer);
+const chart={type:'chart',chartKind:'bar',x:1,y:1,w:30,h:30,data:{labels:['A','B','C'],series:[{name:'S',values:[1,2,3]}]}};
+writeFileSync(join(dir,'charts.pptx'),exportPptx(doc([{...chart,id:'a'},{...chart,id:'b'}]),()=>null).buffer);
+writeFileSync(join(dir,'headless.pdf'),exportPdfHeadless(doc([image]),()=>png).buffer);
+writeFileSync(join(dir,'client.pdf'),exportPdfFromClientPages([{widthPx:64,heightPx:64,kind:'png',buffer:png}]));
+console.log(dir);

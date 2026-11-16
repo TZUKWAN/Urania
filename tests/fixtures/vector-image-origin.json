@@ -1,0 +1,27 @@
+{
+  "scope": "Actual original Photo native source/PNG paired at real host7 Vector placement; original immutable versions reverified",
+  "asset": {
+    "id": "asset-f784368d-7ab0-49c2-be36-0decb8c692f2",
+    "title": "图片素材验证",
+    "sourceId": "work-37f6e087-e684-46c6-b78f-923f81e7d142",
+    "sourceRevision": "791c4fa1eb7f8f62c76d34903d3cb2f658544b05d89824ddb9f47bd8fae0aa13",
+    "sourceHash": "df0e47178e4acf13c1b49540acd6b420db56d3b9107533991ee47bce4ed95ebb",
+    "engine": "photocraft",
+    "format": "png",
+    "sha256": "29da4208fd1148f5a780ff56fa1b21f50eb25ffd66628cd99c9897cbd0f1bd0c",
+    "bytes": 10406,
+    "at": "2026-11-04T14:17:32.406Z"
+  },
+  "engineState": {
+    "uid": 1,
+    "revision": 1,
+    "nativeDocumentId": 1
+  },
+  "sourceRevision": "791c4fa1eb7f8f62c76d34903d3cb2f658544b05d89824ddb9f47bd8fae0aa13",
+  "nativeVectorSourceSha256": "e662a9d5060cbce4f29ab36c930d0b9aae39fe97c2974c0415ae196c6e57233c",
+  "vectorEngineState": {
+    "uid": 1,
+    "revision": 2
+  },
+  "vectorSourceRevision": "26096d64ff7448687b4f3795199e38f45771f4b0c9319683420b2a9876c7414f"
+}

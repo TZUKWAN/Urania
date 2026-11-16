@@ -1,0 +1,32 @@
+{
+  "status": "passed_scoped",
+  "at": "2026-11-08T11:25:08.633478+00:00",
+  "scope": "Owned DSH, actual shared-host file actions for three native engines and existing native keyboard routes.",
+  "checks": [
+    "Vector, Photo and Deck: cancel Save As without switching; Save Copy retains source; Save As opens an independent same-content copy; Close preserves the saved source.",
+    "Custom-size creation saved the requested native dimensions in all three engines and also works from an empty project; cancel and an oversized area retained the original source.",
+    "Photo and Deck native Ctrl+S, Ctrl+Shift+S and cancelled Ctrl+O still route through the host after the shared actions were added."
+  ],
+  "rawEvidence": [
+    {
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-host-file-menu.json",
+      "sha256": "338bf493f6b9959c7f80327832f71f5bb11d454740464804365d8ec8231af2e1"
+    },
+    {
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-native-file-after-shared-menu.json",
+      "sha256": "068bea090aa91f820c3d0d043ba30795806ba9e5a0409ff75921111f4685bdd3"
+    },
+    {
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-host-custom-new.json",
+      "sha256": "f6719d0b1325c8df592780d8b83b68e6346f74425032838513376058a0e39344"
+    },
+    {
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-host-new-empty.json",
+      "sha256": "1b9671fc69f3b3376110e4a2c1d625f1ff8ae1ba3609005364a88eb828e23d3b"
+    }
+  ],
+  "limits": [
+    "Native file menus and some redundant controls are still visible; this does not yet satisfy the entire single-entry host-mode requirement.",
+    "The test uses an owned DSH/browser, not the user’s current desktop window."
+  ]
+}

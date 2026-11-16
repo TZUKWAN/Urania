@@ -1,0 +1,22 @@
+{
+  "scope": "actual native SVG command outputs; project/material identities are assigned test inputs",
+  "files": {
+    "before.vectorcraft": {
+      "sha256": "8382f993c3a7a5135e4ca2d0dedcd57a9f3349a538caa0d1b76642fbddfe3f41",
+      "bytes": 44591
+    },
+    "after.vectorcraft": {
+      "sha256": "4210fcac35f614602c073fff62eed0a6f8b20ae7160749fc94d3d5fc27ce6c3f",
+      "bytes": 78432
+    },
+    "after.svg": {
+      "sha256": "f564d62e3bcb145c7ae9c98c37463c24b09d05d0788d6da8ee8700a1d49e9ef6",
+      "bytes": 2918
+    },
+    "metadata.json": {
+      "sha256": "cbc2694630d7594f560e09c8c7be04e61e5f39769b871a0c884e6f05695c8f10",
+      "bytes": 435
+    }
+  },
+  "license": "MIT OR Apache-2.0"
+}

@@ -1,0 +1,492 @@
+{
+  "schema": 1,
+  "at": "2026-11-13T08:37:31.124402+00:00",
+  "status": "passed_scoped_ai_canvas_selection_and_preservation",
+  "version": "1.3.0-dev.146",
+  "uiBuild": 160,
+  "userGoal": "默认画布中单选或多选后直接向同一个DSH对话提出修改要求，保留底层功能，专业工具收进高级编辑",
+  "nativeHosts": {
+    "vectorcraft": "0.19.0+designcraft.host19",
+    "photocraft": "0.18.0+designcraft.host8",
+    "deckcraft": "0.13.1+designcraft.host18"
+  },
+  "functionalScope": {
+    "defaultAiCanvas": true,
+    "automaticSingleAndMultiSelectionReference": true,
+    "preservesTypedChineseAndOtherDraftReferences": true,
+    "photoLayersAndRealPixelRegion": true,
+    "deckCurrentPageAndSelectedObjects": true,
+    "sameAppAdvancedModeSwitch": true,
+    "nativeSourceAndUndoPreservation": true,
+    "staleSelectionAndPageSendRejected": true,
+    "actualFailedOrdinarySendDraftRestoration": true,
+    "professionalToolsRetained": true
+  },
+  "node": {
+    "file": "tests/ai-canvas.test.mjs",
+    "tests": 13,
+    "passed": 13,
+    "failed": 0,
+    "report": "verification/ui160-ai-canvas-20261113/node/ai-canvas.tap"
+  },
+  "actualUiCases": {
+    "vectorcraft": {
+      "case": "test_ai_canvas_vector_ui.py",
+      "status": "passed",
+      "attempt": 2,
+      "seconds": 34.116,
+      "report": "verification/ui160-ai-canvas-20261113/vectorcraft/ai-canvas-ui.json",
+      "reportSha256": "71fb1bfb2d0fcf2b12ec0c32449a8aa4af29723a5cdff973df160e3511723d46",
+      "nativeVersion": "0.19.0+designcraft.host19",
+      "source": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\release-validation-20261113\\ui\\test_ai_canvas_vector_ui\\attempt2\\evidence"
+    },
+    "photocraft": {
+      "case": "test_ai_canvas_photo_ui.py",
+      "status": "passed",
+      "attempt": 3,
+      "seconds": 22.652,
+      "report": "verification/ui160-ai-canvas-20261113/photocraft/ai-canvas-ui.json",
+      "reportSha256": "e8690bbba051daf94a72e3a6ab77adc0c47b69e0ff388431cb6da70ac9675215",
+      "nativeVersion": "0.18.0+designcraft.host8",
+      "source": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\release-validation-20261113\\ui\\test_ai_canvas_photo_ui\\attempt3\\evidence"
+    },
+    "deckcraft": {
+      "case": "test_ai_canvas_deck_ui.py",
+      "status": "passed",
+      "attempt": 3,
+      "seconds": 37.956,
+      "report": "verification/ui160-ai-canvas-20261113/deckcraft/ai-canvas-ui.json",
+      "reportSha256": "5ee9033c1ae5a1ca3341bc7d89f7d495867a89fd438e1d97d8843c85f231de26",
+      "nativeVersion": "0.13.1+designcraft.host18",
+      "source": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\release-validation-20261113\\ui\\test_ai_canvas_deck_ui\\attempt3\\evidence"
+    },
+    "admission": {
+      "case": "test_ai_canvas_admission_ui.py",
+      "status": "passed",
+      "attempt": 2,
+      "seconds": 15.732,
+      "report": "verification/ui160-ai-canvas-20261113/admission/ai-canvas-admission.json",
+      "reportSha256": "bebf103a49e3779d69c391717c788a154db97c0a525a2057537b05c61f7fd989",
+      "nativeVersion": null,
+      "source": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\release-validation-20261113\\ui\\test_ai_canvas_admission_ui\\attempt2\\evidence"
+    }
+  },
+  "actualModelSelection": {
+    "status": "passed",
+    "model": {
+      "provider": "zai-coding-cn",
+      "model": "glm-5.3-flash"
+    },
+    "actualUserTurns": 2,
+    "chatHttpDispatches": 12,
+    "allObservedResponses200": true,
+    "newImageRequests": 0,
+    "automaticReference": true,
+    "promptsContainObjectIds": false,
+    "multiTargetOnly": true,
+    "singleTargetOnly": true,
+    "allNonTargetNativeFieldsPreserved": true,
+    "manualGeometryPreserved": true,
+    "finalNativeReopenExact": true,
+    "actualNativeVersion": "0.19.0+designcraft.host18",
+    "finalHost19ModelRerun": false,
+    "finalHost19Difference": "Only hides the remaining native floating taskbar; actual final local UI selection/draft/mode/undo replay is separate",
+    "sameApp": "within each actual model turn; a browser recovery between turns is explicitly preserved",
+    "actualToolRefusal": "One missing-epoch 422; model re-read state and recovered without weakening guards",
+    "mainModelReadback": "model/model-primary-review.json"
+  },
+  "fixes": [
+    {
+      "id": "AI-C1",
+      "files": [
+        "client/native-reference.js",
+        "client/ui.js",
+        "tests/ai-canvas.test.mjs"
+      ],
+      "problem": "普通DSH Send保持plain，自动引用可能阻止失败草稿恢复",
+      "result": "读取实际detached/attachment准入生命周期并在真实结束后重试，兼容状态未知时明确报错；真实stale拒绝后中文语义草稿完整恢复且0新API"
+    },
+    {
+      "id": "AI-C2",
+      "files": [
+        "client/native-reference.js",
+        "tests/ai-canvas.test.mjs"
+      ],
+      "problem": "Vector选区stamp不含objects，单换对象需独立核对",
+      "result": "Send独立比较完整objectIds，同时保留原source/epoch/uid/revision/stamp/page守卫"
+    },
+    {
+      "id": "AI-C3",
+      "files": [
+        "client/native-controller.js",
+        "client/native-workspace.js",
+        "client/ai-canvas.js",
+        "client/ui.js"
+      ],
+      "problem": "专业控件默认太多，需要直接围绕当前选择提要求",
+      "result": "默认AI画布目标条、图层/区域选法、自动引用，原功能在高级编辑和更多入口保留"
+    },
+    {
+      "id": "AI-C4",
+      "files": [
+        "docs/engine-source-snapshots-ui160.zip"
+      ],
+      "problem": "原生chrome、浮条、Photo tabs和Deck高级视图残留会破坏简洁布局或页面上下文",
+      "result": "真实原生条件布局；Deck参数验证先于UI写入，有效Normal渲染/页面上下文一致；高级视图偏好保留"
+    }
+  ],
+  "preservedFailures": [
+    {
+      "case": "test_ai_canvas_photo_ui.py",
+      "attempt": 1,
+      "report": "verification/ui160-ai-canvas-20261113/prior-failures/photocraft-attempt1.json"
+    },
+    {
+      "case": "test_ai_canvas_deck_ui.py",
+      "attempt": 1,
+      "report": "verification/ui160-ai-canvas-20261113/prior-failures/deckcraft-attempt1.json"
+    },
+    {
+      "case": "test_ai_canvas_deck_ui.py",
+      "attempt": 2,
+      "report": "verification/ui160-ai-canvas-20261113/prior-failures/deckcraft-attempt2.json"
+    },
+    {
+      "case": "test_ai_canvas_admission_ui.py",
+      "attempt": 1,
+      "report": "verification/ui160-ai-canvas-20261113/prior-failures/admission-attempt1.json"
+    }
+  ],
+  "harnessCorrections": [
+    "Deck首试误用Escape取消了刚选中的对象；次试误等requestJson的包装ok，实际API直接返回值；只修测试并保留两次失败。",
+    "Photo7首试在实际presentation锁尚未结束时拖动；等待真实inert/projectPending结束后通过。Photo8最后只追加原生chrome收起。",
+    "Admission首试在聊天内部找全局alert导致断言失败，真实失败恢复已发生；改定位实际alert后通过。子进程输出固定UTF-8，旧乱码日志保留。",
+    "实际模型多选后点击已选成员仍维持多选，helper假设不成立；仅恢复尚未提交的单选轮，未重发多选。"
+  ],
+  "mainModelReview": {
+    "actualUiScreenshotsViewed": true,
+    "actualNativeModelAndObservedHttpReadback": true,
+    "subagentResultsIndependentlyChecked": true,
+    "singleAgentFinalIntegration": true,
+    "runtimeModel": "gpt-6.1-sol",
+    "reasoningEffort": "max"
+  },
+  "scopeBoundaries": [
+    "Photo扁平图片中的像素不会自动变为独立语义对象；可按真实图层或像素区域提出要求。",
+    "模型行为实测是现有GLM对指定填充的单选/多选样本，不保证任意提示词、所有模型或全部上游命令。",
+    "DSH普通发送生命周期使用本机已读SDK的只读字段；未来SDK合同改变时明确提示适配，不假定空闲。",
+    "本轮composition事件屏障是实际浏览器适配器回归，不冒充物理OS输入法验收。",
+    "原48本地UI、4真实图片请求、UI158跨引擎模型和UI159四项移除保留原构建范围，没有冒充全量重测。",
+    "已放弃外部平台和四项采集功能不恢复；字体、转换器来源和局部重绘视觉边界仍按既有审计说明。"
+  ],
+  "userDesktopControlled": false,
+  "userDshRestarted": false,
+  "allCoreFunctionsAccepted": false,
+  "rawEvidence": [
+    {
+      "file": "verification/ui160-ai-canvas-20261113/admission/admission-restored.png",
+      "bytes": 93773,
+      "sha256": "f2d70b3bdba0e44317befa24cbf29f57b574f1c0889d1b4d73c3d7400ece0011"
+    },
+    {
+      "file": "verification/ui160-ai-canvas-20261113/admission/ai-canvas-admission.json",
+      "bytes": 1021,
+      "sha256": "bebf103a49e3779d69c391717c788a154db97c0a525a2057537b05c61f7fd989"
+    },
+    {
+      "file": "verification/ui160-ai-canvas-20261113/admission/case.log",
+      "bytes": 122,
+      "sha256": "2614c06b568fa1628e059b6d75b00d9069fc8b6f74d7298ed9e88cc8594788d1"
+    },
+    {
+      "file": "verification/ui160-ai-canvas-20261113/admission/executed-test.py",
+      "bytes": 6656,
+      "sha256": "2ce45bee99b6a39709c517213c10995d37276daf56ddcd0a1a0248800e3f123e"
+    },
+    {
+      "file": "verification/ui160-ai-canvas-20261113/deckcraft/ai-canvas-ui.json",
+      "bytes": 1816,
+      "sha256": "5ee9033c1ae5a1ca3341bc7d89f7d495867a89fd438e1d97d8843c85f231de26"
+    },
+    {
+      "file": "verification/ui160-ai-canvas-20261113/deckcraft/case.log",
+      "bytes": 128,
+      "sha256": "a6de06963c247df21681521b38060104aae80a69f12d594b01d77315534365eb"
+    },
+    {
+      "file": "verification/ui160-ai-canvas-20261113/deckcraft/deckcraft-advanced.png",
+      "bytes": 153424,
+      "sha256": "48047d4c63ce90cd8cf2238608af9be148951bda55707502daba52c4e9641e75"
+    },
+    {
+      "file": "verification/ui160-ai-canvas-20261113/deckcraft/deckcraft-ai.png",
+      "bytes": 101007,
+      "sha256": "fc5fcc607e4c53bbc586fecf42dea48fc97c79d3a73ef7b795a256a16777fdb2"
+    },
+    {
+      "file": "verification/ui160-ai-canvas-20261113/deckcraft/deckcraft-second-page.png",
+      "bytes": 76938,
+      "sha256": "7d38f04fd678ea41f1fa9b3790f79a41b185c6b068ec777f874c6faa1dc43aa4"
+    },
+    {
+      "file": "verification/ui160-ai-canvas-20261113/deckcraft/executed-test.py",
+      "bytes": 7999,
+      "sha256": "d220a0fba2bab9bec7ebd7c71bb500280d7ba0c3afca55793b0e8972a65bbbbb"
+    },
+    {
+      "file": "verification/ui160-ai-canvas-20261113/model/model-after-multi.vectorcraft",
+      "bytes": 28028,
+      "sha256": "3c282d8fc18685910b15ae11c84fc1bb425479a4ac2d9cc4eadfceaf676ae4e6"
+    },
+    {
+      "file": "verification/ui160-ai-canvas-20261113/model/model-after-single-resume.vectorcraft",
+      "bytes": 28027,
+      "sha256": "ccb522298ade7dc65e30edc47eb300db8509f8c1398ebbd0fe778fc5a9bbe7a3"
+    },
+    {
+      "file": "verification/ui160-ai-canvas-20261113/model/model-dispatch-baseline.json",
+      "bytes": 694,
+      "sha256": "0b1678c42986318b42af9de4f80c8aaa3fcdeca9e6c5d565156e72047b6c25da"
+    },
+    {
+      "file": "verification/ui160-ai-canvas-20261113/model/model-first-attempt-executed.py",
+      "bytes": 16774,
+      "sha256": "0ca6b7301e952a815fc7f3510ebf6c2014c5d03d0e3330f8c17ec9a4535da91f"
+    },
+    {
+      "file": "verification/ui160-ai-canvas-20261113/model/model-independent-review.py",
+      "bytes": 7487,
+      "sha256": "31e882d67f6140a290e7e922070c87c19010edd7befb77b8a938542256d3f795"
+    },
+    {
+      "file": "verification/ui160-ai-canvas-20261113/model/model-manual-baseline.vectorcraft",
+      "bytes": 28026,
+      "sha256": "1e7de56fb9e5dba1ba347843b29bff4a291e88ac9e1ba1b015da316c2a9be3dd"
+    },
+    {
+      "file": "verification/ui160-ai-canvas-20261113/model/model-multi-ui.png",
+      "bytes": 142544,
+      "sha256": "536b820fcdbb443b7d5d58e769c89c2edf7264fd2800e6b124a0c20e88f717b1"
+    },
+    {
+      "file": "verification/ui160-ai-canvas-20261113/model/model-primary-review.json",
+      "bytes": 1162,
+      "sha256": "e8cbf2afa37df9ac5870348b27b3d243aead746e46edf7a7744974963001e21c"
+    },
+    {
+      "file": "verification/ui160-ai-canvas-20261113/model/model-provider-prefix.ndjson",
+      "bytes": 36901,
+      "sha256": "394b719135c0b180ee1834c139fe364f8a9f7cbb89e0a7e8143a911dd3bd4a74"
+    },
+    {
+      "file": "verification/ui160-ai-canvas-20261113/model/model-reopened-final-resume.vectorcraft",
+      "bytes": 28027,
+      "sha256": "ccb522298ade7dc65e30edc47eb300db8509f8c1398ebbd0fe778fc5a9bbe7a3"
+    },
+    {
+      "file": "verification/ui160-ai-canvas-20261113/model/model-selection-reservations.json",
+      "bytes": 4820,
+      "sha256": "5713d95f1f7d6482a927351d50256abad6881670d524123e34ec7899438acee6"
+    },
+    {
+      "file": "verification/ui160-ai-canvas-20261113/model/model-selection-results-ui160.json",
+      "bytes": 4373,
+      "sha256": "86e8d7bb851b725c634092fbcf3baded7351e026d90730bcebbac2d024d5bb67"
+    },
+    {
+      "file": "verification/ui160-ai-canvas-20261113/model/model-selection-single-resume-ui160.json",
+      "bytes": 23689,
+      "sha256": "4f60fcd35aa5f8948f124a264958774b70fa72eedf788d54db6bfb9490e89143"
+    },
+    {
+      "file": "verification/ui160-ai-canvas-20261113/model/model-selection-ui160.json",
+      "bytes": 127848,
+      "sha256": "73d802391d9cc78e7eccc696e807ca18f5ecb74ea77f31c2e8c2d9d52d22c38c"
+    },
+    {
+      "file": "verification/ui160-ai-canvas-20261113/model/model-single-resume-ui.png",
+      "bytes": 146817,
+      "sha256": "ef367974d1fd7463639188b9be7c1a7a0197098b0a0cb149c30ef3ff9558717d"
+    },
+    {
+      "file": "verification/ui160-ai-canvas-20261113/model/model-single-resume.py",
+      "bytes": 10877,
+      "sha256": "506c7707cb34067e6e87650cce86794cc9dbe7c9a4045288e25e6699b4b31cf9"
+    },
+    {
+      "file": "verification/ui160-ai-canvas-20261113/model/model-test-plan.json",
+      "bytes": 739,
+      "sha256": "4bfe24045e578dbc0e7f3251d1ee1443f5d8c1ecaf9512e6a6c6d5f3afaab0a6"
+    },
+    {
+      "file": "verification/ui160-ai-canvas-20261113/native/deck-build-result.json",
+      "bytes": 17281,
+      "sha256": "1799ab6f8f05932ae59397943c486f82479848a02c382a5fbf588c7e634d6a09"
+    },
+    {
+      "file": "verification/ui160-ai-canvas-20261113/native/deck-build.log",
+      "bytes": 2009,
+      "sha256": "cf9725e65e6a7c781eb7c251ec0fb89dc38c52e2b93a3d24938a9486a5a44fbe"
+    },
+    {
+      "file": "verification/ui160-ai-canvas-20261113/native/installed-deck.json",
+      "bytes": 357,
+      "sha256": "26ad42ae96e487e2de47368e5dfb8bf4956b823b4be977d6accdbd59bf04503e"
+    },
+    {
+      "file": "verification/ui160-ai-canvas-20261113/native/installed-photo.json",
+      "bytes": 356,
+      "sha256": "8ae9a7e3833ab69430de7c029833755876eafe0c6cf7581ff8a21fe50d187f78"
+    },
+    {
+      "file": "verification/ui160-ai-canvas-20261113/native/installed-vector.json",
+      "bytes": 357,
+      "sha256": "620e0c636bd5ef68792495c341f91d0cab8099faff990311fa347bb0594a4516"
+    },
+    {
+      "file": "verification/ui160-ai-canvas-20261113/native/photo-build-result.json",
+      "bytes": 3453,
+      "sha256": "36769aebb7b2b88fc3050f781d8667abfe462568e83f89f3d16284efe46c8d04"
+    },
+    {
+      "file": "verification/ui160-ai-canvas-20261113/native/photo-build.log",
+      "bytes": 3861,
+      "sha256": "77af74d1352802c94f35069a271d618c73a61144768a7197bb649c0aee6fe41b"
+    },
+    {
+      "file": "verification/ui160-ai-canvas-20261113/native/vector-build-result.json",
+      "bytes": 7030,
+      "sha256": "423a839b6837c79aecde7f8e34776f6d680b507a9ca6e8429636bfcc62947932"
+    },
+    {
+      "file": "verification/ui160-ai-canvas-20261113/native/vector-build.log",
+      "bytes": 4239,
+      "sha256": "873d2de2d03fe1f8a31c2dfd6d42249df17e2cee7c06251d1929e79a91926232"
+    },
+    {
+      "file": "verification/ui160-ai-canvas-20261113/node/ai-canvas.tap",
+      "bytes": 3161,
+      "sha256": "3b94d22273995b04aa9c6df2bf252170528edffbbd9ea7dadc6201bd558217fe"
+    },
+    {
+      "file": "verification/ui160-ai-canvas-20261113/node/ai-canvas.test.mjs",
+      "bytes": 8189,
+      "sha256": "5099645229fcd14160ee5a953bcff8483c6158ce85728728a297cc30b9dc02cc"
+    },
+    {
+      "file": "verification/ui160-ai-canvas-20261113/photocraft/ai-canvas-ui.json",
+      "bytes": 8974,
+      "sha256": "e8690bbba051daf94a72e3a6ab77adc0c47b69e0ff388431cb6da70ac9675215"
+    },
+    {
+      "file": "verification/ui160-ai-canvas-20261113/photocraft/case.log",
+      "bytes": 128,
+      "sha256": "12cb54d288464e9d43a7ff486d23409c15f9f6d91c5aa8705e587070ecb86f5e"
+    },
+    {
+      "file": "verification/ui160-ai-canvas-20261113/photocraft/executed-test.py",
+      "bytes": 9150,
+      "sha256": "3b1f9e4a8dde9364db50297537d9531b25d949e1e22ca897659f435994b2703a"
+    },
+    {
+      "file": "verification/ui160-ai-canvas-20261113/photocraft/photocraft-advanced.png",
+      "bytes": 164572,
+      "sha256": "3909aefd4926c2d8a83cc777b21d1c81f5c39d7b5a0c37f7034ecd13ba5d5a63"
+    },
+    {
+      "file": "verification/ui160-ai-canvas-20261113/photocraft/photocraft-ai.png",
+      "bytes": 80298,
+      "sha256": "56a0da6469bc71502f536cd10625580cb9261488dd13f8ad4e1978da521e1214"
+    },
+    {
+      "file": "verification/ui160-ai-canvas-20261113/photocraft/photocraft-region.png",
+      "bytes": 82359,
+      "sha256": "7800825b043cc5f732f105c83cec26d9f6e50f0106eacd8ac208dcce829db0d7"
+    },
+    {
+      "file": "verification/ui160-ai-canvas-20261113/prior-failures/admission-attempt1.json",
+      "bytes": 1137,
+      "sha256": "d7b27727b12ad4b79a22b4db3e00246766d918b90afb5bf147eed3a3d4efc02c"
+    },
+    {
+      "file": "verification/ui160-ai-canvas-20261113/prior-failures/deckcraft-attempt1.json",
+      "bytes": 5430,
+      "sha256": "fce6b9b3f53382a73556e6ff1999fed4fd2d976c09208e776d595672feacc1db"
+    },
+    {
+      "file": "verification/ui160-ai-canvas-20261113/prior-failures/deckcraft-attempt2.json",
+      "bytes": 7187,
+      "sha256": "eecfff4eca25db53cc4e21957f5b6e16a8aafacb1d07705c2584ccb08bc65a85"
+    },
+    {
+      "file": "verification/ui160-ai-canvas-20261113/prior-failures/photocraft-attempt1.json",
+      "bytes": 14764,
+      "sha256": "dac1c8d76751add08269cc9379245559f4ba64c85523c91c1fd0c410d356efdc"
+    },
+    {
+      "file": "verification/ui160-ai-canvas-20261113/review/deck-build-interrupted-for-context-fix.json",
+      "bytes": 17745,
+      "sha256": "371c88c029ee0075859e3aa246ff83e4fe61a156620af81eb46444f7fef4dbd9"
+    },
+    {
+      "file": "verification/ui160-ai-canvas-20261113/review/deck-refinement-source.json",
+      "bytes": 940,
+      "sha256": "8a6bb36544071165d34d94d824d4ce0f9801b3490b813e33fcc3ac1d99fe4448"
+    },
+    {
+      "file": "verification/ui160-ai-canvas-20261113/review/photo-native-chrome-refinement.json",
+      "bytes": 805,
+      "sha256": "e8724f6dc1ebd7bcfc96f4b2e03193c3a75b6a1175db1a1b4d753cce62aca832"
+    },
+    {
+      "file": "verification/ui160-ai-canvas-20261113/review/photo-source-review.json",
+      "bytes": 4619,
+      "sha256": "d4845b2b9cfa29948def9f40f810c091d9c35fdbff23a0a0b312a8e3551f965d"
+    },
+    {
+      "file": "verification/ui160-ai-canvas-20261113/review/reference-review.json",
+      "bytes": 3118,
+      "sha256": "52e12e6e65b92bd6a38e8d7d2a972d4beaee98dbfc1030f34b69db229fa18afa"
+    },
+    {
+      "file": "verification/ui160-ai-canvas-20261113/review/reference-sdk-audit.json",
+      "bytes": 1884,
+      "sha256": "8e70d69b60f3cb8e8c6e40c9ad5ff7c6643dd659d3db5bb8dd2d9191fbc395b9"
+    },
+    {
+      "file": "verification/ui160-ai-canvas-20261113/review/single-agent-model-handoff.json",
+      "bytes": 484,
+      "sha256": "c23dfdf672ed62e088050a0e0a58dd4332f158fac80c8bd2e315c03f0c189b2d"
+    },
+    {
+      "file": "verification/ui160-ai-canvas-20261113/review/vector-floating-toolbar-refinement.json",
+      "bytes": 741,
+      "sha256": "a9d50a1529a55798269c3c9cee7f4a8a65b4c2ce9542e818bb729582eaf98398"
+    },
+    {
+      "file": "verification/ui160-ai-canvas-20261113/vectorcraft/ai-canvas-ui.json",
+      "bytes": 1751,
+      "sha256": "71fb1bfb2d0fcf2b12ec0c32449a8aa4af29723a5cdff973df160e3511723d46"
+    },
+    {
+      "file": "verification/ui160-ai-canvas-20261113/vectorcraft/case.log",
+      "bytes": 130,
+      "sha256": "78813ec711503d4645b04814142b814e60e707653d1e64ba6074b3e2093f0058"
+    },
+    {
+      "file": "verification/ui160-ai-canvas-20261113/vectorcraft/executed-test.py",
+      "bytes": 7643,
+      "sha256": "392a5bd6d1e89d1acc799f93c52a5b52f32a47b12cd8ddadd179158fce01f73b"
+    },
+    {
+      "file": "verification/ui160-ai-canvas-20261113/vectorcraft/vectorcraft-advanced.png",
+      "bytes": 159921,
+      "sha256": "ddfb8a008dce740225bd038d9bb1f915ad580186002c3ec5340d453dc3e107cc"
+    },
+    {
+      "file": "verification/ui160-ai-canvas-20261113/vectorcraft/vectorcraft-ai.png",
+      "bytes": 91231,
+      "sha256": "10460411ca4f916f25d06feb3b5d3543e546464f39949966bb22206dbdf938ed"
+    }
+  ]
+}

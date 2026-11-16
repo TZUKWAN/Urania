@@ -1,0 +1,37 @@
+{
+  "status": "genuine_hash_verified_fonts",
+  "sourceRevision": "aced4137c022f1f587624d48e81ec77e1914a9cc",
+  "wasmEmbeddedFamilies": [
+    "Inter Regular",
+    "Inter Bold",
+    "BIZ UDPGothic Regular"
+  ],
+  "runtimeFaces": [
+    {
+      "family": "LXGW WenKai Lite",
+      "style": "Regular",
+      "file": "fonts/lxgw-wenkai-lite/LXGWWenKaiLite-Regular.ttf",
+      "sha256": "f799a538a3355877e597a0ae04050e897932c9ae7689eb9227c2953c5dd549ea",
+      "bytes": 13949472,
+      "license": "OFL-1.1",
+      "licenseFile": "fonts/lxgw-wenkai-lite/OFL.txt",
+      "licenseSha256": "0333a85fe077b6849f8e417acc44e8bd879442ceb681e271acf93e2d57fd4e2e",
+      "origin": "https://github.com/lxgw/LxgwWenKai-Lite/releases/tag/v1.530"
+    }
+  ],
+  "licenses": [
+    {
+      "file": "fonts/biz-ud-pgothic/OFL.txt",
+      "sha256": "e753d7155d53c747d037a445e584c8ecfca6dd79846db610417e282a736b28bc"
+    },
+    {
+      "file": "fonts/inter/OFL.txt",
+      "sha256": "262481e844521b326f5ecd053e59b98c8b2da78c8ee1bdbb6e8174305e54935a"
+    },
+    {
+      "file": "fonts/lxgw-wenkai-lite/OFL.txt",
+      "sha256": "0333a85fe077b6849f8e417acc44e8bd879442ceb681e271acf93e2d57fd4e2e"
+    }
+  ],
+  "nativeOnlyManifestEnteredWasmAllowlist": false
+}

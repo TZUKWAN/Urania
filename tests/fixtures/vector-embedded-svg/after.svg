@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="640" height="480" viewBox="0 0 640 480">
+  <defs>
+    <clipPath id="clip-path-1">
+      <path d="M350 60 L590 60 L590 240 L350 240 Z"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <path d="M387.5 78 L552.5 78 C559.956 78 566 84.044 566 91.5 L566 208.5 C566 215.956 559.956 222 552.5 222 L387.5 222 C380.044 222 374 215.956 374 208.5 L374 91.5 C374 84.044 380.044 78 387.5 78 Z"/>
+    </clipPath>
+    <linearGradient id="linear-gradient-1" x1="362" y1="69" x2="578" y2="69" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#138d87"/>
+      <stop offset="1" stop-color="#ec8b3d"/>
+    </linearGradient>
+    <clipPath id="clip-path-3">
+      <path d="M20 60 L220 60 L220 210 L20 210 Z"/>
+    </clipPath>
+    <clipPath id="clip-path-4">
+      <path d="M300 95 L61.324 2.426 L-51.5 293.313 L187.176 385.886 Z"/>
+    </clipPath>
+    <clipPath id="clip-path-5">
+      <path d="M251.425 109.624 L87.335 45.98 C79.92 43.104 70.121 50.54 65.448 62.589 L-7.888 251.665 C-12.561 263.714 -10.339 275.813 -2.924 278.689 L161.165 342.333 C168.58 345.209 178.379 337.773 183.053 325.724 L256.388 136.648 C261.062 124.599 258.839 112.5 251.425 109.624 Z"/>
+    </clipPath>
+    <linearGradient id="linear-gradient-2" x1="282.425" y1="104.916" x2="67.617" y2="21.599" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#138d87"/>
+      <stop offset="1" stop-color="#ec8b3d"/>
+    </linearGradient>
+  </defs>
+  <title>Untitled-1</title>
+  <g id="Layer_1" data-name="Layer 1">
+    <g>
+      <g clip-path="url(#clip-path-1)">
+        <g clip-path="url(#clip-path-2)">
+          <rect x="362" y="69" width="216" height="162" fill="url(#linear-gradient-1)"/>
+          <polygon points="386,195 446,96 506,195" fill="#ffffff" opacity="0.8"/>
+          <circle cx="522.5" cy="121.5" r="27" fill="#27445f"/>
+        </g>
+      </g>
+    </g>
+    <g>
+      <g clip-path="url(#clip-path-3)">
+        <rect x="20" y="60" width="200" height="150" fill="#ffffff"/>
+        <g opacity="0.63" style="mix-blend-mode:multiply">
+          <g clip-path="url(#clip-path-4)">
+            <g clip-path="url(#clip-path-5)">
+              <polygon points="282.425,104.916 67.617,21.599 -33.925,283.397 180.883,366.713" fill="url(#linear-gradient-2)"/>
+              <polygon points="179.581,299.279 181.965,116.148 60.243,252.992" fill="#ffffff" opacity="0.8"/>
+              <path d="M62.307 117.145 C52.96 141.243 57.405 165.441 72.234 171.192 C87.064 176.944 106.662 162.072 116.009 137.974 C125.355 113.876 120.911 89.678 106.081 83.927 C91.252 78.175 71.653 93.047 62.307 117.145 Z" fill="#27445f"/>
+            </g>
+          </g>
+        </g>
+      </g>
+      <rect x="20" y="60" width="200" height="150" fill="none" stroke="#000000" stroke-miterlimit="10"/>
+    </g>
+  </g>
+</svg>

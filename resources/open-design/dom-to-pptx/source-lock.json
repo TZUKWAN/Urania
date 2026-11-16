@@ -1,0 +1,29 @@
+{
+  "repository": "nexu-io/open-design",
+  "revision": "12d970eacc8971150e3c76470d2a9afe16dc2ed1",
+  "path": "apps/desktop/vendor/dom-to-pptx",
+  "upstreamVersion": "2.0.1",
+  "license": "MIT",
+  "files": [
+    {
+      "name": "LICENSE",
+      "bytes": 1110,
+      "gitSha1": "8669f6f34fd8abd618d7af756787e52397918c74",
+      "sha256": "03e47f0d43133a09b8e91ca80eeb50fd8cd94620cf1f59712163909b0ec9b182"
+    },
+    {
+      "name": "README.md",
+      "bytes": 1623,
+      "gitSha1": "7d44330a085c5b415e25cef55f2763da7558305b",
+      "sha256": "6420642a11affcf9cd3dbca1e0433b540c8909e66238f3a46b3ac3be98d40cec"
+    },
+    {
+      "name": "dom-to-pptx.bundle.js.gz",
+      "bytes": 1008075,
+      "gitSha1": "43f7b7e16e9f1bf52f54d8bf522e9e0805a54d14",
+      "sha256": "87f6ba93e4f833e0e9a44e80f313d10c20bea6b165b2949f3aeb62be5ee1cb8c",
+      "expandedBytes": 3802497,
+      "expandedSha256": "0308535fd30c30fe78df78ed7d45f2d24e7393285bf09acbb2090189b4d50558"
+    }
+  ]
+}

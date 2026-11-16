@@ -1,0 +1,6 @@
+{
+  "status": "passed",
+  "scope": "actual adopter rejects the old build for newly changed source before copying runtime files",
+  "runtimeFilesUnchanged": true,
+  "observedRejection": "Source differs from the actually completed build"
+}

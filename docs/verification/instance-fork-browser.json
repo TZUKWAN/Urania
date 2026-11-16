@@ -1,0 +1,86 @@
+{
+  "status": "passed",
+  "scope": "real DSH tools and UI; native historical Photo source fork, two real Deck pictures, physical edit, same-App return, durable edit resume; apply is a separate gate",
+  "root": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\instance-fork-project\\c875c391-c985-4416-b9c7-1f0db54318a9",
+  "codeRoot": "D:\\METIS超级合并\\dsh-plugin\\designcraft",
+  "checks": [
+    {
+      "name": "UI instance edit forks the exact bound historical Photo source while newer original and both native placements remain",
+      "pass": true,
+      "detail": {
+        "forkSourceId": "fork-8f11c301-6082-4014-92ed-cfd8a93b6f6d",
+        "exactBoundSourceHash": "fe4293a7bddbb27a13e3d8057351e8bb9599cea7b4dde8e8cfb3145df707afc3",
+        "boundRevision": "5ff7bd63e304e9883074b266b8f4ad60c7ae7f4fa75d48fe7111b468e1167785",
+        "originalNewerRevision": "f2614fc6c37c84c6f29f3dbfb8d3d496cf76923bd1a20ee6fccfc42b312eeeaa",
+        "nativeUses": [
+          "261",
+          "262"
+        ]
+      }
+    },
+    {
+      "name": "physical edit changes only independent native fork; return preserves exact two-picture Deck presentation and original live App",
+      "pass": true,
+      "detail": {
+        "sameParentApp": true,
+        "exactDeckPreserved": true,
+        "originalSourceUnchanged": true,
+        "editedForkRevision": "41036242f98f2fb13388bbbfc76ab0619fdc9db9693bed3a064b72cb5d010eff"
+      }
+    },
+    {
+      "name": "persisted edit intent resumes the same edited native fork without another fork or extra placement",
+      "pass": true,
+      "detail": {
+        "sameFork": "fork-8f11c301-6082-4014-92ed-cfd8a93b6f6d",
+        "editCount": 1,
+        "useCount": 2
+      }
+    }
+  ],
+  "owned": {
+    "workspaceId": "eac067d5-5142-42e6-9d9a-787b212ce242",
+    "sessionId": "PUBLIC-REDACTED"
+  },
+  "asset": {
+    "id": "asset-241c5f97-995d-4634-ba4d-7081241f51ce",
+    "title": "两个使用处",
+    "sourceId": "work-7943ae07-8974-46aa-881e-82fb42e5152b",
+    "sourceRevision": "5ff7bd63e304e9883074b266b8f4ad60c7ae7f4fa75d48fe7111b468e1167785",
+    "sourceHash": "fe4293a7bddbb27a13e3d8057351e8bb9599cea7b4dde8e8cfb3145df707afc3",
+    "engine": "photocraft",
+    "format": "png",
+    "sha256": "da14a16eabd798696c26494162a6d9e153e71e55946378a207973b7171648351",
+    "bytes": 3558,
+    "at": "2026-11-04T20:35:20.106Z"
+  },
+  "instance": {
+    "id": "use-dbec98be-f20d-45a9-98ca-d33d47070da4",
+    "assetId": "asset-241c5f97-995d-4634-ba4d-7081241f51ce",
+    "sourceId": "work-b383e3d8-843d-411e-b93b-84570dca16bb",
+    "nativeId": "261",
+    "boundAtRevision": "994b38487a4e20e5327eaeeb316c130efd26ee3f3a3717c55148d21e1325265d",
+    "nativeNodeHash": "779c4f00d41c31ab581c8662a6705e42df2fbef789d09c77b065f80906f648a8",
+    "nativePage": {
+      "kind": "slide",
+      "id": 257,
+      "index": 0
+    },
+    "at": "2026-11-04T20:35:27.275Z",
+    "status": "present",
+    "currentSourceRevision": "8964c27e7b295a326a24db16c79384ec16201b22f9056e8bf09a469f40c8e700",
+    "nativeObject": {
+      "id": 261,
+      "name": "Picture 3",
+      "kind": "picture",
+      "page": {
+        "kind": "slide",
+        "id": 257,
+        "index": 0
+      }
+    },
+    "changedSincePlacement": false
+  },
+  "forkSourceId": "fork-8f11c301-6082-4014-92ed-cfd8a93b6f6d",
+  "pageErrors": []
+}

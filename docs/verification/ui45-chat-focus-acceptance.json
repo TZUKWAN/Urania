@@ -1,0 +1,24 @@
+{
+  "status": "passed_scoped",
+  "at": "2026-11-08T08:59:42.525370+00:00",
+  "scope": "Actual DSH composer and Vector canvas in an owned headless browser; current Chinese composition in a never-shown same-version Electron host.",
+  "checks": [
+    "Typing and deleting text in chat left the selected native object and revision unchanged.",
+    "Trusted browser composition blocked intermediate save and committed Chinese native text; Chinese chat composition did not alter the canvas.",
+    "Real stop status is reported according to execution and durable checkpoint."
+  ],
+  "rawEvidence": [
+    {
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-electron-ime.json",
+      "sha256": "ad4ffe2cc2b6d07596a627635148024a6b77abafab48652b30c389516dea8540"
+    },
+    {
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-chat-focus-delete.json",
+      "sha256": "376fa6571f280923763d26a775dc487e7b9c4d6fe6d84d08aaf7869d8a3098e8"
+    }
+  ],
+  "limits": [
+    "The operating system IME candidate window and full packaged desktop IPC were not tested.",
+    "The real input samples used Vector and the owned test process; they do not prove every shortcut in every upstream editor."
+  ]
+}

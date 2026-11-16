@@ -1,0 +1,159 @@
+{
+  "status": "passed",
+  "scope": "one actual configured kimi-for-coding native DSH turn, real Deck quote and registered tool events, physical edits on both sides; no regenerated presentation or substituted response",
+  "codeRoot": "D:\\METIS超级合并\\dsh-plugin\\designcraft",
+  "checks": [
+    {
+      "name": "physical move creates an actual new saved native placement before Kimi",
+      "pass": true,
+      "detail": {
+        "shapeId": 260,
+        "xBefore": 106.0,
+        "xManual": 112.0
+      }
+    },
+    {
+      "name": "native DSH send submits a genuine slide/shape reference to existing Kimi",
+      "pass": true,
+      "detail": {
+        "effectiveModel": "选择模型，当前 kimi-for-coding，推理等级 Default",
+        "nativePage": {
+          "height": 540,
+          "nativePage": {
+            "id": 257,
+            "index": 0,
+            "kind": "slide"
+          },
+          "target": {
+            "kind": "slides"
+          },
+          "width": 960
+        },
+        "shapeId": 260
+      }
+    },
+    {
+      "name": "actual Kimi changes only target fill in the same native App and every other presentation field remains exact",
+      "pass": true,
+      "detail": {
+        "sameApp": true,
+        "allOtherFieldsPreserved": true,
+        "manualXRetained": 112.0,
+        "actualModel": {
+          "lastUsed": {
+            "provider": "kimi-coding",
+            "model": "kimi-for-coding"
+          },
+          "next": {
+            "provider": "kimi-coding",
+            "model": "kimi-for-coding"
+          }
+        }
+      }
+    },
+    {
+      "name": "physical continuation after Kimi and fresh source reopen keep AI fill and native presentation structure",
+      "pass": true,
+      "detail": {
+        "samePresentation": true,
+        "sourceRevision": "018afa6531e9ff97cc78fc43fffb4df0eb140c1861eaa440e4f77a209b757b67"
+      }
+    }
+  ],
+  "startedAt": "2026-11-04T19:09:22.706581+00:00",
+  "owned": {
+    "sessionId": "PUBLIC-REDACTED"
+  },
+  "sentAt": "2026-11-04T19:09:30.070244+00:00",
+  "actualModel": {
+    "lastUsed": {
+      "provider": "kimi-coding",
+      "model": "kimi-for-coding"
+    },
+    "next": {
+      "provider": "kimi-coding",
+      "model": "kimi-for-coding"
+    }
+  },
+  "actualToolReceipts": {
+    "ok": true,
+    "events": [
+      {
+        "seq": 23,
+        "time": 1793819379822,
+        "type": "tool/call",
+        "data": {
+          "turn": 1,
+          "step": 2,
+          "callId": "tool_Oqs0b7QTgP62cUleSggkizvw",
+          "name": "designcraft_editor",
+          "arguments": "{\"action\":\"state\"}"
+        }
+      },
+      {
+        "seq": 24,
+        "time": 1793819379853,
+        "type": "tool/result",
+        "data": {
+          "turn": 1,
+          "step": 2,
+          "message": {
+            "role": "tool",
+            "source": {
+              "kind": "tool",
+              "callId": "tool_Oqs0b7QTgP62cUleSggkizvw"
+            },
+            "toolCallId": "tool_Oqs0b7QTgP62cUleSggkizvw",
+            "content": [
+              {
+                "type": "text",
+                "text": "{\"ok\":true,\"live\":true,\"engines\":{\"vectorcraft\":{\"engine\":\"vectorcraft\",\"runtime\":\"vectorcraft-host\",\"extension\":\"vectorcraft\",\"sourceFormat\":\"vectorcraft\",\"exportFormats\":[\"vectorcraft\",\"svg\",\"png\"],\"createDefaults\":{\"width\":1280,\"height\":720,\"units\":\"Pixels\"},\"apiName\":\"vectorcraft\",\"contextProtocol\":2,\"identityEncoding\":\"uint64-json-decimal\",\"selectionKind\":\"vectorcraft\"},\"photocraft\":{\"engine\":\"photocraft\",\"runtime\":\"photocraft-host\",\"extension\":\"pcraft\",\"sourceFormat\":\"pcraft\",\"exportFormats\":[\"pcraft\",\"png\"],\"createDefaults\":{\"width\":1024,\"height\":1024,\"mode\":\"rgb\",\"depth\":8,\"background\":\"transparent\"},\"apiName\":\"photocraft\",\"contextProtocol\":2,\"identityEncoding\":\"uint64-json-decimal\",\"identityKind\":\"native-active-document-generation\",\"selectionKind\":\"photocraft\"},\"deckcraft\":{\"engine\":\"deckcraft\",\"runtime\":\"deckcraft-host\",\"extension\":\"deckcraft\",\"sourceFormat\":\"deckcraft\",\"exportFormats\":[\"deckcraft\",\"pptx\",\"png\"],\"createDefaults\":{\"width\":960,\"height\":540},\"apiName\":\"deckcraft\",\"contextProtocol\":2,\"identityEncoding\":\"uint64-json-decimal\",\"identityKind\":\"native-document-instance-uid\",\"selectionKind\":\"deckcraft\",\"objectIdBits\":32}},\"contextProtocol\":2,\"executionAdmission\":true,\"historyPolicy\":{\"action\":\"undo\",\"target\":\"payload.jobId from an undoAvailable recentJob\",\"scope\":\"one proven latest native step in the same live App; no later content edits; older/multi-step/sliced history fails closed\"},\"view\":{\"sourceId\":\"work-9404f295-d3f2-4789-8108-cf37c252a664\",\"epoch\":\"4b08564e-160c-4fa3-9b27-b6268db94471\",\"ready\":true,\"nativeResponsive\":true,\"sourceRevision\":\"949f058f35f66cadd5438db7ba4283de1837bf83c55b757ce5b41d5eb536c207\",\"document\":{\"contextProtocol\":2,\"contextSequence\":21,\"coordinateSpace\":\"page-points\",\"dirty\":false,\"engine\":\"deckcraft\",\"height\":540,\"history\":[\"Move\"],\"identityKind\":\"native-document-instance-uid\",\"layers\":[{\"hidden\":false,\"id\":258,\"kind\":\"placeholder\",\"localTransform\":null,\"name\":\"Title 1\",\"textLength\":0,\"textPreview\":\"\"},{\"hidden\":false,\"id\":259,\"kind\":\"placeholder\",\"localTransform\":null,\"name\":\"Subtitle 2\",\"textLength\":0,\"textPreview\":\"\"},{\"hidden\":false,\"id\":260,\"kind\":\"shape\",\"localTransform\":{\"h\":100,\"w\":240,\"x\":112,\"y\":100},\"name\":\"Rectangle 3\",\"textLength\":0,\"textPreview\":\"\"}],\"nativeSelection\":{\"data\":{\"selection\":{\"cells\":null,\"shapes\":[260],\"slide\":0,\"slides\":[],\"target\":{\"kind\":\"slides\"},\"text\":null}},\"kind\":\"deckcraft\"},\"objectIds\":[260],\"openWarnings\":[],\"page\":{\"height\":540,\"nativePage\":{\"id\":257,\"index\":0,\"kind\":\"slide\"},\"target\":{\"kind\":\"slides\"},\"width\":960},\"pendingInteraction\":false,\"redo\":[],\"revision\":3,\"selectionStamp\":\"{\\\"page\\\":{\\\"height\\\":540.0,\\\"nativePage\\\":{\\\"id\\\":257,\\\"index\\\":0,\\\"kind\\\":\\\"slide\\\"},\\\"target\\\":{\\\"kind\\\":\\\"slides\\\"},\\\"width\\\":960.0},\\\"selection\\\":{\\\"cells\\\":null,\\\"shapes\\\":[260],\\\"slide\\\":0,\\\"slides\\\":[],\\\"target\\\":{\\\"kind\\\":\\\"slides\\\"},\\\"text\\\":null},\\\"tool\\\":{\\\"editPoints\\\":null,\\\"editSegment\\\":null,\\\"editSegmentT\\\":null,\\\"editVertex\\\":null,\\\"formatTab\\\":\\\"fill\\\",\\\"kind\\\":{\\\"kind\\\":\\\"select\\\"},\\\"notes\\\":true,\\\"smartartRow\\\":0,\\\"sticky\\\":false,\\\"vertexKind\\\":null,\\\"view\\\":\\\"normal\\\"}}\",\"slideCount\":2,\"slides\":[{\"hidden\":false,\"id\":257,\"index\":0,\"title\":\"\"},{\"hidden\":false,\"id\":261,\"index\":1,\"title\":\"\"}],\"summaryLimited\":false,\"title\":\"未命名演示\",\"toolContext\":{\"editPoints\":null,\"editSegment\":null,\"editSegmentT\":null,\"editVertex\":null,\"formatTab\":\"fill\",\"kind\":{\"kind\":\"select\"},\"notes\":true,\"smartartRow\":0,\"sticky\":false,\"vertexKind\":null,\"view\":\"normal\"},\"uid\":8956647707770880,\"width\":960},\"engine\":\"deckcraft\",\"engineContract\":{\"engine\":\"deckcraft\",\"runtime\":\"deckcraft-host\",\"extension\":\"deckcraft\",\"sourceFormat\":\"deckcraft\",\"exportFormats\":[\"deckcraft\",\"pptx\",\"png\"],\"createDefaults\":{\"width\":960,\"height\":540},\"apiName\":\"deckcraft\",\"contextProtocol\":2,\"identityEncoding\":\"uint64-json-decimal\",\"identityKind\":\"native-document-instance-uid\",\"selectionKind\":\"deckcraft\",\"objectIdBits\":32},\"editorProtocol\":2,\"requiresReload\":false,\"navigation\":null,\"base\":{\"uid\":8956647707770880,\"revision\":3,\"engine\":\"deckcraft\",\"selectionStamp\":\"{\\\"page\\\":{\\\"height\\\":540.0,\\\"nativePage\\\":{\\\"id\\\":257,\\\"index\\\":0,\\\"kind\\\":\\\"slide\\\"},\\\"target\\\":{\\\"kind\\\":\\\"slides\\\"},\\\"width\\\":960.0},\\\"selection\\\":{\\\"cells\\\":null,\\\"shapes\\\":[260],\\\"slide\\\":0,\\\"slides\\\":[],\\\"target\\\":{\\\"kind\\\":\\\"slides\\\"},\\\"text\\\":null},\\\"tool\\\":{\\\"editPoints\\\":null,\\\"editSegment\\\":null,\\\"editSegmentT\\\":null,\\\"editVertex\\\":null,\\\"formatTab\\\":\\\"fill\\\",\\\"kind\\\":{\\\"kind\\\":\\\"select\\\"},\\\"notes\\\":true,\\\"smartartRow\\\":0,\\\"sticky\\\":false,\\\"vertexKind\\\":null,\\\"view\\\":\\\"normal\\\"}}\"},\"idArguments\":[{\"id\":260,\"argument\":{\"$u64\":\"260\"}}]},\"sources\":[{\"schema\":1,\"id\":\"work-9404f295-d3f2-4789-8108-cf37c252a664\",\"engine\":\"deckcraft\",\"title\":\"未命名演示\",\"sourceHash\":\"541ecfc3c88f7c65ee90ee893e5f2a027f9f974fb95652f7baae1511046409ce\",\"bytes\":4736,\"parentRevision\":\"82d4b27607f5c903a66e10cadb4944f81258c1f5e5f155eae548bd9ac3a196ef\",\"engineState\":{\"uid\":8956647707770880,\"revision\":3},\"actor\":\"manual\",\"at\":\"2026-11-04T19:09:28.877Z\",\"revision\":\"949f058f35f66cadd5438db7ba4283de1837bf83c55b757ce5b41d5eb536c207\"}],\"recentJobs\":[{\"id\":\"23cf03e1-60c1-47a4-8b4e-c20bbe161c16\",\"action\":\"execute\",\"command\":\"shape.insert\",\"sourceId\":\"work-9404f295-d3f2-4789-8108-cf37c252a664\",\"status\":\"succeeded\",\"error\":null,\"cancelRequested\":false,\"executionStarted\":true,\"appliedAfterCancel\":false,\"undoAvailable\":false,\"undoneBy\":null,\"undoOf\":null},{\"id\":\"c1320598-de02-4a59-bd36-fc43b7b56995\",\"action\":\"execute\",\"command\":\"shape.fill\",\"sourceId\":\"work-9404f295-d3f2-4789-8108-cf37c252a664\",\"status\":\"succeeded\",\"error\":null,\"cancelRequested\":false,\"executionStarted\":true,\"appliedAfterCancel\":false,\"undoAvailable\":false,\"undoneBy\":null,\"undoOf\":null},{\"id\":\"4a501e50-25f5-4f8c-99e6-132ba26232a0\",\"action\":\"execute\",\"command\":\"slide.new\",\"sourceId\":\"work-9404f295-d3f2-4789-8108-cf37c252a664\",\"status\":\"succeeded\",\"error\":null,\"cancelRequested\":false,\"executionStarted\":true,\"appliedAfterCancel\":false,\"undoAvailable\":false,\"undoneBy\":null,\"undoOf\":null}]}"
+              }
+            ],
+            "isError": false,
+            "id": "31476a0a-b035-4885-a3a7-664ef0599d8a"
+          }
+        }
+      },
+      {
+        "seq": 28,
+        "time": 1793819387143,
+        "type": "tool/call",
+        "data": {
+          "turn": 1,
+          "step": 3,
+          "callId": "tool_A9TzqomQPI4eKYatPygfnVmD",
+          "name": "designcraft_editor",
+          "arguments": "{\"action\":\"execute\",\"sourceId\":\"work-9404f295-d3f2-4789-8108-cf37c252a664\",\"epoch\":\"4b08564e-160c-4fa3-9b27-b6268db94471\",\"base\":{\"uid\":8956647707770880,\"revision\":3,\"engine\":\"deckcraft\",\"selectionStamp\":\"{\\\"page\\\":{\\\"height\\\":540.0,\\\"nativePage\\\":{\\\"id\\\":257,\\\"index\\\":0,\\\"kind\\\":\\\"slide\\\"},\\\"target\\\":{\\\"kind\\\":\\\"slides\\\"},\\\"width\\\":960.0},\\\"selection\\\":{\\\"cells\\\":null,\\\"shapes\\\":[260],\\\"slide\\\":0,\\\"slides\\\":[],\\\"target\\\":{\\\"kind\\\":\\\"slides\\\"},\\\"text\\\":null},\\\"tool\\\":{\\\"editPoints\\\":null,\\\"editSegment\\\":null,\\\"editSegmentT\\\":null,\\\"editVertex\\\":null,\\\"formatTab\\\":\\\"fill\\\",\\\"kind\\\":{\\\"kind\\\":\\\"select\\\"},\\\"notes\\\":true,\\\"smartartRow\\\":0,\\\"sticky\\\":false,\\\"vertexKind\\\":null,\\\"view\\\":\\\"normal\\\"}}\"},\"payload\":{\"command\":\"shape.fill\",\"params\":{\"ids\":[260],\"color\":\"#006e55\"}}}"
+        }
+      },
+      {
+        "seq": 29,
+        "time": 1793819387962,
+        "type": "tool/result",
+        "data": {
+          "turn": 1,
+          "step": 3,
+          "message": {
+            "role": "tool",
+            "source": {
+              "kind": "tool",
+              "callId": "tool_A9TzqomQPI4eKYatPygfnVmD"
+            },
+            "toolCallId": "tool_A9TzqomQPI4eKYatPygfnVmD",
+            "content": [
+              {
+                "type": "text",
+                "text": "{\"ok\":true,\"jobId\":\"0c3f4861-ea73-4fac-97c8-141aa0d01d39\",\"sourceId\":\"work-9404f295-d3f2-4789-8108-cf37c252a664\",\"epoch\":\"4b08564e-160c-4fa3-9b27-b6268db94471\",\"sourceRevision\":\"677f33f1990d03348f2e15244be9333e9175634aa3872701d1c8f7872cba6594\",\"document\":{\"contextProtocol\":2,\"contextSequence\":70,\"coordinateSpace\":\"page-points\",\"dirty\":false,\"engine\":\"deckcraft\",\"height\":540,\"history\":[\"Move\",\"Shape Fill\"],\"identityKind\":\"native-document-instance-uid\",\"layers\":[{\"hidden\":false,\"id\":258,\"kind\":\"placeholder\",\"localTransform\":null,\"name\":\"Title 1\",\"textLength\":0,\"textPreview\":\"\"},{\"hidden\":false,\"id\":259,\"kind\":\"placeholder\",\"localTransform\":null,\"name\":\"Subtitle 2\",\"textLength\":0,\"textPreview\":\"\"},{\"hidden\":false,\"id\":260,\"kind\":\"shape\",\"localTransform\":{\"h\":100,\"w\":240,\"x\":112,\"y\":100},\"name\":\"Rectangle 3\",\"textLength\":0,\"textPreview\":\"\"}],\"nativeSelection\":{\"data\":{\"selection\":{\"cells\":null,\"shapes\":[260],\"slide\":0,\"slides\":[],\"target\":{\"kind\":\"slides\"},\"text\":null}},\"kind\":\"deckcraft\"},\"objectIds\":[260],\"openWarnings\":[],\"page\":{\"height\":540,\"nativePage\":{\"id\":257,\"index\":0,\"kind\":\"slide\"},\"target\":{\"kind\":\"slides\"},\"width\":960},\"pendingInteraction\":false,\"redo\":[],\"revision\":4,\"selectionStamp\":\"{\\\"page\\\":{\\\"height\\\":540.0,\\\"nativePage\\\":{\\\"id\\\":257,\\\"index\\\":0,\\\"kind\\\":\\\"slide\\\"},\\\"target\\\":{\\\"kind\\\":\\\"slides\\\"},\\\"width\\\":960.0},\\\"selection\\\":{\\\"cells\\\":null,\\\"shapes\\\":[260],\\\"slide\\\":0,\\\"slides\\\":[],\\\"target\\\":{\\\"kind\\\":\\\"slides\\\"},\\\"text\\\":null},\\\"tool\\\":{\\\"editPoints\\\":null,\\\"editSegment\\\":null,\\\"editSegmentT\\\":null,\\\"editVertex\\\":null,\\\"formatTab\\\":\\\"fill\\\",\\\"kind\\\":{\\\"kind\\\":\\\"select\\\"},\\\"notes\\\":true,\\\"smartartRow\\\":0,\\\"sticky\\\":false,\\\"vertexKind\\\":null,\\\"view\\\":\\\"normal\\\"}}\",\"slideCount\":2,\"slides\":[{\"hidden\":false,\"id\":257,\"index\":0,\"title\":\"\"},{\"hidden\":false,\"id\":261,\"index\":1,\"title\":\"\"}],\"summaryLimited\":false,\"title\":\"未命名演示\",\"toolContext\":{\"editPoints\":null,\"editSegment\":null,\"editSegmentT\":null,\"editVertex\":null,\"formatTab\":\"fill\",\"kind\":{\"kind\":\"select\"},\"notes\":true,\"smartartRow\":0,\"sticky\":false,\"vertexKind\":null,\"view\":\"normal\"},\"uid\":8956647707770880,\"width\":960},\"result\":{\"document\":{\"contextProtocol\":2,\"contextSequence\":67,\"coordinateSpace\":\"page-points\",\"dirty\":true,\"engine\":\"deckcraft\",\"height\":540,\"history\":[\"Move\",\"Shape Fill\"],\"identityKind\":\"native-document-instance-uid\",\"layers\":[{\"hidden\":false,\"id\":258,\"kind\":\"placeholder\",\"localTransform\":null,\"name\":\"Title 1\",\"textLength\":0,\"textPreview\":\"\"},{\"hidden\":false,\"id\":259,\"kind\":\"placeholder\",\"localTransform\":null,\"name\":\"Subtitle 2\",\"textLength\":0,\"textPreview\":\"\"},{\"hidden\":false,\"id\":260,\"kind\":\"shape\",\"localTransform\":{\"h\":100,\"w\":240,\"x\":112,\"y\":100},\"name\":\"Rectangle 3\",\"textLength\":0,\"textPreview\":\"\"}],\"nativeSelection\":{\"data\":{\"selection\":{\"cells\":null,\"shapes\":[260],\"slide\":0,\"slides\":[],\"target\":{\"kind\":\"slides\"},\"text\":null}},\"kind\":\"deckcraft\"},\"objectIds\":[260],\"openWarnings\":[],\"page\":{\"height\":540,\"nativePage\":{\"id\":257,\"index\":0,\"kind\":\"slide\"},\"target\":{\"kind\":\"slides\"},\"width\":960},\"pendingInteraction\":false,\"redo\":[],\"revision\":4,\"selectionStamp\":\"{\\\"page\\\":{\\\"height\\\":540.0,\\\"nativePage\\\":{\\\"id\\\":257,\\\"index\\\":0,\\\"kind\\\":\\\"slide\\\"},\\\"target\\\":{\\\"kind\\\":\\\"slides\\\"},\\\"width\\\":960.0},\\\"selection\\\":{\\\"cells\\\":null,\\\"shapes\\\":[260],\\\"slide\\\":0,\\\"slides\\\":[],\\\"target\\\":{\\\"kind\\\":\\\"slides\\\"},\\\"text\\\":null},\\\"tool\\\":{\\\"editPoints\\\":null,\\\"editSegment\\\":null,\\\"editSegmentT\\\":null,\\\"editVertex\\\":null,\\\"formatTab\\\":\\\"fill\\\",\\\"kind\\\":{\\\"kind\\\":\\\"select\\\"},\\\"notes\\\":true,\\\"smartartRow\\\":0,\\\"sticky\\\":false,\\\"vertexKind\\\":null,\\\"view\\\":\\\"normal\\\"}}\",\"slideCount\":2,\"slides\":[{\"hidden\":false,\"id\":257,\"index\":0,\"title\":\"\"},{\"hidden\":false,\"id\":261,\"index\":1,\"title\":\"\"}],\"summaryLimited\":false,\"title\":\"未命名演示\",\"toolContext\":{\"editPoints\":null,\"editSegment\":null,\"editSegmentT\":null,\"editVertex\":null,\"formatTab\":\"fill\",\"kind\":{\"kind\":\"select\"},\"notes\":true,\"smartartRow\":0,\"sticky\":false,\"vertexKind\":null,\"view\":\"normal\"},\"uid\":8956647707770880,\"width\":960},\"value\":1},\"persisted\":true,\"checkpointEngineRevision\":4,\"currentStateSaved\":true,\"appliedAfterCancel\":false}"
+              }
+            ],
+            "isError": false,
+            "id": "da9573e2-5311-4b39-9bfa-8821dd907edf"
+          }
+        }
+      }
+    ]
+  },
+  "pageErrors": [],
+  "finishedAt": "2026-11-04T19:09:59.414836+00:00"
+}

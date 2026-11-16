@@ -1,0 +1,130 @@
+{
+  "status": "verified_scoped_opendesign_vector_route",
+  "fullGoalComplete": false,
+  "goalStatus": "cleared; ordinary full50 continuation",
+  "updatedAt": "2026-11-03T09:46:06.832398+00:00",
+  "codeRoot": "D:\\METIS超级合并\\dsh-plugin\\designcraft",
+  "diskVersion": "1.3.0-dev.9",
+  "uiBuild": 23,
+  "ownedLoadedVersionVerified": true,
+  "userLoadedVersionVerified": false,
+  "sourceRevision": "12d970eacc8971150e3c76470d2a9afe16dc2ed1",
+  "inventory": {
+    "status": "passed_inventory_only",
+    "repository": "nexu-io/open-design",
+    "revision": "12d970eacc8971150e3c76470d2a9afe16dc2ed1",
+    "sourceTreeSha256": "ae4ff9ac2dca27103a58079ab35f738664581922f718e12ed97917dd67b7782b",
+    "indexSha256": "5abab17709ba42e4813cc05906151ccd3074f636aafdc85fc63dc93817a1f1f3",
+    "indexedPackages": 928,
+    "packageKinds": {
+      "support-resource": 1,
+      "design-system": 152,
+      "design-template": 115,
+      "official-plugin": 479,
+      "community-plugin": 10,
+      "prompt-collection": 2,
+      "skill": 169
+    },
+    "indexedFiles": 7457,
+    "indexedBytes": 174811826,
+    "existingSliceFiles": 36,
+    "existingSliceMatchesOriginalBlobs": true,
+    "completePackageTreesVerified": true,
+    "implementedWorkflowCount": "not asserted",
+    "filesFetchedThisStep": 0,
+    "upstreamCodeExecuted": false
+  },
+  "actualModel": {
+    "provider": "kimi-coding",
+    "model": "kimi-for-coding"
+  },
+  "generationRequests": 1,
+  "modelConversationId": "session-PUBLIC-REDACTED",
+  "nativeManualContinuationExportChecks": 5,
+  "firstNarrationDeadline": {
+    "failedTestPreserved": true,
+    "stoppedByQa": true,
+    "nativeGenerationAndSaveActuallyCompleted": true,
+    "generationResultReusedWithoutAnotherGeneration": true
+  },
+  "resourcePolicyChecks": 3,
+  "actualRegisteredReaderChecks": 4,
+  "selectedPackageSourceChecks": 3,
+  "credentialMatches": 0,
+  "codeAudit": [
+    {
+      "file": "host/open-design-library.js",
+      "sha256": "cabe0b4cc190bac06da95bdc3bad02fd46dcd013e9f7bf8928c5725625dc77c4",
+      "syntaxExitCode": 0
+    },
+    {
+      "file": "host/open-design-tools.js",
+      "sha256": "f9dc41eacc544466bad95e2594c60b83dbe7b882202a519ab6cd1127c518120c",
+      "syntaxExitCode": 0
+    },
+    {
+      "file": "host/index.js",
+      "sha256": "46c5cee5dfb04b5ada9c98a6d073729ce0de3bab28d20630e5cac267f032b7d4",
+      "syntaxExitCode": 0
+    },
+    {
+      "file": "host/dsh-tools.js",
+      "sha256": "20ed6ff91b6cc44eaa90021e9a250d3be27dcabbf1156e1ae91647e891862608",
+      "syntaxExitCode": 0
+    }
+  ],
+  "evidence": [
+    {
+      "file": "verification/opendesign-inventory.json",
+      "sha256": "e680d1b383153192a2ee37c6fa5ee42f533ae211316ce0cf6158bdf6d57641da"
+    },
+    {
+      "file": "verification/opendesign-source-fetch.json",
+      "sha256": "5c37d153bc73cba2169203005cd71572b494906bcaa70833033085a4c3989be7"
+    },
+    {
+      "file": "verification/opendesign-registered.json",
+      "sha256": "b7951e8532bd01129b8dea590768f0d4cb2bec1a4727f1913546987713502e92"
+    },
+    {
+      "file": "verification/opendesign-library.tap",
+      "sha256": "89048ff5f26fb3b4f73060fcf92d9d8444d9739a89e5885f527a8dff888550b1"
+    },
+    {
+      "file": "verification/kimi-opendesign.json",
+      "sha256": "e2dfeae4f69e20ebb8818e4b4defafba8e733ee404e949d07fb4da5db5b92276"
+    },
+    {
+      "file": "verification/kimi-opendesign-transcript.txt",
+      "sha256": "0c8e2db80bfebbc260e38790f82ebd3ffec9eaa4657300c32799f5c0ba750a13"
+    },
+    {
+      "file": "verification/kimi-opendesign-resume.json",
+      "sha256": "10c8bb53dd35ec04d5e5e4c295eec0c9bcd601650927bf6387ad135923e4830c"
+    },
+    {
+      "file": "verification/kimi-opendesign-resume-transcript.txt",
+      "sha256": "dde51601c42c1e1e02573efe15bac305143a8294034291946dbf03bd9e35ce09"
+    },
+    {
+      "file": "verification/kimi-opendesign-export.svg",
+      "sha256": "743748136c613d0d7ca4e4fd3a05095164fa260b0b7b5c351058e69a19023d78"
+    }
+  ],
+  "boundaries": [
+    "The 928 package roots and 7457 files are a pinned SOURCE inventory including mirrors and supporting resources, not implemented features or 928 runnable skills.",
+    "Only selected real source packages have been downloaded and verified here: Corporate24 files plus two one-file entries. Other resources are bounded on-demand reads, not installed complete external bundles.",
+    "Catalogue pointers explicitly report external original bundles still missing. No upstream script, font installer, OD runtime/agent, image service or paid generation fallback was executed.",
+    "One actual Kimi SVG generation completed native creation/save, but the test stopped final narration at 300 seconds. Its exact saved source was reopened in the same DSH conversation and reused; no second generation request was made. This is a recovered workflow, not an uninterrupted first turn.",
+    "The resumed native App physically edited a title and path; the second actual Kimi turn changed only the referenced path paint. Source structures, original SVG, independent SVG decode and native export reimport passed.",
+    "This verifies one Corporate/reference-to-native-SVG route. Full OpenDesign external skills, brand/template binding, HTML preview/conversion and all font/effect semantics are not complete.",
+    "Photo/Deck persistent bridges, multi-engine exact identities, linked cross-material editing, real image/inpaint/variants, remaining exports, migration and the full 50-task acceptance remain incomplete.",
+    "Only the owned direct-D: hidden test hosts were used. User desktop/original DSH was not controlled; user-window loaded version remains unverified."
+  ],
+  "qaCorrections": [
+    "Fixed a source-download receipt helper call typo; no substituted success response.",
+    "Read the generated input from the actual create_svg operation journal, rather than an obsolete expected filename under the edited source.",
+    "Recovered the saved first source after a bounded final-narration timeout; no paid first-generation retry."
+  ],
+  "next": "D1 exact multi-engine identity/selection protocol, F1 source-instance graph, then persistent Photo/Deck bridges; full50 retained"
+}

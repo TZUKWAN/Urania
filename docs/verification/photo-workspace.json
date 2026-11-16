@@ -1,0 +1,91 @@
+{
+  "status": "passed",
+  "scope": "actual DSH native Photo UI/controller/files, physical brush, registered tools/reference/reopen and real Vector material/source return; no model",
+  "codeRoot": "D:\\METIS超级合并\\dsh-plugin\\designcraft",
+  "checks": [
+    {
+      "name": "real new-image UI creates and durably saves a native Photo pcraft source with matching exact native identity",
+      "pass": true,
+      "detail": {
+        "sourceId": "work-c341c689-f9ec-4cfd-9b75-5a30fb99c9bd",
+        "sourceRevision": "32a397a4a020d899acf9c29a09d73cbb2b3718ec987e1c53a677c5187bd39a03",
+        "nativeDocumentId": 1,
+        "nativeName": "未命名图片"
+      }
+    },
+    {
+      "name": "physical brush and actual registered DSH tool edit the same native layer and saved pixels",
+      "pass": true,
+      "detail": {
+        "realmUnchanged": true,
+        "revisionBeforeBrush": 1,
+        "nativeLayerId": 2,
+        "sourceRevision": "75051131610cc5d1d360e7d0eb2bc6aa0cde0e7b5aadb799bab98616122479e8",
+        "opacity": 0.4
+      }
+    },
+    {
+      "name": "actual DSH reference carries native layer/image-pixel/coverage identity and rejects a real later hand edit",
+      "pass": true,
+      "detail": {
+        "sourceId": "work-c341c689-f9ec-4cfd-9b75-5a30fb99c9bd",
+        "nativeLayerIds": [
+          2
+        ],
+        "coverageReference": {
+          "bounds": [
+            14,
+            14,
+            292,
+            232
+          ],
+          "channels": 1,
+          "defaultPixel": [
+            0
+          ],
+          "format": "PixelFormat { mode: Grayscale, sample: U8, alpha: false }",
+          "kind": "native-coverage-surface",
+          "nativeRole": "document.selection",
+          "revision": 5,
+          "storage": "full native surface in the pcraft source; bounds are not alpha data",
+          "tiles": 2,
+          "uid": 1
+        },
+        "refusal": "设计已变化（协议、作品、画板或原生选区），请重新引用后发送，未发送旧对象或旧预览"
+      }
+    },
+    {
+      "name": "fresh DSH Photo App reopens exact native layer/selection/name and renders the same saved image",
+      "pass": true,
+      "detail": {
+        "sourceId": "work-c341c689-f9ec-4cfd-9b75-5a30fb99c9bd",
+        "sourceRevision": "9ef63c381eb3045a9008f462ea5cb0c07b28527ffea9432cf0d531e7d8be9aa8",
+        "sameManifestDocument": true,
+        "samePixels": true,
+        "name": "未命名图片"
+      }
+    },
+    {
+      "name": "real Photo PNG material is traceable to its layered pcraft version and is actually placed in native Vector layout",
+      "pass": true,
+      "detail": {
+        "assetId": "asset-f16cdcc5-9783-49de-bfd4-8d831ff796da",
+        "photoSourceRevision": "2b0297e24fe1e2d1dca892ca068e6ccaa465a1e7fc5b64b0eca340e7d2118da8",
+        "layoutSourceId": "work-c4f4431b-6a00-4b1c-970e-564b064ed8c2",
+        "nativeInstanceId": "2",
+        "instanceStatus": "present"
+      }
+    },
+    {
+      "name": "cross-engine source navigation enters real Photo and returns to the same Vector App without overwriting layout or frozen material",
+      "pass": true,
+      "detail": {
+        "sameVectorRealm": true,
+        "layoutPreserved": true,
+        "frozenMaterialPreserved": true,
+        "automaticContentReplacementImplemented": false
+      }
+    }
+  ],
+  "pageErrors": []
+}

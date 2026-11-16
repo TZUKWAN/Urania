@@ -1,0 +1,17 @@
+{
+  "kind": "actual-recorded-GLM-open-arguments-not-live-service",
+  "arguments": [
+    {
+      "action": "open",
+      "payload": {
+        "id": "work-544618eb-833e-40df-ac3e-9e245b6bec9c"
+      }
+    },
+    {
+      "action": "open",
+      "payload": {
+        "sourceId": "work-544618eb-833e-40df-ac3e-9e245b6bec9c"
+      }
+    }
+  ]
+}

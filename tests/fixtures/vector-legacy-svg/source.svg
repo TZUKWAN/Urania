@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="640" height="480" viewBox="0 0 640 480">
+  <title>专业工具验证.svg</title>
+  <g id="Layer_1" data-name="Layer 1">
+    <rect id="alpha" x="60" y="80" width="60" height="60" fill="#287d6c"/>
+    <rect id="beta" x="220" y="200" width="80" height="70" fill="#f97316"/>
+    <rect id="gamma" x="450" y="110" width="100" height="50" fill="#2563eb"/>
+    <text id="caption" transform="matrix(1 0 0 1 40 430)" x="0" y="0" xml:space="preserve" font-family="&apos;Source Sans 3&apos;, sans-serif" font-size="28" fill="#000000"><tspan x="0" y="0">手工编辑</tspan></text>
+  </g>
+</svg>

@@ -1,0 +1,31 @@
+{
+  "status": "passed_scoped",
+  "at": "2026-11-08T08:15:32.390904+00:00",
+  "scope": "Two actual Deck host8 documents with Chinese and Latin text; font properties and source preservation, not visual glyph or external-platform fidelity.",
+  "checks": [
+    "two actual Chinese/Latin Deck sources received both font fields while layout remained unchanged",
+    "later explicit font override was preserved during subsequent brand update"
+  ],
+  "noOpSaveFix": "A new revision with identical complete source hash is treated as unchanged; a real source change remains an override.",
+  "rawEvidence": {
+    "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-brand-font.json",
+    "sha256": "4efa14586c557436f14f1d569690562479d6957c34b95b899550df47752d8140"
+  },
+  "limits": [
+    "Font names are preserved in the model; glyph availability and fallback depend on each target environment.",
+    "The Vector/Deck cross-engine sample updates native font fields; the target font is not bundled by both engines, so identical glyph rendering was not asserted."
+  ],
+  "crossEngine": {
+    "checks": [
+      "actual Vector and Deck native text font fields updated under one brand"
+    ],
+    "sourceEngines": [
+      "vectorcraft",
+      "deckcraft"
+    ],
+    "rawEvidence": {
+      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-brand-font-cross.json",
+      "sha256": "60a27a95f72268a25dd04d18e5d90214294a7838c97c5d0af3dfc30245eb7100"
+    }
+  }
+}

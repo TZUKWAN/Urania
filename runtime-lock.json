@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "engines": {
+    "photocraft": {
+      "version": "0.18.0",
+      "executable": "runtimes/photocraft/v0.18.0/photocraft-cli.exe",
+      "sha256": "4c3da089c2f262477fb8184ae89f0c282c84239ec7961e1890ce661b769f47ad",
+      "source": "https://github.com/storytold/photocraft/releases/tag/v0.18.0",
+      "archiveDigest": "sha256:2b4ff065e718fc9b44d9aee77b8215f8200c8fa962e0d9555c07dd4e987e11e9"
+    },
+    "vectorcraft": {
+      "version": "0.19.0",
+      "executable": "runtimes/vectorcraft/v0.19.0/vectorcraft-cli.exe",
+      "sha256": "755e6c0b4bea4b6be04337b29084e11776691a5d47a031d960d5543d65d33981",
+      "source": "https://github.com/storytold/vectorcraft/releases/tag/v0.19.0",
+      "archiveDigest": "sha256:6880256703f2ca7d7b807141c976441af9fbda8645eaead209712b061649b82a"
+    },
+    "deckcraft": {
+      "version": "0.13.1",
+      "executable": "runtimes/deckcraft/v0.13.1/deckcraft-cli.exe",
+      "sha256": "53146cd6dcf04df6a06847e670774aec3dfc2c9e815595faa13f5aa8620e4551",
+      "source": "https://github.com/storytold/deckcraft/releases/tag/v0.13.1",
+      "archiveDigest": "sha256:ff4e5c83767fbd5c1d73d1590de2b8e61a9951a6be226ec2a8e688c5094d9dbb"
+    }
+  },
+  "runner": {
+    "executable": "runtimes/native-runner.exe",
+    "sha256": "a7d836714369be3816dc008ee744d30893db633dd751f13c4b311fb2f86e4223",
+    "source": "runtimes/NativeRunner.cs",
+    "sourceSha256": "b0b9138027acc9184d509f6aa60ddf4d94a46df3386dc93002713244ede5b7df",
+    "memoryMiB": 1024
+  },
+  "localInputs": {
+    "deck": {
+      "executable": "runtimes/ink-recognizer.exe",
+      "sha256": "7596e605ebf2b8b5908836d2af67d937ee153c79f86304a50f013e61cec11047",
+      "source": "runtimes/ink-recognizer.cs",
+      "sourceSha256": "4bca2c34e203529e63f5ca852ef462dffe306033207e1af28d73655d217cd5d6",
+      "lock": "runtimes/ink-recognizer.lock.json",
+      "scope": "local Windows Ink text recognition only",
+      "userInitiatedOnly": true,
+      "functionalValidation": false
+    }
+  }
+}

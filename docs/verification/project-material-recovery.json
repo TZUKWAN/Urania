@@ -1,0 +1,39 @@
+{
+  "status": "passed",
+  "scope": "actual source-based recovery after owned backend restart and deliberately absent operation journal; physical repair UI and registered DSH tool; no placement replay/model",
+  "codeRoot": "D:\\METIS超级合并\\dsh-plugin\\designcraft",
+  "checks": [
+    {
+      "name": "restarted backend discovers the saved native placement directly from its atomic source receipt despite a missing operation journal",
+      "pass": true,
+      "detail": {
+        "jobId": "d502bad9-53cd-4c28-b378-814ef33f3804",
+        "projectId": "project-82bc1d2f-2e73-40e3-97bd-b8270bf26927",
+        "sourceHash": "7d12287434e94cc3eb9400f1bb93667a069016fe107f7414b6ad3d5045b20349",
+        "backendRestartVerified": true,
+        "journalMissing": true
+      }
+    },
+    {
+      "name": "physical repair registers the existing exact native object without repeating placement or changing layout source bytes",
+      "pass": true,
+      "detail": {
+        "instanceId": "use-d502bad9-53cd-4c28-b378-814ef33f3804",
+        "nativeId": "12",
+        "boundAtRevision": "65229e7b6d9e4fde8b85a143128edccb73956340ae49a310fac23e45e0058560",
+        "sourceHashUnchanged": true,
+        "nativeRevisionUnchanged": true
+      }
+    },
+    {
+      "name": "repaired operation and project relations are durable and a second actual repair is idempotent",
+      "pass": true,
+      "detail": {
+        "journal": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\project-materials-project\\127ba827-4afb-45aa-9181-3be597c94576\\design\\.designcraft\\v2\\operations\\d502bad9-53cd-4c28-b378-814ef33f3804.json",
+        "instanceCount": 3,
+        "reused": true
+      }
+    }
+  ],
+  "pageErrors": []
+}

@@ -1,0 +1,128 @@
+{
+  "schema": 1,
+  "objective": "Complete the approved unified DSH plugin, first D1/F1 foundations, then persistent PhotoCraft/DeckCraft and all remaining original50 tasks; direct running package only, no user desktop control",
+  "fullScopeComplete": false,
+  "productRoot": "D:/METIS超级合并/dsh-plugin/designcraft",
+  "baseline": {
+    "version": "1.3.0-dev.9",
+    "uiBuild": 23,
+    "vectorHost": "0.19.0+designcraft.host4"
+  },
+  "technicalRoute": [
+    "Expose a bounded raw JSON request/reply method in the genuine Rust WASM control API; existing native source bytes and standalone APIs retain their formats.",
+    "Use an exact JSON integer codec, canonical uint64 identity checks and explicit {$u64: decimal} command-parameter atoms. Numeric-looking text stays text; unsafe already-rounded JS numbers are rejected.",
+    "Read native document/complete selection/page in one control drain; include a canonical native selection stamp in the execution fence. Do not flatten future raster masks or slide selection to Vector object arrays.",
+    "Make engine registration, selection and source extension explicit; only bridges that actually work are advertised as live.",
+    "Keep source revisions authoritative in NativeSourceStore; the project graph records explicit source/derivative/layout-instance relations without inferring links from names or hashes.",
+    "Verify F1 with genuine native placements and stored source/derivative/instance data before calling the foundation complete. Then wire Photo/Deck to the same identities, save barriers and graph."
+  ],
+  "units": [
+    {
+      "id": "D1.1",
+      "goal": "Exact native JSON and uint64 codec",
+      "files": [
+        "client/native-protocol.js",
+        "tests/native-protocol.test.mjs",
+        "Vector apps/vectorcraft-web/src/api.rs"
+      ],
+      "action": "Implement bounded exact integer decoding/encoding and a genuine raw native control method",
+      "verification": "Boundary integers, quoted numeric text, malformed/cyclic input and actual WASM document IDs beyond2^53",
+      "done": "Full uint64 values reach native commands and return unchanged; no float-roundtrip fallback",
+      "status": "verified: codec4; native host6 built/adopted; genuine high-ID native/DSH/source/reopen6"
+    },
+    {
+      "id": "D1.2",
+      "goal": "Atomic native selection/page context and execution fence",
+      "files": [
+        "Vector crates/ui-egui/src/control/hosted.rs",
+        "Vector crates/ui-egui/src/control.rs",
+        "Vector control/tests.rs",
+        "client/editor-frame.js"
+      ],
+      "action": "Return actual serialized native selection plus page/tool context, check its exact stamp before native mutation",
+      "verification": "Native real-App stale-anchor/page/selection refusal and high-UID/revision checks",
+      "done": "A page/anchor-only change cannot execute an old step even when content revision/selected objects are unchanged",
+      "status": "verified Vector: native26 and genuine stale native context/page/order checks; exact full selection retained"
+    },
+    {
+      "id": "D1.3",
+      "goal": "Engine-independent session/source contract",
+      "files": [
+        "host/editor-session.js",
+        "host/editor-tools.js",
+        "host/native-source-store.js",
+        "client/native-controller.js",
+        "client/editor-surface.js",
+        "client/native-reference.js"
+      ],
+      "action": "Use exact identities, explicit engine metadata and genuine selection descriptors through save/execute/reference; gate old renderers truthfully",
+      "verification": "Real DSH tool on current native App with high-ID source, stale/cross-source refusal, durable source/reopen and existing ordinary Vector behavior",
+      "done": "No wrong engine or old selection can be admitted; source bytes and IDs survive real edit/save/reopen",
+      "status": "verified Vector foundation and generic contract; actual registered tool/manual handoff8/current session12/source9; Photo/Deck real execution pending their bridges"
+    },
+    {
+      "id": "F1.1",
+      "goal": "Persistent project/source/derivative graph",
+      "files": [
+        "host/project-graph.js (planned)",
+        "host/native-source-store.js",
+        "host/editor-routes.js"
+      ],
+      "action": "Add bounded atomic project identity/relations and register genuine immutable derivative bytes against exact source versions",
+      "verification": "Real Vector exports/source versions, CAS conflict/crash boundary, exact file hashes and independent copies",
+      "done": "Project can trace its actual source and derivative versions; no preview is treated as editable source",
+      "status": "verified Vector foundation: source version/atomic source receipt11, graph storage8, native bundle28; actual SVG/PNG source pairing and frozen versions verified in material browser6"
+    },
+    {
+      "id": "F1.2",
+      "goal": "Actual native layout instances and graph integrity",
+      "files": [
+        "host/project-graph.js (planned)",
+        "client/native-controller.js",
+        "native placement adapters (planned)"
+      ],
+      "action": "Place a real source-derived item into a genuine native layout and record exact owning source/node/content revision/transform roles",
+      "verification": "Actual native object + source/derivative/instance relation, save/reopen, unrelated duplicate remains independent",
+      "done": "A graph entry corresponds to a real editable/placed object, not a command or reservation alone",
+      "status": "verified Vector foundation: physical SVG native paths/text and registered-tool PNG placement with exact centre; actual saved-node provenance, deliberate finish503 and owned-backend restart/missing-journal recovery3 passed; source bytes unchanged on repair"
+    },
+    {
+      "id": "F1.3",
+      "goal": "Working project navigation/source ownership",
+      "files": [
+        "client/native-workspace.js",
+        "host/editor-tools.js",
+        "project tool adapter (planned)"
+      ],
+      "action": "Expose real project/asset usage and enter/return paths with save barriers; keep same DSH conversation",
+      "verification": "UI/tool/source consistency and no lost selection, draft or wrong-target write during return",
+      "done": "User can inspect genuine sources/uses and continue editing with verified ownership",
+      "status": "verified Vector foundation: native same-App parent return/history/view and manual undo; real tools open/return; other active writer refusal, exact newer-head reload, actual child crash/checkpoint restore, and workspace release. One paused parent at a time; cross-engine bridges still pending."
+    },
+    {
+      "id": "NEXT",
+      "goal": "PhotoCraft and DeckCraft continuous bridges followed by remaining approved work",
+      "files": [
+        "docs/approved-plan.txt",
+        "docs/capability-matrix.json"
+      ],
+      "action": "Continue D2-D5,E1-E5,F2-F6,G,H,I,J and remaining safeguards/UI in the approved50 scope",
+      "verification": "Each actual manual/AI/source/output/recovery behavior; no capability inferred from upstream presence",
+      "done": "All explicit original requirements pass the final scope audit",
+      "status": "pending"
+    }
+  ],
+  "risks": [
+    "UI/backend/WASM versions must be released coherently; retain existing saved sources and staged drafts during transitions",
+    "Selection metadata must stay bounded without silently dropping semantic fields",
+    "Explicit uint64 atoms are reserved wire values, not guessed conversions of arbitrary strings",
+    "Project graph/source commits must not report partial multi-file publication as success",
+    "Photo/Deck are not live until their real same-App bridges and source roundtrips pass"
+  ],
+  "deliverables": [
+    "Direct running source/native build changes",
+    "Per-unit actual evidence and source hashes",
+    "Updated original50 capability matrix and recoverable state",
+    "Full final completion audit only when all required work is actually finished"
+  ]
+}

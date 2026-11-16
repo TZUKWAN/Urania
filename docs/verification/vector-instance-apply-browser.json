@@ -1,0 +1,57 @@
+{
+  "status": "passed",
+  "scope": "actual native Vector/Photo tools+physical brush+UI independent fork/apply, nested clipping image, opacity/rotation/blend and other-use preservation; native/SVG/PNG/reopen; no model",
+  "root": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\vector-inplace-project\\f400f33f-0945-4211-bcbd-0da6308ea3fa",
+  "codeRoot": "D:\\METIS超级合并\\dsh-plugin\\designcraft",
+  "checks": [
+    {
+      "name": "physical Photo edit applies to the SAME native Vector image inside rotated clipping group, exact appearance/frame/other content retained",
+      "pass": true,
+      "detail": {
+        "sameApp": true,
+        "nativeId": 2,
+        "clipGroupPreserved": true,
+        "opacity": 0.63,
+        "blend": "Multiply",
+        "allNonContentNativeFieldsExact": true,
+        "otherUseAndOriginalPhotoUnchanged": true,
+        "updatedPngSha256": "a33c209fd390ca4bb4b78fcbe02069e497f45215fc2aa28f4fb5adaa00998dc3"
+      }
+    },
+    {
+      "name": "actual native PNG rendering changes and SVG preserves real updated embedded image plus editable clipping geometry",
+      "pass": true,
+      "detail": {
+        "svgImages": 2,
+        "nativeSourceBytes": 36247,
+        "pngBytes": 8444
+      }
+    },
+    {
+      "name": "actual native source freshly reopens exact editable image/clip/appearance with source provenance",
+      "pass": true,
+      "detail": {
+        "sourceId": "work-bc1a2ae5-1908-484f-bd8a-000152f371d1",
+        "exactReopen": true
+      }
+    }
+  ],
+  "owned": {
+    "workspaceId": "f762bbe9-cec0-4bab-8671-429f29b149c6",
+    "sessionId": "PUBLIC-REDACTED"
+  },
+  "asset": {
+    "id": "asset-fb18f1a7-9bee-48a6-9542-4c1337b9269f",
+    "title": "海报实际图片 · 独立编辑",
+    "sourceId": "fork-ee0495f0-22e8-40eb-ab2d-d0e825ea02ef",
+    "sourceRevision": "aa8292d824df27f347bb92c8789d7999834f25d4c27313f34813dbc80e19917c",
+    "sourceHash": "cd1a2d85392fd97ef36af9aa9c49aab3a93da63c15627290973697286f735950",
+    "engine": "photocraft",
+    "format": "png",
+    "sha256": "a33c209fd390ca4bb4b78fcbe02069e497f45215fc2aa28f4fb5adaa00998dc3",
+    "bytes": 4437,
+    "at": "2026-11-04T21:59:11.334Z"
+  },
+  "sourceId": "work-bc1a2ae5-1908-484f-bd8a-000152f371d1",
+  "pageErrors": []
+}

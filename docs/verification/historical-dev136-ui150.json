@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 4,
+  "product": "DesignCraft",
+  "version": "1.3.0-dev.136",
+  "uiBuild": 150,
+  "date": "2026-11-13",
+  "generatedAt": "2026-11-12T19:42:16.172156+00:00",
+  "status": "development_build_functional_validation_deferred",
+  "scope": "Five reported code gaps and five Deck local input entries implemented; syntax, static-source and actual build evidence. Functional validation remains deferred by user.",
+  "functionalValidationThisContinuation": false,
+  "currentUserLoadedVersion": "unverified",
+  "userDesktopControlled": false,
+  "userDshRestarted": false,
+  "currentReports": [
+    {
+      "file": "docs/implementation-source-audit.json",
+      "sha256": "c745478ed7b26d3b6141cd83ee744da4a9bc092eeafb3cccd5cd3b1a1cc584e5"
+    },
+    {
+      "file": "docs/static-registry-audit.json",
+      "sha256": "212fc008b276d094f40e6f8f576fe09ccf3c8a7a2145401d6e77089a2832f25c"
+    },
+    {
+      "file": "docs/hosted-ui-source-audit.json",
+      "sha256": "69f43683f0a3886b17194ea2d6e621319f6cd3879cf15e2401249eccf6114077"
+    },
+    {
+      "file": "docs/opendesign-source-audit.json",
+      "sha256": "5b879d3563a240f3aa3167c78652865b523c2d307ca78f769f5bfe03f899e2ec"
+    },
+    {
+      "file": "docs/dependency-license-audit.json",
+      "sha256": "ca19508318d4db23462721a694b50142adf4a69f8cddcc68c316790691e62a99"
+    },
+    {
+      "file": "docs/native-source-input-audit.json",
+      "sha256": "4c6398ef747ae99b5a252b28cea8e0088c63fea88750a227a6804eb7b3d45620"
+    },
+    {
+      "file": "docs/authorization-requirements.json",
+      "sha256": "7749129fe5bc30a610b29be1f14ea0a6de091ba9ea922ba937546fa46c8476d4"
+    },
+    {
+      "file": "docs/historical-evidence-reconciliation.json",
+      "sha256": "5b9a36aa0d051557528961b788248266a70dcc7eeb2b9143baa8eb13a58911b5"
+    },
+    {
+      "file": "docs/core-product-scope.json",
+      "sha256": "ad8dd377db0146671f510d9460b5bcf0534262ab123eac2e395f9681a56c3dc0"
+    },
+    {
+      "file": "docs/image-api-settings-audit.json",
+      "sha256": "a6db5611ffaa197bf9e079818a26dc5d33eb42123ab2fed1256034cf2f7dc7e8",
+      "scope": "Historical UI149 image-API code snapshot; not current runtime acceptance."
+    },
+    {
+      "file": "docs/five-gaps-code-audit.json",
+      "sha256": "0c771991f17b4ac8fbc7af7055ee0f1ab09c699942676cd2a2dc9a017e6f39d7"
+    }
+  ],
+  "historicalVerification": {
+    "file": "docs/verification/historical-v1.2.0-ui16.json",
+    "sha256": "72bb52781e19d1b3a1a6b520965e6a08301666e92406d932febbec4ac64f8135",
+    "version": "1.2.0",
+    "uiBuild": 16,
+    "scope": "Original historical report preserved byte-for-byte; not current-build acceptance."
+  },
+  "activation": "Only files have been updated; no user-window activation or runtime result is claimed.",
+  "limits": [
+    "No UI, functional, model/service, credential write, recovery or end-to-end verification was performed in this continuation.",
+    "Original OD/Vela stock and additional external platforms are optional outside the user-approved mandatory core scope. Account permissions were not inspected.",
+    "Pinned converter source relationship and exact WOFF2/Brotli source revisions remain unproven; font reference differences and historical gaps remain documented.",
+    "Windows local recognizer and capture components, browser permissions, actual codecs, model rule compliance and new outputs have not been functionally exercised.",
+    "Cameo input creates real photo/video objects; live camera presentation is outside this implementation.",
+    "Full native-source color inspection reports unresolved theme/complex/background/pixel cases; APCA does not certify WCAG 3 conformance."
+  ],
+  "delivery": "Current product directory contains dev136/UI150 code, Deck host16 and compiled local input helper. This continuation did not create/install/activate a new plugin TGZ; dev134/UI148 remains a historical archive. User-loaded version is unknown."
+}
