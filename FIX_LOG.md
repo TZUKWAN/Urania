@@ -291,3 +291,7 @@
 验证：C19-final-ux-attempt4-real-draft-loss.json; C19-selection-draft-node.log; C19-final-ux.json
 
 完整新旧状态与证据边界见 AUDIT_UI165.md。
+
+## I030 · 公开证据摘要
+
+公开副本的匿名化与换行转换发生在摘要计算后，导致31个当前摘要不匹配。现保留原始/转换前摘要，按最终公开字节计算当前摘要；公开CI增加31份证据与完整源码清单核对。历史期望摘要不改写，功能代码及运行时不变。
