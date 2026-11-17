@@ -1,3 +1,5 @@
+import {currentDesignScope} from './design-session.js?v=165';
+import {MotionPreviewBridge} from './motion-preview.js?v=165';
 import {selectionIdentity,matrixPoint,inverseMatrix,multiplyMatrix,alignmentOffsets,layerRect,selectionRoots,selectedIds,selectedNative,nativeNodes,nativeAtPoint,nativePoint,nodeRect,nativeCanvasRect,unionRects} from './selection.js';
 import {editVectorNode,reboxVectorLayer,vectorNodeHandles} from './vector-nodes.js';
 /**
@@ -932,156 +934,129 @@ export function createActions({ store, sync, engine, toast }) {
 		} catch (error) { toast('生成失败: ' + String(error)); }
 	}
 
-	/* ---------------- motion workspace ---------------- */
+	/* ---------------- isolated motion workspace ---------------- */
 
-	let motionRenderPoll=null,motionMsgHandler=null;
-	const motionRoot=()=>store.get().root;
-	// 预览 iframe 用 postMessage 回报播放时钟（rAF 节流 ~10fps），这里只同步时间轴。
-	// 仅浏览器环境挂监听（Node 单测无 window）。
-	if(!motionMsgHandler&&typeof window!=='undefined'&&typeof window.addEventListener==='function'){
-		motionMsgHandler=(e)=>{
-			try{
-				const d=e&&e.data;
-				if(!d||d.source!=='hf-preview'||typeof d.t!=='number')return;
-				const m=store.get().motion;if(!m?.projectId)return;
-				const fps=(m.fps&&m.fps.num)||30,total=m.durationFrames||120;
-				const frame=Math.max(0,Math.min(total-1,Math.round(d.t/1000*fps)));
-				const cur=store.get().motion;
-				if(cur?.projectId===m.projectId&&frame!==(cur.currentFrame||0))store.set({motion:{...cur,currentFrame:frame}});
-			}catch{}
-		};
-		window.addEventListener('message',motionMsgHandler);
+	let motionRenderPoll=null,motionGeneration=0;
+	const motionBridge=new MotionPreviewBridge();
+	function motionScope(){const s=currentDesignScope(store.get().services);if(!s?.root||!s.sessionId)throw new Error('项目设计对话尚未就绪');return s;}
+	const sameMotionScope=s=>{try{const now=motionScope();return now.root===s.root&&now.sessionId===s.sessionId;}catch{return false;}};
+	async function motionPostAt(scope,action,payload){
+		const r=await fetch('/designcraft/api/v1/motion/'+action,{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({...payload,root:scope.root,sessionId:scope.sessionId})});
+		const j=await r.json().catch(()=>({}));if(!r.ok||!j.ok)throw new Error(j.error||('HTTP '+r.status));return j;
 	}
-	async function motionPost(action,payload){
-		const r=await fetch('/designcraft/api/v1/motion/'+action,{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({root:motionRoot(),...payload})});
-		const j=await r.json().catch(()=>({}));
-		if(!r.ok||!j.ok)throw new Error(j.error||('HTTP '+r.status));return j;
-	}
+	const motionPost=(action,payload)=>motionPostAt(motionScope(),action,payload);
 	async function motionGet(action,params){
-		const q=new URLSearchParams({root:motionRoot(),...(params||{})});
+		const scope=motionScope(),q=new URLSearchParams({...params,root:scope.root,sessionId:scope.sessionId});
 		const r=await fetch('/designcraft/api/v1/motion/'+action+'?'+q,{cache:'no-store'});
-		const j=await r.json().catch(()=>({}));
-		if(!r.ok||!j.ok)throw new Error(j.error||('HTTP '+r.status));return j;
+		const j=await r.json().catch(()=>({}));if(!r.ok||!j.ok)throw new Error(j.error||('HTTP '+r.status));return j;
 	}
-	function motionPreviewUrl(m,file){
-		// Path-style serving so composition-relative assets (fonts/assets) resolve.
-		return '/designcraft/api/v1/motion/preview/'+encodeURIComponent(file||m.entryFile||'index.html')+'?root='+encodeURIComponent(motionRoot())+'&projectId='+encodeURIComponent(m.projectId)+'&revision='+encodeURIComponent(m.revision);
+	function motionPreviewUrl(m){return m?.preview?.url||'';}
+	async function prepareMotionPreview(m){
+		const scope=m.scope,generation=motionGeneration;
+		const descriptor=await motionPostAt(scope,'preview_session',{projectId:m.projectId,revision:m.revision,leaseId:m.leaseId,viewEpoch:m.viewEpoch});
+		const cur=store.get().motion;
+		if(generation!==motionGeneration||!sameMotionScope(scope)||cur?.projectId!==m.projectId||cur.revision!==m.revision)return;
+		store.set({motion:{...cur,preview:descriptor,previewReady:false,previewError:null}});
+	}
+	async function publishMotion(opened,metadata,scope){
+		if(!sameMotionScope(scope))throw new Error('项目已切换，动画已保存在原项目中');
+		motionGeneration++;motionBridge.dispose();
+		const manifest=metadata?.manifest||metadata||{},render=manifest.render||opened.render||{fps:{num:30,den:1},durationFrames:120,width:1280,height:720};
+		const m={projectId:opened.projectId,revision:opened.revision,leaseId:opened.leaseId,viewEpoch:opened.viewEpoch,scope,
+			entryFile:manifest.entryFile||opened.entryFile||'composition.html',title:manifest.title||opened.title||'动画',render,
+			playing:false,currentFrame:0,fps:render.fps,durationFrames:render.durationFrames,renderStatus:null,preview:null,previewError:null};
+		store.set({motion:m});
+		try{await prepareMotionPreview(m);}catch(error){const now=store.get().motion;if(now?.projectId===m.projectId&&now.revision===m.revision)store.set({motion:{...now,previewError:error.message}});throw error;}
+		return opened;
 	}
 	async function listMotionTemplates(){const r=await motionGet('templates');store.set({motionTemplates:r.templates||[]});return r.templates||[];}
 	async function createMotionFromTemplate(templateId,title){
-		const r=await motionPost('create_from_template',{templateId,title:title||undefined,operationKey:'ui-tpl-'+templateId+'-'+Date.now()});
-		store.set({motion:{projectId:r.projectId,revision:r.revision,leaseId:r.leaseId,viewEpoch:r.viewEpoch,
-			entryFile:r.entryFile||'index.html',title:r.title||title||templateId,playing:false,currentFrame:0,
-			fps:(r.render&&r.render.fps)||{num:30,den:1},durationFrames:(r.render&&r.render.durationFrames)||120,renderStatus:null}});
-		return r;
-	}
-	function previewWindow(){
-		const frame=document.getElementById('motion-preview');
-		try{return frame&&frame.contentWindow||null;}catch{return null;}
-	}
-	function drivePreview(m){
-		const w=previewWindow();if(!w)return;
-		try{w.__hfSeek&&w.__hfSeek((m.currentFrame||0)*1000/((m.fps&&m.fps.num)||30));}catch{}
+		const scope=motionScope(),r=await motionPostAt(scope,'create_from_template',{templateId,title:title||undefined,operationKey:'ui-tpl-'+crypto.randomUUID()});
+		return publishMotion(r,r,scope);
 	}
 	async function createMotionProject(title,render){
-		const r=await motionPost('create',{title:title||'新动画',operationKey:'ui-create-'+Date.now(),
-			render:render||{fps:{num:30,den:1},durationFrames:120,width:1280,height:720}});
-		store.set({motion:{projectId:r.projectId,revision:r.revision,leaseId:r.leaseId,viewEpoch:r.viewEpoch,
-			entryFile:'composition.html',title:title||'新动画',playing:false,currentFrame:0,fps:(render&&render.fps)||{num:30,den:1},
-			durationFrames:(render&&render.durationFrames)||120,renderStatus:null}});
-		return r;
+		const scope=motionScope(),r=await motionPostAt(scope,'create',{title:title||'新动画',operationKey:'ui-create-'+crypto.randomUUID(),render:render||{fps:{num:30,den:1},durationFrames:120,width:1280,height:720}});
+		const meta=await motionGet('project',{projectId:r.projectId});return publishMotion(r,meta,scope);
 	}
 	async function listMotionProjects(){const r=await motionGet('projects');store.set({motionProjects:r.projects||[]});return r.projects||[];}
 	async function openMotionProject(projectId){
-		const r=await motionPost('open',{projectId});
-		const meta=await motionGet('project',{projectId}).catch(()=>null);
-		store.set({motion:{projectId,revision:r.revision,leaseId:r.leaseId,viewEpoch:r.viewEpoch,
-			entryFile:meta?.manifest?.entryFile||'index.html',title:meta?.manifest?.title||'动画',playing:false,currentFrame:0,
-			fps:meta?.manifest?.render?.fps||{num:30,den:1},durationFrames:meta?.manifest?.render?.durationFrames||120,
-			renderStatus:null}});
-		return r;
+		const scope=motionScope(),r=await motionPostAt(scope,'open',{projectId}),meta=await motionGet('project',{projectId});return publishMotion(r,meta,scope);
 	}
-	/** 进入动画工作台：有项目开最近一个，没有就现场建一个——一进来就是工作台。 */
 	async function motionAutoEnter(){
-		const s=store.get();if(s.motion?.projectId)return s.motion;
-		let projects=[];
-		try{projects=await listMotionProjects();}catch{}
-		if(projects.length>0)return openMotionProject(projects[0].projectId);
-		return createMotionProject();
-	}
-	function toggleMotionPlay(){
-		const m=store.get().motion;if(!m?.projectId)return;
-		const w=previewWindow();
-		if(m.playing){
-			try{w&&w.__hfPause&&w.__hfPause();}catch{}
-			store.set({motion:{...store.get().motion,playing:false}});
-		}else{
-			try{w&&w.__hfPlay&&w.__hfPlay();}catch{}
-			store.set({motion:{...store.get().motion,playing:true}});
+		const scope=motionScope(),existing=store.get().motion;
+		if(existing?.projectId&&sameMotionScope(existing.scope)){
+			if(!existing.preview)await prepareMotionPreview(existing);return existing;
 		}
+		const projects=await listMotionProjects();return projects.length?openMotionProject(projects[0].projectId):createMotionProject();
 	}
+	function bindMotionPreview(frame){
+		const m=store.get().motion;if(!m?.preview||!frame)return()=>{};
+		const identity=m.preview.nonce;
+		const current=()=>!disposed&&sameMotionScope(m.scope)&&store.get().workspaceMode==='motion'&&store.get().motion?.preview?.nonce===identity;
+		return motionBridge.bind(frame,m.preview,{render:m.render,isCurrent:current,
+			onReady(){if(!current())return;const cur=store.get().motion;store.set({motion:{...cur,previewReady:true,previewError:null}});motionBridge.command('seek',{frame:cur.currentFrame||0});motionBridge.command('play');},
+			onTime(update){if(current())store.set({motion:{...store.get().motion,currentFrame:update.frame,playing:update.playing}});},
+			onSelection(selection){if(current()){motionBridge.command('pause');store.set({motion:{...store.get().motion,selection,playing:false}});}},
+			onError(message){if(current())store.set({motion:{...store.get().motion,playing:false,previewReady:false,previewError:message}});}});
+	}
+	function motionPreviewAutoplay(){motionBridge.hello();}
+	function toggleMotionPlay(){const m=store.get().motion;if(m?.previewReady)motionBridge.command(m.playing?'pause':'play');}
 	function seekMotionFrame(frame){
 		const m=store.get().motion;if(!m?.projectId)return;
-		const total=m.durationFrames||120,next=Math.max(0,Math.min(total-1,frame|0));
-		try{const w=previewWindow();w&&w.__hfPause&&w.__hfPause();}catch{}
-		store.set({motion:{...store.get().motion,playing:false,currentFrame:next}});
-		drivePreview({...m,currentFrame:next});
+		const next=Math.max(0,Math.min((m.durationFrames||120)-1,Math.trunc(frame)));
+		motionBridge.command('pause');motionBridge.command('seek',{frame:next});
+		store.set({motion:{...m,playing:false,currentFrame:next}});
 	}
-	function motionPreviewSeek(){const m=store.get().motion;if(m?.projectId)drivePreview(m);}
-	/** 预览加载完成即原生播放——一进来就是动的。 */
-	function motionPreviewAutoplay(){
-		const m=store.get().motion;if(!m?.projectId)return;
-		try{const w=previewWindow();w&&w.__hfPlay&&w.__hfPlay();}catch{}
-		store.set({motion:{...store.get().motion,playing:true}});
+	function motionPreviewSeek(){const m=store.get().motion;if(m?.projectId)motionBridge.command('seek',{frame:m.currentFrame||0});}
+	function closeMotionWorkspace(){
+		const m=store.get().motion;motionGeneration++;motionBridge.dispose();
+		if(m?.scope&&m.projectId)void motionPostAt(m.scope,'close_lease',{projectId:m.projectId}).catch(()=>{});
+		if(m)store.set({motion:{...m,preview:null,previewReady:false,playing:false}});
 	}
 	async function motionPollHead(){
-		const m=store.get().motion;if(!m?.projectId)return;
-		const meta=await motionGet('project',{projectId:m.projectId}).catch(()=>null);
-		if(!meta)return;
-		if(meta.manifest?.revision&&meta.manifest.revision!==m.revision){
-			store.set({motion:{...m,revision:meta.manifest.revision,title:meta.manifest.title||m.title,
-				fps:meta.manifest.render?.fps||m.fps,durationFrames:meta.manifest.render?.durationFrames||m.durationFrames}});
-		}
+		const m=store.get().motion;if(!m?.projectId||!sameMotionScope(m.scope))return;
+		const meta=await motionGet('project',{projectId:m.projectId});
+		if(store.get().motion?.projectId!==m.projectId)return;
+		if(meta.manifest?.revision!==m.revision){const opened=await motionPostAt(m.scope,'open',{projectId:m.projectId});await publishMotion(opened,meta,m.scope);}
+	}
+	async function motionDoctor(){
+		const report=await motionPostAt(motionScope(),'doctor',{});store.set({motionEnvironment:report});return report;
+	}
+	async function cancelMotionRender(){
+		const m=store.get().motion;if(!m?.renderStatus?.jobId)throw new Error('没有正在运行的渲染任务');
+		const result=await motionPostAt(m.scope,'cancel_render',{jobId:m.renderStatus.jobId});
+		if(store.get().motion?.projectId===m.projectId&&sameMotionScope(m.scope))store.set({motion:{...store.get().motion,renderStatus:{...m.renderStatus,status:'cancelling'}}});return result;
 	}
 	async function renderMotion(){
 		const m=store.get().motion;if(!m?.projectId)throw new Error('请先创建或打开动画');
-		if(motionRenderPoll){clearInterval(motionRenderPoll);motionRenderPoll=null;}
-		const r=await motionPost('render',{projectId:m.projectId,baseRevision:m.revision,leaseId:m.leaseId,
-			viewEpoch:m.viewEpoch,operationKey:'ui-render-'+m.revision});
-		store.set({motion:{...store.get().motion,renderStatus:{status:'rendering',jobId:r.jobId,progress:0,opRevision:m.revision,opKey:'ui-render-'+m.revision}}});
-		motionRenderPoll=setInterval(async()=>{
+		const active=new Set(['starting','running','rendering','verifying','cleaning','cancelling']);
+		if(active.has(m.renderStatus?.status))throw new Error('上一项导出仍在运行或清理，请稍候');
+		if(motionRenderPoll)clearInterval(motionRenderPoll);
+		const opKey='ui-render-'+crypto.randomUUID();store.set({motion:{...m,renderStatus:{status:'starting',opRevision:m.revision,opKey}}});
+		let r;try{r=await motionPostAt(m.scope,'render',{projectId:m.projectId,baseRevision:m.revision,leaseId:m.leaseId,viewEpoch:m.viewEpoch,operationKey:opKey});}
+		catch(error){if(store.get().motion?.projectId===m.projectId&&sameMotionScope(m.scope))store.set({motion:{...store.get().motion,renderStatus:{status:'failed',error:error.message,opKey,opRevision:m.revision}}});throw error;}
+		if(store.get().motion?.projectId!==m.projectId||!sameMotionScope(m.scope))return r;
+		store.set({motion:{...store.get().motion,renderStatus:{status:'rendering',jobId:r.jobId,progress:0,opRevision:m.revision,opKey}}});
+		let polling=false;motionRenderPoll=setInterval(async()=>{
+			if(polling)return;polling=true;
 			try{
-				const st=await motionPost('render_status',{jobId:r.jobId});
-				const cur=store.get().motion;if(cur?.projectId!==m.projectId){clearInterval(motionRenderPoll);motionRenderPoll=null;return;}
+				const st=await motionPostAt(m.scope,'render_status',{jobId:r.jobId}),cur=store.get().motion;
+				if(cur?.projectId!==m.projectId||!sameMotionScope(m.scope)){clearInterval(motionRenderPoll);motionRenderPoll=null;return;}
 				store.set({motion:{...cur,renderStatus:{...cur.renderStatus,status:st.status,jobId:r.jobId,progress:st.progress||0,receipt:st.receipt,error:st.error}}});
-				if(st.status!=='rendering'){
-					clearInterval(motionRenderPoll);motionRenderPoll=null;
-					if(st.status==='completed'){
-						toast('MP4 已导出并通过验证（'+st.receipt?.frames+' 帧），开始下载');
-						try{downloadMotionArtifact();}catch(e){}
-					}else toast('渲染失败: '+(st.error||'未知原因'));
-				}
-			}catch(error){clearInterval(motionRenderPoll);motionRenderPoll=null;toast('渲染状态查询失败: '+error.message);}
-		},1500);
-		return r;
+				if(!active.has(st.status)){clearInterval(motionRenderPoll);motionRenderPoll=null;if(st.status==='completed'&&st.receipt?.verified){toast('MP4 已导出并通过验证（'+st.receipt.frames+' 帧）');if(store.get().motion?.revision===m.revision)downloadMotionArtifact();}else toast('渲染未完成: '+(st.error||st.status));}
+			}catch(error){toast('渲染状态尚未确认，正在核对: '+error.message);}
+			finally{polling=false;}
+		},1500);return r;
 	}
 	async function exportMotionProject(){
-		const m=store.get().motion;if(!m?.projectId)throw new Error('请先创建或打开动画');
-		const r=await motionPost('export_project',{projectId:m.projectId,operationKey:'ui-export-'+m.revision});
-		if(!r.dataBase64)throw new Error('导出数据为空');
-		const bin=atob(r.dataBase64),bytes=new Uint8Array(bin.length);
-		for(let i=0;i<bin.length;i++)bytes[i]=bin.charCodeAt(i);
-		const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([bytes],{type:'application/zip'}));
-		a.download=(m.title||'motion')+'.dcmotion';a.click();
-		setTimeout(()=>URL.revokeObjectURL(a.href),5000);
-		toast('.dcmotion 工程已导出');
+		const m=store.get().motion;if(!m?.projectId)throw new Error('请先打开动画');
+		const r=await motionPostAt(m.scope,'export_project',{projectId:m.projectId,operationKey:'ui-export-'+crypto.randomUUID()});
+		const bytes=Uint8Array.from(atob(r.dataBase64),c=>c.charCodeAt(0)),a=document.createElement('a');a.href=URL.createObjectURL(new Blob([bytes],{type:'application/zip'}));a.download=(m.title||'motion')+'.dcmotion';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),5000);toast('.dcmotion 工程已导出');
 	}
 	async function downloadMotionArtifact(){
 		const m=store.get().motion;if(!m?.projectId||m.renderStatus?.status!=='completed')throw new Error('尚无已验证的渲染产物');
-		const opKey=(m.renderStatus&&m.renderStatus.opKey)||('ui-render-'+m.revision);
-		const a=document.createElement('a');
-		a.href='/designcraft/api/v1/motion/artifact?root='+encodeURIComponent(motionRoot())+'&projectId='+encodeURIComponent(m.projectId)+'&operationKey='+encodeURIComponent(opKey);
-		a.download=(m.title||'motion')+'.mp4';a.click();
+		const scope=motionScope(),q=new URLSearchParams({root:scope.root,sessionId:scope.sessionId,projectId:m.projectId,operationKey:m.renderStatus.opKey});
+		const a=document.createElement('a');a.href='/designcraft/api/v1/motion/artifact?'+q;a.download=(m.title||'motion')+'.mp4';a.click();
 	}
 
 	/* ---------------- toast ---------------- */
@@ -1089,7 +1064,7 @@ export function createActions({ store, sync, engine, toast }) {
 	function showToast(message) { toast(message); }
 
 	return {
-		dispose(){disposed=true;clearTimeout(bakeTimer);if(motionRenderPoll){clearInterval(motionRenderPoll);motionRenderPoll=null;}if(motionMsgHandler){try{window.removeEventListener('message',motionMsgHandler);}catch{}motionMsgHandler=null;}},
+		dispose(){disposed=true;clearTimeout(bakeTimer);if(motionRenderPoll){clearInterval(motionRenderPoll);motionRenderPoll=null;}motionBridge.dispose();},
 		pushUndo, undo, redo,
 		select, setTool, setView, zoomBy, fitToView, setPageId, setPointer,
 		updateLayerFields, updateVectorNode, finishVectorNode,
@@ -1105,8 +1080,9 @@ export function createActions({ store, sync, engine, toast }) {
 		startPresentation,
 		instantiateTemplate, appendTemplatePages, applyDesignSystem, addLayoutSlide, generateDeckFromOutline,
 		createMotionProject, listMotionProjects, listMotionTemplates, createMotionFromTemplate, openMotionProject, toggleMotionPlay, seekMotionFrame,
-		motionAutoEnter, motionPreviewAutoplay,
-		motionPreviewSeek, motionPollHead, renderMotion, exportMotionProject, downloadMotionArtifact, motionPreviewUrl,
+		motionAutoEnter, motionPreviewAutoplay, bindMotionPreview, closeMotionWorkspace,
+        motionScopeKey:()=>{try{const s=motionScope();return s.root+'|'+s.sessionId;}catch{return '';}} ,
+		motionPreviewSeek, motionPollHead, motionDoctor, renderMotion, cancelMotionRender, exportMotionProject, downloadMotionArtifact, motionPreviewUrl,
 		toast: showToast,
 		findLayerDeep
 	};

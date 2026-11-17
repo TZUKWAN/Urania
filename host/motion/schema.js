@@ -44,7 +44,7 @@ export function safeRelativePath(raw, { allowSubdirs = true } = {}) {
 	if (!allowSubdirs && parts.length !== 1) fail('E_PATH_SUBDIR', 'subdirectories not allowed here');
 	for (const part of parts) {
 		if (part === '' || part === '.' || part === '..') fail('E_PATH_TRAVERSAL', 'path traversal refused');
-		if (/^[ .]+$/i.test(part) || /[\0:*"<>|]/.test(part)) fail('E_PATH_CHAR', 'illegal path segment');
+		if (/^[ .]+$/i.test(part) || /[. ]$/.test(part) || /[\x00-\x1f\x7f:*"<>|]/.test(part) || /^(?:con|prn|aux|nul|com[1-9]|lpt[1-9])(?:\.|$)/i.test(part)) fail('E_PATH_CHAR', 'illegal path segment');
 	}
 	if (/\.(exe|bat|cmd|ps1|sh|dll|so|msi|scr|com|vbs|js\.node)$/i.test(raw)) fail('E_PATH_EXEC', 'executable extension refused');
 	return raw;
@@ -129,6 +129,24 @@ export function validateHfIdSet(ids) {
 	return ids;
 }
 
+/** Imported media may name only bounded, project-relative files and exact hashes. */
+export function validateAssets(assets = []) {
+	if (!Array.isArray(assets) || assets.length > 512) fail('E_ASSETS', 'assets must be an array of at most 512 files');
+	const paths = new Set();
+	return assets.map(asset => {
+		if (!asset || typeof asset !== 'object' || Array.isArray(asset) || !SHA256_RE.test(asset.sha256 || '')) fail('E_ASSET_SHA', 'asset sha256 must be exact 64-hex');
+		if (asset.bytes !== undefined && (!isInt(asset.bytes) || asset.bytes < 1 || asset.bytes > 256 * 1024 * 1024)) fail('E_ASSET_BYTES', 'asset bytes exceed budget');
+		if (asset.kind !== undefined && !['image','video','audio','font'].includes(asset.kind)) fail('E_ASSET_KIND', 'unknown asset kind');
+		if (asset.name !== undefined) safeRelativePath(asset.name, {allowSubdirs:false});
+		for (const key of ['path','file']) if (asset[key] !== undefined) safeRelativePath(asset[key]);
+		const rel = asset.path || asset.file || asset.name;
+		if (!rel) fail('E_ASSET_PATH', 'asset requires a project-relative path or name');
+		const key = rel.toLowerCase();
+		if (paths.has(key)) fail('E_ASSET_DUP', 'asset path collides: ' + rel);
+		paths.add(key);return {...asset};
+	});
+}
+
 /** Full revision manifest validation (canonical form). Mutates nothing; returns normalized copy.
  *  opts.requireRevision: when false (store commit-time), manifest.revision may be absent
  *  (it is being computed); when true (read-time), it must be a valid sha256. */
@@ -159,7 +177,7 @@ export function validateRevisionManifest(manifest, opts = {}) {
 		render,
 		sources,
 		parameters: Array.isArray(manifest.parameters) ? manifest.parameters : [],
-		assets: Array.isArray(manifest.assets) ? manifest.assets : [],
+		assets: validateAssets(manifest.assets),
 		createdAt: manifest.createdAt || null
 	};
 }

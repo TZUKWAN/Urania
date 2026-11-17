@@ -1,0 +1,7 @@
+{
+  "cwdLength": 390,
+  "cwdExists": true,
+  "nodeExists": true,
+  "code": "ENOENT",
+  "error": "spawn C:\\Program Files\\nodejs\\node.exe ENOENT"
+}

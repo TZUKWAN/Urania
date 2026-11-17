@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "onlyChanges": [
+    "/document/layers/0/kind/children/0/appearance/items/0/paint/color/b",
+    "/document/layers/0/kind/children/0/appearance/items/0/paint/color/g",
+    "/document/layers/0/kind/children/0/appearance/items/0/paint/color/r",
+    "/document/layers/0/kind/children/1/appearance/items/0/paint/color/b",
+    "/document/layers/0/kind/children/1/appearance/items/0/paint/color/g",
+    "/document/layers/0/kind/children/1/appearance/items/0/paint/color/r"
+  ],
+  "count": 6,
+  "sourceBeforeSha256": "df359dcade2e6fff3220345261fecd95108b12094f38add9bc3ce3c18793ac43",
+  "sourceAfterSha256": "a62433350316c73fbf9bea398365874105ee47e71ed00ce0c6428b919c0cc135",
+  "reviewer": "primary single agent",
+  "noStrokeOpacityOrGeometryChanges": true
+}

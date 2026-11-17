@@ -1,7 +1,7 @@
 {
   "status": "passed",
   "scope": "actual DSH/native WASM, physical Photo editing and UI apply, real Deck source/PPTX/PNG; native command and metadata checks, no model",
-  "root": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\instance-apply-project\\879b1a80-8c86-4084-b4ec-03fb8c4fc1d5",
+  "root": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\instance-apply-project\\879b1a80-8c86-4084-b4ec-03fb8c4fc1d5",
   "codeRoot": "D:\\METIS超级合并\\dsh-plugin\\designcraft",
   "checks": [
     {
@@ -89,7 +89,7 @@
   ],
   "owned": {
     "workspaceId": "5f744ca2-9bcc-48ac-916c-52ae3f931670",
-    "sessionId": "PUBLIC-REDACTED"
+    "sessionId": "session-PUBLIC-REDACTED"
   },
   "edit": {
     "id": "edit-d1c6cfe8-0228-46fe-8e51-5ca76393dd6d",

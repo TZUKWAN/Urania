@@ -1,0 +1,28 @@
+{
+  "at": "2026-11-17T18:30:48.127Z",
+  "kind": "actual production Supervisor -> actual worker -> headless Chromium -> ffmpeg/ffprobe",
+  "jobId": "8e13167b-c57e-4c65-9a29-c3e6a4c90114",
+  "root": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\urania-closeout-20261118\\projects\\supervisor 自定义 1794940236045",
+  "versions": {
+    "node": "25.6.0",
+    "ffmpeg": "9.0.2",
+    "ffprobe": "9.0.2",
+    "browser": "157.0.8103"
+  },
+  "customBrowserDirectory": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\urania-closeout-20261118\\projects\\supervisor 自定义 1794940236045\\自定义浏览器",
+  "customFfmpegDirectory": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\urania-closeout-20261118\\projects\\supervisor 自定义 1794940236045\\工具 目录",
+  "status": "completed",
+  "receipt": {
+    "verified": true,
+    "frames": 12,
+    "width": 320,
+    "height": 180,
+    "codec": "h264",
+    "pixFmt": "yuv420p",
+    "fps": "12/1",
+    "sha256": "f8a83780b1f678b7e692b3e01d19dddd5c0ec609c73f06c5944969d421a62004",
+    "bytes": 4286
+  },
+  "logTail": "{\"type\":\"meta\",\"totalFrames\":12,\"durationSeconds\":1}\n{\"type\":\"progress\",\"frame\":1,\"totalFrames\":12}\n{\"type\":\"progress\",\"frame\":3,\"totalFrames\":12}\n{\"type\":\"progress\",\"frame\":5,\"totalFrames\":12}\n{\"type\":\"progress\",\"frame\":7,\"totalFrames\":12}\n{\"type\":\"progress\",\"frame\":9,\"totalFrames\":12}\n{\"type\":\"progress\",\"frame\":11,\"totalFrames\":12}\n{\"type\":\"progress\",\"frame\":12,\"totalFrames\":12}\n{\"type\":\"done\",\"frames\":12,\"width\":320,\"height\":180,\"fps\":\"12/1\",\"audioTracks\":0,\"outputPath\":\"C:\\\\Users\\\\lauze\\\\Documents\\\\Codex\\\\2026-11-04\\\\dsh-design-codex-threads-01a19111-0093\\\\work\\\\urania-closeout-20261118\\\\projects\\\\supervisor 自定义 1794940236045\\\\out\\\\.motion-8e13167b-c57e-4c65-9a29-c3e6a4c90114\\\\pending.mp4\"}\n[motion-worker] 临时目录未清理: EPERM, Permission denied: \\\\?\\C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\urania-closeout-20261118\\projects\\supervisor ×Ô¶¨Òå 1794940236045\\out\\.motion-8e13167b-c57e-4c65-9a29-c3e6a4c90114\\.browser-1794940238110 '\\\\?\\C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\urania-closeout-20261118\\projects\\supervisor �Զ��� 1794940236045\\out\\.motion-8e13167b-c57e-4c65-9a29-c3e6a4c90114\\.browser-1794940238110'\n",
+  "providerTurns": 0
+}

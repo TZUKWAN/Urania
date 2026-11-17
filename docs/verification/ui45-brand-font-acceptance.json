@@ -8,7 +8,7 @@
   ],
   "noOpSaveFix": "A new revision with identical complete source hash is treated as unchanged; a real source change remains an override.",
   "rawEvidence": {
-    "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-brand-font.json",
+    "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-brand-font.json",
     "sha256": "4efa14586c557436f14f1d569690562479d6957c34b95b899550df47752d8140"
   },
   "limits": [
@@ -24,7 +24,7 @@
       "deckcraft"
     ],
     "rawEvidence": {
-      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-brand-font-cross.json",
+      "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-brand-font-cross.json",
       "sha256": "60a27a95f72268a25dd04d18e5d90214294a7838c97c5d0af3dfc30245eb7100"
     }
   }

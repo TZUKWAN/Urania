@@ -27,7 +27,7 @@
   },
   "actualBrandOperation": {
     "status": "passed",
-    "root": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\brand-three-designs\\4edbddc3-14c4-42cf-9857-78212bad51bb",
+    "root": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\brand-three-designs\\4edbddc3-14c4-42cf-9857-78212bad51bb",
     "checks": [
       {
         "check": "bound poster nativeId"
@@ -66,7 +66,7 @@
             {
               "bindingId": "brandcolor-a789af5b-66f4-4975-988f-31ad2adfb72d",
               "nativeId": "9",
-              "token": "PUBLIC-REDACTED",
+              "token": "[REDACTED]",
               "previous": "#2563EB"
             }
           ]
@@ -78,7 +78,7 @@
             {
               "bindingId": "brandcolor-a585f347-0d5c-47f8-85a3-4b74676346b4",
               "nativeId": "8",
-              "token": "PUBLIC-REDACTED",
+              "token": "[REDACTED]",
               "previous": "#2563EB"
             }
           ]
@@ -90,7 +90,7 @@
             {
               "bindingId": "brandcolor-8ac3cb1d-fe86-41db-bd4f-5e34da4f4659",
               "nativeId": "262",
-              "token": "PUBLIC-REDACTED",
+              "token": "[REDACTED]",
               "previous": "#2563EB"
             }
           ]
@@ -114,8 +114,8 @@
   },
   "packageRoundtrip": {
     "status": "passed",
-    "source": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\brand-three-designs\\4edbddc3-14c4-42cf-9857-78212bad51bb",
-    "restoredProject": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\package-roundtrip\\dc4ead18-30ee-4fc3-8b04-8aa1ba3d74c0",
+    "source": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\brand-three-designs\\4edbddc3-14c4-42cf-9857-78212bad51bb",
+    "restoredProject": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\package-roundtrip\\dc4ead18-30ee-4fc3-8b04-8aa1ba3d74c0",
     "files": 311,
     "sources": 5,
     "assets": 2,

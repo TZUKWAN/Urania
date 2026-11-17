@@ -36,3 +36,6 @@ tests/tmp-*
 tests/ui-*.png
 tests/dsh-*.png
 *.log
+
+# Local transactional runtime restore state
+.urania/

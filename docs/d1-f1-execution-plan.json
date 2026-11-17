@@ -124,5 +124,13 @@
     "Per-unit actual evidence and source hashes",
     "Updated original50 capability matrix and recoverable state",
     "Full final completion audit only when all required work is actually finished"
-  ]
+  ],
+  "currentDelivery": {
+    "version": "1.3.0-dev.150",
+    "uiBuild": 165,
+    "approvedCoreAccepted": true,
+    "verification": "../VERIFICATION_UI165.json",
+    "historicalPlanPreserved": true,
+    "scope": "Older full-upstream/temporary code-only statuses are retained as historical plans; current mandatory scope is core-product-scope.json."
+  }
 }

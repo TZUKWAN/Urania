@@ -1,0 +1,21 @@
+{
+  "ok": true,
+  "paths": {
+    "nodePath": "C:\\Program Files\\nodejs\\node.exe",
+    "ffmpegPath": "D:\\MDHPROJECT\\ffmpeg\\ffmpeg-9.0.2-essentials_build\\bin\\ffmpeg.exe",
+    "ffprobePath": "D:\\MDHPROJECT\\ffmpeg\\ffmpeg-9.0.2-essentials_build\\bin\\ffprobe.exe",
+    "browserPath": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"
+  },
+  "versions": {
+    "node": "25.6.0",
+    "ffmpeg": "9.0.2",
+    "ffprobe": "9.0.2",
+    "browser": "157.0.8103"
+  },
+  "requirements": {
+    "node": 22,
+    "browser": 120,
+    "ffmpeg": 6,
+    "ffprobe": 6
+  }
+}

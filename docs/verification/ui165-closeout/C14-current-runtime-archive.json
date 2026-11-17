@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "archive": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\urania-closeout-20261118\\release-assets\\urania-runtime-win-x64-ui165-20261118.zip",
+  "archiveSha256": "d1b578f37e45cb72913eaf36b01cec507d9b9bbec3608ff0e62ec4b9996cbd64",
+  "archiveBytes": 1321208780,
+  "expandedBytes": 3226035371,
+  "files": 7713,
+  "archiveMembersReverified": 7713,
+  "nativeVersions": {
+    "vectorcraft": "0.19.0",
+    "vectorcraft-host": "0.19.0+designcraft.host19",
+    "photocraft-host": "0.18.0+designcraft.host8",
+    "deckcraft-host": "0.13.1+designcraft.host19"
+  },
+  "sdkRuntimeFiles": 7447,
+  "runtimeManifestSha256": "eb625aa5c1352fd5ebd3b377a27cd1b4917af8954f6cc8d52c79ef357affc22e"
+}

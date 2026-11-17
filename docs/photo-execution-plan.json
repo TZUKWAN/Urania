@@ -98,5 +98,13 @@
     "Photo pcraft export byte determinism/source-pair matching must be proved; persist the actual paired source bytes when necessary.",
     "Do not expose missing mask/service/PSD semantics as completed features."
   ],
-  "updatedAt": "2026-11-04T16:47:48.215354+00:00"
+  "updatedAt": "2026-11-04T16:47:48.215354+00:00",
+  "currentDelivery": {
+    "version": "1.3.0-dev.150",
+    "uiBuild": 165,
+    "approvedCoreAccepted": true,
+    "verification": "../VERIFICATION_UI165.json",
+    "historicalPlanPreserved": true,
+    "scope": "Older full-upstream/temporary code-only statuses are retained as historical plans; current mandatory scope is core-product-scope.json."
+  }
 }

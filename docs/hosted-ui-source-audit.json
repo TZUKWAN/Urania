@@ -302,12 +302,12 @@
   ],
   "sharedCatalogs": [
     {
-      "path": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\upstream\\vectorcraft-bcebabe3f8c23a376ac68e9e6726590af278f7bb\\crates\\ui-egui\\src\\i18n\\zh-hans.tsv",
+      "path": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\upstream\\vectorcraft-bcebabe3f8c23a376ac68e9e6726590af278f7bb\\crates\\ui-egui\\src\\i18n\\zh-hans.tsv",
       "sha256": "c44b0113756471daf9652347c545022c8c309e11cf659be5c4679535d1c83e33",
       "license": "MIT OR Apache-2.0"
     },
     {
-      "path": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\upstream\\photocraft-8a87a457abb43ac344deeb3fdb67541b91a72ff1\\crates\\ui-egui\\src\\i18n\\zh-hans.tsv",
+      "path": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\upstream\\photocraft-8a87a457abb43ac344deeb3fdb67541b91a72ff1\\crates\\ui-egui\\src\\i18n\\zh-hans.tsv",
       "sha256": "6bd60afd37e1031cebb7bc6f2fd087ad72440900d5167cdee442365e46d2ff2f",
       "license": "MIT OR Apache-2.0"
     }

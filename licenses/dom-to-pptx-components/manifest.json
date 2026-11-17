@@ -1,13 +1,18 @@
 {
-  "status": "partial",
-  "scope": "Packages and exact versions identified from the shipped browser bundle; registry tarballs verified against official SHA-512 before extracting license text.",
+  "schemaVersion": 2,
+  "status": "current-build-source-locked",
+  "scope": "Actual Rollup source map inputs plus complete publisher-tag transitive license notices; fixed Google/Brotli codec and Emscripten runtime notices. Verified npm package prebundles remain identified as publisher package artifacts, not independently rebuilt nested dist files. Historical prebuilt uncertainty remains only under historical-open-design/.",
   "components": [
     {
       "name": "jszip",
       "version": "3.10.1",
       "declaredLicense": "(MIT OR GPL-3.0-or-later)",
-      "tarball": "https://registry.npmjs.org/jszip/-/jszip-3.10.1.tgz",
+      "packageJson": {
+        "bytes": 1787,
+        "sha256": "83569b5b130b5ec27ae281ed80420ad364baf1bf64cb82e6ac8fb891e1b4ec4c"
+      },
       "integrity": "sha512-xXDvecyTpGLrqFrvkrUSoxxfJI5AH7U8zxxtVclpsUtMCq4JQ290LY8AW5c7Ggnr/Y/oK+bQMbqK2qmtk3pN4g==",
+      "tarball": "https://registry.npmjs.org/jszip/-/jszip-3.10.1.tgz",
       "licenseFile": "licenses/dom-to-pptx-components/jszip-3.10.1.txt",
       "licenseSha256": "566c953c6090b1218ca6217dd7359d45dde46581968586dc607d59a78af6a9c4"
     },
@@ -15,8 +20,12 @@
       "name": "pptxgenjs",
       "version": "4.0.1",
       "declaredLicense": "MIT",
-      "tarball": "https://registry.npmjs.org/pptxgenjs/-/pptxgenjs-4.0.1.tgz",
+      "packageJson": {
+        "bytes": 2265,
+        "sha256": "a4fc694898ef6f7da4c5840b799b593a0a74e9e05b7490b2ac5ee144762db477"
+      },
       "integrity": "sha512-TeJISr8wouAuXw4C1F/mC33xbZs/FuEG6nH9FG1Zj+nuPcGMP5YRHl6X+j3HSUnS1f3at6k75ZZXPMZlA5Lj9A==",
+      "tarball": "https://registry.npmjs.org/pptxgenjs/-/pptxgenjs-4.0.1.tgz",
       "licenseFile": "licenses/dom-to-pptx-components/pptxgenjs-4.0.1.txt",
       "licenseSha256": "7a2bfe96150786ed1908b8e63f98ebab88875c1e79e28faff6649e0f11f77e52"
     },
@@ -24,86 +33,654 @@
       "name": "html2canvas",
       "version": "1.4.1",
       "declaredLicense": "MIT",
-      "tarball": "https://registry.npmjs.org/html2canvas/-/html2canvas-1.4.1.tgz",
+      "packageJson": {
+        "bytes": 4422,
+        "sha256": "0f9ec876862475d42f2badf8adc0335bec6933ef9b87d8ffb06cb2a6f6cb6d5b"
+      },
       "integrity": "sha512-fPU6BHNpsyIhr8yyMpTLLxAbkaK8ArIBcmZIRiBLiDhjeqvXolaEmDGmELFuX9I4xDcaKKcJl+TKZLqruBbmWA==",
+      "tarball": "https://registry.npmjs.org/html2canvas/-/html2canvas-1.4.1.tgz",
       "licenseFile": "licenses/dom-to-pptx-components/html2canvas-1.4.1.txt",
       "licenseSha256": "86200ce4e92d9a22c41c8647a55f7a5fddff304ff89b4d36ecc699ed8c123d2c"
     },
     {
-      "name": "css-line-break",
+      "name": "opentype.js",
+      "version": "2.0.0",
+      "declaredLicense": "MIT",
+      "packageJson": {
+        "bytes": 2875,
+        "sha256": "3c6a2462738f1bedff41b8b71856f8586cedcc597b1cc8a68de67244e9f2cd4a"
+      },
+      "integrity": "sha512-kCyjv6xdDY1W/jLWZ/L3QhhTlKUqDZMQ5+Jdlw12b3dXkKNpYBqqlMMj0YDQPShWFTMwgZI1hG14kN3XUDSg/A==",
+      "tarball": "https://registry.npmjs.org/opentype.js/-/opentype.js-2.0.0.tgz",
+      "licenseFile": "licenses/dom-to-pptx-components/opentype.js-2.0.0.txt",
+      "licenseSha256": "a5b87c9bc191e7f9c06b07bd7cbbed3ed846dfdb50e859484b2c245aa1ab2e61"
+    },
+    {
+      "name": "fonteditor-core",
+      "version": "2.6.3",
+      "declaredLicense": null,
+      "packageJson": {
+        "bytes": 2827,
+        "sha256": "5f7493e1372eaf0f6c205546ff535a68ae2c1954ef789839fbe120404f6ef12b"
+      },
+      "integrity": "sha512-YUryIKjkenjZ41E7JvM3V+02Ak4mTHDDTwBWgs9KBzypzHqLZHuua1UDRevZNTKawmnq1dbBAa70Jddl2+F4FQ==",
+      "tarball": "https://registry.npmjs.org/fonteditor-core/-/fonteditor-core-2.6.3.tgz",
+      "licenseFile": "licenses/dom-to-pptx-components/fonteditor-core-2.6.3.txt",
+      "licenseSha256": "56da234b06e4b46e2d3ad7c83721ebc98493849972c7eeadfa5079308261f0b1"
+    },
+    {
+      "name": "@xmldom/xmldom",
+      "version": "0.8.11",
+      "declaredLicense": "MIT",
+      "packageJson": {
+        "bytes": 1748,
+        "sha256": "92dd6ece7aa0321dcb07ece67572c87b564d90aa8edcc1f47f0190701d36465c"
+      },
+      "integrity": "sha512-cQzWCtO6C8TQiYl1ruKNn2U6Ao4o4WBBcbL61yJl84x+j5sOWWFU9X7DpND8XZG3daDppSsigMdfAIl2upQBRw==",
+      "tarball": "https://registry.npmjs.org/@xmldom/xmldom/-/xmldom-0.8.11.tgz",
+      "licenseFile": "licenses/dom-to-pptx-components/xmldom--xmldom-0.8.11.txt",
+      "licenseSha256": "4da724fc305d81606b245b324d4d2586916b9d248b23d82183df753ace0fdf71"
+    },
+    {
+      "name": "pako",
       "version": "2.1.0",
-      "declaredLicense": "MIT",
-      "tarball": "https://registry.npmjs.org/css-line-break/-/css-line-break-2.1.0.tgz",
-      "integrity": "sha512-FHcKFCZcAha3LwfVBhCQbW2nCNbkZXn7KVUJcsT5/P8YmfsVja0FMPJr0B903j/E69HUphKiV9iQArX8SDYA4w==",
-      "licenseFile": "licenses/dom-to-pptx-components/css-line-break-2.1.0.txt",
-      "licenseSha256": "ce1ee0539f7fe1f7b75b76d121e674cb897c709c3e24ddba7f9a10fe2d0d88a5"
-    },
-    {
-      "name": "utrie",
-      "version": "1.0.2",
-      "declaredLicense": "MIT",
-      "tarball": "https://registry.npmjs.org/utrie/-/utrie-1.0.2.tgz",
-      "integrity": "sha512-1MLa5ouZiOmQzUbjbu9VmjLzn1QLXBhwpUa7kdLUQK+KQ5KA9I1vk5U4YHe/X2Ch7PYnJfWuWT+VbuxbGwljhw==",
-      "licenseFile": "licenses/dom-to-pptx-components/utrie-1.0.2.txt",
-      "licenseSha256": "8b00952cd8d0f5cbbefb13576778e1185dc963943151353d90c4e14a5a4caf40"
-    },
-    {
-      "name": "base64-arraybuffer",
-      "version": "1.0.2",
-      "declaredLicense": "MIT",
-      "tarball": "https://registry.npmjs.org/base64-arraybuffer/-/base64-arraybuffer-1.0.2.tgz",
-      "integrity": "sha512-I3yl4r9QB5ZRY3XuJVEPfc2XhZO6YweFPI+UovAzn+8/hb3oJ6lnysaFcjVpkCPfVWFUDvoZ8kmVDP7WyRtYtQ==",
-      "licenseFile": "licenses/dom-to-pptx-components/base64-arraybuffer-1.0.2.txt",
-      "licenseSha256": "f3eca6ff762533fa5a77caf954a143e48afa204668cf97dce758c45a9e006be3"
-    },
-    {
-      "name": "text-segmentation",
-      "version": "1.0.3",
-      "declaredLicense": "MIT",
-      "tarball": "https://registry.npmjs.org/text-segmentation/-/text-segmentation-1.0.3.tgz",
-      "integrity": "sha512-iOiPUo/BGnZ6+54OsWxZidGCsdU8YbE4PSpdPinp7DeMtUJNJBoJ/ouUSTJjHkh1KntHaltHl/gDs2FC4i5+Nw==",
-      "licenseFile": "licenses/dom-to-pptx-components/text-segmentation-1.0.3.txt",
-      "licenseSha256": "8b00952cd8d0f5cbbefb13576778e1185dc963943151353d90c4e14a5a4caf40"
+      "declaredLicense": "(MIT AND Zlib)",
+      "packageJson": {
+        "bytes": 1725,
+        "sha256": "268f53a4c305b7b49a63f7aadcdc026b00574fafc5fd6a452351bac21d5417ae"
+      },
+      "integrity": "sha512-w+eufiZ1WuJYgPXbV/PO3NCMEc3xqylkKHzp8bxp1uW4qaSNQUkwmLLEc3kKsfz8lpV1F8Ht3U1Cm+9Srog2ug==",
+      "tarball": "https://registry.npmjs.org/pako/-/pako-2.1.0.tgz",
+      "licenseFile": "licenses/dom-to-pptx-components/pako-2.1.0.txt",
+      "licenseSha256": "a04665b3b2de56c66730c1f720f528175739e4104f79073614aa611da1e85539"
     }
   ],
-  "unresolved": [
-    "Publisher-tag lock and licence data are retained, but exact bundle-to-lock provenance, embedded nested components and WOFF2/Brotli source revisions are not fully established.",
-    "No package code or lifecycle script was executed."
+  "publisherTransitiveNotices": "publisher-tag-lock-audit.json",
+  "native": [
+    {
+      "name": "emscripten-MIT-NCSA.txt",
+      "source": "Emscripten4.0.17/LICENSE",
+      "bytes": 5093,
+      "sha256": "620a78084fc7ca97c0b5dea9abf891f3ffcadfdbf305276f099c9c4e12fc1d86"
+    },
+    {
+      "name": "musl-COPYRIGHT.txt",
+      "source": "Emscripten4.0.17/system/lib/libc/musl/COPYRIGHT",
+      "bytes": 6204,
+      "sha256": "f9bc4423732350eb0b3f7ed7e91d530298476f8fec0c6c427a1c04ade22655af"
+    },
+    {
+      "name": "libcxx-LICENSE.txt",
+      "source": "Emscripten4.0.17/system/lib/libcxx/LICENSE.TXT",
+      "bytes": 16703,
+      "sha256": "539dd7aed86e8a4f12cbdd0e6c50c189c7d74847e4fecc64ce2c6ee3a01da38b"
+    },
+    {
+      "name": "libcxxabi-LICENSE.txt",
+      "source": "Emscripten4.0.17/system/lib/libcxxabi/LICENSE.TXT",
+      "bytes": 16706,
+      "sha256": "e2b35be49f7284a45b7baca8fc7b3ab7440e7902392b2528a457816b5bb2a15c"
+    },
+    {
+      "name": "compiler-rt-LICENSE.txt",
+      "source": "Emscripten4.0.17/system/lib/compiler-rt/LICENSE.TXT",
+      "bytes": 16708,
+      "sha256": "1a8f1058753f1ba890de984e48f0242a3a5c29a6a8f2ed9fd813f36985387e8d"
+    },
+    {
+      "name": "woff2",
+      "sourceCommit": "1bccf208bca986e53a647dfe4811322adb06ecf8",
+      "licenseFile": "licenses/dom-to-pptx-components/woff2-pinned-MIT.txt",
+      "bytes": 1071,
+      "sha256": "d42a3e363d99da22b860ab760faa37dfa9781d74c9f3ed634d05109081616513"
+    },
+    {
+      "name": "brotli",
+      "sourceCommit": "5b4769990dc14a2bd466d2599c946c5652cba4b2",
+      "licenseFile": "licenses/dom-to-pptx-components/brotli-pinned-MIT.txt",
+      "bytes": 1084,
+      "sha256": "3d180008e36922a4e8daec11c34c7af264fed5962d07924aea928c38e8663c94"
+    }
   ],
-  "woff2Binary": {
-    "bytes": 727190,
-    "sha256": "afda7e08349046612a019713c8f3baae52ee9d064c712919af020cd2634dddd6",
-    "identicalTo": "fonteditor-core@2.6.3 package/woff2/woff2.wasm",
-    "packageIntegrity": "sha512-YUryIKjkenjZ41E7JvM3V+02Ak4mTHDDTwBWgs9KBzypzHqLZHuua1UDRevZNTKawmnq1dbBAa70Jddl2+F4FQ==",
-    "packageLicense": "licenses/dom-to-pptx-components/fonteditor-core-2.6.3.txt",
-    "upstreamBuildDescription": "https://github.com/kekee000/fonteditor-core/blob/04c47400895f11d857ca83f5725c0c3c0dd552a5/woff2src/Readme.md",
-    "upstreamLicenses": [
-      {
-        "name": "google-woff2",
-        "source": "https://raw.githubusercontent.com/google/woff2/master/LICENSE",
-        "licenseFile": "licenses/dom-to-pptx-components/google-woff2-upstream.txt",
-        "sha256": "d42a3e363d99da22b860ab760faa37dfa9781d74c9f3ed634d05109081616513",
-        "version": "upstream current license; exact build revision not identified"
-      },
-      {
-        "name": "google-brotli",
-        "source": "https://raw.githubusercontent.com/google/brotli/master/LICENSE",
-        "licenseFile": "licenses/dom-to-pptx-components/google-brotli-upstream.txt",
-        "sha256": "3d180008e36922a4e8daec11c34c7af264fed5962d07924aea928c38e8663c94",
-        "version": "upstream current license; exact build revision not identified"
-      },
-      {
-        "name": "woff2-wasm",
-        "source": "https://raw.githubusercontent.com/alimilhim/woff2-wasm/master/LICENSE",
-        "licenseFile": "licenses/dom-to-pptx-components/woff2-wasm-upstream.txt",
-        "sha256": "f721b0cdc2ff82937d8c291141534487ed22ee1cf579c4699adceb4e93b92989",
-        "version": "upstream current license; exact build revision not identified"
-      }
-    ]
-  },
-  "publisherTagLockAudit": {
-    "file": "licenses/dom-to-pptx-components/publisher-tag-lock-audit.json",
-    "sha256": "d0c3b8055532180eeea37acbfb785d2145d4c465373347c4fd2bcc1a007d8d34",
-    "candidatePackages": 30
-  }
+  "inputModules": [
+    {
+      "path": "../node_modules/.pnpm/jszip@3.10.1/node_modules/jszip/dist/jszip.min.js",
+      "sha256": "acc7e41455a80765b5fd9c7ee1b8078a6d160bbbca455aeae854de65c947d59e"
+    },
+    {
+      "path": "../node_modules/.pnpm/pptxgenjs@4.0.1/node_modules/pptxgenjs/dist/pptxgen.es.js",
+      "sha256": "05844c5625e2cda3b449eb967c2246dd57ca57341886a7c28eeebca263b29bd4"
+    },
+    {
+      "path": "../node_modules/.pnpm/html2canvas@1.4.1/node_modules/html2canvas/dist/html2canvas.js",
+      "sha256": "01c5b468ffa0427e535e3019165d2efd2489650ec9cf1379d6ab79fdbf75736b"
+    },
+    {
+      "path": "../node_modules/.pnpm/opentype.js@2.0.0/node_modules/opentype.js/dist/opentype.js",
+      "sha256": "737212d8aae53d1996ef10b315e4369a1542ebb9b94c13c5f99793914745d484"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/nodejs/buffer.js",
+      "sha256": "65bedf597c9372f0adf5102adc9ad35ea6ab3f2318566b60674f91077b03c03c"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/common/lang.js",
+      "sha256": "66112ef0862505871dc6d883ee7d1169e1b6ef7865035bc032eec33557a6396d"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/data/empty.js",
+      "sha256": "1c417a36bd54ceaa447cdf10b573f2903a4a95f663cc05f3112283f460850ee0"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/data/default.js",
+      "sha256": "9b4a5bc093cddbe6b5840efc10d4075c7ba43e5bb4b2c8a3d225edb7bf1d85d2"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/getEmptyttfObject.js",
+      "sha256": "1f97208f729a4387e92f95ac21c5486a2ed3ee8912cd8c7d1cfb46c2d03a58a0"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/enum/unicodeName.js",
+      "sha256": "e476cf1b8d2a03bdfe75e3a828a3e05a4b707ddf1a734ced85b957f7fe95608b"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/enum/postName.js",
+      "sha256": "b7358d75d039364ad554fead880ed211c402a856797631e3b22ee2b524fb1b4a"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/util/string.js",
+      "sha256": "b55e985d024481afbed1f6fdd9991323779778d1dc2c393e08105e4f45f5b8b8"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/graphics/pathAdjust.js",
+      "sha256": "d3cdb396a4fde65ff75813340bf790cff8d08bb6ed3849c416d8da1a04a8dba4"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/graphics/pathCeil.js",
+      "sha256": "fe336a90c067876473f675d240ec2e44895fa960b47e6fe7e74265e31a958f0a"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/graphics/pathIterator.js",
+      "sha256": "9cc5093c367680861931f9a0d8eba74ffacacbaca1a6776aede2737f0a5461f3"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/graphics/computeBoundingBox.js",
+      "sha256": "0018576886a0bc235ce9f6ffdccf82db3a6879e2c8f6760e4221a0ce74438ac0"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/graphics/pathTransform.js",
+      "sha256": "b481b961955477827d16ec64fcac22bd4f95a09dee67df3628c2608e2e600de9"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/util/transformGlyfContours.js",
+      "sha256": "e85f28ef32189bc2ab0f837db3be26cde60992bca8f6ccc6be71ceccc7f24d14"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/util/compound2simple.js",
+      "sha256": "e235d3d763d84ff07653405cb651946ff49cd281e3921f5f659b1473da24dede"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/util/compound2simpleglyf.js",
+      "sha256": "1b649152eacf6fe7ba899b38dfce1336417d490baa67d9966b14ec9816a8e1ea"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/util/glyfAdjust.js",
+      "sha256": "e05d90956e7f7e4d89022368587ca6314c70363ba7660f65ebcdf4dd5f31638c"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/graphics/reducePath.js",
+      "sha256": "4a138e876fad7ccb77069061b58919d22cc775ab6e86cd03087339fcbdd4e651"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/util/reduceGlyf.js",
+      "sha256": "b4e7777d991564a692edb35697a412b5db8c0e03daac9126514172dc3e9101ad"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/util/optimizettf.js",
+      "sha256": "874972c2ddb87ae1f3dc624e37e2787abad3138c1dd43edecf52af8e1296e132"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/ttf.js",
+      "sha256": "3a18d9bcac3689e0ecb03b60e59572b72a2bc11daaf362fbd0c3d55cca123c21"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/common/string.js",
+      "sha256": "a7043633cd630a1a10cf614a85041aba9e38ce6e03368bfa5a6b0e89d9e3bb83"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/common/I18n.js",
+      "sha256": "92b82c15392f2a567a3d3219aeae6c488582a198eb4bbd0cf293f43b4e5ac74a"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/i18n.js",
+      "sha256": "2d6641239e3dea33068a451500663f3ab9e7f1e3cec3f9cb29c159efc81527cb"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/error.js",
+      "sha256": "841e1d92c2b7c18b697886cf36b56d4c281ff25ece930b0d107120883e5125d8"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/reader.js",
+      "sha256": "16c589d2cf4b69512c34fc82f95e397fed1afc801e990a83d74367ebbb6ee3d9"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/writer.js",
+      "sha256": "eb03766f952a2270db3a8ed9778dd614a1dfc65a4538bd4707fedd6549c19a63"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/woff2ttf.js",
+      "sha256": "73ed8699501c49eb08575ec4b2a98b1d832e8d93fa27a073c1595ecd32efc06f"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/table/struct.js",
+      "sha256": "34deb13b677822fb619dfc150a7f3e25ab096381b54cbfd277cbe4778be04eda"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/table/table.js",
+      "sha256": "1b999826f1d73b9b9c0b4532469346ae140b027d2d6d79695ed9eef129938bf7"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/table/directory.js",
+      "sha256": "6a7316d4190043cf0f7b20336639979df719d04e23f0157b95bfc49b75aebc8a"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/table/head.js",
+      "sha256": "0577cdefe410a3d76fdd90ab093f96d6d2c51a877ec7da6f80729c1f69b3ebc4"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/table/maxp.js",
+      "sha256": "f42a25bab0bcb6c8c82dc79ac4c2ec78efc954aa4d59a05d274e8668febe00e7"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/util/readWindowsAllCodes.js",
+      "sha256": "90cc91003d648138dc6529b64ab1e03e3e7b2f2ab01f40ed69415b685fcd26e1"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/table/cmap/parse.js",
+      "sha256": "533939c3b36ade4d14805886ff4175b9b0cb20ef9304efc153705b8d483538cf"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/table/cmap/write.js",
+      "sha256": "821d40a15296036207cc9f9ccc0c3304f23e5cc60b36c0630914a813eab3075e"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/table/cmap/sizeof.js",
+      "sha256": "7a79ebeb5d7f59898f4ff086a6a72e56ba1dcc6bb5cbb45b2a1a9fead6ea8e26"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/table/cmap.js",
+      "sha256": "de30045706de67bc9abf605ef0b9bd0aa1a31861b40d21fd8372f06157aea51f"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/enum/nameId.js",
+      "sha256": "913956a3633dbe9f35f9e77391810ac3a880df40a80eb95b9c00a5ef02488e11"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/enum/platform.js",
+      "sha256": "6b11096ec9bb7469e1b7d4b6f45b4e228a6f964dbc443be18da4e9dce6b52c81"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/enum/encoding.js",
+      "sha256": "0360a8b4133720080899dbda7485123778c00977b1b093d6c6417ca116f06650"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/table/name.js",
+      "sha256": "f51a0440a920dc6937ba65ea7b1a3dd76c7d0341242411dba1b0c15ff55c08ce"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/table/hhea.js",
+      "sha256": "e637a8a2e52fc39d3c4cc15b896af7ee20c9163da01a57f9df59c2d574aa82e1"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/table/hmtx.js",
+      "sha256": "d509899e32fef39c6dc4f0c0cab59d9882bca8760f5d57c7e4721fa9203944d9"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/table/post.js",
+      "sha256": "4a8afc8c633b61cb6c44fb11caeefa32e3d7584998e1e2768c5d2f05c9e48911"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/table/OS2.js",
+      "sha256": "b44f02e28c4321a28f87904fb6881351e1493e8d33a5e7185039990297d5ab28"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/table/cff/encoding.js",
+      "sha256": "86c7bd95ed3d59ec7e78c49c4c78f92a4fd9e2dd78905f51b27fb942e7cf5947"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/table/cff/cffStandardStrings.js",
+      "sha256": "6b2e6d60b1d89c794f60a1bbd79dcd8491f69aa2ab10f7dba9e4b99c1b717d82"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/table/cff/getCFFString.js",
+      "sha256": "635de5ad5388df2d7c6997118cd6cedd3d4d19b5d58ddaf0a1ca734d3cf9371d"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/table/cff/parseCFFDict.js",
+      "sha256": "84e9e8d62d721a7cafd9b60362983a5fe0cf528cc386082d15262e5d51c2c946"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/table/cff/parseCFFGlyph.js",
+      "sha256": "ce08450714ccc98cb4de453303c9e326268907a4e16c3923ed8476ab72c3ff72"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/table/cff/parseCFFCharset.js",
+      "sha256": "9b365684e765b977b2834cc2303c3a0d60b7a8d32a56866d317bb7a1038d0aeb"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/table/cff/parseCFFEncoding.js",
+      "sha256": "18ec77c13728670ae8efeb9f20f48e004d97b7e8baef7d567b57ba714e6db10d"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/table/CFF.js",
+      "sha256": "e4c652b83262b206d07c137001ae4ffe47404d2113e8d4a2b3f30c083a11a1d2"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/table/GPOS.js",
+      "sha256": "2436822a93cafd6a1a488c8c6ed01c48467ad103257e9b8989242401304c215a"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/table/kern.js",
+      "sha256": "69e4e96e9d4302882f14d89051a78366051d85d3dd49b764f1a09212150f56c1"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/table/support-otf.js",
+      "sha256": "398a1dec14489d6d7739d4c24c0d6147aae469e0f2d31560f89773c51352262e"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/otfreader.js",
+      "sha256": "c0620060d62b864388b415a562fe23c2bd2d612c78eefd1a65a68982732ec386"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/math/bezierCubic2Q2.js",
+      "sha256": "ef4c88a7600d15212346d7863e4c6e031dd5f0ece3f0cbb14a7e72f981a560fe"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/util/otfContours2ttfContours.js",
+      "sha256": "b0357538c7f7e8fff098f5e74d166fadfc7282698aed490e41a560becdc13003"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/otf2ttfobject.js",
+      "sha256": "5f24890a4a4a8a6599878644ddadcf328f3eb8c46b3bc53dd0817d84de040d11"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/eot2ttf.js",
+      "sha256": "e3aff29b3a23ef1d62d09f7ffcb22b45db5bf4381152dd579833e66ddbc15157"
+    },
+    {
+      "path": "../node_modules/.pnpm/@xmldom+xmldom@0.8.11/node_modules/@xmldom/xmldom/lib/conventions.js",
+      "sha256": "fca02624b9b84b1709b73afd83a4d1c4dbc99baacc5b5f74a56e5999fbeaac49"
+    },
+    {
+      "path": "../node_modules/.pnpm/@xmldom+xmldom@0.8.11/node_modules/@xmldom/xmldom/lib/dom.js",
+      "sha256": "1ab755a1d12834903b89dc4c0312164bdbb5bb846cad7fa6637fce29acde17a2"
+    },
+    {
+      "path": "../node_modules/.pnpm/@xmldom+xmldom@0.8.11/node_modules/@xmldom/xmldom/lib/entities.js",
+      "sha256": "332cda4081c610fdadc0266867ee5ed9f945c99d471ea7234ec61ba00cbf0e40"
+    },
+    {
+      "path": "../node_modules/.pnpm/@xmldom+xmldom@0.8.11/node_modules/@xmldom/xmldom/lib/sax.js",
+      "sha256": "a17eb8c4134e7dd179c4eeab28995e3f82e3b14df83343904df45e0ef893cc3b"
+    },
+    {
+      "path": "../node_modules/.pnpm/@xmldom+xmldom@0.8.11/node_modules/@xmldom/xmldom/lib/dom-parser.js",
+      "sha256": "03915c54c4bf44cfee38807af253abaabb022c27652918e8a233fae2d92fe1d2"
+    },
+    {
+      "path": "../node_modules/.pnpm/@xmldom+xmldom@0.8.11/node_modules/@xmldom/xmldom/lib/index.js",
+      "sha256": "9deb4e9d6d730a51c1c2b05238f8684d01e87f72b9861ba2adcad537ffc56586"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/common/DOMParser.js",
+      "sha256": "8ba2b4e43d60571b82a2a6c86ef16f1d945c48471088b391dc8a2fc7d5f42efc"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/graphics/getArc.js",
+      "sha256": "f42040a3a3a559abd6aa461b1591b73a6f2334c52276a8555480a7b62a8c2e37"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/svg/parseParams.js",
+      "sha256": "b7b2aaa6ec4c4b77c33cfd79fe2357638be8ca87b169de7e8686d61e16812588"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/svg/path2contours.js",
+      "sha256": "889807e0fbdce4c73cf981a3a40fd136ccef730d26c135d152b491a297142cf7"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/graphics/path/circle.js",
+      "sha256": "a1fee362266649a5214d8e1068b63f00005607abada3705e35cf2666e789da3f"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/svg/oval2contour.js",
+      "sha256": "13e911813049ac4bc2db0ed62ade0491c8ac3d61fee5752cbaca115b58c3da70"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/svg/polygon2contour.js",
+      "sha256": "5100dd206431857143483b9c413e040f726f2394f746c6610143307db8c9cf5a"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/svg/rect2contour.js",
+      "sha256": "fbeddb22e7da36f0f9acc6693334fdb340b04eea5a1aae7a60a08b815e5ceb6c"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/svg/parseTransform.js",
+      "sha256": "fd774ded1c1c701010445bca96e2629474e3768dfbe3fd2a0a6378d425476d87"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/graphics/matrix.js",
+      "sha256": "50031d1d44ca91d68bc10d4b98316d2aa4bd10fe19144df3ee5b10962b12f9ae"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/svg/contoursTransform.js",
+      "sha256": "e719b6698530cd8dbbd2163b2026afc3e68462c91e903dcce790ea00404a6b2f"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/svg/svgnode2contours.js",
+      "sha256": "5dcbf9f0f7c0af8563192c0ecb813acaa6a36edc12a29370e5c5b8e7565c4a29"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/graphics/pathRotate.js",
+      "sha256": "68f9d0b5e8e56bdfe8602c273f9d904b271e30960d267dc96c124ab33563564f"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/graphics/pathsUtil.js",
+      "sha256": "4a4e68b4a18bf4de3e358012f2db25c24a38165073f4edbe4705431ae423a73b"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/svg2ttfobject.js",
+      "sha256": "fa5b22d8397b6a90f8fb2a009ea41f3baef6b8bd0740a4c9b10acf271e519b52"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/table/loca.js",
+      "sha256": "d309050bc4472a4502cd18c0feda43a09039de9a6595eb9dacf27f9d827f175a"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/enum/glyFlag.js",
+      "sha256": "a310fa4098fd71bb2a5fb46eb7badbb09ac68db0645671b4cd1738be62d0dd07"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/enum/componentFlag.js",
+      "sha256": "83c0e690994fdd47f9c4f9c86d5f39701cbe8b1d9949c352160b88743c49881f"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/table/glyf/parse.js",
+      "sha256": "36bf292bdd764484abffc3e3b8742a07cfeef9d1f08722ac63283610a7c12e7d"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/table/glyf/write.js",
+      "sha256": "aa0b385251ecca340d839a967c8584f8f59cfd2c4a63a3e7e8593908d67ba231"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/table/glyf/sizeof.js",
+      "sha256": "c5e2d62747983de18d72d933e740c65074cc42f86588455068a94c0483248987"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/table/glyf.js",
+      "sha256": "f399c3171a5be248011a9d447992bb9c3b2e4bf8aaa23152e387d005c0be664d"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/table/fpgm.js",
+      "sha256": "d0e01f9377c9de7adc85557ab8017cd4fd3086583520e662420bc30b367b4b09"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/table/cvt.js",
+      "sha256": "020f6e4fa6d5741f8bf5ea870b8aefd32d2ac448a4c3d2f3ea1180502f35b74e"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/table/prep.js",
+      "sha256": "c07b7d1a66a9d48ee3140e90ddee7ced25ddcce2df2338322e1810dad809b0fd"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/table/gasp.js",
+      "sha256": "8dca457f05d0b818a9cdf3032e3c31117bfbf93840bc7edaef4394988b4eab12"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/table/kerx.js",
+      "sha256": "62319edb1ef59c904e7959d326089d781ad4c7c0d1e7666f89ab4883693800b2"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/table/support.js",
+      "sha256": "19f1c47b1dafd2db5cc67977a930694d007f04ec607de7fe45ee059b57d450cf"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/ttfreader.js",
+      "sha256": "8c8ddb9f379300f7120ace930b2ad3772329d012bf6322fda786cf8ea15a4e11"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/util/checkSum.js",
+      "sha256": "783b6907d95ece65288d767f9f9bf3f26c3f0dff903ab2b798edfdde521b469a"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/ttfwriter.js",
+      "sha256": "34876b95d1ebb9b99a4d9a352f59733fd0002747d076c30e74247007716adc18"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/ttf2eot.js",
+      "sha256": "c7debeea20a1ddd330d1f605acbfe4b41fa7406d4b6d8cade0029132ffe43b1f"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/ttf2woff.js",
+      "sha256": "87ca72746091e2451611ab67bda555de85c5bac626df079c99bd38528f00dad5"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/util/contour2svg.js",
+      "sha256": "ad783b9a45896995825bc9426eea7d67679f6cf2b2dcf4d2e14416091c195ae3"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/util/contours2svg.js",
+      "sha256": "ac7a728aee4695f079ea3c4b7334154e5ba770ef36179182e3186034e1a00994"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/util/unicode2xml.js",
+      "sha256": "3b481e7a027f972e766f6de9911e7a2fc9b416f97dfe24ae4a582e0fbc616610"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/ttf2svg.js",
+      "sha256": "939627b94d6e24daad93a53e40f98dc52b01c76d45678bbcc0df0359053c6c2f"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/ttf2symbol.js",
+      "sha256": "dd802e9da63575153dceead0dcd65f65e497f6abeba4518ef9d78f3bf7b706fd"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/woff2/woff2.js",
+      "sha256": "0deff4398727162cf497264c89aecd4c317262279c727df8074221c92f23a7ca"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/woff2/index.js",
+      "sha256": "217880b306edaae28ea8aceaf3f832b7e56c183bbf11f094e34c887e8d307f72"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/ttftowoff2.js",
+      "sha256": "add00089330845002b0be70172daff6a70bed4b231afe18fc7e9319498d4644b"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/woff2tottf.js",
+      "sha256": "de5ec6871c600062aa4a73b53c7d3c999b31967a8d776b59576899256e2ffd50"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/util/bytes2base64.js",
+      "sha256": "4aaaaf3ff4ccbcb78b505c6c4d63d7c9bdac466fe91a84c09f084011f57f55e9"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/ttf2base64.js",
+      "sha256": "6d3796b4c2eb3960feecf5bf33c02459b3b2602d9341d2c26604cfb96613492a"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/eot2base64.js",
+      "sha256": "a2b19c348a891bad65c82e8a91ed8cb3e5a353359b3cf601f691e62dc0a3d6db"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/woff2base64.js",
+      "sha256": "44e1fd6d2f4336523a4c8009684a5e84f89735b549b65021564fe808954d3825"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/svg2base64.js",
+      "sha256": "b500cc5dae5279426f6c7854ff26710600498a82700d0de7e2f70b530f19d22f"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/woff2tobase64.js",
+      "sha256": "bb5a50f8956accbb849410d3f2b057ca57967c1523d6e66d7de962695eb5c309"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/font.js",
+      "sha256": "a3f3d30d11fbc16e20ac48ff1f21f1db6a2c031e5b292e94db621189ed7d97d2"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/ttf/ttf2icon.js",
+      "sha256": "728e555a312f9ea62bf4cd84c6a5ce3cda63f81349cf61c290b47ac2eb90f6ca"
+    },
+    {
+      "path": "../node_modules/.pnpm/fonteditor-core@2.6.3/node_modules/fonteditor-core/lib/main.esm.js",
+      "sha256": "986062011a597569afa07ddbccb2085f81b7a6c12db693196076612b45ba1cf3"
+    },
+    {
+      "path": "../node_modules/.pnpm/pako@2.1.0/node_modules/pako/dist/pako.esm.mjs",
+      "sha256": "94d300905740b5f3d1200df0bc79348319d080bce8e6474ed852bda4c22690ee"
+    },
+    {
+      "path": "../src/woff2-wasm-base64.js",
+      "sha256": "196eafcf7076fb7af39100c5366badd6867f427e4407320bd2d250cfe1130aab"
+    },
+    {
+      "path": "../src/font-utils.js",
+      "sha256": "275a5005c02c94d8804859986bd90780668a2b92e5bc0ab369b89049f8dd1326"
+    },
+    {
+      "path": "../src/font-embedder.js",
+      "sha256": "503060631f4900bc2aa0aa46f066619381ed44257bb1d6311895339d926ee6f0"
+    },
+    {
+      "path": "../src/animations/xml-templates.js",
+      "sha256": "b177a2da2d275f65600e49b2f8e8bdb6dd64f50243654c51bae5ea178a674a20"
+    },
+    {
+      "path": "../src/animations/transitions.js",
+      "sha256": "431ae4fd4dd753705ed4015366a9c03313a6e113272357899fa5dab81c47436d"
+    },
+    {
+      "path": "../src/pptx-normalizer.js",
+      "sha256": "73d0d7962d6b7353e6383c5e8da640cb56e2c52f547e0b4525b784dcfbce149f"
+    },
+    {
+      "path": "../src/utils.js",
+      "sha256": "d176c1d2212ac7fa0e0d12dcdc925ddeec3ac3699dde03e58c9179435a5c21a7"
+    },
+    {
+      "path": "../src/image-processor.js",
+      "sha256": "c9462252218e2d6147b80175913330a7b3108ac8e1cca8c54f792dfcb460ba2b"
+    },
+    {
+      "path": "../src/animations/css-parser.js",
+      "sha256": "4c8c7c3f21b2c81b96b9cdd7910ae94ce681a2c24a94c1efc62e5e55a2768dff"
+    },
+    {
+      "path": "../src/index.js",
+      "sha256": "b45f601096389c45c1d89b062a152e8a8053dee722323be6c7a6f8c7f1fd1bb2"
+    }
+  ],
+  "codecLock": "resources/open-design/dom-to-pptx/codec-build-lock.json",
+  "oldEvidence": "historical-open-design-manifest.json",
+  "unresolvedCurrentBuildInputs": []
 }

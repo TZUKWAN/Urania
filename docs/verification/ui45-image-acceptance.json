@@ -111,27 +111,27 @@
   ],
   "rawReports": [
     {
-      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-image-catalog.json",
+      "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-image-catalog.json",
       "sha256": "303e42217b51095e0ddbec47bc9ca455c606dbf88056669458477d9d2dc4e4a5",
       "status": "passed"
     },
     {
-      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-image-generation.json",
+      "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-image-generation.json",
       "sha256": "7c5dfb92ffc0d6c5f78b289a8d0776624b864456fbd9336b8bf06c64b427228b",
       "status": "passed"
     },
     {
-      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-image-edit.json",
+      "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-image-edit.json",
       "sha256": "16e0bb40f832191b5afdc8d553c290fed091cb009b0d4561ef0857695998defa",
       "status": "passed"
     },
     {
-      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-image-reopen.json",
+      "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-image-reopen.json",
       "sha256": "9f729cacbbbc93471177879144e4158978961da3afcb008d2fcc1127e47eb948",
       "status": "passed"
     },
     {
-      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-image-editable.json",
+      "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-image-editable.json",
       "sha256": "e704a7fc0aebca849864390f84796b5ddd6d2d0da8fc6821f22ecf66ce7f5f58",
       "status": "passed"
     },
@@ -141,42 +141,42 @@
       "note": "Earlier audit output was overwritten by the later recorded scan; only the later file is available for independent review."
     },
     {
-      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-image-old-receipt-recovery.json",
+      "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-image-old-receipt-recovery.json",
       "sha256": "6f5c0615368dc041ba8968655561f7603b1ae9c70eb77e47e2ebabbf01785734",
       "status": "passed"
     },
     {
-      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-image-readopt.json",
+      "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-image-readopt.json",
       "sha256": "9bafeaa305b91600316177dca3fa729168932c45fa18da1bc35cd5952d5463e7",
       "status": "passed"
     },
     {
-      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-native-variants.json",
+      "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-native-variants.json",
       "sha256": "1514119881f3c9ac3d36df2683eb65fc1762f66a0e7f05da58e6e80a8dd93526",
       "status": "passed"
     },
     {
-      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-kimi-image-catalog.json",
+      "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-kimi-image-catalog.json",
       "sha256": "c0ceba9fa94af98983ef165f10e29c482902387fe810c5fbc951cdeda0aa9c98",
       "status": "failed"
     },
     {
-      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-image-rgba-reaudit.json",
+      "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-image-rgba-reaudit.json",
       "sha256": "5ec01b1b55fdcd1d36c862b2494a00ed2ce3e9761ad3ea62b3da1bdddad9054f",
       "status": "passed"
     },
     {
-      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-image-conflict.json",
+      "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-image-conflict.json",
       "sha256": "7716de57b02b815b5adba45abf0c013aaaabb4176c62ff94205979e969b655e5",
       "status": "passed"
     },
     {
-      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-image-edge-continuation.json",
+      "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-image-edge-continuation.json",
       "sha256": "2c63507f5caf766091ed88fdd52a0a245099fe2288ff01d5d0fa2f7ec810ab4f",
       "status": "passed"
     },
     {
-      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-image-secret-audit.json",
+      "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-image-secret-audit.json",
       "sha256": "de820632a9b13c4de0edef79bcbbe950ed71f30cfa2c5c0e92e0f206e6030e9d",
       "status": "passed"
     }

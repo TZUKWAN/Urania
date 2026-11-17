@@ -1,0 +1,53 @@
+{
+  "changedExistingCore": [
+    {
+      "path": "host/motion/package.js",
+      "before": "5bd0a209284ddd1057ffe94b41f6aa7e6c92e5ff6b612a410c71a3d1293a2b07",
+      "after": "fb56f6afdb6c4d70f35a43c544d53fd753dbc69141bcb1c9589722d16e8109ff"
+    },
+    {
+      "path": "host/motion/render-supervisor.js",
+      "before": "825919fd1acab2b621aee9528b71a2362101991a9405e55d075ca09a60f2208e",
+      "after": "bd738011e6ed1fb7de9f0a7cdbf2fd9857d926652e15fbe1e765e4a13ab9af6e"
+    },
+    {
+      "path": "host/motion/routes.js",
+      "before": "a5e4f34e6b7e1415acc79309c92e0536529159d2ae82d610cc4d1d5c1616fed9",
+      "after": "14e727c3865b6cda6355e2d04f3f31da0582b98194d8cdee382fc484de71aa54"
+    },
+    {
+      "path": "host/motion/tool.js",
+      "before": "f0933824c7da35045f90a75448557a3228ab1bfeb270e018bb71bc4aebf54ea4",
+      "after": "419a8c46bd120ef03c9897e88d6650218b8587fa165068314d4b92af8e60b962"
+    },
+    {
+      "path": "client/actions.js",
+      "before": "d4946b049faee9a845ef719bab1945cb2adf30c68aa7b4bf25eeede825759c1b",
+      "after": "7288c69df9d7eab88b30ac0ff61f3ae7e873334ba4be47932fee583fd40b2c2d"
+    },
+    {
+      "path": "client/motion-workspace.js",
+      "before": "d81ae33a021a4e1a7cdb2988f9c0bedcaa3e22b74ab176dd6e9b278f2c04a9c7",
+      "after": "2116c77a8f925b683043f2a5654e2feb457523cb4e98f8ac6246609c2946ddc2"
+    },
+    {
+      "path": "motion-worker/entry.mjs",
+      "before": "5900f645cef68bfb063542fd94fd127510153ede7009909fc55aa36c2baad865",
+      "after": "88552b900d7bae95834743b0f6cc3d1e0f7acb4b7ce3e67e082cbd55a4980d24"
+    },
+    {
+      "path": "package.json",
+      "before": "96f1b80068adaed4830dd7c2381da708d327dc161958c4ccccdfa88ffe2d3601",
+      "after": "0e95654dc8afd0e02f4c9a9f67b36b178ece4c792f2f36c0ce6762211f4a919d"
+    }
+  ],
+  "newCore": [
+    "host/motion/artifact-verifier.js",
+    "host/motion/resource-path.js",
+    "host/motion/runtime-env.js",
+    "motion-worker/owned-browser.mjs",
+    "scripts/motion-doctor.mjs"
+  ],
+  "nativeBinariesChangedThisTask": false,
+  "strategy": "Current Photo/Vector/Deck continuity + material/DSH/HTML sampled regression; full current npm checks and final package checks. Preserve previous scoped evidence for unchanged specialized APIs without pretending it ran again."
+}

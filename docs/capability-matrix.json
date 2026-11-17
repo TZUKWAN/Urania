@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updatedAt": "2026-11-13T10:01:25.466626+00:00",
+  "updatedAt": "2026-11-17T21:58:11.791115+00:00",
   "fullScopeComplete": false,
   "authority": "approved-plan.txt",
   "checklistTaskCount": 50,
@@ -1560,14 +1560,14 @@
     }
   ],
   "currentDiskBuild": {
-    "version": "1.3.0-dev.148",
-    "uiBuild": 162,
+    "version": "1.3.0-dev.150",
+    "uiBuild": 165,
     "nativeHost": "0.19.0+designcraft.host19",
     "ownedTestLoaded": true,
     "userProcessLoadedVersionVerified": false,
     "stagedProtocolUpgrade": false,
     "photoNativeHost": "0.18.0+designcraft.host8",
-    "deckNativeHost": "0.13.1+designcraft.host18"
+    "deckNativeHost": "0.13.1+designcraft.host19"
   },
   "verifiedFileAndMenuSlices": [
     {
@@ -1990,7 +1990,7 @@
       "test_photo_context_tools_ui.py",
       "test_deck_context_tools_ui.py"
     ],
-    "evidenceDirectory": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\release-validation-20261113",
+    "evidenceDirectory": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\release-validation-20261113",
     "userDesktopControlled": false
   },
   "currentFunctionalValidation": {
@@ -2035,5 +2035,12 @@
     "report": "verification/ui162-design-session-isolation-20261113.json",
     "status": "passed_scoped_dedicated_design_session_isolation",
     "explicitDedicatedSession": true
+  },
+  "currentAuditCloseout": {
+    "version": "1.3.0-dev.150",
+    "uiBuild": 165,
+    "approvedCoreAccepted": true,
+    "report": "../VERIFICATION_UI165.json",
+    "historicalCatalogStatusMeaning": "Original50/upstream inventory statuses are historical broader scope, not an implicit current implementation backlog or universal operation acceptance."
   }
 }

@@ -9,6 +9,8 @@ import {htmlRoutes} from './html-routes.js';
 import {registerHtmlTool} from './html-tools.js';
 import {installedVersion} from './installed-version.js';
 import {registerEditorTools} from './editor-tools.js';
+import {registerMotionTool} from './motion/tool.js';
+import {DesignFeedback,registerFeedbackTool,feedbackRoutes} from './design-feedback.js';
 import {OpenDesignLibrary} from './open-design-library.js';
 import {registerOpenDesignTools} from './open-design-tools.js';
 import {DshImageProviders} from './image-provider.js';
@@ -29,6 +31,9 @@ import {falRealtimeRoutes} from './fal-realtime-routes.js';
 import {VeniceAudio} from './venice-audio.js';
 import {registerVeniceAudioTool} from './venice-audio-tool.js';
 import {motionRoutes} from './motion/routes.js';
+import {MotionPreviewHost} from './motion/preview-host.js';
+import {getLease} from './motion/sessions.js';
+import {requireDesignScope} from './design-scope.js';
 import {VeniceVideo} from './venice-video.js';
 import {registerVeniceVideoTool} from './venice-video-tool.js';
 import {FigmaSource} from './figma-source.js';
@@ -512,7 +517,7 @@ function buildRoutes(ctx, hub, jobs, native, status, images, media, editors, stu
   for(const kind of ['open','commit'])routes.push({kind:'exact',path:'/designcraft/api/v1/media/'+kind,handler:guard(async(req,res)=>{if(req.method!=='POST')throw new store.StoreError('POST required',405);const body=await readJsonBody(req),root=store.validateRoot(body.root),result=await media[kind]({...body,root});for(const send of hub.hub(root).subscribers)try{send('event',{kind:'doc',id:result.id});}catch{}sendJson(res,200,result);})});
 
 	// serve client ES modules from the package (engine, tools, ui, ...)
-	const clientFiles = [...EDITOR_SHARED_MODULES,'html-sandbox.js','html-workspace.js','figma-mcp-panel.js','brief-dimensions.js','image-adoption.js','studio-image-workspace.js','image-api-settings.js','deck-local-tools.js','local-workflow-panel.js','mathml-to-omml.js','stock-panel.js','fal-realtime-panel.js','fal-workflow-panel.js','pixelbin-workspace.js','ecommerce-panel.js','workflow-image-panel.js','legacy-migration-workspace.js','native-context-tools.js','ai-canvas.js','chat-split.js','design-session.js','native-ai-input.js','selection-ai.js','brand-panel.js','native-workspace.js','native-controller.js','native-reference.js','editor-surface.js','variant-ui.js', 'preview-view.js', 'image-ui.js', 'svg-export.js', 'selection.js', 'engine.js', 'vector-nodes.js', 'dsh-context.js', 'path.js', 'svgtools.js', 'sync.js', 'merge.js', 'recovery.js', 'tools.js', 'deck.js', 'actions.js', 'ui.js', 'motion-workspace.js', 'motion-reference.js'];
+	const clientFiles = ['design-diagnostics.js','feedback-contract.js','design-feedback.js',...EDITOR_SHARED_MODULES,'html-sandbox.js','html-workspace.js','figma-mcp-panel.js','brief-dimensions.js','image-adoption.js','studio-image-workspace.js','image-api-settings.js','deck-local-tools.js','local-workflow-panel.js','mathml-to-omml.js','stock-panel.js','fal-realtime-panel.js','fal-workflow-panel.js','pixelbin-workspace.js','ecommerce-panel.js','workflow-image-panel.js','legacy-migration-workspace.js','native-context-tools.js','ai-canvas.js','chat-split.js','design-session.js','native-ai-input.js','selection-ai.js','brand-panel.js','native-workspace.js','native-controller.js','native-reference.js','editor-surface.js','variant-ui.js', 'preview-view.js', 'image-ui.js', 'svg-export.js', 'selection.js', 'engine.js', 'vector-nodes.js', 'dsh-context.js', 'path.js', 'svgtools.js', 'sync.js', 'merge.js', 'recovery.js', 'tools.js', 'deck.js', 'actions.js', 'ui.js', 'motion-workspace.js', 'motion-reference.js', 'motion-preview.js'];
 	for (const file of clientFiles) {
 		routes.push({
 			kind: 'exact', path: '/designcraft/api/v1/client/' + file,
@@ -530,6 +535,7 @@ function buildRoutes(ctx, hub, jobs, native, status, images, media, editors, stu
 	}
 
 	routes.push(...editorRoutes(ctx,editors,{guard,readJsonBody,sendJson}));
+	routes.push(...feedbackRoutes(editors.feedback,{guard,readJsonBody,sendJson}));
 	routes.push(...htmlRoutes(editors,{guard,readJsonBody,sendJson,library:openDesignLibrary,stitch}));
 	routes.push(...pixelbinRoutes(editors,pixelbin,{guard,readJsonBody,sendJson}));
 	routes.push(...figmaMcpRoutes(editors,figmaMcp,{guard,readJsonBody,sendJson}));
@@ -542,7 +548,11 @@ function buildRoutes(ctx, hub, jobs, native, status, images, media, editors, stu
  routes.push(...deckLocalInputRoutes(editors,{guard,readJsonBody,sendJson}));
  routes.push(...localWorkflowRoutes(editors,{guard,readJsonBody,sendJson}));
 	routes.push(...legacyMigrationRoutes(editors,{guard,readJsonBody,sendJson}));
-	routes.push(...nativeVariantRoutes(editors,{guard,readJsonBody,sendJson}));
+ routes.push(...nativeVariantRoutes(editors,{guard,readJsonBody,sendJson}));
+ routes.push(...motionRoutes({previewHost:editors.motionPreview},{guard,resolveHttpScope:(_req,body,url)=>{
+  const sessionId=body.sessionId||url.searchParams.get('sessionId');
+  return {sessionId,root:requireDesignScope(editors,sessionId,body.root||url.searchParams.get('root'))};
+ }}));
 	return routes;
 }
 
@@ -602,8 +612,14 @@ export function apply(ctx,config={}) {
   const status={toolReady:false};
   const broadcast=(root,event)=>{for(const send of hub.hub(root).subscribers){try{send('event',event);}catch{}}};
   const editors=new EditorSessions({resolveScope:id=>ctx.get('sessions')?.get(id)?.header?.cwd,onChange:broadcast});
+  editors.motionPreview=new MotionPreviewHost({isActive:ticket=>{
+   try{const lease=getLease(ticket.leaseId);return !!lease&&!lease.revoked&&lease.sessionId===ticket.sessionId&&lease.root===ticket.root&&lease.projectId===ticket.projectId&&lease.viewEpoch===ticket.viewEpoch&&requireDesignScope(editors,ticket.sessionId,ticket.root)===ticket.root;}catch{return false;}
+  }});
+  ctx.effect(()=>()=>{void editors.motionPreview.dispose();},'designcraft: unprivileged motion preview');
   ctx.effect(()=>()=>editors.dispose(),'designcraft: professional editor sessions');
   registerEditorTools(ctx,editors);
+  registerMotionTool(ctx,editors);
+  editors.feedback=new DesignFeedback(editors);registerFeedbackTool(ctx,editors.feedback);
   const stockImages=new StockImages({version:HOST_PACKAGE.version});editors.stockImages=stockImages;registerStockTool(ctx,editors,stockImages);
   ctx.effect(()=>()=>stockImages.dispose(),'designcraft: public image search lifetime');
   // Lazy source-data loading: a missing/corrupt OD index reports a tool failure,
@@ -654,15 +670,6 @@ export function apply(ctx,config={}) {
 	{
 		const routes = [...buildRoutes(ctx, hub, jobs, native, status, images, media, editors, studioImage, openDesignLibrary, stitch, pixelbin, figmaMcp, ecommerce, falWorkflows, replicateWorkflows, falRealtime),...editorAssetRoutes(PKG_DIR)];
 		const disposers = [];
-		const motionRouteList = motionRoutes({ execution: { agent: { session: 'host' } } });
-		for (const route of motionRouteList) {
-			try {
-				const offMotion = ctx.webServer.register(route);
-				if (typeof offMotion === 'function') disposers.push(offMotion);
-			} catch (error) {
-				console.warn('[urania] motion route failed to register:', route.path, String(error));
-			}
-		}
 		for (const route of routes) {
 			try {
 				const off = ctx.webServer.register(route);

@@ -2,7 +2,7 @@
   "status": "passed",
   "scope": "actual native Photo/Deck UI and real background WASM; 3 explicitly linked pictures across 3 pages/2 sources plus independent 4th use; optional real response-loss injection",
   "codeRoot": "D:\\METIS超级合并\\dsh-plugin\\designcraft",
-  "root": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\linked-update-project\\c3f22a8a-6153-4c79-bdb7-b3adfc883745",
+  "root": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\linked-update-project\\c3f22a8a-6153-4c79-bdb7-b3adfc883745",
   "checks": [
     {
       "name": "four actual uses remain independent until UI explicitly links exactly three across two saved sources",
@@ -72,7 +72,7 @@
   ],
   "owned": {
     "workspaceId": "ca2a2964-7b6e-4963-8380-46bbef90a3d5",
-    "sessionId": "PUBLIC-REDACTED"
+    "sessionId": "session-PUBLIC-REDACTED"
   },
   "update": {
     "id": "update-71872654-7758-4bf2-af21-baca64304ed2",

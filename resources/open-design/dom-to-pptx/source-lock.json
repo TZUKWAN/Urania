@@ -1,29 +1,52 @@
 {
-  "repository": "nexu-io/open-design",
-  "revision": "12d970eacc8971150e3c76470d2a9afe16dc2ed1",
-  "path": "apps/desktop/vendor/dom-to-pptx",
+  "repository": "atharva9167j/dom-to-pptx",
+  "revision": "c0447adc47d3bc734d017050834edf0941adc189",
   "upstreamVersion": "2.0.1",
+  "localBuild": "urania.codec1",
   "license": "MIT",
   "files": [
     {
       "name": "LICENSE",
       "bytes": 1110,
-      "gitSha1": "8669f6f34fd8abd618d7af756787e52397918c74",
       "sha256": "03e47f0d43133a09b8e91ca80eeb50fd8cd94620cf1f59712163909b0ec9b182"
     },
     {
       "name": "README.md",
-      "bytes": 1623,
-      "gitSha1": "7d44330a085c5b415e25cef55f2763da7558305b",
-      "sha256": "6420642a11affcf9cd3dbca1e0433b540c8909e66238f3a46b3ac3be98d40cec"
+      "bytes": 1134,
+      "sha256": "25f27dc1d69d8c341befe07b58df15ee0ef112965770eece27e9f72258e779a7"
     },
     {
       "name": "dom-to-pptx.bundle.js.gz",
-      "bytes": 1008075,
-      "gitSha1": "43f7b7e16e9f1bf52f54d8bf522e9e0805a54d14",
-      "sha256": "87f6ba93e4f833e0e9a44e80f313d10c20bea6b165b2949f3aeb62be5ee1cb8c",
-      "expandedBytes": 3802497,
-      "expandedSha256": "0308535fd30c30fe78df78ed7d45f2d24e7393285bf09acbb2090189b4d50558"
+      "bytes": 981062,
+      "sha256": "11577016b721fd501c8ddb7027fb018c7e46d37819b7217db15b07aca7b7edb5",
+      "expandedBytes": 3635939,
+      "expandedSha256": "342b13fd102ebefa6325b592b9b4c58cc4e903c2d1ca29421ca08c795f513d63"
+    },
+    {
+      "name": "dom-to-pptx.bundle.js.map.gz",
+      "bytes": 1257760,
+      "sha256": "76b7b1b1c794a41ce6f88a138df09323b8a97754a85a08fc43b4cda632d80c92"
+    },
+    {
+      "name": "codec-build-lock.json",
+      "bytes": 11405,
+      "sha256": "a7aa1e4f28abd43265daf18685b5324d5afdaf2b60634c639890d9ad7c8bf860"
+    },
+    {
+      "name": "codec-source.zip",
+      "bytes": 26929371,
+      "sha256": "89f5fdce13c0a4a31495db53fcf0cd8171af1ec8d529e1e94fc08a95fc629e3e"
+    },
+    {
+      "name": "rebuild/rebuild.py",
+      "bytes": 5969,
+      "sha256": "d1df3006341136d87c77ae20174401af8f2a1d354079eafaac61858f0b8f8e50"
+    },
+    {
+      "name": "rebuild/README.md",
+      "bytes": 2286,
+      "sha256": "dcf74cacb1ea796c9ee7ef3b0470bc0fd3054cea5ed73402ec1d6d286bbe4be9"
     }
-  ]
+  ],
+  "historicalSourceLock": "historical-open-design/source-lock.json"
 }

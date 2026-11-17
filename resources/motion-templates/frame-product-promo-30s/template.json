@@ -19,6 +19,16 @@
   "aspect": "16:9",
   "fps": 30,
   "durationSec": 30,
+  "sceneSlots": [
+    {"id":"01-problem-type","start":0,"duration":4},
+    {"id":"02-card-to-logo","start":4,"duration":4},
+    {"id":"03-brand-reveal","start":8,"duration":2},
+    {"id":"04-benefits-flowchart","start":10,"duration":4.8},
+    {"id":"05-product-surfaces","start":14.8,"duration":4.7},
+    {"id":"06-wheel-pillars","start":19.5,"duration":2.5},
+    {"id":"07-foundation","start":22,"duration":3},
+    {"id":"08-cta-outro","start":25,"duration":5}
+  ],
   "formats": [
     "mp4",
     "webm"

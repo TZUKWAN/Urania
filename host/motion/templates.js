@@ -87,6 +87,13 @@ export function templateSources(id) {
 	// 我们已静态内联，直接展开为活节点（否则时间线 tween 挂在惰性节点上，渲染全黑）。
 	if (Buffer.isBuffer(sources['index.html'])) {
 		let html = sources['index.html'].toString('utf8');
+		// Inlined child files carry local zero-based clocks. Preserve the parent
+		// composition's authored slots instead of starting every scene at zero.
+		for(const slot of meta.sceneSlots||[]){
+			if(!/^[\w-]+$/.test(slot.id)||!Number.isFinite(slot.start)||!Number.isFinite(slot.duration))throw new Error('Invalid template scene slot');
+			const pattern=new RegExp('(<div\\b[^>]*data-composition-id="'+slot.id+'"[^>]*)(>)','i');
+			html=html.replace(pattern,(_match,attrs,end)=>attrs.replace(/data-start="[^"]*"/,'data-start="'+slot.start+'"').replace(/data-duration="[^"]*"/,'data-duration="'+slot.duration+'"')+end);
+		}
 		html = html.replace(/<template\b[^>]*>([\s\S]*?)<\/template>/gi, '$1');
 		sources['index.html'] = Buffer.from(html, 'utf8');
 	}

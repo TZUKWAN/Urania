@@ -177,3 +177,211 @@ condition = "AND"
 regexTarget = "line"
 paths = ['''(?:^|/)web-runtime-lock\.json$''']
 regexes = ['''^\s*"crates/ui-egui/src/app/keys\.rs": "ef5d1abe023390292d178ee1c0941e3ccac4c08eb9c92f18119efa03a7149050",\s*$''']
+
+[[allowlists]]
+targetRules = ["generic-api-key"]
+description = "Exact task-owned render idempotency operation ID; not a credential"
+condition = "AND"
+regexTarget = "line"
+paths = ['''(?:^|/)docs/verification/ui165\-closeout/C05\-export\-ui\.json$''']
+regexes = ['''^\s*"opKey":\ "ui\-render\-49581c87\-6d28\-49d6\-99a7\-44f9b8f0c9d1",\s*$''']
+
+[[allowlists]]
+targetRules = ["generic-api-key"]
+description = "Exact task-owned render idempotency operation ID; not a credential"
+condition = "AND"
+regexTarget = "line"
+paths = ['''(?:^|/)docs/verification/ui165\-closeout/C05\-export\-ui\.json$''']
+regexes = ['''^\s*"opKey":\ "ui\-render\-a7219176\-7aa0\-486e\-9284\-7b416379d7b0"\s*$''']
+
+[[allowlists]]
+targetRules = ["generic-api-key"]
+description = "Exact task-owned render idempotency operation ID; not a credential"
+condition = "AND"
+regexTarget = "line"
+paths = ['''(?:^|/)docs/verification/ui165\-closeout/C05\-export\-ui\.json$''']
+regexes = ['''^\s*"opKey":\ "ui\-render\-47ec38e1\-90bf\-49e0\-a634\-d69e0206ba2c",\s*$''']
+
+[[allowlists]]
+targetRules = ["generic-api-key"]
+description = "Exact historical/test native material provenance identity; not an authentication credential"
+condition = "AND"
+regexTarget = "line"
+paths = ['''(?:^|/)docs/verification/svg\-deck\-stage\-audit\.json$''']
+regexes = ['''^\s*"originToken":\ "dfb075366297102b65423b3dc23ac5f9",\s*$''']
+
+[[allowlists]]
+targetRules = ["generic-api-key"]
+description = "Exact historical/test native material provenance identity; not an authentication credential"
+condition = "AND"
+regexTarget = "line"
+paths = ['''(?:^|/)docs/verification/svg\-deck\-stage\-audit\.json$''']
+regexes = ['''^\s*"originToken":\ "dff1fb62f96df6828d7f6fe77132e0ac",\s*$''']
+
+[[allowlists]]
+targetRules = ["generic-api-key"]
+description = "Exact historical/test native material provenance identity; not an authentication credential"
+condition = "AND"
+regexTarget = "line"
+paths = ['''(?:^|/)docs/verification/svg\-deck\-stage\-audit\.json$''']
+regexes = ['''^\s*"originToken":\ "dff1fb62f96df6828d7f6fe77132e0ac"\s*$''']
+
+[[allowlists]]
+targetRules = ["generic-api-key"]
+description = "Exact historical/test native material provenance identity; not an authentication credential"
+condition = "AND"
+regexTarget = "line"
+paths = ['''(?:^|/)docs/verification/ui165\-closeout/svg\-deck\-browser\.json$''']
+regexes = ['''^\s*"originToken":\ "9e648b944912fa41de9323265ca22e97",\s*$''']
+
+[[allowlists]]
+targetRules = ["generic-api-key"]
+description = "Exact historical/test native material provenance identity; not an authentication credential"
+condition = "AND"
+regexTarget = "line"
+paths = ['''(?:^|/)docs/verification/ui165\-closeout/svg\-deck\-browser\.json$''']
+regexes = ['''^\s*"originToken":\ "e5cd78d66ac536bd0cdc20ad13d49f05",\s*$''']
+
+[[allowlists]]
+targetRules = ["generic-api-key"]
+description = "Exact historical/test native material provenance identity; not an authentication credential"
+condition = "AND"
+regexTarget = "line"
+paths = ['''(?:^|/)docs/verification/ui165\-closeout/svg\-deck\-browser\.json$''']
+regexes = ['''^\s*"originToken":\ "e5cd78d66ac536bd0cdc20ad13d49f05"\s*$''']
+
+[[allowlists]]
+targetRules = ["generic-api-key"]
+description = "Exact historical/test native material provenance identity; not an authentication credential"
+condition = "AND"
+regexTarget = "line"
+paths = ['''(?:^|/)docs/verification/ui165\-closeout/C12\-four\-engine\-flow\-attempt5\.json$''']
+regexes = ['''^\s*"originToken":\ "1832e0c3a947ca63bcf27d64f7313b37",\s*$''']
+
+[[allowlists]]
+targetRules = ["generic-api-key"]
+description = "Exact historical/test native material provenance identity; not an authentication credential"
+condition = "AND"
+regexTarget = "line"
+paths = ['''(?:^|/)docs/verification/ui165\-closeout/C12\-four\-engine\-flow\-attempt5\.json$''']
+regexes = ['''^\s*"originToken":\ "0e6c110d30918a17962390b1c45c96d5",\s*$''']
+
+[[allowlists]]
+targetRules = ["generic-api-key"]
+description = "Exact historical/test native material provenance identity; not an authentication credential"
+condition = "AND"
+regexTarget = "line"
+paths = ['''(?:^|/)docs/verification/svg\-vector\-stage\-audit\.json$''']
+regexes = ['''^\s*"originToken":\ "e8084f17eb3f48bf3d2ba5528ac1c481",\s*$''']
+
+[[allowlists]]
+targetRules = ["generic-api-key"]
+description = "Exact historical/test native material provenance identity; not an authentication credential"
+condition = "AND"
+regexTarget = "line"
+paths = ['''(?:^|/)docs/verification/svg\-vector\-stage\-audit\.json$''']
+regexes = ['''^\s*"originToken":\ "d69d1ded1981c40cfa7ecc925d80a513",\s*$''']
+
+[[allowlists]]
+targetRules = ["generic-api-key"]
+description = "Exact historical/test native material provenance identity; not an authentication credential"
+condition = "AND"
+regexTarget = "line"
+paths = ['''(?:^|/)docs/verification/svg\-vector\-stage\-audit\.json$''']
+regexes = ['''^\s*"originToken":\ "24a951b559cec07827daacf31ab5c93f",\s*$''']
+
+[[allowlists]]
+targetRules = ["generic-api-key"]
+description = "Exact historical/test native material provenance identity; not an authentication credential"
+condition = "AND"
+regexTarget = "line"
+paths = ['''(?:^|/)docs/verification/ui165\-closeout/svg\-vector\-browser\.json$''']
+regexes = ['''^\s*"originToken":\ "852700bb93ff2340d0a2ae0ec6d04f19",\s*$''']
+
+[[allowlists]]
+targetRules = ["generic-api-key"]
+description = "Exact historical/test native material provenance identity; not an authentication credential"
+condition = "AND"
+regexTarget = "line"
+paths = ['''(?:^|/)docs/verification/ui165\-closeout/svg\-vector\-browser\.json$''']
+regexes = ['''^\s*"originToken":\ "162257351f364da7ce435c676983f9c1",\s*$''']
+
+[[allowlists]]
+targetRules = ["generic-api-key"]
+description = "Exact historical/test native material provenance identity; not an authentication credential"
+condition = "AND"
+regexTarget = "line"
+paths = ['''(?:^|/)docs/verification/ui165\-closeout/svg\-vector\-browser\.json$''']
+regexes = ['''^\s*"originToken":\ "0d2ba295c15b0cd8b76863200a30397a",\s*$''']
+
+[[allowlists]]
+targetRules = ["generic-api-key"]
+description = "Exact historical/test native material provenance identity; not an authentication credential"
+condition = "AND"
+regexTarget = "line"
+paths = ['''(?:^|/)docs/verification/native\-origins\-stage\-audit\.json$''']
+regexes = ['''^\s*"originToken":\ "1d88d17c7022f774e606dbd8d8f0a366",\s*$''']
+
+[[allowlists]]
+targetRules = ["generic-api-key"]
+description = "Exact SHA256 of a source file independently verified in the installed Deck build inputs"
+condition = "AND"
+regexTarget = "line"
+paths = ['''(?:^|/)docs/verification/ui165\-closeout/C10\-deck\-host19\-build\.json$''']
+regexes = ['''^\s*"apps/deckcraft\-web/src/api\.rs":\ "da8734620b55c6f9928242cf1fbe01e059e0c8c24f9d94df22ebc9471bd265e6",\s*$''']
+
+[[allowlists]]
+targetRules = ["generic-api-key"]
+description = "Exact SHA256 of a source file independently verified in the installed Deck build inputs"
+condition = "AND"
+regexTarget = "line"
+paths = ['''(?:^|/)docs/verification/ui165\-closeout/C10\-deck\-host19\-build\.json$''']
+regexes = ['''^\s*"crates/ui\-egui/src/app/keys\.rs":\ "ef5d1abe023390292d178ee1c0941e3ccac4c08eb9c92f18119efa03a7149050",\s*$''']
+
+[[allowlists]]
+targetRules = ["generic-api-key"]
+description = "Exact historical/test native material provenance identity; not an authentication credential"
+condition = "AND"
+regexTarget = "line"
+paths = ['''(?:^|/)docs/verification/svg\-inplace\-core\-audit\.json$''']
+regexes = ['''^\s*"originToken":\ "e5bb2c4aaf4dd343f2d866bc6d595b4c",\s*$''']
+
+[[allowlists]]
+targetRules = ["generic-api-key"]
+description = "Exact historical/test native material provenance identity; not an authentication credential"
+condition = "AND"
+regexTarget = "line"
+paths = ['''(?:^|/)docs/verification/svg\-inplace\-core\-audit\.json$''']
+regexes = ['''^\s*"originToken":\ "c7e3d592e89b501edd94781f792963c3",\s*$''']
+
+[[allowlists]]
+targetRules = ["generic-api-key"]
+description = "Exact historical/test native material provenance identity; not an authentication credential"
+condition = "AND"
+regexTarget = "line"
+paths = ['''(?:^|/)docs/verification/svg\-inplace\-core\-audit\.json$''']
+regexes = ['''^\s*"originToken":\ "ea442197ce24ef8b2cff524bb6577234",\s*$''']
+
+[[allowlists]]
+targetRules = ["generic-api-key"]
+description = "Exact historical/test native material provenance identity; not an authentication credential"
+condition = "AND"
+regexTarget = "line"
+paths = ['''(?:^|/)docs/verification/svg\-inplace\-core\-audit\.json$''']
+regexes = ['''^\s*"originToken":\ "a1b296979279093773d5db538c4daba3",\s*$''']
+
+[[allowlists]]
+targetRules = ["generic-api-key"]
+description = "Exact historical/test native material provenance identity; not an authentication credential"
+condition = "AND"
+regexTarget = "line"
+paths = ['''(?:^|/)docs/verification/svg\-inplace\-core\-audit\.json$''']
+regexes = ['''^\s*"originToken":\ "a1b296979279093773d5db538c4daba3"\s*$''']
+
+[[allowlists]]
+targetRules = ["generic-api-key"]
+description = "Exact public native metadata attribute name in the newly retained source archive"
+condition = "AND"
+regexTarget = "line"
+paths = ['''(?:^|/)docs/engine\-source\-snapshots\-ui165\.zip!vectorcraft\-host/crates/engine/src/cmd/place/legacy_svg\.rs$''']
+regexes = ['''^\s*if\ node\.extras\(\)\.attrs\.as_ref\(\)\.is_some_and\(\|a\|\ a\.data\.iter\(\)\.any\(\|\(key,\ _\)\|\ key\ ==\ "dsh\-material\-v1"\)\)\ \{\s*$''']

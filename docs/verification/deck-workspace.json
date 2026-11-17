@@ -2,7 +2,7 @@
   "status": "passed",
   "scope": "actual registered DSH Deck engine/controller, physical native edit and reference, genuine source/PPTX/PNG/UI downloads and fresh reopen; no model",
   "codeRoot": "D:\\METIS超级合并\\dsh-plugin\\designcraft",
-  "root": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\deck-workspace-project\\07a39462-8d7f-4230-8196-730d3181808c",
+  "root": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\deck-workspace-project\\07a39462-8d7f-4230-8196-730d3181808c",
   "checks": [
     {
       "name": "actual new-presentation menu creates and durably saves a genuine native Deck source",
@@ -43,7 +43,7 @@
   ],
   "owned": {
     "workspaceId": "2f0bc6e5-2858-4829-ad15-527d17366089",
-    "sessionId": "PUBLIC-REDACTED"
+    "sessionId": "session-PUBLIC-REDACTED"
   },
   "sourceId": "work-9404f295-d3f2-4789-8108-cf37c252a664",
   "targetShapeId": 260,

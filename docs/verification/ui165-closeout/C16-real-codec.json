@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "realCodec": true,
+  "results": [
+    {
+      "name": "IBMPlexSerif-Regular",
+      "inputBytes": 160380,
+      "woffBytes": 50900,
+      "decodedBytes": 160824
+    },
+    {
+      "name": "InstrumentSerif-Regular",
+      "inputBytes": 69312,
+      "woffBytes": 27176,
+      "decodedBytes": 69464
+    }
+  ],
+  "repeatedDecodes": 10,
+  "invalidInputsRejected": 3,
+  "eotBytes": 73616
+}

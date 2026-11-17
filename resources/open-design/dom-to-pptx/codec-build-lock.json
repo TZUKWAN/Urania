@@ -1,0 +1,253 @@
+{
+  "schemaVersion": 1,
+  "build": "urania.codec1",
+  "sources": [
+    {
+      "component": "emsdk",
+      "repository": "emscripten-core/emsdk",
+      "commit": "dadf06a88d62a20b4f711250b8447409352aa4d7",
+      "archiveSha256": "9fb9c01932aa1106e187137bff2f3882f8e4d4e7f76aaf2e266ab3c41b41b671",
+      "archiveBytes": 206460,
+      "sourceFiles": 148,
+      "expandedBytes": 1043221
+    },
+    {
+      "component": "woff2",
+      "repository": "google/woff2",
+      "commit": "1bccf208bca986e53a647dfe4811322adb06ecf8",
+      "archiveSha256": "e407aff9148e52cfe0e975a88054d99ff4c7912d0f54ba4bec4a150175d047c8",
+      "archiveBytes": 38970,
+      "sourceFiles": 45,
+      "expandedBytes": 164939
+    },
+    {
+      "component": "dom-to-pptx",
+      "repository": "atharva9167j/dom-to-pptx",
+      "commit": "c0447adc47d3bc734d017050834edf0941adc189",
+      "archiveSha256": "06acbd3e1674b865bb3ec8316f052b1a47ff2f35adc2e13b23ee49cb41f06662",
+      "archiveBytes": 2978675,
+      "sourceFiles": 70,
+      "expandedBytes": 4043354
+    },
+    {
+      "component": "brotli",
+      "repository": "google/brotli",
+      "commit": "5b4769990dc14a2bd466d2599c946c5652cba4b2",
+      "archiveSha256": "3a3c53b56a961ba24d331a5b7882b0bec7f2e3c7be7cf77b9db18271c28151ce",
+      "archiveBytes": 23731538,
+      "sourceFiles": 319,
+      "expandedBytes": 35068622
+    }
+  ],
+  "bindingBase": {
+    "repository": "kekee000/fonteditor-core",
+    "commit": "04c47400895f11d857ca83f5725c0c3c0dd552a5",
+    "file": "woff2src/woff2.cpp",
+    "originalSha256": "09bdd0fe7eff3dc244244e9e0f221062e47e4e41ee9e69de211c216c93442b8b"
+  },
+  "compilation": {
+    "status": "passed",
+    "sourceInputs": {
+      "woff2-binding.cpp": "e36f019aedb7e21f112082df7eaec692765a52d63d3cc1f821c2ea90dc19b327",
+      "woff2/src/woff2_dec.cc": "d1d6390075cf6fdfabfc90bccc0feafcc9a64f36f1e1bfbdc48df80e919ee873",
+      "woff2/src/variable_length.cc": "312ae779051d6a58ba07b1d2ee3f67312d2bfe3b3d2b1826fddbffa303abdeb2",
+      "woff2/src/woff2_common.cc": "f31ae8fbad4396a2566cdf454f5817928c615ecd9aa6d25b47698c1e6edc7e6b",
+      "woff2/src/woff2_out.cc": "3bc9fb694b3e0d226408145f62290442c27b642ac6aa0e3602cb7764b06e5b0e",
+      "woff2/src/table_tags.cc": "e410b3da698a7d8f324d1062cf46cb8823c2dd35a51a14d4a4c491f681b4015f",
+      "woff2/src/woff2_enc.cc": "73b9178d8c17626170bfee3faa2c10f46e40b44e915640a277ff14e3d4f28975",
+      "woff2/src/font.cc": "11a479b093169b970a567bb65a09b88b8be20f66981c9d8e6612da8a03967403",
+      "woff2/src/glyph.cc": "bb6fb431275974f79b51d166e92e342bc52d4d44f7efad25034f96ad8a637109",
+      "woff2/src/normalize.cc": "b67756025a2fcf1a04c2186246c045aa42b1d1a4c5f999d6edf38ac18883be9c",
+      "woff2/src/transform.cc": "16e6c8105181e5b2d12dab9fc4324ce11320035cd54b793ea61975d657b1c4f3",
+      "brotli/c/common/dictionary.c": "9f4484e7937181140f9b2e005c56325fc71c507f7e65bd823b44b595a880fb51",
+      "brotli/c/dec/bit_reader.c": "6eb87211d0cd14ea5167f67df6f522146af6fc0e64e25e4a989854bb794300f5",
+      "brotli/c/dec/decode.c": "b4a2fc3fcf9b899a593424c33d7408dc050db760c1913759b8bab48c842bce8b",
+      "brotli/c/dec/huffman.c": "178c345e6aa6762fad54fa6e8234cc9ec148f99d33440bc1469d5253af5275a6",
+      "brotli/c/dec/state.c": "6b3d575513f46c915aab2bea5c3bbd5c7deb1934e4076cd3d185add6d443d5bd",
+      "brotli/c/enc/backward_references.c": "a49ea86ea355e7fb6556112958dcbb7a48855ad4e64c5ba07a98f96fedabd722",
+      "brotli/c/enc/backward_references_hq.c": "60b8bcecb7e6928691d803164918966a7ae5d71262df240e42571ee72a63c377",
+      "brotli/c/enc/bit_cost.c": "02aa86a37140728aa5154aef19653a3e0c235869058f57cee483cdac14d1c87c",
+      "brotli/c/enc/block_splitter.c": "4c9c67d0bbdb2a6ef2ff89d023f6ebe2b38978f12a710a415ce01914eeb7b6b0",
+      "brotli/c/enc/brotli_bit_stream.c": "3a62b93e56df37498ca86768f79e9a82eff8c405316053d48823bb8522d51d97",
+      "brotli/c/enc/cluster.c": "d5d7828c6fd05744de7ed754c42c87350d32b0ca552415b448921ec8017aaf17",
+      "brotli/c/enc/compress_fragment.c": "de9ebe3138731018d71ab9964db09baf9bfb874ae4e55f881df9f68b6b0d28e7",
+      "brotli/c/enc/compress_fragment_two_pass.c": "46d88e0efc2175e86b72a1efa84463fc12044c65fc86d25650a5a585df397548",
+      "brotli/c/enc/dictionary_hash.c": "d3038bf0e18048e1e4ad7de745b122ca56245e0d666c1ee624ce0b25d5b6c20a",
+      "brotli/c/enc/encode.c": "2a0c5aa9b93f928cb3fd9d31c9c1d99f0089dd93c9665ca497d34b2ecaff8ca8",
+      "brotli/c/enc/entropy_encode.c": "9a4f491ac09d780bb41132e6d602e8e23b26e3b431b57348219ff7b1db22bb1b",
+      "brotli/c/enc/histogram.c": "07c342550ce74f72ebb00953a58c873324180b419cd6d11776bb7978fcbd8781",
+      "brotli/c/enc/literal_cost.c": "9ec26d36515ebf231e309b80c9d07132b250fc49411fcf1d84f899c91e0872ef",
+      "brotli/c/enc/memory.c": "01649f1d82b801522b0f427e9bbc5897cbb4079a94209ce4131322774767e740",
+      "brotli/c/enc/metablock.c": "2ce218509b9c6866ea506060d8b4d69262ab73cff8f33b981c9e696208be0605",
+      "brotli/c/enc/static_dict.c": "2496d89ae8dc3a7eaee7802a834958ae2a33658f2a958a8c2e0ce1f5d4327ba8",
+      "brotli/c/enc/utf8_util.c": "d442ec7fb509b120907e9b51d612d00b4f687fe284e9c8e40e1676b9cebb444f"
+    },
+    "arguments": [
+      "woff2-binding.cpp",
+      "woff2/src/woff2_dec.cc",
+      "woff2/src/variable_length.cc",
+      "woff2/src/woff2_common.cc",
+      "woff2/src/woff2_out.cc",
+      "woff2/src/table_tags.cc",
+      "woff2/src/woff2_enc.cc",
+      "woff2/src/font.cc",
+      "woff2/src/glyph.cc",
+      "woff2/src/normalize.cc",
+      "woff2/src/transform.cc",
+      "brotli/c/common/dictionary.c",
+      "brotli/c/dec/bit_reader.c",
+      "brotli/c/dec/decode.c",
+      "brotli/c/dec/huffman.c",
+      "brotli/c/dec/state.c",
+      "brotli/c/enc/backward_references.c",
+      "brotli/c/enc/backward_references_hq.c",
+      "brotli/c/enc/bit_cost.c",
+      "brotli/c/enc/block_splitter.c",
+      "brotli/c/enc/brotli_bit_stream.c",
+      "brotli/c/enc/cluster.c",
+      "brotli/c/enc/compress_fragment.c",
+      "brotli/c/enc/compress_fragment_two_pass.c",
+      "brotli/c/enc/dictionary_hash.c",
+      "brotli/c/enc/encode.c",
+      "brotli/c/enc/entropy_encode.c",
+      "brotli/c/enc/histogram.c",
+      "brotli/c/enc/literal_cost.c",
+      "brotli/c/enc/memory.c",
+      "brotli/c/enc/metablock.c",
+      "brotli/c/enc/static_dict.c",
+      "brotli/c/enc/utf8_util.c",
+      "-Iwoff2/include",
+      "-Ibrotli/c/include",
+      "--bind",
+      "--no-entry",
+      "-Os",
+      "-sSTRICT=1",
+      "-sMODULARIZE=1",
+      "-sINCOMING_MODULE_JS_API=[\"locateFile\",\"wasmBinary\"]",
+      "-sALLOW_MEMORY_GROWTH=1",
+      "-sMAXIMUM_MEMORY=268435456",
+      "-sMALLOC=emmalloc",
+      "-sASSERTIONS=1",
+      "-sERROR_ON_UNDEFINED_SYMBOLS=1",
+      "-sEXPORTED_RUNTIME_METHODS=[\"ccall\",\"cwrap\"]",
+      "-sENVIRONMENT=web,node",
+      "-sEXPORT_NAME=UraniaWoff2Module",
+      "-ffile-prefix-map=<source-root>=.",
+      "-o",
+      "output/woff2.js"
+    ],
+    "toolchain": "Emscripten4.0.17 localSDK",
+    "sdkConfigSha256": "cf771ef7a46b1c7ce1d36454f94d6643bbc034635831bcc1f10559ec260cbc2b",
+    "downloadArchives": {},
+    "noGlobalActivation": true,
+    "exitCode": 0,
+    "logSha256": "e7d069a1dc548538a97299f2cc02e66e6f5245071632e611b0b646a484dbb70c",
+    "outputs": {
+      "woff2.js": {
+        "sha256": "0deff4398727162cf497264c89aecd4c317262279c727df8074221c92f23a7ca",
+        "bytes": 74553
+      },
+      "woff2.wasm": {
+        "sha256": "f5d17c2b07efb58b83ee99b5b5cc43cd7c7ab10ffd1ad3ee4d61554d70645932",
+        "bytes": 670967
+      }
+    },
+    "emscriptenRevision": "bb11bae9af3a6551132655a0908f86889d2d423b",
+    "toolchainFiles": {
+      "bin/clang++.exe": {
+        "bytes": 88130048,
+        "sha256": "e001a33514a0cd00c5337bdf23969e3799359242c79f830392654589bc202f19"
+      },
+      "bin/wasm-ld.exe": {
+        "bytes": 53811200,
+        "sha256": "93903ed8bdded0e1aa142e48cdcc2521c1aaa52ae2766dccba8f2742d30743b2"
+      },
+      "bin/wasm-opt.exe": {
+        "bytes": 12155904,
+        "sha256": "ef9acd7f8b91c2a596339681e9ab2c69667ea96dba253a3f08cf6e518f664c17"
+      },
+      "emscripten/em++.py": {
+        "bytes": 506,
+        "sha256": "017f735c953318fdaaa4af68c8d4bf13936a787ddbd5dad804d532b0223b6c2f"
+      },
+      "emscripten/emcc.py": {
+        "bytes": 23494,
+        "sha256": "36a652b391823c9fc51dbca1fbd8cf88198eb478f68164780b2340a3a237a668"
+      }
+    }
+  },
+  "patches": [
+    {
+      "path": "node_modules/fonteditor-core/woff2/woff2.js",
+      "beforeSha256": "405d77a48e3670c772f78fd8e42b64bea0d3df5744b998bad462cd83d69fe41d",
+      "afterSha256": "0deff4398727162cf497264c89aecd4c317262279c727df8074221c92f23a7ca",
+      "bytes": 74553
+    },
+    {
+      "path": "node_modules/fonteditor-core/woff2/woff2.wasm",
+      "beforeSha256": "afda7e08349046612a019713c8f3baae52ee9d064c712919af020cd2634dddd6",
+      "afterSha256": "f5d17c2b07efb58b83ee99b5b5cc43cd7c7ab10ffd1ad3ee4d61554d70645932",
+      "bytes": 670967
+    },
+    {
+      "path": "node_modules/fonteditor-core/woff2/index.js",
+      "beforeSha256": "429e07516393e2c738b8c02548d109433a17fbd1456298b0b6aa951c20ee0a15",
+      "afterSha256": "217880b306edaae28ea8aceaf3f832b7e56c183bbf11f094e34c887e8d307f72",
+      "bytes": 1921
+    },
+    {
+      "path": "src/woff2-wasm-base64.js",
+      "beforeSha256": "b21ee4ec5dc8f3bef67249604f2fe3e1c480c1854838a8b61855df16375cf87a",
+      "afterSha256": "196eafcf7076fb7af39100c5366badd6867f427e4407320bd2d250cfe1130aab",
+      "bytes": 894760
+    },
+    {
+      "path": "src/animations/css-parser.js",
+      "beforeSha256": "9161005bef40746dcc0bba07c8a47202b083bd3b1e76dff9ed8f36e58159d622",
+      "afterSha256": "4c8c7c3f21b2c81b96b9cdd7910ae94ce681a2c24a94c1efc62e5e55a2768dff",
+      "bytes": 11859
+    }
+  ],
+  "pnpmVersion": "10.27.0",
+  "pnpmLock": {
+    "bytes": 118736,
+    "sha256": "fa2c800d093fa21f82421c17fea2c7dbfc4fcdaf4d36ab901f1c64454b806d18"
+  },
+  "rollupVersion": "4.55.2",
+  "browserBundle": {
+    "bytes": 3635939,
+    "sha256": "342b13fd102ebefa6325b592b9b4c58cc4e903c2d1ca29421ca08c795f513d63"
+  },
+  "sourceMap": {
+    "bytes": 5853469,
+    "sha256": "2dfa670fd7edae6fe38f75b9887fe6f65515c720e3f6242f917fef0c3e035ac2"
+  },
+  "validation": {
+    "codec": "docs/verification/ui165-closeout/C16-real-codec.json",
+    "fontSemantics": "docs/verification/ui165-closeout/C16-real-font-semantics.json",
+    "browser": "docs/verification/ui165-closeout/C16-real-converter-browser.json"
+  },
+  "sourceArchive": {
+    "name": "codec-source.zip",
+    "bytes": 26929371,
+    "sha256": "89f5fdce13c0a4a31495db53fcf0cd8171af1ec8d529e1e94fc08a95fc629e3e"
+  },
+  "buildScripts": {
+    "rebuild/rebuild.py": {
+      "bytes": 5969,
+      "sha256": "d1df3006341136d87c77ae20174401af8f2a1d354079eafaac61858f0b8f8e50"
+    },
+    "rebuild/README.md": {
+      "bytes": 2286,
+      "sha256": "dcf74cacb1ea796c9ee7ef3b0470bc0fd3054cea5ed73402ec1d6d286bbe4be9"
+    }
+  },
+  "rollupConfig": {
+    "bytes": 488,
+    "sha256": "2e5596f16d0d1877469373be83bc67b77fcba09b2fb7b0bdb2fa4dfcb1afe2be"
+  },
+  "independentRebuild": {
+    "result": "two independent pnpm stores produced byte-identical real Wasm and browser UMD",
+    "evidence": "docs/verification/ui165-closeout/C16-independent-rebuild-final.json"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "at": "2026-11-17T18:18:44.988Z",
+  "kind": "actual production Supervisor -> actual worker -> headless Chromium -> ffmpeg/ffprobe",
+  "jobId": "4f5887a3-1a44-44f9-bd4f-f2c87c55fb33",
+  "root": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\urania-closeout-20261118\\projects\\supervisor 自定义 1794939512216",
+  "versions": {
+    "node": "25.6.0",
+    "ffmpeg": "9.0.2",
+    "ffprobe": "9.0.2",
+    "browser": "157.0.8103"
+  },
+  "customBrowserDirectory": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\urania-closeout-20261118\\projects\\supervisor 自定义 1794939512216\\自定义浏览器",
+  "customFfmpegDirectory": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\urania-closeout-20261118\\projects\\supervisor 自定义 1794939512216\\工具 目录",
+  "status": "cancelled",
+  "error": "已取消 (user-cancel)",
+  "logTail": "{\"type\":\"meta\",\"totalFrames\":720,\"durationSeconds\":60}\n{\"type\":\"progress\",\"frame\":1,\"totalFrames\":720}\n{\"type\":\"progress\",\"frame\":3,\"totalFrames\":720}\n{\"type\":\"progress\",\"frame\":5,\"totalFrames\":720}\n[motion-worker] 临时目录未清理: EPERM, Permission denied: \\\\?\\C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\urania-closeout-20261118\\projects\\supervisor ×Ô¶¨Òå 1794939512216\\out\\.motion-4f5887a3-1a44-44f9-bd4f-f2c87c55fb33\\.browser-1794939516553 '\\\\?\\C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\urania-closeout-20261118\\projects\\supervisor �Զ��� 1794939512216\\out\\.motion-4f5887a3-1a44-44f9-bd4f-f2c87c55fb33\\.browser-1794939516553'\n{\"type\":\"error\",\"message\":\"浏览器会话已关闭\"}\n[motion-worker] Error: 浏览器会话已关闭\n    at CdpClient.close (file:///D:/METIS%E8%B6%85%E7%BA%A7%E5%90%88%E5%B9%B6/dsh-plugin/designcraft/motion-worker/entry.mjs:100:99)\n    at process.<anonymous> (file:///D:/METIS%E8%B6%85%E7%BA%A7%E5%90%88%E5%B9%B6/dsh-plugin/designcraft/motion-worker/entry.mjs:30:90)\n    at process.emit (node:events:508:20)\n    at emit (node:internal/child_process:932:14)\n    at process.processTicksAndRejections (node:internal/process/task_queues:91:21)\n",
+  "providerTurns": 0
+}

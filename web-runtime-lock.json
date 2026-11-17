@@ -746,13 +746,13 @@
       }
     },
     "deckcraft-host": {
-      "version": "0.13.1+designcraft.host18",
+      "version": "0.13.1+designcraft.host19",
       "provenance": {
         "engineVersion": "0.13.1",
         "sourceRevision": "4ce2944630b04188dee8504c14151994d06c416a",
         "hostProtocol": 1,
         "contextProtocol": 2,
-        "status": "real Rust/Trunk build: transient AI canvas presentation; runtime acceptance recorded separately",
+        "status": "genuine source-owning native Web build; installation alone is not integration acceptance",
         "sourceFiles": {
           "ATTRIBUTION.md": "816b9eab869f45b27719b7f638625cb746b10e959fead1c4788cb786cbf92e5e",
           "Cargo.lock": "c920928a7c964bd7998c35f0ba63a4dede6833df905018c2fe687a4a9f799364",
@@ -783,6 +783,7 @@
           "crates/engine/src/cmd/svg_convert.rs": "b9cf30f24664370337fe8b0bb16dddc4c30dabe6aa745128b6372e81e7d9715a",
           "crates/engine/src/cmd/svg_picture.rs": "ccba859f7deb29f9ad436f75cb69b1407412ddd5e49c108bb6c3479253945a9e",
           "crates/engine/src/cmd/text/autocorrect.rs": "ee17e31f302dd68957f0d0d78fb2e605ace21ae6f96df0dc7f8a2954bf5f42cf",
+          "crates/engine/src/cmd/text/caret.rs": "355b62bf4600c169c0c5696a502a65fdcb16c586b519a5ede1f67f7223f8d9d1",
           "crates/engine/src/embedded.rs": "1dd4d44adba25d9a7f71465f052911d9236fe1ea16d2e1ba0c3609ca9b7964a8",
           "crates/engine/src/fonts.rs": "1e7db2d436d229d70df5775afb26f7066f4f1744611a8a0fcc2fa8d17405e2d8",
           "crates/engine/src/lib.rs": "d86f86109074e85626dcb60b5d5cd5cbfe4d640affdb4865c23e19682fb61b97",
@@ -906,7 +907,7 @@
           "font-input/fonts\\simplified-chinese-manifest.txt": "dff6d22a8e3162d02e7e7c4bd058a36b117485e135e362a060ce68734649ea35",
           "font-input/source-lock.json": "0da094ff887ee881bcd2cbb9b12cda5b73a9f9258b9447172c4d45d834b8d16b"
         },
-        "buildLogSha256": "cf9725e65e6a7c781eb7c251ec0fb89dc38c52e2b93a3d24938a9486a5a44fbe",
+        "buildLogSha256": "591ac973caa291c1cd1981b50ee56d5d20850c68613df39b848c8f4ba55e8ec5",
         "fonts": {
           "status": "genuine_hash_verified_fonts",
           "sourceRevision": "aced4137c022f1f587624d48e81ec77e1914a9cc",
@@ -943,20 +944,7 @@
             }
           ],
           "nativeOnlyManifestEnteredWasmAllowlist": false
-        },
-        "hostedLanguage": {
-          "code": "zh-Hans",
-          "guard": "embedded frame only; command IDs and document text unchanged",
-          "sourceAudit": "docs/hosted-ui-source-audit.json"
-        },
-        "retainedCompatibilityFiles": [
-          "deckcraft-web-3af43b3107cc67a2.js",
-          "deckcraft-web-3af43b3107cc67a2_bg.wasm",
-          "deckcraft-web-92ed1924339b915f.js",
-          "deckcraft-web-92ed1924339b915f_bg.wasm",
-          "deckcraft-web-eef554a06985b703.js",
-          "deckcraft-web-eef554a06985b703_bg.wasm"
-        ]
+        }
       },
       "files": {
         "ATTRIBUTION.md": {
@@ -983,6 +971,14 @@
           "bytes": 38372516,
           "sha256": "f4d6cd373a5611fdbfd29b536a0d9fee0030a9c716c20eafed77061e286a31b9"
         },
+        "deckcraft-web-79653f1493665ca6.js": {
+          "bytes": 170007,
+          "sha256": "f091ba68229dc75bbf7f1277ac9af30e463fa8feea5bee17479a2ca4332afa54"
+        },
+        "deckcraft-web-79653f1493665ca6_bg.wasm": {
+          "bytes": 38325795,
+          "sha256": "c4c97ef7adf7dba86f6f7388a0dc4f831372dd187cf3538e8de253b8eac32b65"
+        },
         "deckcraft-web-92ed1924339b915f.js": {
           "bytes": 170007,
           "sha256": "e50f020176b5e2ea6855ff9d44e27fff3906644c405fce0261a4a02aea39085e"
@@ -999,6 +995,30 @@
           "bytes": 38128284,
           "sha256": "2e315b69b915c76f6cf978f55168b8c33f8bdc1e66e13a8ff91e64cc16f047ba"
         },
+        "index.html": {
+          "bytes": 1794,
+          "sha256": "60fcbc79356d41f09d4758509ccf18cef83680410884e2d1b3dc279f4dc145fa"
+        },
+        "LICENSE-APACHE": {
+          "bytes": 10174,
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+        },
+        "LICENSE-MIT": {
+          "bytes": 1101,
+          "sha256": "90e96fef569474cd526350e716e4b05dd32f179ca96d39d61e6b928485e35406"
+        },
+        "NOTICE": {
+          "bytes": 6550,
+          "sha256": "2ce764ed5d83f2453a7dba485092c0c41b465fe795b31c2c59bc5279332bc4f3"
+        },
+        "fonts/runtime-provenance.json": {
+          "bytes": 1264,
+          "sha256": "3a8a156dea6cfc5613c5c44d721db78afd34c68b21a29839683b3c5e3c233e2b"
+        },
+        "snippets/eframe-d31a8450ea12dfc1/inline0.js": {
+          "bytes": 280,
+          "sha256": "22a98f9d0c5a0532d291bdc9a3050439420b3d11143b4568fcfd3c66fff36995"
+        },
         "fonts/biz-ud-pgothic/OFL.txt": {
           "bytes": 4408,
           "sha256": "e753d7155d53c747d037a445e584c8ecfca6dd79846db610417e282a736b28bc"
@@ -1014,30 +1034,6 @@
         "fonts/lxgw-wenkai-lite/OFL.txt": {
           "bytes": 5176,
           "sha256": "0333a85fe077b6849f8e417acc44e8bd879442ceb681e271acf93e2d57fd4e2e"
-        },
-        "fonts/runtime-provenance.json": {
-          "bytes": 1264,
-          "sha256": "3a8a156dea6cfc5613c5c44d721db78afd34c68b21a29839683b3c5e3c233e2b"
-        },
-        "index.html": {
-          "bytes": 1794,
-          "sha256": "ef2dce03da8573dd885ec6c849adce20c108cdd56ae13b047019ddbab9e12d2d"
-        },
-        "LICENSE-APACHE": {
-          "bytes": 10174,
-          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
-        },
-        "LICENSE-MIT": {
-          "bytes": 1101,
-          "sha256": "90e96fef569474cd526350e716e4b05dd32f179ca96d39d61e6b928485e35406"
-        },
-        "NOTICE": {
-          "bytes": 6550,
-          "sha256": "2ce764ed5d83f2453a7dba485092c0c41b465fe795b31c2c59bc5279332bc4f3"
-        },
-        "snippets/eframe-d31a8450ea12dfc1/inline0.js": {
-          "bytes": 280,
-          "sha256": "22a98f9d0c5a0532d291bdc9a3050439420b3d11143b4568fcfd3c66fff36995"
         }
       }
     }

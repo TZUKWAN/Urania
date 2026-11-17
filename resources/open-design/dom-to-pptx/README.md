@@ -1,29 +1,5 @@
-# Vendored: dom-to-pptx (browser UMD bundle)
+# dom-to-pptx 2.0.1 + Urania codec1
 
-`dom-to-pptx.bundle.js.gz` is the checked-in compressed **browser UMD build** of
-[`dom-to-pptx`](https://github.com/atharva9167j/dom-to-pptx) (MIT), pinned at the
-version below. `scripts/postinstall.mjs` (run via `pnpm bootstrap` or automatically during `pnpm install`) expands it to the ignored
-`dom-to-pptx.bundle.js` runtime file. The bundle is the engine behind
-**editable** PowerPoint export: it walks a rendered slide's live DOM and emits
-native PowerPoint shapes/text/images (not a flat screenshot) via PptxGenJS.
+Built from atharva9167j/dom-to-pptx c0447adc47d3bc734d017050834edf0941adc189, frozen pnpm lock, lifecycle scripts disabled. WOFF2/Brotli is rebuilt from the exact commits in codec-build-lock.json. Patches modernize the Wasm Promise factory, free Embind vectors, bound font buffers, and handle SVGAnimatedString class names. The active bundle is a new build; it is NOT byte-identical to the former OpenDesign or npm prebuilt bundle. Original OpenDesign files and their unmodified source-lock remain in historical-open-design/ and are never selected by the host.
 
-- **Version:** 2.0.1
-- **Source file:** `dist/dom-to-pptx.bundle.js` from the npm package
-- **Global:** exposes `window.domToPptx.exportToPptx(elementOrSelector, options)`
-
-## Why vendor the compressed browser bundle instead of `npm install dom-to-pptx`?
-
-The npm package declares `puppeteer` + `@puppeteer/browsers` as dependencies
-(used only by its Node/CLI `./node` entry), whose postinstall downloads a full
-Chromium (~150 MB+). We never use that path — we inject this self-contained
-browser bundle into our **existing** Electron Chromium render window
-(`apps/desktop/src/main/deck-capture.ts`). Keeping the gzip source in git and
-materializing the runtime file during `pnpm bootstrap` (or `postinstall`) preserves the "no second
-rendering engine / no install-time Chromium download" property without adding a
-multi-megabyte JavaScript blob to the PR.
-
-## Updating
-
-Re-copy `dist/dom-to-pptx.bundle.js` from the target npm version, regenerate
-`dom-to-pptx.bundle.js.gz` with `gzip -n -c`, and bump the version above. Do not
-edit the bundle by hand.
+codec-source.zip contains fixed upstream source archives and actual build/patch inputs. rebuild/README.md gives the exact local build steps. No SDK executable, user configuration or credentials are included. The compressed source map lists the actual Rollup inputs and includes their source content. License selection/attribution is in licenses/dom-to-pptx-components/manifest.json and THIRD_PARTY_NOTICES.md. Browser and native Deck functional checks are separate from byte provenance; PowerPoint visual fidelity is not implied.

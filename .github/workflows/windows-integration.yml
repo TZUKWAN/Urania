@@ -1,0 +1,25 @@
+name: Windows installed integration
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  installed-contracts:
+    # Explicit opt-in only. Never run untrusted pull-request code on a private runner.
+    if: github.ref == 'refs/heads/main' && vars.URANIA_WINDOWS_INTEGRATION == 'enabled'
+    runs-on: [self-hosted, Windows, X64, urania-isolated]
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+      - name: Restore exact runtime files in this runner checkout
+        shell: pwsh
+        run: ./scripts/restore-runtime.ps1 -Download
+      - name: Installed runtime and configured SDK preflight
+        run: node scripts/doctor.mjs
+      - name: Complete Node and client suite
+        run: npm test
+      - name: Complete installed source and binary checks
+        run: npm run check
+      # No model credentials, user desktop, paid tests, cache or large artifact uploads.

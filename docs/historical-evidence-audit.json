@@ -860,7 +860,7 @@
     {
       "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\instance-stage-audit.json",
       "location": "evidence",
-      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\deck-host-build.json",
+      "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\deck-host-build.json",
       "bytes": 5785,
       "expected": "ee04bba00249b1af9035e1bbd949b15f7869d236ff15693b1152dc21d560200f",
       "actual": "54ac14dbc5b4b6f3881eae5a8d3dd0780a6ca368c9405837e457b12ef6d4d769"
@@ -908,7 +908,7 @@
     {
       "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\svg-deck-stage-audit.json",
       "location": "evidence",
-      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\svg-deck-after.pptx",
+      "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\svg-deck-after.pptx",
       "bytes": 36175,
       "expected": "aaa318e98f311a0fcc3e6a5a7afb673db5ea27822cfb493581780a6746e6411a",
       "actual": "c70e507947a1575cbf904922d6debd3be1d7d9a0fb6c936d967b75f3a9636636"
@@ -916,7 +916,7 @@
     {
       "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\svg-inplace-core-audit.json",
       "location": "evidence",
-      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\svg-deck-browser.json",
+      "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\svg-deck-browser.json",
       "bytes": 4850,
       "expected": "a857573030bd6c8a47a32228375b4a1a19a68e53adc04f603095bf6a2a44295c",
       "actual": "025314bb6736988fce50a1932574298d6eff8cd3d3eea293de1214829841204f"
@@ -924,7 +924,7 @@
     {
       "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\svg-inplace-core-audit.json",
       "location": "evidence",
-      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\svg-deck-browser.log",
+      "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\svg-deck-browser.log",
       "bytes": 317,
       "expected": "79f63cd83486bdbd0ded3d1c7635f156a54c79d4dc16f1220344e1d862c3d4c3",
       "actual": "4e8670d9cb4afaf6ef20478d31bcbbf75a04810cfa2d1d8d3656b29ee9d83d2a"
@@ -932,7 +932,7 @@
     {
       "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\svg-inplace-core-audit.json",
       "location": "evidence",
-      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\svg-deck-after.pptx",
+      "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\svg-deck-after.pptx",
       "bytes": 36513,
       "expected": "6fa43c0c96130008d9d971027fc1c78addebc2af24c5f45c4867eef0c28af09b",
       "actual": "c70e507947a1575cbf904922d6debd3be1d7d9a0fb6c936d967b75f3a9636636"

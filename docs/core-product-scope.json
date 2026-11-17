@@ -1,13 +1,14 @@
 {
   "schema": 1,
-  "date": "2026-11-13",
-  "at": "2026-11-13T05:47:11.527417+00:00",
+  "date": "2026-11-18",
+  "at": "2026-11-17T21:58:11.791115+00:00",
   "authority": "刘总本会话：放弃额外授权平台作为必做项，并批准默认界面收敛、独立生图API配置。；刘总最新明确取消Deck麦克风、摄像头、截图和Windows公式识别。",
   "requiredCore": [
     "本地Photo/Vector/Deck及网页编辑和原位回写",
     "真实源文件保存、重开、输出与项目保护",
     "图片生成和选区重绘：独立生图API或已有DSH连接",
-    "本地资源、Commons图片来源及许可元数据代码保留"
+    "本地资源、Commons图片来源及许可元数据代码保留",
+    "代码动画：实际源版本、组件/时间轴、素材、受限预览、MP4/可编辑工程输出"
   ],
   "optionalOutsideMandatoryScope": [
     "原版OpenDesign/Vela图库授权项目绑定",
@@ -20,13 +21,13 @@
   "notDropped": [
     "AI驱动Photo/Vector/Deck编辑、生图与局部重绘、原位回写、真实源保存导出和保护",
     "已过的本地/真实AI验收与必要变更定向复测",
-    "保留已验证的笔迹文字识别、普通媒体插入/播放和可编辑公式模型",
-    "转换器/字体来源证据和历史缺档边界"
+    "转换器/字体来源证据和历史缺档边界",
+    "普通媒体插入/播放和可编辑公式模型；不启用已取消的采集与 Windows 识别入口"
   ],
   "functionalValidationThisContinuation": true,
-  "allCoreFunctionsAccepted": false,
-  "currentValidationReport": "verification/release-validation-20261113.json",
-  "currentValidationAddendum": "verification/real-services-validation-20261113.json",
+  "allCoreFunctionsAccepted": true,
+  "currentValidationReport": "../VERIFICATION_UI165.json",
+  "currentValidationAddendum": "verification/ui165-closeout/C12-four-engine-flow-attempt5.json",
   "removedFeaturesByUser": [
     {
       "id": "local_narration",
@@ -54,5 +55,7 @@
     "history": "explicit current-project saved works",
     "report": "verification/ui162-design-session-isolation-20261113.json",
     "conversation": "explicit dedicated DSH SessionProvider per workspace; ordinary conversations never automatically reused"
-  }
+  },
+  "pendingMandatoryCodeItems": [],
+  "currentScopeMeaning": "The user-approved AI-native design core and the20261118 audit criteria, with optional external services/cancelled capture removed. Not every operation of every upstream engine or every provider/device combination."
 }

@@ -15,7 +15,7 @@
   "actualSvg": {
     "status": "passed",
     "scope": "real headless UI, seven explicitly linked SVG uses plus independent eighth, Vector and Deck, actual lost-ack and hand-move recovery",
-    "root": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\svg-linked-seven-project\\050fc0e1-b0b3-43f1-a7d1-a0697f324350",
+    "root": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\svg-linked-seven-project\\050fc0e1-b0b3-43f1-a7d1-a0697f324350",
     "codeRoot": "D:\\METIS超级合并\\dsh-plugin\\designcraft",
     "checks": [
       {
@@ -155,7 +155,7 @@
   "actualPng": {
     "status": "passed",
     "scope": "actual native Vector/Deck/Photo; 7 explicitly linked originals+independent8th; one local white correction; source PNG320x240->400x240 keeps native frames; real response-loss/physical hand-move resume; no model",
-    "root": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\mixed-seven-ui35-project\\9f378fb5-9485-479f-8073-c15d67a6c717",
+    "root": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\mixed-seven-ui35-project\\9f378fb5-9485-479f-8073-c15d67a6c717",
     "codeRoot": "D:\\METIS超级合并\\dsh-plugin\\designcraft",
     "checks": [
       {
@@ -242,7 +242,7 @@
     ],
     "owned": {
       "workspaceId": "d584c4f7-d220-4fb7-a213-c0a7c7bdb69a",
-      "sessionId": "PUBLIC-REDACTED"
+      "sessionId": "session-PUBLIC-REDACTED"
     },
     "update": {
       "id": "update-8a950b65-2e13-429b-ba99-13be3554a8db",

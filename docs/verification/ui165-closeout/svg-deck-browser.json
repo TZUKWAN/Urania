@@ -1,0 +1,111 @@
+{
+  "status": "passed",
+  "scope": "genuine registered DSH tools and headless native Vector/Deck; SVG retained with real preview; independent native duplicate, same-picture apply, headless keyboard undo/redo/reopen and actual PPTX; no user desktop/OS clipboard/model",
+  "root": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\urania-closeout-20261118\\svg-deck-inplace\\cc0e15dc-c079-415f-b6dd-b43e7fe69a5b",
+  "owned": {
+    "workspaceId": "7119746f-8702-4c5f-aac8-258a6a919766",
+    "sessionId": "session-PUBLIC-REDACTED",
+    "ordinarySessionId": "session-PUBLIC-REDACTED"
+  },
+  "actualRegisteredPlacement": true,
+  "asset": {
+    "id": "asset-5093b17c-544d-4c1a-be5d-6b44dc2a19f6",
+    "title": "SVG 原文与实际预览",
+    "sourceId": "work-3bc0442c-be5e-4bd6-8cf4-b36639bde9d0",
+    "sourceRevision": "a54a9329c6e05fce18234dc81051bc7f1de73892f8566ad3acf5af77b11fd421",
+    "sourceHash": "75655296ed094c1ef9849a0de122f46b189a2de1c4d0bf0cacad5f780ed92e0a",
+    "engine": "vectorcraft",
+    "format": "svg",
+    "sha256": "c59b43d825047746779050fe4edda9eef303431d8561ba424d0ee62efc8985b2",
+    "bytes": 1190,
+    "preview": {
+      "format": "png",
+      "sha256": "3680a4e03e5b26c0b356aeab8a62719a820d79b9abbb4f0319044fb611ebf764",
+      "bytes": 5276,
+      "width": 320,
+      "height": 240
+    },
+    "at": "2026-11-17T20:29:50.289Z"
+  },
+  "replacement": {
+    "id": "asset-cdec9312-f331-4d63-9b2f-7b9b4f9d9b02",
+    "title": "SVG 原文与实际预览 · 独立编辑",
+    "sourceId": "fork-d88683e7-6576-4268-8572-abb9dfa02543",
+    "sourceRevision": "80b2733be6a4bd7e46179454e16381b744cdabea3966b07e127deccaacd1a782",
+    "sourceHash": "b5a1dfea414222a5fa91c2a51c35d54d65637dd73486d7bc2740468c770408af",
+    "engine": "vectorcraft",
+    "format": "svg",
+    "sha256": "f17954014184b97c395b901cd426f90f41dfa95c9481ab2ef952004d3ff1a1c7",
+    "bytes": 1190,
+    "preview": {
+      "format": "png",
+      "sha256": "7aabfd6660756de3c9c10b60067fbcbc4bff9cdec8e2f45333b18cc2e1facd95",
+      "bytes": 5297,
+      "width": 320,
+      "height": 240
+    },
+    "at": "2026-11-17T20:31:01.054Z"
+  },
+  "originalInstance": {
+    "id": "use-102ca265-086a-4524-b7d6-9e06afbff76e",
+    "assetId": "asset-5093b17c-544d-4c1a-be5d-6b44dc2a19f6",
+    "sourceId": "work-80d72a46-e340-4f5c-a6c8-0dcb8cf2b46d",
+    "nativeId": "261",
+    "boundAtRevision": "78173b35d4dc9dbfe94ba828c4cd83dd8f5722b2a2a5869ff8a9a207f0963d10",
+    "nativeNodeHash": "cdf1feaab0842ff2dde3ace5cc9a19ce10cd607889eb514d52e7773412cc471a",
+    "originToken": "9e648b944912fa41de9323265ca22e97",
+    "nativePage": {
+      "kind": "slide",
+      "id": 257,
+      "index": 0
+    },
+    "at": "2026-11-17T20:30:08.787Z"
+  },
+  "editedCopy": {
+    "id": "use-040f016e-7934-0c59-8de8-416b0772b205",
+    "assetId": "asset-cdec9312-f331-4d63-9b2f-7b9b4f9d9b02",
+    "sourceId": "work-80d72a46-e340-4f5c-a6c8-0dcb8cf2b46d",
+    "nativeId": "263",
+    "originToken": "e5cd78d66ac536bd0cdc20ad13d49f05",
+    "boundAtRevision": "e7c224ab2e8163ab267a4400ebd44d194e8a57ce3d1bef11771db8f486ed0896",
+    "nativeNodeHash": "ea9d8e30edfd384b50fc3e79073a9c094d55f1bf1cd8204dbbac41b24a3132d7",
+    "origin": "native-copy",
+    "nativePage": {
+      "kind": "slide",
+      "id": 257,
+      "index": 0
+    },
+    "at": "2026-11-17T20:30:23.844Z",
+    "lastApplyOperationId": "cdec9312-f331-4d63-9b2f-7b9b4f9d9b02",
+    "bindingHistory": [
+      {
+        "assetId": "asset-5093b17c-544d-4c1a-be5d-6b44dc2a19f6",
+        "sourceRevision": "a9468eccdd289f7096b1b59c8fb9761406cf5831ec7c07e4f7f6eb64e1ee8342",
+        "nativeNodeHash": "83894ce97b8220d949b74c635e8c78a0c28caae0ad88ac2d9954d2631551c8e6",
+        "originToken": "e5cd78d66ac536bd0cdc20ad13d49f05"
+      }
+    ],
+    "status": "present",
+    "currentSourceRevision": "e7c224ab2e8163ab267a4400ebd44d194e8a57ce3d1bef11771db8f486ed0896",
+    "nativeObject": {
+      "id": 263,
+      "name": "Picture 4",
+      "kind": "picture",
+      "page": {
+        "kind": "slide",
+        "id": 257,
+        "index": 0
+      }
+    },
+    "changedSincePlacement": false
+  },
+  "copyIndependent": true,
+  "actualVectorPathEdited": true,
+  "svgOriginalAndPreviewBothUpdated": true,
+  "otherUseUnchanged": true,
+  "frameCropRotationOpacityExact": true,
+  "nativeKeyboardUndoAndRedoMatchGraph": true,
+  "nativeFreshReopenExact": true,
+  "pptxBytes": 36518,
+  "actualPptxOriginalSvgRetained": true
+}

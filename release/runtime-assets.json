@@ -1,21 +1,24 @@
 {
   "schemaVersion": 1,
   "repository": "TZUKWAN/Urania",
-  "tag": "dev-ui163-20261116",
+  "tag": "dev-ui165-20261118",
   "platform": "win32-x64",
-  "snapshotDate": "2026-11-16",
-  "packageVersion": "1.3.0-dev.148",
-  "uiBuild": 163,
+  "snapshotDate": "2026-11-18",
+  "packageVersion": "1.3.0-dev.150",
+  "uiBuild": 165,
   "archive": {
-    "name": "urania-runtime-win-x64-ui163-20261116.zip",
-    "bytes": 1300869696,
-    "sha256": "42d6f8be94a761f848ccd441a0da661312ba1497ea59269df02e81b5345d9168",
-    "url": "https://github.com/TZUKWAN/Urania/releases/download/dev-ui163-20261116/urania-runtime-win-x64-ui163-20261116.zip"
+    "name": "urania-runtime-win-x64-ui165-20261118.zip",
+    "bytes": 1321208780,
+    "sha256": "d1b578f37e45cb72913eaf36b01cec507d9b9bbec3608ff0e62ec4b9996cbd64",
+    "url": "https://github.com/TZUKWAN/Urania/releases/download/dev-ui165-20261118/urania-runtime-win-x64-ui165-20261118.zip"
   },
   "runtimeManifest": {
     "name": "runtime-manifest.json",
-    "sha256": "e66f65e5229a0013ee3cf6b288b27864b7d9187d94d89372f8580bff0a384e28",
-    "files": 264
+    "sha256": "eb625aa5c1352fd5ebd3b377a27cd1b4917af8954f6cc8d52c79ef357affc22e",
+    "files": 7713
   },
-  "functionalTestsRerunForPublication": false
+  "functionalTestsRerunForPublication": true,
+  "validationReport": "VERIFICATION_UI165.json",
+  "sdkDependenciesIncludedOffline": true,
+  "externalRuntimeRequirements": "Node >=22, DSH host Node requirement (validated SDK0.2.2-rc.1: >=24.9), Chromium>=120, FFmpeg/FFprobe>=6"
 }

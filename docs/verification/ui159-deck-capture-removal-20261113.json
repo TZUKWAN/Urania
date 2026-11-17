@@ -54,13 +54,13 @@
   "executedUiCases": [
     {
       "case": "test_deck_removed_capture_ui.py",
-      "executedSource": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\release-validation-20261113\\ui\\test_deck_removed_capture_ui\\attempt2\\test_deck_removed_capture_ui.py",
+      "executedSource": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\release-validation-20261113\\ui\\test_deck_removed_capture_ui\\attempt2\\test_deck_removed_capture_ui.py",
       "seconds": 36.297,
       "rawReport": "verification/ui159-deck-capture-removal/deck-local-removal-ui.json"
     },
     {
       "case": "test_deck_retained_content_ui.py",
-      "executedSource": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\release-validation-20261113\\ui\\test_deck_retained_content_ui\\attempt1\\test_deck_retained_content_ui.py",
+      "executedSource": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\release-validation-20261113\\ui\\test_deck_retained_content_ui\\attempt1\\test_deck_retained_content_ui.py",
       "seconds": 39.546,
       "rawReport": "verification/ui159-deck-capture-removal/deck-retained-content-ui.json"
     }

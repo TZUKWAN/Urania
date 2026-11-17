@@ -497,21 +497,21 @@
       "version": "0.18.0",
       "archiveSha256": "270b1212e5babb3a79480d09e264e6d073f14aa24113f3c0fd384f6c61971602",
       "url": "https://github.com/storytold/photocraft/releases/download/v0.18.0/photocraft-web-0.18.0.zip",
-      "extracted": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-implementation\\upstream-runtimes\\photocraft\\v0.18.0\\web\\photocraft-web-0.18.0",
+      "extracted": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-implementation\\upstream-runtimes\\photocraft\\v0.18.0\\web\\photocraft-web-0.18.0",
       "sourceRevision": "8a87a457abb43ac344deeb3fdb67541b91a72ff1"
     },
     "vectorcraft": {
       "version": "0.19.0",
       "archiveSha256": "d9c7a2695d15f83a268b1be3be94592db4beb04326825e174cb5e3cb239c64d6",
       "url": "https://github.com/storytold/vectorcraft/releases/download/v0.19.0/vectorcraft-web-0.19.0.zip",
-      "extracted": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-implementation\\upstream-runtimes\\vectorcraft\\v0.19.0\\web\\vectorcraft-web-0.19.0",
+      "extracted": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-implementation\\upstream-runtimes\\vectorcraft\\v0.19.0\\web\\vectorcraft-web-0.19.0",
       "sourceRevision": "bcebabe3f8c23a376ac68e9e6726590af278f7bb"
     },
     "deckcraft": {
       "version": "0.13.1",
       "archiveSha256": "12a678c7b5b8d45ff247d9e090d850532410d7638da342c858758aae9ff4b9ce",
       "url": "https://github.com/storytold/deckcraft/releases/download/v0.13.1/deckcraft-web-0.13.1.zip",
-      "extracted": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-implementation\\upstream-runtimes\\deckcraft\\v0.13.1\\web\\deckcraft-web-0.13.1",
+      "extracted": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-implementation\\upstream-runtimes\\deckcraft\\v0.13.1\\web\\deckcraft-web-0.13.1",
       "sourceRevision": "4ce2944630b04188dee8504c14151994d06c416a"
     }
   },

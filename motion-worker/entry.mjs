@@ -19,12 +19,25 @@
 import { spawn } from 'node:child_process';
 import fs from 'node:fs';
 import path from 'node:path';
-import { pathToFileURL } from 'node:url';
+import {FRAME_RUNTIME_JS} from '../host/motion/frame-runtime.js';
+import {createRenderSourceHost} from './source-host.mjs';
+import {resolveMotionPaths} from '../host/motion/runtime-env.js';
+import {resolveProjectResource} from '../host/motion/resource-path.js';
+import {safeRelativePath} from '../host/motion/schema.js';
+import {stopOwnedBrowser} from './owned-browser.mjs';
 
 const log = (...args) => { try { process.stderr.write('[motion-worker] ' + args.join(' ') + '\n'); } catch { } };
 const emit = (obj) => { try { process.stdout.write(JSON.stringify(obj) + '\n'); } catch { } };
+let cancelled=false,activeClient=null,activeEncoder=null,cancelObserver=null;
+function observeCancellation(request){
+ if(!request.cancelFile)return;
+ if(path.resolve(request.cancelFile)!==path.resolve(path.dirname(request.outputPath),'cancel'))throw new Error('取消标记必须属于本次任务临时目录');
+ const check=()=>{if(!cancelled&&fs.existsSync(request.cancelFile)){cancelled=true;activeClient?.close();try{activeEncoder?.kill('SIGTERM');}catch{}}};
+ check();cancelObserver=setInterval(check,100);cancelObserver.unref();
+}
 
 function readRequest() {
+	if(process.argv[2]){const file=process.argv[2];if(fs.statSync(file).size>1024*1024)throw new Error('request too large');return Promise.resolve(JSON.parse(fs.readFileSync(file,'utf8')));}
 	return new Promise((resolve, reject) => {
 		let data = '';
 		process.stdin.setEncoding('utf8');
@@ -35,33 +48,23 @@ function readRequest() {
 }
 
 function resolveBrowserPath() {
-	const candidates = [
-		process.env.DESIGNCRAFT_BROWSER_PATH,
-		'C:/Program Files/Google/Chrome/Application/chrome.exe',
-		'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe',
-		'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe',
-		'C:/Program Files/Microsoft/Edge/Application/msedge.exe'
-	].filter(Boolean);
-	for (const p of candidates) { try { if (fs.existsSync(p)) return p; } catch { } }
-	throw new Error('未找到可用的 Chromium 浏览器（Chrome/Edge），可通过 DESIGNCRAFT_BROWSER_PATH 指定');
+	return resolveMotionPaths({components:['browser']}).browserPath;
 }
 
 function resolveFfmpegPath() {
-	const dir = process.env.DESIGNCRAFT_FFMPEG_DIR || 'D:/MDHPROJECT/ffmpeg/ffmpeg-9.0.2-essentials_build/bin';
-	const exe = path.join(dir, process.platform === 'win32' ? 'ffmpeg.exe' : 'ffmpeg');
-	if (!fs.existsSync(exe)) throw new Error('未找到 ffmpeg: ' + exe + '（可通过 DESIGNCRAFT_FFMPEG_DIR 指定）');
-	return exe;
+	return resolveMotionPaths({components:['ffmpeg']}).ffmpegPath;
 }
 
 function run(exe, args, { timeoutMs = 10 * 60 * 1000 } = {}) {
 	return new Promise((resolve, reject) => {
 		const child = spawn(exe, args, { stdio: ['ignore', 'pipe', 'pipe'], windowsHide: true });
+		activeEncoder=child;
 		let stdout = '', stderr = '';
 		const timer = setTimeout(() => { try { child.kill('SIGKILL'); } catch { } reject(new Error(exe + ' 超时')); }, timeoutMs);
 		child.stdout.on('data', (d) => { stdout += d; });
 		child.stderr.on('data', (d) => { stderr += d; if (stderr.length > 1024 * 1024) stderr = stderr.slice(-512 * 1024); });
 		child.on('error', (e) => { clearTimeout(timer); reject(e); });
-		child.on('exit', (code) => { clearTimeout(timer); code === 0 ? resolve({ stdout, stderr }) : reject(new Error(exe + ' 退出码 ' + code + ': ' + stderr.slice(-800))); });
+		child.on('close', (code) => { clearTimeout(timer);if(activeEncoder===child)activeEncoder=null;code === 0 ? resolve({ stdout, stderr }) : reject(new Error(exe + ' 退出码 ' + code + ': ' + stderr.slice(-800))); });
 	});
 }
 
@@ -78,10 +81,13 @@ class CdpClient {
 		return new CdpClient(ws);
 	}
 	attach() {
+		this.ws.addEventListener('close',()=>this.failPending('浏览器异常退出或连接已关闭'));
+		this.ws.addEventListener('error',()=>this.failPending('浏览器连接失败'));
 		this.ws.addEventListener('message', (ev) => {
 			let msg; try { msg = JSON.parse(ev.data); } catch { return; }
 			if (msg.id && this.pending.has(msg.id)) {
 				const { resolve, reject } = this.pending.get(msg.id);
+				clearTimeout(this.pending.get(msg.id).timer);
 				this.pending.delete(msg.id);
 				msg.error ? reject(new Error('CDP ' + msg.error.message + (msg.error.data ? ' | ' + msg.error.data : ''))) : resolve(msg.result);
 			} else if (msg.method && this.handlers.has(msg.method)) {
@@ -92,16 +98,17 @@ class CdpClient {
 	send(method, params = {}) {
 		const id = ++this.id;
 		return new Promise((resolve, reject) => {
-			this.pending.set(id, { resolve, reject });
+			const pending={resolve,reject,timer:null};this.pending.set(id,pending);
 			this.ws.send(JSON.stringify({ id, method, params }));
-			setTimeout(() => { if (this.pending.has(id)) { this.pending.delete(id); reject(new Error('CDP 调用超时: ' + method)); } }, 120000);
+			pending.timer=setTimeout(() => { if (this.pending.has(id)) { this.pending.delete(id); reject(new Error('CDP 调用超时: ' + method)); } }, 120000);
 		});
 	}
 	on(method, fn) {
 		if (!this.handlers.has(method)) this.handlers.set(method, new Set());
 		this.handlers.get(method).add(fn);
 	}
-	close() { try { this.ws.close(); } catch { } }
+	failPending(message){for(const pending of this.pending.values()){clearTimeout(pending.timer);pending.reject(new Error(message));}this.pending.clear();}
+	close() { this.failPending('浏览器会话已关闭');try { this.ws.close(); } catch { } }
 }
 
 /** Launch headless Chromium with CDP and return {client, browser}. */
@@ -119,6 +126,7 @@ async function launchBrowser({ width, height, userDataDir }) {
 		`--window-size=${width},${height}`, 'about:blank'
 	];
 	const browser = spawn(browserExe, args, { stdio: ['ignore', 'ignore', 'pipe'], windowsHide: true });
+	try{
 	// DevTools endpoint discovery, two channels: (1) the "DevTools listening on
 	// ws://…" stderr line (fast path), (2) polling <user-data-dir>/DevToolsActivePort —
 	// Chromium writes it once the server is up, which is the only reliable signal
@@ -161,31 +169,10 @@ async function launchBrowser({ width, height, userDataDir }) {
 	const client = await CdpClient.connect(pageTarget.webSocketDebuggerUrl);
 	client.attach();
 	return { client, browser, browserWsUrl: wsUrl };
+	}catch(error){stopOwnedBrowser(browser,userDataDir);throw error;}
 }
 
-const FRAME_SEEK_SOURCE = String.raw`
-window.__hfSeek = window.__hfSeek || function (timeMs) {
-  const root = document.querySelector('[data-composition-id]');
-  if (!root) return 0;
-  const t = timeMs / 1000;
-  for (const el of root.querySelectorAll('[data-start],[data-duration]')) {
-    const s = parseFloat(el.dataset.start || '0');
-    const d = el.dataset.duration !== undefined ? parseFloat(el.dataset.duration) : NaN;
-    const visible = t >= s && (!isFinite(d) || t < s + d);
-    el.style.visibility = visible ? 'visible' : 'hidden';
-  }
-  // GSAP timelines (multi-composition templates): pause + seek every registered one.
-  const map = window.__timelines || {};
-  for (const id in map) {
-    const tl = map[id];
-    if (tl && typeof tl.seek === 'function') {
-      try { tl.pause(); tl.seek(Math.min(t, tl.duration() || t), false); } catch (e) { }
-    }
-  }
-  const anims = document.getAnimations();
-  for (const a of anims) { try { a.pause(); a.currentTime = timeMs; } catch (e) { } }
-  return anims.length;
-};
+const FRAME_SEEK_SOURCE = FRAME_RUNTIME_JS + String.raw`
 window.__hfSettle = function () {
   return new Promise((r) => requestAnimationFrame(() => requestAnimationFrame(() => r(document.getAnimations().length))));
 };
@@ -205,9 +192,9 @@ function scanAudioTracks(projectDir, entryFile, log) {
 	for (const tag of tags) {
 		const srcM = /\bsrc\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s>]+))/i.exec(tag);
 		const file = srcM && (srcM[1] || srcM[2] || srcM[3]);
-		if (!file || /^(https?:|data:|blob:|\/\/)/i.test(file)) continue;
-		const abs = path.resolve(projectDir, decodeURIComponent(file.split('?')[0].split('#')[0]));
-		if (!fs.existsSync(abs)) { log('audio source missing, skipped: ' + file); continue; }
+		if (!file) throw new Error('音频缺少本地素材路径');
+		const abs = resolveProjectResource(projectDir,file,{baseFile:entryFile});
+		if(!/\.(mp3|wav|m4a|ogg|flac|aac|mp4|webm)$/i.test(abs))throw new Error('音频资源必须是本次工程内的本地媒体');
 		const attr = (name, dflt) => {
 			const m = new RegExp('data-' + name + '\\s*=\\s*(?:"([^"]*)"|\'([^\']*)\'|([^\\s>]+))', 'i').exec(tag);
 			if (!m) return dflt;
@@ -228,7 +215,7 @@ function scanAudioTracks(projectDir, entryFile, log) {
 /** Build ffmpeg args mixing N audio tracks over the frame sequence. */
 function audioMuxArgs(tracks) {
 	const inputs = [];
-	for (const t of tracks) inputs.push('-i', t.file);
+	for (const t of tracks) inputs.push('-protocol_whitelist','file,pipe','-i', t.file);
 	const chains = tracks.map((t, i) => {
 		const parts = [];
 		if (Number.isFinite(t.dur)) parts.push(`atrim=0:${t.dur.toFixed(3)},asetpts=PTS-STARTPTS`);
@@ -247,27 +234,43 @@ function audioMuxArgs(tracks) {
 
 async function main() {
 	const req = await readRequest();
+	observeCancellation(req);
+	if(cancelled)throw new Error('任务已取消');
 	if (req.command !== 'render') throw new Error('未知命令: ' + req.command);
 	const { projectDir, outputPath, width, height } = req;
 	if (!projectDir || !outputPath || !width || !height) throw new Error('缺少 projectDir/outputPath/width/height');
+	if(![width,height].every(n=>Number.isSafeInteger(n)&&n>0&&n<=1920)||width*height>2073600)throw new Error('渲染画面尺寸超过预算');
 	const fpsNum = req.fps?.num || 30, fpsDen = req.fps?.den || 1;
+	if(![fpsNum,fpsDen].every(n=>Number.isSafeInteger(n)&&n>0)||fpsNum/fpsDen>60)throw new Error('渲染帧率超过预算');
 	const entryFile = req.entryFile || 'index.html';
+	safeRelativePath(entryFile);
 	const entryPath = path.join(projectDir, entryFile);
 	if (!fs.existsSync(entryPath)) throw new Error('合成入口不存在: ' + entryPath);
+	const tracks = scanAudioTracks(projectDir, entryFile, log);
 
 	fs.mkdirSync(path.dirname(outputPath), { recursive: true });
+	const outputDirectory=path.resolve(path.dirname(outputPath));
+	const checkTemporary=target=>{const child=path.relative(outputDirectory,path.resolve(target));if(!child||child.startsWith('..')||path.isAbsolute(child)||fs.existsSync(target)&&fs.lstatSync(target).isSymbolicLink())throw new Error('临时目录必须位于本次输出目录内');};
 	const framesDir = path.join(path.dirname(outputPath), '.frames-' + path.basename(outputPath, '.mp4'));
+	checkTemporary(framesDir);
 	fs.rmSync(framesDir, { recursive: true, force: true });
 	fs.mkdirSync(framesDir, { recursive: true });
 	const userDataDir = path.join(path.dirname(outputPath), '.browser-' + Date.now());
+	checkTemporary(userDataDir);
 
 	const { client, browser, browserWsUrl } = await launchBrowser({ width, height, userDataDir });
+	activeClient=client;
 	const tempPaths = [framesDir, userDataDir];
+	let sources;
 	try {
+		sources=await createRenderSourceHost(projectDir);let blockedRequest=false;
+		if(cancelled)throw new Error('任务已取消');
+		client.on('Fetch.requestPaused',event=>{const allowed=sources.allows(event.request.url,event.resourceType);if(!allowed){blockedRequest=true;try{const u=new URL(event.request.url);log('blocked resource: '+u.protocol+'//'+u.host+u.pathname.replace(/[a-f0-9]{64}/g,'[ticket]'));}catch{log('blocked resource URL');}}void client.send(allowed?'Fetch.continueRequest':'Fetch.failRequest',allowed?{requestId:event.requestId}:{requestId:event.requestId,errorReason:'BlockedByClient'}).catch(()=>{});});
+		await client.send('Fetch.enable',{patterns:[{urlPattern:'*',requestStage:'Request'}]});
 		await client.send('Page.enable');
 		await client.send('Runtime.enable');
 		await client.send('Emulation.setDeviceMetricsOverride', { width, height, deviceScaleFactor: 1, mobile: false });
-		await client.send('Page.navigate', { url: pathToFileURL(entryPath).href });
+		await client.send('Page.navigate', { url: sources.url(entryFile) });
 		await new Promise((resolve, reject) => {
 			const timer = setTimeout(() => reject(new Error('合成加载超时')), 30000);
 			client.on('Page.loadEventFired', () => { clearTimeout(timer); resolve(); });
@@ -275,6 +278,8 @@ async function main() {
 		// Expose the frame clock (compositions may ship their own __hfSeek; keep it).
 		const inject = await client.send('Runtime.evaluate', { expression: FRAME_SEEK_SOURCE, returnByValue: true });
 		if (inject.exceptionDetails) throw new Error('注入帧时钟失败: ' + (inject.exceptionDetails.text || ''));
+		const resources=await client.send('Runtime.evaluate',{expression:'(async()=>{await document.fonts.ready;for(const image of document.images)await image.decode();if([...document.fonts].some(font=>font.status==="error"))throw new Error("本地字体未能加载");return true;})()',awaitPromise:true,returnByValue:true});
+		if(resources.exceptionDetails||blockedRequest)throw new Error('动画本地资源未能就绪或包含不允许的外部请求'+(resources.exceptionDetails?': '+String(resources.exceptionDetails.exception?.description||resources.exceptionDetails.text).split('\n')[0]:''));
 
 		// Composition geometry from the DOM (authoritative), validated against request.
 		const meta = await client.send('Runtime.evaluate', {
@@ -285,17 +290,21 @@ async function main() {
 		const { duration } = meta.result.value;
 		if (!isFinite(duration) || duration <= 0) throw new Error('合成 data-duration 无效: ' + duration);
 		const totalFrames = Math.max(1, Math.round(duration * fpsNum / fpsDen));
+		if(duration>180||totalFrames>10800)throw new Error('动画时长或总帧数超过预算');
 		emit({ type: 'meta', totalFrames, durationSeconds: duration });
 
 		// Capture frames.
 		const clip = { x: 0, y: 0, width, height, scale: 1 };
-		for (let frame = 0; frame < totalFrames; frame++) {
+		let frameBytes=0;for (let frame = 0; frame < totalFrames; frame++) {
+			if(cancelled)throw new Error('任务已取消');
+			if(blockedRequest)throw new Error('动画包含超出本次工程的资源请求，已停止导出');
 			const timeMs = Math.round(frame * 1000 * fpsDen / fpsNum);
 			const seek = await client.send('Runtime.evaluate', { expression: `__hfSeek(${timeMs})`, returnByValue: true });
 			if (seek.exceptionDetails) throw new Error('帧 ' + frame + ' 时钟推进失败: ' + (seek.exceptionDetails.exception?.description || seek.exceptionDetails.text));
 			await client.send('Runtime.evaluate', { expression: '__hfSettle()', awaitPromise: true, returnByValue: true });
 			const shot = await client.send('Page.captureScreenshot', { format: 'png', clip, captureBeyondViewport: false });
-			fs.writeFileSync(path.join(framesDir, 'f' + String(frame).padStart(6, '0') + '.png'), Buffer.from(shot.data, 'base64'));
+			const bytes=Buffer.from(shot.data,'base64');frameBytes+=bytes.length;if(frameBytes>8*1024*1024*1024)throw new Error('渲染帧缓存超过8GiB预算');
+			fs.writeFileSync(path.join(framesDir, 'f' + String(frame).padStart(6, '0') + '.png'), bytes);
 			if (frame % 2 === 0 || frame === totalFrames - 1) emit({ type: 'progress', frame: frame + 1, totalFrames });
 		}
 
@@ -303,7 +312,6 @@ async function main() {
 		// Composition <audio> tracks (local files only) are mixed in via filter_complex:
 		// per-track trim/volume/delay → amix → AAC; -shortest keeps the video length.
 		const ffmpeg = resolveFfmpegPath();
-		const tracks = scanAudioTracks(projectDir, entryFile, log);
 		if (tracks.length > 0) log(`mixing ${tracks.length} audio track(s)`);
 		const baseArgs = [
 			'-y', '-framerate', `${fpsNum}/${fpsDen}`, '-start_number', '0', '-i', path.join(framesDir, 'f%06d.png')
@@ -340,23 +348,21 @@ async function main() {
 			bc.attach();
 			await Promise.race([
 				bc.send('Browser.close').catch(() => { }),
-				new Promise((r) => setTimeout(r, 5000))
+				new Promise((r) => {const timer=setTimeout(r,5000);timer.unref();})
 			]);
 			try { bc.close(); } catch { }
-		} catch {
-			try { browser.kill('SIGTERM'); } catch { }
-			setTimeout(() => { try { browser.kill('SIGKILL'); } catch { } }, 2000);
+		} catch {}
+		stopOwnedBrowser(browser,userDataDir);
+		await sources?.close();
+		for(const p of tempPaths){
+			try{checkTemporary(p);let failure;for(let attempt=0;attempt<6;attempt++){try{fs.rmSync(p,{recursive:true,force:true});failure=null;break;}catch(error){failure=error;if(attempt<5)await new Promise(resolve=>setTimeout(resolve,200));}}if(failure)throw failure;}
+			catch(error){log('临时目录未清理: '+error.message);}
 		}
-		for (const p of tempPaths) { try { fs.rmSync(p, { recursive: true, force: true }); } catch { } }
 	}
 }
 
 main().catch((e) => {
 	emit({ type: 'error', message: String(e?.message || e) });
 	log(String(e?.stack || e));
-	process.exit(1);
-}).finally(() => {
-	// All artifacts are written and temp dirs cleaned above; hard-exit so any
-	// lingering browser/CDP socket can't keep the worker alive.
-	setTimeout(() => process.exit(process.exitCode || 0), 200);
-});
+	process.exitCode=1;
+}).finally(() => {clearInterval(cancelObserver);});

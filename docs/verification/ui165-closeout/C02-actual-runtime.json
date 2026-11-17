@@ -1,0 +1,34 @@
+{
+  "ok": true,
+  "paths": {
+    "nodePath": "C:\\Program Files\\nodejs\\node.exe",
+    "ffmpegPath": "D:\\MDHPROJECT\\ffmpeg\\ffmpeg-9.0.2-essentials_build\\bin\\ffmpeg.exe",
+    "ffprobePath": "D:\\MDHPROJECT\\ffmpeg\\ffmpeg-9.0.2-essentials_build\\bin\\ffprobe.exe",
+    "browserPath": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"
+  },
+  "versions": {
+    "node": "25.6.0",
+    "ffmpeg": "9.0.2",
+    "ffprobe": "9.0.2",
+    "browser": "157.0.8103"
+  },
+  "requirements": {
+    "node": 22,
+    "browser": 120,
+    "ffmpeg": 6,
+    "ffprobe": 6
+  },
+  "workerEnv": {
+    "SYSTEMROOT": "C:\\Windows",
+    "SYSTEMDRIVE": "C:",
+    "COMSPEC": "C:\\Windows\\system32\\cmd.exe",
+    "PATHEXT": ".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW;.CPL",
+    "WINDIR": "C:\\Windows",
+    "TEMP": "C:\\Users\\PUBLIC-USER\\AppData\\Local\\Temp",
+    "TMP": "C:\\Users\\PUBLIC-USER\\AppData\\Local\\Temp",
+    "LOCALAPPDATA": "C:\\Users\\PUBLIC-USER\\AppData\\Local",
+    "ELECTRON_RUN_AS_NODE": "1",
+    "DESIGNCRAFT_BROWSER_PATH": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+    "DESIGNCRAFT_FFMPEG_DIR": "D:\\MDHPROJECT\\ffmpeg\\ffmpeg-9.0.2-essentials_build\\bin"
+  }
+}

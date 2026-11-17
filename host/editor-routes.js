@@ -5,6 +5,8 @@ import {SafetyError} from './safety.js';
 import {editorEngines} from './editor-session.js';
 import {Worker} from 'node:worker_threads';
 import {exportCheckpoint} from './source-export.js';
+import {recordPptxExport,readPptxReceipt} from './export-receipt.js';
+import {designDiagnostics} from './design-diagnostics.js';
 import {selectedObjectIds} from '../client/native-contract.js';
 import {openNativeSession,nativeProjectFonts} from './native.js';
 import {readFile} from 'node:fs/promises';
@@ -87,6 +89,17 @@ export function editorRoutes(ctx,manager,{guard,readJsonBody,sendJson}){
     if(view.epoch!==q.get('epoch')||view.sourceRevision!==revision||(await store.head(id))?.revision!==revision)throw new SafetyError('导出期间作品已改变，请重试',409);
     res.writeHead(200,{'content-type':result.type,'content-length':result.bytes.length,'cache-control':'no-store','x-source-revision':revision,'x-content-type-options':'nosniff','x-export-warnings':Buffer.from(JSON.stringify(result.warnings||[])).toString('base64url')});res.end(result.bytes);
    }finally{res.off('close',abort);}
+  })},
+  {kind:'exact',path:root+'/export-receipt',handler:guard(async(req,res)=>{
+   const view=viewFor(req),q=new URL(req.url,'http://localhost').searchParams;manager.fileActionIdle(view,q.get('epoch'));
+   if(req.method==='GET'){sendJson(res,200,{ok:true,receipt:readPptxReceipt(view.root,q.get('operationId'))});return;}
+   if(req.method!=='POST')throw new SafetyError('需要 GET 或 POST',405);
+   const chunks=[];let size=0;for await(const chunk of req){size+=chunk.length;if(size>128*1024*1024)throw new SafetyError('导出文件超过128MiB预算',413);chunks.push(chunk);}
+   let warnings=[];const value=req.headers['x-export-warnings'];if(value){if(value.length>30000)throw new SafetyError('导出告警超过预算',413);warnings=JSON.parse(Buffer.from(value,'base64url').toString('utf8'));}
+   const receipt=await recordPptxExport(manager,view,{operationId:q.get('operationId'),sourceId:q.get('id'),revision:q.get('revision'),epoch:q.get('epoch'),bytes:Buffer.concat(chunks),warnings});sendJson(res,200,{ok:true,receipt});
+  })},
+  {kind:'exact',path:root+'/diagnostics',handler:guard(async(req,res)=>{
+   if(req.method!=='GET')throw new SafetyError('需要 GET',405);const view=viewFor(req),epoch=new URL(req.url,'http://localhost').searchParams.get('epoch');if(epoch!==view.epoch)throw new SafetyError('诊断视图已切换',409);sendJson(res,200,{ok:true,report:designDiagnostics(manager,view)});
   })},
   {kind:'exact',path:root+'/project-package',handler:guard(async(req,res)=>{
    if(req.method!=='GET')throw new SafetyError('GET required',405);
@@ -315,8 +328,8 @@ export function editorRoutes(ctx,manager,{guard,readJsonBody,sendJson}){
    const instanceUpdate=updateHeader?JSON.parse(Buffer.from(updateHeader,'base64url').toString('utf8')):undefined;
    const imageHeader=req.headers['x-designcraft-image-adoption'];if(imageHeader&&imageHeader.length>4096)throw new SafetyError('图片候选回执超过预算',413);
    const imageAdoption=imageHeader?JSON.parse(Buffer.from(imageHeader,'base64url').toString('utf8')):undefined;
-   const result=await manager.save(view,{epoch:req.headers['x-designcraft-epoch'],baseRevision:req.headers['x-source-revision']||null,engineState,jobId:req.headers['x-designcraft-job'],placement,instanceUpdate,originAssignment:req.headers['x-designcraft-origin-plan'],imageAdoption},req);
-   sendJson(res,200,{ok:true,...result});
+   try{const result=await manager.save(view,{epoch:req.headers['x-designcraft-epoch'],baseRevision:req.headers['x-source-revision']||null,engineState,jobId:req.headers['x-designcraft-job'],placement,instanceUpdate,originAssignment:req.headers['x-designcraft-origin-plan'],imageAdoption},req);sendJson(res,200,{ok:true,...result});}
+   catch(error){if(error.feedbackRejected)sendJson(res,error.status||409,{ok:false,error:error.message,feedbackRejected:true});else throw error;}
   })}
  ];
 }

@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "scope": "actual rebuilt browser UMD and Wasm codec, real local WOFF2, editable slide text/SVG/font embedding; not DSH or PowerPoint visual acceptance",
+  "pptxBytes": 39143,
+  "sha256": "8557898f0c608980a99c13b17f3d9747761d6c24685b8817df3b43429580841d",
+  "fontEntries": [
+    "ppt/fonts/",
+    "ppt/fonts/201314.fntdata"
+  ],
+  "pageErrors": [],
+  "console": [],
+  "requests": [
+    "/",
+    "/converter.js",
+    "/font.woff2",
+    "/font.woff2"
+  ]
+}

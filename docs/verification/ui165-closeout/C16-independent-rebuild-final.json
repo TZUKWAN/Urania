@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "compiledWasmExact": true,
+  "twoIndependentPnpmStores": true,
+  "bundleIdentical": true,
+  "results": [
+    {
+      "directory": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\urania-closeout-20261118\\provenance\\codec-build\\dom-to-pptx",
+      "sha256": "342b13fd102ebefa6325b592b9b4c58cc4e903c2d1ca29421ca08c795f513d63",
+      "bytes": 3635939
+    },
+    {
+      "directory": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\urania-closeout-20261118\\rb\\dom-to-pptx",
+      "sha256": "342b13fd102ebefa6325b592b9b4c58cc4e903c2d1ca29421ca08c795f513d63",
+      "bytes": 3635939
+    }
+  ]
+}

@@ -1,50 +1,20 @@
 # Urania
 
-AI 原生的 DSH 设计插件，把图片、矢量、PPT 与代码动画放在同一个设计工作区。用户描述需求或选中画面对象后，让当前项目的设计 AI 调用底层编辑能力。
+DSH 内的 AI 原生设计工作空间：Photo 图片、Vector 矢量、Deck 演示和代码动画。选中对象、多选或框选后向 AI 提修改要求；原生能力由 AI 调用，源文件、人工修改和非目标对象受到版本/选区/回执保护。对话分栏支持拖动，历史作品可搜索打开，图片 API 独立配置。
 
-当前公开快照：`designcraft@1.3.0-dev.148`，UI **163**，Windows x64。插件内部的 `designcraft` 名称与工具 ID 保留兼容。
+当前交付代码：`designcraft@1.3.0-dev.150`，UI165。完成本轮审查的运行环境、路径约束、取消/性能、四引擎协作、Deck 样式、意见恢复与多选草稿、离线恢复和来源核对。
 
-## 项目范围
+本轮 `npm test`：452 项 Node + 19 项客户端通过，`npm run check` 通过。真实隔离 DSH、原生编辑器、两轮现有 GLM 连续流程及实际 MP4/工程导出已有当前证据。没有操作用户桌面或重启其 DSH；逐项边界见 [验收记录](VERIFICATION_UI165.json)。
 
-- 项目专用 AI 设计会话；对话与画布宽度调整、历史作品、选区 AI 输入。
-- 图片、矢量与演示文稿的底层编辑、版本保存、导入导出。
-- HTML/CSS/JavaScript 代码动画、预览时间轴、动画模板与本地视频渲染接入。
-- 独立生图 API 配置、受作用域保护的 AI 工具与本地素材管理。
-
-这是上传时的**开发快照**。本次公开操作检查了发布内容、凭据、文件摘要与远端上传，没有重新运行功能验收。既有开发记录仍列有 DSH 桌面重新加载后的动画完整流程待验收；不要把本仓库的存在理解为所有桌面功能已验收。详见 [公开范围说明](PUBLICATION.md)。
-
-## 获取工程与运行文件
+Windows x64；插件/Worker Node>=22，实际验收 DSH SDK0.2.2-rc.1 要求 Node>=24.9。浏览器>=120、FFmpeg/FFprobe>=6。运行文件从同版 Release 逐文件校验恢复，固定 SDK 依赖离线包含：
 
 ```powershell
-git clone https://github.com/TZUKWAN/Urania.git
-cd Urania
+pwsh -NoProfile -File scripts/restore-runtime.ps1 -Download
+node scripts/doctor.mjs
 ```
 
-编译运行文件体积较大，在 [匹配的开发 Release](https://github.com/TZUKWAN/Urania/releases/tag/dev-ui163-20261116) 提供：
+见 [部署、配置与恢复](DEPLOYMENT_AND_RECOVERY.md)、[问题审计](AUDIT_UI165.md)、[修改记录](FIX_LOG.md) 与 [交付说明](DELIVERY_SUMMARY.md)。最终归档、提交、PR 和发布读回摘要由相邻 DELIVERY.json 记录。
 
-1. 下载 `urania-runtime-win-x64-ui163-20261116.zip`、`runtime-manifest.json` 与 `SHA256SUMS.txt`。
-2. 用 `Get-FileHash -Algorithm SHA256` 核对 ZIP 摘要，或对照仓库 [运行文件清单](release/runtime-assets.json)。
-3. 将已核验 ZIP 解压到本仓库根目录，恢复 `runtimes/` 中的文件。附带的兼容版本保留原文件身份。
+Figma、Stitch、PixelBin 等已放弃外部服务不是核心依赖；麦克风、摄像头、截图和 Windows 公式识别不恢复。56个旧证据原件恢复，3个旧源码快照未找到且未伪造。原有历史报告不作为当前验收的替代。
 
-该附件不包含 DSH 应用、私人 SDK/profile、node_modules、系统 Node/Chromium 缓存或外部 FFmpeg。主插件声明 Node >=18；动画 worker 的依赖要求 Node >=22。按所用 DSH 版本的本地插件加载方式加载本目录。动画依赖锁位于 `runtimes/motion-worker/package-lock.json`，可在该目录运行 `npm ci`；FFmpeg 作为外部程序配置。
-
-## 目录
-
-| 目录/文件 | 内容 |
-| --- | --- |
-| `client/` | 设计对话、画布、选区与动画界面 |
-| `host/` | DSH 插件、作用域、存储、工具、原生及动画适配 |
-| `runtimes/`、`motion-worker/` | 运行适配器、源文件、依赖锁和编译运行文件的元数据 |
-| `resources/`、`skills/` | 固定资源、模板及 AI 制作指令 |
-| `tests/` | 源码中的测试与明确的测试输入；本地缓存不公开 |
-| `docs/engine-source-snapshots*.zip` | 原生引擎源码快照，来源/范围以锁文件和审计说明为准 |
-| `runtime-lock.json`、`web-runtime-lock.json`、`motion-runtime-lock.json` | 固定版本、来源和摘要 |
-| `SOURCE_SNAPSHOT.json` | 本次公开源文件清单与摘要 |
-
-## 开发检查
-
-现有入口为 `npm test`、`npm run check`；部分检查需要匹配 DSH 版本的 SDK、已恢复运行文件及本地依赖。私人 DSH SDK 不随仓库分发。本次上传没有将这些命令报告为新执行通过。
-
-## 许可
-
-自有代码见 [LICENSE](LICENSE)。第三方引擎、OpenDesign、HyperFrames、OpenMontage、字体及素材保留各自许可与声明，见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) 和 `licenses/`。MIT 不会覆盖第三方 AGPL 或资产条款；实际来源和修改记录一并保留。
+自有代码 MIT；第三方软件、AGPL 材料、字体和资源保留各自许可，见 THIRD_PARTY_NOTICES.md 与 licenses/。兼容包名、工具名和项目存储路径继续使用 designcraft。

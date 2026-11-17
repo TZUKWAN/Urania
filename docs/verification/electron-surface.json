@@ -30,7 +30,7 @@
   ],
   "owned": {
     "workspaceId": "cc1cffd1-c2f1-4e57-a9e7-57d072c2499c",
-    "sessionId": "PUBLIC-REDACTED"
+    "sessionId": "session-PUBLIC-REDACTED"
   },
   "nativeDocument": {
     "artboards": [
@@ -203,6 +203,6 @@
     "preloadUsed": false,
     "scope": "matching Electron/custom DSH protocol/auth forwarding; full packaged DSH IPC not included"
   },
-  "hostDirectory": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\electron-host\\runs\\464635e9-86cf-4f51-91db-72c6b3aa2742",
+  "hostDirectory": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\electron-host\\runs\\464635e9-86cf-4f51-91db-72c6b3aa2742",
   "pageErrors": []
 }

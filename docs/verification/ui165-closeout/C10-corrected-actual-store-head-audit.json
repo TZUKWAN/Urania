@@ -1,0 +1,14 @@
+{
+  "audit": "actual NativeSourceStore.head()/read() traversing next links; root.json is the immutable FIRST revision",
+  "sourceId": "import-75866b55-3684-4871-836c-d7f9f8dfd2fa",
+  "head": "5426dfab1f5df73a0fc1ad87f9243c01f585307d574af930f0a2731ed00106f7",
+  "sourceHash": "9e7a070cec30263381f859c37b74c71beb6998a9bc4a641c901bc09d1d37aac7",
+  "expectedManualHash": "9e7a070cec30263381f859c37b74c71beb6998a9bc4a641c901bc09d1d37aac7",
+  "latestManualBytesPreserved": true,
+  "lineageLength": 6,
+  "corrects": [
+    "C10-original-head-audit.json",
+    "C10-original-content-audit.json"
+  ],
+  "rawFilesystemWriteObserved": false
+}

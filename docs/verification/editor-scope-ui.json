@@ -7,7 +7,7 @@
       "name": "returning to A while its save for A→B is pending keeps the same App/source and commits the manual edit",
       "pass": true,
       "detail": {
-        "sessionId": "PUBLIC-REDACTED",
+        "sessionId": "session-PUBLIC-REDACTED",
         "sourceId": "work-8a3d073c-75d3-4331-895c-ad9f5bec91ad",
         "revision": "aa1b9f703532a446a883df881a80d77f83f40920f35b8ecde8a4ab9c2b1a9c21",
         "dirty": false,
@@ -18,7 +18,7 @@
       "name": "a failed switch-save retains the actual edited App and permits a successful retry",
       "pass": true,
       "detail": {
-        "sessionId": "PUBLIC-REDACTED",
+        "sessionId": "session-PUBLIC-REDACTED",
         "sourceId": "work-8a3d073c-75d3-4331-895c-ad9f5bec91ad",
         "revision": "aa1b9f703532a446a883df881a80d77f83f40920f35b8ecde8a4ab9c2b1a9c21",
         "dirty": true,

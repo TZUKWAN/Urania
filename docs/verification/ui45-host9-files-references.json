@@ -28,7 +28,7 @@
     "version": "0.13.1+designcraft.host9",
     "sourceMatches": true,
     "logSha256": "659c347afc2c201fc100046a9dddb6ae763d16953862d70fa44167386a4afe31",
-    "backup": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\before-deck-host9"
+    "backup": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\before-deck-host9"
   },
   "mediaRegression": [
     "actual WAV and H264/AAC media embedded byte-for-byte in native source",
@@ -37,15 +37,15 @@
   ],
   "rawEvidence": [
     {
-      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-photo-deck-files.json",
+      "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-photo-deck-files.json",
       "sha256": "b99018eaad9add2abbec91fdd3185d6ed1bb8c171d7e036232c2858156200c7e"
     },
     {
-      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-deck-media-host9.json",
+      "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-deck-media-host9.json",
       "sha256": "edbbd31a312181baa25fd327e7e95f5682e9073243ea4c436c99b31d0941cacc"
     },
     {
-      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-photo-deck-references.json",
+      "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-photo-deck-references.json",
       "sha256": "e15bb709753774a79e3dc15e390861a3f86a49769b5a7d1bd679d376eb2a6958"
     }
   ],

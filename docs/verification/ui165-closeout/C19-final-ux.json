@@ -1,0 +1,102 @@
+{
+  "status": "passed",
+  "scope": "current UI165 development directory loaded in isolated real DSH; actual headless mouse/key, not yet a frozen TGZ",
+  "root": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\urania-closeout-20261118\\projects\\final-ux\\7dc3ef7a-4fa1-4bc9-a8ed-a1aa97ff4c45",
+  "owned": {
+    "workspaceId": "bec80e8e-2f3b-40b0-bd37-c1108be01fbe",
+    "sessionId": "session-PUBLIC-REDACTED",
+    "ordinarySessionId": "session-PUBLIC-REDACTED"
+  },
+  "package": {
+    "name": "designcraft",
+    "version": "1.3.0-dev.150",
+    "designcraftUiBuild": 165,
+    "description": "Urania — unified AI-native design workspace (images, PPT, vector, motion video) for DSH, with revisioned collaboration and pinned open-source engines/resources.",
+    "type": "module",
+    "license": "MIT",
+    "author": "DesignCraft for DSH",
+    "exports": {
+      ".": "./host/index.js",
+      "./client": "./client/client.js",
+      "./package.json": "./package.json"
+    },
+    "files": [
+      "host",
+      "client",
+      "motion-worker",
+      "skills",
+      "resources",
+      "docs",
+      "runtimes",
+      "runtime-lock.json",
+      "web-runtime-lock.json",
+      "icon.svg",
+      "cordis.patch.yml",
+      "README.md",
+      "LICENSE",
+      "licenses",
+      "THIRD_PARTY_NOTICES.md",
+      "VERIFICATION.json",
+      "tests/*.test.mjs",
+      "tests/run-current.mjs",
+      "tests/check-source.mjs",
+      "tests/fixtures",
+      "motion-runtime-lock.json",
+      "scripts",
+      "release",
+      "AUDIT_UI165.md",
+      "AUDIT_UI163.md",
+      "FIX_LOG.md",
+      "VERIFICATION_UI165.json",
+      "VERIFICATION_UI163.json",
+      "DEPLOYMENT_AND_RECOVERY.md",
+      "DELIVERY_SUMMARY.md",
+      "SOURCE_SNAPSHOT.json"
+    ],
+    "engines": {
+      "node": ">=22"
+    },
+    "dsh": {
+      "bundle": {
+        "patch": "./cordis.patch.yml"
+      },
+      "client": {
+        "platform": "web",
+        "immediately": true,
+        "inject": [
+          "@deepseek-ai/dsh-client-ui-conversation"
+        ]
+      }
+    },
+    "os": [
+      "win32"
+    ],
+    "cpu": [
+      "x64"
+    ],
+    "scripts": {
+      "test": "node tests/run-current.mjs",
+      "check": "node tests/check-source.mjs",
+      "build:runner": "pwsh -NoProfile -File runtimes/build-runner.ps1",
+      "doctor": "node scripts/doctor.mjs",
+      "doctor:motion": "node scripts/motion-doctor.mjs",
+      "test:public": "node scripts/ci-portable.mjs",
+      "check:public": "node scripts/check-public-source.mjs",
+      "restore:runtime": "pwsh -NoProfile -File scripts/restore-runtime.ps1 -Download"
+    },
+    "displayName": "Urania"
+  },
+  "ordinaryDraftScope": "Actual input state seeded after reload: SDK persistence is bound only for mounted composers; no cross-reload persistence claim for the unmounted API fixture.",
+  "resizeMouseAndKeyboard": true,
+  "persistedWidth": 514.0,
+  "resizePreservesLiveNativeApp": true,
+  "historySearchAndOpenExactSource": true,
+  "selectionPopupAutomaticallyOpened": true,
+  "multiSelectionAndPopupTextPreserved": true,
+  "chineseDraftStagedWithoutModelSend": true,
+  "ordinaryChatDraftUntouched": true,
+  "dedicatedDesignSessionRestored": true,
+  "pageErrors": [],
+  "modelTurns": 0,
+  "codeRoot": "D:/METIS超级合并/dsh-plugin/designcraft"
+}

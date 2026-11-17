@@ -1,0 +1,111 @@
+{
+  "schema": 1,
+  "version": "1.3.0-dev.149",
+  "uiBuild": 164,
+  "at": "2026-11-17T10:52:53.305301+00:00",
+  "status": "scoped_functional_checks_passed",
+  "functionalRuntimeBuild": {
+    "version": "1.3.0-dev.148",
+    "uiBuild": 163,
+    "note": "The new implementation was exercised before the final cache/version-only bump. Frozen UI164 acceptance and package hashes are recorded separately in DELIVERY.json."
+  },
+  "nodeRuns": [
+    {
+      "tests": 30,
+      "pass": 30,
+      "fail": 0,
+      "logSha256": "b5c5c22a22fde3c418f956f6f5842f275cf4b902fe7dd5ec530fa6592ab7ceae",
+      "files": [
+        "design-session.test.mjs",
+        "ai-canvas.test.mjs",
+        "dsh-context.test.mjs",
+        "design-feedback.test.mjs",
+        "human-edit-protection.test.mjs",
+        "export-receipt.test.mjs",
+        "design-diagnostics.test.mjs"
+      ]
+    },
+    {
+      "tests": 23,
+      "pass": 23,
+      "fail": 0,
+      "logSha256": "630073f13ba7cca9ee2b10a3d09c243f009ee7e53e309234b2146c81b88f0db7",
+      "files": [
+        "motion-preview-host.test.mjs",
+        "motion-http-admission.test.mjs",
+        "motion-tool.test.mjs",
+        "motion-routes.test.mjs"
+      ]
+    }
+  ],
+  "actualAcceptance": {
+    "dshSdk": "0.2.2-rc.1",
+    "node": "25.6.0",
+    "designDraftAndBatchUi": true,
+    "realModelUserTurns": 2,
+    "actualModel": "zai-coding-cn/glm-5.3-flash",
+    "vectorTargetFillsAndManualDragPreserved": true,
+    "deckTwoPageUidsModifiedThirdPageAndNotesPreserved": true,
+    "newPptxSlides": 3,
+    "newPptxEditableTextRuns": 6,
+    "newPptxFixedSourceAndFileHash": true,
+    "diagnosticStagedPreservingMainDraft": true,
+    "motionIndependentPreviewRealDsh": true,
+    "motionOpaqueOriginAndSpoofTests": true,
+    "motionHiddenTicketRevoked": true,
+    "actualMp4": {
+      "seconds": 30,
+      "frames": 60,
+      "fps": 2,
+      "width": 640,
+      "height": 360,
+      "ffprobeVerified": true
+    },
+    "renderProjectHttpSandboxAndExternalRequestDenied": {
+      "passed": true,
+      "externalRequestsObserved": 0,
+      "workerExitCode": 1,
+      "noArtifact": true
+    }
+  },
+  "evidenceSha256": {
+    "feedback-ui.json": "72daa11316361238ff079ceffc4b1bb5148f6127546602e44d10e6336e21d94d",
+    "feedback-model-result.json": "1665b56ff806638d1fa7d8946bc855380d2493b3e56d1a476f114f3b662f1099",
+    "deck-feedback-result.json": "f1d5d0ff2914c350e6267b6d04b0875456b16e6d6aea46b5522773b46abd5d15",
+    "motion-dsh-ui.json": "1738896841c8769750c04e6684a71f9c8a8875e7b59dd33e87ad8ed8815c7d63",
+    "preview-browser.json": "fb713e6bf68fd02ee30bfaed11fead666b97943989caaf7cd7e5df7453fc24b8",
+    "product-motion-render.json": "dffe383bafde76272795444c4b0cd3ed27d7f779290fe06b1e90c7d26faf8a86",
+    "motion-render-frame-inspection.json": "b693ddb854a844aa239ab4a488296796438364064de73fd3547fcd38dc87653f",
+    "render-denial.json": "9218d071fcb4a1b2bb29502181d719a8ca7aee10c42fc760e0828d858649471a",
+    "photo-feedback.json": "8e24902eb531bb639b1c224c6bdc8250454411b422c0f396ac52d806b95ea28e",
+    "feedback-rejection.json": "7f3be2bd87f7a404e5701ac3ae2a3dba09932f97fc6ac9b37fd444927803dbba"
+  },
+  "limits": [
+    "No user DSH process, desktop, physical input/device or OS clipboard was controlled.",
+    "No PowerPoint application visual acceptance. PPTX ZIP/page/text/asset checks were actually performed.",
+    "No full-size video rerender, all-historical-feature rerun or new image/API-provider acceptance.",
+    "Opaque preview/CSP/message checks are not a claim of OS-VM isolation or prevention of all possible browser resource/egress channels.",
+    "Original Planners implementations were not copied; existing engines and stores were adapted independently."
+  ],
+  "candidateAcceptance": "Frozen-package loading and artifact hashes are recorded separately in external DELIVERY.json.",
+  "additionalUi164Acceptance": {
+    "actualPhotoRegisteredToolRasterEditAndReceipt": true,
+    "rejectedCandidateAutosaveAndReloadCannotOverwriteOriginal": true,
+    "independentCandidateForkAndReturnOriginal": true,
+    "providerTurnsInTheseCases": 0,
+    "requestChipRenderedWithoutInternalJson": true,
+    "actualRegisteredSdkCodecPayloadPreserved": true,
+    "additionalModelTurnsForChipFix": 0
+  },
+  "targetedChipFollowUp": {
+    "cases": 15,
+    "passed": 15,
+    "files": [
+      "design-request-reference.test.mjs",
+      "ai-canvas.test.mjs"
+    ],
+    "logSha256": "900466ffdeac687a175ea50d3fed3787b6938e8fb7f377b6d606e8dad4d8bdb0",
+    "actualDshUiReportSha256": "72daa11316361238ff079ceffc4b1bb5148f6127546602e44d10e6336e21d94d",
+    "actualModelPayload": "original prompt retained by the actual registered SDK serializer; no additional provider turn"
+  }
+}

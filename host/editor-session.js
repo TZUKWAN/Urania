@@ -383,7 +383,7 @@ export class EditorSessions {
   if(this.claims.has(key)&&this.claims.get(key)!=='linked:'+jobId)throw new SafetyError('此专业源正在被另一个窗口打开',423);
   if(owner&&owner.id!==view.id&&(owner.saving||owner.switching||Date.now()-owner.lastSeen<LIVE_MS))throw new SafetyError('此专业源正在另一个窗口编辑',423);
   const job=jobId?this.jobs.get(jobId):null;
-  if(jobId&&(!job||job.viewId!==view.id||job.status!=='running'||!job.executionStartedAt||!['new','create_svg','open','open_asset','return_to_design','edit_instance','apply_instance','apply_linked','resume_linked', 'brand','html_convert','image_adopt','image_undo','resource_image','resource_deck'].includes(job.action)))throw new SafetyError('动作未获执行许可或已停止，不能切换当前专业源',409);
+  if(jobId&&(!job||job.viewId!==view.id||job.status!=='running'||!job.executionStartedAt||!['new','create_svg','open','open_asset','return_to_design','edit_instance','apply_instance','apply_linked','resume_linked', 'brand','html_convert','image_adopt','image_undo','resource_image','resource_deck','recover_feedback'].includes(job.action)))throw new SafetyError('动作未获执行许可或已停止，不能切换当前专业源',409);
   if(job?.cancelRequested&&['html_convert','image_adopt','image_undo','resource_image','resource_deck'].includes(job.action))throw new SafetyError('动作已请求停止，未开始切换作品',499);
   const running=[...this.jobs.values()].find(job=>job.viewId===view.id&&job.status==='running');
   if(running&&running.id!==jobId)throw new SafetyError('当前设计动作尚未结束，请先停止或等待',423);
@@ -391,6 +391,14 @@ export class EditorSessions {
   view.switching=true;this.claims.set(key,view.id);
   try{
   const head=await this.store(view.root).head(sourceId);
+  if(job?.action==='recover_feedback'){
+   const recovery=job.recovery;
+   if(sourceId===recovery?.candidateId){
+    if(view.sourceId!==recovery.sourceId||head||job.recoveryCandidateRevision)throw new SafetyError('隔离候选只能保存到本次新建的独立作品',409);
+   }else if(sourceId===recovery?.sourceId){
+    if(view.sourceId!==recovery.candidateId||!job.recoveryCandidateRevision||head?.revision!==recovery.revision)throw new SafetyError('候选尚未独立保存或原稿已有更新，未恢复旧版本',409);
+   }else throw new SafetyError('草稿恢复只能保留本次候选并返回原稿',409);
+  }
   const selectedEngine=head?.meta.engine||engine||'vectorcraft';
   if(!Object.hasOwn(engineOf,selectedEngine))throw new SafetyError('此专业源的持续编辑桥尚未接入，当前作品未改变',409);
   if(engine&&engine!==selectedEngine)throw new SafetyError('请求引擎与原生源类型不一致，未打开或覆盖',409);
@@ -411,7 +419,7 @@ export class EditorSessions {
   if(['open_asset','edit_instance'].includes(job?.action)&&job.returnTarget===undefined)job.returnTarget=view.document&&view.sourceId?{sourceId:view.sourceId,title:view.title,sourceRevision:view.sourceRevision}:null;
   view.navigation=['open_asset','edit_instance'].includes(job?.action)&&job.returnTarget&&sourceId!==job.returnTarget.sourceId?{canReturn:true,...job.returnTarget,...(job.instanceEdit?{editId:job.instanceEdit.id}:{} )}:preserveNavigation?previousNavigation:null;
   view.sourceId=sourceId;view.title=head?.meta.title||title||'未命名设计';view.engine=selectedEngine;
-  view.epoch=randomUUID();view.document=null;view.ready=false;view.sourceRevision=head?.revision||null;view.savedEngineRevision=null;view.pendingOpenRevision=head?.revision||null;view.catalog=[];view.reportSequence=0;
+  view.epoch=randomUUID();view.document=null;view.ready=false;view.sourceRevision=head?.revision||null;view.savedEngineRevision=null;view.pendingOpenRevision=head?.revision||null;view.catalog=[];view.reportSequence=0;view.feedbackQuarantine=null;
   if(imagePlan){imagePlan.epoch=view.epoch;view.imagePlan=imagePlan;}else view.imagePlan=null;
   this.leases.set(key,view.id);
   if(job){job.epoch=view.epoch;job.sourceId=sourceId;}
@@ -493,7 +501,7 @@ export class EditorSessions {
  async state(sessionId,root){
   const directory=this.scope(sessionId,root),view=this.views.get(this.active.get(sessionId));
   const live=!!view&&view.root===directory&&Date.now()-view.lastSeen<LIVE_MS;
-  return {live,engines:engineOf,contextProtocol:EDITOR_CONTEXT_PROTOCOL,executionAdmission:true,historyPolicy:{action:'undo',target:'payload.jobId from an undoAvailable recentJob',scope:'one proven latest native step in the same live App; no later content edits; older/multi-step/sliced history fails closed'},view:live?{sourceId:view.sourceId,epoch:view.epoch,ready:view.ready,nativeResponsive:view.nativeResponsive,sourceRevision:view.sourceRevision,document:view.document,engine:view.engine,engineContract:engineOf[view.engine],editorProtocol:view.editorProtocol,requiresReload:view.editorProtocol!==EDITOR_CONTEXT_PROTOCOL,navigation:view.navigation||null,base:view.ready&&view.editorProtocol===EDITOR_CONTEXT_PROTOCOL?nativeBase(view.document):null,idArguments:view.ready&&view.editorProtocol===EDITOR_CONTEXT_PROTOCOL?selectedObjectIds(view.document).slice(0,50).map(id=>({id,argument:uint64Parameter(id)})):[]}:null,
+  return {live,engines:engineOf,contextProtocol:EDITOR_CONTEXT_PROTOCOL,executionAdmission:true,historyPolicy:{action:'undo',target:'payload.jobId from an undoAvailable recentJob',scope:'one proven latest native step in the same live App; no later content edits; older/multi-step/sliced history fails closed'},view:live?{sourceId:view.sourceId,epoch:view.epoch,ready:view.ready,nativeResponsive:view.nativeResponsive,sourceRevision:view.sourceRevision,document:view.document,engine:view.engine,engineContract:engineOf[view.engine],editorProtocol:view.editorProtocol,requiresReload:view.editorProtocol!==EDITOR_CONTEXT_PROTOCOL,recoveryRequired:!!view.feedbackQuarantine,recovery:view.feedbackQuarantine?{kind:'rejected-feedback',jobId:view.feedbackQuarantine.jobId,sourceId:view.sourceId,instruction:'原稿未覆盖；请先使用工作区的保留候选并返回原稿，再读取状态。不要重复执行、保存、打开或撤销来绕过隔离。'}:null,navigation:view.navigation||null,base:view.ready&&view.editorProtocol===EDITOR_CONTEXT_PROTOCOL?nativeBase(view.document):null,idArguments:view.ready&&view.editorProtocol===EDITOR_CONTEXT_PROTOCOL?selectedObjectIds(view.document).slice(0,50).map(id=>({id,argument:uint64Parameter(id)})):[]}:null,
    sources:await this.store(directory).list(),recentJobs:[...this.jobs.values()].filter(job=>job.sessionId===sessionId).slice(-8).map(job=>this.jobInfo(job))};
  }
  jobInfo(job){const view=this.views.get(job.viewId);return {id:job.id,action:job.action,command:job.payload?.command,sourceId:job.sourceId,status:job.status,error:job.error,cancelRequested:!!job.cancelRequested,executionStarted:!!job.executionStartedAt,appliedAfterCancel:!!job.cancelRequested&&job.status==='succeeded',undoAvailable:this.canUndo(view,job),undoneBy:job.undoneBy||null,undoOf:job.undoOf||null};}
@@ -518,7 +526,7 @@ export class EditorSessions {
   if(!job||job.viewId!==view.id||job.epoch!==view.epoch||epoch!==view.epoch)throw new SafetyError('动作或设计表面已切换，未获执行许可',409);
   if(job.cancelRequested||job.status==='cancelled')throw new SafetyError('动作在执行前已停止，没有执行修改',499);
   if(job.status!=='running'||job.executionStartedAt)throw new SafetyError('动作不可重复开始，请先读取当前设计状态',409);
-  if((['execute','undo','derive','place','edit_instance','apply_instance','apply_linked','resume_linked','link_instances','unlink_instance','convert_svg','brand','image_adopt','image_undo'].includes(job.action)||['open_asset','return_to_design'].includes(job.action)&&job.base)&&(!view.ready||job.sourceId!==view.sourceId||!this.matchesBase(view,job.base))){
+  if((['execute','undo','derive','place','edit_instance','apply_instance','apply_linked','resume_linked','link_instances','unlink_instance','convert_svg','brand','image_adopt','image_undo','recover_feedback'].includes(job.action)||['open_asset','return_to_design'].includes(job.action)&&job.base)&&(!view.ready||job.sourceId!==view.sourceId||!this.matchesBase(view,job.base))){
    const message='开始执行前设计或选区已改变，请读取最新状态';this.fail(job,message,409);throw new SafetyError(message,409);
   }
   if(job.action==='undo'){try{this.requireUndo(view,job.undoOf);}catch(error){this.fail(job,error.message,error.status||409);throw error;}}
@@ -537,7 +545,7 @@ export class EditorSessions {
   this.operationClaims.add(key);
   try{return await this.requestInner(sessionId,args,signal);}finally{this.operationClaims.delete(key);}
  }
- async requestInner(sessionId,{action,sourceId,epoch,base,payload={},operationId,initiator='ai'},signal){
+ async requestInner(sessionId,{action,sourceId,epoch,base,payload={},operationId,initiator='ai',feedbackId},signal){
   if(signal?.aborted)throw new SafetyError('动作在执行前已停止',499);
   const root=this.scope(sessionId);let view=this.views.get(this.active.get(sessionId));
   if(!view&&['new','create_svg'].includes(action)){
@@ -549,13 +557,14 @@ export class EditorSessions {
   if(view.root!==root)throw new SafetyError('设计工作区与当前 DSH 对话目录不同',409);
   if(view.nativeResponsive===false)throw new SafetyError('原生编辑器暂未响应，请先在工作区等待或恢复最近已保存版本',409);
   if(view.document?.pendingInteraction&&action!=='commands')throw new SafetyError('原生编辑器仍有未结束的人工交互，请完成后再读取和修改',409);
-  if(!['new','create_svg','open','execute','undo','inspect_node','save','commands','derive','place','open_asset','return_to_design','edit_instance','apply_instance','apply_linked','resume_linked','link_instances','unlink_instance','convert_svg', 'brand','html_convert','html_freeze_tailwind','image_adopt','image_undo','resource_image','resource_deck'].includes(action))throw new SafetyError('未支持的编辑器动作',422);
+  if(!['new','create_svg','open','execute','undo','inspect_node','save','commands','derive','place','open_asset','return_to_design','edit_instance','apply_instance','apply_linked','resume_linked','link_instances','unlink_instance','convert_svg', 'brand','html_convert','html_freeze_tailwind','image_adopt','image_undo','resource_image','resource_deck','recover_feedback'].includes(action))throw new SafetyError('未支持的编辑器动作',422);
   assertSafeJson(payload);if(Buffer.byteLength(JSON.stringify(payload))>8*1024*1024)throw new SafetyError('设计指令超过8MiB预算',413);
   if(base!==undefined){assertSafeJson(base);if(Buffer.byteLength(JSON.stringify(base))>1024*1024)throw new SafetyError('原生执行基线超过预算',413);}
-  if(['execute','undo','inspect_node','save','derive','place','edit_instance','apply_instance','apply_linked','resume_linked','link_instances','unlink_instance','convert_svg','brand','image_adopt','image_undo'].includes(action)||['open_asset','return_to_design'].includes(action)&&view.document){
+  if(['execute','undo','inspect_node','save','derive','place','edit_instance','apply_instance','apply_linked','resume_linked','link_instances','unlink_instance','convert_svg','brand','image_adopt','image_undo','recover_feedback'].includes(action)||['open_asset','return_to_design'].includes(action)&&view.document){
    if(!view.ready||!view.document||sourceId!==view.sourceId||epoch!==view.epoch)throw new SafetyError('专业源引用已过期，请先读取当前状态',409);
-   if(['execute','undo','derive','place','open_asset','return_to_design','edit_instance','apply_instance','apply_linked','resume_linked','link_instances','unlink_instance','convert_svg','brand','image_adopt','image_undo'].includes(action)&&!this.matchesBase(view,base))throw new SafetyError('设计版本、引擎或完整选区已改变，请先读取当前状态',409);
+   if(['execute','undo','derive','place','open_asset','return_to_design','edit_instance','apply_instance','apply_linked','resume_linked','link_instances','unlink_instance','convert_svg','brand','image_adopt','image_undo','recover_feedback'].includes(action)&&!this.matchesBase(view,base))throw new SafetyError('设计版本、引擎或完整选区已改变，请先读取当前状态',409);
   }
+  if(action==='recover_feedback'&&!view.feedbackQuarantine&&!this.feedback?.hasRejected(view))throw new SafetyError('当前作品没有已隔离的意见候选，未执行恢复',409);
   if(action==='brand'&&(view.navigation?.canReturn||!['create','attach','enable','disable','recolor','resume','font-create','font-attach','font-disable','font-change','font-resume','font-cancel'].includes(payload.command)))throw new SafetyError('请返回项目作品并选择有效的品牌操作',422);
   if(action==='open_asset'){if(view.navigation?.canReturn)throw new SafetyError('请先返回原设计，再打开另一份来源',409);await this.graph(root).asset(payload.assetId);}
   if(action==='edit_instance'){
@@ -609,6 +618,7 @@ export class EditorSessions {
    if(signal?.aborted||this.disposed||this.active.get(sessionId)!==view.id||view.epoch!==admittedEpoch||this.scope(sessionId)!==root)throw new SafetyError('资源核对期间会话已切换，未开始导入',409);
   }
   if(action==='execute')checkHostedCommand(payload.command,payload.params||{});
+  if(feedbackId){if(!this.feedback)throw new SafetyError('设计意见服务尚未就绪',503);await this.feedback.authorize(sessionId,view,{action,payload,feedbackId});}
   const undoOf=action==='undo'?this.requireUndo(view,payload.jobId).id:null;
   if(undoOf)payload={jobId:undoOf,command:'edit.undo',params:{}};
   const key=operationId||randomUUID(),existing=[...this.jobs.values()].find(job=>job.sessionId===sessionId&&job.operationId===key);
@@ -617,7 +627,11 @@ export class EditorSessions {
   if([...this.jobs.values()].filter(job=>job.viewId===view.id&&['queued','running','uncertain'].includes(job.status)).length>=16)throw new SafetyError('设计动作队列已满',429);
   if(this.jobs.size>=64)for(const [id,old]of this.jobs){if(['succeeded','failed','cancelled'].includes(old.status)){this.jobs.delete(id);if(this.jobs.size<64)break;}}
   if(this.jobs.size>=64)throw new SafetyError('尚未确认的设计动作过多，请先恢复或处理它们',429);
-  const job={id:randomUUID(),operationId:key,sessionId,viewId:view.id,root:view.root,sourceId:sourceId||view.sourceId,epoch:view.epoch,base:base===undefined?undefined:serializable(base),payload:serializable(payload),action,undoOf,initiator:initiator==='manual'?'manual':'ai',...(resourceReceiptId?{resourceReceiptId}:{}),...(['return_to_design','apply_instance','apply_linked'].includes(action)?{returnTarget:{...view.navigation}}:{}),...(instanceEdit?{instanceEdit}:{}),status:'queued',at:new Date().toISOString()};
+  const job={id:randomUUID(),operationId:key,sessionId,viewId:view.id,root:view.root,sourceId:sourceId||view.sourceId,epoch:view.epoch,base:base===undefined?undefined:serializable(base),payload:serializable(payload),action,undoOf,initiator:initiator==='manual'?'manual':'ai',...(feedbackId?{feedbackId}:{}),...(resourceReceiptId?{resourceReceiptId}:{}),...(['return_to_design','apply_instance','apply_linked'].includes(action)?{returnTarget:{...view.navigation}}:{}),...(instanceEdit?{instanceEdit}:{}),status:'queued',at:new Date().toISOString()};
+  if(action==='recover_feedback'){
+   job.recovery={sourceId:view.sourceId,revision:view.sourceRevision,candidateId:'recovered-'+randomUUID()};
+   job.payload={recoverySourceId:job.recovery.sourceId,recoveryCandidateId:job.recovery.candidateId};
+  }
   if(action==='resource_image'){
    const bytes=readAsset(root,payload.assetName),png=bytes?.subarray(0,8).equals(Buffer.from([137,80,78,71,13,10,26,10])),jpg=bytes?.[0]===255&&bytes?.[1]===216;
    if(!bytes||bytes.length>16*1024*1024||!png&&!jpg||createHash('sha256').update(bytes).digest('hex')!==payload.sourceHash)throw new SafetyError('资源图片原件不存在、格式无效或已改变',409);
@@ -666,6 +680,7 @@ export class EditorSessions {
   try{assertSafeJson(engineState);validateNativeIdentity(engineState);}catch(error){throw new SafetyError(error.message,422);}
   if(!view.document||!sameUint64(view.document.uid,engineState.uid)||view.engine==='photocraft'&&!sameUint64(view.document.nativeDocumentId,engineState.nativeDocumentId)||compareUint64(view.document.revision,engineState.revision)<0)throw new SafetyError('请先回报与保存相符的真实引擎状态',409);
   let job=jobId?this.jobs.get(jobId):null,operation;
+  if(view.feedbackQuarantine&&!job?.feedbackId)throw Object.assign(new SafetyError('AI 候选已隔离，请先保留候选并恢复原稿；未接受自动保存',409),{feedbackRejected:true});
   if(['resource_image','resource_deck'].includes(job?.action)&&(job.cancelRequested||job.status!=='running'))throw new SafetyError('资源导入已停止，原件已保留，未提交新源',499);
   if(['resource_image','resource_deck'].includes(job?.action)&&(view.sourceId!=='import-'+job.id||view.engine!==(job.action==='resource_deck'?'deckcraft':'photocraft')))throw new SafetyError('资源导入的源身份已改变，原件已保留，未提交新源',409);
   const claim=this.claims.get(this.leaseKey(view));if(claim&&claim!=='linked:'+jobId)throw new SafetyError('该设计正在关联更新，未写入竞争版本',423);
@@ -718,9 +733,19 @@ export class EditorSessions {
   }
   view.saving=true;
   try{
-  const stream=(async function*(){for await(const chunk of input){if(['resource_image','resource_deck'].includes(job?.action)&&(job.cancelRequested||job.status!=='running'))throw new SafetyError('资源导入已停止，未提交新源',499);view.lastSeen=Date.now();yield chunk;}})();
+  let stream=(async function*(){for await(const chunk of input){if(['resource_image','resource_deck'].includes(job?.action)&&(job.cancelRequested||job.status!=='running'))throw new SafetyError('资源导入已停止，未提交新源',499);view.lastSeen=Date.now();yield chunk;}})();
+  if(!job?.feedbackId&&this.feedback?.hasRejected(view)){const parts=[];let size=0;for await(const part of stream){size+=part.byteLength;if(size>256*1024*1024)throw new SafetyError('候选源超过预算',413);parts.push(part);}const candidate=Buffer.concat(parts);if(await this.feedback.isRejected(view,candidate))throw Object.assign(new SafetyError('这份候选先前未通过意见核对，只能保留为独立设计，未写回原稿',409),{feedbackRejected:true});stream=(async function*(){yield candidate;})();}
   const options={engine:view.engine,title:view.title,baseRevision,engineState,actor:job?.initiator||'manual',operation};let result;
-  if(['apply-instance','convert-svg','image-adopt','image-revert'].includes(operation?.action)||originPlan){
+   if(job?.action==='recover_feedback'&&view.sourceId===job.recovery?.candidateId){
+    const chunks=[];let count=0;for await(const chunk of stream){count+=chunk.byteLength;if(count>256*1024*1024)throw new SafetyError('隔离候选源超过预算',413);chunks.push(chunk);}const bytes=Buffer.concat(chunks);
+    if(baseRevision!==null||!this.feedback.rejectedCandidate({...view,sourceId:job.recovery.sourceId},bytes))throw new SafetyError('隔离候选与已拒绝的原生内容不一致，未保存',409);
+    result=await this.store(view.root).commit(view.sourceId,{...options,operation:{action:'feedback-recovery',id:job.id,originalSourceId:job.recovery.sourceId,originalRevision:job.recovery.revision},bytes});job.recoveryCandidateRevision=result.revision;
+   }else if(job?.feedbackId&&job.action==='execute'){
+   const chunks=[];let count=0;for await(const chunk of stream){count+=chunk.byteLength;if(count>256*1024*1024)throw new SafetyError('意见候选源超过256MiB预算',413);chunks.push(chunk);}const bytes=Buffer.concat(chunks);
+   try{job.feedbackProof=await this.feedback.verifySource(view,job,bytes);}catch(error){view.feedbackQuarantine={jobId:job.id,sourceId:view.sourceId,baseRevision};try{this.feedback.registerRejected(view,job,bytes,error.message);}catch(journalError){error.message+='；隔离记录保存失败，请保留当前窗口：'+journalError.message;}error.feedbackRejected=true;throw error;}
+   if(epoch!==view.epoch||view.sourceRevision!==baseRevision||this.leases.get(this.leaseKey(view))!==view.id)throw new SafetyError('核对人工字段期间作品已切换，未提交旧候选',409);
+   result=await this.store(view.root).commit(view.sourceId,{...options,operation:{action:'feedback-edit',id:job.id,submissionId:job.feedbackId},bytes});view.feedbackQuarantine=null;
+  }else if(['apply-instance','convert-svg','image-adopt','image-revert'].includes(operation?.action)||originPlan){
    const chunks=[];let count=0;for await(const chunk of stream){count+=chunk.byteLength;if(count>256*1024*1024)throw new SafetyError('原位回写源超过256MiB预算',413);chunks.push(chunk);}
    const bytes=Buffer.concat(chunks);if(originPlan)await this.graph(view.root).verifyOriginAssignments(originPlan,bytes);else if(['image-adopt','image-revert'].includes(operation.action))assertPhotoCandidateOnly(imageCandidateBytes,bytes);else if(operation.action==='convert-svg')await this.graph(view.root).verifySvgConversionSource(job.conversionPlan,bytes);else await this.graph(view.root).verifyInstanceApplySource(job.applyPlan,bytes);
    if(imagePlan?.operationJobId&&(job?.cancelRequested||job?.status!=='running'))throw new SafetyError('图片动作已停止，未提交候选源',499);
@@ -752,6 +777,7 @@ export class EditorSessions {
    catch(error){this.fail(job,'原生文件已保存，来源关系尚未确认；请核对素材而不要重复原生动作：'+error.message,503,true);return this.jobInfo(job);}
   }
   if(!['commands','inspect_node','link_instances','unlink_instance','apply_linked','resume_linked','brand','html_freeze_tailwind'].includes(job.action)&&!job.saved){this.fail(job,'源文件尚未确认保存，未标记完成',409);return this.jobInfo(job);}
+  if(job.action==='recover_feedback'&&(!job.recoveryCandidateRevision||view.sourceId!==job.recovery?.sourceId)){this.fail(job,'隔离候选尚未独立保存并返回原稿，未标记完成',409);return this.jobInfo(job);}
   if(['link_instances','unlink_instance','brand'].includes(job.action)&&!job.projectMutation){this.fail(job,'关联关系尚未持久保存',409);return this.jobInfo(job);}
   if(job.action==='html_freeze_tailwind'&&job.projectMutation?.kind!=='tailwind-freeze'){this.fail(job,'静态样式保存回执尚未确认',409,true);return this.jobInfo(job);}
   if(['apply_linked','resume_linked'].includes(job.action)){
@@ -792,7 +818,7 @@ export class EditorSessions {
  fail(job,message,status=422,uncertain=false){clearTimeout(job.timer);job.status=uncertain?'uncertain':'failed';job.error=message;job.reject(new SafetyError(message,status));this.record(job);}
  record(job){
   if(!['running','queued'].includes(job.status))this.linked.release(job);
-  const body={...this.jobInfo(job),operationId:job.operationId,sessionId:job.sessionId,epoch:job.epoch,at:job.at,savedRevision:job.saved||null,savedEngineRevision:job.savedEngineRevision??null,undoProof:job.undoProof||null,command:job.payload?.command||null,...(job.resourceReceiptId?{resourceReceiptId:job.resourceReceiptId}:{}),...(job.originalInput?{originalInput:job.originalInput}:{}),...(job.material?{material:job.material}:{}),...(job.placementReceipt?{placementReceipt:job.placementReceipt}:{}),...(job.placement?{placement:job.placement}:{}),...(job.instanceEdit?{instanceEdit:job.instanceEdit}:{}),...(job.instanceUpdate?{instanceUpdate:job.instanceUpdate}:{}),...(job.applyPlan?{applyPlan:job.applyPlan}:{}),...(job.instanceUpdateReceipt?{instanceUpdateReceipt:job.instanceUpdateReceipt}:{}),...(job.conversionPlan?{conversionPlan:job.conversionPlan}:{}),...(job.conversionReceipt?{conversionReceipt:job.conversionReceipt}:{}),...(job.projectMutation?{projectMutation:job.projectMutation}:{}),...(job.linkedUpdate?{linkedUpdate:job.linkedUpdate}:{}),...(job.linkedUpdateId?{linkedUpdateId:job.linkedUpdateId}:{})};
+  const body={...this.jobInfo(job),operationId:job.operationId,...(job.feedbackId?{feedbackEvidence:{feedbackId:job.feedbackId,initiator:job.initiator,executionStartedAt:job.executionStartedAt||null,beforePage:job.beforeDocument?.page?.nativePage||null,beforeObjectIds:job.beforeDocument?selectedObjectIds(job.beforeDocument):[],proof:job.feedbackProof||null}}:{}),sessionId:job.sessionId,epoch:job.epoch,at:job.at,savedRevision:job.saved||null,savedEngineRevision:job.savedEngineRevision??null,undoProof:job.undoProof||null,command:job.payload?.command||null,...(job.resourceReceiptId?{resourceReceiptId:job.resourceReceiptId}:{}),...(job.originalInput?{originalInput:job.originalInput}:{}),...(job.material?{material:job.material}:{}),...(job.placementReceipt?{placementReceipt:job.placementReceipt}:{}),...(job.placement?{placement:job.placement}:{}),...(job.instanceEdit?{instanceEdit:job.instanceEdit}:{}),...(job.instanceUpdate?{instanceUpdate:job.instanceUpdate}:{}),...(job.applyPlan?{applyPlan:job.applyPlan}:{}),...(job.instanceUpdateReceipt?{instanceUpdateReceipt:job.instanceUpdateReceipt}:{}),...(job.conversionPlan?{conversionPlan:job.conversionPlan}:{}),...(job.conversionReceipt?{conversionReceipt:job.conversionReceipt}:{}),...(job.projectMutation?{projectMutation:job.projectMutation}:{}),...(job.linkedUpdate?{linkedUpdate:job.linkedUpdate}:{}),...(job.linkedUpdateId?{linkedUpdateId:job.linkedUpdateId}:{})};
   job.recordTail=(job.recordTail||Promise.resolve()).then(async()=>{try{
    const dir=workspacePath(job.root,join('design','.designcraft','v2','operations'));await mkdir(dir,{recursive:true});
    atomicWrite(workspacePath(job.root,join(dir,job.id+'.json')),JSON.stringify(body,null,2));return true;

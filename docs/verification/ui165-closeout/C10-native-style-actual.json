@@ -1,0 +1,110 @@
+{
+  "root": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\urania-closeout-20261118\\projects\\deck-style-7b79225b-69fd-4ed7-a5ab-fc246b763782",
+  "modelCalls": 0,
+  "testKind": "actual rebuilt native engine + registered tools; not an LLM execution",
+  "owned": {
+    "workspaceId": "0ae49c6b-3ac8-45a9-9768-132582db88cb",
+    "sessionId": "session-PUBLIC-REDACTED"
+  },
+  "design": {
+    "sessionId": "session-PUBLIC-REDACTED",
+    "root": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\urania-closeout-20261118\\projects\\deck-style-7b79225b-69fd-4ed7-a5ab-fc246b763782"
+  },
+  "source": {
+    "id": "import-88e42581-ab98-467c-a8b2-cbee92d7d2c9",
+    "revision": "8d8c05e9cbdf460fb5fc47b03e9a6ff84826fc066ecd22243042b797c076702a"
+  },
+  "pageUIDs": [
+    100,
+    103,
+    106
+  ],
+  "manualNonTargetThirdPageMoveBeforeAi": true,
+  "passed": true,
+  "exactTwoTitleTextFieldsOnly": true,
+  "paragraphEndDefaultsPreserved": true,
+  "manualThirdPageAndAllNotesPreserved": true,
+  "freshNativeReopenExact": true,
+  "exported": {
+    "receipt": {
+      "schema": 1,
+      "id": "export-b66b9b1f-bb4b-418f-ab03-f554389fae86",
+      "createdAt": "2026-11-17T19:51:13.321Z",
+      "source": {
+        "id": "import-88e42581-ab98-467c-a8b2-cbee92d7d2c9",
+        "revision": "39e8ce59698675c3df58f8be684a29b1f77feebc63592c0f3a0dee13a92a7816",
+        "sha256": "5dcd55723a02cb97355caaf1e554d24ad044945b3f3d5dffb599b28e59a666fa",
+        "engine": "deckcraft",
+        "engineState": {
+          "uid": 5253974118629376,
+          "revision": 10
+        },
+        "pageOrder": [
+          {
+            "id": "100",
+            "index": 0
+          },
+          {
+            "id": "103",
+            "index": 1
+          },
+          {
+            "id": "106",
+            "index": 2
+          }
+        ],
+        "assets": [
+          {
+            "file": "mimetype",
+            "sha256": "21d713a1c554bf395ce4480da81ea7bfa3feefc420b7b2811eb4c59d2e511b34",
+            "bytes": 41
+          }
+        ]
+      },
+      "artifact": {
+        "format": "pptx",
+        "file": "design/.designcraft/exports/export-b66b9b1f-bb4b-418f-ab03-f554389fae86/design.pptx",
+        "sha256": "ff36e94cebf08d410c811374de8d66d713256c6fe9f2526fa4853b609f6aebb8",
+        "bytes": 32266
+      },
+      "inspection": {
+        "slides": [
+          {
+            "index": 0,
+            "file": "ppt/slides/slide1.xml",
+            "sha256": "6b6e2c7b1eb752ec3ea78fd2a2f6f8bb99c6a709655983894756a53a14311dd7",
+            "editableTextRuns": 2,
+            "nativeShapeElements": 2,
+            "pictureElements": 0
+          },
+          {
+            "index": 1,
+            "file": "ppt/slides/slide2.xml",
+            "sha256": "924983bd94e2c5b9e8871e97b698c89e162dee9bd58306338e3824ffc5be88d1",
+            "editableTextRuns": 2,
+            "nativeShapeElements": 2,
+            "pictureElements": 0
+          },
+          {
+            "index": 2,
+            "file": "ppt/slides/slide3.xml",
+            "sha256": "bbcd5ca12b824615d6d5ce3443899f3909e606f2a7a35b137cdfeddf98d5c222",
+            "editableTextRuns": 2,
+            "nativeShapeElements": 2,
+            "pictureElements": 0
+          }
+        ],
+        "slideCount": 3,
+        "editableTextRuns": 6,
+        "assets": []
+      },
+      "warnings": [],
+      "renderReview": {
+        "performed": false,
+        "status": "not-performed"
+      }
+    },
+    "name": "qa-three-page.pptx"
+  },
+  "pageErrors": []
+}

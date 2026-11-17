@@ -1,0 +1,125 @@
+{
+  "status": "passed",
+  "scope": "real Vector source and poster, independent duplicate, same-object SVG apply/undo/redo, native/SVG/PNG and reopen; no user desktop/OS clipboard/model",
+  "root": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\urania-closeout-20261118\\svg-vector-inplace\\54570d7f-0d51-48fb-aeeb-a7a23c6d696b",
+  "owned": {
+    "workspaceId": "5c94d2c6-864f-4c22-85c9-32f202315592",
+    "sessionId": "session-PUBLIC-REDACTED",
+    "ordinarySessionId": "session-PUBLIC-REDACTED"
+  },
+  "actualRegisteredPlacement": true,
+  "checks": [
+    {
+      "name": "two uses and native copy are independent",
+      "detail": {
+        "copyId": "6",
+        "originalAsset": "asset-edc9c553-befc-4482-a56c-c8b268ec5f18"
+      }
+    },
+    {
+      "name": "same native object changed with layout and other uses retained",
+      "detail": {
+        "editedAsset": "asset-443226b0-14d4-4d17-9cfc-0de0b5dee1a6",
+        "renderedPixelDifference": [
+          243,
+          145,
+          317,
+          214
+        ]
+      }
+    },
+    {
+      "name": "headless keyboard undo/redo, vector export and fresh reopen succeed",
+      "detail": {
+        "sameObject": "6",
+        "sourceHash": "e0d4d88daa33b963b9de2c3d8b51431eaea1c2612d35c9bcb12d22e4bb8a630c"
+      }
+    }
+  ],
+  "asset": {
+    "id": "asset-edc9c553-befc-4482-a56c-c8b268ec5f18",
+    "title": "可编辑 SVG 标志",
+    "sourceId": "work-d8552ce3-5b95-4e2f-bd8d-e9a09308b77f",
+    "sourceRevision": "4c38d638528d430b91571c947afa49846b6a6e0b596c3cda05b487ec0e5ea758",
+    "sourceHash": "e1a7bc07b3557a228cea8ef53df7412af369fadf8e70210824503fac3c03f174",
+    "engine": "vectorcraft",
+    "format": "svg",
+    "sha256": "0640843ba7492b17233834bc60c588b9eede7dd766506c3b809fa02f7bf2c5e4",
+    "bytes": 1190,
+    "preview": {
+      "format": "png",
+      "sha256": "bf6dfc669fdc2d4968bbb5ce85c2651aba66d1c58337a056eeefdc06a81b82ab",
+      "bytes": 5276,
+      "width": 320,
+      "height": 240
+    },
+    "at": "2026-11-17T20:32:50.574Z"
+  },
+  "replacement": {
+    "id": "asset-443226b0-14d4-4d17-9cfc-0de0b5dee1a6",
+    "title": "可编辑 SVG 标志 · 独立编辑",
+    "sourceId": "fork-a390176a-c707-4d66-98fc-648e8a6bc483",
+    "sourceRevision": "d2f0f1c033913c387306fff7a92bb8cf346011bc5668c408a190f28c577592c5",
+    "sourceHash": "e0d4d88daa33b963b9de2c3d8b51431eaea1c2612d35c9bcb12d22e4bb8a630c",
+    "engine": "vectorcraft",
+    "format": "svg",
+    "sha256": "a5f3d512367a7a5b72f733418262d04390f1c2570a2fba3cca40650fb7760439",
+    "bytes": 1190,
+    "preview": {
+      "format": "png",
+      "sha256": "12dbb0b28dfb69b53776baceef06c49d93f53de49785b2fba058ec2032ac580c",
+      "bytes": 5297,
+      "width": 320,
+      "height": 240
+    },
+    "at": "2026-11-17T20:34:34.789Z"
+  },
+  "first": {
+    "id": "use-c59889cc-1e99-47e9-bf47-6994e42cc4f4",
+    "assetId": "asset-edc9c553-befc-4482-a56c-c8b268ec5f18",
+    "sourceId": "work-ceb53342-57b1-4038-8989-ed276f58eb0a",
+    "nativeId": "2",
+    "boundAtRevision": "39cfd80db6e33461ac215a3eb79e928045795ea3037c30e3a7731debde072734",
+    "nativeNodeHash": "013d55cf8cf8fa8e330febbb802c6ed70afc67659a4ed9fb4c06c32f554ed268",
+    "originToken": "852700bb93ff2340d0a2ae0ec6d04f19",
+    "at": "2026-11-17T20:33:04.871Z"
+  },
+  "other": {
+    "id": "use-079bea04-fe23-4566-a4b9-69e28cdfee85",
+    "assetId": "asset-edc9c553-befc-4482-a56c-c8b268ec5f18",
+    "sourceId": "work-ceb53342-57b1-4038-8989-ed276f58eb0a",
+    "nativeId": "3",
+    "boundAtRevision": "4f3231b7f5561c37881dd0a37ded19c45911dcfcc14bd824b7b0236dea0b6dc8",
+    "nativeNodeHash": "de0ac2a53534c81fd757381b8ae2f8aacdadaca88d3cfaa5ec333049fa088651",
+    "originToken": "162257351f364da7ce435c676983f9c1",
+    "at": "2026-11-17T20:33:13.168Z"
+  },
+  "editedCopy": {
+    "id": "use-a71691a4-ef74-e120-1407-7a1533bb78be",
+    "assetId": "asset-edc9c553-befc-4482-a56c-c8b268ec5f18",
+    "sourceId": "work-ceb53342-57b1-4038-8989-ed276f58eb0a",
+    "nativeId": "6",
+    "originToken": "0d2ba295c15b0cd8b76863200a30397a",
+    "boundAtRevision": "ed192503ac07f2b5018ba37ab81fa5b66b3b60c259b4c5793047658489fa8d27",
+    "nativeNodeHash": "fe3932439b56c98f302ea91a5c428c53c8ad221c2288134dff25d0d2fce307a6",
+    "origin": "native-copy",
+    "at": "2026-11-17T20:33:36.506Z",
+    "status": "present",
+    "currentSourceRevision": "ed192503ac07f2b5018ba37ab81fa5b66b3b60c259b4c5793047658489fa8d27",
+    "nativeObject": {
+      "id": 6,
+      "name": null,
+      "kind": "placeddocument"
+    },
+    "changedSincePlacement": false
+  },
+  "visualDifference": [
+    243,
+    145,
+    317,
+    214
+  ],
+  "exactNativeReopen": true,
+  "nativeKeyboardUndoRedoAndGraph": true,
+  "vectorSvgExport": true
+}

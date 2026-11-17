@@ -1,7 +1,7 @@
-import {EditorSurface} from './editor-surface.js?v=163';
-import {sameUint64,compareUint64,uint64Parameter} from './native-protocol.js?v=163';
-import {EDITOR_CONTEXT_PROTOCOL,validateNativeContext,nativeBase,matchesNativeBase,selectedObjectIds,canvasMaterialTarget,sameNativeDocument} from './native-contract.js?v=163';
-import {preparePreview,capturePreview,convertPreview,conversionWarnings,hasSupportedTailwindTag} from './html-sandbox.js?v=163';
+import {EditorSurface} from './editor-surface.js?v=165';
+import {sameUint64,compareUint64,uint64Parameter} from './native-protocol.js?v=165';
+import {EDITOR_CONTEXT_PROTOCOL,validateNativeContext,nativeBase,matchesNativeBase,selectedObjectIds,canvasMaterialTarget,sameNativeDocument} from './native-contract.js?v=165';
+import {preparePreview,capturePreview,convertPreview,conversionWarnings,hasSupportedTailwindTag} from './html-sandbox.js?v=165';
 
 const API='/designcraft/api/v2/studio';
 const wait=ms=>new Promise(resolve=>setTimeout(resolve,ms));
@@ -864,7 +864,10 @@ export class NativeController {
    await this.report(current&&sameUint64(current.uid,snapshot.document.uid)&&compareUint64(current.revision,snapshot.document.revision)>=0?current:snapshot.document);
    const identity={uid:snapshot.document.uid,revision:snapshot.document.revision,...(snapshot.document.nativeDocumentId!==undefined?{nativeDocumentId:snapshot.document.nativeDocumentId}:{})};
    const response=await fetch(API+'/source',{method:'POST',headers:{...this.sourceHeaders(),'content-type':'application/octet-stream','x-designcraft-epoch':epoch,'x-source-revision':this.view.sourceRevision||'','x-designcraft-state':utf8Base64(identity),...(jobId?{'x-designcraft-job':jobId}:{}),...(placement?{'x-designcraft-placement':utf8Base64(placement)}:{}),...(instanceUpdate?{'x-designcraft-instance-update':utf8Base64(instanceUpdate)}:{}),...(originAssignment?{'x-designcraft-origin-plan':originAssignment.planId}:{}),...(imageAdoption?{'x-designcraft-image-adoption':utf8Base64({planId:imageAdoption.id})}:{})},body:new Blob([snapshot.bytes])});
-   const saved=await response.json();if(!response.ok||!saved.ok)throw Object.assign(new Error(saved.error||'源文件未保存'),{status:response.status});
+   const saved=await response.json();if(!response.ok||!saved.ok){
+    if(saved.feedbackRejected){const quarantined={...draft,feedbackRejected:true,feedbackReason:saved.error};this.change({pendingDraft:quarantined});const retained=await this.vault.replace(key,token,quarantined);if(!retained.applied)this.change({pendingDraft:{...quarantined,feedbackPreservationError:'候选备份发生冲突，请保持窗口并核对已有草稿'}});}
+    throw Object.assign(new Error(saved.error||'源文件未保存'),{status:response.status,feedbackRejected:!!saved.feedbackRejected});
+   }
    if(this.view.epoch!==epoch)throw new Error('保存时专业源已切换，本地草稿已保留');
    this.view.sourceRevision=saved.revision;this.savedEngineRevision=snapshot.document.revision;this.savedInputSequence=stableInput;
    const acknowledgement=await this.surface.acknowledgeSaved(snapshot.document,saved.revision);
@@ -885,12 +888,17 @@ export class NativeController {
   try{
    let result,conversionSummary;
    if(this.state.unresponsive)throw new Error('编辑器暂未响应，未执行修改；请等待或恢复最近已保存版本');
-   if(this.state.pendingDraft&&!['commands','inspect_node'].includes(action))throw new Error('请先恢复待处理草稿，未执行修改或覆盖源');
+   if(this.state.pendingDraft&&!['commands','inspect_node','recover_feedback'].includes(action))throw new Error('请先恢复待处理草稿，未执行修改或覆盖源');
    if(job){
     if(!this.runtime.operationAdmission)throw new Error('后端缺少执行前停止检查，请保存后重新加载设计插件');
     await this.api('begin',{jobId:job.id,epoch:job.epoch});
    }
-   if(action==='html_convert'){if(!job)throw new Error('网页转换需要当前对话动作许可');applied=true;result=await this.convertHtmlJob(job);}
+   if(action==='recover_feedback'){
+    if(!job||!this.state.pendingDraft?.feedbackRejected||payload.recoverySourceId!==this.state.sourceId)throw new Error('当前没有匹配的已隔离意见候选');
+    await this.recoverDraft({independent:true,independentSourceId:payload.recoveryCandidateId,internal:true,jobId:job.id});applied=true;
+    const candidateId=this.state.sourceId;await this.load({sourceId:payload.recoverySourceId,jobId:job.id});result={recoveredCandidateId:candidateId,returnedToOriginal:true};
+   }
+   else if(action==='html_convert'){if(!job)throw new Error('网页转换需要当前对话动作许可');applied=true;result=await this.convertHtmlJob(job);}
    else if(action==='html_freeze_tailwind'){if(!job)throw new Error('静态样式保存需要当前对话动作许可');result=await this.freezeHtmlTailwindJob(job,()=>{applied=true;});}
    else if(action==='resource_image'){
     if(!job)throw new Error('资源图片导入需要当前对话动作许可');
@@ -1021,8 +1029,8 @@ export class NativeController {
    if(['derive','place','open_asset','return_to_design','edit_instance','apply_instance','apply_linked','resume_linked','link_instances','unlink_instance','convert_svg'].includes(action))await this.refreshProject();return result;
   }catch(error){
    if(['apply_instance','convert_svg'].includes(action)&&!applied&&!error.outcomeUnknown){this.pendingInstanceUpdate=null;if(action==='convert_svg')this.change({svgConversionPending:null});}
-   if(job)await this.api('finish',{jobId:job.id,epoch:this.view.epoch,ok:false,error:error.message,uncertain:applied||!!error.outcomeUnknown}).catch(()=>{});
-   this.change({phase:this.state.document?'ready':'error',error:error.message});throw error;
+   if(job)await this.api('finish',{jobId:job.id,epoch:this.view.epoch,ok:false,error:error.message,uncertain:error.feedbackRejected?false:applied||!!error.outcomeUnknown}).catch(()=>{});
+   this.change({phase:this.state.document?'ready':'error',error:error.feedbackRejected?'AI 候选未通过目标与人工修改核对，已保留草稿，原稿未覆盖。':error.message});throw error;
   }finally{if(['image_adopt','image_undo'].includes(action))this.scopeLocked=false;this.busy=false;this.change({busy:false});if(this.state.dirty&&!this.state.pendingDraft)this.scheduleSave();}
  }
  async poll(){
@@ -1066,6 +1074,7 @@ export class NativeController {
   try{
    await this.flush();
    if(this.view!==owner||this.view.epoch!==epoch||this.surface!==surface)throw new Error('导出前作品已切换，没有导出其他作品');
+   const exportRevision=owner.sourceRevision,exportEngineRevision=this.savedEngineRevision;
    const exchange=['psd','webp','tiff'].includes(format)||format==='pdf'&&surface.engine==='deckcraft';
    let snapshot;
    if(exchange){
@@ -1091,8 +1100,18 @@ export class NativeController {
    }else snapshot=await surface.snapshot(format);
    if(!(snapshot.bytes instanceof ArrayBuffer)||!snapshot.bytes.byteLength)throw new Error('原生编辑器未返回可下载的非空字节');
    if(!sameUint64(snapshot.document.uid,uid)||this.view!==owner||this.view.epoch!==epoch)throw new Error('导出时文档身份已改变，没有下载其他作品');
+   if(!sameUint64(snapshot.document.revision,exportEngineRevision)||owner.sourceRevision!==exportRevision)throw new Error('导出期间设计已有新修改，请保存后重新导出');
    const file=new File([snapshot.bytes],(title||'设计').replace(/[<>:"/\\|?*]/g,'_')+'.'+format,{type:({svg:'image/svg+xml',png:'image/png',jpg:'image/jpeg',webp:'image/webp',tiff:'image/tiff',pdf:'application/pdf',psd:'image/vnd.adobe.photoshop',pptx:'application/vnd.openxmlformats-officedocument.presentationml.presentation'})[format]||'application/octet-stream'});
-   Object.defineProperty(file,'designcraftWarnings',{value:snapshot.warnings||[]});return file;
+   Object.defineProperty(file,'designcraftWarnings',{value:snapshot.warnings||[]});
+   if(format==='pptx'){
+    const operationId='export-'+crypto.randomUUID(),query=new URLSearchParams({epoch,id:owner.sourceId,revision:exportRevision,operationId});
+    const encoded=btoa(String.fromCharCode(...new TextEncoder().encode(JSON.stringify(snapshot.warnings||[])))).replace(/\+/g,'-').replace(/\//g,'_').replace(/=+$/,'');
+    const response=await fetch(API+'/export-receipt?'+query,{method:'POST',headers:{...this.sourceHeaders(),'content-type':'application/octet-stream','x-export-warnings':encoded},body:snapshot.bytes});
+    const result=await response.json();if(!response.ok||!result.ok)throw new Error(result.error||'导出文件已生成，但固定版本回执尚未保存，请重试导出');
+    if(this.view!==owner||owner.epoch!==epoch||owner.sourceRevision!==exportRevision)throw new Error('导出回执属于先前版本，已保留文件，请重新选择当前版本导出');
+    Object.defineProperty(file,'designcraftReceipt',{value:result.receipt});this.change({lastExportReceipt:result.receipt});
+   }
+   return file;
   }finally{this.busy=false;this.change({busy:false});if(this.state.dirty)this.scheduleSave();}
  }
  async suspendHostMenu(){
@@ -1408,8 +1427,9 @@ export class NativeController {
    this.change({imageNotice:plan.type==='undo'?'已核对图片候选撤销，未重复执行。':'已核对并恢复已保存的图片候选，未重复执行。'});return result;
   }finally{this.scopeLocked=false;this.busy=false;this.change({busy:false});}
  }
- async recoverDraft({independent=false,imagePlan=null,internal=false,jobId}={}){
+ async recoverDraft({independent=false,independentSourceId,imagePlan=null,internal=false,jobId}={}){
   const draft=this.state.pendingDraft;if(!draft)throw new Error('没有待恢复的草稿');
+  if(draft.feedbackRejected&&!independent)throw new Error('这份 AI 候选未通过人工保护核对，只能独立保留，不能覆盖原稿');
   if((draft.instanceUpdate||draft.originAssignment)&&!independent)throw new Error('此草稿来自未确认的图片或来源回写。请先核对项目回执，或恢复为独立作品保留内容');
   if(draft.imageAdoption&&!independent&&(!imagePlan||imagePlan.id!==draft.imageAdoption.id))throw new Error('图片候选的原位许可已失效；请核对候选回执，或恢复为独立作品');
   if(!independent&&draft.baseRevision!==this.view.sourceRevision)throw new Error('磁盘版本已有更新，请将草稿恢复为独立作品');
@@ -1417,16 +1437,22 @@ export class NativeController {
   const oldKey=this.cacheKey();
   try{
    if(!independent)this.ownedDraftTokens.set(oldKey,draft.token);
-   const sourceId=independent?'recovered-'+crypto.randomUUID():this.state.sourceId;
+   const sourceId=independent?independentSourceId||'recovered-'+crypto.randomUUID():this.state.sourceId;
    const selected=await this.api('select',{sourceId,title:draft.title+' · 恢复',engine:draft.document?.engine||this.view.engine,preserveNavigation:!!this.parentContext&&!independent,...(imagePlan&&!independent?{imagePlanId:imagePlan.id}:{}),...(jobId?{jobId}:{})});
    if(independent&&this.parentContext){this.releaseParent();this.change({sourceNavigation:null});}
    this.surface?.dispose();this.surface=null;this.view={...this.view,...selected};this.reportSequence=0;this.savedEngineRevision=null;
    this.pendingImageAdoption=imagePlan&&!independent?{...imagePlan,epoch:selected.epoch,sourceId}:null;
    this.change({phase:'opening',sourceId,epoch:selected.epoch,title:selected.title,sourceRevision:selected.sourceRevision,document:null,foreignDocument:null,pendingDraft:null,dirty:false,error:null,unresponsive:false,healthWarning:null});
    const surface=await this.ensureSurface();const loaded=await surface.open(sourceId+'.'+selected.engineContract.extension,draft.bytes.slice(0));this.acceptDocument(loaded.document);await this.report();await this.flush(jobId,{opening:true});
-   if(oldKey!==this.cacheKey())await this.vault.replace(oldKey,draft.token,undefined);await this.refresh();this.change({phase:'ready'});
+   if(oldKey!==this.cacheKey()){
+    const removed=await this.vault.replace(oldKey,draft.token,undefined);
+    if(!removed.applied)throw new Error('候选已独立保存，原位置的草稿已被另一窗口更新；已保留新草稿，请先核对');
+    if(this.ownedDraftTokens.get(oldKey)===draft.token)this.ownedDraftTokens.delete(oldKey);
+   }
+   await this.refresh();this.change({phase:'ready'});
   }catch(error){const retained=await this.vault.get(oldKey).catch(()=>null);this.change({phase:this.state.document?'ready':'error',error:error.message,...(retained?{pendingDraft:retained}:{})});throw error;}finally{if(!internal)this.busy=false;this.change({busy:this.busy});}
  }
+ async keepRejectedFeedbackAndRestore(){const draft=this.state.pendingDraft,sourceId=this.state.sourceId;if(!draft?.feedbackRejected)throw new Error('没有需要隔离保留的 AI 候选');await this.recoverDraft({independent:true});return this.run('open',{sourceId});}
  async dispose(){
   if(this.disposing)return;
   if(this.busy||this.activating||this.manualBusy)throw new Error('当前输入或设计动作尚未结束，编辑器没有被关闭');

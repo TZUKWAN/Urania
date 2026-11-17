@@ -15,10 +15,10 @@
   "posterNew": {
     "status": "passed",
     "scope": "real Vector source and poster, independent duplicate, same-object SVG apply/undo/redo, native/SVG/PNG and reopen; no user desktop/OS clipboard/model",
-    "root": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\svg-vector-inplace\\3dc3d234-fe8c-4dc5-b0f7-46de5a7d8731",
+    "root": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\svg-vector-inplace\\3dc3d234-fe8c-4dc5-b0f7-46de5a7d8731",
     "owned": {
       "workspaceId": "9e83b3f8-bc0f-44e9-b1b9-e77c415dca4c",
-      "sessionId": "PUBLIC-REDACTED"
+      "sessionId": "session-PUBLIC-REDACTED"
     },
     "actualUiPlacementButton": true,
     "checks": [
@@ -94,7 +94,7 @@
       "nativeId": "2",
       "boundAtRevision": "1ed39b7917779ce48a937644643603856d810eaf5590493365319b2558edf249",
       "nativeNodeHash": "4ddaba7e8b129e3550fd8c73d221f1d3704ccc305ff168155a38dec44935ca38",
-      "originToken": "PUBLIC-REDACTED",
+      "originToken": "d7622d4198a1088782ba225444dd20b1",
       "at": "2026-11-05T06:52:24.017Z",
       "status": "present",
       "currentSourceRevision": "1ed39b7917779ce48a937644643603856d810eaf5590493365319b2558edf249",
@@ -112,7 +112,7 @@
       "nativeId": "3",
       "boundAtRevision": "376a863a12336bfe13879e3835e8991120886f2b06b194c92a626799f03e154c",
       "nativeNodeHash": "7a457b9ac73b7cc884c22077560b1fa2a235447220fcd2dd309929a22e80c438",
-      "originToken": "PUBLIC-REDACTED",
+      "originToken": "e5bb2c4aaf4dd343f2d866bc6d595b4c",
       "at": "2026-11-05T06:52:29.539Z"
     },
     "editedCopy": {
@@ -120,7 +120,7 @@
       "assetId": "asset-5ff50585-970c-484a-ba68-90a5b411751a",
       "sourceId": "work-f8d8e478-1173-442c-a862-f8323e7ea2d3",
       "nativeId": "6",
-      "originToken": "PUBLIC-REDACTED",
+      "originToken": "c7e3d592e89b501edd94781f792963c3",
       "boundAtRevision": "e112754cff617e958047ba71fae6a2cc4163e7e1444da76362b03220fa3697c1",
       "nativeNodeHash": "1458a28deca62fd64d95b301d77e74f011c94937d91b5baa7734773fa10a7094",
       "origin": "native-copy",
@@ -147,10 +147,10 @@
   "posterLegacy": {
     "status": "passed",
     "scope": "actual old SVG group in a copied owned project, edit/apply/undo/redo/reopen and modified-group refusal; no user desktop, OS clipboard or model",
-    "root": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\legacy-svg-inplace\\8e56abca-f786-4733-aebe-36f66e019efa",
+    "root": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\legacy-svg-inplace\\8e56abca-f786-4733-aebe-36f66e019efa",
     "owned": {
       "workspaceId": "8721ca1d-76ca-4860-a51a-ddc6b15b3268",
-      "sessionId": "PUBLIC-REDACTED"
+      "sessionId": "session-PUBLIC-REDACTED"
     },
     "checks": [
       {
@@ -203,10 +203,10 @@
   "posterSvgReimport": {
     "status": "passed",
     "scope": "re-import actual edited SVG poster export in owned real Vector app; no user desktop, clipboard or model",
-    "root": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\svg-poster-roundtrip\\7ac8123c-03e7-43a4-a373-4c9b41f28b01",
+    "root": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\svg-poster-roundtrip\\7ac8123c-03e7-43a4-a373-4c9b41f28b01",
     "owned": {
       "workspaceId": "5e3591d7-4045-4a64-b2ea-c968ccc96a58",
-      "sessionId": "PUBLIC-REDACTED"
+      "sessionId": "session-PUBLIC-REDACTED"
     },
     "size": [
       1000,
@@ -220,10 +220,10 @@
   "deck": {
     "status": "passed",
     "scope": "genuine registered DSH tools and headless native Vector/Deck; SVG retained with real preview; independent native duplicate, same-picture apply, physical undo/redo/reopen and actual PPTX; no user desktop/OS clipboard/model",
-    "root": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\svg-deck-inplace\\858161f8-820f-4501-9d85-346be7f62fbf",
+    "root": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\svg-deck-inplace\\858161f8-820f-4501-9d85-346be7f62fbf",
     "owned": {
       "workspaceId": "7ca386c6-68a4-4b18-bc9c-ba1c744820f9",
-      "sessionId": "PUBLIC-REDACTED"
+      "sessionId": "session-PUBLIC-REDACTED"
     },
     "actualUiPlacementButton": true,
     "asset": {
@@ -271,7 +271,7 @@
       "nativeId": "261",
       "boundAtRevision": "c6b750259eab63bb1da8bd8032e486f44c2e2d3374e4e8ca73a8cd4fd084d508",
       "nativeNodeHash": "63c324a71d6e2f247291cab3bb9b4569780324c1ace2f598f37d4b085fbfd763",
-      "originToken": "PUBLIC-REDACTED",
+      "originToken": "ea442197ce24ef8b2cff524bb6577234",
       "nativePage": {
         "kind": "slide",
         "id": 257,
@@ -297,7 +297,7 @@
       "assetId": "asset-b9c959a0-e7aa-43e0-904f-d5d42e3a6968",
       "sourceId": "work-ff31f6ee-00e7-45fb-bcc6-64e7943bbd71",
       "nativeId": "263",
-      "originToken": "PUBLIC-REDACTED",
+      "originToken": "a1b296979279093773d5db538c4daba3",
       "boundAtRevision": "788429d320094284ea13ea6c71b6af16d1974ee14142f4595fdfc2a8220fad7c",
       "nativeNodeHash": "ecf1d313db3bbf52ded947ca041e099b40d464ec4262290ac11bd402e98de35d",
       "origin": "native-copy",
@@ -313,7 +313,7 @@
           "assetId": "asset-f1c84cba-3b9a-4326-a23e-c6377c0f8fd8",
           "sourceRevision": "8067798f314a27bd403171a3b74da8dfc3abde1564332db693dc9aad8c2a59e6",
           "nativeNodeHash": "41213bad8cad2da631ce3fb78cb45d27c81c7035d98e4a3b9201d234795b5301",
-          "originToken": "PUBLIC-REDACTED"
+          "originToken": "a1b296979279093773d5db538c4daba3"
         }
       ],
       "status": "present",
@@ -343,7 +343,7 @@
   "oldEngineGuard": {
     "status": "passed",
     "scope": "actual old host11 with copied owned SVG group; disabled until native migration capability is installed",
-    "root": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\legacy-host11-guard\\e7b582fe-c7ae-4b40-8f0c-1c9d9c5b0d2a",
+    "root": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\legacy-host11-guard\\e7b582fe-c7ae-4b40-8f0c-1c9d9c5b0d2a",
     "nativeId": "6",
     "guardDisabled": true,
     "originalNodeUnchanged": true
@@ -379,7 +379,7 @@
     "installedWebFilesRehashed": true,
     "fullCompletionNotClaimed": true
   },
-  "evidenceDirectory": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\outputs\\DesignCraft_SVG原位编辑收口证据_20261105",
+  "evidenceDirectory": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\outputs\\DesignCraft_SVG原位编辑收口证据_20261105",
   "evidence": [
     {
       "file": "legacy-svg-browser.json",

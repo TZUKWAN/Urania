@@ -1,7 +1,7 @@
 {
   "status": "passed",
   "scope": "actual native Vector/Deck/Photo; 7 explicitly linked originals+independent8th; one local white correction; source PNG320x240->400x240 keeps native frames; real response-loss/physical hand-move resume; no model",
-  "root": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\mixed-seven-project\\a17967ee-7624-4eb9-8c9b-0c8baf5f1515",
+  "root": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\mixed-seven-project\\a17967ee-7624-4eb9-8c9b-0c8baf5f1515",
   "codeRoot": "D:\\METIS超级合并\\dsh-plugin\\designcraft",
   "checks": [
     {
@@ -88,7 +88,7 @@
   ],
   "owned": {
     "workspaceId": "a6f1aeaa-34b6-42e9-b6d5-3f1a3a18b0de",
-    "sessionId": "PUBLIC-REDACTED"
+    "sessionId": "session-PUBLIC-REDACTED"
   },
   "update": {
     "id": "update-dbe444e6-ccab-45d6-9894-dd865db47a26",

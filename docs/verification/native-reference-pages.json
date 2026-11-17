@@ -9,8 +9,8 @@
       "detail": {
         "schema": 2,
         "editorProtocol": 2,
-        "sessionId": "PUBLIC-REDACTED",
-        "root": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\reference-pages-project\\21684015-5f34-4c30-9c01-ce4da244d0db",
+        "sessionId": "session-PUBLIC-REDACTED",
+        "root": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\reference-pages-project\\21684015-5f34-4c30-9c01-ce4da244d0db",
         "sourceId": "import-7923d9fb-9d59-4b05-b31d-a4ae8c5e809f",
         "title": "专业工具验证",
         "epoch": "614e1675-3286-4ad4-8284-eed7ddc69c06",
@@ -32,7 +32,7 @@
           },
           "kind": "vectorcraft"
         },
-        "selectionStamp": "{\"page\":0,\"selection\":{\"new_art\":[]},\"tool\":{\"options\":null,\"tool\":\"selection\"}}",
+        "selectionStamp": "[REDACTED]",
         "page": {
           "artboard": {
             "height": 480,

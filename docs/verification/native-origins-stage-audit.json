@@ -23,10 +23,10 @@
       "cases": [
         {
           "engine": "vectorcraft",
-          "root": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\copy-undo-probe\\75c05594-68b8-49cc-9357-c55229111945",
+          "root": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\copy-undo-probe\\75c05594-68b8-49cc-9357-c55229111945",
           "owned": {
             "workspaceId": "1ab707a3-55ec-4864-8941-161f0e86ccf0",
-            "sessionId": "PUBLIC-REDACTED"
+            "sessionId": "session-PUBLIC-REDACTED"
           },
           "nativeCopiedId": "3",
           "actualCopiedPngSha256": "540fbe5984111c7aee64345ebf2313816cd87b35cff6a00ff32bf83c7db13e28",
@@ -52,10 +52,10 @@
       "cases": [
         {
           "engine": "deckcraft",
-          "root": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\copy-undo-probe\\3dd53c99-c6aa-486a-a2ba-5084ec74c235",
+          "root": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\copy-undo-probe\\3dd53c99-c6aa-486a-a2ba-5084ec74c235",
           "owned": {
             "workspaceId": "a464aadc-b22e-43ee-a7a6-5185f7afa484",
-            "sessionId": "PUBLIC-REDACTED"
+            "sessionId": "session-PUBLIC-REDACTED"
           },
           "nativeCopiedId": "262",
           "actualCopiedPngSha256": "da14a16eabd798696c26494162a6d9e153e71e55946378a207973b7171648351",
@@ -80,10 +80,10 @@
       "status": "passed",
       "scope": "real copied legacy seven-use project opened and annotated by native engine, exact byte/model/instance identity checks",
       "engine": "vectorcraft",
-      "root": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\legacy-origin-probe\\7ab7980a-ff09-41bd-bd06-bfc49407c7c6",
+      "root": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\legacy-origin-probe\\7ab7980a-ff09-41bd-bd06-bfc49407c7c6",
       "owned": {
         "workspaceId": "8b79258e-d6bb-447a-8221-34da11d0f85b",
-        "sessionId": "PUBLIC-REDACTED"
+        "sessionId": "session-PUBLIC-REDACTED"
       },
       "sourceId": "work-9a53c3fe-5c53-47b3-85ce-e1359034346e",
       "baseRevision": "283c91724def96fc414efb6422885da18c27d21463932a10992156615aed6c4c",
@@ -102,10 +102,10 @@
       "status": "passed",
       "scope": "real copied legacy seven-use project opened and annotated by native engine, exact byte/model/instance identity checks",
       "engine": "deckcraft",
-      "root": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\legacy-origin-probe\\51a34d76-cbb3-49ea-bdb4-82c51fc92467",
+      "root": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\legacy-origin-probe\\51a34d76-cbb3-49ea-bdb4-82c51fc92467",
       "owned": {
         "workspaceId": "57be151c-b22a-4ccb-a097-0b84eecbfec3",
-        "sessionId": "PUBLIC-REDACTED"
+        "sessionId": "session-PUBLIC-REDACTED"
       },
       "sourceId": "work-704cdd55-6f9c-4bc1-b8c1-384248426018",
       "baseRevision": "08ce552483f014c587fbf3a65f3a5b5cd9be3bdbc53020302e425999ffa66500",
@@ -127,12 +127,12 @@
     "toolResult": {
       "ok": false,
       "status": 503,
-      "error": "原生文件已保存，来源关系尚未确认；请核对素材而不要重复原生动作：EBUSY: resource busy or locked, open 'C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\copy-undo-probe\\3dd53c99-c6aa-486a-a2ba-5084ec74c235\\design\\.designcraft\\v2\\sources\\fork-43f01489-3616-4570-9c1a-a64784db0a99\\versions\\6b5d87cd0f4d6a3290149f09686a456c95a4d762b5db61539965fd37c9c7c1ce.pcraft'",
+      "error": "原生文件已保存，来源关系尚未确认；请核对素材而不要重复原生动作：EBUSY: resource busy or locked, open 'C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\copy-undo-probe\\3dd53c99-c6aa-486a-a2ba-5084ec74c235\\design\\.designcraft\\v2\\sources\\fork-43f01489-3616-4570-9c1a-a64784db0a99\\versions\\6b5d87cd0f4d6a3290149f09686a456c95a4d762b5db61539965fd37c9c7c1ce.pcraft'",
       "readStateBeforeRetry": true
     },
-    "root": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\copy-undo-probe\\3dd53c99-c6aa-486a-a2ba-5084ec74c235",
+    "root": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\copy-undo-probe\\3dd53c99-c6aa-486a-a2ba-5084ec74c235",
     "owned": {
-      "sessionId": "PUBLIC-REDACTED"
+      "sessionId": "session-PUBLIC-REDACTED"
     },
     "sourceId": "work-82b26c45-7b54-4162-b5a7-3bfa1edb70f1",
     "beforeRevision": "56b6d013dd45ff8923b8671f24feaf6a86ba48175902ca99820cf2ebca9089dc",
@@ -159,7 +159,7 @@
       "revision": "a415d38aaa8783c33095d4b08cebe2a3745b07a1642b936b488efef76e0ff130",
       "originSync": {
         "pending": true,
-        "error": "EBUSY: resource busy or locked, open 'C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\copy-undo-probe\\3dd53c99-c6aa-486a-a2ba-5084ec74c235\\design\\.designcraft\\v2\\sources\\fork-43f01489-3616-4570-9c1a-a64784db0a99\\versions\\6b5d87cd0f4d6a3290149f09686a456c95a4d762b5db61539965fd37c9c7c1ce.pcraft'"
+        "error": "EBUSY: resource busy or locked, open 'C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\copy-undo-probe\\3dd53c99-c6aa-486a-a2ba-5084ec74c235\\design\\.designcraft\\v2\\sources\\fork-43f01489-3616-4570-9c1a-a64784db0a99\\versions\\6b5d87cd0f4d6a3290149f09686a456c95a4d762b5db61539965fd37c9c7c1ce.pcraft'"
       }
     },
     "actualClientState": {
@@ -174,7 +174,7 @@
       "assetId": "asset-73042f4b-8b29-4b9c-9043-9d6a290e8693",
       "sourceId": "work-82b26c45-7b54-4162-b5a7-3bfa1edb70f1",
       "nativeId": "265",
-      "originToken": "PUBLIC-REDACTED",
+      "originToken": "1d88d17c7022f774e606dbd8d8f0a366",
       "boundAtRevision": "a415d38aaa8783c33095d4b08cebe2a3745b07a1642b936b488efef76e0ff130",
       "nativeNodeHash": "c6de9b3e303d57e486e1dfe45814b18a311be546bdad22cfab6fe9f333aab98a",
       "origin": "native-copy",
@@ -206,7 +206,7 @@
   "mixedSeven": {
     "status": "passed",
     "scope": "actual native Vector/Deck/Photo; 7 explicitly linked originals+independent8th; one local white correction; source PNG320x240->400x240 keeps native frames; real response-loss/physical hand-move resume; no model",
-    "root": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\mixed-seven-project\\b3e6b756-949d-40a1-946b-e155a7f359fd",
+    "root": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\mixed-seven-project\\b3e6b756-949d-40a1-946b-e155a7f359fd",
     "codeRoot": "D:\\METIS超级合并\\dsh-plugin\\designcraft",
     "checks": [
       {
@@ -293,7 +293,7 @@
     ],
     "owned": {
       "workspaceId": "ff218080-cd49-4a20-a669-d5e2945a9edb",
-      "sessionId": "PUBLIC-REDACTED"
+      "sessionId": "session-PUBLIC-REDACTED"
     },
     "update": {
       "id": "update-58249fec-44e1-402d-96e1-c6d4740398ea",
@@ -427,7 +427,7 @@
     "Original remaining specialized tools/formats/OD/HTML/brand/configured image-service/inpaint/variants/projectpack/migration/five journeys/final full50 delivery remain",
     "No external PowerPoint rendering was performed"
   ],
-  "evidenceDirectory": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\outputs\\DesignCraft_原生复制与撤销阶段证据_20261105",
+  "evidenceDirectory": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\outputs\\DesignCraft_原生复制与撤销阶段证据_20261105",
   "evidence": [
     {
       "file": "vector-material-origin-native.log",
