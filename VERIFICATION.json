@@ -1,334 +1,348 @@
 {
-  "schemaVersion": 5,
-  "product": "DesignCraft",
-  "version": "1.3.0-dev.148",
-  "uiBuild": 162,
-  "generatedAt": "2026-11-13T10:01:47.458094+00:00",
-  "status": "ui162_dedicated_design_session_verified_and_packaged",
-  "scope": "User authorized sequential actual feature testing and fixes; external services previously dropped remain outside mandatory scope.",
-  "functionalValidationThisContinuation": true,
-  "functionalValidationStarted": true,
-  "allCoreFunctionsAccepted": false,
-  "currentUserLoadedVersion": "unverified; user process/window not controlled",
-  "userDesktopControlled": false,
-  "userDshRestarted": false,
-  "currentReports": [
-    {
-      "file": "docs/verification/release-validation-20261113.json",
-      "sha256": "d684a2539fe768999ddd51e235413b15307d44fe3c5d75e380932703e81863ed"
-    },
-    {
-      "file": "docs/verification/real-services-validation-20261113.json",
-      "sha256": "306f280e41ad90d545a679a64b38ad1a6daddf7aaf19c2f5d1809d35bf181e4d"
-    },
-    {
-      "file": "docs/verification/current-code-audit-ui162.json",
-      "sha256": "63a564998eaf38cb54c0e82d09b03f8ce3fc65aa16da0d76c697bd9a6960d92b"
-    },
-    {
-      "file": "docs/dependency-license-audit.json",
-      "sha256": "728faf7378ce659ef494e9b814d65cbf51f3d8a3f8ccde9387a963f58830f01c"
-    },
-    {
-      "file": "docs/implementation-source-audit.json",
-      "sha256": "5c60ca83bf0215f956a5091af518557f732fbc61fbe79317cfabde44fdbf58bc"
-    },
-    {
-      "file": "docs/capability-inventory.json",
-      "sha256": "f6850c37f4afdbe9c6a5642c9261e3f2f1aaeb1453f350a0f94da41615b8adb1"
-    },
-    {
-      "file": "docs/static-registry-audit.json",
-      "sha256": "c8b57ceb829963fb30857ddb74ef5844f8f3470de69fa13e13b483d765307d8e"
-    },
-    {
-      "file": "docs/core-product-scope.json",
-      "sha256": "5d49e0191a610bb55ae6bfd1c2fc0f7397fa570febc48fc95d8b4bec9834e1b8"
-    },
-    {
-      "file": "docs/verification/ui158-final-model-flow-20261113.json",
-      "sha256": "880e1ab7e6b07d250a9096ab1e3071d77f35cb784ec7d234f72f9f0beb511506"
-    },
-    {
-      "file": "docs/verification/ui159-deck-capture-removal-20261113.json",
-      "sha256": "8b30bf90e9e703c7a8aed50778456211538faf697b23fa0964b82b1d2531dc95"
-    },
-    {
-      "file": "docs/verification/ui162-design-session-isolation-20261113.json",
-      "sha256": "d8e3b319774c4fb5b8c293715cff0c1a1621415dbb3efd3aed6073f8b6209cc0"
-    }
-  ],
-  "inProgressEvidence": {
-    "directory": "C:\\Users\\lauze\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\release-validation-20261113",
-    "nodeFilesPassed": 79,
-    "nodeTestCasesPassed": 289,
-    "actualUiCasesPassed": 48,
-    "report": "docs/verification/release-validation-20261113.json",
-    "addendum": "docs/verification/real-services-validation-20261113.json",
-    "latestScopeReport": "docs/verification/ui159-deck-capture-removal-20261113.json"
-  },
-  "previousStaticBuild": {
-    "file": "docs/verification/historical-dev136-ui150.json",
-    "sha256": "9c5659effd7a42cca3f0753ad07fdc971fedb8a86a5d333e565f7f2dfb25a984",
-    "scope": "Original UI150 static-only report preserved byte-for-byte; listed report snapshots are historical."
-  },
-  "historicalVerification": {
-    "file": "docs/verification/historical-v1.2.0-ui16.json",
-    "sha256": "72bb52781e19d1b3a1a6b520965e6a08301666e92406d932febbec4ac64f8135",
-    "version": "1.2.0",
-    "uiBuild": 16,
-    "scope": "Original historical report preserved byte-for-byte; not current-build acceptance."
-  },
-  "notYetAccepted": [],
-  "delivery": "Candidate package status is recorded by the adjacent release DELIVERY.json after actual packing/extraction/load; no final overall acceptance.",
-  "fixes": [
-    {
-      "id": "F001",
-      "files": [
-        "host/color-contrast.js"
-      ],
-      "issue": "Valid CSS colors with boxed numbers or achromatic undefined hue were rejected",
-      "retest": [
-        "color-audit.test.mjs",
-        "test_local_design_features_ui.py"
-      ]
-    },
-    {
-      "id": "F002",
-      "files": [
-        "client/native-controller.js",
-        "client/native-workspace.js",
-        "client/local-workflow-panel.js"
-      ],
-      "issue": "Whole-source audit and workflow panels requested a snapshot after the native surface was paused",
-      "retest": [
-        "test_local_design_features_ui.py",
-        "test_color_report_workflow_ui.py"
-      ]
-    },
-    {
-      "id": "F003",
-      "files": [
-        "host/stock-images.js",
-        "tests/commons-current-response.test.mjs",
-        "tests/fixtures/commons-imageinfo-20261113.json"
-      ],
-      "issue": "Commons current official provenance URLs and thumbnail host were filtered; unscaled original dimensions could be misreported",
-      "retest": [
-        "commons-current-response.test.mjs",
-        "test_stock_commons_ui.py"
-      ],
-      "officialSources": [
-        "https://doc.wikimedia.org/mediawiki-core/master/php/File_8php_source.html",
-        "https://phabricator.wikimedia.org/T427465"
-      ]
-    },
-    {
-      "id": "F004",
-      "files": [
-        "runtimes/ink-recognizer.cs",
-        "runtimes/ink-recognizer.exe",
-        "runtimes/ink-recognizer.lock.json",
-        "host/deck-local-inputs.js",
-        "runtime-lock.json"
-      ],
-      "issue": "Windows Ink CreateStroke reserved parameter was VT_ERROR instead of required empty VARIANT; real recognition failed",
-      "retest": [
-        "test_deck_local_ink_ui.py"
-      ],
-      "actualSample": "Chinese handwritten 工 recognized by the installed Windows recognizer; no arbitrary-language accuracy claim",
-      "officialSources": [
-        "https://learn.microsoft.com/en-us/windows/win32/api/msinkaut/nf-msinkaut-iinkdisp-createstroke",
-        "https://learn.microsoft.com/en-us/windows/desktop/tablet/using-the-com-library"
-      ]
-    },
-    {
-      "id": "F005",
-      "files": [
-        "client/deck-local-tools.js"
-      ],
-      "issue": "Deck local dialog contents were wider than its container, clipping controls; textarea lacked a stable accessible name",
-      "retest": [
-        "test_deck_local_ink_ui.py",
-        "test_mathml_native_retry_ui.py"
-      ]
-    },
-    {
-      "id": "F006",
-      "files": [
-        "client/native-workspace.js"
-      ],
-      "issue": "Chinese/English v2 brief support was described as English-only",
-      "retest": [
-        "test_plan_editor_migration_ui.py"
-      ]
-    },
-    {
-      "id": "F007",
-      "files": [
-        "client/native-controller.js"
-      ],
-      "issue": "Existing migration preview/apply backend actions were missing from the frontend action allowlist",
-      "retest": [
-        "test_plan_editor_migration_ui.py"
-      ]
-    },
-    {
-      "id": "F008",
-      "files": [
-        "host/editor-tools.js",
-        "tests/editor-fence-arguments.test.mjs",
-        "tests/fixtures/editor-missing-epoch-20261113.json"
-      ],
-      "issue": "Actual GLM omitted the required top-level epoch, received an imprecise error and reopened the current App while recovering.",
-      "change": "Name missing sourceId/epoch/base fields with a 422 response and model-visible schema guidance; never supply missing fences automatically.",
-      "retest": [
-        "editor-fence-arguments.test.mjs",
-        "F008-owned-tool-replay.json"
-      ],
-      "liveModelBoundary": "The next actual model turn supplied epoch, but failed a different long-stamp copy."
-    },
-    {
-      "id": "F009",
-      "files": [
-        "host/editor-tools.js",
-        "host/editor-fence-tickets.js",
-        "tests/editor-fence-tickets.test.mjs",
-        "tests/fixtures/editor-long-selection-20261113.json"
-      ],
-      "issue": "Actual GLM repeatedly truncated the 3847-character Photo selection fence and correctly hit existing stale-context guards.",
-      "change": "Tool state issues a 71-character opaque ticket for an immutable, bounded, session/source/epoch/full-base snapshot; restore only the issued base before all existing backend/frame guards.",
-      "retest": [
-        "editor-fence-tickets.test.mjs",
-        "F009-owned-tool-tickets.json"
-      ],
-      "liveModelBoundary": "Third real model turn executed all three intended target edits on the first attempt with compact tickets; whole-flow same-App assertion failed on malformed open calls."
-    },
-    {
-      "id": "F010",
-      "files": [
-        "host/editor-tools.js",
-        "tests/editor-fence-arguments.test.mjs",
-        "tests/fixtures/editor-open-missing-source-20261113.json"
-      ],
-      "issue": "Actual GLM placed an intended target in payload.id/payload.sourceId; missing top-level sourceId silently reopened the current Photo App twice.",
-      "change": "Tool-only open requires the explicit existing target in top-level sourceId; malformed opens are refused before delegation. Native UI manager reload semantics remain unchanged.",
-      "retest": [
-        "editor-fence-arguments.test.mjs",
-        "F010-owned-open-target.json"
-      ],
-      "liveModelBoundary": "Deterministic actual registered-tool replay passed. No additional GLM user turn has been authorized or submitted after this fix."
-    }
-  ],
-  "historicalCandidate": {
-    "version": "1.3.0-dev.141",
-    "uiBuild": 155,
-    "archive": "C:\\Users\\lauze\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\outputs\\releases\\20261113-ui155\\designcraft-1.3.0-dev.141.tgz",
-    "sha256": "e6038cbeecfaa974cf4773718b76b3c31047117deee89a528a181d595b2e78e1",
-    "candidatePackageLoad": "passed",
-    "evidence": "C:\\Users\\lauze\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\outputs\\releases\\20261113-ui155\\candidate-package-load-ui.json",
-    "deliveryRecord": "C:\\Users\\lauze\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\outputs\\releases\\20261113-ui155\\DELIVERY.json",
-    "allCoreFunctionsAccepted": false
-  },
-  "currentServicePhase": {
-    "report": "docs/verification/real-services-validation-20261113.json",
-    "imageRequestsUsed": 4,
-    "imageRequestsLimit": 4,
-    "userModelTurnsUsed": 4,
-    "userModelTurnLimit": "standing user permission: as needed for this task",
-    "providerChatHttpRequestsObserved": 60,
-    "devicesApproved": false,
-    "newFixes": [
-      "F008",
-      "F009",
-      "F010"
-    ],
-    "latestReport": "docs/verification/ui158-final-model-flow-20261113.json",
-    "physicalInputs": "four capture features removed by user; no activation required"
-  },
-  "scopedCoreEditingAndAiFlowAccepted": true,
-  "latestModelAcceptance": {
-    "file": "docs/verification/ui158-final-model-flow-20261113.json",
-    "sha256": "880e1ab7e6b07d250a9096ab1e3071d77f35cb784ec7d234f72f9f0beb511506",
-    "realModelUserTurnsTotal": 4,
-    "providerChatHttpRequestsObserved": 60,
-    "sameAppWithinEachSource": true,
-    "pendingPhysicalInputs": false,
-    "physicalInputScopeChange": "docs/verification/ui159-deck-capture-removal-20261113.json"
-  },
-  "removedByUser": {
-    "at": "2026-11-13T05:41:24.523282+00:00",
-    "items": [
-      "physical microphone narration",
-      "camera photo/video/Cameo",
-      "screen and region capture",
-      "Windows Math Input Control"
-    ],
-    "state": "code_removed_targeted_checks_passed",
-    "notCountedAsPassedDeviceTests": true,
-    "report": "docs/verification/ui159-deck-capture-removal-20261113.json"
-  },
-  "previousUi158Candidate": {
-    "version": "1.3.0-dev.144",
-    "uiBuild": 158,
-    "archive": "C:\\Users\\lauze\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\outputs\\releases\\20261113-ui158\\designcraft-1.3.0-dev.144.tgz",
-    "sha256": "abec0c854e2b5d8f04fac8e08a879980ca593c75c51add9b2e822e597682fc3b",
-    "candidatePackageLoad": "passed",
-    "evidence": "C:\\Users\\lauze\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\outputs\\releases\\20261113-ui158\\candidate-package-load-ui.json",
-    "deliveryRecord": "C:\\Users\\lauze\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\outputs\\releases\\20261113-ui158\\DELIVERY.json",
-    "allCoreFunctionsAccepted": false,
-    "latestAcceptance": "C:\\Users\\lauze\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\outputs\\releases\\20261113-ui158\\ui158-final-model-flow-20261113.json",
-    "scopedCoreEditingAndAiFlowAccepted": true,
-    "ownedTestServerRunning": false
-  },
-  "pendingAcceptance": [],
-  "requestedRemovalComplete": true,
-  "latestScopedValidation": {
-    "report": "docs/verification/ui159-deck-capture-removal-20261113.json",
-    "nodeFiles": 79,
-    "tapCases": 289,
-    "newUiCasesPassed": 2,
-    "cancelledNotCountedAsPassed": true
-  },
-  "currentUiChange": {
-    "uiBuild": 162,
-    "status": "complete_scoped_dedicated_design_session",
-    "functionalAcceptance": true,
-    "report": "docs/verification/ui162-design-session-isolation-20261113.json",
-    "userDshRestarted": false
-  },
-  "aiCanvasAccepted": true,
-  "previousUi160Candidate": {
-    "version": "1.3.0-dev.146",
-    "uiBuild": 160,
-    "archive": "C:\\Users\\lauze\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\outputs\\releases\\20261113-ui160\\designcraft-1.3.0-dev.146.tgz",
-    "sha256": "82cd3ce76ad7b894bc36182b688aeca590eac040fb4cb53588809e0c01244716",
-    "candidatePackageLoad": "passed",
-    "scopeReport": "C:\\Users\\lauze\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\outputs\\releases\\20261113-ui160\\ui160-ai-canvas-20261113.json",
-    "deliveryRecord": "C:\\Users\\lauze\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\outputs\\releases\\20261113-ui160\\DELIVERY.json",
-    "aiCanvasRequestedInteractionComplete": true,
-    "allCoreFunctionsAccepted": false
-  },
-  "previousUi161Candidate": {
-    "version": "1.3.0-dev.147",
-    "uiBuild": 161,
-    "archive": "C:\\Users\\lauze\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\outputs\\releases\\20261113-ui161\\designcraft-1.3.0-dev.147.tgz",
-    "sha256": "8b91582b311b230d0669bd310f50c15b20a5f4e5011daf572ab9f162c17f0e31",
-    "candidatePackageLoad": "passed",
-    "scopeReport": "C:\\Users\\lauze\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\outputs\\releases\\20261113-ui161\\ui161-ai-native-ux-20261113.json",
-    "deliveryRecord": "C:\\Users\\lauze\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\outputs\\releases\\20261113-ui161\\DELIVERY.json",
-    "requestedUxComplete": true,
-    "allCoreFunctionsAccepted": false
-  },
-  "deliveryCandidate": {
+  "schemaVersion": 6,
+  "product": "Urania",
+  "packageName": "designcraft",
+  "version": "1.3.0-dev.150",
+  "uiBuild": 165,
+  "generatedAt": "2026-11-17T21:58:11.791115+00:00",
+  "auditBaseline": {
+    "publicCommit": "b1627b7b8270aebafd5ccdcf0ab042dd4545e4eb",
     "version": "1.3.0-dev.148",
-    "uiBuild": 162,
-    "archive": "C:\\Users\\lauze\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\outputs\\releases\\20261113-ui162\\designcraft-1.3.0-dev.148.tgz",
-    "sha256": "64eb034f4b9ea0adc5c2a7c22074b3f5a48c680f0d01c13662dc3b6890e08088",
-    "candidatePackageLoad": "passed",
-    "scopeReport": "C:\\Users\\lauze\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\outputs\\releases\\20261113-ui162\\ui162-design-session-isolation-20261113.json",
-    "deliveryRecord": "C:\\Users\\lauze\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\outputs\\releases\\20261113-ui162\\DELIVERY.json",
-    "requestedUxComplete": true,
-    "allCoreFunctionsAccepted": false
-  }
+    "uiBuild": 163
+  },
+  "status": "current_approved_core_scope_functionally_verified",
+  "scope": "The user-approved AI-native design core and the20261118 audit criteria, with optional external services/cancelled capture removed. Not every operation of every upstream engine or every provider/device combination.",
+  "allCoreFunctionsAccepted": true,
+  "functionalValidationThisContinuation": true,
+  "fullUpstreamCatalogAccepted": false,
+  "pendingMandatoryCodeItems": [],
+  "userDshRestarted": false,
+  "userDesktopControlled": false,
+  "environment": {
+    "os": "Windows x64, same physical machine; clean independent deployment directory",
+    "node": "v25.6.0",
+    "dshSdk": "0.2.2-rc.1",
+    "dshNodeRequirement": ">=24.9.0",
+    "execution": "Actual isolated DSH host with actual native Web/WASM engines in headless Chromium; no physical desktop acceptance claim"
+  },
+  "tests": {
+    "npm test": {
+      "node": {
+        "count": 452,
+        "pass": 452,
+        "fail": 0,
+        "exitCode": 0
+      },
+      "client": {
+        "pass": 19,
+        "fail": 0,
+        "exitCode": 0
+      },
+      "evidence": "docs/verification/ui165-closeout/current-node-results.json"
+    },
+    "npm run check": {
+      "javascriptFiles": 220,
+      "nativeBinaries": 4,
+      "resourceFiles": 36,
+      "passed": true
+    },
+    "targetedActual": [
+      {
+        "file": "docs/verification/ui165-closeout/C02-actual-runtime.json",
+        "rawLocalSha256": "385645cfd86660ddfb298dfea81ab3de551d4f0e10e528b727f4f81c30e03909",
+        "publicSummarySha256": "23520e9967e9867a7e051be05a0140fa2bfafc8c439c9bdc04b0741a9dceec7b",
+        "anonymized": true
+      },
+      {
+        "file": "docs/verification/ui165-closeout/C03-actual-supervisor.json",
+        "rawLocalSha256": "32f2c1647ba4afd965ea905aabf992e53262ab555e0e5851da4b72be08335d07",
+        "publicSummarySha256": "8a4e744e11df5c2a56b06b9f98511fc2c33510a03ed5ad9ceef7de9de21c9c0c",
+        "anonymized": true
+      },
+      {
+        "file": "docs/verification/ui165-closeout/C03-doctor.json",
+        "rawLocalSha256": "1979a2c83be3c557de2d542a06fb6f7f680445490be17428aad2eace8c124eb2",
+        "publicSummarySha256": "6aa76e30b93bfc2135b6577dcdac9abdddfc562334abfb8bc3bea1b3fb288741",
+        "anonymized": true
+      },
+      {
+        "file": "docs/verification/ui165-closeout/C05-actual-cancel.json",
+        "rawLocalSha256": "16f1b4750e8d9985abe16be318b94008d35776262ad0d125184aa5435c6ed804",
+        "publicSummarySha256": "d5d1f2b8f1195fc16f7818e31a4a43a4e657c0c3ef24b977f4a1ec1a4a73ac84",
+        "anonymized": true
+      },
+      {
+        "file": "docs/verification/ui165-closeout/C05-dsh-spawn-diagnosis.json",
+        "rawLocalSha256": "c6d63c913144468b2bb27b98dffc8352cb973eb62d6f21127086823308859768",
+        "publicSummarySha256": "20626e3fb112e3264d6b0e6533e59748e26b307c0e8cfefa702f4f8ec052d6f3",
+        "anonymized": true
+      },
+      {
+        "file": "docs/verification/ui165-closeout/C05-export-ui.json",
+        "rawLocalSha256": "2d47223b1324e38db18b29f05856ab0bbdb5aaf22cad575592c8a3fe101d05f5",
+        "publicSummarySha256": "59f4fb5526b747b60c752d0bccd687ac40e19c74cd6c6be4335f8d6a1cfda1d3",
+        "anonymized": true
+      },
+      {
+        "file": "docs/verification/ui165-closeout/C05-long-cwd-reproduction.json",
+        "rawLocalSha256": "8541b0e1ec8b29b1c491a7ee7d1a1d3ada62e39ffdf947e5df2e22beed8b3e0c",
+        "publicSummarySha256": "2dc4cac8357258db1ce49ed22ed7266c0e9c239060b286fb7b68388c4e6409f3",
+        "anonymized": true
+      },
+      {
+        "file": "docs/verification/ui165-closeout/C05-process-tree-audit.json",
+        "rawLocalSha256": "925bd7199c2b2eeb9065142f1159e71da0e754566d97ff639258d4374c495564",
+        "publicSummarySha256": "925bd7199c2b2eeb9065142f1159e71da0e754566d97ff639258d4374c495564",
+        "anonymized": false
+      },
+      {
+        "file": "docs/verification/ui165-closeout/C06-browser-crash.json",
+        "rawLocalSha256": "af9ba9620fad04e00436e54910e59476d14d7fd108b92a6b0df99c3dd8393ce8",
+        "publicSummarySha256": "dcc06e4552814ccde7149e558b8ff578012a0b27f7862e2b98607d55ca14b81f",
+        "anonymized": true
+      },
+      {
+        "file": "docs/verification/ui165-closeout/C06-low-memory.json",
+        "rawLocalSha256": "1bb0379e737e7e6ac2476a65497ec6d5cf2c89d84db4d69136cd02b60f97d8a4",
+        "publicSummarySha256": "0470fc543acf73edf4a5c80ef38d5379f2bf9bc051e81b470bf4506c584298bb",
+        "anonymized": true
+      },
+      {
+        "file": "docs/verification/ui165-closeout/C06-real-verifier.json",
+        "rawLocalSha256": "7a1183319c75e5f8bd2440a940d78b94987b5b610910c341116b1b739f67487b",
+        "publicSummarySha256": "fc5b5fb91895e83e502153d9110c6526bcb1dd977eb13a23f217470187e7c93f",
+        "anonymized": true
+      },
+      {
+        "file": "docs/verification/ui165-closeout/C07-current-source-delta.json",
+        "rawLocalSha256": "ee739f0a07c0f8302521a72c2a37ab4a9d0380b5253aa4191860321149df8cef",
+        "publicSummarySha256": "f95e7ef6f5b7618471bba69680ea6eb6fec682836eb60a76e18a6351caf441f8",
+        "anonymized": true
+      },
+      {
+        "file": "docs/verification/ui165-closeout/C09-primary-native-field-audit.json",
+        "rawLocalSha256": "db3cbea8b4c3b66553bb66d66560b035a1eb8b0c2cc5313ae8fce7ae9e749596",
+        "publicSummarySha256": "4b8c8e6f922931a0d468baa9d43614a037bbe4b0d3d509aae56d6d896bfb6152",
+        "anonymized": true
+      },
+      {
+        "file": "docs/verification/ui165-closeout/C10-corrected-actual-store-head-audit.json",
+        "rawLocalSha256": "f93b8c47604eed19a84d39460c366f3bf64da7b5e9b843304183ee1b0f544163",
+        "publicSummarySha256": "715de2b9260948c4de73e856dfa4691f97d52687358236816e1f0b253072ed0c",
+        "anonymized": true
+      },
+      {
+        "file": "docs/verification/ui165-closeout/C10-deck-host19-build.json",
+        "rawLocalSha256": "54af0fedeaa36c40eae24acb689acff473e800ba5416badd5bad47559076a383",
+        "publicSummarySha256": "eb9b39b4bbc51ad85cd812f8344221eba1dd397d40c7504b87d3b070b8d5cdf7",
+        "anonymized": true
+      },
+      {
+        "file": "docs/verification/ui165-closeout/C10-feedback-recovery-attempt3.json",
+        "rawLocalSha256": "f403cd0df66d62d7f3db54c638ab11e2d27a3e09a68b5f8654dbc64965a86cea",
+        "publicSummarySha256": "62eccadb2de5c866cfb84ab253b62b70daf59b163752d6bd01ce6e7dba2454c9",
+        "anonymized": true
+      },
+      {
+        "file": "docs/verification/ui165-closeout/C10-native-style-actual.json",
+        "rawLocalSha256": "51567d7873e8cad718afcf70f3e8399e97ef0dbe5d375f8999dbaf62e5ebda13",
+        "publicSummarySha256": "f619ee16084760b4e70da66c9c534dd8b51f3d903b7015c3e0cfba7aa74bbad4",
+        "anonymized": true
+      },
+      {
+        "file": "docs/verification/ui165-closeout/C12-four-engine-flow-attempt5.json",
+        "rawLocalSha256": "cbbaf7c72a5792866ce076d43ec69323bed5a77d019cb2c256635f55592c6da6",
+        "publicSummarySha256": "19dd7f036f541a279410e6110a82affb86878cc5e4e9bc80bfc847932e57c83f",
+        "anonymized": true
+      },
+      {
+        "file": "docs/verification/ui165-closeout/C14-current-deployment.json",
+        "rawLocalSha256": "a8486036bdd0ad1582d360388c2a84eaffd0cb9f8cd25ac523456a08df9a606c",
+        "publicSummarySha256": "77be7856a9060c29dbdd13f641f786a0858d93de80a4b0cf56b703a519de7499",
+        "anonymized": true
+      },
+      {
+        "file": "docs/verification/ui165-closeout/C14-current-runtime-archive.json",
+        "rawLocalSha256": "b6f9f52df71f74a255a66b44066ba883b819bcc124d28d3b656cf09c946185fb",
+        "publicSummarySha256": "d773ff5e94ca315c9ef7914409033cba478809a76f46b71288d8fbf92405e660",
+        "anonymized": true
+      },
+      {
+        "file": "docs/verification/ui165-closeout/C14-restore-security.json",
+        "rawLocalSha256": "e83539785f359b47571b759eb333006cd8cbde589c60d3a25bdbd0e4cdd51e83",
+        "publicSummarySha256": "7975cd5d556e3daf1737fa562ca22779179bcffe75a3f3d1b4a0950b6708089d",
+        "anonymized": true
+      },
+      {
+        "file": "docs/verification/ui165-closeout/C16-independent-rebuild-final.json",
+        "rawLocalSha256": "6687014b08f5833a67069067043d8b08baf2c7742e2d5f4dd4fef4caaa5a9d22",
+        "publicSummarySha256": "576bf78f9594838e8f4ccae2d42e9682e34548344a5d622131c2e8c3ba90f6b2",
+        "anonymized": true
+      },
+      {
+        "file": "docs/verification/ui165-closeout/C16-real-codec.json",
+        "rawLocalSha256": "3df84431293d9190c70e3b7a351dd139b4f3845d70d48a68b8238ddd0e2e8270",
+        "publicSummarySha256": "1a43b051c069ee1669bcbd49085f4b7b48328ed81ce0337aa5447c71a70e1331",
+        "anonymized": true
+      },
+      {
+        "file": "docs/verification/ui165-closeout/C16-real-converter-browser.json",
+        "rawLocalSha256": "ce19608c0039d5c42bd359bda913e3c932edec41fba2013c1a184cd465cc6427",
+        "publicSummarySha256": "80b9dbec541804be95a8eec87dd57c921e6e6d8954e7f84b50d107113eecabf6",
+        "anonymized": true
+      },
+      {
+        "file": "docs/verification/ui165-closeout/C16-real-font-semantics.json",
+        "rawLocalSha256": "4996d632e4bb84c8ddc025b66639a49a88c530768853a5774c5afda5c00139a6",
+        "publicSummarySha256": "79f495c39fbe81217585a53ac95bee9c9f9f9210100c938cf2bea1b6236ca636",
+        "anonymized": true
+      },
+      {
+        "file": "docs/verification/ui165-closeout/C16-six-fonts-exact.json",
+        "rawLocalSha256": "7e4a64599b9b280801f033c8a1db6eba69f7cdd82785bfd72077f4c9c592ddb2",
+        "publicSummarySha256": "5a436fdf0129d452728a1567aeea32218a0c80f429a62bacbec47c7c7ddc805b",
+        "anonymized": true
+      },
+      {
+        "file": "docs/verification/ui165-closeout/C17-historical-identity-closeout.json",
+        "rawLocalSha256": "a32b355e0c7b514396d4c674c1aae1a298e0caecaf45ffa0dd01c1d1f5518613",
+        "publicSummarySha256": "c60d23590dfe322bcff011d2b4f88c07eea8956c440e4acfded445272939cc49",
+        "anonymized": true
+      },
+      {
+        "file": "docs/verification/ui165-closeout/C19-final-ux.json",
+        "rawLocalSha256": "a4c8eed7a12760fa7a1d07a7704ed8ebafa32d9240ed3afd38e6c5995ab52993",
+        "publicSummarySha256": "df30eb6c89b3d108fcd86a4c9aeb2e43a7bc9cee026dee86fb72576a295c8941",
+        "anonymized": true
+      },
+      {
+        "file": "docs/verification/ui165-closeout/photo-tools.json",
+        "rawLocalSha256": "8a91968ccee43a483f73a60e83e549a8f590922838b293be91ce463845a66ae7",
+        "publicSummarySha256": "f8f0b34547c2e54f19180ca5493682f554e382d4ff7778e4aae16d0f4951fa9a",
+        "anonymized": true
+      },
+      {
+        "file": "docs/verification/ui165-closeout/svg-deck-browser.json",
+        "rawLocalSha256": "fd568054f6c777aef72e2be3347a57ce427f402c4b9eb7833976792fe342f440",
+        "publicSummarySha256": "607f9b4eb1ffce890491d70f7202e7ff13d2b592f6570989162d0772d0335a47",
+        "anonymized": true
+      },
+      {
+        "file": "docs/verification/ui165-closeout/svg-vector-browser.json",
+        "rawLocalSha256": "1dc3af164e63d2143baaf1974da3045e116c3afd637c38b5ec256a5ad279d2b6",
+        "publicSummarySha256": "d54d07841ad2934cc0d1b78b5b3d32421db92324f758f052c5f058f6f2ccba0f",
+        "anonymized": true
+      }
+    ],
+    "realModelTurns": {
+      "attempts": 5,
+      "successfulContinuations": 4,
+      "failedInitialDeckTurnRetained": 1,
+      "providerModel": "Existing authorized GLM5.3-flash",
+      "newImageApiRequestsThisCloseout": 0
+    },
+    "scopeBoundaries": [
+      "Source/serializer/HTTP contracts are separate from live native/editor/model tests.",
+      "Unchanged prior real image-generation/repaint service acceptance retained, not rerun or counted as new API calls.",
+      "No PowerPoint desktop visual fidelity or universal input/provider support assertion."
+    ]
+  },
+  "coreCriteria": [
+    {
+      "id": "P0-runtime",
+      "result": "passed",
+      "behavior": "Unified validated runtime resolver reaches actual worker, custom paths, real MP4/ffprobe",
+      "evidence": "C03-actual-supervisor.json"
+    },
+    {
+      "id": "P0-paths",
+      "result": "passed",
+      "behavior": "Project audio/resource/package traversal, symlinks, budgets and native source identity fenced",
+      "evidence": "C04-path-final.log"
+    },
+    {
+      "id": "P0-native-ai",
+      "result": "passed",
+      "behavior": "Current actual Photo/Vector/Deck/Motion sequence,2real model turns, manual takeover, non-target fields exact, fresh source and export",
+      "evidence": "C12-four-engine-flow-attempt5.json"
+    },
+    {
+      "id": "P0-version",
+      "result": "passed",
+      "behavior": "UI165 package/cache/source/native locks agree; current full tests and separate package identity",
+      "evidence": "current-node-results.json"
+    },
+    {
+      "id": "P1-lifecycle",
+      "result": "passed",
+      "behavior": "Actual close/kill-tree/cancel/timeout/slot/output protection and failure recovery",
+      "evidence": "C05-short-cwd-lifecycle.log"
+    },
+    {
+      "id": "P1-streaming",
+      "result": "passed",
+      "behavior": "Real512MiB lowheap streaming hash/download and event-loop measurement; actual worker crash/recovery",
+      "evidence": "C06-low-memory.json"
+    },
+    {
+      "id": "P1-deployment",
+      "result": "passed",
+      "behavior": "7713 current files; actual install interruption, restore, all SHA, offline SDK, doctor and five path/ZIP boundary cases",
+      "evidence": "C14-current-deployment.json"
+    },
+    {
+      "id": "P1-ci",
+      "result": "passed",
+      "behavior": "108local public contracts passed; pinned source/lock/credential gates and opt-in isolated Windows full suite implemented; hosted run is recorded externally after push",
+      "evidence": "C15-public-contracts.log"
+    },
+    {
+      "id": "P2-provenance",
+      "result": "passed",
+      "behavior": "Actual fixed codec/converter build, exact independent rebuild,6exact original-font sources; old artifacts/hashes retained",
+      "evidence": "C16-independent-rebuild-final.json"
+    },
+    {
+      "id": "UX-ai-native",
+      "result": "passed",
+      "behavior": "Resize/reload/history/automatic popup/multi-select draft/current dedicated conversation tested with real native input",
+      "evidence": "C19-final-ux.json"
+    }
+  ],
+  "runtimeRelease": {
+    "files": 7713,
+    "sdkFiles": 7447,
+    "expandedBytes": 3226035371,
+    "archiveBytes": 1321208780,
+    "archiveSha256": "d1b578f37e45cb72913eaf36b01cec507d9b9bbec3608ff0e62ec4b9996cbd64",
+    "manifestSha256": "eb625aa5c1352fd5ebd3b377a27cd1b4917af8954f6cc8d52c79ef357affc22e"
+  },
+  "historicalEvidence": {
+    "expectedIdentities": 59,
+    "exactOriginalsReverified": 56,
+    "unavailableOldSnapshots": 3,
+    "oldExpectedHashesChanged": false,
+    "currentCoreDependency": false,
+    "report": "docs/historical-evidence-closeout-ui165.json"
+  },
+  "distribution": {
+    "frozenArchiveDigest": "Recorded externally in DELIVERY.json after actual packing; not self-embedded",
+    "frozenPackageLoad": "Recorded externally after actual extraction and load; current development-root tests are identified as such",
+    "sourceBranch": "audit/ui165-closeout-20261118",
+    "baseCommit": "b1627b7b8270aebafd5ccdcf0ab042dd4545e4eb",
+    "publicationChecks": "Actual remote/PR/Release/readback results recorded in external DELIVERY.json, never inferred here"
+  },
+  "removedByUser": [
+    "microphone capture",
+    "camera capture",
+    "screenshot capture",
+    "Windows formula recognition"
+  ],
+  "optionalExcluded": [
+    "OpenDesign/Vela authorized external project binding",
+    "Figma/Figma MCP",
+    "Stitch",
+    "PixelBin",
+    "extra fal/Replicate/Venice audio/video services"
+  ]
 }

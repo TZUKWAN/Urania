@@ -8,9 +8,10 @@ import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
 import { deflateRawSync, inflateRawSync } from 'node:zlib';
-import { validateProjectId, SchemaError } from './schema.js';
-import { readHeadRevision, readRevision, readRevisionSources, commitRevision } from './project-store.js';
+import { validateProjectId, validateRevisionManifest, SchemaError } from './schema.js';
+import { readHeadRevision, readRevision, readSourceBytes, commitRevision } from './project-store.js';
 import { readAssetBytes, saveAsset } from './asset-store.js';
+import {assertSafeJson} from '../safety.js';
 
 const sha256 = (buf) => crypto.createHash('sha256').update(buf).digest('hex');
 
@@ -56,17 +57,22 @@ export function buildZip(entries) {
 	return Buffer.concat([...chunks, centralBuf, end]);
 }
 
-export function readZip(buf) {
+export function readZip(buf,{maxEntryBytes=MAX_ENTRY_BYTES,maxTotalBytes=MAX_ZIP_BYTES,maxEntries=MAX_ZIP_ENTRIES}={}) {
 	// locate EOCD
 	if (buf.length < 22 || buf.readUInt32LE(buf.length - 22) !== 0x06054b50) throw new Error('bad zip: no EOCD');
 	const eocd = buf.length - 22;
 	const count = buf.readUInt16LE(eocd + 10);
+	if(count>maxEntries)throw new Error('too many zip entries');
 	let ptr = buf.readUInt32LE(eocd + 16);
-	const entries = [];
+	const entries = [];let expanded=0;
 	for (let i = 0; i < count; i++) {
 		if (buf.readUInt32LE(ptr) !== 0x02014b50) throw new Error('bad zip: central entry');
 		const method = buf.readUInt16LE(ptr + 10);
+		if(![0,8].includes(method)||buf.readUInt16LE(ptr+8)&1)throw new Error('unsupported zip method/encryption');
 		const compSize = buf.readUInt32LE(ptr + 20);
+		const size=buf.readUInt32LE(ptr+24),mode=buf.readUInt32LE(ptr+38)>>>16;
+		if((mode&0o170000)===0o120000)throw new Error('zip symbolic links refused');
+		if(size>maxEntryBytes||(expanded+=size)>maxTotalBytes)throw new Error('zip expansion exceeds budget');
 		const nameLen = buf.readUInt16LE(ptr + 28);
 		const extraLen = buf.readUInt16LE(ptr + 30);
 		const commentLen = buf.readUInt16LE(ptr + 32);
@@ -77,8 +83,12 @@ export function readZip(buf) {
 		const lNameLen = buf.readUInt16LE(lPtr + 26);
 		const lExtraLen = buf.readUInt16LE(lPtr + 28);
 		const dataStart = lPtr + 30 + lNameLen + lExtraLen;
+		if(dataStart+compSize>buf.length||buf.toString('utf8',lPtr+30,lPtr+30+lNameLen)!==name||buf.readUInt16LE(lPtr+8)!==method)throw new Error('zip local/central mismatch');
 		const raw = buf.subarray(dataStart, dataStart + compSize);
-		const data = method === 0 ? Buffer.from(raw) : inflateRawSync(raw);
+		// Limit expansion during decompression, before allocating a hostile
+		// entry. Post-inflate length checks alone do not bound memory.
+		const data = method === 0 ? Buffer.from(raw) : inflateRawSync(raw,{maxOutputLength:Math.min(maxEntryBytes,maxTotalBytes-(expanded-size))+1});
+		if(data.length!==size||crc32(data)!==buf.readUInt32LE(ptr+16))throw new Error('zip size/checksum mismatch');
 		entries.push({ name, data });
 		ptr += 46 + nameLen + extraLen + commentLen;
 	}
@@ -91,13 +101,13 @@ export function exportDcmotion(root, projectId) {
 	validateProjectId(projectId);
 	const head = readHeadRevision(root, projectId);
 	const manifest = readRevision(root, projectId, head.revision);
-	const sources = readRevisionSources(root, projectId, manifest);
-
 	const entries = [{ name: 'manifest.json', data: JSON.stringify({ ...manifest, format: 'dcmotion', exporter: 'designcraft' }, null, 1) }];
-	for (const [rel, body] of Object.entries(sources)) {
-		entries.push({ name: 'sources/' + rel, data: body });
+	for (const rel of Object.keys(manifest.sources)) {
+		entries.push({ name: 'sources/' + rel, data: readSourceBytes(root, projectId, manifest, rel) });
 	}
+	const includedAssets=new Set();
 	for (const a of manifest.assets || []) {
+		if(includedAssets.has(a.sha256))continue;includedAssets.add(a.sha256);
 		const { bytes, meta } = readAssetBytes(root, a.sha256);
 		entries.push({ name: 'assets/' + a.sha256 + '/' + (meta.name || 'asset'), data: bytes, store: true });
 		entries.push({ name: 'assets/' + a.sha256 + '/meta.json', data: JSON.stringify(meta, null, 1) });
@@ -135,12 +145,22 @@ export function inspectDcmotion(buf) {
 	}
 	const manifestEntry = seen.get('manifest.json');
 	if (!manifestEntry) throw new SchemaError('E_NO_MANIFEST', 'manifest.json missing');
+	if(manifestEntry.data.length>8*1024*1024)throw new SchemaError('E_MANIFEST_BUDGET','manifest exceeds budget');
 	const manifest = JSON.parse(manifestEntry.data.toString('utf8'));
 	if (manifest.format !== 'dcmotion') throw new SchemaError('E_FORMAT', 'not a dcmotion package');
 	// secret scan
 	const scan = manifestEntry.data.toString('utf8');
 	for (const pattern of [/session-[0-9a-f-]{36}/i, /DC_[A-Z_]+KEY/, /-----BEGIN [A-Z ]*PRIVATE KEY-----/]) {
 		if (pattern.test(scan)) throw new SchemaError('E_SECRET', 'possible DSH identity/credential in manifest: ' + pattern);
+	}
+	assertSafeJson(manifest);validateRevisionManifest(manifest);
+	for(const [rel,expected] of Object.entries(manifest.sources)){
+		const entry=seen.get(('sources/'+rel).toLowerCase());
+		if(!entry||entry.data.length!==expected.bytes||sha256(entry.data)!==expected.sha256)throw new SchemaError('E_SOURCE_HASH','source missing or hash mismatch: '+rel);
+	}
+	for(const asset of manifest.assets||[]){
+		const matches=[...seen.values()].filter(e=>e.name.toLowerCase().startsWith('assets/'+asset.sha256+'/')&&!e.name.toLowerCase().endsWith('/meta.json'));
+		if(matches.length!==1||sha256(matches[0].data)!==asset.sha256||asset.bytes!==undefined&&asset.bytes!==matches[0].data.length)throw new SchemaError('E_ASSET_HASH','asset missing or hash mismatch: '+asset.sha256);
 	}
 	return { raw: seen, manifest };
 }
@@ -152,20 +172,15 @@ export function importDcmotion(root, buf) {
 	const newId = 'motion-' + crypto.randomUUID();
 	// re-stage assets into local asset store (content-addressed, idempotent)
 	for (const a of manifest.assets || []) {
-		const entry = raw.get('assets/' + a.sha256 + '/' + (a.name || 'asset')) || raw.get('assets/' + a.sha256 + '/asset.' + (a.ext || 'bin'));
-		if (!entry) {
-			// try to find any asset entry with the sha dir
-			const found = [...raw.keys()].find(k => k.startsWith('assets/' + a.sha256 + '/') && !k.endsWith('meta.json'));
-			if (!found) throw new SchemaError('E_ASSET_MISSING', 'package asset missing: ' + a.sha256);
-			saveAsset(root, { name: path.basename(found), bytes: raw.get(found), license: a.license, source: 'dcmotion-import' });
-			continue;
-		}
-		saveAsset(root, { name: a.name || 'asset', kind: a.kind, bytes: entry.data, license: a.license, source: 'dcmotion-import' });
+		const entry=[...raw.values()].find(e=>e.name.toLowerCase().startsWith('assets/'+a.sha256+'/')&&!e.name.toLowerCase().endsWith('/meta.json'));
+		const saved=saveAsset(root, { name: a.name || path.basename(entry.name), kind: a.kind, bytes: entry.data, license: a.license, source: {kind:'dcmotion-import',...(a.nativeSource?{nativeSource:a.nativeSource}:{})} });
+		if(saved.sha256!==a.sha256)throw new SchemaError('E_ASSET_HASH','imported asset hash mismatch');
 	}
 	// rebuild sources map (strip sources/ prefix)
 	const sources = {};
-	for (const [name, e] of raw) {
-		if (name.startsWith('sources/')) sources[name.slice('sources/'.length)] = e.data.toString('utf8');
+	for (const [rel, expected] of Object.entries(manifest.sources)) {
+		const entry=raw.get(('sources/'+rel).toLowerCase());
+		sources[rel]=expected.encoding==='binary'?entry.data:entry.data.toString('utf8');
 	}
 	if (!Object.keys(sources).length) throw new SchemaError('E_NO_SOURCES', 'package has no sources/');
 	const committed = commitRevision(root, newId, {

@@ -1,0 +1,149 @@
+{
+  "schema": 1,
+  "kind": "exact-shipped-canvas-font-byte-source",
+  "status": "all-six-exact-primary-repository-matches",
+  "originalArchive": "resources/canvas-design/canvas-design.zip",
+  "archiveSha256": "7c51b4a775bee79e39f0be47b924e1a758a92cf5a5d27084048489a4a31a70d1",
+  "referenceCommit": "e4bb5d960d87126ff3b3a8af1a104b7db67560ba",
+  "files": [
+    {
+      "archiveFile": "files/skills/canvas-design/canvas-fonts/IBMPlexSerif-Bold.ttf",
+      "bytes": 161000,
+      "sha256": "b8d294e9b5c5a0940f167c3ced0f7ef2e3f57082ca3ff096ef30e86e26c1c159",
+      "gitBlobSha1": "78f6e500de7faaec05bbbc60ccfc81083440b1c8",
+      "exactBytesMatch": true,
+      "referenceRepository": "anthropics/skills",
+      "referenceCommit": "e4bb5d960d87126ff3b3a8af1a104b7db67560ba",
+      "referencePath": "skills/canvas-design/canvas-fonts/IBMPlexSerif-Bold.ttf",
+      "url": "https://raw.githubusercontent.com/anthropics/skills/e4bb5d960d87126ff3b3a8af1a104b7db67560ba/skills/canvas-design/canvas-fonts/IBMPlexSerif-Bold.ttf",
+      "fontLicense": "SIL-OFL-1.1 from embedded declaration; copyright/font maker retained",
+      "embeddedNameRecords": {
+        "0": "Copyright 2020 IBM Corp. All rights reserved.",
+        "1": "IBM Plex Serif",
+        "3": "2.6;IBM ;IBMPlexSerif-Bold",
+        "5": "Version 2.6",
+        "8": "Bold Monday",
+        "9": "Mike Abbink, Paul van der Laan, Pieter van Rosmalen",
+        "11": "http://www.boldmonday.com",
+        "13": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: http://scripts.sil.org/OFL",
+        "14": "http://scripts.sil.org/OFL"
+      }
+    },
+    {
+      "archiveFile": "files/skills/canvas-design/canvas-fonts/IBMPlexSerif-BoldItalic.ttf",
+      "bytes": 169840,
+      "sha256": "da64b75f4284f53e7b5c71fa190a35b8bf3494fe19f1804c81c3a53340bca570",
+      "gitBlobSha1": "369b89d261b2d6d186e46b49a5b1959d9e95b5d4",
+      "exactBytesMatch": true,
+      "referenceRepository": "anthropics/skills",
+      "referenceCommit": "e4bb5d960d87126ff3b3a8af1a104b7db67560ba",
+      "referencePath": "skills/canvas-design/canvas-fonts/IBMPlexSerif-BoldItalic.ttf",
+      "url": "https://raw.githubusercontent.com/anthropics/skills/e4bb5d960d87126ff3b3a8af1a104b7db67560ba/skills/canvas-design/canvas-fonts/IBMPlexSerif-BoldItalic.ttf",
+      "fontLicense": "SIL-OFL-1.1 from embedded declaration; copyright/font maker retained",
+      "embeddedNameRecords": {
+        "0": "Copyright 2020 IBM Corp. All rights reserved.",
+        "1": "IBM Plex Serif",
+        "3": "2.6;IBM ;IBMPlexSerif-BoldItalic",
+        "5": "Version 2.6",
+        "8": "Bold Monday",
+        "9": "Mike Abbink, Paul van der Laan, Pieter van Rosmalen",
+        "11": "http://www.boldmonday.com",
+        "13": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: http://scripts.sil.org/OFL",
+        "14": "http://scripts.sil.org/OFL"
+      }
+    },
+    {
+      "archiveFile": "files/skills/canvas-design/canvas-fonts/IBMPlexSerif-Italic.ttf",
+      "bytes": 170004,
+      "sha256": "b11f1048745e715a55c9d837b3f10226ca3d78867b7db7251ddad8f98dcf0f38",
+      "gitBlobSha1": "a4d859a77f0e52e36bf699cf55469c31a4664c18",
+      "exactBytesMatch": true,
+      "referenceRepository": "anthropics/skills",
+      "referenceCommit": "e4bb5d960d87126ff3b3a8af1a104b7db67560ba",
+      "referencePath": "skills/canvas-design/canvas-fonts/IBMPlexSerif-Italic.ttf",
+      "url": "https://raw.githubusercontent.com/anthropics/skills/e4bb5d960d87126ff3b3a8af1a104b7db67560ba/skills/canvas-design/canvas-fonts/IBMPlexSerif-Italic.ttf",
+      "fontLicense": "SIL-OFL-1.1 from embedded declaration; copyright/font maker retained",
+      "embeddedNameRecords": {
+        "0": "Copyright 2020 IBM Corp. All rights reserved.",
+        "1": "IBM Plex Serif",
+        "3": "2.6;IBM ;IBMPlexSerif-Italic",
+        "5": "Version 2.6",
+        "8": "Bold Monday",
+        "9": "Mike Abbink, Paul van der Laan, Pieter van Rosmalen",
+        "11": "http://www.boldmonday.com",
+        "13": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: http://scripts.sil.org/OFL",
+        "14": "http://scripts.sil.org/OFL"
+      }
+    },
+    {
+      "archiveFile": "files/skills/canvas-design/canvas-fonts/IBMPlexSerif-Regular.ttf",
+      "bytes": 160380,
+      "sha256": "77cd233a2af8dc6b1022faea3bb3b01f3c75af68bcf530cb6aeb15982ff3dbb7",
+      "gitBlobSha1": "35f454ceac6b101ea3f9bed9f57a68a61519b401",
+      "exactBytesMatch": true,
+      "referenceRepository": "anthropics/skills",
+      "referenceCommit": "e4bb5d960d87126ff3b3a8af1a104b7db67560ba",
+      "referencePath": "skills/canvas-design/canvas-fonts/IBMPlexSerif-Regular.ttf",
+      "url": "https://raw.githubusercontent.com/anthropics/skills/e4bb5d960d87126ff3b3a8af1a104b7db67560ba/skills/canvas-design/canvas-fonts/IBMPlexSerif-Regular.ttf",
+      "fontLicense": "SIL-OFL-1.1 from embedded declaration; copyright/font maker retained",
+      "embeddedNameRecords": {
+        "0": "Copyright 2020 IBM Corp. All rights reserved.",
+        "1": "IBM Plex Serif",
+        "3": "2.6;IBM ;IBMPlexSerif-Regular",
+        "5": "Version 2.6",
+        "8": "Bold Monday",
+        "9": "Mike Abbink, Paul van der Laan, Pieter van Rosmalen",
+        "11": "http://www.boldmonday.com",
+        "13": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: http://scripts.sil.org/OFL",
+        "14": "http://scripts.sil.org/OFL"
+      }
+    },
+    {
+      "archiveFile": "files/skills/canvas-design/canvas-fonts/InstrumentSerif-Italic.ttf",
+      "bytes": 70868,
+      "sha256": "9c86e4d5a47b50224a2463a9eca8535835257c8e85c470c2c6b454b1af6f046e",
+      "gitBlobSha1": "8fa958d9baf94bdf86c45d5340dc2ba171e2eb2c",
+      "exactBytesMatch": true,
+      "referenceRepository": "anthropics/skills",
+      "referenceCommit": "e4bb5d960d87126ff3b3a8af1a104b7db67560ba",
+      "referencePath": "skills/canvas-design/canvas-fonts/InstrumentSerif-Italic.ttf",
+      "url": "https://raw.githubusercontent.com/anthropics/skills/e4bb5d960d87126ff3b3a8af1a104b7db67560ba/skills/canvas-design/canvas-fonts/InstrumentSerif-Italic.ttf",
+      "fontLicense": "SIL-OFL-1.1 from embedded declaration; copyright/font maker retained",
+      "embeddedNameRecords": {
+        "0": "Copyright 2022 The Instrument Serif Project Authors (https://github.com/Instrument/instrument-serif)",
+        "1": "Instrument Serif",
+        "3": "1.000;NONE;InstrumentSerif-Italic",
+        "5": "Version 1.000; ttfautohint (v1.8.4.7-5d5b);gftools[0.9.27]",
+        "8": "fragTYPE",
+        "9": "Rodrigo Fuenzalida",
+        "11": "www.fragtypefoundry.xyz",
+        "13": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL",
+        "14": "https://scripts.sil.org/OFL"
+      }
+    },
+    {
+      "archiveFile": "files/skills/canvas-design/canvas-fonts/InstrumentSerif-Regular.ttf",
+      "bytes": 69312,
+      "sha256": "56ac3be03ac3ba283196b3e77850ab2ffcf56cfb6fd3212c5620109a972f8c99",
+      "gitBlobSha1": "976303184a522174d92bc8d1a82d7960850a94b0",
+      "exactBytesMatch": true,
+      "referenceRepository": "anthropics/skills",
+      "referenceCommit": "e4bb5d960d87126ff3b3a8af1a104b7db67560ba",
+      "referencePath": "skills/canvas-design/canvas-fonts/InstrumentSerif-Regular.ttf",
+      "url": "https://raw.githubusercontent.com/anthropics/skills/e4bb5d960d87126ff3b3a8af1a104b7db67560ba/skills/canvas-design/canvas-fonts/InstrumentSerif-Regular.ttf",
+      "fontLicense": "SIL-OFL-1.1 from embedded declaration; copyright/font maker retained",
+      "embeddedNameRecords": {
+        "0": "Copyright 2022 The Instrument Serif Project Authors (https://github.com/Instrument/instrument-serif)",
+        "1": "Instrument Serif",
+        "3": "1.000;NONE;InstrumentSerif-Regular",
+        "5": "Version 1.000; ttfautohint (v1.8.4.7-5d5b);gftools[0.9.27]",
+        "8": "fragTYPE",
+        "9": "Rodrigo Fuenzalida",
+        "11": "www.fragtypefoundry.xyz",
+        "13": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL",
+        "14": "https://scripts.sil.org/OFL"
+      }
+    }
+  ],
+  "interpretation": "The original font bytes are unchanged. Earlier Google Fonts reference comparisons remain historically correct; those were different distributions, not the exact source for these six archive files. The exact-byte publisher copy is pinned here. Anthropic skill-level Apache-2.0 does not replace font-specific OFL notices."
+}

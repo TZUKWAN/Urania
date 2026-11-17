@@ -1,8 +1,8 @@
-import {isActiveDesignSession} from './design-session.js?v=163';
+import {isActiveDesignSession} from './design-session.js?v=165';
 import {designSession,isDesignRootInSession} from './dsh-context.js';
-import {sameUint64} from './native-protocol.js?v=163';
-import {aiCanvasTarget} from './ai-canvas.js?v=163';
-import {sameObjectIds} from './native-contract.js?v=163';
+import {sameUint64} from './native-protocol.js?v=165';
+import {aiCanvasTarget} from './ai-canvas.js?v=165';
+import {sameObjectIds} from './native-contract.js?v=165';
 
 const NAME='designcraft-editor',OPEN='[DesignCraftEditor]',CLOSE='[/DesignCraftEditor]';
 const label=context=>context.title+' · '+aiCanvasTarget(context);
@@ -86,3 +86,33 @@ export function nativeReferenceSource({controller,store}){
 }
 
 export const nativeContextTextRule={id:NAME,order:19,match(text,from){const start=text.indexOf(OPEN,from);if(start<0)return;const close=text.indexOf(CLOSE,start+OPEN.length);if(close<0||close-start>32000)return;try{const context=JSON.parse(text.slice(start+OPEN.length,close));const end=close+CLOSE.length;return {id:'text',start,end,data:{text:text.slice(start,end),display:'引用：'+context.title+(context.objectIds?.length?' · 选中对象':'')}};}catch{return;}}};
+
+// The SDK reference chip keeps the machine contract out of the editable human
+// draft while its public codec still serializes the complete original request.
+const REQUEST_SOURCE='designcraft-request';
+function parseDesignRequest(ref){
+ const request=typeof ref==='string'?JSON.parse(ref):ref;
+ if(!request||request.schema!==1||typeof request.sessionId!=='string'||!request.sessionId||
+  !/^(submission|diagnostic)-[a-f0-9-]{36}$/.test(request.id||'')||
+  typeof request.label!=='string'||!request.label.trim()||request.label.length>80||
+  typeof request.prompt!=='string'||!request.prompt||request.prompt.length>512000)throw new Error('设计请求引用无效，原意见仍保存在项目中');
+ return request;
+}
+export function withDesignRequestReference(draft,{sessionId,id,label,prompt}){
+ const request=parseDesignRequest({schema:1,sessionId,id,label,prompt}),separator=draft.text?'\n\n':'',offset=draft.text.length+separator.length;
+ return {...draft,text:draft.text+separator+prompt,references:[...(draft.references||[]),{source:REQUEST_SOURCE,ref:JSON.stringify(request),offset,length:prompt.length,label,appearance:'file',clipboardText:prompt}]};
+}
+export function designRequestReferenceSource({store}){
+ return {trigger:'@',name:REQUEST_SOURCE,order:1,showGroupTitle:false,async candidates(){return [];},
+  codec:{clipboardText:ref=>parseDesignRequest(ref).prompt,async serialize(ref,signal){
+   signal?.throwIfAborted();const request=parseDesignRequest(ref),services=store.get().services;
+   if(!isActiveDesignSession(services,request.sessionId))throw new Error('设计对话已切换，意见仍保留，未发送到其他对话');
+   designSession(services,request.sessionId);return request.prompt;
+  }}
+ };
+}
+export const designRequestTextRule={id:REQUEST_SOURCE,order:18,match(text,from){
+ const variants=[['[UraniaFeedback]','[/UraniaFeedback]','设计意见'],['[UraniaDiagnostic]','[/UraniaDiagnostic]','设计诊断']];
+ const matches=variants.map(([open,close,label])=>({open,close,label,start:text.indexOf(open,from)})).filter(m=>m.start>=0).sort((a,b)=>a.start-b.start);
+ for(const {open,close,label,start} of matches){const end=text.indexOf(close,start+open.length);if(end<0||end-start>512000)continue;try{const data=JSON.parse(text.slice(start+open.length,end));return {id:'text',start,end:end+close.length,data:{text:text.slice(start,end+close.length),display:label+(Array.isArray(data.items)?' · '+data.items.length+' 条':'')}};}catch{}}
+}};

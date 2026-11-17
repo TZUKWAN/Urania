@@ -34,15 +34,15 @@
   ],
   "rawEvidence": [
     {
-      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-legacy-migration.json",
+      "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-legacy-migration.json",
       "sha256": "120fdabcfa97962c7cab0563947434be64ffd4905a02f413b3fa8df6084bb704"
     },
     {
-      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-legacy-package.json",
+      "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-legacy-package.json",
       "sha256": "a4827e44e010793fce78370fad03e9378fc95fe3c9a85f87b45d5a2bdb46d7e5"
     },
     {
-      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-legacy-migration.tap",
+      "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-legacy-migration.tap",
       "sha256": "667b1ea896a2d86d594302bb95b57bfb3e49f9fcf63deeaa55e01decf5ac1c4a"
     }
   ],

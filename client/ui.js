@@ -1,17 +1,17 @@
 import {createVariantPanel} from './variant-ui.js';
 import {createImagePanel} from './image-ui.js';
-import {createNativeWorkspace} from './native-workspace.js?v=163';
-import {quoteNative,nativeInputAdmissionLocked} from './native-reference.js?v=163';
-import {aiCanvasTarget} from './ai-canvas.js?v=163';
-import {isActiveDesignSession} from './design-session.js?v=163';
-import {createChatSplit} from './chat-split.js?v=163';
-import {submitNativePrompt,currentNativeInput} from './native-ai-input.js?v=163';
-import {selectedObjectIds} from './native-contract.js?v=163';
-import {createMotionWorkspace} from './motion-workspace.js?v=163';
-export {nativeReferenceSource as createNativeReferenceSource,nativeContextTextRule} from './native-reference.js?v=163';
+import {createNativeWorkspace} from './native-workspace.js?v=165';
+import {quoteNative,nativeInputAdmissionLocked} from './native-reference.js?v=165';
+import {aiCanvasTarget} from './ai-canvas.js?v=165';
+import {isActiveDesignSession} from './design-session.js?v=165';
+import {createChatSplit} from './chat-split.js?v=165';
+import {submitNativePrompt,currentNativeInput} from './native-ai-input.js?v=165';
+import {selectedObjectIds} from './native-contract.js?v=165';
+import {createMotionWorkspace} from './motion-workspace.js?v=165';
+export {nativeReferenceSource as createNativeReferenceSource,nativeContextTextRule,designRequestReferenceSource as createDesignRequestReferenceSource,designRequestTextRule} from './native-reference.js?v=165';
 import {selectedNative,nativeNodes,selectedIds} from './selection.js';
-import {designChatContext,isDesignRootInSession,attachDesignReference,openNativeChatReference} from './dsh-context.js?v=163';
-export {designContextTextRule,createDesignReferenceSource} from './dsh-context.js?v=163';
+import {designChatContext,isDesignRootInSession,attachDesignReference,openNativeChatReference} from './dsh-context.js?v=165';
+export {designContextTextRule,createDesignReferenceSource} from './dsh-context.js?v=165';
 /**
  * DesignCraft editor UI — full WYSIWYG editor (React via DSH ModuleLoader).
  * Exports createUI({ React, store, sync, actions, controller }) → { App }.
@@ -44,7 +44,7 @@ export function createUI({ React, store, sync, actions, controller, t }) {
 		return React.createElement(type,safeProps,...children);
 	};
   const {Workspace:NativeWorkspace,controller:nativeController}=createNativeWorkspace({React,store});
-  const {MotionWorkspace}=createMotionWorkspace({h,store,actions});
+  const {MotionWorkspace}=createMotionWorkspace({h,store,actions,React});
   const ChatSplit=createChatSplit(React);
   const ImagePanel=createImagePanel({React,store,sync,actions});const VariantPanel=createVariantPanel({React,store,sync});
 	const { useState, useEffect, useRef, useCallback, useMemo } = React;

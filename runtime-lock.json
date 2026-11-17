@@ -37,9 +37,11 @@
       "source": "runtimes/ink-recognizer.cs",
       "sourceSha256": "4bca2c34e203529e63f5ca852ef462dffe306033207e1af28d73655d217cd5d6",
       "lock": "runtimes/ink-recognizer.lock.json",
-      "scope": "local Windows Ink text recognition only",
+      "scope": "Retained compatibility binary/source only; no Windows capture or recognition entry is enabled",
       "userInitiatedOnly": true,
-      "functionalValidation": false
+      "functionalValidation": false,
+      "active": false,
+      "removedByUser": true
     }
   }
 }

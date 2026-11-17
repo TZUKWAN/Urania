@@ -1,12 +1,12 @@
 {
   "schema": 1,
   "kind": "exact-native-source-input-audit",
-  "at": "2026-11-13T08:36:48.663950+00:00",
-  "archive": "engine-source-snapshots-ui160.zip",
-  "bytes": 33418619,
-  "sha256": "74a5d0d2cd46c13d07ef5248c5df82817751fffa1a72526fd6c067508f051740",
-  "sourceInputCount": 241,
-  "archiveFileCount": 252,
+  "at": "2026-11-17T21:17:09.044360+00:00",
+  "archive": "engine-source-snapshots-ui165.zip",
+  "bytes": 33424755,
+  "sha256": "d37cdec45e2855b4576f110916bff55c1895872550b6a33e36d90b3de89b38d3",
+  "sourceInputCount": 242,
+  "archiveFileCount": 253,
   "engines": {
     "vectorcraft-host": {
       "version": "0.19.0+designcraft.host19",
@@ -19,9 +19,9 @@
       "sourceInputsMatched": 30
     },
     "deckcraft-host": {
-      "version": "0.13.1+designcraft.host18",
+      "version": "0.13.1+designcraft.host19",
       "upstreamCommit": "4ce2944630b04188dee8504c14151994d06c416a",
-      "sourceInputsMatched": 151
+      "sourceInputsMatched": 152
     }
   },
   "archiveRoundtripBytesMatch": true,

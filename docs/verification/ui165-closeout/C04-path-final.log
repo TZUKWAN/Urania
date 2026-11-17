@@ -1,0 +1,100 @@
+TAP version 13
+# Subtest: ZIP bounds are enforced before inflate, including aggregate size and entry count
+ok 1 - ZIP bounds are enforced before inflate, including aggregate size and entry count
+  ---
+  duration_ms: 2.1654
+  type: 'test'
+  ...
+# Subtest: ZIP symlinks, local/central confusion and corrupted bytes are refused
+ok 2 - ZIP symlinks, local/central confusion and corrupted bytes are refused
+  ---
+  duration_ms: 1.0283
+  type: 'test'
+  ...
+# Subtest: setup: project with an asset
+ok 3 - setup: project with an asset
+  ---
+  duration_ms: 41.0064
+  type: 'test'
+  ...
+# Subtest: export produces a zip with manifest+sources+assets
+ok 4 - export produces a zip with manifest+sources+assets
+  ---
+  duration_ms: 11.4046
+  type: 'test'
+  ...
+# Subtest: roundtrip: export → import → new project, sources+assets identical
+ok 5 - roundtrip: export → import → new project, sources+assets identical
+  ---
+  duration_ms: 160.1841
+  type: 'test'
+  ...
+# Subtest: malicious: traversal entry refused
+ok 6 - malicious: traversal entry refused
+  ---
+  duration_ms: 10.9009
+  type: 'test'
+  ...
+# Subtest: malicious: absolute entry refused
+ok 7 - malicious: absolute entry refused
+  ---
+  duration_ms: 0.6101
+  type: 'test'
+  ...
+# Subtest: malicious: executable entry refused
+ok 8 - malicious: executable entry refused
+  ---
+  duration_ms: 1.0294
+  type: 'test'
+  ...
+# Subtest: malicious: .env entry refused
+ok 9 - malicious: .env entry refused
+  ---
+  duration_ms: 52.5428
+  type: 'test'
+  ...
+# Subtest: malicious: case collision refused
+ok 10 - malicious: case collision refused
+  ---
+  duration_ms: 1.6172
+  type: 'test'
+  ...
+# Subtest: malicious: no manifest refused
+ok 11 - malicious: no manifest refused
+  ---
+  duration_ms: 39.8991
+  type: 'test'
+  ...
+# Subtest: malicious: session id in manifest refused
+ok 12 - malicious: session id in manifest refused
+  ---
+  duration_ms: 1.1607
+  type: 'test'
+  ...
+# Subtest: malicious: corrupt zip refused
+ok 13 - malicious: corrupt zip refused
+  ---
+  duration_ms: 0.1924
+  type: 'test'
+  ...
+# Subtest: render source is project-only HTTP, opaque sandbox, no credentials/writes/file/external URLs
+ok 14 - render source is project-only HTTP, opaque sandbox, no credentials/writes/file/external URLs
+  ---
+  duration_ms: 408.9581
+  type: 'test'
+  ...
+# Subtest: resource boundary rejects traversal/encoding/absolute/Windows paths and accepts real Chinese/spaced subdirectory assets
+ok 15 - resource boundary rejects traversal/encoding/absolute/Windows paths and accepts real Chinese/spaced subdirectory assets
+  ---
+  duration_ms: 93.9756
+  type: 'test'
+  ...
+1..15
+# tests 15
+# suites 0
+# pass 15
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1784.1903

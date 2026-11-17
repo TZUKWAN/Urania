@@ -1,0 +1,109 @@
+{
+  "status": "partial",
+  "scope": "Packages and exact versions identified from the shipped browser bundle; registry tarballs verified against official SHA-512 before extracting license text.",
+  "components": [
+    {
+      "name": "jszip",
+      "version": "3.10.1",
+      "declaredLicense": "(MIT OR GPL-3.0-or-later)",
+      "tarball": "https://registry.npmjs.org/jszip/-/jszip-3.10.1.tgz",
+      "integrity": "sha512-xXDvecyTpGLrqFrvkrUSoxxfJI5AH7U8zxxtVclpsUtMCq4JQ290LY8AW5c7Ggnr/Y/oK+bQMbqK2qmtk3pN4g==",
+      "licenseFile": "licenses/dom-to-pptx-components/jszip-3.10.1.txt",
+      "licenseSha256": "566c953c6090b1218ca6217dd7359d45dde46581968586dc607d59a78af6a9c4"
+    },
+    {
+      "name": "pptxgenjs",
+      "version": "4.0.1",
+      "declaredLicense": "MIT",
+      "tarball": "https://registry.npmjs.org/pptxgenjs/-/pptxgenjs-4.0.1.tgz",
+      "integrity": "sha512-TeJISr8wouAuXw4C1F/mC33xbZs/FuEG6nH9FG1Zj+nuPcGMP5YRHl6X+j3HSUnS1f3at6k75ZZXPMZlA5Lj9A==",
+      "licenseFile": "licenses/dom-to-pptx-components/pptxgenjs-4.0.1.txt",
+      "licenseSha256": "7a2bfe96150786ed1908b8e63f98ebab88875c1e79e28faff6649e0f11f77e52"
+    },
+    {
+      "name": "html2canvas",
+      "version": "1.4.1",
+      "declaredLicense": "MIT",
+      "tarball": "https://registry.npmjs.org/html2canvas/-/html2canvas-1.4.1.tgz",
+      "integrity": "sha512-fPU6BHNpsyIhr8yyMpTLLxAbkaK8ArIBcmZIRiBLiDhjeqvXolaEmDGmELFuX9I4xDcaKKcJl+TKZLqruBbmWA==",
+      "licenseFile": "licenses/dom-to-pptx-components/html2canvas-1.4.1.txt",
+      "licenseSha256": "86200ce4e92d9a22c41c8647a55f7a5fddff304ff89b4d36ecc699ed8c123d2c"
+    },
+    {
+      "name": "css-line-break",
+      "version": "2.1.0",
+      "declaredLicense": "MIT",
+      "tarball": "https://registry.npmjs.org/css-line-break/-/css-line-break-2.1.0.tgz",
+      "integrity": "sha512-FHcKFCZcAha3LwfVBhCQbW2nCNbkZXn7KVUJcsT5/P8YmfsVja0FMPJr0B903j/E69HUphKiV9iQArX8SDYA4w==",
+      "licenseFile": "licenses/dom-to-pptx-components/css-line-break-2.1.0.txt",
+      "licenseSha256": "ce1ee0539f7fe1f7b75b76d121e674cb897c709c3e24ddba7f9a10fe2d0d88a5"
+    },
+    {
+      "name": "utrie",
+      "version": "1.0.2",
+      "declaredLicense": "MIT",
+      "tarball": "https://registry.npmjs.org/utrie/-/utrie-1.0.2.tgz",
+      "integrity": "sha512-1MLa5ouZiOmQzUbjbu9VmjLzn1QLXBhwpUa7kdLUQK+KQ5KA9I1vk5U4YHe/X2Ch7PYnJfWuWT+VbuxbGwljhw==",
+      "licenseFile": "licenses/dom-to-pptx-components/utrie-1.0.2.txt",
+      "licenseSha256": "8b00952cd8d0f5cbbefb13576778e1185dc963943151353d90c4e14a5a4caf40"
+    },
+    {
+      "name": "base64-arraybuffer",
+      "version": "1.0.2",
+      "declaredLicense": "MIT",
+      "tarball": "https://registry.npmjs.org/base64-arraybuffer/-/base64-arraybuffer-1.0.2.tgz",
+      "integrity": "sha512-I3yl4r9QB5ZRY3XuJVEPfc2XhZO6YweFPI+UovAzn+8/hb3oJ6lnysaFcjVpkCPfVWFUDvoZ8kmVDP7WyRtYtQ==",
+      "licenseFile": "licenses/dom-to-pptx-components/base64-arraybuffer-1.0.2.txt",
+      "licenseSha256": "f3eca6ff762533fa5a77caf954a143e48afa204668cf97dce758c45a9e006be3"
+    },
+    {
+      "name": "text-segmentation",
+      "version": "1.0.3",
+      "declaredLicense": "MIT",
+      "tarball": "https://registry.npmjs.org/text-segmentation/-/text-segmentation-1.0.3.tgz",
+      "integrity": "sha512-iOiPUo/BGnZ6+54OsWxZidGCsdU8YbE4PSpdPinp7DeMtUJNJBoJ/ouUSTJjHkh1KntHaltHl/gDs2FC4i5+Nw==",
+      "licenseFile": "licenses/dom-to-pptx-components/text-segmentation-1.0.3.txt",
+      "licenseSha256": "8b00952cd8d0f5cbbefb13576778e1185dc963943151353d90c4e14a5a4caf40"
+    }
+  ],
+  "unresolved": [
+    "Publisher-tag lock and licence data are retained, but exact bundle-to-lock provenance, embedded nested components and WOFF2/Brotli source revisions are not fully established.",
+    "No package code or lifecycle script was executed."
+  ],
+  "woff2Binary": {
+    "bytes": 727190,
+    "sha256": "afda7e08349046612a019713c8f3baae52ee9d064c712919af020cd2634dddd6",
+    "identicalTo": "fonteditor-core@2.6.3 package/woff2/woff2.wasm",
+    "packageIntegrity": "sha512-YUryIKjkenjZ41E7JvM3V+02Ak4mTHDDTwBWgs9KBzypzHqLZHuua1UDRevZNTKawmnq1dbBAa70Jddl2+F4FQ==",
+    "packageLicense": "licenses/dom-to-pptx-components/fonteditor-core-2.6.3.txt",
+    "upstreamBuildDescription": "https://github.com/kekee000/fonteditor-core/blob/04c47400895f11d857ca83f5725c0c3c0dd552a5/woff2src/Readme.md",
+    "upstreamLicenses": [
+      {
+        "name": "google-woff2",
+        "source": "https://raw.githubusercontent.com/google/woff2/master/LICENSE",
+        "licenseFile": "licenses/dom-to-pptx-components/google-woff2-upstream.txt",
+        "sha256": "d42a3e363d99da22b860ab760faa37dfa9781d74c9f3ed634d05109081616513",
+        "version": "upstream current license; exact build revision not identified"
+      },
+      {
+        "name": "google-brotli",
+        "source": "https://raw.githubusercontent.com/google/brotli/master/LICENSE",
+        "licenseFile": "licenses/dom-to-pptx-components/google-brotli-upstream.txt",
+        "sha256": "3d180008e36922a4e8daec11c34c7af264fed5962d07924aea928c38e8663c94",
+        "version": "upstream current license; exact build revision not identified"
+      },
+      {
+        "name": "woff2-wasm",
+        "source": "https://raw.githubusercontent.com/alimilhim/woff2-wasm/master/LICENSE",
+        "licenseFile": "licenses/dom-to-pptx-components/woff2-wasm-upstream.txt",
+        "sha256": "f721b0cdc2ff82937d8c291141534487ed22ee1cf579c4699adceb4e93b92989",
+        "version": "upstream current license; exact build revision not identified"
+      }
+    ]
+  },
+  "publisherTagLockAudit": {
+    "file": "licenses/dom-to-pptx-components/publisher-tag-lock-audit.json",
+    "sha256": "d0c3b8055532180eeea37acbfb785d2145d4c465373347c4fd2bcc1a007d8d34",
+    "candidatePackages": 30
+  }
+}

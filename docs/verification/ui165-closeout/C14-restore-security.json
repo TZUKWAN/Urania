@@ -1,0 +1,36 @@
+{
+  "passed": true,
+  "scope": "Real PS/ZIP/filesystem security contracts with tiny non-executable file fixtures.\nNot native-engine, deployment completeness or new-machine acceptance.\n",
+  "cases": [
+    {
+      "name": "traversal",
+      "refused": true,
+      "outsideUnchanged": true,
+      "scriptSha256": "2b9f1cc5c8ba2720dbca59d85fdb9db16e7e9a954b690228b2d7416f4974996b"
+    },
+    {
+      "name": "reserved-windows-name",
+      "refused": true,
+      "outsideUnchanged": true,
+      "scriptSha256": "2b9f1cc5c8ba2720dbca59d85fdb9db16e7e9a954b690228b2d7416f4974996b"
+    },
+    {
+      "name": "case-duplicate",
+      "refused": true,
+      "outsideUnchanged": true,
+      "scriptSha256": "2b9f1cc5c8ba2720dbca59d85fdb9db16e7e9a954b690228b2d7416f4974996b"
+    },
+    {
+      "name": "zip-symlink",
+      "refused": true,
+      "outsideUnchanged": true,
+      "scriptSha256": "2b9f1cc5c8ba2720dbca59d85fdb9db16e7e9a954b690228b2d7416f4974996b"
+    },
+    {
+      "name": "destination-junction",
+      "refused": true,
+      "outsideUnchanged": true,
+      "scriptSha256": "2b9f1cc5c8ba2720dbca59d85fdb9db16e7e9a954b690228b2d7416f4974996b"
+    }
+  ]
+}

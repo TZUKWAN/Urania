@@ -1,0 +1,11 @@
+{
+  "sha256": "9acca8e8c22201155389f65abbf6bc9723edc7384ead80503839f49dcc56d767",
+  "bytes": 536870912,
+  "baselineRss": 51572736,
+  "peakRss": 78204928,
+  "rssDelta": 26632192,
+  "eventLoopTicks": 61,
+  "maxTimerGapMs": 8,
+  "milliseconds": 323.8594,
+  "heapLimitMiB": 48
+}

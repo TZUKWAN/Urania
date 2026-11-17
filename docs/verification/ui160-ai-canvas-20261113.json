@@ -38,7 +38,7 @@
       "report": "verification/ui160-ai-canvas-20261113/vectorcraft/ai-canvas-ui.json",
       "reportSha256": "71fb1bfb2d0fcf2b12ec0c32449a8aa4af29723a5cdff973df160e3511723d46",
       "nativeVersion": "0.19.0+designcraft.host19",
-      "source": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\release-validation-20261113\\ui\\test_ai_canvas_vector_ui\\attempt2\\evidence"
+      "source": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\release-validation-20261113\\ui\\test_ai_canvas_vector_ui\\attempt2\\evidence"
     },
     "photocraft": {
       "case": "test_ai_canvas_photo_ui.py",
@@ -48,7 +48,7 @@
       "report": "verification/ui160-ai-canvas-20261113/photocraft/ai-canvas-ui.json",
       "reportSha256": "e8690bbba051daf94a72e3a6ab77adc0c47b69e0ff388431cb6da70ac9675215",
       "nativeVersion": "0.18.0+designcraft.host8",
-      "source": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\release-validation-20261113\\ui\\test_ai_canvas_photo_ui\\attempt3\\evidence"
+      "source": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\release-validation-20261113\\ui\\test_ai_canvas_photo_ui\\attempt3\\evidence"
     },
     "deckcraft": {
       "case": "test_ai_canvas_deck_ui.py",
@@ -58,7 +58,7 @@
       "report": "verification/ui160-ai-canvas-20261113/deckcraft/ai-canvas-ui.json",
       "reportSha256": "5ee9033c1ae5a1ca3341bc7d89f7d495867a89fd438e1d97d8843c85f231de26",
       "nativeVersion": "0.13.1+designcraft.host18",
-      "source": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\release-validation-20261113\\ui\\test_ai_canvas_deck_ui\\attempt3\\evidence"
+      "source": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\release-validation-20261113\\ui\\test_ai_canvas_deck_ui\\attempt3\\evidence"
     },
     "admission": {
       "case": "test_ai_canvas_admission_ui.py",
@@ -68,7 +68,7 @@
       "report": "verification/ui160-ai-canvas-20261113/admission/ai-canvas-admission.json",
       "reportSha256": "bebf103a49e3779d69c391717c788a154db97c0a525a2057537b05c61f7fd989",
       "nativeVersion": null,
-      "source": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\release-validation-20261113\\ui\\test_ai_canvas_admission_ui\\attempt2\\evidence"
+      "source": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\release-validation-20261113\\ui\\test_ai_canvas_admission_ui\\attempt2\\evidence"
     }
   },
   "actualModelSelection": {

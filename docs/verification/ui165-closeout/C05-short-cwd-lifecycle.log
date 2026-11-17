@@ -1,0 +1,46 @@
+TAP version 13
+# Subtest: supervisor: ok worker → completed, progress parsed, terminal record retained
+ok 1 - supervisor: ok worker → completed, progress parsed, terminal record retained
+  ---
+  duration_ms: 285.8138
+  type: 'test'
+  ...
+# Subtest: supervisor: failing worker → failed with error surfaced
+ok 2 - supervisor: failing worker → failed with error surfaced
+  ---
+  duration_ms: 376.2871
+  type: 'test'
+  ...
+# Subtest: supervisor: cancel kills a running job → cancelled
+ok 3 - supervisor: cancel kills a running job → cancelled
+  ---
+  duration_ms: 4708.4356
+  type: 'test'
+  ...
+# Subtest: supervisor: worker entry missing → immediate structured failure
+ok 4 - supervisor: worker entry missing → immediate structured failure
+  ---
+  duration_ms: 1.1922
+  type: 'test'
+  ...
+# Subtest: timeout waits for the owned process tree; failed/cancelled writes never replace previous output
+ok 5 - timeout waits for the owned process tree; failed/cancelled writes never replace previous output
+  ---
+  duration_ms: 6657.38
+  type: 'test'
+  ...
+# Subtest: deep artifact directories never become the child working directory
+ok 6 - deep artifact directories never become the child working directory
+  ---
+  duration_ms: 755.9047
+  type: 'test'
+  ...
+1..6
+# tests 6
+# suites 0
+# pass 6
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 13016.159

@@ -231,7 +231,7 @@
       {
         "name": "actual idle DSH agent invokes the registered tool and commits a revisioned edit (no LLM call)",
         "pass": true,
-        "sessionId": "PUBLIC-REDACTED"
+        "sessionId": "design-sdk-008a27fb-beff-495f-9f62-617dba4e090c"
       },
       {
         "name": "real DSH tool pipeline invokes DeckCraft and produces a PPTX in the owning workspace",
@@ -379,7 +379,7 @@
         "another source editor cannot silently overwrite a later picture replacement",
         "native SVG picture edits use real VectorCraft and return SVG media to the same PPT picture without flattening"
       ],
-      "root": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-completion\\media-bridge\\project-GBFMZp",
+      "root": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-completion\\media-bridge\\project-GBFMZp",
       "photoChild": "linked-beeed40b-7719-4dd5-8f09-913ca3afddab",
       "vectorChild": "linked-26ad7b65-ed87-4737-b473-d3369c2b0aa6"
     },
@@ -394,45 +394,45 @@
       "outputs": [
         {
           "format": "psd",
-          "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-completion\\export-roundtrip\\project-KjNKog\\design\\exports\\edited.psd",
+          "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-completion\\export-roundtrip\\project-KjNKog\\design\\exports\\edited.psd",
           "bytes": 25584
         },
         {
           "format": "png",
-          "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-completion\\export-roundtrip\\project-KjNKog\\design\\exports\\edited.png",
+          "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-completion\\export-roundtrip\\project-KjNKog\\design\\exports\\edited.png",
           "bytes": 4133
         },
         {
           "format": "jpg",
-          "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-completion\\export-roundtrip\\project-KjNKog\\design\\exports\\edited.jpg",
+          "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-completion\\export-roundtrip\\project-KjNKog\\design\\exports\\edited.jpg",
           "bytes": 5746
         },
         {
           "format": "webp",
-          "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-completion\\export-roundtrip\\project-KjNKog\\design\\exports\\edited.webp",
+          "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-completion\\export-roundtrip\\project-KjNKog\\design\\exports\\edited.webp",
           "bytes": 2742
         },
         {
           "format": "tiff",
-          "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-completion\\export-roundtrip\\project-KjNKog\\design\\exports\\edited.tiff",
+          "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-completion\\export-roundtrip\\project-KjNKog\\design\\exports\\edited.tiff",
           "bytes": 384906
         },
         {
           "format": "pptx",
-          "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-completion\\export-roundtrip\\project-KjNKog\\design\\exports\\roundtrip.pptx",
+          "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-completion\\export-roundtrip\\project-KjNKog\\design\\exports\\roundtrip.pptx",
           "bytes": 23031
         },
         {
           "format": "pptx",
-          "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-completion\\export-roundtrip\\project-KjNKog\\design\\exports\\roundtrip.pptx",
+          "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-completion\\export-roundtrip\\project-KjNKog\\design\\exports\\roundtrip.pptx",
           "bytes": 23031
         },
         {
           "format": "pdf",
-          "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-completion\\export-roundtrip\\project-KjNKog\\design\\exports\\native.pdf"
+          "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-completion\\export-roundtrip\\project-KjNKog\\design\\exports\\native.pdf"
         }
       ],
-      "root": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-completion\\export-roundtrip\\project-KjNKog"
+      "root": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-completion\\export-roundtrip\\project-KjNKog"
     },
     "exactMaskPipeline": {
       "checks": [
@@ -440,7 +440,7 @@
         "supervised mask preparation retains feathering and creates an actual guide image",
         "actual PhotoCraft inserts a separate masked pixel layer while all outside pixels remain identical"
       ],
-      "root": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-completion\\mask-pipeline\\project-aUQI7Z",
+      "root": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-completion\\mask-pipeline\\project-aUQI7Z",
       "mask": {
         "maskAsset": "dc-mask-7ed78d34-df96-46c6-89e7-ab1c32670a62.png",
         "width": 1024,

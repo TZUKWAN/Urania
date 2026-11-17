@@ -1,11 +1,11 @@
-import {createImageApiSettings} from './image-api-settings.js?v=163';
-import {createStockPanel,openStockImage} from './stock-panel.js?v=163';
-import {imageBaselineMatches} from './image-adoption.js?v=163';
-import {createPixelbinWorkspace} from './pixelbin-workspace.js?v=163';
-import {createEcommercePanel} from './ecommerce-panel.js?v=163';
-import {createWorkflowImagePanel} from './workflow-image-panel.js?v=163';
-import {createFalRealtimePanel} from './fal-realtime-panel.js?v=163';
-import {createFalWorkflowPanel} from './fal-workflow-panel.js?v=163';
+import {createImageApiSettings} from './image-api-settings.js?v=165';
+import {createStockPanel,openStockImage} from './stock-panel.js?v=165';
+import {imageBaselineMatches} from './image-adoption.js?v=165';
+import {createPixelbinWorkspace} from './pixelbin-workspace.js?v=165';
+import {createEcommercePanel} from './ecommerce-panel.js?v=165';
+import {createWorkflowImagePanel} from './workflow-image-panel.js?v=165';
+import {createFalRealtimePanel} from './fal-realtime-panel.js?v=165';
+import {createFalWorkflowPanel} from './fal-workflow-panel.js?v=165';
 const API='/designcraft/api/v2/studio/image';
 
 async function checksum(bytes){

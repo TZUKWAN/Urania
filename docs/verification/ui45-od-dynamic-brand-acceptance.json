@@ -18,11 +18,11 @@
     }
   ],
   "rawEvidence": {
-    "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-od-dynamic-brand.json",
+    "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-od-dynamic-brand.json",
     "sha256": "5347f16c4f37611513d904fbd25c08d9253f7bc647c7fefec3278e1399105d43"
   },
   "projectPackage": {
-    "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-od-dynamic-brand-project.zip",
+    "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-od-dynamic-brand-project.zip",
     "sha256": "324fc20f18086ce5e83636a4d0ddf96d5700384ff723208ae1317f01449e459d"
   },
   "regression": "node --test tests/brand-bindings.test.mjs tests/brand-updates.test.mjs passed 10/10; the existing Corporate brand project re-exported and independently unzipped with five sources; a confined project copy missing its dynamic token record was correctly refused.",

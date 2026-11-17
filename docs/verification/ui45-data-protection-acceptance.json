@@ -30,23 +30,23 @@
   "editorSessionChecks": 12,
   "rawEvidence": [
     {
-      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-editor-scope.json",
+      "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-editor-scope.json",
       "sha256": "4be75c8716d7e6fa47e4e1b0493959c34905aaeeee411e10af78316ab4f2bca8"
     },
     {
-      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-editor-draft.json",
+      "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-editor-draft.json",
       "sha256": "3ff5c704bbd7387bae694a09f3e98b99834f600d8df65531b8fa8437d8f069f6"
     },
     {
-      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-stale-ack.json",
+      "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-stale-ack.json",
       "sha256": "90dbc07e576f4deab7f0104698e3a9eb59864c67342bef714aec1d7474338604"
     },
     {
-      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-editor-stop.json",
+      "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-editor-stop.json",
       "sha256": "47e32b26c3a9114ec1722ccae47b88ddc723e6c446506f2905fa9a3854ae156d"
     },
     {
-      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-editor-sessions.tap",
+      "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-editor-sessions.tap",
       "sha256": "6980b4d3723515608efad57139c928e2dda702a24037dff29688dbcdf5405892"
     }
   ],

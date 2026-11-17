@@ -123,12 +123,12 @@
       "output": ""
     },
     {
-      "command": "python C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\audit_client_module_routes.py",
+      "command": "python C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\audit_client_module_routes.py",
       "exitCode": 0,
       "output": "静态核对 46 个声明文件、88 个可识别相对 JS 引用：均在路由表；未运行服务或界面。\n"
     },
     {
-      "command": "python C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\static_external_imports.py",
+      "command": "python C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\static_external_imports.py",
       "exitCode": 0,
       "output": "Checked 655 literal relative references in 134 source files; workers exist.\n"
     }

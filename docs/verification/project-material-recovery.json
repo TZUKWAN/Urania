@@ -29,7 +29,7 @@
       "name": "repaired operation and project relations are durable and a second actual repair is idempotent",
       "pass": true,
       "detail": {
-        "journal": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\project-materials-project\\127ba827-4afb-45aa-9181-3be597c94576\\design\\.designcraft\\v2\\operations\\d502bad9-53cd-4c28-b378-814ef33f3804.json",
+        "journal": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\project-materials-project\\127ba827-4afb-45aa-9181-3be597c94576\\design\\.designcraft\\v2\\operations\\d502bad9-53cd-4c28-b378-814ef33f3804.json",
         "instanceCount": 3,
         "reused": true
       }

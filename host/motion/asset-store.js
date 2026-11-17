@@ -10,7 +10,8 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
-import { SchemaError } from './schema.js';
+import { safeRelativePath } from './schema.js';
+import {workspacePath} from '../safety.js';
 
 const sha256 = (buf) => crypto.createHash('sha256').update(buf).digest('hex');
 const EXT_BY_KIND = { image: ['png', 'jpg', 'jpeg', 'webp', 'gif', 'svg'], video: ['mp4', 'webm', 'mov'], audio: ['mp3', 'wav', 'm4a', 'aac', 'ogg', 'flac'], font: ['ttf', 'otf', 'woff', 'woff2'] };
@@ -22,8 +23,11 @@ export class AssetError extends Error {
 	constructor(code, message, status = 400) { super(message); this.code = code; this.status = status; }
 }
 
-function assetsRoot(root) { return path.join(root, 'design', '.designcraft', 'motion', 'assets'); }
-function assetDir(root, sha) { return path.join(assetsRoot(root), sha); }
+function assetsRoot(root) { return workspacePath(root, 'design/.designcraft/motion/assets'); }
+function assetDir(root, sha) {
+	if (typeof sha !== 'string' || !/^[a-f0-9]{64}$/.test(sha)) throw new AssetError('E_HASH', 'asset hash must be exact 64-hex');
+	return workspacePath(root, path.join(assetsRoot(root), sha));
+}
 
 function detectKind(name, declaredKind) {
 	const ext = path.extname(name).slice(1).toLowerCase();
@@ -42,12 +46,13 @@ export function saveAsset(root, { name, kind, bytes, license, source }) {
 	if (bytes.length === 0) throw new AssetError('E_EMPTY', 'empty asset refused');
 	if (bytes.length > MAX_SINGLE) throw new AssetError('E_TOO_BIG', 'asset exceeds ' + MAX_SINGLE + ' bytes');
 	if (typeof name !== 'string' || !name || name.length > 200) throw new AssetError('E_NAME', 'asset name required (1..200)');
+	safeRelativePath(name,{allowSubdirs:false});
 	const resolvedKind = detectKind(name, kind);
 	const hash = sha256(bytes);
 	const dir = assetDir(root, hash);
 	const ext = path.extname(name).slice(1).toLowerCase() || 'bin';
-	const file = path.join(dir, 'asset.' + ext);
-	const metaFile = path.join(dir, 'meta.json');
+	const file = workspacePath(root,path.join(dir, 'asset.' + ext));
+	const metaFile = workspacePath(root,path.join(dir, 'meta.json'));
 	if (!fs.existsSync(file)) {
 		fs.mkdirSync(dir, { recursive: true });
 		const tmp = path.join(dir, '.tmp-' + crypto.randomBytes(6).toString('hex'));
@@ -56,6 +61,7 @@ export function saveAsset(root, { name, kind, bytes, license, source }) {
 		if (verify !== hash) { try { fs.unlinkSync(tmp); } catch { } throw new AssetError('E_HASH', 'write verify failed'); }
 		fs.renameSync(tmp, file);
 	}
+	else if (sha256(fs.readFileSync(file)) !== hash) throw new AssetError('E_CORRUPT', 'existing asset hash mismatch', 409);
 	if (!fs.existsSync(metaFile)) {
 		fs.writeFileSync(metaFile, JSON.stringify({
 			sha256: hash, kind: resolvedKind, name, bytes: bytes.length, ext,
@@ -67,17 +73,20 @@ export function saveAsset(root, { name, kind, bytes, license, source }) {
 }
 
 export function readAssetMeta(root, sha) {
-	const metaFile = path.join(assetDir(root, sha), 'meta.json');
+	const metaFile = workspacePath(root,path.join(assetDir(root, sha), 'meta.json'));
 	if (!fs.existsSync(metaFile)) throw new AssetError('E_NO_ASSET', 'asset not found: ' + sha, 404);
-	return JSON.parse(fs.readFileSync(metaFile, 'utf8'));
+	if(fs.statSync(metaFile).size>1024*1024)throw new AssetError('E_META','asset metadata exceeds budget');
+	const meta=JSON.parse(fs.readFileSync(metaFile, 'utf8'));
+	if(meta.sha256!==sha||typeof meta.ext!=='string'||!EXT_BY_KIND[meta.kind]?.includes(meta.ext)||!Number.isSafeInteger(meta.bytes)||meta.bytes<1||meta.bytes>MAX_SINGLE)throw new AssetError('E_META','asset metadata identity is invalid');
+	safeRelativePath(meta.name,{allowSubdirs:false});return meta;
 }
 
 export function readAssetBytes(root, sha) {
 	const meta = readAssetMeta(root, sha);
-	const file = path.join(assetDir(root, sha), 'asset.' + meta.ext);
+	const file = workspacePath(root,path.join(assetDir(root, sha), 'asset.' + meta.ext));
 	if (!fs.existsSync(file)) throw new AssetError('E_NO_BLOB', 'asset blob missing', 500);
 	const bytes = fs.readFileSync(file);
-	if (sha256(bytes) !== sha) throw new AssetError('E_CORRUPT', 'asset hash mismatch', 500);
+	if (bytes.length!==meta.bytes||sha256(bytes) !== sha) throw new AssetError('E_CORRUPT', 'asset hash mismatch', 500);
 	return { bytes, meta };
 }
 

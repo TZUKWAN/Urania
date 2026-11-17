@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "purpose": "Required audit-baseline filename; UI163 was the reviewed input, not a newly tested package",
+  "auditBaseline": {
+    "publicCommit": "b1627b7b8270aebafd5ccdcf0ab042dd4545e4eb",
+    "version": "1.3.0-dev.148",
+    "uiBuild": 163
+  },
+  "actualTestedVersion": "1.3.0-dev.150",
+  "actualTestedUiBuild": 165,
+  "currentVerification": "VERIFICATION_UI165.json",
+  "ui163FunctionalRetestClaim": false
+}

@@ -1,0 +1,25 @@
+{
+  "ok": true,
+  "nodePath": "C:\\Program Files\\nodejs\\node.exe",
+  "nodeExists": true,
+  "cwdExists": true,
+  "mainThread": true,
+  "envKeys": [
+    "SYSTEMROOT",
+    "SYSTEMDRIVE",
+    "COMSPEC",
+    "PATHEXT",
+    "WINDIR",
+    "TEMP",
+    "TMP",
+    "LOCALAPPDATA",
+    "ELECTRON_RUN_AS_NODE"
+  ],
+  "hasSystemRoot": true,
+  "systemRootExists": true,
+  "result": {
+    "exitCode": 0,
+    "signal": null
+  },
+  "stdout": "v25.6.0\r\n"
+}

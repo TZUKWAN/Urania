@@ -65,8 +65,9 @@ test('restore: old revision → new head', async () => {
 		operationKey: 'restore-ws', sources: { 'composition.html': '<html>v2</html>' }
 	}, url(), services);
 	const head = await motionHandleAction('open', 'POST', { projectId: c1.projectId }, url(), services);
+	await assert.rejects(()=>motionHandleAction('restore','POST',{projectId:c1.projectId,baseRevision:head.revision,revision:r1,operationKey:'restore-no-lease'},url(),services),e=>e.code==='E_LEASE');
 	const restored = await motionHandleAction('restore', 'POST', {
-		projectId: c1.projectId, baseRevision: head.revision, revision: r1, operationKey: 'restore-r1'
+		projectId: c1.projectId, baseRevision: head.revision, leaseId:head.leaseId,viewEpoch:head.viewEpoch,revision: r1, operationKey: 'restore-r1'
 	}, url(), services);
 	assert.equal(restored.sourcePersisted, true);
 });
@@ -148,7 +149,7 @@ test('create_from_template: seeds a full GSAP project (index.html + fonts)', asy
 	await assert.rejects(() => motionHandleAction('create_from_template', 'POST', { templateId: '../evil', operationKey: 'tplc-2' }, url(), services), (e) => e.code === 'E_TEMPLATE');
 });
 test('reference: measures a real video into facts/frames/audio', async () => {
-	const FFMPEG = 'D:/MDHPROJECT/ffmpeg/ffmpeg-9.0.2-essentials_build/bin/ffmpeg.exe';
+	const {resolveMotionPaths}=await import('../host/motion/runtime-env.js');const FFMPEG=resolveMotionPaths({components:['ffmpeg']}).ffmpegPath;
 	const { execFileSync } = await import('node:child_process');
 	const videoPath = path.join(ROOT, 'ref-sample.mp4');
 	execFileSync(FFMPEG, ['-y', '-f', 'lavfi', '-i', 'testsrc=duration=2:size=320x180:rate=12', '-f', 'lavfi', '-i', 'sine=frequency=440:duration=2', '-c:v', 'libx264', '-pix_fmt', 'yuv420p', '-c:a', 'aac', '-shortest', videoPath], { stdio: 'pipe' });

@@ -40,7 +40,7 @@
       "name": "Chinese composition in the actual DSH composer does not edit the native design",
       "pass": true,
       "detail": {
-        "draft": "PUBLIC-REDACTED",
+        "draft": "对话里的中文",
         "nativeRevision": 8
       }
     }

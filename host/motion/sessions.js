@@ -9,13 +9,13 @@ import { validateProjectId, validateRevision, validateHfIdSet, validateTimeRange
 
 const leases = new Map(); // leaseId → { projectId, sessionId, viewEpoch, baseRevision, selectionStamp, createdAt, lastSeenAt, revoked }
 
-export function mintLease({ projectId, sessionId, baseRevision, viewEpoch }) {
+export function mintLease({ root,projectId, sessionId, baseRevision, viewEpoch }) {
 	validateProjectId(projectId);
 	if (!sessionId || typeof sessionId !== 'string') throw new SchemaError('E_SESSION', 'execution agent session required');
 	if (!viewEpoch || typeof viewEpoch !== 'string') throw new SchemaError('E_EPOCH', 'viewEpoch required');
 	validateRevision(baseRevision);
 	const leaseId = crypto.randomBytes(24).toString('base64url');
-	const lease = { leaseId, projectId, sessionId, baseRevision, viewEpoch, selectionStamp: null, timeRange: null, createdAt: new Date().toISOString(), lastSeenAt: new Date().toISOString(), revoked: false };
+	const lease = { leaseId, root,projectId, sessionId, baseRevision, viewEpoch, selectionStamp: null, timeRange: null, createdAt: new Date().toISOString(), lastSeenAt: new Date().toISOString(), revoked: false };
 	leases.set(leaseId, lease);
 	return lease;
 }
@@ -29,14 +29,15 @@ export function revokeLease(leaseId) {
 	if (lease) lease.revoked = true;
 }
 
-export function revokeProjectLeases(projectId) {
-	for (const [, lease] of leases) if (lease.projectId === projectId) lease.revoked = true;
+export function revokeProjectLeases(projectId,{root,sessionId}={}) {
+	for (const [, lease] of leases) if (lease.projectId === projectId&&(!root||root===lease.root)&&(!sessionId||sessionId===lease.sessionId)) lease.revoked = true;
 }
 
-export function validateLease(leaseId, { projectId, sessionId, baseRevision, viewEpoch }) {
+export function validateLease(leaseId, { root,projectId, sessionId, baseRevision, viewEpoch }) {
 	const lease = typeof leaseId === 'string' ? leases.get(leaseId) : null;
 	if (!lease) throw new SchemaError('E_LEASE', 'unknown lease');
 	if (lease.revoked) throw new SchemaError('E_LEASE_REVOKED', 'lease revoked');
+	if(root&&lease.root!==root)throw new SchemaError('E_LEASE_ROOT','lease workspace mismatch');
 	if (projectId && lease.projectId !== projectId) throw new SchemaError('E_LEASE_PROJECT', 'lease projectId mismatch');
 	if (sessionId && lease.sessionId !== sessionId) throw new SchemaError('E_LEASE_SESSION', 'lease sessionId mismatch');
 	if (viewEpoch && lease.viewEpoch !== viewEpoch) throw new SchemaError('E_LEASE_EPOCH', 'stale viewEpoch');
@@ -45,16 +46,16 @@ export function validateLease(leaseId, { projectId, sessionId, baseRevision, vie
 	return lease;
 }
 
-export function updateLeaseSelection(leaseId, { selectionStamp, hfIds, timeRange, baseRevision }) {
-	const lease = validateLease(leaseId, { baseRevision });
+export function updateLeaseSelection(leaseId, { root,sessionId,selectionStamp, hfIds, timeRange, baseRevision }) {
+	const lease = validateLease(leaseId, { root,sessionId,baseRevision });
 	if (hfIds !== undefined) { validateHfIdSet(hfIds); lease.selectionStamp = crypto.createHash('sha256').update(JSON.stringify(hfIds)).digest('hex').slice(0, 16); }
 	if (timeRange !== undefined) { validateTimeRange(timeRange, { durationFrames: timeRange.durationFrames }); lease.timeRange = timeRange; }
 	return lease;
 }
 
 /** Admission check for a write operation. Throws on any mismatch. */
-export function admitWrite({ leaseId, sessionId, projectId, baseRevision, viewEpoch, selectionStamp }) {
-	const lease = validateLease(leaseId, { projectId, sessionId, viewEpoch });
+export function admitWrite({ root,leaseId, sessionId, projectId, baseRevision, viewEpoch, selectionStamp }) {
+	const lease = validateLease(leaseId, { root,projectId, sessionId, viewEpoch });
 	validateRevision(baseRevision);
 	if (baseRevision !== lease.baseRevision) throw new SchemaError('E_STALE_BASE', 'caller baseRevision != lease baseRevision');
 	if (selectionStamp && lease.selectionStamp && selectionStamp !== lease.selectionStamp) {

@@ -1,7 +1,7 @@
 {
   "status": "passed",
   "scope": "real DSH tools and UI; native historical Photo source fork, two real Deck pictures, physical edit, same-App return, durable edit resume; apply is a separate gate",
-  "root": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\instance-fork-project\\c875c391-c985-4416-b9c7-1f0db54318a9",
+  "root": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\instance-fork-project\\c875c391-c985-4416-b9c7-1f0db54318a9",
   "codeRoot": "D:\\METIS超级合并\\dsh-plugin\\designcraft",
   "checks": [
     {
@@ -40,7 +40,7 @@
   ],
   "owned": {
     "workspaceId": "eac067d5-5142-42e6-9d9a-787b212ce242",
-    "sessionId": "PUBLIC-REDACTED"
+    "sessionId": "session-PUBLIC-REDACTED"
   },
   "asset": {
     "id": "asset-241c5f97-995d-4634-ba4d-7081241f51ce",

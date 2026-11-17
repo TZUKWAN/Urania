@@ -111,15 +111,15 @@
   "fontEvidence": "verification/ui45-brand-font-acceptance.json",
   "rawEvidence": [
     {
-      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\f6-anchor-png.json",
+      "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\f6-anchor-png.json",
       "sha256": "32e4d21ff2459aa8bc501a64d48ce1817ab4f908225e9d876a4f1c3645bc432c"
     },
     {
-      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\f6-anchor-svg.json",
+      "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\f6-anchor-svg.json",
       "sha256": "ff71768f6b67364cbe115928277d4a6e8006af534d8c23640737ab91f0175326"
     },
     {
-      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-material-layout.tap",
+      "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-material-layout.tap",
       "sha256": "0fca24cb36771c41fa503d7e503a35f5f1951efc3b4d2d2de7717b1a47c77828"
     }
   ],

@@ -45,11 +45,11 @@
   ],
   "rawEvidence": [
     {
-      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-deck-media.json",
+      "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-deck-media.json",
       "sha256": "af2d28d8710928beca335874ba434b1820d664ceffe889dd8bfb37f239868111"
     },
     {
-      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-deck-video-play.json",
+      "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-deck-video-play.json",
       "sha256": "7bd42bc3419ef819f77fde553b116eda0dc853fb5ddd9cdee28b1bb18a0ce7e4"
     }
   ],
@@ -61,7 +61,7 @@
       "native source and exported PPTX reopen with the original audio and video bytes"
     ],
     "rawEvidence": {
-      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-deck-media-host9.json",
+      "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\ui45-deck-media-host9.json",
       "sha256": "edbbd31a312181baa25fd327e7e95f5682e9073243ea4c436c99b31d0941cacc"
     }
   }

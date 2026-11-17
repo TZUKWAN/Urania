@@ -12,7 +12,7 @@
         "dirty": true,
         "revision": "52e598a6a4d27210d417b6fe24c9a7b8b5aedae021651ef1cde6a0c8d1b44578",
         "draft": {
-          "token": "PUBLIC-REDACTED",
+          "token": "[REDACTED]",
           "bytes": 24918,
           "baseRevision": "52e598a6a4d27210d417b6fe24c9a7b8b5aedae021651ef1cde6a0c8d1b44578",
           "documentRevision": 12,
@@ -30,7 +30,7 @@
       "pass": true,
       "detail": {
         "error": "文档尚未完成打开与草稿检查，未保存中间状态",
-        "token": "PUBLIC-REDACTED",
+        "token": "[REDACTED]",
         "phase": "opening"
       }
     },
@@ -42,7 +42,7 @@
         "revision": "52e598a6a4d27210d417b6fe24c9a7b8b5aedae021651ef1cde6a0c8d1b44578",
         "dirty": false,
         "inert": true,
-        "token": "PUBLIC-REDACTED",
+        "token": "[REDACTED]",
         "bytes": 24918,
         "clientId": "e41a73e4-f547-4adc-b26e-c5073f529347"
       }
@@ -53,7 +53,7 @@
       "detail": {
         "error": "已有未恢复的本地草稿；请先恢复，未覆盖草稿或磁盘源",
         "sourceId": "work-3b8120fa-c5c0-4aac-8c97-ceb901019dc3",
-        "token": "PUBLIC-REDACTED",
+        "token": "[REDACTED]",
         "revision": "52e598a6a4d27210d417b6fe24c9a7b8b5aedae021651ef1cde6a0c8d1b44578"
       }
     },
@@ -101,50 +101,50 @@
   "pageErrors": [],
   "draftWriteTrace": [
     {
-      "key": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\draft-ui-project\\ebb52f6e-f2f8-4054-b611-64de4922e414\u0000work-3b8120fa-c5c0-4aac-8c97-ceb901019dc3",
-      "token": "PUBLIC-REDACTED",
+      "key": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\draft-ui-project\\ebb52f6e-f2f8-4054-b611-64de4922e414\u0000work-3b8120fa-c5c0-4aac-8c97-ceb901019dc3",
+      "token": "[REDACTED]",
       "bytes": 24820,
       "revision": 1,
       "stack": "Error\n    at IDBObjectStore.put (<anonymous>:3:180)\n    at read.onsuccess (http://127.0.0.1:62930/designcraft/api/v1/client/native-controller.js:28:55)"
     },
     {
-      "key": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\draft-ui-project\\ebb52f6e-f2f8-4054-b611-64de4922e414\u0000work-3b8120fa-c5c0-4aac-8c97-ceb901019dc3",
-      "token": "PUBLIC-REDACTED",
+      "key": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\draft-ui-project\\ebb52f6e-f2f8-4054-b611-64de4922e414\u0000work-3b8120fa-c5c0-4aac-8c97-ceb901019dc3",
+      "token": "[REDACTED]",
       "bytes": 24918,
       "revision": 12,
       "stack": "Error\n    at IDBObjectStore.put (<anonymous>:3:180)\n    at read.onsuccess (http://127.0.0.1:62930/designcraft/api/v1/client/native-controller.js:28:55)"
     },
     {
-      "key": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\draft-ui-project\\ebb52f6e-f2f8-4054-b611-64de4922e414\u0000recovered-56028227-90f1-40b0-98b3-d9c34836e61e",
-      "token": "PUBLIC-REDACTED",
+      "key": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\draft-ui-project\\ebb52f6e-f2f8-4054-b611-64de4922e414\u0000recovered-56028227-90f1-40b0-98b3-d9c34836e61e",
+      "token": "[REDACTED]",
       "bytes": 24918,
       "revision": 1,
       "stack": "Error\n    at IDBObjectStore.put (<anonymous>:3:180)\n    at read.onsuccess (http://127.0.0.1:62930/designcraft/api/v1/client/native-controller.js:28:55)"
     },
     {
-      "key": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\draft-ui-project\\ebb52f6e-f2f8-4054-b611-64de4922e414\u0000recovered-56028227-90f1-40b0-98b3-d9c34836e61e",
-      "token": "PUBLIC-REDACTED",
+      "key": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\draft-ui-project\\ebb52f6e-f2f8-4054-b611-64de4922e414\u0000recovered-56028227-90f1-40b0-98b3-d9c34836e61e",
+      "token": "[REDACTED]",
       "bytes": 24918,
       "revision": 2,
       "stack": "Error\n    at IDBObjectStore.put (<anonymous>:3:180)\n    at read.onsuccess (http://127.0.0.1:62930/designcraft/api/v1/client/native-controller.js:28:55)"
     },
     {
-      "key": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\draft-ui-project\\ebb52f6e-f2f8-4054-b611-64de4922e414\u0000recovered-56028227-90f1-40b0-98b3-d9c34836e61e",
-      "token": "PUBLIC-REDACTED",
+      "key": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\draft-ui-project\\ebb52f6e-f2f8-4054-b611-64de4922e414\u0000recovered-56028227-90f1-40b0-98b3-d9c34836e61e",
+      "token": "[REDACTED]",
       "bytes": 24918,
       "revision": 1,
       "stack": "Error\n    at IDBObjectStore.put (<anonymous>:3:180)\n    at read.onsuccess (http://127.0.0.1:62930/designcraft/api/v1/client/native-controller.js:28:55)"
     },
     {
-      "key": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\draft-ui-project\\ebb52f6e-f2f8-4054-b611-64de4922e414\u0000recovered-56028227-90f1-40b0-98b3-d9c34836e61e\u0000cas-4d01aaef-6d3c-4807-bf05-52c87f17ab23",
-      "token": "PUBLIC-REDACTED",
+      "key": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\draft-ui-project\\ebb52f6e-f2f8-4054-b611-64de4922e414\u0000recovered-56028227-90f1-40b0-98b3-d9c34836e61e\u0000cas-4d01aaef-6d3c-4807-bf05-52c87f17ab23",
+      "token": "[REDACTED]",
       "bytes": 24918,
       "revision": 1,
       "stack": "Error\n    at IDBObjectStore.put (<anonymous>:3:180)\n    at http://127.0.0.1:62930/designcraft/api/v1/client/native-controller.js:19:61\n    at http://127.0.0.1:62930/designcraft/api/v1/client/native-controller.js:18:141\n    at new Promise (<anonymous>)\n    at DraftVault.action (http://127.0.0.1:62930/designcraft/api/v1/client/native-controller.js:18:62)\n    at async eval (eval at evaluate (:290:30), <anonymous>:3:11)\n    at async <anonymous>:316:30"
     },
     {
-      "key": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\draft-ui-project\\ebb52f6e-f2f8-4054-b611-64de4922e414\u0000recovered-56028227-90f1-40b0-98b3-d9c34836e61e\u0000cas-4d01aaef-6d3c-4807-bf05-52c87f17ab23",
-      "token": "PUBLIC-REDACTED",
+      "key": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\draft-ui-project\\ebb52f6e-f2f8-4054-b611-64de4922e414\u0000recovered-56028227-90f1-40b0-98b3-d9c34836e61e\u0000cas-4d01aaef-6d3c-4807-bf05-52c87f17ab23",
+      "token": "[REDACTED]",
       "bytes": 24918,
       "revision": 1,
       "stack": "Error\n    at IDBObjectStore.put (<anonymous>:3:180)\n    at read.onsuccess (http://127.0.0.1:62930/designcraft/api/v1/client/native-controller.js:28:55)"

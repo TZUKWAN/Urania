@@ -2,7 +2,7 @@
   "status": "passed",
   "scope": "actual registered DSH Photo native source/PNG -> real native Deck picture/media/page/use -> physical Photo source edit -> same Deck parent return; no model or automatic replacement claim",
   "codeRoot": "D:\\METIS超级合并\\dsh-plugin\\designcraft",
-  "root": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\photo-deck-material-project\\bd0d0fb1-e53f-4664-80ba-ab19a39148fc",
+  "root": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\photo-deck-material-project\\bd0d0fb1-e53f-4664-80ba-ab19a39148fc",
   "checks": [
     {
       "name": "actual layered Photo version/PNG is bound to a real native Deck picture, page and exact media bytes",
@@ -42,7 +42,7 @@
   ],
   "owned": {
     "workspaceId": "e9a75f13-4aaa-4362-818a-401941624cb1",
-    "sessionId": "PUBLIC-REDACTED"
+    "sessionId": "session-PUBLIC-REDACTED"
   },
   "deckSourceId": "work-f204cd46-ffdc-4fd6-b06d-cc31f957b06f",
   "asset": {

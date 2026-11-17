@@ -150,7 +150,14 @@ export class NativeSourceStore {
   if(engineState.nativeDocumentId!==undefined&&!isUint64(engineState.nativeDocumentId)||engine==='photocraft'&&!isUint64(engineState.nativeDocumentId))throw new SafetyError('保存缺少精确的原生图像文档 ID',422);
   if(operation!==undefined){
    assertSafeJson(operation);
-   if(operation?.action==='brand-edit'){
+   if(operation?.action==='feedback-edit'){
+    if(actor!=='ai'||!baseRevision||typeof operation.id!=='string'||!/^[a-f0-9-]{36}$/.test(operation.id)||!/^submission-[a-f0-9-]{36}$/.test(operation.submissionId||''))throw new SafetyError('设计意见保存回执无效',422);
+    operation={action:'feedback-edit',id:operation.id,submissionId:operation.submissionId};
+   }else if(operation?.action==='feedback-recovery'){
+    if(actor!=='ai'||baseRevision!==null||!/^recovered-[a-f0-9-]{36}$/.test(id)||!/^[a-f0-9-]{36}$/.test(operation.id||'')||typeof operation.originalSourceId!=='string'||!/^[a-f0-9]{64}$/.test(operation.originalRevision||''))throw new SafetyError('隔离候选恢复回执无效',422);
+    this.directory(operation.originalSourceId);const original=await this.source(operation.originalSourceId,operation.originalRevision);if(original.meta.engine!==engine)throw new SafetyError('隔离候选的引擎与原稿不一致',422);
+    operation={action:'feedback-recovery',id:operation.id,originalSourceId:operation.originalSourceId,originalRevision:operation.originalRevision};
+   }else if(operation?.action==='brand-edit'){
     operation=brandReceipt(operation,baseRevision);
    }else if(operation?.action==='brand-font'){
     operation=fontReceipt(operation,baseRevision);

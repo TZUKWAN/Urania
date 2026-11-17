@@ -1569,7 +1569,7 @@
     }
   },
   "historicalAudit": {
-    "report": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\matrix-evidence-audit.json",
+    "report": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\matrix-evidence-audit.json",
     "matchingPairs": 399,
     "recoveredReferences": 117,
     "mismatches": 10,
@@ -1595,7 +1595,7 @@
     "report": "core-closeout.md",
     "sourceAudit": "implementation-source-audit.json",
     "dependencyAudit": "dependency-license-audit.json",
-    "authorization": "PUBLIC-REDACTED",
+    "authorization": "[REDACTED]",
     "functionalValidation": false
   },
   "coreProductScope": {

@@ -2,7 +2,7 @@
   "status": "passed",
   "scope": "physical Photo browser tools, actual registered DSH tools and source/pixel checks; no model",
   "codeRoot": "D:\\METIS超级合并\\dsh-plugin\\designcraft",
-  "root": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\photo-tools-project\\e186b7aa-0324-4abf-b329-263d29782c1f",
+  "root": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\photo-tools-project\\e186b7aa-0324-4abf-b329-263d29782c1f",
   "checks": [
     {
       "name": "physical brush and eraser change actual native alpha pixels while retaining surrounding paint",
@@ -106,7 +106,7 @@
   ],
   "owned": {
     "workspaceId": "cc551999-bbbc-4782-9a2a-a6607dd72770",
-    "sessionId": "PUBLIC-REDACTED"
+    "sessionId": "session-PUBLIC-REDACTED"
   },
   "sourceId": "work-10559217-4271-428c-b729-58ab6db06616",
   "baseLayerId": 2,

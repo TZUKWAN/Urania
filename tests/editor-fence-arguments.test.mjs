@@ -14,7 +14,7 @@ test('recorded real GLM missing-epoch arguments identify epoch before any manage
  const result=await invoke(manager,fixture.arguments);assert.equal(result.ok,false);assert.equal(result.status,422);assert.deepEqual(result.missingExecutionFields,['epoch']);assert.match(result.error,/view\.epoch/);assert.match(result.retryInstruction,/do not use open/);assert.equal(reached,false);
 });
 test('all currently fenced public actions name missing fields; no implicit fence is supplied',async()=>{
- for(const action of ['execute','undo','derive','place','edit_instance','apply_instance','apply_linked','resume_linked','link_instances','unlink_instance','convert_svg','brand']){
+ for(const action of ['execute','undo','derive','place','edit_instance','apply_instance','apply_linked','resume_linked','link_instances','unlink_instance','convert_svg','brand','recover_feedback']){
   const result=await invoke({}, {action});assert.equal(result.status,422);assert.deepEqual(result.missingExecutionFields,['sourceId','epoch','base']);
  }
  const blank=await invoke({}, {action:'execute',sourceId:' ',epoch:'',base:{uid:1}});assert.deepEqual(blank.missingExecutionFields,['sourceId','epoch','base.revision','base.engine','base.selectionStamp']);

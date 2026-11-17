@@ -15,7 +15,7 @@ function makeWorker(code, body) {
 
 const OK_WORKER = `import fs from 'node:fs';
 import path from 'node:path';
-const req = await new Promise((r) => { let d=''; process.stdin.on('data',c=>d+=c); process.stdin.on('end',()=>r(JSON.parse(d))); });
+const req = JSON.parse(fs.readFileSync(process.argv[2],'utf8'));
 console.log(JSON.stringify({ type:'progress', frame: 5, totalFrames: 10 }));
 if (req.emit) { console.log(JSON.stringify({ type:'progress', frame: 10, totalFrames: 10 })); }
 fs.mkdirSync(path.dirname(req.outputPath), { recursive: true });
@@ -33,7 +33,7 @@ function waitStatus(jobId, predicate, timeoutMs = 15000) {
 		const started = Date.now();
 		const poll = setInterval(() => {
 			const st = getRenderStatus(jobId);
-			if (st && predicate(st)) { clearInterval(poll); resolve(st); }
+			if (st?.finished && predicate(st)) { clearInterval(poll); resolve(st); }
 			else if (Date.now() - started > timeoutMs) { clearInterval(poll); reject(new Error('等待渲染状态超时, last=' + JSON.stringify(st && { status: st.status, progress: st.progress }))); }
 		}, 100);
 	});
@@ -67,6 +67,9 @@ test('supervisor: cancel kills a running job → cancelled', async () => {
 	const { jobId } = startRender(makeWorker('slow', SLOW_WORKER), outDir, path.join(outDir, 'v.mp4'), { timeoutMs: 60000 });
 	await new Promise((r) => setTimeout(r, 400));
 	assert.ok(cancelRender(jobId), 'cancel accepted');
+	assert.equal(getActiveRenderCount(),1,'cancel must retain the slot until process close/cleanup');
+	assert.throws(()=>startRender(makeWorker('blocked',OK_WORKER),outDir,path.join(outDir,'next.mp4')),/只允许一个/);
+	assert.ok(cancelRender(jobId),'repeat cancellation is idempotent while stopping');
 	const st = await waitStatus(jobId, (s) => s.status !== 'running');
 	assert.equal(st.status, 'cancelled');
 });
@@ -74,4 +77,17 @@ test('supervisor: cancel kills a running job → cancelled', async () => {
 test('supervisor: worker entry missing → immediate structured failure', async () => {
 	const outDir = fs.mkdtempSync(path.join(os.tmpdir(), 'dc-supervisor-miss-'));
 	assert.throws(() => startRender(path.join(outDir, 'nope.mjs'), outDir, path.join(outDir, 'v.mp4'), {}), /worker 入口不存在/);
+});
+
+test('timeout waits for the owned process tree; failed/cancelled writes never replace previous output',async()=>{
+ const directory=fs.mkdtempSync(path.join(os.tmpdir(),'urania-timeout-')),output=path.join(directory,'existing.mp4'),sentinel=Buffer.from('previous bytes; lifecycle fixture, not a valid video');fs.writeFileSync(output,sentinel);
+ const pidFile=path.join(directory,'child.pid'),worker=makeWorker('tree',`import fs from 'node:fs';import {spawn} from 'node:child_process';{const r=JSON.parse(fs.readFileSync(process.argv[2],'utf8'));fs.writeFileSync(r.outputPath,'partial must stay private');const child=spawn(process.execPath,['-e','setInterval(()=>{},1000)'],{stdio:'ignore',windowsHide:true});fs.writeFileSync(${JSON.stringify(pidFile)},String(child.pid));setInterval(()=>{},1000);}`);
+ const {jobId}=startRender(worker,directory,output,{timeoutMs:500});const result=await waitStatus(jobId,s=>s.status==='cancelled');assert.equal(result.cancelReason,'timeout');assert.ok(result.closedAt<=result.finishedAt);assert.equal(getActiveRenderCount(),0);assert.deepEqual(fs.readFileSync(output),sentinel);assert.ok(!fs.existsSync(result.tempDir));
+ const pid=Number(fs.readFileSync(pidFile,'utf8'));assert.throws(()=>process.kill(pid,0),/ESRCH|not found|不存在/);assert.equal(cancelRender(jobId),false);
+ const bad=startRender(makeWorker('failure',FAIL_WORKER),directory,output,{timeoutMs:10000});await waitStatus(bad.jobId,s=>s.status==='failed');assert.deepEqual(fs.readFileSync(output),sentinel);
+});
+
+test('deep artifact directories never become the child working directory',async()=>{
+ const base=fs.mkdtempSync(path.join(os.tmpdir(),'urania-long-output-')),directory=path.join(base,...Array(10).fill('deep-output-name-1234567890'));fs.mkdirSync(directory,{recursive:true});const output=path.join(directory,'video.mp4');
+ const {jobId,record}=startRender(makeWorker('deep',OK_WORKER),directory,output,{timeoutMs:15000});assert.ok(record.tempDir.length<200);assert.ok(directory.length>260);const result=await waitStatus(jobId,s=>s.status==='completed');assert.equal(result.exitCode,0);assert.ok(fs.existsSync(output));
 });

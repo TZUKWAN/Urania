@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "kind": "all-task-source-and-evidence-audit",
-  "at": "2026-11-13T10:01:25.184428+00:00",
+  "at": "2026-11-17T21:56:11.703625+00:00",
   "functionalValidation": false,
   "fullScopeComplete": false,
   "taskCount": 50,
@@ -17,15 +17,15 @@
       "facets": {
         "ui": {
           "file": "docs/requirements.json",
-          "bytes": 20142,
+          "bytes": 20503,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "4b834cccce2281f23251a177c5f6bbec442fbbd4cb72e754471d32fd55fa27ae"
+          "sha256": "58cc5ac9a3366cf6b0060e840ea9636279f94cac9ab80d97ac5c83c7ac2d8736"
         },
         "ai": {
           "file": "host/editor-tools.js",
-          "bytes": 14170,
+          "bytes": 15296,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "07c8a3968197524b4d7216bd2467789b61b019c84f519e4519432d05da7c065f",
+          "sha256": "f7794cf96d104a709f1fc2e2a36153116a2d411fdf85b84376cf59680a7d6e9a",
           "declaredEntrypoints": [
             {
               "line": 11,
@@ -44,15 +44,15 @@
               "declaration": "export function editorToolDefinition(manager){"
             },
             {
-              "line": 50,
+              "line": 51,
               "declaration": "async execute(args,exec){"
             },
             {
-              "line": 61,
+              "line": 62,
               "declaration": "if(args.action==='state'){"
             },
             {
-              "line": 78,
+              "line": 80,
               "declaration": "export function registerEditorTools(ctx,manager){"
             }
           ]
@@ -117,9 +117,9 @@
       "facets": {
         "ui": {
           "file": "client/client.js",
-          "bytes": 11089,
+          "bytes": 11476,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "5f10ecf651430ed902b178175e36d0a19c52f2522dc835938240b9512ade5d32",
+          "sha256": "c865a419095b539cdeb7da4a49692cc548c57eeb87ab4e077db6afe214061cc3",
           "declaredEntrypoints": [
             {
               "line": 9,
@@ -135,27 +135,27 @@
             },
             {
               "line": 90,
-              "declaration": "if(!healthResponse.ok||health.protocolVersion!==2||health.uiBuild!==162||health.capabilities?.professionalEditor!==1||!health.capabilities.editorExecutionAdmission||!health.capabilities.nati"
-            },
-            {
-              "line": 146,
-              "declaration": "constructor(props) { super(props); this.state={error:null}; }"
+              "declaration": "if(!healthResponse.ok||health.protocolVersion!==2||health.uiBuild!==165||health.capabilities?.professionalEditor!==1||!health.capabilities.editorExecutionAdmission||!health.capabilities.nati"
             },
             {
               "line": 148,
+              "declaration": "constructor(props) { super(props); this.state={error:null}; }"
+            },
+            {
+              "line": 150,
               "declaration": "componentDidCatch(error) { console.warn('[designcraft] editor render failed:',String(error)); }"
             },
             {
-              "line": 149,
+              "line": 151,
               "declaration": "render() {"
             }
           ]
         },
         "ai": {
           "file": "host/editor-tools.js",
-          "bytes": 14170,
+          "bytes": 15296,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "07c8a3968197524b4d7216bd2467789b61b019c84f519e4519432d05da7c065f",
+          "sha256": "f7794cf96d104a709f1fc2e2a36153116a2d411fdf85b84376cf59680a7d6e9a",
           "declaredEntrypoints": [
             {
               "line": 11,
@@ -174,15 +174,15 @@
               "declaration": "export function editorToolDefinition(manager){"
             },
             {
-              "line": 50,
+              "line": 51,
               "declaration": "async execute(args,exec){"
             },
             {
-              "line": 61,
+              "line": 62,
               "declaration": "if(args.action==='state'){"
             },
             {
-              "line": 78,
+              "line": 80,
               "declaration": "export function registerEditorTools(ctx,manager){"
             }
           ]
@@ -205,79 +205,79 @@
         },
         "output": {
           "file": "host/index.js",
-          "bytes": 39988,
+          "bytes": 42006,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "5bc523963485615c9acb3d8cb881246612a474312a724270e2c645595b73b82c",
+          "sha256": "3eef0929b0bbd2f1b5997e8226060171e596ae279691e452131fdef6c20e19ef",
           "declaredEntrypoints": [
             {
-              "line": 88,
+              "line": 94,
               "declaration": "export const name = 'designcraft';"
             },
             {
-              "line": 89,
+              "line": 95,
               "declaration": "export const inject = ['webServer'];"
             },
             {
-              "line": 147,
+              "line": 153,
               "declaration": "constructor() {"
             },
             {
-              "line": 154,
+              "line": 160,
               "declaration": "hub(root) {"
             },
             {
-              "line": 173,
+              "line": 179,
               "declaration": "subscribe(root, send) {"
             },
             {
-              "line": 183,
+              "line": 189,
               "declaration": "gc() {"
             },
             {
-              "line": 193,
+              "line": 199,
               "declaration": "dispose() {"
             },
             {
-              "line": 208,
+              "line": 214,
               "declaration": "if(!connection?.admit){sendJson(response,503,{ok:false,error:'DSH 身份验证服务尚未就绪'});return;}"
             },
             {
-              "line": 210,
+              "line": 216,
               "declaration": "if('rejection' in admission){sendJson(response,admission.rejection,{ok:false,error:'DSH 身份验证或请求来源检查失败'});return;}"
             },
             {
-              "line": 211,
+              "line": 217,
               "declaration": "if(admission.peer?.principal?.kind!=='owner'){sendJson(response,403,{ok:false,error:'设计工作区文件接口仅对工作区所有者开放'});return;}"
             },
             {
-              "line": 323,
+              "line": 329,
               "declaration": "for(const send of hub.hub(root).subscribers){try{send('event',{kind:'asset',name:saved.name});}catch{}}"
             },
             {
-              "line": 371,
+              "line": 377,
               "declaration": "for(const send of hub.hub(root).subscribers){try{send('event',{kind:'doc',name:body.id,revision:result.revision,writer:'open-design'});}catch{}}"
             },
             {
-              "line": 386,
+              "line": 392,
               "declaration": "for(const send of hub.hub(root).subscribers){try{send('event',{kind:'doc',name:body.id,revision:result.revision,writer:'native'});}catch{}}"
             },
             {
-              "line": 587,
+              "line": 598,
               "declaration": "export function apply(ctx,config={}) {"
             },
             {
-              "line": 593,
+              "line": 604,
               "declaration": "for(const send of hub.hub(record.root).subscribers){try{send('event',{kind:'job',job:{id:record.id,kind:record.kind,status:record.status,progress:record.progress,error:record.error}});}catch"
             },
             {
-              "line": 598,
+              "line": 609,
               "declaration": "for(const send of hub.hub(record.root).subscribers){try{send('event',{kind:'job',job:{id:record.id,kind:record.kind,status:record.status,progress:record.progress,error:record.error}});}catch"
             }
           ]
         },
         "recovery": {
           "file": "docs/capability-matrix.json",
-          "bytes": 125845,
+          "bytes": 126206,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
           "snapshot": "live status metadata; deliberately not self-hashed"
         }
@@ -315,33 +315,33 @@
       "facets": {
         "ui": {
           "file": "client/native-workspace.js",
-          "bytes": 99885,
+          "bytes": 102760,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "87ac78c74b43717bef113991871e7cc047a16725086301fc500a580cabaa67b0",
+          "sha256": "84827b05ed6e038ee092b85e78d0436d5545879a2a6761a1632f74348fd6edc7",
           "declaredEntrypoints": [
             {
-              "line": 19,
+              "line": 21,
               "declaration": "export function createNativeWorkspace({React,store}){"
             },
             {
-              "line": 33,
+              "line": 36,
               "declaration": "if(!style){style=document.createElement('style');style.dataset.designcraftNative='true';document.head.append(style);}"
             },
             {
-              "line": 72,
+              "line": 78,
               "declaration": "if(!abort.signal.aborted){created=URL.createObjectURL(blob);setUrl(created);setFontWarning(Number(response.headers.get('x-project-font-count'))>0);}"
             },
             {
-              "line": 159,
+              "line": 166,
               "declaration": "if(!latest||latest.sequence!==form.sequence){if(latest){stopPlanDraftTimer(key);const next={...latest,mode:'edit',id:saved.id,baseRevision:saved.revision,sequence:latest.sequence+1};delete n"
             }
           ]
         },
         "ai": {
           "file": "host/editor-tools.js",
-          "bytes": 14170,
+          "bytes": 15296,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "07c8a3968197524b4d7216bd2467789b61b019c84f519e4519432d05da7c065f",
+          "sha256": "f7794cf96d104a709f1fc2e2a36153116a2d411fdf85b84376cf59680a7d6e9a",
           "declaredEntrypoints": [
             {
               "line": 11,
@@ -360,24 +360,24 @@
               "declaration": "export function editorToolDefinition(manager){"
             },
             {
-              "line": 50,
+              "line": 51,
               "declaration": "async execute(args,exec){"
             },
             {
-              "line": 61,
+              "line": 62,
               "declaration": "if(args.action==='state'){"
             },
             {
-              "line": 78,
+              "line": 80,
               "declaration": "export function registerEditorTools(ctx,manager){"
             }
           ]
         },
         "source": {
           "file": "host/editor-session.js",
-          "bytes": 87878,
+          "bytes": 93499,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "345a4fcb5d1ddcdfccdf7a9bf8d964bf2b3e7aab2fb3c51e54d26056fd52d834",
+          "sha256": "2d8ba49f402d6f71ed34b7567356aa6d59984d64d0fe93abb67ddec4b008632a",
           "declaredEntrypoints": [
             {
               "line": 41,
@@ -543,9 +543,9 @@
         },
         "output": {
           "file": "host/native-source-store.js",
-          "bytes": 23264,
+          "bytes": 24363,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "c9c947629e678e7551f336312779d3a5e506fadb3debb5e35d8ab07537052737",
+          "sha256": "b0da9087e35d2e19baa5c17189c31f1912cf800edb5c9730c38cc576bc8e4b77",
           "declaredEntrypoints": [
             {
               "line": 31,
@@ -625,19 +625,19 @@
             },
             {
               "line": 153,
-              "declaration": "if(operation?.action==='brand-edit'){"
+              "declaration": "if(operation?.action==='feedback-edit'){"
             },
             {
-              "line": 203,
+              "line": 210,
               "declaration": "if(origin!==undefined){"
             }
           ]
         },
         "recovery": {
           "file": "client/native-controller.js",
-          "bytes": 137376,
+          "bytes": 142004,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "f16728ac70897952547141de5c0eb5015020f35692402be326c5a721ad1db818",
+          "sha256": "0e3c1b09dd106838e754b675323413755cd7963d133b8c5c4dc96ecdb1d49b13",
           "declaredEntrypoints": [
             {
               "line": 22,
@@ -835,9 +835,9 @@
       "facets": {
         "ui": {
           "file": "client/native-controller.js",
-          "bytes": 137376,
+          "bytes": 142004,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "f16728ac70897952547141de5c0eb5015020f35692402be326c5a721ad1db818",
+          "sha256": "0e3c1b09dd106838e754b675323413755cd7963d133b8c5c4dc96ecdb1d49b13",
           "declaredEntrypoints": [
             {
               "line": 22,
@@ -1003,9 +1003,9 @@
         },
         "ai": {
           "file": "host/editor-tools.js",
-          "bytes": 14170,
+          "bytes": 15296,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "07c8a3968197524b4d7216bd2467789b61b019c84f519e4519432d05da7c065f",
+          "sha256": "f7794cf96d104a709f1fc2e2a36153116a2d411fdf85b84376cf59680a7d6e9a",
           "declaredEntrypoints": [
             {
               "line": 11,
@@ -1024,24 +1024,24 @@
               "declaration": "export function editorToolDefinition(manager){"
             },
             {
-              "line": 50,
+              "line": 51,
               "declaration": "async execute(args,exec){"
             },
             {
-              "line": 61,
+              "line": 62,
               "declaration": "if(args.action==='state'){"
             },
             {
-              "line": 78,
+              "line": 80,
               "declaration": "export function registerEditorTools(ctx,manager){"
             }
           ]
         },
         "source": {
           "file": "host/editor-session.js",
-          "bytes": 87878,
+          "bytes": 93499,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "345a4fcb5d1ddcdfccdf7a9bf8d964bf2b3e7aab2fb3c51e54d26056fd52d834",
+          "sha256": "2d8ba49f402d6f71ed34b7567356aa6d59984d64d0fe93abb67ddec4b008632a",
           "declaredEntrypoints": [
             {
               "line": 41,
@@ -1447,9 +1447,9 @@
       "facets": {
         "ui": {
           "file": "client/native-controller.js",
-          "bytes": 137376,
+          "bytes": 142004,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "f16728ac70897952547141de5c0eb5015020f35692402be326c5a721ad1db818",
+          "sha256": "0e3c1b09dd106838e754b675323413755cd7963d133b8c5c4dc96ecdb1d49b13",
           "declaredEntrypoints": [
             {
               "line": 22,
@@ -1615,9 +1615,9 @@
         },
         "ai": {
           "file": "host/editor-tools.js",
-          "bytes": 14170,
+          "bytes": 15296,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "07c8a3968197524b4d7216bd2467789b61b019c84f519e4519432d05da7c065f",
+          "sha256": "f7794cf96d104a709f1fc2e2a36153116a2d411fdf85b84376cf59680a7d6e9a",
           "declaredEntrypoints": [
             {
               "line": 11,
@@ -1636,24 +1636,24 @@
               "declaration": "export function editorToolDefinition(manager){"
             },
             {
-              "line": 50,
+              "line": 51,
               "declaration": "async execute(args,exec){"
             },
             {
-              "line": 61,
+              "line": 62,
               "declaration": "if(args.action==='state'){"
             },
             {
-              "line": 78,
+              "line": 80,
               "declaration": "export function registerEditorTools(ctx,manager){"
             }
           ]
         },
         "source": {
           "file": "host/native-source-store.js",
-          "bytes": 23264,
+          "bytes": 24363,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "c9c947629e678e7551f336312779d3a5e506fadb3debb5e35d8ab07537052737",
+          "sha256": "b0da9087e35d2e19baa5c17189c31f1912cf800edb5c9730c38cc576bc8e4b77",
           "declaredEntrypoints": [
             {
               "line": 31,
@@ -1733,10 +1733,10 @@
             },
             {
               "line": 153,
-              "declaration": "if(operation?.action==='brand-edit'){"
+              "declaration": "if(operation?.action==='feedback-edit'){"
             },
             {
-              "line": 203,
+              "line": 210,
               "declaration": "if(origin!==undefined){"
             }
           ]
@@ -1863,7 +1863,7 @@
           "file": "client/editor-surface.js",
           "bytes": 5811,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "6e41945a48f143d50e1054fcbafe2369ae1c84a1eac7a118a6555ea0b6926b6e",
+          "sha256": "106e51585049ad5999f42583aa750033cade7e3fc1d0caba87e47ce4ef27fd55",
           "declaredEntrypoints": [
             {
               "line": 3,
@@ -1945,9 +1945,9 @@
         },
         "ai": {
           "file": "host/editor-tools.js",
-          "bytes": 14170,
+          "bytes": 15296,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "07c8a3968197524b4d7216bd2467789b61b019c84f519e4519432d05da7c065f",
+          "sha256": "f7794cf96d104a709f1fc2e2a36153116a2d411fdf85b84376cf59680a7d6e9a",
           "declaredEntrypoints": [
             {
               "line": 11,
@@ -1966,24 +1966,24 @@
               "declaration": "export function editorToolDefinition(manager){"
             },
             {
-              "line": 50,
+              "line": 51,
               "declaration": "async execute(args,exec){"
             },
             {
-              "line": 61,
+              "line": 62,
               "declaration": "if(args.action==='state'){"
             },
             {
-              "line": 78,
+              "line": 80,
               "declaration": "export function registerEditorTools(ctx,manager){"
             }
           ]
         },
         "source": {
           "file": "host/editor-session.js",
-          "bytes": 87878,
+          "bytes": 93499,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "345a4fcb5d1ddcdfccdf7a9bf8d964bf2b3e7aab2fb3c51e54d26056fd52d834",
+          "sha256": "2d8ba49f402d6f71ed34b7567356aa6d59984d64d0fe93abb67ddec4b008632a",
           "declaredEntrypoints": [
             {
               "line": 41,
@@ -2177,9 +2177,9 @@
         },
         "recovery": {
           "file": "client/native-controller.js",
-          "bytes": 137376,
+          "bytes": 142004,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "f16728ac70897952547141de5c0eb5015020f35692402be326c5a721ad1db818",
+          "sha256": "0e3c1b09dd106838e754b675323413755cd7963d133b8c5c4dc96ecdb1d49b13",
           "declaredEntrypoints": [
             {
               "line": 22,
@@ -2389,33 +2389,33 @@
       "facets": {
         "ui": {
           "file": "client/native-workspace.js",
-          "bytes": 99885,
+          "bytes": 102760,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "87ac78c74b43717bef113991871e7cc047a16725086301fc500a580cabaa67b0",
+          "sha256": "84827b05ed6e038ee092b85e78d0436d5545879a2a6761a1632f74348fd6edc7",
           "declaredEntrypoints": [
             {
-              "line": 19,
+              "line": 21,
               "declaration": "export function createNativeWorkspace({React,store}){"
             },
             {
-              "line": 33,
+              "line": 36,
               "declaration": "if(!style){style=document.createElement('style');style.dataset.designcraftNative='true';document.head.append(style);}"
             },
             {
-              "line": 72,
+              "line": 78,
               "declaration": "if(!abort.signal.aborted){created=URL.createObjectURL(blob);setUrl(created);setFontWarning(Number(response.headers.get('x-project-font-count'))>0);}"
             },
             {
-              "line": 159,
+              "line": 166,
               "declaration": "if(!latest||latest.sequence!==form.sequence){if(latest){stopPlanDraftTimer(key);const next={...latest,mode:'edit',id:saved.id,baseRevision:saved.revision,sequence:latest.sequence+1};delete n"
             }
           ]
         },
         "ai": {
           "file": "host/editor-tools.js",
-          "bytes": 14170,
+          "bytes": 15296,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "07c8a3968197524b4d7216bd2467789b61b019c84f519e4519432d05da7c065f",
+          "sha256": "f7794cf96d104a709f1fc2e2a36153116a2d411fdf85b84376cf59680a7d6e9a",
           "declaredEntrypoints": [
             {
               "line": 11,
@@ -2434,15 +2434,15 @@
               "declaration": "export function editorToolDefinition(manager){"
             },
             {
-              "line": 50,
+              "line": 51,
               "declaration": "async execute(args,exec){"
             },
             {
-              "line": 61,
+              "line": 62,
               "declaration": "if(args.action==='state'){"
             },
             {
-              "line": 78,
+              "line": 80,
               "declaration": "export function registerEditorTools(ctx,manager){"
             }
           ]
@@ -2451,7 +2451,7 @@
           "file": "client/editor-surface.js",
           "bytes": 5811,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "6e41945a48f143d50e1054fcbafe2369ae1c84a1eac7a118a6555ea0b6926b6e",
+          "sha256": "106e51585049ad5999f42583aa750033cade7e3fc1d0caba87e47ce4ef27fd55",
           "declaredEntrypoints": [
             {
               "line": 3,
@@ -2535,7 +2535,7 @@
           "file": "client/editor-frame.js",
           "bytes": 19070,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "7c5c402472c05221968c6520623e02a1b9d4925eb360152b6d807a76bd67d0b0",
+          "sha256": "3d3957cafd2d48e78a5d27c898fa74f0960d5199224886aed0c1bdf715fd120d",
           "declaredEntrypoints": [
             {
               "line": 19,
@@ -2661,9 +2661,9 @@
         },
         "recovery": {
           "file": "client/native-controller.js",
-          "bytes": 137376,
+          "bytes": 142004,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "f16728ac70897952547141de5c0eb5015020f35692402be326c5a721ad1db818",
+          "sha256": "0e3c1b09dd106838e754b675323413755cd7963d133b8c5c4dc96ecdb1d49b13",
           "declaredEntrypoints": [
             {
               "line": 22,
@@ -2879,33 +2879,33 @@
       "facets": {
         "ui": {
           "file": "client/native-workspace.js",
-          "bytes": 99885,
+          "bytes": 102760,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "87ac78c74b43717bef113991871e7cc047a16725086301fc500a580cabaa67b0",
+          "sha256": "84827b05ed6e038ee092b85e78d0436d5545879a2a6761a1632f74348fd6edc7",
           "declaredEntrypoints": [
             {
-              "line": 19,
+              "line": 21,
               "declaration": "export function createNativeWorkspace({React,store}){"
             },
             {
-              "line": 33,
+              "line": 36,
               "declaration": "if(!style){style=document.createElement('style');style.dataset.designcraftNative='true';document.head.append(style);}"
             },
             {
-              "line": 72,
+              "line": 78,
               "declaration": "if(!abort.signal.aborted){created=URL.createObjectURL(blob);setUrl(created);setFontWarning(Number(response.headers.get('x-project-font-count'))>0);}"
             },
             {
-              "line": 159,
+              "line": 166,
               "declaration": "if(!latest||latest.sequence!==form.sequence){if(latest){stopPlanDraftTimer(key);const next={...latest,mode:'edit',id:saved.id,baseRevision:saved.revision,sequence:latest.sequence+1};delete n"
             }
           ]
         },
         "ai": {
           "file": "host/editor-tools.js",
-          "bytes": 14170,
+          "bytes": 15296,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "07c8a3968197524b4d7216bd2467789b61b019c84f519e4519432d05da7c065f",
+          "sha256": "f7794cf96d104a709f1fc2e2a36153116a2d411fdf85b84376cf59680a7d6e9a",
           "declaredEntrypoints": [
             {
               "line": 11,
@@ -2924,24 +2924,24 @@
               "declaration": "export function editorToolDefinition(manager){"
             },
             {
-              "line": 50,
+              "line": 51,
               "declaration": "async execute(args,exec){"
             },
             {
-              "line": 61,
+              "line": 62,
               "declaration": "if(args.action==='state'){"
             },
             {
-              "line": 78,
+              "line": 80,
               "declaration": "export function registerEditorTools(ctx,manager){"
             }
           ]
         },
         "source": {
           "file": "host/editor-session.js",
-          "bytes": 87878,
+          "bytes": 93499,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "345a4fcb5d1ddcdfccdf7a9bf8d964bf2b3e7aab2fb3c51e54d26056fd52d834",
+          "sha256": "2d8ba49f402d6f71ed34b7567356aa6d59984d64d0fe93abb67ddec4b008632a",
           "declaredEntrypoints": [
             {
               "line": 41,
@@ -3107,9 +3107,9 @@
         },
         "output": {
           "file": "client/native-controller.js",
-          "bytes": 137376,
+          "bytes": 142004,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "f16728ac70897952547141de5c0eb5015020f35692402be326c5a721ad1db818",
+          "sha256": "0e3c1b09dd106838e754b675323413755cd7963d133b8c5c4dc96ecdb1d49b13",
           "declaredEntrypoints": [
             {
               "line": 22,
@@ -3275,57 +3275,65 @@
         },
         "recovery": {
           "file": "host/editor-routes.js",
-          "bytes": 32066,
+          "bytes": 33769,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "397e828e032bd00b01873caf2374f8dc04d7cb8b490939d91cde832bf8d0f5c1",
+          "sha256": "b8ca26005ed214325274ec9a9a7f22262d8cb6d3134cb3d867aae409ed90a970",
           "declaredEntrypoints": [
             {
-              "line": 21,
+              "line": 23,
               "declaration": "export function editorRoutes(ctx,manager,{guard,readJsonBody,sendJson}){"
             },
             {
-              "line": 27,
+              "line": 29,
               "declaration": "if(signal?.aborted){if(!shared.waiters&&!shared.done){shared.promise.catch(()=>{});shared.controller.abort();}return Promise.reject(new SafetyError('预览读取已停止',499));}"
             },
             {
-              "line": 38,
+              "line": 40,
               "declaration": "if(existing){previewCache.delete(key);previewCache.set(key,existing);return {bytes:existing,fontCount:fonts.items.length};}"
             },
             {
-              "line": 47,
+              "line": 49,
               "declaration": "if(source.meta.engine==='vectorcraft'){"
             },
             {
-              "line": 58,
+              "line": 60,
               "declaration": "while(previewCache.size>=32||previewBytes+bytes.length>32*1024*1024){const oldest=previewCache.keys().next().value;if(!oldest)break;previewBytes-=previewCache.get(oldest).length;previewCache"
             },
             {
-              "line": 114,
+              "line": 95,
+              "declaration": "if(req.method==='GET'){sendJson(res,200,{ok:true,receipt:readPptxReceipt(view.root,q.get('operationId'))});return;}"
+            },
+            {
+              "line": 127,
               "declaration": "switch(body.action){"
             },
             {
-              "line": 150,
+              "line": 163,
               "declaration": "if(body.action==='plan-create'){if(!/^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/.test(body.operationKey||''))throw new SafetyError('新计划需要稳定操作身份',422);id='plan-'+createHas"
             },
             {
-              "line": 184,
+              "line": 197,
               "declaration": "if(Object.hasOwn(edges,what)&&ids.length>=2&&['vectorcraft','deckcraft','photocraft'].includes(engine)){"
             },
             {
-              "line": 186,
+              "line": 199,
               "declaration": "if(engine==='photocraft'){const names={left:'leftEdges',center:'horizontalCenters',right:'rightEdges',top:'topEdges',middle:'verticalCenters',bottom:'bottomEdges'};command='layer.align.'+nam"
             },
             {
-              "line": 241,
+              "line": 254,
               "declaration": "if(req.method==='GET'){"
             },
             {
-              "line": 288,
+              "line": 301,
               "declaration": "if(req.method==='GET'){"
             },
             {
-              "line": 299,
+              "line": 312,
               "declaration": "if(req.method==='GET'){"
+            },
+            {
+              "line": 332,
+              "declaration": "catch(error){if(error.feedbackRejected)sendJson(res,error.status||409,{ok:false,error:error.message,feedbackRejected:true});else throw error;}"
             }
           ]
         }
@@ -3381,33 +3389,33 @@
       "facets": {
         "ui": {
           "file": "client/native-workspace.js",
-          "bytes": 99885,
+          "bytes": 102760,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "87ac78c74b43717bef113991871e7cc047a16725086301fc500a580cabaa67b0",
+          "sha256": "84827b05ed6e038ee092b85e78d0436d5545879a2a6761a1632f74348fd6edc7",
           "declaredEntrypoints": [
             {
-              "line": 19,
+              "line": 21,
               "declaration": "export function createNativeWorkspace({React,store}){"
             },
             {
-              "line": 33,
+              "line": 36,
               "declaration": "if(!style){style=document.createElement('style');style.dataset.designcraftNative='true';document.head.append(style);}"
             },
             {
-              "line": 72,
+              "line": 78,
               "declaration": "if(!abort.signal.aborted){created=URL.createObjectURL(blob);setUrl(created);setFontWarning(Number(response.headers.get('x-project-font-count'))>0);}"
             },
             {
-              "line": 159,
+              "line": 166,
               "declaration": "if(!latest||latest.sequence!==form.sequence){if(latest){stopPlanDraftTimer(key);const next={...latest,mode:'edit',id:saved.id,baseRevision:saved.revision,sequence:latest.sequence+1};delete n"
             }
           ]
         },
         "ai": {
           "file": "host/editor-tools.js",
-          "bytes": 14170,
+          "bytes": 15296,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "07c8a3968197524b4d7216bd2467789b61b019c84f519e4519432d05da7c065f",
+          "sha256": "f7794cf96d104a709f1fc2e2a36153116a2d411fdf85b84376cf59680a7d6e9a",
           "declaredEntrypoints": [
             {
               "line": 11,
@@ -3426,15 +3434,15 @@
               "declaration": "export function editorToolDefinition(manager){"
             },
             {
-              "line": 50,
+              "line": 51,
               "declaration": "async execute(args,exec){"
             },
             {
-              "line": 61,
+              "line": 62,
               "declaration": "if(args.action==='state'){"
             },
             {
-              "line": 78,
+              "line": 80,
               "declaration": "export function registerEditorTools(ctx,manager){"
             }
           ]
@@ -3443,7 +3451,7 @@
           "file": "client/editor-surface.js",
           "bytes": 5811,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "6e41945a48f143d50e1054fcbafe2369ae1c84a1eac7a118a6555ea0b6926b6e",
+          "sha256": "106e51585049ad5999f42583aa750033cade7e3fc1d0caba87e47ce4ef27fd55",
           "declaredEntrypoints": [
             {
               "line": 3,
@@ -3527,7 +3535,7 @@
           "file": "client/editor-frame.js",
           "bytes": 19070,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "7c5c402472c05221968c6520623e02a1b9d4925eb360152b6d807a76bd67d0b0",
+          "sha256": "3d3957cafd2d48e78a5d27c898fa74f0960d5199224886aed0c1bdf715fd120d",
           "declaredEntrypoints": [
             {
               "line": 19,
@@ -3653,9 +3661,9 @@
         },
         "recovery": {
           "file": "client/native-controller.js",
-          "bytes": 137376,
+          "bytes": 142004,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "f16728ac70897952547141de5c0eb5015020f35692402be326c5a721ad1db818",
+          "sha256": "0e3c1b09dd106838e754b675323413755cd7963d133b8c5c4dc96ecdb1d49b13",
           "declaredEntrypoints": [
             {
               "line": 22,
@@ -3885,7 +3893,7 @@
           "file": "client/native-context-tools.js",
           "bytes": 3730,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "53cfc5bfe574607559b0d6ad73122d931c8844ea72c9a16b2a25f5c38e20ccdf",
+          "sha256": "61769eb58646874cfbc47ffb7eeffbbc5936321382c6dbd409d5ea8cbd6cb5a5",
           "declaredEntrypoints": [
             {
               "line": 4,
@@ -3907,9 +3915,9 @@
         },
         "ai": {
           "file": "host/editor-tools.js",
-          "bytes": 14170,
+          "bytes": 15296,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "07c8a3968197524b4d7216bd2467789b61b019c84f519e4519432d05da7c065f",
+          "sha256": "f7794cf96d104a709f1fc2e2a36153116a2d411fdf85b84376cf59680a7d6e9a",
           "declaredEntrypoints": [
             {
               "line": 11,
@@ -3928,24 +3936,24 @@
               "declaration": "export function editorToolDefinition(manager){"
             },
             {
-              "line": 50,
+              "line": 51,
               "declaration": "async execute(args,exec){"
             },
             {
-              "line": 61,
+              "line": 62,
               "declaration": "if(args.action==='state'){"
             },
             {
-              "line": 78,
+              "line": 80,
               "declaration": "export function registerEditorTools(ctx,manager){"
             }
           ]
         },
         "source": {
           "file": "host/editor-session.js",
-          "bytes": 87878,
+          "bytes": 93499,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "345a4fcb5d1ddcdfccdf7a9bf8d964bf2b3e7aab2fb3c51e54d26056fd52d834",
+          "sha256": "2d8ba49f402d6f71ed34b7567356aa6d59984d64d0fe93abb67ddec4b008632a",
           "declaredEntrypoints": [
             {
               "line": 41,
@@ -4111,9 +4119,9 @@
         },
         "output": {
           "file": "client/native-controller.js",
-          "bytes": 137376,
+          "bytes": 142004,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "f16728ac70897952547141de5c0eb5015020f35692402be326c5a721ad1db818",
+          "sha256": "0e3c1b09dd106838e754b675323413755cd7963d133b8c5c4dc96ecdb1d49b13",
           "declaredEntrypoints": [
             {
               "line": 22,
@@ -4337,33 +4345,33 @@
       "facets": {
         "ui": {
           "file": "client/native-workspace.js",
-          "bytes": 99885,
+          "bytes": 102760,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "87ac78c74b43717bef113991871e7cc047a16725086301fc500a580cabaa67b0",
+          "sha256": "84827b05ed6e038ee092b85e78d0436d5545879a2a6761a1632f74348fd6edc7",
           "declaredEntrypoints": [
             {
-              "line": 19,
+              "line": 21,
               "declaration": "export function createNativeWorkspace({React,store}){"
             },
             {
-              "line": 33,
+              "line": 36,
               "declaration": "if(!style){style=document.createElement('style');style.dataset.designcraftNative='true';document.head.append(style);}"
             },
             {
-              "line": 72,
+              "line": 78,
               "declaration": "if(!abort.signal.aborted){created=URL.createObjectURL(blob);setUrl(created);setFontWarning(Number(response.headers.get('x-project-font-count'))>0);}"
             },
             {
-              "line": 159,
+              "line": 166,
               "declaration": "if(!latest||latest.sequence!==form.sequence){if(latest){stopPlanDraftTimer(key);const next={...latest,mode:'edit',id:saved.id,baseRevision:saved.revision,sequence:latest.sequence+1};delete n"
             }
           ]
         },
         "ai": {
           "file": "host/editor-tools.js",
-          "bytes": 14170,
+          "bytes": 15296,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "07c8a3968197524b4d7216bd2467789b61b019c84f519e4519432d05da7c065f",
+          "sha256": "f7794cf96d104a709f1fc2e2a36153116a2d411fdf85b84376cf59680a7d6e9a",
           "declaredEntrypoints": [
             {
               "line": 11,
@@ -4382,15 +4390,15 @@
               "declaration": "export function editorToolDefinition(manager){"
             },
             {
-              "line": 50,
+              "line": 51,
               "declaration": "async execute(args,exec){"
             },
             {
-              "line": 61,
+              "line": 62,
               "declaration": "if(args.action==='state'){"
             },
             {
-              "line": 78,
+              "line": 80,
               "declaration": "export function registerEditorTools(ctx,manager){"
             }
           ]
@@ -4581,9 +4589,9 @@
         },
         "recovery": {
           "file": "client/native-controller.js",
-          "bytes": 137376,
+          "bytes": 142004,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "f16728ac70897952547141de5c0eb5015020f35692402be326c5a721ad1db818",
+          "sha256": "0e3c1b09dd106838e754b675323413755cd7963d133b8c5c4dc96ecdb1d49b13",
           "declaredEntrypoints": [
             {
               "line": 22,
@@ -4793,9 +4801,9 @@
       "facets": {
         "ui": {
           "file": "client/native-reference.js",
-          "bytes": 8720,
+          "bytes": 11225,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "45e7502261880d4ceac78dff1eff57e9480b303f5fe8abea218005b967746840",
+          "sha256": "df0b0a0f915fa0cd86cac16d7764d9c9607894a0b2c8ede2d7c5fa395016ecb5",
           "declaredEntrypoints": [
             {
               "line": 15,
@@ -4840,6 +4848,22 @@
             {
               "line": 88,
               "declaration": "export const nativeContextTextRule={id:NAME,order:19,match(text,from){const start=text.indexOf(OPEN,from);if(start<0)return;const close=text.indexOf(CLOSE,start+OPEN.length);if(close<0||clos"
+            },
+            {
+              "line": 101,
+              "declaration": "export function withDesignRequestReference(draft,{sessionId,id,label,prompt}){"
+            },
+            {
+              "line": 105,
+              "declaration": "export function designRequestReferenceSource({store}){"
+            },
+            {
+              "line": 114,
+              "declaration": "export const designRequestTextRule={id:REQUEST_SOURCE,order:18,match(text,from){"
+            },
+            {
+              "line": 117,
+              "declaration": "for(const {open,close,label,start} of matches){const end=text.indexOf(close,start+open.length);if(end<0||end-start>512000)continue;try{const data=JSON.parse(text.slice(start+open.length,end)"
             }
           ]
         },
@@ -4863,7 +4887,7 @@
           "file": "client/native-contract.js",
           "bytes": 7813,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "79cdc858ef74f5108e5a799586441cfa573619fce4443ecd6be03a04929688eb",
+          "sha256": "2762a451f2e2e745d548e4d06f7d07f61bb2633c7c78d3982f241f6f95b0759b",
           "declaredEntrypoints": [
             {
               "line": 4,
@@ -4933,9 +4957,9 @@
         },
         "output": {
           "file": "client/dsh-context.js",
-          "bytes": 16949,
+          "bytes": 18651,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "1bda53bf8c2211b56cd08233bdb8ee8368af29b0f37f340bd45102c8f68b6d4b",
+          "sha256": "73ebf9542ca6f14e5999cea73083dd599bec1f29475dd331de1366d3bf68e658",
           "declaredEntrypoints": [
             {
               "line": 3,
@@ -4962,80 +4986,84 @@
               "declaration": "export function designChatPrompt(context,request){"
             },
             {
-              "line": 48,
+              "line": 51,
               "declaration": "export const designContextTextRule={"
             },
             {
-              "line": 50,
+              "line": 53,
               "declaration": "match(text,from){"
             },
             {
-              "line": 60,
+              "line": 63,
               "declaration": "export function designSession(services,sessionId){"
             },
             {
-              "line": 68,
+              "line": 71,
               "declaration": "export function withoutDesignReferences(draft){"
             },
             {
-              "line": 70,
+              "line": 73,
               "declaration": "for(const reference of references){"
             },
             {
-              "line": 79,
+              "line": 82,
               "declaration": "export function withDesignReference(draft,context){"
             },
             {
-              "line": 87,
+              "line": 90,
               "declaration": "export async function attachDesignReference({store,sync,services,sessionId,auto=false,preview,prepareRegion,isCurrent=()=>true}){"
             },
             {
-              "line": 91,
+              "line": 94,
+              "declaration": "if(early.workspaceMode==='motion'&&early.motion?.projectId){"
+            },
+            {
+              "line": 110,
               "declaration": "if(!store.get().root||!store.get().doc){if(auto)return {attached:false};throw new Error('请先打开或创建一个设计作品');}"
             },
             {
-              "line": 116,
+              "line": 135,
               "declaration": "if(prior&&input.state?.getSnapshot?.()?.attachmentIds?.includes(prior)){input.removeAttachment(prior);conversation.releaseDraftAttachment(prior);}"
             },
             {
-              "line": 123,
+              "line": 142,
               "declaration": "export function createDesignReferenceSource({store,sync,openDesign=()=>{},onError=()=>{}}){"
             },
             {
-              "line": 135,
+              "line": 154,
               "declaration": "candidates(session,{query='',signal}){"
             },
             {
-              "line": 142,
+              "line": 161,
               "declaration": "for(const page of state.doc.pages||[]){"
             },
             {
-              "line": 149,
+              "line": 168,
               "declaration": "onPick({candidate}){return {insert:insertion(parse(candidate.value))};},"
             },
             {
-              "line": 150,
+              "line": 169,
               "declaration": "openReference(session,{ref}){"
             },
             {
-              "line": 166,
+              "line": 185,
               "declaration": "async serialize(ref,signal){"
             },
             {
-              "line": 168,
+              "line": 187,
               "declaration": "if(state.root===context.root&&state.doc?.id===context.docId){"
             },
             {
-              "line": 186,
+              "line": 205,
               "declaration": "export async function openNativeChatReference({store,sync,sessionId,reference}){"
             }
           ]
         },
         "recovery": {
           "file": "host/editor-session.js",
-          "bytes": 87878,
+          "bytes": 93499,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "345a4fcb5d1ddcdfccdf7a9bf8d964bf2b3e7aab2fb3c51e54d26056fd52d834",
+          "sha256": "2d8ba49f402d6f71ed34b7567356aa6d59984d64d0fe93abb67ddec4b008632a",
           "declaredEntrypoints": [
             {
               "line": 41,
@@ -5277,7 +5305,7 @@
           "file": "client/native-context-tools.js",
           "bytes": 3730,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "53cfc5bfe574607559b0d6ad73122d931c8844ea72c9a16b2a25f5c38e20ccdf",
+          "sha256": "61769eb58646874cfbc47ffb7eeffbbc5936321382c6dbd409d5ea8cbd6cb5a5",
           "declaredEntrypoints": [
             {
               "line": 4,
@@ -5299,9 +5327,9 @@
         },
         "ai": {
           "file": "host/editor-tools.js",
-          "bytes": 14170,
+          "bytes": 15296,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "07c8a3968197524b4d7216bd2467789b61b019c84f519e4519432d05da7c065f",
+          "sha256": "f7794cf96d104a709f1fc2e2a36153116a2d411fdf85b84376cf59680a7d6e9a",
           "declaredEntrypoints": [
             {
               "line": 11,
@@ -5320,15 +5348,15 @@
               "declaration": "export function editorToolDefinition(manager){"
             },
             {
-              "line": 50,
+              "line": 51,
               "declaration": "async execute(args,exec){"
             },
             {
-              "line": 61,
+              "line": 62,
               "declaration": "if(args.action==='state'){"
             },
             {
-              "line": 78,
+              "line": 80,
               "declaration": "export function registerEditorTools(ctx,manager){"
             }
           ]
@@ -5385,7 +5413,7 @@
             },
             {
               "line": 74,
-              "declaration": "if(target&&key==='kind'){for(const [field,entry]of Object.entries(item))if(field!=='key')references(entry,depth+1);}"
+              "declaration": "if(target&&key=[REDACTED] [field,entry]of Object.entries(item))if(field!=='key')references(entry,depth+1);}"
             },
             {
               "line": 78,
@@ -5417,7 +5445,7 @@
             },
             {
               "line": 110,
-              "declaration": "if(target&&key==='kind'){for(const [field,entry]of Object.entries(item))if(field!=='key')collect(entry,depth+1);}"
+              "declaration": "if(target&&key=[REDACTED] [field,entry]of Object.entries(item))if(field!=='key')collect(entry,depth+1);}"
             },
             {
               "line": 114,
@@ -5459,9 +5487,9 @@
         },
         "recovery": {
           "file": "host/native-source-store.js",
-          "bytes": 23264,
+          "bytes": 24363,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "c9c947629e678e7551f336312779d3a5e506fadb3debb5e35d8ab07537052737",
+          "sha256": "b0da9087e35d2e19baa5c17189c31f1912cf800edb5c9730c38cc576bc8e4b77",
           "declaredEntrypoints": [
             {
               "line": 31,
@@ -5541,10 +5569,10 @@
             },
             {
               "line": 153,
-              "declaration": "if(operation?.action==='brand-edit'){"
+              "declaration": "if(operation?.action==='feedback-edit'){"
             },
             {
-              "line": 203,
+              "line": 210,
               "declaration": "if(origin!==undefined){"
             }
           ]
@@ -5595,9 +5623,9 @@
       "facets": {
         "ui": {
           "file": "client/native-reference.js",
-          "bytes": 8720,
+          "bytes": 11225,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "45e7502261880d4ceac78dff1eff57e9480b303f5fe8abea218005b967746840",
+          "sha256": "df0b0a0f915fa0cd86cac16d7764d9c9607894a0b2c8ede2d7c5fa395016ecb5",
           "declaredEntrypoints": [
             {
               "line": 15,
@@ -5642,14 +5670,30 @@
             {
               "line": 88,
               "declaration": "export const nativeContextTextRule={id:NAME,order:19,match(text,from){const start=text.indexOf(OPEN,from);if(start<0)return;const close=text.indexOf(CLOSE,start+OPEN.length);if(close<0||clos"
+            },
+            {
+              "line": 101,
+              "declaration": "export function withDesignRequestReference(draft,{sessionId,id,label,prompt}){"
+            },
+            {
+              "line": 105,
+              "declaration": "export function designRequestReferenceSource({store}){"
+            },
+            {
+              "line": 114,
+              "declaration": "export const designRequestTextRule={id:REQUEST_SOURCE,order:18,match(text,from){"
+            },
+            {
+              "line": 117,
+              "declaration": "for(const {open,close,label,start} of matches){const end=text.indexOf(close,start+open.length);if(end<0||end-start>512000)continue;try{const data=JSON.parse(text.slice(start+open.length,end)"
             }
           ]
         },
         "ai": {
           "file": "host/editor-tools.js",
-          "bytes": 14170,
+          "bytes": 15296,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "07c8a3968197524b4d7216bd2467789b61b019c84f519e4519432d05da7c065f",
+          "sha256": "f7794cf96d104a709f1fc2e2a36153116a2d411fdf85b84376cf59680a7d6e9a",
           "declaredEntrypoints": [
             {
               "line": 11,
@@ -5668,15 +5712,15 @@
               "declaration": "export function editorToolDefinition(manager){"
             },
             {
-              "line": 50,
+              "line": 51,
               "declaration": "async execute(args,exec){"
             },
             {
-              "line": 61,
+              "line": 62,
               "declaration": "if(args.action==='state'){"
             },
             {
-              "line": 78,
+              "line": 80,
               "declaration": "export function registerEditorTools(ctx,manager){"
             }
           ]
@@ -5685,7 +5729,7 @@
           "file": "client/native-contract.js",
           "bytes": 7813,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "79cdc858ef74f5108e5a799586441cfa573619fce4443ecd6be03a04929688eb",
+          "sha256": "2762a451f2e2e745d548e4d06f7d07f61bb2633c7c78d3982f241f6f95b0759b",
           "declaredEntrypoints": [
             {
               "line": 4,
@@ -5755,9 +5799,9 @@
         },
         "output": {
           "file": "host/editor-session.js",
-          "bytes": 87878,
+          "bytes": 93499,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "345a4fcb5d1ddcdfccdf7a9bf8d964bf2b3e7aab2fb3c51e54d26056fd52d834",
+          "sha256": "2d8ba49f402d6f71ed34b7567356aa6d59984d64d0fe93abb67ddec4b008632a",
           "declaredEntrypoints": [
             {
               "line": 41,
@@ -5987,9 +6031,9 @@
       "facets": {
         "ui": {
           "file": "client/native-controller.js",
-          "bytes": 137376,
+          "bytes": 142004,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "f16728ac70897952547141de5c0eb5015020f35692402be326c5a721ad1db818",
+          "sha256": "0e3c1b09dd106838e754b675323413755cd7963d133b8c5c4dc96ecdb1d49b13",
           "declaredEntrypoints": [
             {
               "line": 22,
@@ -6155,9 +6199,9 @@
         },
         "ai": {
           "file": "host/editor-tools.js",
-          "bytes": 14170,
+          "bytes": 15296,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "07c8a3968197524b4d7216bd2467789b61b019c84f519e4519432d05da7c065f",
+          "sha256": "f7794cf96d104a709f1fc2e2a36153116a2d411fdf85b84376cf59680a7d6e9a",
           "declaredEntrypoints": [
             {
               "line": 11,
@@ -6176,24 +6220,24 @@
               "declaration": "export function editorToolDefinition(manager){"
             },
             {
-              "line": 50,
+              "line": 51,
               "declaration": "async execute(args,exec){"
             },
             {
-              "line": 61,
+              "line": 62,
               "declaration": "if(args.action==='state'){"
             },
             {
-              "line": 78,
+              "line": 80,
               "declaration": "export function registerEditorTools(ctx,manager){"
             }
           ]
         },
         "source": {
           "file": "host/editor-session.js",
-          "bytes": 87878,
+          "bytes": 93499,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "345a4fcb5d1ddcdfccdf7a9bf8d964bf2b3e7aab2fb3c51e54d26056fd52d834",
+          "sha256": "2d8ba49f402d6f71ed34b7567356aa6d59984d64d0fe93abb67ddec4b008632a",
           "declaredEntrypoints": [
             {
               "line": 41,
@@ -6359,9 +6403,9 @@
         },
         "output": {
           "file": "host/native-source-store.js",
-          "bytes": 23264,
+          "bytes": 24363,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "c9c947629e678e7551f336312779d3a5e506fadb3debb5e35d8ab07537052737",
+          "sha256": "b0da9087e35d2e19baa5c17189c31f1912cf800edb5c9730c38cc576bc8e4b77",
           "declaredEntrypoints": [
             {
               "line": 31,
@@ -6441,10 +6485,10 @@
             },
             {
               "line": 153,
-              "declaration": "if(operation?.action==='brand-edit'){"
+              "declaration": "if(operation?.action==='feedback-edit'){"
             },
             {
-              "line": 203,
+              "line": 210,
               "declaration": "if(origin!==undefined){"
             }
           ]
@@ -6527,33 +6571,33 @@
       "facets": {
         "ui": {
           "file": "client/native-workspace.js",
-          "bytes": 99885,
+          "bytes": 102760,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "87ac78c74b43717bef113991871e7cc047a16725086301fc500a580cabaa67b0",
+          "sha256": "84827b05ed6e038ee092b85e78d0436d5545879a2a6761a1632f74348fd6edc7",
           "declaredEntrypoints": [
             {
-              "line": 19,
+              "line": 21,
               "declaration": "export function createNativeWorkspace({React,store}){"
             },
             {
-              "line": 33,
+              "line": 36,
               "declaration": "if(!style){style=document.createElement('style');style.dataset.designcraftNative='true';document.head.append(style);}"
             },
             {
-              "line": 72,
+              "line": 78,
               "declaration": "if(!abort.signal.aborted){created=URL.createObjectURL(blob);setUrl(created);setFontWarning(Number(response.headers.get('x-project-font-count'))>0);}"
             },
             {
-              "line": 159,
+              "line": 166,
               "declaration": "if(!latest||latest.sequence!==form.sequence){if(latest){stopPlanDraftTimer(key);const next={...latest,mode:'edit',id:saved.id,baseRevision:saved.revision,sequence:latest.sequence+1};delete n"
             }
           ]
         },
         "ai": {
           "file": "host/editor-tools.js",
-          "bytes": 14170,
+          "bytes": 15296,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "07c8a3968197524b4d7216bd2467789b61b019c84f519e4519432d05da7c065f",
+          "sha256": "f7794cf96d104a709f1fc2e2a36153116a2d411fdf85b84376cf59680a7d6e9a",
           "declaredEntrypoints": [
             {
               "line": 11,
@@ -6572,24 +6616,24 @@
               "declaration": "export function editorToolDefinition(manager){"
             },
             {
-              "line": 50,
+              "line": 51,
               "declaration": "async execute(args,exec){"
             },
             {
-              "line": 61,
+              "line": 62,
               "declaration": "if(args.action==='state'){"
             },
             {
-              "line": 78,
+              "line": 80,
               "declaration": "export function registerEditorTools(ctx,manager){"
             }
           ]
         },
         "source": {
           "file": "host/editor-session.js",
-          "bytes": 87878,
+          "bytes": 93499,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "345a4fcb5d1ddcdfccdf7a9bf8d964bf2b3e7aab2fb3c51e54d26056fd52d834",
+          "sha256": "2d8ba49f402d6f71ed34b7567356aa6d59984d64d0fe93abb67ddec4b008632a",
           "declaredEntrypoints": [
             {
               "line": 41,
@@ -6767,9 +6811,9 @@
         },
         "recovery": {
           "file": "client/native-controller.js",
-          "bytes": 137376,
+          "bytes": 142004,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "f16728ac70897952547141de5c0eb5015020f35692402be326c5a721ad1db818",
+          "sha256": "0e3c1b09dd106838e754b675323413755cd7963d133b8c5c4dc96ecdb1d49b13",
           "declaredEntrypoints": [
             {
               "line": 22,
@@ -6979,9 +7023,9 @@
       "facets": {
         "ui": {
           "file": "client/html-workspace.js",
-          "bytes": 94885,
+          "bytes": 95470,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "67d9188703eb661561958a0ca4b18519132824007574476b8f980a5018e03c45",
+          "sha256": "756936370ff7c87e25a7c308d8c72a9ff43d57dfccce3de76276f82df040e7a5",
           "declaredEntrypoints": [
             {
               "line": 24,
@@ -7713,24 +7757,24 @@
       "facets": {
         "ui": {
           "file": "client/native-workspace.js",
-          "bytes": 99885,
+          "bytes": 102760,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "87ac78c74b43717bef113991871e7cc047a16725086301fc500a580cabaa67b0",
+          "sha256": "84827b05ed6e038ee092b85e78d0436d5545879a2a6761a1632f74348fd6edc7",
           "declaredEntrypoints": [
             {
-              "line": 19,
+              "line": 21,
               "declaration": "export function createNativeWorkspace({React,store}){"
             },
             {
-              "line": 33,
+              "line": 36,
               "declaration": "if(!style){style=document.createElement('style');style.dataset.designcraftNative='true';document.head.append(style);}"
             },
             {
-              "line": 72,
+              "line": 78,
               "declaration": "if(!abort.signal.aborted){created=URL.createObjectURL(blob);setUrl(created);setFontWarning(Number(response.headers.get('x-project-font-count'))>0);}"
             },
             {
-              "line": 159,
+              "line": 166,
               "declaration": "if(!latest||latest.sequence!==form.sequence){if(latest){stopPlanDraftTimer(key);const next={...latest,mode:'edit',id:saved.id,baseRevision:saved.revision,sequence:latest.sequence+1};delete n"
             }
           ]
@@ -8077,9 +8121,9 @@
       "facets": {
         "ui": {
           "file": "client/html-workspace.js",
-          "bytes": 94885,
+          "bytes": 95470,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "67d9188703eb661561958a0ca4b18519132824007574476b8f980a5018e03c45",
+          "sha256": "756936370ff7c87e25a7c308d8c72a9ff43d57dfccce3de76276f82df040e7a5",
           "declaredEntrypoints": [
             {
               "line": 24,
@@ -8261,9 +8305,9 @@
         },
         "source": {
           "file": "host/native-source-store.js",
-          "bytes": 23264,
+          "bytes": 24363,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "c9c947629e678e7551f336312779d3a5e506fadb3debb5e35d8ab07537052737",
+          "sha256": "b0da9087e35d2e19baa5c17189c31f1912cf800edb5c9730c38cc576bc8e4b77",
           "declaredEntrypoints": [
             {
               "line": 31,
@@ -8343,10 +8387,10 @@
             },
             {
               "line": 153,
-              "declaration": "if(operation?.action==='brand-edit'){"
+              "declaration": "if(operation?.action==='feedback-edit'){"
             },
             {
-              "line": 203,
+              "line": 210,
               "declaration": "if(origin!==undefined){"
             }
           ]
@@ -8369,9 +8413,9 @@
         },
         "recovery": {
           "file": "host/editor-session.js",
-          "bytes": 87878,
+          "bytes": 93499,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "345a4fcb5d1ddcdfccdf7a9bf8d964bf2b3e7aab2fb3c51e54d26056fd52d834",
+          "sha256": "2d8ba49f402d6f71ed34b7567356aa6d59984d64d0fe93abb67ddec4b008632a",
           "declaredEntrypoints": [
             {
               "line": 41,
@@ -8571,7 +8615,7 @@
           "file": "client/native-contract.js",
           "bytes": 7813,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "79cdc858ef74f5108e5a799586441cfa573619fce4443ecd6be03a04929688eb",
+          "sha256": "2762a451f2e2e745d548e4d06f7d07f61bb2633c7c78d3982f241f6f95b0759b",
           "declaredEntrypoints": [
             {
               "line": 4,
@@ -8657,9 +8701,9 @@
         },
         "source": {
           "file": "host/editor-session.js",
-          "bytes": 87878,
+          "bytes": 93499,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "345a4fcb5d1ddcdfccdf7a9bf8d964bf2b3e7aab2fb3c51e54d26056fd52d834",
+          "sha256": "2d8ba49f402d6f71ed34b7567356aa6d59984d64d0fe93abb67ddec4b008632a",
           "declaredEntrypoints": [
             {
               "line": 41,
@@ -8825,9 +8869,9 @@
         },
         "output": {
           "file": "host/native-source-store.js",
-          "bytes": 23264,
+          "bytes": 24363,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "c9c947629e678e7551f336312779d3a5e506fadb3debb5e35d8ab07537052737",
+          "sha256": "b0da9087e35d2e19baa5c17189c31f1912cf800edb5c9730c38cc576bc8e4b77",
           "declaredEntrypoints": [
             {
               "line": 31,
@@ -8907,10 +8951,10 @@
             },
             {
               "line": 153,
-              "declaration": "if(operation?.action==='brand-edit'){"
+              "declaration": "if(operation?.action==='feedback-edit'){"
             },
             {
-              "line": 203,
+              "line": 210,
               "declaration": "if(origin!==undefined){"
             }
           ]
@@ -9043,7 +9087,7 @@
           "file": "client/editor-surface.js",
           "bytes": 5811,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "6e41945a48f143d50e1054fcbafe2369ae1c84a1eac7a118a6555ea0b6926b6e",
+          "sha256": "106e51585049ad5999f42583aa750033cade7e3fc1d0caba87e47ce4ef27fd55",
           "declaredEntrypoints": [
             {
               "line": 3,
@@ -9125,9 +9169,9 @@
         },
         "ai": {
           "file": "host/editor-tools.js",
-          "bytes": 14170,
+          "bytes": 15296,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "07c8a3968197524b4d7216bd2467789b61b019c84f519e4519432d05da7c065f",
+          "sha256": "f7794cf96d104a709f1fc2e2a36153116a2d411fdf85b84376cf59680a7d6e9a",
           "declaredEntrypoints": [
             {
               "line": 11,
@@ -9146,24 +9190,24 @@
               "declaration": "export function editorToolDefinition(manager){"
             },
             {
-              "line": 50,
+              "line": 51,
               "declaration": "async execute(args,exec){"
             },
             {
-              "line": 61,
+              "line": 62,
               "declaration": "if(args.action==='state'){"
             },
             {
-              "line": 78,
+              "line": 80,
               "declaration": "export function registerEditorTools(ctx,manager){"
             }
           ]
         },
         "source": {
           "file": "host/editor-session.js",
-          "bytes": 87878,
+          "bytes": 93499,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "345a4fcb5d1ddcdfccdf7a9bf8d964bf2b3e7aab2fb3c51e54d26056fd52d834",
+          "sha256": "2d8ba49f402d6f71ed34b7567356aa6d59984d64d0fe93abb67ddec4b008632a",
           "declaredEntrypoints": [
             {
               "line": 41,
@@ -9329,9 +9373,9 @@
         },
         "output": {
           "file": "host/native-source-store.js",
-          "bytes": 23264,
+          "bytes": 24363,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "c9c947629e678e7551f336312779d3a5e506fadb3debb5e35d8ab07537052737",
+          "sha256": "b0da9087e35d2e19baa5c17189c31f1912cf800edb5c9730c38cc576bc8e4b77",
           "declaredEntrypoints": [
             {
               "line": 31,
@@ -9411,19 +9455,19 @@
             },
             {
               "line": 153,
-              "declaration": "if(operation?.action==='brand-edit'){"
+              "declaration": "if(operation?.action==='feedback-edit'){"
             },
             {
-              "line": 203,
+              "line": 210,
               "declaration": "if(origin!==undefined){"
             }
           ]
         },
         "recovery": {
           "file": "client/native-controller.js",
-          "bytes": 137376,
+          "bytes": 142004,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "f16728ac70897952547141de5c0eb5015020f35692402be326c5a721ad1db818",
+          "sha256": "0e3c1b09dd106838e754b675323413755cd7963d133b8c5c4dc96ecdb1d49b13",
           "declaredEntrypoints": [
             {
               "line": 22,
@@ -9621,33 +9665,33 @@
       "facets": {
         "ui": {
           "file": "client/native-workspace.js",
-          "bytes": 99885,
+          "bytes": 102760,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "87ac78c74b43717bef113991871e7cc047a16725086301fc500a580cabaa67b0",
+          "sha256": "84827b05ed6e038ee092b85e78d0436d5545879a2a6761a1632f74348fd6edc7",
           "declaredEntrypoints": [
             {
-              "line": 19,
+              "line": 21,
               "declaration": "export function createNativeWorkspace({React,store}){"
             },
             {
-              "line": 33,
+              "line": 36,
               "declaration": "if(!style){style=document.createElement('style');style.dataset.designcraftNative='true';document.head.append(style);}"
             },
             {
-              "line": 72,
+              "line": 78,
               "declaration": "if(!abort.signal.aborted){created=URL.createObjectURL(blob);setUrl(created);setFontWarning(Number(response.headers.get('x-project-font-count'))>0);}"
             },
             {
-              "line": 159,
+              "line": 166,
               "declaration": "if(!latest||latest.sequence!==form.sequence){if(latest){stopPlanDraftTimer(key);const next={...latest,mode:'edit',id:saved.id,baseRevision:saved.revision,sequence:latest.sequence+1};delete n"
             }
           ]
         },
         "ai": {
           "file": "host/editor-tools.js",
-          "bytes": 14170,
+          "bytes": 15296,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "07c8a3968197524b4d7216bd2467789b61b019c84f519e4519432d05da7c065f",
+          "sha256": "f7794cf96d104a709f1fc2e2a36153116a2d411fdf85b84376cf59680a7d6e9a",
           "declaredEntrypoints": [
             {
               "line": 11,
@@ -9666,24 +9710,24 @@
               "declaration": "export function editorToolDefinition(manager){"
             },
             {
-              "line": 50,
+              "line": 51,
               "declaration": "async execute(args,exec){"
             },
             {
-              "line": 61,
+              "line": 62,
               "declaration": "if(args.action==='state'){"
             },
             {
-              "line": 78,
+              "line": 80,
               "declaration": "export function registerEditorTools(ctx,manager){"
             }
           ]
         },
         "source": {
           "file": "host/native-source-store.js",
-          "bytes": 23264,
+          "bytes": 24363,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "c9c947629e678e7551f336312779d3a5e506fadb3debb5e35d8ab07537052737",
+          "sha256": "b0da9087e35d2e19baa5c17189c31f1912cf800edb5c9730c38cc576bc8e4b77",
           "declaredEntrypoints": [
             {
               "line": 31,
@@ -9763,10 +9807,10 @@
             },
             {
               "line": 153,
-              "declaration": "if(operation?.action==='brand-edit'){"
+              "declaration": "if(operation?.action==='feedback-edit'){"
             },
             {
-              "line": 203,
+              "line": 210,
               "declaration": "if(origin!==undefined){"
             }
           ]
@@ -9785,9 +9829,9 @@
         },
         "recovery": {
           "file": "client/native-controller.js",
-          "bytes": 137376,
+          "bytes": 142004,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "f16728ac70897952547141de5c0eb5015020f35692402be326c5a721ad1db818",
+          "sha256": "0e3c1b09dd106838e754b675323413755cd7963d133b8c5c4dc96ecdb1d49b13",
           "declaredEntrypoints": [
             {
               "line": 22,
@@ -10005,7 +10049,7 @@
           "file": "client/native-context-tools.js",
           "bytes": 3730,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "53cfc5bfe574607559b0d6ad73122d931c8844ea72c9a16b2a25f5c38e20ccdf",
+          "sha256": "61769eb58646874cfbc47ffb7eeffbbc5936321382c6dbd409d5ea8cbd6cb5a5",
           "declaredEntrypoints": [
             {
               "line": 4,
@@ -10027,9 +10071,9 @@
         },
         "ai": {
           "file": "host/editor-tools.js",
-          "bytes": 14170,
+          "bytes": 15296,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "07c8a3968197524b4d7216bd2467789b61b019c84f519e4519432d05da7c065f",
+          "sha256": "f7794cf96d104a709f1fc2e2a36153116a2d411fdf85b84376cf59680a7d6e9a",
           "declaredEntrypoints": [
             {
               "line": 11,
@@ -10048,24 +10092,24 @@
               "declaration": "export function editorToolDefinition(manager){"
             },
             {
-              "line": 50,
+              "line": 51,
               "declaration": "async execute(args,exec){"
             },
             {
-              "line": 61,
+              "line": 62,
               "declaration": "if(args.action==='state'){"
             },
             {
-              "line": 78,
+              "line": 80,
               "declaration": "export function registerEditorTools(ctx,manager){"
             }
           ]
         },
         "source": {
           "file": "host/editor-session.js",
-          "bytes": 87878,
+          "bytes": 93499,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "345a4fcb5d1ddcdfccdf7a9bf8d964bf2b3e7aab2fb3c51e54d26056fd52d834",
+          "sha256": "2d8ba49f402d6f71ed34b7567356aa6d59984d64d0fe93abb67ddec4b008632a",
           "declaredEntrypoints": [
             {
               "line": 41,
@@ -10243,9 +10287,9 @@
         },
         "recovery": {
           "file": "host/native-source-store.js",
-          "bytes": 23264,
+          "bytes": 24363,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "c9c947629e678e7551f336312779d3a5e506fadb3debb5e35d8ab07537052737",
+          "sha256": "b0da9087e35d2e19baa5c17189c31f1912cf800edb5c9730c38cc576bc8e4b77",
           "declaredEntrypoints": [
             {
               "line": 31,
@@ -10325,10 +10369,10 @@
             },
             {
               "line": 153,
-              "declaration": "if(operation?.action==='brand-edit'){"
+              "declaration": "if(operation?.action==='feedback-edit'){"
             },
             {
-              "line": 203,
+              "line": 210,
               "declaration": "if(origin!==undefined){"
             }
           ]
@@ -10379,9 +10423,9 @@
       "facets": {
         "ui": {
           "file": "client/native-reference.js",
-          "bytes": 8720,
+          "bytes": 11225,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "45e7502261880d4ceac78dff1eff57e9480b303f5fe8abea218005b967746840",
+          "sha256": "df0b0a0f915fa0cd86cac16d7764d9c9607894a0b2c8ede2d7c5fa395016ecb5",
           "declaredEntrypoints": [
             {
               "line": 15,
@@ -10426,14 +10470,30 @@
             {
               "line": 88,
               "declaration": "export const nativeContextTextRule={id:NAME,order:19,match(text,from){const start=text.indexOf(OPEN,from);if(start<0)return;const close=text.indexOf(CLOSE,start+OPEN.length);if(close<0||clos"
+            },
+            {
+              "line": 101,
+              "declaration": "export function withDesignRequestReference(draft,{sessionId,id,label,prompt}){"
+            },
+            {
+              "line": 105,
+              "declaration": "export function designRequestReferenceSource({store}){"
+            },
+            {
+              "line": 114,
+              "declaration": "export const designRequestTextRule={id:REQUEST_SOURCE,order:18,match(text,from){"
+            },
+            {
+              "line": 117,
+              "declaration": "for(const {open,close,label,start} of matches){const end=text.indexOf(close,start+open.length);if(end<0||end-start>512000)continue;try{const data=JSON.parse(text.slice(start+open.length,end)"
             }
           ]
         },
         "ai": {
           "file": "host/editor-tools.js",
-          "bytes": 14170,
+          "bytes": 15296,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "07c8a3968197524b4d7216bd2467789b61b019c84f519e4519432d05da7c065f",
+          "sha256": "f7794cf96d104a709f1fc2e2a36153116a2d411fdf85b84376cf59680a7d6e9a",
           "declaredEntrypoints": [
             {
               "line": 11,
@@ -10452,24 +10512,24 @@
               "declaration": "export function editorToolDefinition(manager){"
             },
             {
-              "line": 50,
+              "line": 51,
               "declaration": "async execute(args,exec){"
             },
             {
-              "line": 61,
+              "line": 62,
               "declaration": "if(args.action==='state'){"
             },
             {
-              "line": 78,
+              "line": 80,
               "declaration": "export function registerEditorTools(ctx,manager){"
             }
           ]
         },
         "source": {
           "file": "host/editor-session.js",
-          "bytes": 87878,
+          "bytes": 93499,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "345a4fcb5d1ddcdfccdf7a9bf8d964bf2b3e7aab2fb3c51e54d26056fd52d834",
+          "sha256": "2d8ba49f402d6f71ed34b7567356aa6d59984d64d0fe93abb67ddec4b008632a",
           "declaredEntrypoints": [
             {
               "line": 41,
@@ -10711,7 +10771,7 @@
           "file": "client/editor-surface.js",
           "bytes": 5811,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "6e41945a48f143d50e1054fcbafe2369ae1c84a1eac7a118a6555ea0b6926b6e",
+          "sha256": "106e51585049ad5999f42583aa750033cade7e3fc1d0caba87e47ce4ef27fd55",
           "declaredEntrypoints": [
             {
               "line": 3,
@@ -10793,9 +10853,9 @@
         },
         "ai": {
           "file": "host/editor-tools.js",
-          "bytes": 14170,
+          "bytes": 15296,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "07c8a3968197524b4d7216bd2467789b61b019c84f519e4519432d05da7c065f",
+          "sha256": "f7794cf96d104a709f1fc2e2a36153116a2d411fdf85b84376cf59680a7d6e9a",
           "declaredEntrypoints": [
             {
               "line": 11,
@@ -10814,24 +10874,24 @@
               "declaration": "export function editorToolDefinition(manager){"
             },
             {
-              "line": 50,
+              "line": 51,
               "declaration": "async execute(args,exec){"
             },
             {
-              "line": 61,
+              "line": 62,
               "declaration": "if(args.action==='state'){"
             },
             {
-              "line": 78,
+              "line": 80,
               "declaration": "export function registerEditorTools(ctx,manager){"
             }
           ]
         },
         "source": {
           "file": "host/editor-session.js",
-          "bytes": 87878,
+          "bytes": 93499,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "345a4fcb5d1ddcdfccdf7a9bf8d964bf2b3e7aab2fb3c51e54d26056fd52d834",
+          "sha256": "2d8ba49f402d6f71ed34b7567356aa6d59984d64d0fe93abb67ddec4b008632a",
           "declaredEntrypoints": [
             {
               "line": 41,
@@ -10997,9 +11057,9 @@
         },
         "output": {
           "file": "host/native-source-store.js",
-          "bytes": 23264,
+          "bytes": 24363,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "c9c947629e678e7551f336312779d3a5e506fadb3debb5e35d8ab07537052737",
+          "sha256": "b0da9087e35d2e19baa5c17189c31f1912cf800edb5c9730c38cc576bc8e4b77",
           "declaredEntrypoints": [
             {
               "line": 31,
@@ -11079,19 +11139,19 @@
             },
             {
               "line": 153,
-              "declaration": "if(operation?.action==='brand-edit'){"
+              "declaration": "if(operation?.action==='feedback-edit'){"
             },
             {
-              "line": 203,
+              "line": 210,
               "declaration": "if(origin!==undefined){"
             }
           ]
         },
         "recovery": {
           "file": "client/native-controller.js",
-          "bytes": 137376,
+          "bytes": 142004,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "f16728ac70897952547141de5c0eb5015020f35692402be326c5a721ad1db818",
+          "sha256": "0e3c1b09dd106838e754b675323413755cd7963d133b8c5c4dc96ecdb1d49b13",
           "declaredEntrypoints": [
             {
               "line": 22,
@@ -11291,7 +11351,7 @@
           "file": "client/native-context-tools.js",
           "bytes": 3730,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "53cfc5bfe574607559b0d6ad73122d931c8844ea72c9a16b2a25f5c38e20ccdf",
+          "sha256": "61769eb58646874cfbc47ffb7eeffbbc5936321382c6dbd409d5ea8cbd6cb5a5",
           "declaredEntrypoints": [
             {
               "line": 4,
@@ -11313,9 +11373,9 @@
         },
         "ai": {
           "file": "host/editor-tools.js",
-          "bytes": 14170,
+          "bytes": 15296,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "07c8a3968197524b4d7216bd2467789b61b019c84f519e4519432d05da7c065f",
+          "sha256": "f7794cf96d104a709f1fc2e2a36153116a2d411fdf85b84376cf59680a7d6e9a",
           "declaredEntrypoints": [
             {
               "line": 11,
@@ -11334,15 +11394,15 @@
               "declaration": "export function editorToolDefinition(manager){"
             },
             {
-              "line": 50,
+              "line": 51,
               "declaration": "async execute(args,exec){"
             },
             {
-              "line": 61,
+              "line": 62,
               "declaration": "if(args.action==='state'){"
             },
             {
-              "line": 78,
+              "line": 80,
               "declaration": "export function registerEditorTools(ctx,manager){"
             }
           ]
@@ -11429,9 +11489,9 @@
         },
         "recovery": {
           "file": "host/native-source-store.js",
-          "bytes": 23264,
+          "bytes": 24363,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "c9c947629e678e7551f336312779d3a5e506fadb3debb5e35d8ab07537052737",
+          "sha256": "b0da9087e35d2e19baa5c17189c31f1912cf800edb5c9730c38cc576bc8e4b77",
           "declaredEntrypoints": [
             {
               "line": 31,
@@ -11511,10 +11571,10 @@
             },
             {
               "line": 153,
-              "declaration": "if(operation?.action==='brand-edit'){"
+              "declaration": "if(operation?.action==='feedback-edit'){"
             },
             {
-              "line": 203,
+              "line": 210,
               "declaration": "if(origin!==undefined){"
             }
           ]
@@ -11565,33 +11625,33 @@
       "facets": {
         "ui": {
           "file": "client/native-workspace.js",
-          "bytes": 99885,
+          "bytes": 102760,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "87ac78c74b43717bef113991871e7cc047a16725086301fc500a580cabaa67b0",
+          "sha256": "84827b05ed6e038ee092b85e78d0436d5545879a2a6761a1632f74348fd6edc7",
           "declaredEntrypoints": [
             {
-              "line": 19,
+              "line": 21,
               "declaration": "export function createNativeWorkspace({React,store}){"
             },
             {
-              "line": 33,
+              "line": 36,
               "declaration": "if(!style){style=document.createElement('style');style.dataset.designcraftNative='true';document.head.append(style);}"
             },
             {
-              "line": 72,
+              "line": 78,
               "declaration": "if(!abort.signal.aborted){created=URL.createObjectURL(blob);setUrl(created);setFontWarning(Number(response.headers.get('x-project-font-count'))>0);}"
             },
             {
-              "line": 159,
+              "line": 166,
               "declaration": "if(!latest||latest.sequence!==form.sequence){if(latest){stopPlanDraftTimer(key);const next={...latest,mode:'edit',id:saved.id,baseRevision:saved.revision,sequence:latest.sequence+1};delete n"
             }
           ]
         },
         "ai": {
           "file": "host/editor-tools.js",
-          "bytes": 14170,
+          "bytes": 15296,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "07c8a3968197524b4d7216bd2467789b61b019c84f519e4519432d05da7c065f",
+          "sha256": "f7794cf96d104a709f1fc2e2a36153116a2d411fdf85b84376cf59680a7d6e9a",
           "declaredEntrypoints": [
             {
               "line": 11,
@@ -11610,15 +11670,15 @@
               "declaration": "export function editorToolDefinition(manager){"
             },
             {
-              "line": 50,
+              "line": 51,
               "declaration": "async execute(args,exec){"
             },
             {
-              "line": 61,
+              "line": 62,
               "declaration": "if(args.action==='state'){"
             },
             {
-              "line": 78,
+              "line": 80,
               "declaration": "export function registerEditorTools(ctx,manager){"
             }
           ]
@@ -11705,9 +11765,9 @@
         },
         "recovery": {
           "file": "client/native-controller.js",
-          "bytes": 137376,
+          "bytes": 142004,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "f16728ac70897952547141de5c0eb5015020f35692402be326c5a721ad1db818",
+          "sha256": "0e3c1b09dd106838e754b675323413755cd7963d133b8c5c4dc96ecdb1d49b13",
           "declaredEntrypoints": [
             {
               "line": 22,
@@ -11923,9 +11983,9 @@
       "facets": {
         "ui": {
           "file": "client/native-reference.js",
-          "bytes": 8720,
+          "bytes": 11225,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "45e7502261880d4ceac78dff1eff57e9480b303f5fe8abea218005b967746840",
+          "sha256": "df0b0a0f915fa0cd86cac16d7764d9c9607894a0b2c8ede2d7c5fa395016ecb5",
           "declaredEntrypoints": [
             {
               "line": 15,
@@ -11970,14 +12030,30 @@
             {
               "line": 88,
               "declaration": "export const nativeContextTextRule={id:NAME,order:19,match(text,from){const start=text.indexOf(OPEN,from);if(start<0)return;const close=text.indexOf(CLOSE,start+OPEN.length);if(close<0||clos"
+            },
+            {
+              "line": 101,
+              "declaration": "export function withDesignRequestReference(draft,{sessionId,id,label,prompt}){"
+            },
+            {
+              "line": 105,
+              "declaration": "export function designRequestReferenceSource({store}){"
+            },
+            {
+              "line": 114,
+              "declaration": "export const designRequestTextRule={id:REQUEST_SOURCE,order:18,match(text,from){"
+            },
+            {
+              "line": 117,
+              "declaration": "for(const {open,close,label,start} of matches){const end=text.indexOf(close,start+open.length);if(end<0||end-start>512000)continue;try{const data=JSON.parse(text.slice(start+open.length,end)"
             }
           ]
         },
         "ai": {
           "file": "host/editor-tools.js",
-          "bytes": 14170,
+          "bytes": 15296,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "07c8a3968197524b4d7216bd2467789b61b019c84f519e4519432d05da7c065f",
+          "sha256": "f7794cf96d104a709f1fc2e2a36153116a2d411fdf85b84376cf59680a7d6e9a",
           "declaredEntrypoints": [
             {
               "line": 11,
@@ -11996,24 +12072,24 @@
               "declaration": "export function editorToolDefinition(manager){"
             },
             {
-              "line": 50,
+              "line": 51,
               "declaration": "async execute(args,exec){"
             },
             {
-              "line": 61,
+              "line": 62,
               "declaration": "if(args.action==='state'){"
             },
             {
-              "line": 78,
+              "line": 80,
               "declaration": "export function registerEditorTools(ctx,manager){"
             }
           ]
         },
         "source": {
           "file": "host/editor-session.js",
-          "bytes": 87878,
+          "bytes": 93499,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "345a4fcb5d1ddcdfccdf7a9bf8d964bf2b3e7aab2fb3c51e54d26056fd52d834",
+          "sha256": "2d8ba49f402d6f71ed34b7567356aa6d59984d64d0fe93abb67ddec4b008632a",
           "declaredEntrypoints": [
             {
               "line": 41,
@@ -12305,33 +12381,33 @@
       "facets": {
         "ui": {
           "file": "client/native-workspace.js",
-          "bytes": 99885,
+          "bytes": 102760,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "87ac78c74b43717bef113991871e7cc047a16725086301fc500a580cabaa67b0",
+          "sha256": "84827b05ed6e038ee092b85e78d0436d5545879a2a6761a1632f74348fd6edc7",
           "declaredEntrypoints": [
             {
-              "line": 19,
+              "line": 21,
               "declaration": "export function createNativeWorkspace({React,store}){"
             },
             {
-              "line": 33,
+              "line": 36,
               "declaration": "if(!style){style=document.createElement('style');style.dataset.designcraftNative='true';document.head.append(style);}"
             },
             {
-              "line": 72,
+              "line": 78,
               "declaration": "if(!abort.signal.aborted){created=URL.createObjectURL(blob);setUrl(created);setFontWarning(Number(response.headers.get('x-project-font-count'))>0);}"
             },
             {
-              "line": 159,
+              "line": 166,
               "declaration": "if(!latest||latest.sequence!==form.sequence){if(latest){stopPlanDraftTimer(key);const next={...latest,mode:'edit',id:saved.id,baseRevision:saved.revision,sequence:latest.sequence+1};delete n"
             }
           ]
         },
         "ai": {
           "file": "host/editor-tools.js",
-          "bytes": 14170,
+          "bytes": 15296,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "07c8a3968197524b4d7216bd2467789b61b019c84f519e4519432d05da7c065f",
+          "sha256": "f7794cf96d104a709f1fc2e2a36153116a2d411fdf85b84376cf59680a7d6e9a",
           "declaredEntrypoints": [
             {
               "line": 11,
@@ -12350,15 +12426,15 @@
               "declaration": "export function editorToolDefinition(manager){"
             },
             {
-              "line": 50,
+              "line": 51,
               "declaration": "async execute(args,exec){"
             },
             {
-              "line": 61,
+              "line": 62,
               "declaration": "if(args.action==='state'){"
             },
             {
-              "line": 78,
+              "line": 80,
               "declaration": "export function registerEditorTools(ctx,manager){"
             }
           ]
@@ -12389,9 +12465,9 @@
         },
         "recovery": {
           "file": "host/native-source-store.js",
-          "bytes": 23264,
+          "bytes": 24363,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "c9c947629e678e7551f336312779d3a5e506fadb3debb5e35d8ab07537052737",
+          "sha256": "b0da9087e35d2e19baa5c17189c31f1912cf800edb5c9730c38cc576bc8e4b77",
           "declaredEntrypoints": [
             {
               "line": 31,
@@ -12471,10 +12547,10 @@
             },
             {
               "line": 153,
-              "declaration": "if(operation?.action==='brand-edit'){"
+              "declaration": "if(operation?.action==='feedback-edit'){"
             },
             {
-              "line": 203,
+              "line": 210,
               "declaration": "if(origin!==undefined){"
             }
           ]
@@ -12531,33 +12607,33 @@
       "facets": {
         "ui": {
           "file": "client/native-workspace.js",
-          "bytes": 99885,
+          "bytes": 102760,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "87ac78c74b43717bef113991871e7cc047a16725086301fc500a580cabaa67b0",
+          "sha256": "84827b05ed6e038ee092b85e78d0436d5545879a2a6761a1632f74348fd6edc7",
           "declaredEntrypoints": [
             {
-              "line": 19,
+              "line": 21,
               "declaration": "export function createNativeWorkspace({React,store}){"
             },
             {
-              "line": 33,
+              "line": 36,
               "declaration": "if(!style){style=document.createElement('style');style.dataset.designcraftNative='true';document.head.append(style);}"
             },
             {
-              "line": 72,
+              "line": 78,
               "declaration": "if(!abort.signal.aborted){created=URL.createObjectURL(blob);setUrl(created);setFontWarning(Number(response.headers.get('x-project-font-count'))>0);}"
             },
             {
-              "line": 159,
+              "line": 166,
               "declaration": "if(!latest||latest.sequence!==form.sequence){if(latest){stopPlanDraftTimer(key);const next={...latest,mode:'edit',id:saved.id,baseRevision:saved.revision,sequence:latest.sequence+1};delete n"
             }
           ]
         },
         "ai": {
           "file": "host/editor-tools.js",
-          "bytes": 14170,
+          "bytes": 15296,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "07c8a3968197524b4d7216bd2467789b61b019c84f519e4519432d05da7c065f",
+          "sha256": "f7794cf96d104a709f1fc2e2a36153116a2d411fdf85b84376cf59680a7d6e9a",
           "declaredEntrypoints": [
             {
               "line": 11,
@@ -12576,15 +12652,15 @@
               "declaration": "export function editorToolDefinition(manager){"
             },
             {
-              "line": 50,
+              "line": 51,
               "declaration": "async execute(args,exec){"
             },
             {
-              "line": 61,
+              "line": 62,
               "declaration": "if(args.action==='state'){"
             },
             {
-              "line": 78,
+              "line": 80,
               "declaration": "export function registerEditorTools(ctx,manager){"
             }
           ]
@@ -12787,9 +12863,9 @@
         },
         "recovery": {
           "file": "host/editor-session.js",
-          "bytes": 87878,
+          "bytes": 93499,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "345a4fcb5d1ddcdfccdf7a9bf8d964bf2b3e7aab2fb3c51e54d26056fd52d834",
+          "sha256": "2d8ba49f402d6f71ed34b7567356aa6d59984d64d0fe93abb67ddec4b008632a",
           "declaredEntrypoints": [
             {
               "line": 41,
@@ -13071,33 +13147,33 @@
       "facets": {
         "ui": {
           "file": "client/native-workspace.js",
-          "bytes": 99885,
+          "bytes": 102760,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "87ac78c74b43717bef113991871e7cc047a16725086301fc500a580cabaa67b0",
+          "sha256": "84827b05ed6e038ee092b85e78d0436d5545879a2a6761a1632f74348fd6edc7",
           "declaredEntrypoints": [
             {
-              "line": 19,
+              "line": 21,
               "declaration": "export function createNativeWorkspace({React,store}){"
             },
             {
-              "line": 33,
+              "line": 36,
               "declaration": "if(!style){style=document.createElement('style');style.dataset.designcraftNative='true';document.head.append(style);}"
             },
             {
-              "line": 72,
+              "line": 78,
               "declaration": "if(!abort.signal.aborted){created=URL.createObjectURL(blob);setUrl(created);setFontWarning(Number(response.headers.get('x-project-font-count'))>0);}"
             },
             {
-              "line": 159,
+              "line": 166,
               "declaration": "if(!latest||latest.sequence!==form.sequence){if(latest){stopPlanDraftTimer(key);const next={...latest,mode:'edit',id:saved.id,baseRevision:saved.revision,sequence:latest.sequence+1};delete n"
             }
           ]
         },
         "ai": {
           "file": "host/editor-tools.js",
-          "bytes": 14170,
+          "bytes": 15296,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "07c8a3968197524b4d7216bd2467789b61b019c84f519e4519432d05da7c065f",
+          "sha256": "f7794cf96d104a709f1fc2e2a36153116a2d411fdf85b84376cf59680a7d6e9a",
           "declaredEntrypoints": [
             {
               "line": 11,
@@ -13116,15 +13192,15 @@
               "declaration": "export function editorToolDefinition(manager){"
             },
             {
-              "line": 50,
+              "line": 51,
               "declaration": "async execute(args,exec){"
             },
             {
-              "line": 61,
+              "line": 62,
               "declaration": "if(args.action==='state'){"
             },
             {
-              "line": 78,
+              "line": 80,
               "declaration": "export function registerEditorTools(ctx,manager){"
             }
           ]
@@ -13327,9 +13403,9 @@
         },
         "recovery": {
           "file": "host/native-source-store.js",
-          "bytes": 23264,
+          "bytes": 24363,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "c9c947629e678e7551f336312779d3a5e506fadb3debb5e35d8ab07537052737",
+          "sha256": "b0da9087e35d2e19baa5c17189c31f1912cf800edb5c9730c38cc576bc8e4b77",
           "declaredEntrypoints": [
             {
               "line": 31,
@@ -13409,10 +13485,10 @@
             },
             {
               "line": 153,
-              "declaration": "if(operation?.action==='brand-edit'){"
+              "declaration": "if(operation?.action==='feedback-edit'){"
             },
             {
-              "line": 203,
+              "line": 210,
               "declaration": "if(origin!==undefined){"
             }
           ]
@@ -13465,7 +13541,7 @@
           "file": "client/native-context-tools.js",
           "bytes": 3730,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "53cfc5bfe574607559b0d6ad73122d931c8844ea72c9a16b2a25f5c38e20ccdf",
+          "sha256": "61769eb58646874cfbc47ffb7eeffbbc5936321382c6dbd409d5ea8cbd6cb5a5",
           "declaredEntrypoints": [
             {
               "line": 4,
@@ -13487,9 +13563,9 @@
         },
         "ai": {
           "file": "host/editor-tools.js",
-          "bytes": 14170,
+          "bytes": 15296,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "07c8a3968197524b4d7216bd2467789b61b019c84f519e4519432d05da7c065f",
+          "sha256": "f7794cf96d104a709f1fc2e2a36153116a2d411fdf85b84376cf59680a7d6e9a",
           "declaredEntrypoints": [
             {
               "line": 11,
@@ -13508,15 +13584,15 @@
               "declaration": "export function editorToolDefinition(manager){"
             },
             {
-              "line": 50,
+              "line": 51,
               "declaration": "async execute(args,exec){"
             },
             {
-              "line": 61,
+              "line": 62,
               "declaration": "if(args.action==='state'){"
             },
             {
-              "line": 78,
+              "line": 80,
               "declaration": "export function registerEditorTools(ctx,manager){"
             }
           ]
@@ -13759,9 +13835,9 @@
         },
         "recovery": {
           "file": "client/native-controller.js",
-          "bytes": 137376,
+          "bytes": 142004,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "f16728ac70897952547141de5c0eb5015020f35692402be326c5a721ad1db818",
+          "sha256": "0e3c1b09dd106838e754b675323413755cd7963d133b8c5c4dc96ecdb1d49b13",
           "declaredEntrypoints": [
             {
               "line": 22,
@@ -13973,7 +14049,7 @@
           "file": "client/native-context-tools.js",
           "bytes": 3730,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "53cfc5bfe574607559b0d6ad73122d931c8844ea72c9a16b2a25f5c38e20ccdf",
+          "sha256": "61769eb58646874cfbc47ffb7eeffbbc5936321382c6dbd409d5ea8cbd6cb5a5",
           "declaredEntrypoints": [
             {
               "line": 4,
@@ -13995,9 +14071,9 @@
         },
         "ai": {
           "file": "host/editor-tools.js",
-          "bytes": 14170,
+          "bytes": 15296,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "07c8a3968197524b4d7216bd2467789b61b019c84f519e4519432d05da7c065f",
+          "sha256": "f7794cf96d104a709f1fc2e2a36153116a2d411fdf85b84376cf59680a7d6e9a",
           "declaredEntrypoints": [
             {
               "line": 11,
@@ -14016,15 +14092,15 @@
               "declaration": "export function editorToolDefinition(manager){"
             },
             {
-              "line": 50,
+              "line": 51,
               "declaration": "async execute(args,exec){"
             },
             {
-              "line": 61,
+              "line": 62,
               "declaration": "if(args.action==='state'){"
             },
             {
-              "line": 78,
+              "line": 80,
               "declaration": "export function registerEditorTools(ctx,manager){"
             }
           ]
@@ -14267,9 +14343,9 @@
         },
         "recovery": {
           "file": "client/native-controller.js",
-          "bytes": 137376,
+          "bytes": 142004,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "f16728ac70897952547141de5c0eb5015020f35692402be326c5a721ad1db818",
+          "sha256": "0e3c1b09dd106838e754b675323413755cd7963d133b8c5c4dc96ecdb1d49b13",
           "declaredEntrypoints": [
             {
               "line": 22,
@@ -14473,33 +14549,33 @@
       "facets": {
         "ui": {
           "file": "client/native-workspace.js",
-          "bytes": 99885,
+          "bytes": 102760,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "87ac78c74b43717bef113991871e7cc047a16725086301fc500a580cabaa67b0",
+          "sha256": "84827b05ed6e038ee092b85e78d0436d5545879a2a6761a1632f74348fd6edc7",
           "declaredEntrypoints": [
             {
-              "line": 19,
+              "line": 21,
               "declaration": "export function createNativeWorkspace({React,store}){"
             },
             {
-              "line": 33,
+              "line": 36,
               "declaration": "if(!style){style=document.createElement('style');style.dataset.designcraftNative='true';document.head.append(style);}"
             },
             {
-              "line": 72,
+              "line": 78,
               "declaration": "if(!abort.signal.aborted){created=URL.createObjectURL(blob);setUrl(created);setFontWarning(Number(response.headers.get('x-project-font-count'))>0);}"
             },
             {
-              "line": 159,
+              "line": 166,
               "declaration": "if(!latest||latest.sequence!==form.sequence){if(latest){stopPlanDraftTimer(key);const next={...latest,mode:'edit',id:saved.id,baseRevision:saved.revision,sequence:latest.sequence+1};delete n"
             }
           ]
         },
         "ai": {
           "file": "host/editor-tools.js",
-          "bytes": 14170,
+          "bytes": 15296,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "07c8a3968197524b4d7216bd2467789b61b019c84f519e4519432d05da7c065f",
+          "sha256": "f7794cf96d104a709f1fc2e2a36153116a2d411fdf85b84376cf59680a7d6e9a",
           "declaredEntrypoints": [
             {
               "line": 11,
@@ -14518,15 +14594,15 @@
               "declaration": "export function editorToolDefinition(manager){"
             },
             {
-              "line": 50,
+              "line": 51,
               "declaration": "async execute(args,exec){"
             },
             {
-              "line": 61,
+              "line": 62,
               "declaration": "if(args.action==='state'){"
             },
             {
-              "line": 78,
+              "line": 80,
               "declaration": "export function registerEditorTools(ctx,manager){"
             }
           ]
@@ -14729,9 +14805,9 @@
         },
         "recovery": {
           "file": "host/editor-session.js",
-          "bytes": 87878,
+          "bytes": 93499,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "345a4fcb5d1ddcdfccdf7a9bf8d964bf2b3e7aab2fb3c51e54d26056fd52d834",
+          "sha256": "2d8ba49f402d6f71ed34b7567356aa6d59984d64d0fe93abb67ddec4b008632a",
           "declaredEntrypoints": [
             {
               "line": 41,
@@ -14923,33 +14999,33 @@
       "facets": {
         "ui": {
           "file": "client/native-workspace.js",
-          "bytes": 99885,
+          "bytes": 102760,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "87ac78c74b43717bef113991871e7cc047a16725086301fc500a580cabaa67b0",
+          "sha256": "84827b05ed6e038ee092b85e78d0436d5545879a2a6761a1632f74348fd6edc7",
           "declaredEntrypoints": [
             {
-              "line": 19,
+              "line": 21,
               "declaration": "export function createNativeWorkspace({React,store}){"
             },
             {
-              "line": 33,
+              "line": 36,
               "declaration": "if(!style){style=document.createElement('style');style.dataset.designcraftNative='true';document.head.append(style);}"
             },
             {
-              "line": 72,
+              "line": 78,
               "declaration": "if(!abort.signal.aborted){created=URL.createObjectURL(blob);setUrl(created);setFontWarning(Number(response.headers.get('x-project-font-count'))>0);}"
             },
             {
-              "line": 159,
+              "line": 166,
               "declaration": "if(!latest||latest.sequence!==form.sequence){if(latest){stopPlanDraftTimer(key);const next={...latest,mode:'edit',id:saved.id,baseRevision:saved.revision,sequence:latest.sequence+1};delete n"
             }
           ]
         },
         "ai": {
           "file": "host/editor-tools.js",
-          "bytes": 14170,
+          "bytes": 15296,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "07c8a3968197524b4d7216bd2467789b61b019c84f519e4519432d05da7c065f",
+          "sha256": "f7794cf96d104a709f1fc2e2a36153116a2d411fdf85b84376cf59680a7d6e9a",
           "declaredEntrypoints": [
             {
               "line": 11,
@@ -14968,15 +15044,15 @@
               "declaration": "export function editorToolDefinition(manager){"
             },
             {
-              "line": 50,
+              "line": 51,
               "declaration": "async execute(args,exec){"
             },
             {
-              "line": 61,
+              "line": 62,
               "declaration": "if(args.action==='state'){"
             },
             {
-              "line": 78,
+              "line": 80,
               "declaration": "export function registerEditorTools(ctx,manager){"
             }
           ]
@@ -15219,9 +15295,9 @@
         },
         "recovery": {
           "file": "client/native-controller.js",
-          "bytes": 137376,
+          "bytes": 142004,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "f16728ac70897952547141de5c0eb5015020f35692402be326c5a721ad1db818",
+          "sha256": "0e3c1b09dd106838e754b675323413755cd7963d133b8c5c4dc96ecdb1d49b13",
           "declaredEntrypoints": [
             {
               "line": 22,
@@ -15437,9 +15513,9 @@
       "facets": {
         "ui": {
           "file": "client/html-workspace.js",
-          "bytes": 94885,
+          "bytes": 95470,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "67d9188703eb661561958a0ca4b18519132824007574476b8f980a5018e03c45",
+          "sha256": "756936370ff7c87e25a7c308d8c72a9ff43d57dfccce3de76276f82df040e7a5",
           "declaredEntrypoints": [
             {
               "line": 24,
@@ -15705,9 +15781,9 @@
         },
         "recovery": {
           "file": "client/native-controller.js",
-          "bytes": 137376,
+          "bytes": 142004,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "f16728ac70897952547141de5c0eb5015020f35692402be326c5a721ad1db818",
+          "sha256": "0e3c1b09dd106838e754b675323413755cd7963d133b8c5c4dc96ecdb1d49b13",
           "declaredEntrypoints": [
             {
               "line": 22,
@@ -15905,9 +15981,9 @@
       "facets": {
         "ui": {
           "file": "client/html-workspace.js",
-          "bytes": 94885,
+          "bytes": 95470,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "67d9188703eb661561958a0ca4b18519132824007574476b8f980a5018e03c45",
+          "sha256": "756936370ff7c87e25a7c308d8c72a9ff43d57dfccce3de76276f82df040e7a5",
           "declaredEntrypoints": [
             {
               "line": 24,
@@ -16085,65 +16161,73 @@
         },
         "output": {
           "file": "host/editor-routes.js",
-          "bytes": 32066,
+          "bytes": 33769,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "397e828e032bd00b01873caf2374f8dc04d7cb8b490939d91cde832bf8d0f5c1",
+          "sha256": "b8ca26005ed214325274ec9a9a7f22262d8cb6d3134cb3d867aae409ed90a970",
           "declaredEntrypoints": [
             {
-              "line": 21,
+              "line": 23,
               "declaration": "export function editorRoutes(ctx,manager,{guard,readJsonBody,sendJson}){"
             },
             {
-              "line": 27,
+              "line": 29,
               "declaration": "if(signal?.aborted){if(!shared.waiters&&!shared.done){shared.promise.catch(()=>{});shared.controller.abort();}return Promise.reject(new SafetyError('预览读取已停止',499));}"
             },
             {
-              "line": 38,
+              "line": 40,
               "declaration": "if(existing){previewCache.delete(key);previewCache.set(key,existing);return {bytes:existing,fontCount:fonts.items.length};}"
             },
             {
-              "line": 47,
+              "line": 49,
               "declaration": "if(source.meta.engine==='vectorcraft'){"
             },
             {
-              "line": 58,
+              "line": 60,
               "declaration": "while(previewCache.size>=32||previewBytes+bytes.length>32*1024*1024){const oldest=previewCache.keys().next().value;if(!oldest)break;previewBytes-=previewCache.get(oldest).length;previewCache"
             },
             {
-              "line": 114,
+              "line": 95,
+              "declaration": "if(req.method==='GET'){sendJson(res,200,{ok:true,receipt:readPptxReceipt(view.root,q.get('operationId'))});return;}"
+            },
+            {
+              "line": 127,
               "declaration": "switch(body.action){"
             },
             {
-              "line": 150,
+              "line": 163,
               "declaration": "if(body.action==='plan-create'){if(!/^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/.test(body.operationKey||''))throw new SafetyError('新计划需要稳定操作身份',422);id='plan-'+createHas"
             },
             {
-              "line": 184,
+              "line": 197,
               "declaration": "if(Object.hasOwn(edges,what)&&ids.length>=2&&['vectorcraft','deckcraft','photocraft'].includes(engine)){"
             },
             {
-              "line": 186,
+              "line": 199,
               "declaration": "if(engine==='photocraft'){const names={left:'leftEdges',center:'horizontalCenters',right:'rightEdges',top:'topEdges',middle:'verticalCenters',bottom:'bottomEdges'};command='layer.align.'+nam"
             },
             {
-              "line": 241,
+              "line": 254,
               "declaration": "if(req.method==='GET'){"
             },
             {
-              "line": 288,
+              "line": 301,
               "declaration": "if(req.method==='GET'){"
             },
             {
-              "line": 299,
+              "line": 312,
               "declaration": "if(req.method==='GET'){"
+            },
+            {
+              "line": 332,
+              "declaration": "catch(error){if(error.feedbackRejected)sendJson(res,error.status||409,{ok:false,error:error.message,feedbackRejected:true});else throw error;}"
             }
           ]
         },
         "recovery": {
           "file": "client/native-controller.js",
-          "bytes": 137376,
+          "bytes": 142004,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "f16728ac70897952547141de5c0eb5015020f35692402be326c5a721ad1db818",
+          "sha256": "0e3c1b09dd106838e754b675323413755cd7963d133b8c5c4dc96ecdb1d49b13",
           "declaredEntrypoints": [
             {
               "line": 22,
@@ -16393,9 +16477,9 @@
         },
         "ai": {
           "file": "host/editor-tools.js",
-          "bytes": 14170,
+          "bytes": 15296,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "07c8a3968197524b4d7216bd2467789b61b019c84f519e4519432d05da7c065f",
+          "sha256": "f7794cf96d104a709f1fc2e2a36153116a2d411fdf85b84376cf59680a7d6e9a",
           "declaredEntrypoints": [
             {
               "line": 11,
@@ -16414,15 +16498,15 @@
               "declaration": "export function editorToolDefinition(manager){"
             },
             {
-              "line": 50,
+              "line": 51,
               "declaration": "async execute(args,exec){"
             },
             {
-              "line": 61,
+              "line": 62,
               "declaration": "if(args.action==='state'){"
             },
             {
-              "line": 78,
+              "line": 80,
               "declaration": "export function registerEditorTools(ctx,manager){"
             }
           ]
@@ -16923,7 +17007,7 @@
           "file": "client/studio-image-workspace.js",
           "bytes": 39192,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "bea3e14cc6c5f58070e95fe84f9004ff592e65529993f1659b1722f3739a767a",
+          "sha256": "9b6ff60208d795a25bf2fe7209b76d6732f6364071c8bc43ffb106cdfca636ba",
           "declaredEntrypoints": [
             {
               "line": 16,
@@ -17567,7 +17651,7 @@
           "file": "client/studio-image-workspace.js",
           "bytes": 39192,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "bea3e14cc6c5f58070e95fe84f9004ff592e65529993f1659b1722f3739a767a",
+          "sha256": "9b6ff60208d795a25bf2fe7209b76d6732f6364071c8bc43ffb106cdfca636ba",
           "declaredEntrypoints": [
             {
               "line": 16,
@@ -17901,9 +17985,9 @@
         },
         "output": {
           "file": "host/native-source-store.js",
-          "bytes": 23264,
+          "bytes": 24363,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "c9c947629e678e7551f336312779d3a5e506fadb3debb5e35d8ab07537052737",
+          "sha256": "b0da9087e35d2e19baa5c17189c31f1912cf800edb5c9730c38cc576bc8e4b77",
           "declaredEntrypoints": [
             {
               "line": 31,
@@ -17983,19 +18067,19 @@
             },
             {
               "line": 153,
-              "declaration": "if(operation?.action==='brand-edit'){"
+              "declaration": "if(operation?.action==='feedback-edit'){"
             },
             {
-              "line": 203,
+              "line": 210,
               "declaration": "if(origin!==undefined){"
             }
           ]
         },
         "recovery": {
           "file": "client/native-controller.js",
-          "bytes": 137376,
+          "bytes": 142004,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "f16728ac70897952547141de5c0eb5015020f35692402be326c5a721ad1db818",
+          "sha256": "0e3c1b09dd106838e754b675323413755cd7963d133b8c5c4dc96ecdb1d49b13",
           "declaredEntrypoints": [
             {
               "line": 22,
@@ -18183,7 +18267,7 @@
           "file": "client/studio-image-workspace.js",
           "bytes": 39192,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "bea3e14cc6c5f58070e95fe84f9004ff592e65529993f1659b1722f3739a767a",
+          "sha256": "9b6ff60208d795a25bf2fe7209b76d6732f6364071c8bc43ffb106cdfca636ba",
           "declaredEntrypoints": [
             {
               "line": 16,
@@ -18453,7 +18537,7 @@
           "file": "client/studio-image-workspace.js",
           "bytes": 39192,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "bea3e14cc6c5f58070e95fe84f9004ff592e65529993f1659b1722f3739a767a",
+          "sha256": "9b6ff60208d795a25bf2fe7209b76d6732f6364071c8bc43ffb106cdfca636ba",
           "declaredEntrypoints": [
             {
               "line": 16,
@@ -18803,9 +18887,9 @@
         },
         "recovery": {
           "file": "client/native-controller.js",
-          "bytes": 137376,
+          "bytes": 142004,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "f16728ac70897952547141de5c0eb5015020f35692402be326c5a721ad1db818",
+          "sha256": "0e3c1b09dd106838e754b675323413755cd7963d133b8c5c4dc96ecdb1d49b13",
           "declaredEntrypoints": [
             {
               "line": 22,
@@ -18993,7 +19077,7 @@
           "file": "client/studio-image-workspace.js",
           "bytes": 39192,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "bea3e14cc6c5f58070e95fe84f9004ff592e65529993f1659b1722f3739a767a",
+          "sha256": "9b6ff60208d795a25bf2fe7209b76d6732f6364071c8bc43ffb106cdfca636ba",
           "declaredEntrypoints": [
             {
               "line": 16,
@@ -19103,9 +19187,9 @@
         },
         "source": {
           "file": "host/native-source-store.js",
-          "bytes": 23264,
+          "bytes": 24363,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "c9c947629e678e7551f336312779d3a5e506fadb3debb5e35d8ab07537052737",
+          "sha256": "b0da9087e35d2e19baa5c17189c31f1912cf800edb5c9730c38cc576bc8e4b77",
           "declaredEntrypoints": [
             {
               "line": 31,
@@ -19185,10 +19269,10 @@
             },
             {
               "line": 153,
-              "declaration": "if(operation?.action==='brand-edit'){"
+              "declaration": "if(operation?.action==='feedback-edit'){"
             },
             {
-              "line": 203,
+              "line": 210,
               "declaration": "if(origin!==undefined){"
             }
           ]
@@ -19307,33 +19391,33 @@
       "facets": {
         "ui": {
           "file": "client/native-workspace.js",
-          "bytes": 99885,
+          "bytes": 102760,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "87ac78c74b43717bef113991871e7cc047a16725086301fc500a580cabaa67b0",
+          "sha256": "84827b05ed6e038ee092b85e78d0436d5545879a2a6761a1632f74348fd6edc7",
           "declaredEntrypoints": [
             {
-              "line": 19,
+              "line": 21,
               "declaration": "export function createNativeWorkspace({React,store}){"
             },
             {
-              "line": 33,
+              "line": 36,
               "declaration": "if(!style){style=document.createElement('style');style.dataset.designcraftNative='true';document.head.append(style);}"
             },
             {
-              "line": 72,
+              "line": 78,
               "declaration": "if(!abort.signal.aborted){created=URL.createObjectURL(blob);setUrl(created);setFontWarning(Number(response.headers.get('x-project-font-count'))>0);}"
             },
             {
-              "line": 159,
+              "line": 166,
               "declaration": "if(!latest||latest.sequence!==form.sequence){if(latest){stopPlanDraftTimer(key);const next={...latest,mode:'edit',id:saved.id,baseRevision:saved.revision,sequence:latest.sequence+1};delete n"
             }
           ]
         },
         "ai": {
           "file": "host/editor-tools.js",
-          "bytes": 14170,
+          "bytes": 15296,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "07c8a3968197524b4d7216bd2467789b61b019c84f519e4519432d05da7c065f",
+          "sha256": "f7794cf96d104a709f1fc2e2a36153116a2d411fdf85b84376cf59680a7d6e9a",
           "declaredEntrypoints": [
             {
               "line": 11,
@@ -19352,15 +19436,15 @@
               "declaration": "export function editorToolDefinition(manager){"
             },
             {
-              "line": 50,
+              "line": 51,
               "declaration": "async execute(args,exec){"
             },
             {
-              "line": 61,
+              "line": 62,
               "declaration": "if(args.action==='state'){"
             },
             {
-              "line": 78,
+              "line": 80,
               "declaration": "export function registerEditorTools(ctx,manager){"
             }
           ]
@@ -19379,65 +19463,73 @@
         },
         "output": {
           "file": "host/editor-routes.js",
-          "bytes": 32066,
+          "bytes": 33769,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "397e828e032bd00b01873caf2374f8dc04d7cb8b490939d91cde832bf8d0f5c1",
+          "sha256": "b8ca26005ed214325274ec9a9a7f22262d8cb6d3134cb3d867aae409ed90a970",
           "declaredEntrypoints": [
             {
-              "line": 21,
+              "line": 23,
               "declaration": "export function editorRoutes(ctx,manager,{guard,readJsonBody,sendJson}){"
             },
             {
-              "line": 27,
+              "line": 29,
               "declaration": "if(signal?.aborted){if(!shared.waiters&&!shared.done){shared.promise.catch(()=>{});shared.controller.abort();}return Promise.reject(new SafetyError('预览读取已停止',499));}"
             },
             {
-              "line": 38,
+              "line": 40,
               "declaration": "if(existing){previewCache.delete(key);previewCache.set(key,existing);return {bytes:existing,fontCount:fonts.items.length};}"
             },
             {
-              "line": 47,
+              "line": 49,
               "declaration": "if(source.meta.engine==='vectorcraft'){"
             },
             {
-              "line": 58,
+              "line": 60,
               "declaration": "while(previewCache.size>=32||previewBytes+bytes.length>32*1024*1024){const oldest=previewCache.keys().next().value;if(!oldest)break;previewBytes-=previewCache.get(oldest).length;previewCache"
             },
             {
-              "line": 114,
+              "line": 95,
+              "declaration": "if(req.method==='GET'){sendJson(res,200,{ok:true,receipt:readPptxReceipt(view.root,q.get('operationId'))});return;}"
+            },
+            {
+              "line": 127,
               "declaration": "switch(body.action){"
             },
             {
-              "line": 150,
+              "line": 163,
               "declaration": "if(body.action==='plan-create'){if(!/^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/.test(body.operationKey||''))throw new SafetyError('新计划需要稳定操作身份',422);id='plan-'+createHas"
             },
             {
-              "line": 184,
+              "line": 197,
               "declaration": "if(Object.hasOwn(edges,what)&&ids.length>=2&&['vectorcraft','deckcraft','photocraft'].includes(engine)){"
             },
             {
-              "line": 186,
+              "line": 199,
               "declaration": "if(engine==='photocraft'){const names={left:'leftEdges',center:'horizontalCenters',right:'rightEdges',top:'topEdges',middle:'verticalCenters',bottom:'bottomEdges'};command='layer.align.'+nam"
             },
             {
-              "line": 241,
+              "line": 254,
               "declaration": "if(req.method==='GET'){"
             },
             {
-              "line": 288,
+              "line": 301,
               "declaration": "if(req.method==='GET'){"
             },
             {
-              "line": 299,
+              "line": 312,
               "declaration": "if(req.method==='GET'){"
+            },
+            {
+              "line": 332,
+              "declaration": "catch(error){if(error.feedbackRejected)sendJson(res,error.status||409,{ok:false,error:error.message,feedbackRejected:true});else throw error;}"
             }
           ]
         },
         "recovery": {
           "file": "host/native-source-store.js",
-          "bytes": 23264,
+          "bytes": 24363,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "c9c947629e678e7551f336312779d3a5e506fadb3debb5e35d8ab07537052737",
+          "sha256": "b0da9087e35d2e19baa5c17189c31f1912cf800edb5c9730c38cc576bc8e4b77",
           "declaredEntrypoints": [
             {
               "line": 31,
@@ -19517,10 +19609,10 @@
             },
             {
               "line": 153,
-              "declaration": "if(operation?.action==='brand-edit'){"
+              "declaration": "if(operation?.action==='feedback-edit'){"
             },
             {
-              "line": 203,
+              "line": 210,
               "declaration": "if(origin!==undefined){"
             }
           ]
@@ -19547,33 +19639,33 @@
       "facets": {
         "ui": {
           "file": "client/native-workspace.js",
-          "bytes": 99885,
+          "bytes": 102760,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "87ac78c74b43717bef113991871e7cc047a16725086301fc500a580cabaa67b0",
+          "sha256": "84827b05ed6e038ee092b85e78d0436d5545879a2a6761a1632f74348fd6edc7",
           "declaredEntrypoints": [
             {
-              "line": 19,
+              "line": 21,
               "declaration": "export function createNativeWorkspace({React,store}){"
             },
             {
-              "line": 33,
+              "line": 36,
               "declaration": "if(!style){style=document.createElement('style');style.dataset.designcraftNative='true';document.head.append(style);}"
             },
             {
-              "line": 72,
+              "line": 78,
               "declaration": "if(!abort.signal.aborted){created=URL.createObjectURL(blob);setUrl(created);setFontWarning(Number(response.headers.get('x-project-font-count'))>0);}"
             },
             {
-              "line": 159,
+              "line": 166,
               "declaration": "if(!latest||latest.sequence!==form.sequence){if(latest){stopPlanDraftTimer(key);const next={...latest,mode:'edit',id:saved.id,baseRevision:saved.revision,sequence:latest.sequence+1};delete n"
             }
           ]
         },
         "ai": {
           "file": "host/editor-tools.js",
-          "bytes": 14170,
+          "bytes": 15296,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "07c8a3968197524b4d7216bd2467789b61b019c84f519e4519432d05da7c065f",
+          "sha256": "f7794cf96d104a709f1fc2e2a36153116a2d411fdf85b84376cf59680a7d6e9a",
           "declaredEntrypoints": [
             {
               "line": 11,
@@ -19592,15 +19684,15 @@
               "declaration": "export function editorToolDefinition(manager){"
             },
             {
-              "line": 50,
+              "line": 51,
               "declaration": "async execute(args,exec){"
             },
             {
-              "line": 61,
+              "line": 62,
               "declaration": "if(args.action==='state'){"
             },
             {
-              "line": 78,
+              "line": 80,
               "declaration": "export function registerEditorTools(ctx,manager){"
             }
           ]
@@ -19631,9 +19723,9 @@
         },
         "recovery": {
           "file": "host/native-source-store.js",
-          "bytes": 23264,
+          "bytes": 24363,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "c9c947629e678e7551f336312779d3a5e506fadb3debb5e35d8ab07537052737",
+          "sha256": "b0da9087e35d2e19baa5c17189c31f1912cf800edb5c9730c38cc576bc8e4b77",
           "declaredEntrypoints": [
             {
               "line": 31,
@@ -19713,10 +19805,10 @@
             },
             {
               "line": 153,
-              "declaration": "if(operation?.action==='brand-edit'){"
+              "declaration": "if(operation?.action==='feedback-edit'){"
             },
             {
-              "line": 203,
+              "line": 210,
               "declaration": "if(origin!==undefined){"
             }
           ]
@@ -19743,33 +19835,33 @@
       "facets": {
         "ui": {
           "file": "client/native-workspace.js",
-          "bytes": 99885,
+          "bytes": 102760,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "87ac78c74b43717bef113991871e7cc047a16725086301fc500a580cabaa67b0",
+          "sha256": "84827b05ed6e038ee092b85e78d0436d5545879a2a6761a1632f74348fd6edc7",
           "declaredEntrypoints": [
             {
-              "line": 19,
+              "line": 21,
               "declaration": "export function createNativeWorkspace({React,store}){"
             },
             {
-              "line": 33,
+              "line": 36,
               "declaration": "if(!style){style=document.createElement('style');style.dataset.designcraftNative='true';document.head.append(style);}"
             },
             {
-              "line": 72,
+              "line": 78,
               "declaration": "if(!abort.signal.aborted){created=URL.createObjectURL(blob);setUrl(created);setFontWarning(Number(response.headers.get('x-project-font-count'))>0);}"
             },
             {
-              "line": 159,
+              "line": 166,
               "declaration": "if(!latest||latest.sequence!==form.sequence){if(latest){stopPlanDraftTimer(key);const next={...latest,mode:'edit',id:saved.id,baseRevision:saved.revision,sequence:latest.sequence+1};delete n"
             }
           ]
         },
         "ai": {
           "file": "host/editor-tools.js",
-          "bytes": 14170,
+          "bytes": 15296,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "07c8a3968197524b4d7216bd2467789b61b019c84f519e4519432d05da7c065f",
+          "sha256": "f7794cf96d104a709f1fc2e2a36153116a2d411fdf85b84376cf59680a7d6e9a",
           "declaredEntrypoints": [
             {
               "line": 11,
@@ -19788,15 +19880,15 @@
               "declaration": "export function editorToolDefinition(manager){"
             },
             {
-              "line": 50,
+              "line": 51,
               "declaration": "async execute(args,exec){"
             },
             {
-              "line": 61,
+              "line": 62,
               "declaration": "if(args.action==='state'){"
             },
             {
-              "line": 78,
+              "line": 80,
               "declaration": "export function registerEditorTools(ctx,manager){"
             }
           ]
@@ -19971,57 +20063,65 @@
         },
         "output": {
           "file": "host/editor-routes.js",
-          "bytes": 32066,
+          "bytes": 33769,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "397e828e032bd00b01873caf2374f8dc04d7cb8b490939d91cde832bf8d0f5c1",
+          "sha256": "b8ca26005ed214325274ec9a9a7f22262d8cb6d3134cb3d867aae409ed90a970",
           "declaredEntrypoints": [
             {
-              "line": 21,
+              "line": 23,
               "declaration": "export function editorRoutes(ctx,manager,{guard,readJsonBody,sendJson}){"
             },
             {
-              "line": 27,
+              "line": 29,
               "declaration": "if(signal?.aborted){if(!shared.waiters&&!shared.done){shared.promise.catch(()=>{});shared.controller.abort();}return Promise.reject(new SafetyError('预览读取已停止',499));}"
             },
             {
-              "line": 38,
+              "line": 40,
               "declaration": "if(existing){previewCache.delete(key);previewCache.set(key,existing);return {bytes:existing,fontCount:fonts.items.length};}"
             },
             {
-              "line": 47,
+              "line": 49,
               "declaration": "if(source.meta.engine==='vectorcraft'){"
             },
             {
-              "line": 58,
+              "line": 60,
               "declaration": "while(previewCache.size>=32||previewBytes+bytes.length>32*1024*1024){const oldest=previewCache.keys().next().value;if(!oldest)break;previewBytes-=previewCache.get(oldest).length;previewCache"
             },
             {
-              "line": 114,
+              "line": 95,
+              "declaration": "if(req.method==='GET'){sendJson(res,200,{ok:true,receipt:readPptxReceipt(view.root,q.get('operationId'))});return;}"
+            },
+            {
+              "line": 127,
               "declaration": "switch(body.action){"
             },
             {
-              "line": 150,
+              "line": 163,
               "declaration": "if(body.action==='plan-create'){if(!/^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/.test(body.operationKey||''))throw new SafetyError('新计划需要稳定操作身份',422);id='plan-'+createHas"
             },
             {
-              "line": 184,
+              "line": 197,
               "declaration": "if(Object.hasOwn(edges,what)&&ids.length>=2&&['vectorcraft','deckcraft','photocraft'].includes(engine)){"
             },
             {
-              "line": 186,
+              "line": 199,
               "declaration": "if(engine==='photocraft'){const names={left:'leftEdges',center:'horizontalCenters',right:'rightEdges',top:'topEdges',middle:'verticalCenters',bottom:'bottomEdges'};command='layer.align.'+nam"
             },
             {
-              "line": 241,
+              "line": 254,
               "declaration": "if(req.method==='GET'){"
             },
             {
-              "line": 288,
+              "line": 301,
               "declaration": "if(req.method==='GET'){"
             },
             {
-              "line": 299,
+              "line": 312,
               "declaration": "if(req.method==='GET'){"
+            },
+            {
+              "line": 332,
+              "declaration": "catch(error){if(error.feedbackRejected)sendJson(res,error.status||409,{ok:false,error:error.message,feedbackRejected:true});else throw error;}"
             }
           ]
         },
@@ -20691,15 +20791,15 @@
       "facets": {
         "ui": {
           "file": "docs/requirements.json",
-          "bytes": 20142,
+          "bytes": 20503,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "4b834cccce2281f23251a177c5f6bbec442fbbd4cb72e754471d32fd55fa27ae"
+          "sha256": "58cc5ac9a3366cf6b0060e840ea9636279f94cac9ab80d97ac5c83c7ac2d8736"
         },
         "ai": {
           "file": "host/editor-tools.js",
-          "bytes": 14170,
+          "bytes": 15296,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "07c8a3968197524b4d7216bd2467789b61b019c84f519e4519432d05da7c065f",
+          "sha256": "f7794cf96d104a709f1fc2e2a36153116a2d411fdf85b84376cf59680a7d6e9a",
           "declaredEntrypoints": [
             {
               "line": 11,
@@ -20718,34 +20818,34 @@
               "declaration": "export function editorToolDefinition(manager){"
             },
             {
-              "line": 50,
+              "line": 51,
               "declaration": "async execute(args,exec){"
             },
             {
-              "line": 61,
+              "line": 62,
               "declaration": "if(args.action==='state'){"
             },
             {
-              "line": 78,
+              "line": 80,
               "declaration": "export function registerEditorTools(ctx,manager){"
             }
           ]
         },
         "source": {
           "file": "docs/capability-matrix.json",
-          "bytes": 125845,
+          "bytes": 126206,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
           "snapshot": "live status metadata; deliberately not self-hashed"
         },
         "output": {
           "file": "docs/capability-inventory.json",
-          "bytes": 90148,
+          "bytes": 90726,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
           "snapshot": "live status metadata; deliberately not self-hashed"
         },
         "recovery": {
           "file": "docs/capability-matrix.json",
-          "bytes": 125845,
+          "bytes": 126206,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
           "snapshot": "live status metadata; deliberately not self-hashed"
         }
@@ -20771,15 +20871,15 @@
       "facets": {
         "ui": {
           "file": "docs/requirements.json",
-          "bytes": 20142,
+          "bytes": 20503,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "4b834cccce2281f23251a177c5f6bbec442fbbd4cb72e754471d32fd55fa27ae"
+          "sha256": "58cc5ac9a3366cf6b0060e840ea9636279f94cac9ab80d97ac5c83c7ac2d8736"
         },
         "ai": {
           "file": "host/editor-tools.js",
-          "bytes": 14170,
+          "bytes": 15296,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "07c8a3968197524b4d7216bd2467789b61b019c84f519e4519432d05da7c065f",
+          "sha256": "f7794cf96d104a709f1fc2e2a36153116a2d411fdf85b84376cf59680a7d6e9a",
           "declaredEntrypoints": [
             {
               "line": 11,
@@ -20798,34 +20898,34 @@
               "declaration": "export function editorToolDefinition(manager){"
             },
             {
-              "line": 50,
+              "line": 51,
               "declaration": "async execute(args,exec){"
             },
             {
-              "line": 61,
+              "line": 62,
               "declaration": "if(args.action==='state'){"
             },
             {
-              "line": 78,
+              "line": 80,
               "declaration": "export function registerEditorTools(ctx,manager){"
             }
           ]
         },
         "source": {
           "file": "docs/capability-matrix.json",
-          "bytes": 125845,
+          "bytes": 126206,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
           "snapshot": "live status metadata; deliberately not self-hashed"
         },
         "output": {
           "file": "docs/capability-inventory.json",
-          "bytes": 90148,
+          "bytes": 90726,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
           "snapshot": "live status metadata; deliberately not self-hashed"
         },
         "recovery": {
           "file": "docs/capability-matrix.json",
-          "bytes": 125845,
+          "bytes": 126206,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
           "snapshot": "live status metadata; deliberately not self-hashed"
         }
@@ -20844,9 +20944,9 @@
       "facets": {
         "ui": {
           "file": "README.md",
-          "bytes": 2612,
+          "bytes": 1928,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "02635b69b079fff3aa9aba8aebf883a9ecd15995d158be4946182e1a2c5c441d"
+          "sha256": "bbdfe644e5076cef15355002be33dbe7f941c8f9b45c62989897a3e98aa3806f"
         },
         "ai": {
           "file": "host/installed-version.js",
@@ -20866,34 +20966,34 @@
         },
         "source": {
           "file": "package.json",
-          "bytes": 1356,
+          "bytes": 2062,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "7199a09a622cee2daac94c9832785a1446073cba1d8bcdedad4e9153d2d89818"
+          "sha256": "6757430ca86205984f46c0a40057d2bd55074c4bcc47f607515921059645b258"
         },
         "output": {
           "file": "web-runtime-lock.json",
-          "bytes": 63710,
+          "bytes": 63609,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "e7a497673aad706e0f10366c7ed8f34fc9df044a85fa72945731bcc58548a0a1"
+          "sha256": "7db4a64d772603d8960392f0d0b6ab4005b962cc1be054267b673a773d61a8d2"
         },
         "recovery": {
           "file": "runtime-lock.json",
-          "bytes": 2038,
+          "bytes": 2146,
           "interpretation": "Source/file reference only; not proof the complete task is implemented or currently passes.",
-          "sha256": "5dd4b18786e36e60ccfc3919ca95a1a1649ef7c455dfd141e423f2911c70fb70"
+          "sha256": "4d7f1235459948afed6f9d29f88037fd1704e75651f63918796b6687cfde4a8f"
         }
       },
       "evidence": [
         {
           "file": "core-closeout.md",
-          "bytes": 3922,
-          "sha256": "846d1ca5116bfc081a69e64f48df6697d8f12f1e031a93c9b7e98e40744d2eb5",
+          "bytes": 849,
+          "sha256": "3a5bf678d7d4a9dcdf2db6897cffb8f461d44e27a015b105e4ce55310969f8ad",
           "kind": "historical_or_documentary_evidence; scope comes from the original report"
         },
         {
           "file": "dependency-license-audit.json",
-          "bytes": 195234,
-          "sha256": "728faf7378ce659ef494e9b814d65cbf51f3d8a3f8ccde9387a963f58830f01c",
+          "bytes": 222543,
+          "sha256": "6e88ca5e5eca9008bb7552ac350ec3eb422bcc01556818dd6167ef080e42a979",
           "kind": "historical_or_documentary_evidence; scope comes from the original report"
         },
         {
@@ -20911,7 +21011,7 @@
         {
           "file": "native-source-input-audit.json",
           "bytes": 1058,
-          "sha256": "ba53a1b846c6c20033e94cdbd5585343e5945f638676b70e2e7b4cef2fa6739e",
+          "sha256": "662cf856267c2b3bbb100f5aee78cf8b4cceb87335de5aa30a1730da14e828b9",
           "kind": "historical_or_documentary_evidence; scope comes from the original report"
         }
       ],
@@ -20929,7 +21029,7 @@
       {
         "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\instance-stage-audit.json",
         "location": "evidence",
-        "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\deck-host-build.json",
+        "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\deck-host-build.json",
         "bytes": 5785,
         "expected": "ee04bba00249b1af9035e1bbd949b15f7869d236ff15693b1152dc21d560200f",
         "actual": "54ac14dbc5b4b6f3881eae5a8d3dd0780a6ca368c9405837e457b12ef6d4d769"
@@ -20977,7 +21077,7 @@
       {
         "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\svg-deck-stage-audit.json",
         "location": "evidence",
-        "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\svg-deck-after.pptx",
+        "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\svg-deck-after.pptx",
         "bytes": 36175,
         "expected": "aaa318e98f311a0fcc3e6a5a7afb673db5ea27822cfb493581780a6746e6411a",
         "actual": "c70e507947a1575cbf904922d6debd3be1d7d9a0fb6c936d967b75f3a9636636"
@@ -20985,7 +21085,7 @@
       {
         "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\svg-inplace-core-audit.json",
         "location": "evidence",
-        "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\svg-deck-browser.json",
+        "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\svg-deck-browser.json",
         "bytes": 4850,
         "expected": "a857573030bd6c8a47a32228375b4a1a19a68e53adc04f603095bf6a2a44295c",
         "actual": "025314bb6736988fce50a1932574298d6eff8cd3d3eea293de1214829841204f"
@@ -20993,7 +21093,7 @@
       {
         "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\svg-inplace-core-audit.json",
         "location": "evidence",
-        "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\svg-deck-browser.log",
+        "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\svg-deck-browser.log",
         "bytes": 317,
         "expected": "79f63cd83486bdbd0ded3d1c7635f156a54c79d4dc16f1220344e1d862c3d4c3",
         "actual": "4e8670d9cb4afaf6ef20478d31bcbbf75a04810cfa2d1d8d3656b29ee9d83d2a"
@@ -21001,7 +21101,7 @@
       {
         "report": "D:\\METIS超级合并\\dsh-plugin\\designcraft\\docs\\verification\\svg-inplace-core-audit.json",
         "location": "evidence",
-        "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\svg-deck-after.pptx",
+        "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\evidence\\svg-deck-after.pptx",
         "bytes": 36513,
         "expected": "6fa43c0c96130008d9d971027fc1c78addebc2af24c5f45c4867eef0c28af09b",
         "actual": "c70e507947a1575cbf904922d6debd3be1d7d9a0fb6c936d967b75f3a9636636"
@@ -21557,117 +21657,117 @@
     "candidateFilesHashed": 98,
     "exactMatches": [
       {
-        "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\before-core-closeout-20261112\\deck-source\\crates\\ui-egui\\src\\app.rs",
+        "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\before-core-closeout-20261112\\deck-source\\crates\\ui-egui\\src\\app.rs",
         "bytes": 15772,
         "sha256": "d298bfaf00c97f5fcf8632b867933397364057128eca629ccb5ce9a90ab8f290"
       },
       {
-        "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\before-core-closeout-20261112\\deck-source\\crates\\ui-egui\\src\\lib.rs",
+        "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\before-core-closeout-20261112\\deck-source\\crates\\ui-egui\\src\\lib.rs",
         "bytes": 22723,
         "sha256": "5030b4ae4707627c42ffc3e2f3c5716f426bdb27075787e7845f78e4bf56dab4"
       },
       {
-        "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\before-css-design-tokens\\host\\open-design-library.js",
+        "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\before-css-design-tokens\\host\\open-design-library.js",
         "bytes": 9734,
         "sha256": "cabe0b4cc190bac06da95bdc3bad02fd46dcd013e9f7bf8928c5725625dc77c4"
       },
       {
-        "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\before-project-fonts\\deck\\api.rs",
+        "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\before-project-fonts\\deck\\api.rs",
         "bytes": 5007,
         "sha256": "0430364aaabaa18748249fa84a3d27815eca0450dfc85b07043ae9bae41d8b83"
       },
       {
-        "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\before-svg-commands\\crates\\engine\\src\\cmd.rs",
+        "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\before-svg-commands\\crates\\engine\\src\\cmd.rs",
         "bytes": 29789,
         "sha256": "87dd83b430a171883a9ed17142cd837b29433dea65f270a3615d87e3b038bb2b"
       },
       {
-        "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\native8-source-checkpoint\\crates\\text\\build\\web_fonts.rs",
+        "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\native8-source-checkpoint\\crates\\text\\build\\web_fonts.rs",
         "bytes": 4724,
         "sha256": "59197fff8c7b185c3387515fd87bb06f66232f8cebab9be4cb0c9bb9684d8263"
       },
       {
-        "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\legacy-package-restore\\95d9ca0b-5630-4f29-bd6c-d37b821f09a4\\dependencies\\photocraft-host\\LICENSE-APACHE",
+        "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\legacy-package-restore\\95d9ca0b-5630-4f29-bd6c-d37b821f09a4\\dependencies\\photocraft-host\\LICENSE-APACHE",
         "bytes": 10174,
         "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
       },
       {
-        "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\legacy-package-restore\\95d9ca0b-5630-4f29-bd6c-d37b821f09a4\\dependencies\\vectorcraft-host\\LICENSE-MIT",
+        "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\legacy-package-restore\\95d9ca0b-5630-4f29-bd6c-d37b821f09a4\\dependencies\\vectorcraft-host\\LICENSE-MIT",
         "bytes": 1103,
         "sha256": "8b6025dc4b707e0fb08b9c2054096f1be3ae61529399aa2c348dec676562dc71"
       },
       {
-        "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\legacy-package-restore\\95d9ca0b-5630-4f29-bd6c-d37b821f09a4\\dependencies\\vectorcraft-host\\NOTICE",
+        "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\legacy-package-restore\\95d9ca0b-5630-4f29-bd6c-d37b821f09a4\\dependencies\\vectorcraft-host\\NOTICE",
         "bytes": 8174,
         "sha256": "ffb54183b2b44903f64736cdc9b50abb834ee6dac7059d2c9631692dd13c754b"
       },
       {
-        "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\package-roundtrip\\6d8d6b74-f90c-45b9-8c6d-b716fda331ef\\dependencies\\deckcraft-host\\LICENSE-MIT",
+        "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\package-roundtrip\\6d8d6b74-f90c-45b9-8c6d-b716fda331ef\\dependencies\\deckcraft-host\\LICENSE-MIT",
         "bytes": 1101,
         "sha256": "90e96fef569474cd526350e716e4b05dd32f179ca96d39d61e6b928485e35406"
       },
       {
-        "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\package-roundtrip\\6d8d6b74-f90c-45b9-8c6d-b716fda331ef\\dependencies\\designcraft\\THIRD_PARTY_NOTICES.md",
+        "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\package-roundtrip\\6d8d6b74-f90c-45b9-8c6d-b716fda331ef\\dependencies\\designcraft\\THIRD_PARTY_NOTICES.md",
         "bytes": 2640,
         "sha256": "db3c03f21519da742116fc78d27993a768eb23812d8d997469c7e4ffc8947f0f"
       },
       {
-        "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\upstream\\deckcraft-4ce2944630b04188dee8504c14151994d06c416a\\Cargo.toml",
+        "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\upstream\\deckcraft-4ce2944630b04188dee8504c14151994d06c416a\\Cargo.toml",
         "bytes": 5920,
         "sha256": "95e2e1f6cc9eaf8e3f95f43757416df362a3c40b409f4cff704e35c2305a7135"
       },
       {
-        "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\upstream\\deckcraft-4ce2944630b04188dee8504c14151994d06c416a\\apps\\deckcraft-web\\Trunk.toml",
+        "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\upstream\\deckcraft-4ce2944630b04188dee8504c14151994d06c416a\\apps\\deckcraft-web\\Trunk.toml",
         "bytes": 199,
         "sha256": "a996cb61144f4f961e8a44d8df04ef329620c12928aea4a4f328d1fcaf055ec8"
       },
       {
-        "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\upstream\\deckcraft-4ce2944630b04188dee8504c14151994d06c416a\\crates\\engine\\src\\fonts.rs",
+        "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\upstream\\deckcraft-4ce2944630b04188dee8504c14151994d06c416a\\crates\\engine\\src\\fonts.rs",
         "bytes": 7565,
         "sha256": "1e7db2d436d229d70df5775afb26f7066f4f1744611a8a0fcc2fa8d17405e2d8"
       },
       {
-        "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\upstream\\deckcraft-4ce2944630b04188dee8504c14151994d06c416a\\crates\\engine\\src\\cmd\\artistic.rs",
+        "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\upstream\\deckcraft-4ce2944630b04188dee8504c14151994d06c416a\\crates\\engine\\src\\cmd\\artistic.rs",
         "bytes": 8884,
         "sha256": "006743ed76a3a63be3c66646136651182b9ae93be69f2feb9d01c0b49138fcdd"
       },
       {
-        "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\upstream\\deckcraft-4ce2944630b04188dee8504c14151994d06c416a\\crates\\engine\\src\\cmd\\shape\\picture_replace_tests.rs",
+        "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\upstream\\deckcraft-4ce2944630b04188dee8504c14151994d06c416a\\crates\\engine\\src\\cmd\\shape\\picture_replace_tests.rs",
         "bytes": 7537,
         "sha256": "6363798988211eef3feb26b12a2abf122863c05fa0b0a5543e95097fd8ac4b55"
       },
       {
-        "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\upstream\\deckcraft-4ce2944630b04188dee8504c14151994d06c416a\\crates\\engine\\tests\\host_material.rs",
+        "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\upstream\\deckcraft-4ce2944630b04188dee8504c14151994d06c416a\\crates\\engine\\tests\\host_material.rs",
         "bytes": 5407,
         "sha256": "6ad1e44b958484c36424e35ad438b1788aa8451a8ce8176c66d7997d266fbe2b"
       },
       {
-        "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\upstream\\deckcraft-4ce2944630b04188dee8504c14151994d06c416a\\crates\\fonts\\build.rs",
+        "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\upstream\\deckcraft-4ce2944630b04188dee8504c14151994d06c416a\\crates\\fonts\\build.rs",
         "bytes": 25854,
         "sha256": "692cbe7723d5860c3b35816c5a274ae04919d80d6147cdf7d6288bb429f45bdf"
       },
       {
-        "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\upstream\\deckcraft-4ce2944630b04188dee8504c14151994d06c416a\\crates\\ui-egui\\src\\app\\commands.rs",
+        "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\upstream\\deckcraft-4ce2944630b04188dee8504c14151994d06c416a\\crates\\ui-egui\\src\\app\\commands.rs",
         "bytes": 14714,
         "sha256": "fb054a7155a070980d1f8cde47e2ac43e9816679d336d21d88c66414ef1d807e"
       },
       {
-        "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\upstream\\vectorcraft-bcebabe3f8c23a376ac68e9e6726590af278f7bb\\apps\\vectorcraft-web\\Cargo.toml",
+        "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\upstream\\vectorcraft-bcebabe3f8c23a376ac68e9e6726590af278f7bb\\apps\\vectorcraft-web\\Cargo.toml",
         "bytes": 1588,
         "sha256": "8a3912fc1764cd1cf979534910d823b9d3c1d979a48b41888ea3f2d715396d1b"
       },
       {
-        "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\upstream\\vectorcraft-bcebabe3f8c23a376ac68e9e6726590af278f7bb\\crates\\engine\\src\\cmd.rs",
+        "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\upstream\\vectorcraft-bcebabe3f8c23a376ac68e9e6726590af278f7bb\\crates\\engine\\src\\cmd.rs",
         "bytes": 26972,
         "sha256": "f0b8ee1c033c3750ab6214b08858c85b59f4406d84053faa536a3621d9437731"
       },
       {
-        "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\upstream\\vectorcraft-bcebabe3f8c23a376ac68e9e6726590af278f7bb\\crates\\engine\\src\\cmd\\edit.rs",
+        "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\upstream\\vectorcraft-bcebabe3f8c23a376ac68e9e6726590af278f7bb\\crates\\engine\\src\\cmd\\edit.rs",
         "bytes": 52448,
         "sha256": "22828b93c9a9876457d9c0f7a2ff978b85bc17915da0317edf17325ed60b6035"
       },
       {
-        "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\upstream\\vectorcraft-bcebabe3f8c23a376ac68e9e6726590af278f7bb\\crates\\engine\\tests\\host_material.rs",
+        "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\upstream\\vectorcraft-bcebabe3f8c23a376ac68e9e6726590af278f7bb\\crates\\engine\\tests\\host_material.rs",
         "bytes": 5682,
         "sha256": "c74b78903f168847b6aa745985c8d2a156c0542783c1df27a2f958430107f6f8"
       }

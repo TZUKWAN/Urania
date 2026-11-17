@@ -10,8 +10,8 @@
         "flushes": 0,
         "reference": {
           "schema": 1,
-          "sessionId": "PUBLIC-REDACTED",
-          "root": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\reference-live-project\\1be8ddf1-b1d6-471f-92ff-c1a7400546f3",
+          "sessionId": "session-PUBLIC-REDACTED",
+          "root": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\reference-live-project\\1be8ddf1-b1d6-471f-92ff-c1a7400546f3",
           "sourceId": "import-c580324c-7406-4cf5-af5d-9ce1ee828f34",
           "title": "native-fixture",
           "epoch": "7af02abb-afcd-42e0-a022-29e4e788f084",
@@ -92,7 +92,7 @@
         }
       ]
     },
-    "sessionId": "PUBLIC-REDACTED"
+    "sessionId": "session-PUBLIC-REDACTED"
   },
   "pageErrors": []
 }

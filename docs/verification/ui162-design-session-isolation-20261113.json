@@ -92,7 +92,7 @@
     "observedHttp200": 5,
     "newImageRequests": 0,
     "senderSessionId": "session-PUBLIC-REDACTED",
-    "ordinarySessionId": "PUBLIC-REDACTED",
+    "ordinarySessionId": "session-PUBLIC-REDACTED",
     "ordinaryLogBeforeSha256": "ebeaaa0c5f0e2ea9201a613d05a03ed136d07ecaeec72a720b8026c15a97e83e",
     "ordinaryLogAfterSha256": "ebeaaa0c5f0e2ea9201a613d05a03ed136d07ecaeec72a720b8026c15a97e83e",
     "ordinaryDraftExact": true,

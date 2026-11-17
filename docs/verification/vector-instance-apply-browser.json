@@ -1,7 +1,7 @@
 {
   "status": "passed",
   "scope": "actual native Vector/Photo tools+physical brush+UI independent fork/apply, nested clipping image, opacity/rotation/blend and other-use preservation; native/SVG/PNG/reopen; no model",
-  "root": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\vector-inplace-project\\f400f33f-0945-4211-bcbd-0da6308ea3fa",
+  "root": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\vector-inplace-project\\f400f33f-0945-4211-bcbd-0da6308ea3fa",
   "codeRoot": "D:\\METIS超级合并\\dsh-plugin\\designcraft",
   "checks": [
     {
@@ -38,7 +38,7 @@
   ],
   "owned": {
     "workspaceId": "f762bbe9-cec0-4bab-8671-429f29b149c6",
-    "sessionId": "PUBLIC-REDACTED"
+    "sessionId": "session-PUBLIC-REDACTED"
   },
   "asset": {
     "id": "asset-fb18f1a7-9bee-48a6-9542-4c1337b9269f",

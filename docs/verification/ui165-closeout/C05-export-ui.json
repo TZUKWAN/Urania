@@ -1,0 +1,55 @@
+{
+  "kind": "actual DSH UI, registered motion tool, supervisor/worker and real MP4 download; no model/provider turn",
+  "providerTurns": 0,
+  "passed": true,
+  "root": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\urania-closeout-20261118\\projects\\motion-export-ui-05721249-37bd-4e28-a977-f32b350a6e0a",
+  "first": {
+    "status": "completed",
+    "jobId": "9d1024e7-11e8-4735-8dc6-79e24da3e37d",
+    "progress": 100,
+    "opRevision": "9fbb6e97bad3ca429fe10526bcbabea02a6f3b33a8a93084f0494e252df7b239",
+    "opKey": "ui-render-49581c87-6d28-49d6-99a7-44f9b8f0c9d1",
+    "receipt": {
+      "verified": true,
+      "frames": 24,
+      "width": 320,
+      "height": 180,
+      "codec": "h264",
+      "pixFmt": "yuv420p",
+      "fps": "24/1",
+      "sha256": "bca49ba5ca362cd30fedfca2121681cdaeb2530b4b7a2c28d47c914f2ba69b50",
+      "bytes": 13836
+    },
+    "error": null
+  },
+  "cancelledAttempt": {
+    "status": "rendering",
+    "jobId": "37a08d15-a180-4fa9-abb3-05ce93a7dbd5",
+    "progress": 0,
+    "opRevision": "9fbb6e97bad3ca429fe10526bcbabea02a6f3b33a8a93084f0494e252df7b239",
+    "opKey": "ui-render-a7219176-7aa0-486e-9284-7b416379d7b0"
+  },
+  "retry": {
+    "status": "completed",
+    "jobId": "1203ef10-3109-45e1-95a1-b606ea38b35d",
+    "progress": 100,
+    "opRevision": "9fbb6e97bad3ca429fe10526bcbabea02a6f3b33a8a93084f0494e252df7b239",
+    "opKey": "ui-render-47ec38e1-90bf-49e0-a634-d69e0206ba2c",
+    "receipt": {
+      "verified": true,
+      "frames": 24,
+      "width": 320,
+      "height": 180,
+      "codec": "h264",
+      "pixFmt": "yuv420p",
+      "fps": "24/1",
+      "sha256": "bca49ba5ca362cd30fedfca2121681cdaeb2530b4b7a2c28d47c914f2ba69b50",
+      "bytes": 13836
+    },
+    "error": null
+  },
+  "uiPollReachedVerifiedCompletion": true,
+  "canCancelAndRetry": true,
+  "actualDownloadedBytesMatchReceipt": true,
+  "pageErrors": []
+}

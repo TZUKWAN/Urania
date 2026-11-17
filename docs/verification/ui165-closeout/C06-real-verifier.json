@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "actualReceipt": {
+    "verified": true,
+    "frames": 12,
+    "width": 320,
+    "height": 180,
+    "codec": "h264",
+    "pixFmt": "yuv420p",
+    "fps": "12/1",
+    "sha256": "f8a83780b1f678b7e692b3e01d19dddd5c0ec609c73f06c5944969d421a62004",
+    "bytes": 4286
+  },
+  "wrongFrameRateRejected": true
+}

@@ -35,7 +35,7 @@ async function converterBytes() {
  if (cachedConverter) return cachedConverter;
  const lock = JSON.parse(await readFile(join(vendor, 'source-lock.json'), 'utf8'));
  const entry = lock.files?.find(file => file.name === 'dom-to-pptx.bundle.js.gz');
- if (lock.repository !== 'nexu-io/open-design' || lock.revision !== '12d970eacc8971150e3c76470d2a9afe16dc2ed1' || !entry) throw new SafetyError('网页转换器来源记录不可用', 503);
+ if (lock.repository !== 'atharva9167j/dom-to-pptx' || lock.revision !== 'c0447adc47d3bc734d017050834edf0941adc189' || lock.localBuild !== 'urania.codec1' || !entry) throw new SafetyError('网页转换器来源记录不可用', 503);
  const compressed = await readFile(join(vendor, entry.name));
  if (compressed.length !== entry.bytes || digest(compressed) !== entry.sha256) throw new SafetyError('网页转换器文件与固定版本不一致', 503);
  const result = gunzipSync(compressed, {maxOutputLength:12 * 1024 * 1024});

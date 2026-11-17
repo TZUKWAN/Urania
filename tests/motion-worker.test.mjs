@@ -7,11 +7,11 @@ import os from 'node:os';
 import { spawn } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import crypto from 'node:crypto';
-import { verifyArtifact } from '../host/motion/render-supervisor.js';
+import { verifyArtifact,resolveFfmpegDir } from '../host/motion/render-supervisor.js';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const WORKER = path.join(HERE, '..', 'motion-worker', 'entry.mjs');
-const FFMPEG_DIR = process.env.DESIGNCRAFT_FFMPEG_DIR || 'D:/MDHPROJECT/ffmpeg/ffmpeg-9.0.2-essentials_build/bin';
+const FFMPEG_DIR = resolveFfmpegDir();
 const FFPROBE = path.join(FFMPEG_DIR, process.platform === 'win32' ? 'ffprobe.exe' : 'ffprobe');
 
 const FPS = { num: 12, den: 1 };
@@ -78,7 +78,7 @@ test('motion worker renders a real MP4 that passes ffprobe verification', { time
 	assert.ok(fs.existsSync(outPath), 'MP4 exists');
 
 	// Artifact verification (same path as the supervisor's auto-verify).
-	const receipt = verifyArtifact(FFPROBE, outPath, FRAMES, W, H, FPS);
+	const receipt = await verifyArtifact(FFPROBE, outPath, FRAMES, W, H, FPS);
 	assert.equal(receipt.verified, true);
 	assert.equal(receipt.frames, FRAMES);
 	assert.equal(receipt.width, W);
@@ -165,7 +165,7 @@ window.__hfSettle = function () { return new Promise(function (r) { requestAnima
 		assert.equal(result.code, 0, 'worker exit 0, stderr: ' + result.stderr.slice(-400));
 		assert.ok(fs.existsSync(outPath), 'MP4 exists');
 		// Frame count verification (same path as supervisor auto-verify).
-		const receipt = verifyArtifact(FFPROBE, outPath, FRAMES, W, H, FPS);
+		const receipt = await verifyArtifact(FFPROBE, outPath, FRAMES, W, H, FPS);
 		assert.equal(receipt.verified, true);
 		// Frames must actually differ over time (WebGL responded to the clock).
 		const { execFileSync } = await import('node:child_process');
@@ -200,7 +200,7 @@ test('motion worker renders the vendored GSAP template (multi-timeline seek)', {
 		const lines = result.stdout.split('\n').filter(Boolean).map((l) => { try { return JSON.parse(l); } catch { return null; } }).filter(Boolean);
 		const meta = lines.find((m) => m.type === 'meta');
 		assert.ok(meta && meta.totalFrames === 30, '15s @2fps = 30 frames, got ' + JSON.stringify(meta));
-		const receipt = verifyArtifact(FFPROBE, outPath, 30, 1920, 1080, FPS2);
+		const receipt = await verifyArtifact(FFPROBE, outPath, 30, 1920, 1080, FPS2);
 		assert.equal(receipt.verified, true);
 		// GSAP clock must actually move pixels: first vs last frame differ.
 		const framesDir2 = path.join(dir, 'dump'); fs.mkdirSync(framesDir2, { recursive: true });

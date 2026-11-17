@@ -5,117 +5,117 @@
   "candidateFilesHashed": 98,
   "exactMatches": [
     {
-      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\before-core-closeout-20261112\\deck-source\\crates\\ui-egui\\src\\app.rs",
+      "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\before-core-closeout-20261112\\deck-source\\crates\\ui-egui\\src\\app.rs",
       "bytes": 15772,
       "sha256": "d298bfaf00c97f5fcf8632b867933397364057128eca629ccb5ce9a90ab8f290"
     },
     {
-      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\before-core-closeout-20261112\\deck-source\\crates\\ui-egui\\src\\lib.rs",
+      "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\before-core-closeout-20261112\\deck-source\\crates\\ui-egui\\src\\lib.rs",
       "bytes": 22723,
       "sha256": "5030b4ae4707627c42ffc3e2f3c5716f426bdb27075787e7845f78e4bf56dab4"
     },
     {
-      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\before-css-design-tokens\\host\\open-design-library.js",
+      "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\before-css-design-tokens\\host\\open-design-library.js",
       "bytes": 9734,
       "sha256": "cabe0b4cc190bac06da95bdc3bad02fd46dcd013e9f7bf8928c5725625dc77c4"
     },
     {
-      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\before-project-fonts\\deck\\api.rs",
+      "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\before-project-fonts\\deck\\api.rs",
       "bytes": 5007,
       "sha256": "0430364aaabaa18748249fa84a3d27815eca0450dfc85b07043ae9bae41d8b83"
     },
     {
-      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\before-svg-commands\\crates\\engine\\src\\cmd.rs",
+      "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\before-svg-commands\\crates\\engine\\src\\cmd.rs",
       "bytes": 29789,
       "sha256": "87dd83b430a171883a9ed17142cd837b29433dea65f270a3615d87e3b038bb2b"
     },
     {
-      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\native8-source-checkpoint\\crates\\text\\build\\web_fonts.rs",
+      "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\native8-source-checkpoint\\crates\\text\\build\\web_fonts.rs",
       "bytes": 4724,
       "sha256": "59197fff8c7b185c3387515fd87bb06f66232f8cebab9be4cb0c9bb9684d8263"
     },
     {
-      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\legacy-package-restore\\95d9ca0b-5630-4f29-bd6c-d37b821f09a4\\dependencies\\photocraft-host\\LICENSE-APACHE",
+      "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\legacy-package-restore\\95d9ca0b-5630-4f29-bd6c-d37b821f09a4\\dependencies\\photocraft-host\\LICENSE-APACHE",
       "bytes": 10174,
       "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
     },
     {
-      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\legacy-package-restore\\95d9ca0b-5630-4f29-bd6c-d37b821f09a4\\dependencies\\vectorcraft-host\\LICENSE-MIT",
+      "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\legacy-package-restore\\95d9ca0b-5630-4f29-bd6c-d37b821f09a4\\dependencies\\vectorcraft-host\\LICENSE-MIT",
       "bytes": 1103,
       "sha256": "8b6025dc4b707e0fb08b9c2054096f1be3ae61529399aa2c348dec676562dc71"
     },
     {
-      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\legacy-package-restore\\95d9ca0b-5630-4f29-bd6c-d37b821f09a4\\dependencies\\vectorcraft-host\\NOTICE",
+      "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\legacy-package-restore\\95d9ca0b-5630-4f29-bd6c-d37b821f09a4\\dependencies\\vectorcraft-host\\NOTICE",
       "bytes": 8174,
       "sha256": "ffb54183b2b44903f64736cdc9b50abb834ee6dac7059d2c9631692dd13c754b"
     },
     {
-      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\package-roundtrip\\6d8d6b74-f90c-45b9-8c6d-b716fda331ef\\dependencies\\deckcraft-host\\LICENSE-MIT",
+      "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\package-roundtrip\\6d8d6b74-f90c-45b9-8c6d-b716fda331ef\\dependencies\\deckcraft-host\\LICENSE-MIT",
       "bytes": 1101,
       "sha256": "90e96fef569474cd526350e716e4b05dd32f179ca96d39d61e6b928485e35406"
     },
     {
-      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\package-roundtrip\\6d8d6b74-f90c-45b9-8c6d-b716fda331ef\\dependencies\\designcraft\\THIRD_PARTY_NOTICES.md",
+      "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\package-roundtrip\\6d8d6b74-f90c-45b9-8c6d-b716fda331ef\\dependencies\\designcraft\\THIRD_PARTY_NOTICES.md",
       "bytes": 2640,
       "sha256": "db3c03f21519da742116fc78d27993a768eb23812d8d997469c7e4ffc8947f0f"
     },
     {
-      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\upstream\\deckcraft-4ce2944630b04188dee8504c14151994d06c416a\\Cargo.toml",
+      "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\upstream\\deckcraft-4ce2944630b04188dee8504c14151994d06c416a\\Cargo.toml",
       "bytes": 5920,
       "sha256": "95e2e1f6cc9eaf8e3f95f43757416df362a3c40b409f4cff704e35c2305a7135"
     },
     {
-      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\upstream\\deckcraft-4ce2944630b04188dee8504c14151994d06c416a\\apps\\deckcraft-web\\Trunk.toml",
+      "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\upstream\\deckcraft-4ce2944630b04188dee8504c14151994d06c416a\\apps\\deckcraft-web\\Trunk.toml",
       "bytes": 199,
       "sha256": "a996cb61144f4f961e8a44d8df04ef329620c12928aea4a4f328d1fcaf055ec8"
     },
     {
-      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\upstream\\deckcraft-4ce2944630b04188dee8504c14151994d06c416a\\crates\\engine\\src\\fonts.rs",
+      "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\upstream\\deckcraft-4ce2944630b04188dee8504c14151994d06c416a\\crates\\engine\\src\\fonts.rs",
       "bytes": 7565,
       "sha256": "1e7db2d436d229d70df5775afb26f7066f4f1744611a8a0fcc2fa8d17405e2d8"
     },
     {
-      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\upstream\\deckcraft-4ce2944630b04188dee8504c14151994d06c416a\\crates\\engine\\src\\cmd\\artistic.rs",
+      "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\upstream\\deckcraft-4ce2944630b04188dee8504c14151994d06c416a\\crates\\engine\\src\\cmd\\artistic.rs",
       "bytes": 8884,
       "sha256": "006743ed76a3a63be3c66646136651182b9ae93be69f2feb9d01c0b49138fcdd"
     },
     {
-      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\upstream\\deckcraft-4ce2944630b04188dee8504c14151994d06c416a\\crates\\engine\\src\\cmd\\shape\\picture_replace_tests.rs",
+      "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\upstream\\deckcraft-4ce2944630b04188dee8504c14151994d06c416a\\crates\\engine\\src\\cmd\\shape\\picture_replace_tests.rs",
       "bytes": 7537,
       "sha256": "6363798988211eef3feb26b12a2abf122863c05fa0b0a5543e95097fd8ac4b55"
     },
     {
-      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\upstream\\deckcraft-4ce2944630b04188dee8504c14151994d06c416a\\crates\\engine\\tests\\host_material.rs",
+      "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\upstream\\deckcraft-4ce2944630b04188dee8504c14151994d06c416a\\crates\\engine\\tests\\host_material.rs",
       "bytes": 5407,
       "sha256": "6ad1e44b958484c36424e35ad438b1788aa8451a8ce8176c66d7997d266fbe2b"
     },
     {
-      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\upstream\\deckcraft-4ce2944630b04188dee8504c14151994d06c416a\\crates\\fonts\\build.rs",
+      "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\upstream\\deckcraft-4ce2944630b04188dee8504c14151994d06c416a\\crates\\fonts\\build.rs",
       "bytes": 25854,
       "sha256": "692cbe7723d5860c3b35816c5a274ae04919d80d6147cdf7d6288bb429f45bdf"
     },
     {
-      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\upstream\\deckcraft-4ce2944630b04188dee8504c14151994d06c416a\\crates\\ui-egui\\src\\app\\commands.rs",
+      "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\upstream\\deckcraft-4ce2944630b04188dee8504c14151994d06c416a\\crates\\ui-egui\\src\\app\\commands.rs",
       "bytes": 14714,
       "sha256": "fb054a7155a070980d1f8cde47e2ac43e9816679d336d21d88c66414ef1d807e"
     },
     {
-      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\upstream\\vectorcraft-bcebabe3f8c23a376ac68e9e6726590af278f7bb\\apps\\vectorcraft-web\\Cargo.toml",
+      "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\upstream\\vectorcraft-bcebabe3f8c23a376ac68e9e6726590af278f7bb\\apps\\vectorcraft-web\\Cargo.toml",
       "bytes": 1588,
       "sha256": "8a3912fc1764cd1cf979534910d823b9d3c1d979a48b41888ea3f2d715396d1b"
     },
     {
-      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\upstream\\vectorcraft-bcebabe3f8c23a376ac68e9e6726590af278f7bb\\crates\\engine\\src\\cmd.rs",
+      "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\upstream\\vectorcraft-bcebabe3f8c23a376ac68e9e6726590af278f7bb\\crates\\engine\\src\\cmd.rs",
       "bytes": 26972,
       "sha256": "f0b8ee1c033c3750ab6214b08858c85b59f4406d84053faa536a3621d9437731"
     },
     {
-      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\upstream\\vectorcraft-bcebabe3f8c23a376ac68e9e6726590af278f7bb\\crates\\engine\\src\\cmd\\edit.rs",
+      "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\upstream\\vectorcraft-bcebabe3f8c23a376ac68e9e6726590af278f7bb\\crates\\engine\\src\\cmd\\edit.rs",
       "bytes": 52448,
       "sha256": "22828b93c9a9876457d9c0f7a2ff978b85bc17915da0317edf17325ed60b6035"
     },
     {
-      "file": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\upstream\\vectorcraft-bcebabe3f8c23a376ac68e9e6726590af278f7bb\\crates\\engine\\tests\\host_material.rs",
+      "file": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\upstream\\vectorcraft-bcebabe3f8c23a376ac68e9e6726590af278f7bb\\crates\\engine\\tests\\host_material.rs",
       "bytes": 5682,
       "sha256": "c74b78903f168847b6aa745985c8d2a156c0542783c1df27a2f958430107f6f8"
     }

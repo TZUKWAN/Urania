@@ -52,17 +52,24 @@ export const FRAME_RUNTIME_JS = String.raw`(function () {
   function fit() {
     if (!stageReady) mountStage();
     if (!stageReady || !(compW > 0) || !(compH > 0)) return;
+    var root = rootEl(); root.style.width = compW + 'px'; root.style.height = compH + 'px';
+    if (getComputedStyle(root).position === 'static') root.style.position = 'relative';
     var scale = Math.min(window.innerWidth / compW, Math.max(1, window.innerHeight) / compH);
     stage.style.cssText = 'position:fixed;width:' + compW + 'px;height:' + compH + 'px;left:' + ((window.innerWidth - compW * scale) / 2) + 'px;top:' + ((window.innerHeight - compH * scale) / 2) + 'px;transform-origin:0 0;transform:scale(' + scale + ')';
   }
   window.addEventListener('resize', fit);
 
   var els = [];
+  function startSeconds(node) {
+    var start = 0;
+    for (var n = node; n && n !== rootEl(); n = n.parentElement) start += parseFloat(n.dataset.start || '0') || 0;
+    return start;
+  }
   function collect() {
     els = []; var r = rootEl(); if (!r) return;
     var nodes = r.querySelectorAll('[data-start],[data-duration]');
     for (var i = 0; i < nodes.length; i++) {
-      els.push({ el: nodes[i], s: parseFloat(nodes[i].dataset.start || '0') || 0,
+      els.push({ el: nodes[i], s: startSeconds(nodes[i]),
         d: nodes[i].dataset.duration !== undefined ? parseFloat(nodes[i].dataset.duration) : NaN, vis: null });
     }
   }
@@ -79,13 +86,14 @@ export const FRAME_RUNTIME_JS = String.raw`(function () {
   function allTimelines() {
     var map = window.__timelines || {};
     var out = [];
-    for (var k in map) { var tl = map[k]; if (tl && typeof tl.seek === 'function' && typeof tl.play === 'function') out.push({ id: k, tl: tl }); }
+    var nodes = Array.from(document.querySelectorAll('[data-composition-id]'));
+    for (var k in map) { var tl = map[k]; if (tl && typeof tl.seek === 'function' && typeof tl.play === 'function') out.push({ id: k, tl: tl, start: startSeconds(nodes.find(function (n) { return n.dataset.compositionId === k; })) }); }
     return out;
   }
   function seekClock(t) {
     var all = allTimelines();
     for (var i = 0; i < all.length; i++) {
-      try { all[i].tl.pause(); all[i].tl.seek(Math.min(t / 1000, all[i].tl.duration() || t / 1000), false); } catch (e) { }
+      try { var local = Math.max(0, t / 1000 - all[i].start); all[i].tl.pause(); all[i].tl.seek(Math.min(local, all[i].tl.duration() || local), false); } catch (e) { }
     }
     var pa = document.getAnimations();
     for (var j = 0; j < pa.length; j++) { try { pa[j].pause(); pa[j].currentTime = t; } catch (e) { } }
@@ -105,14 +113,6 @@ export const FRAME_RUNTIME_JS = String.raw`(function () {
     for (var j = 0; j < a.length; j++) { try { a[j].pause(); } catch (e) { } }
   }
   function clockTimeMs() {
-    var all = allTimelines();
-    if (all.length) {
-      var best = null;
-      for (var i = 0; i < all.length; i++) {
-        try { var d = all[i].tl.duration() || 0; if (!best || d > best.d) best = { tl: all[i].tl, d: d }; } catch (e) { }
-      }
-      if (best) { try { return (best.tl.time() || 0) * 1000; } catch (e) { } return base; }
-    }
     if (playing) return base + (performance.now() - t0);
     return base;
   }
@@ -198,11 +198,11 @@ export const FRAME_RUNTIME_JS = String.raw`(function () {
     if (!playing) { rafId = 0; return; }
     var t = clockTimeMs();
     var ended = durationMs > 0 && t >= durationMs;
-    if (ended || clockEnded()) {
+    if (ended) {
       base = 0; t0 = performance.now();
-      seekClock(0); playClock(); syncAudio(0, true, true); report(0, true);
+      seekClock(0); windows(0); syncAudio(0, true, true); report(0, true);
     } else {
-      windows(t); syncAudio(t, true, false); report(t, false);
+      seekClock(t); windows(t); syncAudio(t, true, false); report(t, false);
     }
     rafId = requestAnimationFrame(loop);
   }
@@ -219,7 +219,7 @@ export const FRAME_RUNTIME_JS = String.raw`(function () {
     if (base >= durationMs) { base = 0; seekClock(0); }
     playing = true; t0 = performance.now();
     notice('');
-    playClock(); syncAudio(base, true, true);
+    seekClock(base); syncAudio(base, true, true);
     if (!rafId) rafId = requestAnimationFrame(loop);
   };
   window.__hfPause = window.__hfPause || function () {

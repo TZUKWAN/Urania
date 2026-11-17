@@ -3,7 +3,7 @@
   "scope": "当前设计面板的后台、界面、安装版本与实际加载的编辑器文件。",
   "mismatch": {
     "status": "passed",
-    "root": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\release-drift\\48a698ae-acf8-4121-a9e6-7c01f13bdcc1",
+    "root": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\release-drift\\48a698ae-acf8-4121-a9e6-7c01f13bdcc1",
     "source": {
       "sourceId": "work-d45a485c-33bd-4450-a2c8-018f7c5d5a62",
       "head": "45f2d79dc3a528cfbdab7d70b376094ffa72c955187f9f32e73e4c9a59261dc9",
@@ -18,7 +18,7 @@
   },
   "threeRenderers": {
     "status": "passed",
-    "root": "C:\\\\Users\\\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\release-drift\\48a698ae-acf8-4121-a9e6-7c01f13bdcc1",
+    "root": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-10-31\\sess-28174214-674f-4f4e-8d9b-e550f3d0b2f7\\work\\designcraft-unified\\release-drift\\48a698ae-acf8-4121-a9e6-7c01f13bdcc1",
     "engines": {
       "vectorcraft": {
         "version": "0.19.0+designcraft.host13",

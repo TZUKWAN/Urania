@@ -44,10 +44,11 @@ converter=root/'dom-to-pptx';cl=read(converter/'source-lock.json')
 for row in cl['files']:
  raw=check(converter/row['name'],row['sha256'],'pinned-converter')
  if raw is not None and row.get('expandedSha256'):assert sha(gzip.decompress(raw))==row['expandedSha256']
-licenses=read(P/'licenses/dom-to-pptx-components/manifest.json');lockAudit=read(P/licenses['publisherTagLockAudit']['file'])
+licenses=read(P/'licenses/dom-to-pptx-components/manifest.json');lockAuditPath=licenses.get('publisherTagLockAudit',{}).get('file','licenses/dom-to-pptx-components/publisher-tag-lock-audit.json');lockAudit=read(P/lockAuditPath)
 for row in licenses['components']+lockAudit['packages']:
  if row.get('licenseFile') and row.get('licenseSha256'):check(P/row['licenseFile'],row['licenseSha256'],'converter-license-text')
-for row in licenses['woff2Binary']['upstreamLicenses']:check(P/row['licenseFile'],row['sha256'],'referenced-upstream-license-text')
+for row in licenses.get('woff2Binary',{}).get('upstreamLicenses',[]):check(P/row['licenseFile'],row['sha256'],'referenced-upstream-license-text')
+for row in licenses.get('native',[]):check(P/row.get('licenseFile','licenses/dom-to-pptx-components/'+row['name']),row['sha256'],'rebuilt-codec-runtime-license')
 for row in licenses.get('publisherTagLockAudit',{}),:
  if row.get('file'):check(P/row['file'],row['sha256'],'publisher-tag-lock-audit')
 canvas=P/'resources/canvas-design';cs=read(canvas/'source-lock.json');archive=check(canvas/cs['archive'],cs['archiveSha256'],'pinned-canvas-source-archive');fontRefs=read(canvas/'font-license-references/source-lock.json')
@@ -63,7 +64,15 @@ standaloneLicenseFiles=[]
 for root in [P/'licenses/getrandom-0.4.3',P/'licenses/opendesign-styles']:
  for p in root.rglob('*'):
   if p.is_file():standaloneLicenseFiles.append({'file':p.relative_to(P).as_posix(),'bytes':p.stat().st_size,'sha256':sha(p.read_bytes())})
-report={'schema':1,'kind':'static-shipped-dependency-and-license-evidence-audit','at':datetime.now(timezone.utc).isoformat(),'functionalValidation':False,'runtimeFilesChecked':len(checks),'integrityErrors':errors,'unlistedWebRuntimeFiles':webExtra,'checks':checks,'nativeWebVersions':{k:r['version'] for k,r in web['engines'].items()},'fontsInOriginalCanvasArchive':fonts,'officialFontReferenceComparisons':fontRefs['fonts'],'otherLicenseEvidence':standaloneLicenseFiles,'sourceLimitations':[{'component':'pinned dom-to-pptx 2.0.1 bundle','status':'exact bytes and parent MIT source verified; complete bundle-to-lock relationship not established','details':licenses['unresolved']},{'component':'fonteditor-core@2.6.3 embedded WOFF2/Brotli','status':'package binary identity and upstream license texts recorded; exact native source/build revisions not identified'},{'component':'6 canvas fonts (IBM Plex Serif and Instrument Serif)','status':'actual source archive, embedded copyright/version/OFL declaration and official license reference recorded; exact Google Fonts reference bytes differ','files':[r['file'] for r in fontRefs['fonts'] if not r['bytesMatch']]}],'interpretation':'Hash checks and license/source declarations only. This is not a legal opinion, complete transitive-source proof, functional acceptance or authorization to a remote service.'}
+report={'schema':1,'kind':'static-shipped-dependency-and-license-evidence-audit','at':datetime.now(timezone.utc).isoformat(),'functionalValidation':False,'runtimeFilesChecked':len(checks),'integrityErrors':errors,'unlistedWebRuntimeFiles':webExtra,'checks':checks,'nativeWebVersions':{k:r['version'] for k,r in web['engines'].items()},'fontsInOriginalCanvasArchive':fonts,'officialFontReferenceComparisons':fontRefs['fonts'],'otherLicenseEvidence':standaloneLicenseFiles,'sourceLimitations':[{'component':'pinned dom-to-pptx 2.0.1 bundle','status':'exact bytes and parent MIT source verified; complete bundle-to-lock relationship not established','details':licenses.get('unresolved',[])},{'component':'fonteditor-core@2.6.3 embedded WOFF2/Brotli','status':'package binary identity and upstream license texts recorded; exact native source/build revisions not identified'},{'component':'6 canvas fonts (IBM Plex Serif and Instrument Serif)','status':'actual source archive, embedded copyright/version/OFL declaration and official license reference recorded; exact Google Fonts reference bytes differ','files':[r['file'] for r in fontRefs['fonts'] if not r['bytesMatch']]}],'interpretation':'Hash checks and license/source declarations only. This is not a legal opinion, complete transitive-source proof, functional acceptance or authorization to a remote service.'}
+if licenses.get('status')=='current-build-source-locked':
+ codec=read(converter/'codec-build-lock.json');exact=read(P/'licenses/canvas-fonts-exact-source.json')
+ for font in exact['files']:
+  original=next(row for row in fonts if row['archiveFile']==font['archiveFile'])
+  assert original['sha256']==font['sha256'] and font['exactBytesMatch']
+ report['sourceLimitations']=[]
+ report['currentSourceResolution']={'converter':{'status':'actual-source-build','sourceLock':cl,'codec':codec,'actualRollupModules':len(licenses['inputModules']),'historicalPrebuiltStillUnprovenAndInactive':True},'sixFonts':exact,'policy':'Original Google reference differences and old expected hashes are retained. New exact official font source closes the provenance gap without replacing the original fonts. npm publisher prebundles remain identified by verified package/lock identity rather than an invented independent nested build.'}
+ report['currentVersion']=read(P/'package.json')['version'];report['uiBuild']=read(P/'package.json')['designcraftUiBuild']
 (D/'dependency-license-audit.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 print(json.dumps({'checkedFiles':len(checks),'integrityErrors':len(errors),'webExtras':len(webExtra),'canvasFontMetadataRead':len(fonts),'sourceLimitations':len(report['sourceLimitations']),'functionalValidation':False}))
 if errors or webExtra:raise SystemExit('Static dependency integrity findings require review')
