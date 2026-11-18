@@ -1,5 +1,5 @@
-import {selectedObjectIds} from './native-contract.js?v=166';
-import {createStudioComponents} from './studio-system.js?v=166';
+import {selectedObjectIds} from './native-contract.js?v=167';
+import {createStudioComponents} from './studio-system.js?v=167';
 
 // Describe the real engine selection, including pixels and slide ranges.
 export function aiCanvasTarget(document){

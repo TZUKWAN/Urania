@@ -1,22 +1,23 @@
-import {createLocalWorkflowPanel} from './local-workflow-panel.js?v=166';
-import {currentDesignScope,isActiveDesignSession} from './design-session.js?v=166';
-import {insertDesignBrief} from './dsh-context.js?v=166';
-import {createDeckLocalTools,isDeckLocalAction} from './deck-local-tools.js?v=166';
-import {createStockPanel,openStockImage} from './stock-panel.js?v=166';
-import {NativeController} from './native-controller.js?v=166';
-import {quoteNative} from './native-reference.js?v=166';
-import {createBrandPanel} from './brand-panel.js?v=166';
-import {createHtmlWorkspace} from './html-workspace.js?v=166';
-import {createStudioImageWorkspace} from './studio-image-workspace.js?v=166';
-import {createLegacyMigrationWorkspace} from './legacy-migration-workspace.js?v=166';
-import {createNativeContextTools} from './native-context-tools.js?v=166';
-import {createAiCanvasTools} from './ai-canvas.js?v=166';
-import {createSelectionAi} from './selection-ai.js?v=166';
-import {DesignFeedbackClient,createFeedbackPanel} from './design-feedback.js?v=166';
-import {createDesignDiagnostics} from './design-diagnostics.js?v=166';
-import {createBriefDimensionControls,updateBriefDimension} from './brief-dimensions.js?v=166';
-import {createStudioComponents,studioEngines,userFacingError} from './studio-system.js?v=166';
-import {createStudioPanels} from './studio-panels.js?v=166';
+import {storeView} from './store-view.js?v=167';
+import {createLocalWorkflowPanel} from './local-workflow-panel.js?v=167';
+import {currentDesignScope,isActiveDesignSession} from './design-session.js?v=167';
+import {insertDesignBrief} from './dsh-context.js?v=167';
+import {createDeckLocalTools,isDeckLocalAction} from './deck-local-tools.js?v=167';
+import {createStockPanel,openStockImage} from './stock-panel.js?v=167';
+import {NativeController} from './native-controller.js?v=167';
+import {quoteNative} from './native-reference.js?v=167';
+import {createBrandPanel} from './brand-panel.js?v=167';
+import {createHtmlWorkspace} from './html-workspace.js?v=167';
+import {createStudioImageWorkspace} from './studio-image-workspace.js?v=167';
+import {createLegacyMigrationWorkspace} from './legacy-migration-workspace.js?v=167';
+import {createNativeContextTools} from './native-context-tools.js?v=167';
+import {createAiCanvasTools} from './ai-canvas.js?v=167';
+import {createSelectionAi} from './selection-ai.js?v=167';
+import {DesignFeedbackClient,createFeedbackPanel} from './design-feedback.js?v=167';
+import {createDesignDiagnostics} from './design-diagnostics.js?v=167';
+import {createBriefDimensionControls,updateBriefDimension} from './brief-dimensions.js?v=167';
+import {createStudioComponents,studioEngines,userFacingError} from './studio-system.js?v=167';
+import {createStudioPanels} from './studio-panels.js?v=167';
 const CSS=`
 .dcNativeWorkspace{position:relative;flex:1;display:flex;flex-direction:column;min-width:0;min-height:0;background:var(--dc-bg)}
 .dcNativeHeader{order:0;flex:none;display:flex;align-items:center;border-bottom:1px solid var(--dc-line)}
@@ -109,8 +110,9 @@ export function createNativeWorkspace({React,store}){
   },[source.id,source.revision,source.slideId,controller.view?.epoch,controller.state.fontGeneration]);
   return url?h('span',{className:'dcNativeThumbWrap',title:fontWarning?'本机预览已提供项目字体；若有系统同名字体，外观可能不同。':undefined},h('img',{className:'dcNativeWorkThumb',src:url,alt:source.title+' 的预览'}),fontWarning?h('small',null,'字体需核对'):null):h('span',{className:'dcNativeWorkThumb'},error?'预览不可用':'读取预览');
  }
+ const readWorkspace=storeView(store,s=>({native:s.native,services:s.services,designAssistant:s.designAssistant,uiBuild:s.uiBuild}));
  function Workspace({onFocusChat}){
-  const state=React.useSyncExternalStore(store.subscribe,store.get,store.get),native=state.native||controller.state;
+  const state=React.useSyncExternalStore(store.subscribe,readWorkspace,readWorkspace),native=state.native||controller.state;
   const scope=currentDesignScope(state.services),sessionId=scope?.sessionId,root=scope?.root;
   React.useEffect(()=>{if(root&&sessionId)void feedback.bind({root,sessionId}).catch(error=>feedback.change({error:error.message}));return()=>feedback.suspend();},[root,sessionId]);
   const anchor=React.useRef(null),input=React.useRef(null),workspace=React.useRef(null),fileDialog=React.useRef(null),modalInput=React.useRef(null);
@@ -353,9 +355,7 @@ export function createNativeWorkspace({React,store}){
      h(StudioButton,{icon:'download',label:'导出',className:source?'dcPrimary':'',disabled:!canUseMenus,'aria-expanded':menu==='export',onClick:()=>toggle('export')},compact('导出')),
      h(StudioButton,{icon:'more',label:'更多操作',disabled:disabledMenu,'aria-expanded':menu==='more',onClick:()=>toggle('more')}))),
    native.sourceNavigation?h('div',{className:'dcNativeNotice'},h('span',null,native.sourceNavigation.applyReason||(native.sourceNavigation.editId?'正在独立编辑此使用处。应用后保留原图位置、裁剪和效果。':'素材保留保存时版本。来源设计的修改不会自动替换已有素材。'))):null,
-   !menu&&source?h(AiCanvasTools,{controller,document:source,disabled:blocked,onError:setError,onQuote:run(quote),onAdvanced:()=>controller.setAdvancedEditing(!native.advancedEditing).catch(error=>setError(error.message)),onPhoto:()=>toggle('image')}):null,
    source&&!menu?h(SelectionAi,{controller,native,services:store.get().services,sessionId,feedback,onShowChat:onFocusChat}):null,
-   source&&!menu?h(FeedbackPanel,{native:source,onReview:reviewFeedback}):null,
    menu==='diagnostics'?h(DesignDiagnostics,{controller,services:store.get().services,sessionId,onClose:async()=>{setMenu(null);try{await controller.resumeHostMenu();}catch(error){setError(error.message);}}}):null,
    native.lastExportReceipt?.source.id===native.sourceId?h('details',{className:'dcNativeNotice'},h('summary',null,(native.lastExportReceipt.source.revision===native.sourceRevision?'本版本':'先前版本')+' PPTX 已导出 · '+native.lastExportReceipt.inspection.slideCount+' 页 · 未执行渲染复核'),h('span',null,'源版本 '+native.lastExportReceipt.source.revision.slice(0,12)+' · 文件 SHA256 '+native.lastExportReceipt.artifact.sha256),h('button',{className:'dcBtn',onClick:()=>saveFile(new File([JSON.stringify(native.lastExportReceipt,null,2)],'PPTX导出回执.json',{type:'application/json'}))},'保存回执')):null,
    native.aiInputNotice?h('div',{className:'dcNativeNotice',role:'status'},h('span',null,native.aiInputNotice),h('button',{className:'dcBtn',onClick:()=>controller.change({aiInputNotice:null})},'知道了')):null,
@@ -394,8 +394,11 @@ export function createNativeWorkspace({React,store}){
    menu==='image'&&native.hostMenuReady?h(StudioImageWorkspace,{key:sessionId+'|'+root,controller,onClose:()=>{setMenu(null);controller.resumeHostMenu().catch(error=>setError(error.message));}}):null,
    menu==='stock'&&native.hostMenuReady?h(StockPanel,{key:sessionId+'|'+root,controller,onClose:()=>{setMenu(null);controller.resumeHostMenu().catch(error=>setError(error.message));},onOpenImage:imageId=>openStockImage(controller,()=>setMenu(null),imageId)}):null,
    menu==='migration'&&native.hostMenuReady?h(LegacyMigrationWorkspace,{key:sessionId+'|'+root,controller,onClose:()=>{setMenu(null);controller.resumeHostMenu().catch(error=>setError(error.message));}}):null,
-   h('div',{className:'dcNativeStage','data-engine':currentEngine?.id,hidden:['html','image','stock','migration','workflows'].includes(menu)},
+   h('div',{className:'dcNativeStage','data-engine':currentEngine?.id,'data-canvas':source&&!native.advancedEditing?'simple':source?'professional':undefined,hidden:['html','image','stock','migration','workflows'].includes(menu)},
     h('div',{ref:anchor,className:'dcNativeAnchor'}),
+    !menu&&source?h(AiCanvasTools,{controller,document:source,disabled:blocked,onError:setError,onQuote:run(quote),onAdvanced:()=>controller.setAdvancedEditing(!native.advancedEditing).catch(error=>setError(error.message)),onPhoto:()=>toggle('image')}):null,
+    source&&!menu?h(FeedbackPanel,{native:source,onReview:reviewFeedback}):null,
+
     native.phase==='opening'?h('div',{className:'dcStudioNativeLoading',role:'status'},h('span',{className:'dcStudioSkeleton','aria-hidden':true}),'正在打开作品…'):null,
     !source&&native.phase!=='opening'?h(Home,{engines:controller.runtime?.engines,disabled:!canUseMenus,onEngine:beginCreate,onImport:()=>input.current?.click(),onWorks:()=>toggle('works'),onFocusChat}):null,
     inspector&&source&&!menu?h(Inspector,{document:source,controller,disabled:blocked,onClose:()=>setInspector(false),onError:cause=>setError(cause.message),ContextTools:NativeContextTools,onQuote:run(quote),onImage:()=>toggle('image')}):null,

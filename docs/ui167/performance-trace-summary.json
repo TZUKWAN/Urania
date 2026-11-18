@@ -1,0 +1,970 @@
+[
+  {
+    "stage": "baseline",
+    "model": null,
+    "idleFrames": {
+      "samples": 192,
+      "p50ms": 16.7,
+      "p95ms": 16.8,
+      "p99ms": 16.8,
+      "maxMs": 33.3,
+      "over33ms": 0
+    },
+    "streamActiveFrames": {
+      "samples": 1531,
+      "p50ms": 16.7,
+      "p95ms": 16.8,
+      "p99ms": 33.4,
+      "maxMs": 133.3,
+      "over33ms": 11
+    },
+    "textUpdates": 316,
+    "durationSeconds": 33.56,
+    "realModelCalls": 1,
+    "responseChars": 1191,
+    "renderMetrics": {
+      "LayoutCount": 1891,
+      "RecalcStyleCount": 1922,
+      "LayoutDuration": 1.4824,
+      "RecalcStyleDuration": 0.8321,
+      "ScriptDuration": 1.7626,
+      "TaskDuration": 7.3691
+    },
+    "longTasks": [
+      57,
+      84,
+      50,
+      62,
+      63
+    ],
+    "mainThread": {
+      "ThreadControllerImpl::RunTask": {
+        "events": 13296,
+        "wallMs": 7138.65,
+        "threadCpuMs": 4992.67,
+        "longestWallMs": 84.12
+      },
+      "ProxyMain::BeginMainFrame": {
+        "events": 1876,
+        "wallMs": 5396.33,
+        "threadCpuMs": 3750.64,
+        "longestWallMs": 63.15
+      },
+      "FireAnimationFrame": {
+        "events": 2723,
+        "wallMs": 854.09,
+        "threadCpuMs": 572.59,
+        "longestWallMs": 47.9
+      },
+      "FunctionCall": {
+        "events": 7570,
+        "wallMs": 2074.27,
+        "threadCpuMs": 1528.96,
+        "longestWallMs": 72.45
+      },
+      "PrePaint": {
+        "events": 3796,
+        "wallMs": 399.82,
+        "threadCpuMs": 330.57,
+        "longestWallMs": 7.03
+      },
+      "Layerize": {
+        "events": 1876,
+        "wallMs": 285.58,
+        "threadCpuMs": 247.45,
+        "longestWallMs": 4.1
+      },
+      "Receive mojo message": {
+        "events": 1198,
+        "wallMs": 1138.36,
+        "threadCpuMs": 888.25,
+        "longestWallMs": 84.08
+      },
+      "UpdateLayoutTree": {
+        "events": 1922,
+        "wallMs": 832.16,
+        "threadCpuMs": 557.05,
+        "longestWallMs": 51.28
+      },
+      "Paint": {
+        "events": 6638,
+        "wallMs": 507.0,
+        "threadCpuMs": 375.6,
+        "longestWallMs": 20.23
+      },
+      "Layout": {
+        "events": 1891,
+        "wallMs": 1458.98,
+        "threadCpuMs": 1079.09,
+        "longestWallMs": 43.64
+      },
+      "MinorGC": {
+        "events": 8,
+        "wallMs": 59.47,
+        "threadCpuMs": 30.71,
+        "longestWallMs": 17.9
+      },
+      "MajorGC": {
+        "events": 3,
+        "wallMs": 12.76,
+        "threadCpuMs": 10.82,
+        "longestWallMs": 4.43
+      }
+    },
+    "scriptCallbacks": {
+      "index-BgUyXZcc.js": {
+        "events": 2434,
+        "wallMs": 1568.85,
+        "threadCpuMs": 1184.79,
+        "longestWallMs": 72.45
+      },
+      "unresolved": {
+        "events": 4876,
+        "wallMs": 380.92,
+        "threadCpuMs": 288.56,
+        "longestWallMs": 5.69
+      },
+      "native-controller.js": {
+        "events": 134,
+        "wallMs": 107.13,
+        "threadCpuMs": 39.69,
+        "longestWallMs": 36.52
+      },
+      "design-feedback.js": {
+        "events": 17,
+        "wallMs": 7.13,
+        "threadCpuMs": 6.8,
+        "longestWallMs": 0.72
+      },
+      "editor-surface.js": {
+        "events": 94,
+        "wallMs": 5.66,
+        "threadCpuMs": 4.88,
+        "longestWallMs": 0.24
+      },
+      "sync.js": {
+        "events": 14,
+        "wallMs": 4.53,
+        "threadCpuMs": 4.19,
+        "longestWallMs": 0.67
+      },
+      "selection-ai.js": {
+        "events": 1,
+        "wallMs": 0.05,
+        "threadCpuMs": 0.05,
+        "longestWallMs": 0.05
+      }
+    },
+    "paintTargets": {
+      "#document": 1856,
+      "DSH embedded chat": 298,
+      "DSH workspace tree": 1841
+    },
+    "sourceTraceEvents": 960168,
+    "publicTraceEvents": 42800
+  },
+  {
+    "stage": "candidate",
+    "model": {
+      "provider": "zai-coding-cn",
+      "model": "glm-5.3-flash"
+    },
+    "idleFrames": {
+      "samples": 197,
+      "p50ms": 16.7,
+      "p95ms": 16.8,
+      "p99ms": 33.3,
+      "maxMs": 33.3,
+      "over33ms": 0
+    },
+    "streamActiveFrames": {
+      "samples": 1026,
+      "p50ms": 16.7,
+      "p95ms": 50,
+      "p99ms": 83.3,
+      "maxMs": 350,
+      "over33ms": 88
+    },
+    "textUpdates": 214,
+    "durationSeconds": 35.09,
+    "realModelCalls": 1,
+    "responseChars": 1148,
+    "renderMetrics": {
+      "LayoutCount": 1566,
+      "RecalcStyleCount": 1654,
+      "LayoutDuration": 3.1859,
+      "RecalcStyleDuration": 1.6769,
+      "ScriptDuration": 3.0459,
+      "TaskDuration": 15.6978
+    },
+    "longTasks": [
+      172,
+      77,
+      313,
+      59,
+      101,
+      54,
+      82,
+      57,
+      86,
+      53,
+      54,
+      52,
+      54,
+      59,
+      50,
+      59,
+      58,
+      50,
+      54,
+      53,
+      76,
+      67,
+      55,
+      56,
+      57,
+      53,
+      59,
+      59,
+      123,
+      98,
+      62,
+      76,
+      59,
+      53,
+      52,
+      58,
+      61,
+      110,
+      52,
+      61,
+      60,
+      55,
+      139,
+      51,
+      57,
+      50,
+      77,
+      54,
+      85,
+      56,
+      74
+    ],
+    "traceError": "No Chrome trace stream was retained for this run; rAF and PerformanceObserver samples were retained."
+  },
+  {
+    "stage": "candidate-diagnostics",
+    "model": {
+      "provider": "zai-coding-cn",
+      "model": "glm-5.3-flash"
+    },
+    "idleFrames": {
+      "samples": 193,
+      "p50ms": 16.7,
+      "p95ms": 16.7,
+      "p99ms": 16.8,
+      "maxMs": 16.8,
+      "over33ms": 0
+    },
+    "streamActiveFrames": {
+      "samples": 1150,
+      "p50ms": 16.7,
+      "p95ms": 33.3,
+      "p99ms": 33.4,
+      "maxMs": 266.6,
+      "over33ms": 9
+    },
+    "textUpdates": 275,
+    "durationSeconds": 25.02,
+    "realModelCalls": 1,
+    "responseChars": 1168,
+    "renderMetrics": {
+      "LayoutCount": 1367,
+      "RecalcStyleCount": 1398,
+      "LayoutDuration": 1.1843,
+      "RecalcStyleDuration": 0.7455,
+      "ScriptDuration": 1.5432,
+      "TaskDuration": 6.2176
+    },
+    "longTasks": [
+      65,
+      77,
+      56,
+      63,
+      57
+    ],
+    "mainThread": {
+      "ThreadControllerImpl::RunTask": {
+        "events": 12693,
+        "wallMs": 5991.48,
+        "threadCpuMs": 4132.69,
+        "longestWallMs": 77.37
+      },
+      "ProxyMain::BeginMainFrame": {
+        "events": 1347,
+        "wallMs": 4373.24,
+        "threadCpuMs": 3028.84,
+        "longestWallMs": 56.95
+      },
+      "FireAnimationFrame": {
+        "events": 2075,
+        "wallMs": 730.02,
+        "threadCpuMs": 494.67,
+        "longestWallMs": 27.62
+      },
+      "FunctionCall": {
+        "events": 6409,
+        "wallMs": 1880.72,
+        "threadCpuMs": 1321.59,
+        "longestWallMs": 66.5
+      },
+      "PrePaint": {
+        "events": 2751,
+        "wallMs": 330.16,
+        "threadCpuMs": 257.57,
+        "longestWallMs": 11.7
+      },
+      "Layerize": {
+        "events": 1347,
+        "wallMs": 267.91,
+        "threadCpuMs": 189.93,
+        "longestWallMs": 14.49
+      },
+      "Receive mojo message": {
+        "events": 1032,
+        "wallMs": 1031.25,
+        "threadCpuMs": 736.36,
+        "longestWallMs": 63.88
+      },
+      "UpdateLayoutTree": {
+        "events": 1394,
+        "wallMs": 744.59,
+        "threadCpuMs": 518.64,
+        "longestWallMs": 50.44
+      },
+      "Paint": {
+        "events": 4981,
+        "wallMs": 446.86,
+        "threadCpuMs": 308.25,
+        "longestWallMs": 23.11
+      },
+      "Layout": {
+        "events": 1367,
+        "wallMs": 1167.9,
+        "threadCpuMs": 872.0,
+        "longestWallMs": 16.58
+      },
+      "MinorGC": {
+        "events": 5,
+        "wallMs": 22.0,
+        "threadCpuMs": 14.4,
+        "longestWallMs": 10.2
+      },
+      "MajorGC": {
+        "events": 5,
+        "wallMs": 76.61,
+        "threadCpuMs": 35.28,
+        "longestWallMs": 47.4
+      }
+    },
+    "scriptCallbacks": {
+      "index-BgUyXZcc.js": {
+        "events": 2145,
+        "wallMs": 1437.4,
+        "threadCpuMs": 1011.09,
+        "longestWallMs": 66.5
+      },
+      "unresolved": {
+        "events": 4112,
+        "wallMs": 384.85,
+        "threadCpuMs": 269.92,
+        "longestWallMs": 9.28
+      },
+      "native-controller.js": {
+        "events": 56,
+        "wallMs": 42.5,
+        "threadCpuMs": 28.65,
+        "longestWallMs": 3.31
+      },
+      "design-feedback.js": {
+        "events": 13,
+        "wallMs": 7.25,
+        "threadCpuMs": 5.24,
+        "longestWallMs": 1.49
+      },
+      "sync.js": {
+        "events": 10,
+        "wallMs": 4.38,
+        "threadCpuMs": 2.91,
+        "longestWallMs": 1.64
+      },
+      "editor-surface.js": {
+        "events": 72,
+        "wallMs": 4.32,
+        "threadCpuMs": 3.76,
+        "longestWallMs": 0.21
+      },
+      "selection-ai.js": {
+        "events": 1,
+        "wallMs": 0.02,
+        "threadCpuMs": 0.02,
+        "longestWallMs": 0.02
+      }
+    },
+    "paintTargets": {
+      "#document": 1340,
+      "DSH embedded chat": 214,
+      "DSH workspace tree": 1323
+    },
+    "sourceTraceEvents": 735973,
+    "publicTraceEvents": 35409
+  },
+  {
+    "stage": "final",
+    "model": {
+      "provider": "zai-coding-cn",
+      "model": "glm-5.3-flash"
+    },
+    "idleFrames": {
+      "samples": 195,
+      "p50ms": 16.7,
+      "p95ms": 16.7,
+      "p99ms": 16.8,
+      "maxMs": 16.8,
+      "over33ms": 0
+    },
+    "streamActiveFrames": {
+      "samples": 1258,
+      "p50ms": 16.7,
+      "p95ms": 33.3,
+      "p99ms": 50,
+      "maxMs": 216.7,
+      "over33ms": 20
+    },
+    "textUpdates": 233,
+    "durationSeconds": 45.47,
+    "realModelCalls": 1,
+    "responseChars": 1207,
+    "renderMetrics": {
+      "LayoutCount": 2563,
+      "RecalcStyleCount": 2552,
+      "LayoutDuration": 2.0647,
+      "RecalcStyleDuration": 0.8912,
+      "ScriptDuration": 1.6064,
+      "TaskDuration": 9.1292
+    },
+    "longTasks": [
+      63,
+      92,
+      84,
+      57
+    ],
+    "mainThread": {
+      "ThreadControllerImpl::RunTask": {
+        "events": 17327,
+        "wallMs": 8929.31,
+        "threadCpuMs": 5664.48,
+        "longestWallMs": 91.97
+      },
+      "ProxyMain::BeginMainFrame": {
+        "events": 2524,
+        "wallMs": 6752.89,
+        "threadCpuMs": 4408.55,
+        "longestWallMs": 57.01
+      },
+      "FireAnimationFrame": {
+        "events": 3066,
+        "wallMs": 717.38,
+        "threadCpuMs": 456.35,
+        "longestWallMs": 40.45
+      },
+      "FunctionCall": {
+        "events": 7276,
+        "wallMs": 2022.76,
+        "threadCpuMs": 1334.2,
+        "longestWallMs": 82.65
+      },
+      "PrePaint": {
+        "events": 5095,
+        "wallMs": 463.37,
+        "threadCpuMs": 345.19,
+        "longestWallMs": 24.66
+      },
+      "Layerize": {
+        "events": 2523,
+        "wallMs": 424.58,
+        "threadCpuMs": 318.46,
+        "longestWallMs": 9.88
+      },
+      "Receive mojo message": {
+        "events": 1282,
+        "wallMs": 1382.79,
+        "threadCpuMs": 876.17,
+        "longestWallMs": 91.95
+      },
+      "UpdateLayoutTree": {
+        "events": 2548,
+        "wallMs": 889.67,
+        "threadCpuMs": 579.89,
+        "longestWallMs": 66.81
+      },
+      "Paint": {
+        "events": 8040,
+        "wallMs": 621.29,
+        "threadCpuMs": 460.94,
+        "longestWallMs": 17.69
+      },
+      "Layout": {
+        "events": 2563,
+        "wallMs": 2026.02,
+        "threadCpuMs": 1396.32,
+        "longestWallMs": 40.29
+      },
+      "MinorGC": {
+        "events": 5,
+        "wallMs": 11.66,
+        "threadCpuMs": 9.04,
+        "longestWallMs": 3.27
+      },
+      "MajorGC": {
+        "events": 5,
+        "wallMs": 28.97,
+        "threadCpuMs": 22.17,
+        "longestWallMs": 7.56
+      }
+    },
+    "scriptCallbacks": {
+      "index-BgUyXZcc.js": {
+        "events": 1932,
+        "wallMs": 1487.97,
+        "threadCpuMs": 980.15,
+        "longestWallMs": 82.65
+      },
+      "unresolved": {
+        "events": 5075,
+        "wallMs": 428.88,
+        "threadCpuMs": 281.06,
+        "longestWallMs": 12.92
+      },
+      "native-controller.js": {
+        "events": 102,
+        "wallMs": 77.79,
+        "threadCpuMs": 50.76,
+        "longestWallMs": 14.17
+      },
+      "design-feedback.js": {
+        "events": 23,
+        "wallMs": 12.26,
+        "threadCpuMs": 10.56,
+        "longestWallMs": 1.27
+      },
+      "editor-surface.js": {
+        "events": 124,
+        "wallMs": 10.26,
+        "threadCpuMs": 6.75,
+        "longestWallMs": 0.86
+      },
+      "sync.js": {
+        "events": 19,
+        "wallMs": 5.59,
+        "threadCpuMs": 4.9,
+        "longestWallMs": 0.68
+      },
+      "selection-ai.js": {
+        "events": 1,
+        "wallMs": 0.02,
+        "threadCpuMs": 0.02,
+        "longestWallMs": 0.02
+      }
+    },
+    "paintTargets": {
+      "#document": 2518,
+      "DSH embedded chat": 90,
+      "DSH workspace tree": 2500
+    },
+    "sourceTraceEvents": 1261923,
+    "publicTraceEvents": 52257
+  },
+  {
+    "stage": "final-static",
+    "model": {
+      "provider": "zai-coding-cn",
+      "model": "glm-5.3-flash"
+    },
+    "idleFrames": {
+      "samples": 189,
+      "p50ms": 16.7,
+      "p95ms": 16.8,
+      "p99ms": 33.3,
+      "maxMs": 33.5,
+      "over33ms": 0
+    },
+    "streamActiveFrames": {
+      "samples": 910,
+      "p50ms": 16.7,
+      "p95ms": 50.1,
+      "p99ms": 83.3,
+      "maxMs": 333.2,
+      "over33ms": 98
+    },
+    "textUpdates": 194,
+    "durationSeconds": 26.81,
+    "realModelCalls": 1,
+    "responseChars": 1343,
+    "renderMetrics": {
+      "LayoutCount": 1107,
+      "RecalcStyleCount": 1113,
+      "LayoutDuration": 1.9591,
+      "RecalcStyleDuration": 1.2748,
+      "ScriptDuration": 2.8723,
+      "TaskDuration": 11.8764
+    },
+    "longTasks": [
+      89,
+      59,
+      94,
+      71,
+      67,
+      91,
+      84,
+      56,
+      86,
+      76,
+      67,
+      77,
+      65,
+      83,
+      51,
+      66,
+      53,
+      57,
+      60,
+      59,
+      52,
+      53,
+      53,
+      70,
+      68,
+      127,
+      72,
+      50,
+      56,
+      55,
+      86,
+      61,
+      68,
+      52,
+      54,
+      52,
+      64,
+      71,
+      60,
+      68,
+      66,
+      83,
+      72
+    ],
+    "mainThread": {
+      "ThreadControllerImpl::RunTask": {
+        "events": 8808,
+        "wallMs": 11459.86,
+        "threadCpuMs": 4042.17,
+        "longestWallMs": 127.15
+      },
+      "Receive mojo message": {
+        "events": 1127,
+        "wallMs": 2458.81,
+        "threadCpuMs": 999.5,
+        "longestWallMs": 94.07
+      },
+      "ProxyMain::BeginMainFrame": {
+        "events": 1107,
+        "wallMs": 8201.4,
+        "threadCpuMs": 2787.01,
+        "longestWallMs": 127.14
+      },
+      "FireAnimationFrame": {
+        "events": 1597,
+        "wallMs": 1239.54,
+        "threadCpuMs": 395.61,
+        "longestWallMs": 88.64
+      },
+      "FunctionCall": {
+        "events": 5796,
+        "wallMs": 3543.51,
+        "threadCpuMs": 1392.72,
+        "longestWallMs": 87.45
+      },
+      "PrePaint": {
+        "events": 2251,
+        "wallMs": 443.09,
+        "threadCpuMs": 204.01,
+        "longestWallMs": 33.78
+      },
+      "Layerize": {
+        "events": 1107,
+        "wallMs": 583.25,
+        "threadCpuMs": 187.72,
+        "longestWallMs": 61.21
+      },
+      "UpdateLayoutTree": {
+        "events": 1113,
+        "wallMs": 1273.32,
+        "threadCpuMs": 528.41,
+        "longestWallMs": 69.73
+      },
+      "Paint": {
+        "events": 3709,
+        "wallMs": 722.94,
+        "threadCpuMs": 294.68,
+        "longestWallMs": 42.91
+      },
+      "Layout": {
+        "events": 1107,
+        "wallMs": 1933.72,
+        "threadCpuMs": 831.98,
+        "longestWallMs": 69.69
+      },
+      "MinorGC": {
+        "events": 11,
+        "wallMs": 41.84,
+        "threadCpuMs": 13.05,
+        "longestWallMs": 13.02
+      },
+      "MajorGC": {
+        "events": 2,
+        "wallMs": 19.51,
+        "threadCpuMs": 12.32,
+        "longestWallMs": 11.63
+      }
+    },
+    "scriptCallbacks": {
+      "index-BgUyXZcc.js": {
+        "events": 1864,
+        "wallMs": 2632.69,
+        "threadCpuMs": 1078.07,
+        "longestWallMs": 87.45
+      },
+      "unresolved": {
+        "events": 3770,
+        "wallMs": 785.77,
+        "threadCpuMs": 275.89,
+        "longestWallMs": 50.25
+      },
+      "native-controller.js": {
+        "events": 59,
+        "wallMs": 97.62,
+        "threadCpuMs": 26.58,
+        "longestWallMs": 43.26
+      },
+      "design-feedback.js": {
+        "events": 14,
+        "wallMs": 15.73,
+        "threadCpuMs": 6.3,
+        "longestWallMs": 8.23
+      },
+      "editor-surface.js": {
+        "events": 77,
+        "wallMs": 10.13,
+        "threadCpuMs": 4.63,
+        "longestWallMs": 2.46
+      },
+      "sync.js": {
+        "events": 11,
+        "wallMs": 1.54,
+        "threadCpuMs": 1.23,
+        "longestWallMs": 0.59
+      },
+      "selection-ai.js": {
+        "events": 1,
+        "wallMs": 0.02,
+        "threadCpuMs": 0.02,
+        "longestWallMs": 0.02
+      }
+    },
+    "paintTargets": {
+      "#document": 1085,
+      "DSH embedded chat": 79,
+      "DSH workspace tree": 1063
+    },
+    "sourceTraceEvents": 698723,
+    "publicTraceEvents": 27738
+  },
+  {
+    "stage": "final-contained",
+    "model": {
+      "provider": "zai-coding-cn",
+      "model": "glm-5.3-flash"
+    },
+    "idleFrames": {
+      "samples": 195,
+      "p50ms": 16.7,
+      "p95ms": 16.7,
+      "p99ms": 16.8,
+      "maxMs": 16.8,
+      "over33ms": 0
+    },
+    "streamActiveFrames": {
+      "samples": 1145,
+      "p50ms": 16.7,
+      "p95ms": 33.4,
+      "p99ms": 66.7,
+      "maxMs": 466.6,
+      "over33ms": 38
+    },
+    "textUpdates": 260,
+    "durationSeconds": 27.98,
+    "realModelCalls": 1,
+    "responseChars": 1372,
+    "renderMetrics": {
+      "LayoutCount": 1404,
+      "RecalcStyleCount": 1408,
+      "LayoutDuration": 1.6318,
+      "RecalcStyleDuration": 0.8704,
+      "ScriptDuration": 2.1322,
+      "TaskDuration": 9.0214
+    },
+    "longTasks": [
+      101,
+      67,
+      170,
+      82,
+      50,
+      53,
+      61,
+      57,
+      54,
+      57,
+      55,
+      67,
+      50,
+      97,
+      96,
+      62
+    ],
+    "mainThread": {
+      "ThreadControllerImpl::RunTask": {
+        "events": 13391,
+        "wallMs": 8789.2,
+        "threadCpuMs": 4486.22,
+        "longestWallMs": 170.59
+      },
+      "ProxyMain::BeginMainFrame": {
+        "events": 1386,
+        "wallMs": 6116.9,
+        "threadCpuMs": 3156.7,
+        "longestWallMs": 97.01
+      },
+      "FireAnimationFrame": {
+        "events": 2075,
+        "wallMs": 960.51,
+        "threadCpuMs": 506.25,
+        "longestWallMs": 54.52
+      },
+      "FunctionCall": {
+        "events": 6683,
+        "wallMs": 2616.85,
+        "threadCpuMs": 1506.0,
+        "longestWallMs": 144.72
+      },
+      "PrePaint": {
+        "events": 2825,
+        "wallMs": 335.83,
+        "threadCpuMs": 229.93,
+        "longestWallMs": 19.02
+      },
+      "Layerize": {
+        "events": 1386,
+        "wallMs": 487.02,
+        "threadCpuMs": 233.46,
+        "longestWallMs": 45.28
+      },
+      "Receive mojo message": {
+        "events": 1201,
+        "wallMs": 1581.26,
+        "threadCpuMs": 936.0,
+        "longestWallMs": 82.82
+      },
+      "UpdateLayoutTree": {
+        "events": 1408,
+        "wallMs": 867.19,
+        "threadCpuMs": 513.35,
+        "longestWallMs": 47.61
+      },
+      "Paint": {
+        "events": 3117,
+        "wallMs": 655.51,
+        "threadCpuMs": 324.38,
+        "longestWallMs": 40.22
+      },
+      "Layout": {
+        "events": 1404,
+        "wallMs": 1608.81,
+        "threadCpuMs": 904.62,
+        "longestWallMs": 69.55
+      },
+      "MinorGC": {
+        "events": 7,
+        "wallMs": 56.66,
+        "threadCpuMs": 21.1,
+        "longestWallMs": 32.94
+      },
+      "MajorGC": {
+        "events": 5,
+        "wallMs": 112.25,
+        "threadCpuMs": 27.14,
+        "longestWallMs": 52.7
+      }
+    },
+    "scriptCallbacks": {
+      "index-BgUyXZcc.js": {
+        "events": 2147,
+        "wallMs": 2000.03,
+        "threadCpuMs": 1171.24,
+        "longestWallMs": 144.72
+      },
+      "unresolved": {
+        "events": 4368,
+        "wallMs": 535.03,
+        "threadCpuMs": 289.93,
+        "longestWallMs": 26.14
+      },
+      "native-controller.js": {
+        "events": 62,
+        "wallMs": 64.77,
+        "threadCpuMs": 31.5,
+        "longestWallMs": 10.74
+      },
+      "design-feedback.js": {
+        "events": 14,
+        "wallMs": 7.07,
+        "threadCpuMs": 6.28,
+        "longestWallMs": 0.93
+      },
+      "editor-surface.js": {
+        "events": 80,
+        "wallMs": 6.02,
+        "threadCpuMs": 4.66,
+        "longestWallMs": 0.51
+      },
+      "sync.js": {
+        "events": 11,
+        "wallMs": 3.92,
+        "threadCpuMs": 2.37,
+        "longestWallMs": 1.92
+      },
+      "selection-ai.js": {
+        "events": 1,
+        "wallMs": 0.02,
+        "threadCpuMs": 0.02,
+        "longestWallMs": 0.02
+      }
+    },
+    "paintTargets": {
+      "#document": 1377,
+      "DSH workspace tree": 1
+    },
+    "sourceTraceEvents": 772364,
+    "publicTraceEvents": 34891
+  }
+]

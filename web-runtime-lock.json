@@ -760,7 +760,7 @@
           "apps/deckcraft-web/Cargo.toml": "9807b6d6513755ec79b394c2c40dccb3a418c8e18c0c81f4aa3b471b92449369",
           "apps/deckcraft-web/Trunk.toml": "a996cb61144f4f961e8a44d8df04ef329620c12928aea4a4f328d1fcaf055ec8",
           "apps/deckcraft-web/index.html": "5ff552301bfde3d5d369c93ad1a7a886f7aa639c021692269677c12f68e132be",
-          "apps/deckcraft-web/src/api.rs": "da8734620b55c6f9928242cf1fbe01e059e0c8c24f9d94df22ebc9471bd265e6",
+          "apps/deckcraft-web/src/api.rs": "b965a7af2951778967fa9bd0a9eacd968e52afc93da9daa207e540a3f040c01c",
           "apps/deckcraft-web/src/audio.rs": "34c7102f6591080758c8bfdd3208f77dc2f25fab0c78f542bd1f30a24a4e7eba",
           "apps/deckcraft-web/src/main.rs": "6631e810eccf762abf0a550147accc5cdf0fa622b250b4d2ed2d5092a8485101",
           "apps/deckcraft-web/src/web.rs": "6e9b326eb7d8bf891280f457c24287ad95cb5cbf8857bfb786faefceb261f610",
@@ -815,7 +815,7 @@
           "crates/pptx/src/read/chart.rs": "a3e7588bfb62368d42eb14807ec9820d968117482f375b8264f1d16b59ae19b7",
           "crates/pptx/src/read/dml.rs": "f9bdd3471c4ddae02973ad389e2e9d9a4bdff729ca66841827074ab92362278e",
           "crates/pptx/src/write/dml.rs": "676c2d0bea6099111bae12570d9b27abe557224362fb33149419049c4a68f836",
-          "crates/ui-egui/src/app.rs": "60b55fe3cba45871a31a45682b29e2f7ae23dee7b562666dee5d3c562bb81278",
+          "crates/ui-egui/src/app.rs": "e9cf81fd993a79889e2122b79d6979d1a5ab8fb15ee3fc2f2abbaf37aa779a30",
           "crates/ui-egui/src/app/commands.rs": "fb6cad6110115e7536939f872072212881174f6e000746043358ad0983dfaaab",
           "crates/ui-egui/src/app/files.rs": "4e32f92a21ef116b47ed36ad6f5329130415d37daafda7dfff8f6b2b0957ccb2",
           "crates/ui-egui/src/app/frame.rs": "b3160ad3b703a5bb53ccb92743c5593eede2d4e4c862441a5802d3ca6e2301a9",
@@ -864,7 +864,7 @@
           "crates/ui-egui/src/panels/selpane.rs": "6cb5254cd7ce2333aedd6986cb60dc743c0750bfcc685bdcf9a7920ca261f10e",
           "crates/ui-egui/src/panels/smartart.rs": "336f9a0467da828b99ccb82a44e6718fbca9a9acd33ac70b019d70b11b352321",
           "crates/ui-egui/src/panels/thesaurus.rs": "c9735eb82efb121d245b476f0ab473a37c3e2433925e14d51e283ddff51819ba",
-          "crates/ui-egui/src/panels/thumbs.rs": "fc93de272be28cbfea790b33dc488630da42585720976c385442662c0f420034",
+          "crates/ui-egui/src/panels/thumbs.rs": "7abcfb5a0c968c8d5f2a1a176d97edbffead980679148ce9a001e2528407e5da",
           "crates/ui-egui/src/ribbon.rs": "a84dad6435734242fd8289af8ea11f6ae42512e401fe38e29e6511c6bae328e8",
           "crates/ui-egui/src/ribbon/animations.rs": "61a5f21d3e6d3a4e47387dca1ed03dfac291d3b28bff74f40f556b76daa1a138",
           "crates/ui-egui/src/ribbon/arrange.rs": "841ad2cd8529b4865dc805f9e3f3ecc823f70e42e7b386ec4fb4a02605d906fc",
@@ -944,7 +944,15 @@
             }
           ],
           "nativeOnlyManifestEnteredWasmAllowlist": false
-        }
+        },
+        "ui167BuildToolchain": {
+          "rust": "1.95.0",
+          "target": "wasm32-unknown-unknown",
+          "wasmBindgen": "0.2.129",
+          "wasmOpt": "version_123 -Oz"
+        },
+        "ui167BuildLogSha256": "4e48adf25c69a2c6c46d1da016016e03d4ed470c7f08ff87e05fb4f8a9e4e67a",
+        "ui167RuntimePatch": "docs/ui167/deckcraft-display-font.patch"
       },
       "files": {
         "ATTRIBUTION.md": {
@@ -996,8 +1004,8 @@
           "sha256": "2e315b69b915c76f6cf978f55168b8c33f8bdc1e66e13a8ff91e64cc16f047ba"
         },
         "index.html": {
-          "bytes": 1794,
-          "sha256": "60fcbc79356d41f09d4758509ccf18cef83680410884e2d1b3dc279f4dc145fa"
+          "sha256": "3920bbb565f7746100fa907c6193f81271604dbccd674b88d224db85471e0f81",
+          "bytes": 1750
         },
         "LICENSE-APACHE": {
           "bytes": 10174,
@@ -1034,6 +1042,14 @@
         "fonts/lxgw-wenkai-lite/OFL.txt": {
           "bytes": 5176,
           "sha256": "0333a85fe077b6849f8e417acc44e8bd879442ceb681e271acf93e2d57fd4e2e"
+        },
+        "deckcraft-web-ui167.js": {
+          "sha256": "2dad3ab3f0c0e6473e82d4c1380f214933a579f6654ae4e4365a876a0940bb9a",
+          "bytes": 170161
+        },
+        "deckcraft-web-ui167_bg.wasm": {
+          "sha256": "0c016eef2412e8997cadee3c9a764dcd0290afaa0e74f7295d3e82a049d38f00",
+          "bytes": 36574210
         }
       }
     }

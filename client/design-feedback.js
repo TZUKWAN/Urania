@@ -1,6 +1,6 @@
-import {feedbackTargetKey,nativeFeedbackTarget,feedbackPrompt,feedbackLabel,expandsFeedbackSelection} from './feedback-contract.js?v=166';
-import {submitDesignFeedbackPrompt} from './native-ai-input.js?v=166';
-import {isActiveDesignSession} from './design-session.js?v=166';
+import {feedbackTargetKey,nativeFeedbackTarget,feedbackPrompt,feedbackLabel,expandsFeedbackSelection} from './feedback-contract.js?v=167';
+import {submitDesignFeedbackPrompt} from './native-ai-input.js?v=167';
+import {isActiveDesignSession} from './design-session.js?v=167';
 
 /** Local emergency journal + server CAS. Typing never invokes a model. */
 export class DesignFeedbackClient{
@@ -20,6 +20,7 @@ export class DesignFeedbackClient{
  async refresh(){
   if(!this.scope)return;const generation=this.generation;
   try{const data=await this.api({action:'list'});if(generation!==this.generation)return;
+   if(!this.state.loading&&(data.version<this.state.version||data.version===this.state.version&&!this.state.error))return;
    const drafts={...this.state.drafts};for(const server of data.drafts){const key=feedbackTargetKey(server.target),local=drafts[key];
     if(!local||!local.dirty||local.text===server.text)drafts[key]={...server,baseVersion:server.version,dirty:false,sequence:local?.sequence||0};
     else if((local.baseVersion||0)!==server.version)drafts[key]={...local,conflict:server};

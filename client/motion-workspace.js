@@ -1,4 +1,5 @@
-import {createStudioComponents,userFacingError} from './studio-system.js?v=166';
+import {storeView} from './store-view.js?v=167';
+import {createStudioComponents,userFacingError} from './studio-system.js?v=167';
 
 const activeRender=new Set(['starting','running','rendering','verifying','cleaning','cancelling']);
 const renderLabel={
@@ -111,8 +112,10 @@ export function createMotionWorkspace({h,store,actions,React}) {
           h('option',{value:.75},'适应 × 0.75'),h('option',{value:1},'适应画面'),h('option',{value:1.35},'适应 × 1.35'))));
   }
 
+  const readMotion=storeView(store,s=>({motion:s.motion,services:s.services,designAssistant:s.designAssistant,
+    motionAssetTransfer:s.motionAssetTransfer,motionProjects:s.motionProjects,motionTemplates:s.motionTemplates,motionEnvironment:s.motionEnvironment}));
   function MotionWorkspace({onFocusChat}) {
-    const snapshot=useSyncExternalStore(store.subscribe,store.get,store.get),m=snapshot.motion;
+    const snapshot=useSyncExternalStore(store.subscribe,readMotion,readMotion),m=snapshot.motion;
     const scopeKey=actions.motionScopeKey();
     const [error,setError]=useState(null);
     const [openOptions,setOptions]=useState(false);

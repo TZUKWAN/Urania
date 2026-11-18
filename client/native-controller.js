@@ -1,7 +1,7 @@
-import {EditorSurface} from './editor-surface.js?v=166';
-import {sameUint64,compareUint64,uint64Parameter} from './native-protocol.js?v=166';
-import {EDITOR_CONTEXT_PROTOCOL,validateNativeContext,nativeBase,matchesNativeBase,selectedObjectIds,canvasMaterialTarget,sameNativeDocument} from './native-contract.js?v=166';
-import {preparePreview,capturePreview,convertPreview,conversionWarnings,hasSupportedTailwindTag} from './html-sandbox.js?v=166';
+import {EditorSurface} from './editor-surface.js?v=167';
+import {sameUint64,compareUint64,uint64Parameter} from './native-protocol.js?v=167';
+import {EDITOR_CONTEXT_PROTOCOL,validateNativeContext,nativeBase,matchesNativeBase,selectedObjectIds,canvasMaterialTarget,sameNativeDocument} from './native-contract.js?v=167';
+import {preparePreview,capturePreview,convertPreview,conversionWarnings,hasSupportedTailwindTag} from './html-sandbox.js?v=167';
 
 const API='/designcraft/api/v2/studio';
 const wait=ms=>new Promise(resolve=>setTimeout(resolve,ms));
@@ -86,7 +86,13 @@ export class NativeController {
   this.themeObserver=new MutationObserver(()=>this.syncPresentation().catch(error=>this.change({error:error.message})));
   this.themeObserver.observe(document.body,{attributes:true,attributeFilter:['data-ds-dark-theme']});
  }
- change(patch){this.state={...this.state,...patch};if(this.portal)this.portal.inert=!!this.parkingInputLock||!!this.scopeLocked||!!this.presentationChanging||!!this.state.pendingDraft||!!this.state.fileAction||!!this.state.hostMenuOpen||this.state.phase==='opening';this.onChange(this.state);}
+ change(patch){
+  const changed=Object.keys(patch).some(key=>!Object.is(this.state[key],patch[key]));
+  if(changed)this.state={...this.state,...patch};
+  const inert=!!(this.parkingInputLock||this.scopeLocked||this.presentationChanging||this.state.pendingDraft||this.state.fileAction||this.state.hostMenuOpen||this.state.phase==='opening');
+  if(this.portal&&this.portal.inert!==inert)this.portal.inert=inert;
+  if(changed)this.onChange(this.state);
+ }
  async api(action,payload={}){
   const response=await fetch(API,{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({action,...(this.view?{viewId:this.view.id,token:this.view.token}:{}),...payload})});
   const data=await response.json();if(!response.ok||!data.ok)throw Object.assign(new Error(data.error||'设计服务请求失败'),{status:response.status});return data;
@@ -601,10 +607,26 @@ export class NativeController {
   this.anchor=element;this.parkingVersion=(this.parkingVersion||0)+1;this.parkingInputLock=false;this.parkedCheckpoint=null;
   this.portalInFlow=typeof element.moveBefore==='function';
   if(this.portalInFlow&&this.portal.parentNode!==element)element.moveBefore(this.portal,null);
-  const place=()=>{if(!this.anchor?.isConnected)return;
-   if(this.portalInFlow){this.portal.style.position='absolute';this.portal.style.left='0';this.portal.style.top='0';this.portal.style.width='100%';this.portal.style.height='100%';return;}
-   const rect=this.anchor.getBoundingClientRect();this.portal.style.position='fixed';this.portal.style.left=rect.left+'px';this.portal.style.top=rect.top+'px';this.portal.style.width=rect.width+'px';this.portal.style.height=rect.height+'px';};
-  this.resize?.disconnect();this.resize=new ResizeObserver(place);this.resize.observe(element);this.place=place;addEventListener('resize',place);addEventListener('scroll',place,true);place();
+  this.detachPosition?.();
+  const box=this.portal.style;
+  if(this.portalInFlow){
+   Object.assign(box,{position:'absolute',left:'0',top:'0',width:'100%',height:'100%'});
+   this.place=null;
+   this.detachPosition=null;
+  }else{
+   let frame=0;
+   const place=()=>{if(!element.isConnected||this.anchor!==element)return;
+    const rect=element.getBoundingClientRect();
+    Object.assign(box,{position:'fixed',left:rect.left+'px',top:rect.top+'px',width:rect.width+'px',height:rect.height+'px'});
+   };
+   const schedule=()=>{if(!frame)frame=requestAnimationFrame(()=>{frame=0;place();});};
+   const scroll=event=>{if(event.target===document||event.target?.contains?.(element))schedule();};
+   const observer=new ResizeObserver(schedule);observer.observe(element);
+   addEventListener('resize',schedule);addEventListener('scroll',scroll,true);place();
+   this.place=schedule;
+   this.detachPosition=()=>{cancelAnimationFrame(frame);observer.disconnect();
+    removeEventListener('resize',schedule);removeEventListener('scroll',scroll,true);this.place=null;};
+  }
   this.portal.inert=!!this.scopeLocked||!!this.state.pendingDraft||!!this.state.fileAction||!!this.state.hostMenuOpen||this.state.phase==='opening';
   const surface=this.surface,epoch=this.view?.epoch;
   surface?.setActivity(true).then(async()=>{if(this.surface!==surface||this.view?.epoch!==epoch)return;await this.syncPresentation();if(this.state.dirty)this.scheduleSave();}).catch(error=>{if(this.surface===surface&&this.view?.epoch===epoch)this.change({error:error.message});});
@@ -617,7 +639,7 @@ export class NativeController {
    document.body.moveBefore(this.portal,null);this.portalInFlow=false;
    this.portal.style.position='fixed';this.portal.style.left=rect.left+'px';this.portal.style.top=rect.top+'px';this.portal.style.width=rect.width+'px';this.portal.style.height=rect.height+'px';
   }
-  this.resize?.disconnect();removeEventListener('resize',this.place);removeEventListener('scroll',this.place,true);this.anchor=null;
+  this.detachPosition?.();this.detachPosition=null;this.anchor=null;
   clearTimeout(this.saveTimer);
   const version=this.parkingVersion=(this.parkingVersion||0)+1;
   if(!this.surface){this.portal.style.left='-100000px';return;}
@@ -675,6 +697,27 @@ export class NativeController {
   if(snapshot.pending.length)failed.push(snapshot.pending.length+' 个未发布字体登记需要先核对或恢复');
   if(strict&&failed.length)throw new Error('后台编辑未开始，项目字体无法完整加载：'+failed.join('；'));
   return {loaded,failed};
+ }
+ async loadDeckDisplayFonts(surface){
+  if(surface.engine!=='deckcraft'||!surface.capabilities?.deckDisplayFont)return {faces:[],errors:[]};
+  const owner=this.view,epoch=owner?.epoch,faces=[],errors=[];
+  if(!epoch)return {faces,errors};
+  for(const face of ['regular','bold']){
+   if(this.view!==owner||surface.disposed)throw new Error('演示工作区已切换');
+   const query=new URLSearchParams({epoch,face});
+   const response=await fetch(API+'/deck-display-font?'+query,{headers:this.sourceHeaders()});
+   if(response.status===204)continue;
+   if(!response.ok)throw new Error('无法读取本机演示字体');
+   const digest=response.headers.get('x-content-sha256'),size=Number(response.headers.get('content-length'));
+   if(!/^[a-f0-9]{64}$/.test(digest||'')||!Number.isSafeInteger(size)||size<16||size>24*1024*1024)throw new Error('本机演示字体身份无效');
+   const bytes=await response.arrayBuffer();
+   if(bytes.byteLength!==size||this.view!==owner||surface.disposed)throw new Error('演示字体读取期间工作区已切换');
+   try{
+    const result=await surface.addDeckDisplayFont(bytes,digest);
+    if(result.faces||result.alreadyLoaded)faces.push(face);
+   }catch(error){errors.push(String(error.message||error));}
+  }
+  return {faces,errors};
  }
  async refreshProjectFonts(){
   const surface=this.surface;
@@ -741,6 +784,11 @@ export class NativeController {
   await surface.ready;await this.syncPresentation();
   try{const fonts=await this.loadProjectFontsFor(surface);if(owned()&&fonts.failed.length)this.change({resourceNotice:'项目字体未全部加载：'+fonts.failed.join('；')});}
   catch(error){if(owned())this.change({resourceNotice:'项目字体未加载：'+String(error.message||error)});}
+  if(surface.engine==='deckcraft'){
+   let fonts={faces:[],errors:[]};
+   try{fonts=await this.loadDeckDisplayFonts(surface);}catch(error){fonts.errors.push(String(error.message||error));}
+   if(owned())this.change({deckDisplayFontFaces:fonts.faces,deckDisplayFontError:fonts.errors.join('；')||null});
+  }
   if(!owned())throw new Error('工作区已切换，未打开旧编辑表面');return surface;
  }
  async setAdvancedEditing(advanced){
@@ -816,6 +864,15 @@ export class NativeController {
   else if(!loaded&&svg!=null){loaded=await surface.open(sourceId+'.svg',new TextEncoder().encode(svg).buffer);}
   else if(!loaded){const creation={...selected.engineContract.createDefaults,title:selected.title,...params};delete creation.engine;loaded=await surface.create(creation);}
   this.acceptDocument(loaded.document);
+  if(!resumedSurface&&!this.state.advancedEditing&&['photocraft','deckcraft'].includes(selected.engine)){
+   // Size the native view after the host canvas has its final measured opening bounds.
+   await Promise.race([new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))),wait(120)]);
+   if(this.surface===surface&&this.view?.epoch===selected.epoch){
+    const fit=selected.engine==='photocraft'?'view.fitOnScreen':'view.fit';
+    try{await surface.execute(nativeBase(loaded.document),fit,{});}
+    catch{/* Retain the native opening view if an input or workspace change superseded the fit. */}
+   }
+  }
   const loadedStable=selected.exists&&sameNativeDocument(this.state.document,loaded.document)&&sameUint64(this.state.document.revision,loaded.document.revision);
   await this.report(this.state.document,{loadedSourceRevision:loadedStable?selected.sourceRevision:undefined});
   if(loadedStable){this.savedEngineRevision=loaded.document.revision;this.change({dirty:false});}
@@ -1487,7 +1544,7 @@ export class NativeController {
    this.disposing=false;this.pollTimer=setInterval(()=>this.poll().catch(error=>this.change({error:error.message})),450);
    this.change({error:'关闭前保存未完成，编辑器和草稿已保留：'+error.message});throw error;
   }
-  this.resize?.disconnect();removeEventListener('resize',this.place);removeEventListener('scroll',this.place,true);
+  this.detachPosition?.();this.detachPosition=null;
   this.themeObserver?.disconnect();
   this.surface?.dispose();this.releaseParent();this.portal.remove();
  }

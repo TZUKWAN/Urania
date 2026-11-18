@@ -18,7 +18,7 @@ window.__ModuleLoader__.load({
 
 		function initialState() {
 			return {
-				root: null, sessionCwd: null, services: {},uiBuild:166,workspaceMode:'native',
+				root: null, sessionCwd: null, services: {},uiBuild:167,workspaceMode:'native',
 				docs: null, assets: [], tasks: [], templates: [], designSystems: [],
 				activeId: null, doc: null, revision: null,
 				dirty: false, saving: false, saveError: null, stateError: null,
@@ -40,7 +40,11 @@ window.__ModuleLoader__.load({
 			const listeners = new Set();
 			return {
 				get: () => state,
-				set(patch) { state = { ...state, ...(patch && typeof patch === 'object' ? patch : {}) }; listeners.forEach((fn) => fn()); },
+				set(patch) {
+					if (!patch || typeof patch !== 'object' || Object.keys(patch).every(key => Object.is(state[key],patch[key]))) return;
+					state = { ...state, ...patch };
+					listeners.forEach(fn => fn());
+				},
 				subscribe(fn) { listeners.add(fn); return () => listeners.delete(fn); }
 			};
 		}
@@ -84,10 +88,10 @@ window.__ModuleLoader__.load({
 
 			(async () => {
 				try {
-					const V = '?v=166';
+					const V = '?v=167';
 					const base = (p) => new URL(p.replace(/^\/+/, ''), document.baseURI).pathname;
 					const healthResponse=await fetch(base('/designcraft/api/v1/health'),{cache:'no-store'}),health=await healthResponse.json();
-					if(!healthResponse.ok||health.protocolVersion!==2||health.uiBuild!==166||health.capabilities?.professionalEditor!==1||!health.capabilities.editorExecutionAdmission||!health.capabilities.nativeLiveness||!health.capabilities.nativeFileActions){
+					if(!healthResponse.ok||health.protocolVersion!==2||health.uiBuild!==167||health.capabilities?.professionalEditor!==1||!health.capabilities.editorExecutionAdmission||!health.capabilities.nativeLiveness||!health.capabilities.nativeFileActions){
 						let disk='';try{const response=await fetch(base('/designcraft/api/v1/versions'),{cache:'no-store'});if(response.ok){const d=(await response.json()).disk;disk='，磁盘 '+d.version+' / UI'+d.uiBuild;}}catch{}
 						throw new Error('当前界面 UI'+store.get().uiBuild+'，后台 '+(health.version||'未知')+' / UI'+(health.uiBuild??'未知')+disk+'。组件版本或运行保护不匹配，请在方便时重新打开 DSH 以继续使用已保存作品。');
 					}
@@ -157,7 +161,12 @@ window.__ModuleLoader__.load({
                         }
                     }
                     let chatRegistered=false;
-                    function EditorPanel(props) { return h(EditorBoundary,null,h('div',{className:'dcPanelMount'},h(App,{renderConversation:chatRegistered&&props?.renderFactorySlot&&props?.SessionProvider?reference=>h(props.SessionProvider,{session:reference},props.renderFactorySlot('designcraft.conversation',{})):undefined}))); }
+                    function EditorPanel(props) {
+                        const slot=props?.renderFactorySlot,Provider=props?.SessionProvider;
+                        const renderConversation=React.useMemo(()=>chatRegistered&&slot&&Provider
+                          ?reference=>h(Provider,{session:reference},slot('designcraft.conversation',{})):undefined,[slot,Provider,chatRegistered]);
+                        return h(EditorBoundary,null,h('div',{className:'dcPanelMount'},h(App,{renderConversation})));
+                    }
 
 					// slots
 					ctx.slots.inject('main', () => {

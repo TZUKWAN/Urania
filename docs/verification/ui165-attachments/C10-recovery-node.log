@@ -1,0 +1,22 @@
+✔ draft CAS, per-page/object keys, durable queue, batch retry and actual-read receipt (612.0304ms)
+✔ recorded real GLM missing-epoch arguments identify epoch before any manager mutation (1.106ms)
+✔ all currently fenced public actions name missing fields; no implicit fence is supplied (0.4299ms)
+✔ complete fences delegate unchanged; backend conflict checks retain responsibility (0.1699ms)
+✔ state and non-base read/save contracts remain compatible (0.1382ms)
+✔ portable schema exposes all three fence requirements in model-visible descriptions (0.068ms)
+✔ actual GLM open arguments with a target misplaced inside payload never reopen the current App (0.3968ms)
+✔ an explicit open target still delegates without requiring the previous view epoch/base (0.1172ms)
+✔ feedback checkpoint preserves actual operation identity and refuses manual/malformed provenance (122.0069ms)
+✔ rejected feedback recovery is a separate durable source with a validated original receipt (113.5568ms)
+✔ whole-page candidates retain human fields, non-target objects and deleted markers across later AI revisions (407.2889ms)
+✔ all saved Deck pages are inspected rather than the current UI summary (5.7193ms)
+✔ Photo raster tile fingerprints belong to actual layer identities (1.6195ms)
+✔ navigation from an unrequested Deck page is allowed only when the whole native content stays identical (151.9137ms)
+ℹ tests 14
+ℹ suites 0
+ℹ pass 14
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1104.2904

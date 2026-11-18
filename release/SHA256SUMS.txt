@@ -1,2 +1,2 @@
-d1b578f37e45cb72913eaf36b01cec507d9b9bbec3608ff0e62ec4b9996cbd64  urania-runtime-win-x64-ui165-20261118.zip
-eb625aa5c1352fd5ebd3b377a27cd1b4917af8954f6cc8d52c79ef357affc22e  runtime-manifest.json
+8a118eb1f346a43d769db47a50baafee44262a1fd7799f780fb9b46049c820bc  urania-runtime-win-x64-ui167-20261118.zip
+2e6f96d492f7a8b1cb3d9ea63dbe0b1da2a748064ca9542249ad1e15fbe5f032  runtime-manifest.json

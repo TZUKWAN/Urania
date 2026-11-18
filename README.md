@@ -2,11 +2,11 @@
 
 DSH 内的 AI 原生设计工作空间：Photo 图片、Vector 矢量、Deck 演示和代码动画。选中对象、多选或框选后向 AI 提修改要求；原生能力由 AI 调用，源文件、人工修改和非目标对象受到版本/选区/回执保护。对话分栏支持拖动，历史作品可搜索打开，图片 API 独立配置。
 
-当前版本为 `designcraft@1.3.0-dev.151`（UI166）。首页提供 Photo、Vector、Deck 和代码动画四种入口。顶栏可收起 AI 对话，画布旁可查看对象属性。用「历史作品」打开设计、核对修订或打开独立副本。
+当前候选版为 `designcraft@1.3.0-dev.152`（UI167）。首页提供 Photo、Vector、Deck 和代码动画四种入口。顶栏可收起 AI 对话。画布工具随当前对象或页切换，选区可直接交给 AI。用「历史作品」查找设计、核对修订或打开独立副本。
 
-交互、视觉和验证见 [UI 重构报告](docs/ui-redesign/UI_REDESIGN_REPORT.md)、[设计系统](docs/ui-redesign/DESIGN_SYSTEM.md)和 [本轮回归结果](docs/ui-redesign/REGRESSION.json)。[UI165 验收记录](VERIFICATION_UI165.json)保留为上一版本证据。
+本轮记录见 [UI167 图集](docs/ui167/GALLERY.md)、[交付验证](docs/ui167/VERIFICATION.json)和 [流式对话性能报告](docs/ui167/PERFORMANCE.md)。[UI166 重构报告](docs/ui-redesign/UI_REDESIGN_REPORT.md)和 [UI165 验收记录](VERIFICATION_UI165.json)保留历史证据。
 
-支持 Windows x64。插件和动画 Worker 需要 Node ≥22，验收使用的 DSH SDK 0.2.2-rc.1 需要 Node ≥24.9。动画预览和导出需要 Chromium ≥120、FFmpeg 和 FFprobe ≥6。UI166 使用经 `release/runtime-assets.json` 固定的原生运行时归档。
+支持 Windows x64。插件和动画 Worker 需要 Node ≥22，验收使用的 DSH SDK 0.2.2-rc.1 需要 Node ≥24.9。动画预览和导出需要 Chromium ≥120、FFmpeg 和 FFprobe ≥6。从源码或发布版插件 TGZ 安装均需恢复 `release/runtime-assets.json` 固定的同版运行时 ZIP。
 
 ```powershell
 pwsh -NoProfile -File scripts/restore-runtime.ps1 -Download

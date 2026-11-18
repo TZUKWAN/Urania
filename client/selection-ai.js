@@ -1,7 +1,7 @@
-import {aiCanvasTarget} from './ai-canvas.js?v=166';
-import {selectedObjectIds} from './native-contract.js?v=166';
-import {nativeFeedbackTarget,feedbackTargetKey} from './feedback-contract.js?v=166';
-import {createStudioComponents,userFacingError} from './studio-system.js?v=166';
+import {aiCanvasTarget} from './ai-canvas.js?v=167';
+import {selectedObjectIds} from './native-contract.js?v=167';
+import {nativeFeedbackTarget,feedbackTargetKey} from './feedback-contract.js?v=167';
+import {createStudioComponents,userFacingError} from './studio-system.js?v=167';
 export function createSelectionAi(React){
  const h=React.createElement;
  const {Icon,Button}=createStudioComponents(React);

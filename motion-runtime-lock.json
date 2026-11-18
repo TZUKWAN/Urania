@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "updatedAt": "2026-11-14T08:02:10.752Z",
-  "productVersionAtLock": "1.3.0-dev.151 / UI166",
+  "productVersionAtLock": "1.3.0-dev.152 / UI167",
   "policy": "No floating latest. Versions pinned here; changing a version requires re-running the affected MV0/MV contracts and updating this lock with reason.",
   "hyperframes": {
     "family": "0.9.44",

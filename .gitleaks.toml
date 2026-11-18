@@ -4,6 +4,14 @@ useDefault = true
 
 [[allowlists]]
 targetRules = ["generic-api-key"]
+description = "Exact SHA256 of the rebuilt Deck Web api.rs used by UI167"
+condition = "AND"
+regexTarget = "line"
+paths = ['''(?:^|/)web-runtime-lock\.json$''']
+regexes = ['''^\s*"apps/deckcraft-web/src/api\.rs": "b965a7af2951778967fa9bd0a9eacd968e52afc93da9daa207e540a3f040c01c",\s*$''']
+
+[[allowlists]]
+targetRules = ["generic-api-key"]
 description = "Exact comparison to public metadata attribute name in archived engine source"
 condition = "AND"
 regexTarget = "line"
