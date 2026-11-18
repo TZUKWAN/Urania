@@ -1,0 +1,79 @@
+--- a/apps/deckcraft-web/src/api.rs
++++ b/apps/deckcraft-web/src/api.rs
+@@ -91,7 +91,19 @@
+ }
+ /// Register an explicit project font in this web editor only.
+ fn add_project_font(bytes: js_sys::Uint8Array) -> Result<JsValue, JsValue> {
+-    if bytes.length() == 0 || bytes.length() > 4 * 1024 * 1024 || CTX.with(|ctx| ctx.borrow().is_none()) {
++    register_font(bytes, 4 * 1024 * 1024)
++}
++
++/// Register a Windows font collection for this in-memory Deck preview.
++fn add_display_font(bytes: js_sys::Uint8Array) -> Result<JsValue, JsValue> {
++    if bytes.length() < 16 || (0..4).map(|i| bytes.get_index(i)).ne(*b"ttcf") {
++        return Err(js_sys::Error::new("display font must be a TrueType collection").into());
++    }
++    register_font(bytes, 24 * 1024 * 1024)
++}
++
++fn register_font(bytes: js_sys::Uint8Array, limit: u32) -> Result<JsValue, JsValue> {
++    if bytes.length() == 0 || bytes.length() > limit || CTX.with(|ctx| ctx.borrow().is_none()) {
+         return Err(js_sys::Error::new("project font is empty, too large, or editor is not ready").into());
+     }
+     let faces = deckcraft_fonts::FontDb::global().add_font(bytes.to_vec());
+@@ -105,6 +117,7 @@
+     let object = js_sys::Object::new();
+     let set = |name: &str, value: JsValue| js_sys::Reflect::set(&object, &JsValue::from_str(name), &value).map(|_| ());
+     set("addProjectFont", Closure::<dyn Fn(js_sys::Uint8Array) -> Result<JsValue, JsValue>>::new(add_project_font).into_js_value())?;
++    set("addDisplayFont", Closure::<dyn Fn(js_sys::Uint8Array) -> Result<JsValue, JsValue>>::new(add_display_font).into_js_value())?;
+     set("requestJson", Closure::<dyn Fn(String, String) -> js_sys::Promise>::new(request_json).into_js_value())?;
+     set("openFile", Closure::<dyn Fn(String, js_sys::Uint8Array) -> bool>::new(open_file).into_js_value())?;
+     set(
+--- a/crates/ui-egui/src/app.rs
++++ b/crates/ui-egui/src/app.rs
+@@ -336,7 +336,12 @@
+                     } else {
+                         thumbs::show(self, ui);
+                     }
+-                    egui::CentralPanel::default().frame(egui::Frame::NONE.fill(t.canvas)).show(ui, |ui| {
++                    let canvas_fill = if ai_canvas {
++                        if t.dark { egui::Color32::from_rgb(50, 46, 55) } else { egui::Color32::from_rgb(232, 229, 225) }
++                    } else {
++                        t.canvas
++                    };
++                    egui::CentralPanel::default().frame(egui::Frame::NONE.fill(canvas_fill)).show(ui, |ui| {
+                         if !ai_canvas && self.ui.notes {
+                             status::notes_pane(self, ui);
+                         }
+--- a/crates/ui-egui/src/panels/thumbs.rs
++++ b/crates/ui-egui/src/panels/thumbs.rs
+@@ -87,13 +87,22 @@
+     if app.session.active().is_some_and(|d| d.selection.target.is_page_master()) {
+         return;
+     }
+-    let panel = egui::Panel::left("thumbs")
+-        .resizable(true)
+-        .default_size(app.ui.thumbs_width)
+-        .size_range(150.0..=420.0)
+-        .frame(egui::Frame::NONE.fill(t.chrome))
+-        .show(ui, |ui| {
+-            app.ui.thumbs_width = ui.available_width();
++    let compact = app.hosted.embedded && app.hosted.ai_canvas;
++    let width = (ui.available_width() * 0.19).clamp(108.0, 158.0);
++    let fill = if compact {
++        if t.dark { Color32::from_rgb(43, 40, 47) } else { Color32::from_rgb(246, 244, 242) }
++    } else {
++        t.chrome
++    };
++    let panel = if compact {
++        egui::Panel::left("studio_thumbs").resizable(false).default_size(width).size_range(width..=width)
++    } else {
++        egui::Panel::left("thumbs").resizable(true).default_size(app.ui.thumbs_width).size_range(150.0..=420.0)
++    };
++    let panel = panel.frame(egui::Frame::NONE.fill(fill)).show(ui, |ui| {
++            if !compact {
++                app.ui.thumbs_width = ui.available_width();
++            }
+             if in_master {
+                 master_list(app, ui);
+                 return;

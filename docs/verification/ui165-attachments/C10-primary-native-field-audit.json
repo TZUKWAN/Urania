@@ -1,0 +1,105 @@
+{
+  "changedFields": [
+    {
+      "path": "/presentation/slides/0/shapes/0/text/paragraphs/0/endProps",
+      "before": {
+        "font": "Microsoft YaHei",
+        "fontEa": "Microsoft YaHei",
+        "fontCs": null,
+        "fontSym": null,
+        "size": 27.0,
+        "bold": false,
+        "italic": false,
+        "underline": null,
+        "underlineColor": null,
+        "strike": null,
+        "baseline": null,
+        "caps": null,
+        "spacing": 0.0,
+        "kern": null,
+        "fill": {
+          "kind": "solid",
+          "color": {
+            "base": {
+              "kind": "rgb",
+              "rgb": {
+                "r": 23,
+                "g": 59,
+                "b": 112,
+                "a": 255
+              }
+            }
+          }
+        },
+        "outline": null,
+        "highlight": null,
+        "link": null,
+        "hover": null,
+        "lang": null,
+        "shadow": null,
+        "innerShadow": null,
+        "glow": null,
+        "reflection": null,
+        "softEdge": null,
+        "noProof": null
+      },
+      "after": null
+    },
+    {
+      "path": "/presentation/slides/0/shapes/0/text/paragraphs/0/runs/0/text",
+      "before": "第 1 页原文",
+      "after": "第一页标题已修订"
+    },
+    {
+      "path": "/presentation/slides/1/shapes/0/text/paragraphs/0/endProps",
+      "before": {
+        "font": "Microsoft YaHei",
+        "fontEa": "Microsoft YaHei",
+        "fontCs": null,
+        "fontSym": null,
+        "size": 27.0,
+        "bold": false,
+        "italic": false,
+        "underline": null,
+        "underlineColor": null,
+        "strike": null,
+        "baseline": null,
+        "caps": null,
+        "spacing": 0.0,
+        "kern": null,
+        "fill": {
+          "kind": "solid",
+          "color": {
+            "base": {
+              "kind": "rgb",
+              "rgb": {
+                "r": 23,
+                "g": 59,
+                "b": 112,
+                "a": 255
+              }
+            }
+          }
+        },
+        "outline": null,
+        "highlight": null,
+        "link": null,
+        "hover": null,
+        "lang": null,
+        "shadow": null,
+        "innerShadow": null,
+        "glow": null,
+        "reflection": null,
+        "softEdge": null,
+        "noProof": null
+      },
+      "after": null
+    },
+    {
+      "path": "/presentation/slides/1/shapes/0/text/paragraphs/0/runs/0/text",
+      "before": "第 2 页原文",
+      "after": "第二页标题已修订"
+    }
+  ],
+  "onlyTwoTitleTextFields": false
+}

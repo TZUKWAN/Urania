@@ -1,0 +1,303 @@
+{
+  "schemaVersion": 1,
+  "packageVersion": "1.3.0-dev.152",
+  "uiBuild": 167,
+  "scope": "UI167 release candidate; Windows x64 in a separate DSH 0.2.2-rc.1 profile with a headless browser.",
+  "userDesktopControlled": false,
+  "userProjectsUsed": false,
+  "tests": {
+    "node": {
+      "total": 453,
+      "passed": 453,
+      "failed": 0,
+      "runtime": "v25.6.0",
+      "files": 106
+    },
+    "client": {
+      "passed": 19,
+      "failed": 0
+    },
+    "portable": {
+      "passed": 108,
+      "failed": 0
+    },
+    "check": {
+      "javascriptFiles": 224,
+      "syntax": "passed",
+      "nativeBinaries": 4,
+      "runtimeHashes": "passed",
+      "resourceFiles": 36,
+      "resourceHashes": "passed"
+    },
+    "previousSuites": {
+      "UI165": 452,
+      "UI166": 439,
+      "restoredFiles": [
+        "dsh-chat.test.mjs",
+        "dsh-context.test.mjs"
+      ],
+      "restoredCases": 14,
+      "UI166AddedHistoryCopyCase": true
+    }
+  },
+  "nativeInteraction": [
+    {
+      "name": "new-actual-canvas",
+      "width": 640,
+      "height": 480
+    },
+    {
+      "name": "resize-collapse-and-source-preserved",
+      "width": 380,
+      "sameNativeRealm": true
+    },
+    {
+      "name": "selection-and-chat-isolation",
+      "objects": 2,
+      "scopeMatchesRealSerializedReference": true
+    },
+    {
+      "name": "verified-history-fork",
+      "independent": true
+    }
+  ],
+  "deck": {
+    "systemFacesInSixPageNativePreview": [
+      "regular",
+      "bold"
+    ],
+    "sourceExportCheck": {
+      "pages": 3,
+      "editableTextRuns": 6,
+      "retainedFamily": "Microsoft YaHei",
+      "warnings": []
+    },
+    "separateApplicationRender": {
+      "passed": true,
+      "renderer": "LibreOffice headless in owned profile",
+      "pages": 3,
+      "fontFamilies": [
+        "BAAAAA+MicrosoftYaHei"
+      ],
+      "charactersPerPage": [
+        17,
+        17,
+        17
+      ]
+    },
+    "desktopPowerPointVerified": false,
+    "systemFontsRedistributed": false
+  },
+  "motion": {
+    "passed": true,
+    "timeline": {
+      "clips": 7,
+      "audio": 2,
+      "keyframes": 13
+    },
+    "preview": {
+      "seekFrame": 96,
+      "playedAndPaused": true
+    },
+    "editableRoundtrip": {
+      "render": {
+        "fps": {
+          "num": 30,
+          "den": 1
+        },
+        "durationFrames": 240,
+        "width": 1920,
+        "height": 1080
+      },
+      "sources": {
+        "composition.html": "48976611f3ae67f5c4f4c3faafdd5ff1675afa2a992627749b55caec22c495b8",
+        "composition.css": "23be2c40dd6c9a618547a7bd51939464a1404bff4ca82b8ccd6ccb72499668bf"
+      },
+      "assets": {
+        "audio/glass-bed.wav": "b08e63c16d671e100f2e76223fb6e6182f6fa569b9e11ce65e3189d513e6019d",
+        "audio/prism-notes.wav": "151149c1fe054c23d6b65fab9f2fc157326c1d8ebef3003eece05e0706eaf905"
+      }
+    },
+    "renderStatus": {
+      "status": "completed",
+      "error": null,
+      "receipt": {
+        "verified": true,
+        "frames": 240,
+        "width": 1920,
+        "height": 1080,
+        "codec": "h264",
+        "pixFmt": "yuv420p",
+        "fps": "30/1",
+        "sha256": "93062596dc37a56a3ef36d8105894110d4ab00f6371f3b603b737fd467015c8b",
+        "bytes": 1571327
+      }
+    },
+    "exportWallSeconds": 151.88,
+    "ffprobe": {
+      "video": {
+        "codec_name": "h264",
+        "width": 1920,
+        "height": 1080,
+        "avg_frame_rate": "30/1",
+        "nb_frames": "240",
+        "duration": "8.000000"
+      },
+      "audio": {
+        "codec_name": "aac",
+        "sample_rate": "24000",
+        "channels": 1,
+        "duration": "8.000000"
+      }
+    },
+    "decodedAudio": {
+      "bed130Hz": 0.06561,
+      "note659Hz": 0.03977,
+      "note659HzBeforeStart": 0.00045
+    },
+    "frameSha256": [
+      "93f7344cef6022ad1baf144ff7875e74dce9c05574b83a76f559f3a6a21e0418",
+      "b6c4e72a92444222d7a0da5ad91b7870b0e512d43370b3a30adb631b4c27e18d",
+      "85545f36ba3397ab6d27d16ca6225f9112a7484725f8ba417c11e38d5cd8e829"
+    ],
+    "mp4Sha256": "93062596dc37a56a3ef36d8105894110d4ab00f6371f3b603b737fd467015c8b",
+    "projectSha256": "e0f93c75676450eb4bb4f85ce8e0718c0dad337020c7c477733a446d01b89952"
+  },
+  "visual": {
+    "oldOriginals": 86,
+    "newOriginals": 25,
+    "media": [
+      {
+        "path": "docs/ui167/media/01-home-1920x1080.png",
+        "bytes": 320925,
+        "sha256": "9eead9816d95f9685a17b2c5636a2338179d709bd17551592629b1ea024e6492"
+      },
+      {
+        "path": "docs/ui167/media/03-new-1440x900.png",
+        "bytes": 188544,
+        "sha256": "401f94bf9f239be2dda4a8c3801781994e95dcc972103228a8d79cef78de1c57"
+      },
+      {
+        "path": "docs/ui167/media/04-photo-1920x1080.png",
+        "bytes": 850144,
+        "sha256": "5c85067b3d11c5f04df9336a842efc11c368b710896535c4036d65d106e8e018"
+      },
+      {
+        "path": "docs/ui167/media/05-photo-properties-1440x900.png",
+        "bytes": 514402,
+        "sha256": "4a1a1174728ed4a9553e26634cbddb41039a6f002589e55eed93643fffe4a625"
+      },
+      {
+        "path": "docs/ui167/media/06-photo-region-1440x900.png",
+        "bytes": 551212,
+        "sha256": "2ac4cbfe7369246a1bbb555c45640ba5613b413b57982ecb1191272e1c849536"
+      },
+      {
+        "path": "docs/ui167/media/07-deck-1920x1080.png",
+        "bytes": 138958,
+        "sha256": "e8227835d5b3666b40456ba0cc62306db399e29c3c53ed0ffd7e1b665a2ca8b2"
+      },
+      {
+        "path": "docs/ui167/media/08-deck-slide-properties-1440x900.png",
+        "bytes": 126704,
+        "sha256": "8de45a064b2e7f72e8482dd20a94ef6b8e7a30d648fa43ddcb29894888daf52a"
+      },
+      {
+        "path": "docs/ui167/media/09-deck-page-feedback-1440x900.png",
+        "bytes": 121435,
+        "sha256": "f1716997d09b20e666cfb63424dad06793f1de67b0c84794b2ed1b2c6d71fd06"
+      },
+      {
+        "path": "docs/ui167/media/10-export-1440x900.png",
+        "bytes": 74867,
+        "sha256": "702a2f43b26fd30c67d13d511adc762f99b35a9355ca9f389d54a01b61c9145a"
+      },
+      {
+        "path": "docs/ui167/media/11-works-1440x900.png",
+        "bytes": 89671,
+        "sha256": "635f159f903c52e8a524d92fbc9d7d3297baa13b452dd9206912b87d5ef55e0a"
+      },
+      {
+        "path": "docs/ui167/media/12-focus-deck-1440x900.png",
+        "bytes": 128652,
+        "sha256": "cc326b0eb01d2dca5edf69144c0746733a64c7d2523ecb29a7bd822a187fce81"
+      },
+      {
+        "path": "docs/ui167/media/13-vector-1920x1080.png",
+        "bytes": 86696,
+        "sha256": "98295813f56effe41a69ac2514db4cf358cb8477b34ae6fe2c54aaa0923047af"
+      },
+      {
+        "path": "docs/ui167/media/14-motion-1920x1080.png",
+        "bytes": 651661,
+        "sha256": "620ec0ea3dd04549e49636d5cdb6b7276e5226f402dcee6fff40b71541b80c59"
+      },
+      {
+        "path": "docs/ui167/media/15-dark-motion-1440x900.png",
+        "bytes": 363939,
+        "sha256": "25c40054a45184e9484ad353ed633c634e5e3adec9384053b0a24b55cb94218d"
+      }
+    ],
+    "archive": {
+      "path": "urania-ui167-original-screens.zip",
+      "bytes": 14521276,
+      "sha256": "0826e2c62bd8eae3b68335f8489aaca15ba83d3b6501a496259fc05e8f66eb1e"
+    },
+    "recording": {
+      "path": "urania-ui167-interactions.mp4",
+      "bytes": 3437453,
+      "sha256": "49b38802b631ee6bdaf961ae0b348fffffda2c7657fdb9ddcc29664fa08dc89e",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 1440,
+          "height": 900
+        }
+      ],
+      "format": {
+        "duration": "94.440000"
+      }
+    }
+  },
+  "performance": {
+    "liveRuns": 6,
+    "method": "active rAF samples around real conversation DOM updates with Chrome events",
+    "finalActiveFrames": {
+      "samples": 1145,
+      "p50ms": 16.7,
+      "p95ms": 33.4,
+      "p99ms": 66.7,
+      "maxMs": 466.6,
+      "over33ms": 38
+    },
+    "60HzTailAccepted": false,
+    "report": "docs/ui167/PERFORMANCE.md"
+  },
+  "historicalEvidence": {
+    "previousSummaryHashesRechecked": 31,
+    "restoredAuditAttachments": 11,
+    "expected": 59,
+    "exactLocated": 56,
+    "unavailable": 3,
+    "index": "docs/verification/ui165-attachments/index.json"
+  },
+  "runtimeArchive": {
+    "passed": true,
+    "tag": "dev-ui167-20261118",
+    "name": "urania-runtime-win-x64-ui167-20261118.zip",
+    "bytes": 1338981039,
+    "sha256": "8a118eb1f346a43d769db47a50baafee44262a1fd7799f780fb9b46049c820bc",
+    "url": "https://github.com/TZUKWAN/Urania/releases/download/dev-ui167-20261118/urania-runtime-win-x64-ui167-20261118.zip",
+    "sourceAndArchiveEntriesVerified": 7715,
+    "expandedBytes": 3262779698,
+    "manifestSha256": "2e6f96d492f7a8b1cb3d9ea63dbe0b1da2a748064ca9542249ad1e15fbe5f032",
+    "unchangedEntriesMatchedToUi165": 7712,
+    "deckEntriesMatchedToNativeLock": [
+      "runtimes/web/deckcraft-host/deckcraft-web-ui167.js",
+      "runtimes/web/deckcraft-host/deckcraft-web-ui167_bg.wasm",
+      "runtimes/web/deckcraft-host/index.html"
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+✔ draft CAS, per-page/object keys, durable queue, batch retry and actual-read receipt (555.2117ms)
+✔ draft expansion retains exact document/page/object identity and refuses unrelated scopes (1.339ms)
+✔ client carries an actively edited draft without overwriting another target draft or an uncertain add (1.0068ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 798.563

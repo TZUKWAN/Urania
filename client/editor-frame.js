@@ -1,6 +1,6 @@
 /** Professional editor transport. This module runs beside the real WASM App, not in DSH's UI. */
-import {encodeNativeJson,decodeNativeJson,nativeCallParameters,uint64Parameter} from './native-protocol.js?v=166';
-import {validateNativeContext,nativeBase,matchesNativeBase,canvasMaterialTarget,SOURCE_FORMATS} from './native-contract.js?v=166';
+import {encodeNativeJson,decodeNativeJson,nativeCallParameters,uint64Parameter} from './native-protocol.js?v=167';
+import {validateNativeContext,nativeBase,matchesNativeBase,canvasMaterialTarget,SOURCE_FORMATS} from './native-contract.js?v=167';
 const options=new URLSearchParams(location.hash.slice(1));
 const parentOrigin=options.get('parentOrigin'),nonce=options.get('nonce');
 const engineName=options.get('engine')||'vectorcraft';
@@ -21,7 +21,7 @@ async function api(){
   if(native?.requestJson){try{
    const request=async(method,payload={})=>decodeNativeJson(await native.requestJson(method,encodeNativeJson(nativeCallParameters(method,payload))));
    await request('ui.inspect');
-   readyRuntime={request,inspect:()=>request('ui.inspect'),commands:()=>request('engine.commands'),openFile:(...args)=>native.openFile(...args),captureDownloads:on=>native.captureDownloads(on),addProjectFont:typeof native.addProjectFont==='function'?bytes=>native.addProjectFont(bytes):null};
+   readyRuntime={request,inspect:()=>request('ui.inspect'),commands:()=>request('engine.commands'),openFile:(...args)=>native.openFile(...args),captureDownloads:on=>native.captureDownloads(on),addProjectFont:typeof native.addProjectFont==='function'?bytes=>native.addProjectFont(bytes):null,addDisplayFont:typeof native.addDisplayFont==='function'?bytes=>native.addDisplayFont(bytes):null};
    return readyRuntime;
   }catch{/* App is still starting. */}}
   await wait(100);
@@ -121,17 +121,20 @@ async function perform(method,payload){
   runtime.captureDownloads(false);
   const protocol=await runtime.request('host.protocol');hostFileRouting=!!protocol.hostFileRouting;
   if(protocol.nativeContext!==2||!protocol.contextOrdering||!protocol.losslessJson||protocol.engine!==engineName)throw new Error('原生引擎缺少匹配的精确上下文与顺序协议，请使用同一构建的编辑器');
-  return {protocol:{...protocol,activityControl:true,nativeInspection:true,projectFontSession:!!runtime.addProjectFont},ui:await runtime.inspect(),realmId};
+  return {protocol:{...protocol,activityControl:true,nativeInspection:true,projectFontSession:!!runtime.addProjectFont,deckDisplayFont:!!runtime.addDisplayFont},ui:await runtime.inspect(),realmId};
  }
- if(method==='project-font'){
-  if(!runtime.addProjectFont)throw new Error('当前原生构建没有项目字体入口');
+ if(method==='project-font'||method==='deck-display-font'){
+  const display=method==='deck-display-font';
+  if(display&&engineName!=='deckcraft')throw new Error('此字体仅用于演示预览');
+  const loadFont=display?runtime.addDisplayFont:runtime.addProjectFont;
+  if(!loadFont)throw new Error('当前原生构建没有会话字体入口');
   if(composition||pointer||nativePending||Date.now()<manualUntil)throw new Error('正在手工编辑，项目字体尚未加载');
-  if(!(payload.bytes instanceof ArrayBuffer)||payload.bytes.byteLength<4||payload.bytes.byteLength>4*1024*1024||!/^[a-f0-9]{64}$/.test(payload.sha256||''))throw new Error('项目字体数据无效或超过预算');
+  if(!(payload.bytes instanceof ArrayBuffer)||payload.bytes.byteLength<4||payload.bytes.byteLength>(display?24:4)*1024*1024||!/^[a-f0-9]{64}$/.test(payload.sha256||''))throw new Error('项目字体数据无效或超过预算');
   const digest=new Uint8Array(await crypto.subtle.digest('SHA-256',payload.bytes)),actual=Array.from(digest,value=>value.toString(16).padStart(2,'0')).join('');
   if(actual!==payload.sha256)throw new Error('项目字体字节与来源摘要不一致');
   if(!active||disposed||composition||pointer||nativePending||Date.now()<manualUntil)throw new Error('编辑状态已改变，项目字体尚未加载');
   if(loadedProjectFonts.has(actual))return {alreadyLoaded:true};
-  const faces=runtime.addProjectFont(new Uint8Array(payload.bytes));
+  const faces=loadFont(new Uint8Array(payload.bytes));
   if(!Number.isSafeInteger(faces)||faces<1)throw new Error('原生引擎未确认注册字体');
   loadedProjectFonts.add(actual);return {faces};
  }

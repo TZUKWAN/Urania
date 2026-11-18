@@ -1,0 +1,75 @@
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+clang++: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+Scope: all 3 workspace projects
+Lockfile is up to date, resolution step is skipped
+Progress: resolved 1, reused 0, downloaded 0, added 0
+Packages: +360
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Progress: resolved 360, reused 0, downloaded 44, added 44
+ WARN  Tarball download average speed 36 KiB/s (size 51 KiB) is below 50 KiB/s: https://registry.npmjs.org/@xmldom/xmldom/-/xmldom-0.8.11.tgz (GET)
+Progress: resolved 360, reused 0, downloaded 142, added 126
+Progress: resolved 360, reused 0, downloaded 224, added 166
+Progress: resolved 360, reused 0, downloaded 285, added 198
+ WARN  Tarball download average speed 9 KiB/s (size 42 KiB) is below 50 KiB/s: https://registry.npmjs.org/text-segmentation/-/text-segmentation-1.0.3.tgz (GET)
+Progress: resolved 360, reused 0, downloaded 352, added 254
+Progress: resolved 360, reused 0, downloaded 359, added 349
+Progress: resolved 360, reused 0, downloaded 360, added 360, done
+
+dependencies:
++ @puppeteer/browsers 3.0.4
++ fonteditor-core 2.6.3
++ html2canvas 1.4.1
++ jszip 3.10.1
++ opentype.js 2.0.0
++ pako 2.1.0
++ pptxgenjs 4.0.1
++ puppeteer 25.1.0
+
+devDependencies:
++ @eslint/js 10.0.1
++ @eslint/markdown 8.0.2
++ @rollup/plugin-commonjs 29.0.0
++ @rollup/plugin-json 6.1.0
++ @rollup/plugin-node-resolve 16.0.3
++ buffer 6.0.3
++ eslint 9.39.1
++ eslint-config-prettier 10.1.8
++ eslint-plugin-prettier 5.5.4
++ events 3.3.0
++ globals 17.6.0
++ jsdom 28.1.0
++ prettier 3.7.4
++ process 0.11.10
++ rollup 4.55.2
++ rollup-plugin-polyfill-node 0.10.2
++ stream-browserify 3.0.0
++ util 0.12.5
++ vitest 4.1.5
+
+Done in 7.5s using pnpm v10.27.0
+
+src/index.js → dist/dom-to-pptx.bundle.js...
+Copied animations.css → dist/animations.css
+Copied transitions.css → dist/transitions.css
+created dist/dom-to-pptx.bundle.js in 4.2s
+{"codecOutputsExact": true, "browserBundleExact": true, "sha256": "342b13fd102ebefa6325b592b9b4c58cc4e903c2d1ca29421ca08c795f513d63", "bytes": 3635939, "noGlobalActivation": true, "lifecycleScripts": false}

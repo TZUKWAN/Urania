@@ -1,6 +1,6 @@
-import {createStudioComponents,studioEngines} from './studio-system.js?v=166';
-import {selectedObjectIds} from './native-contract.js?v=166';
-import {uint64Parameter} from './native-protocol.js?v=166';
+import {createStudioComponents,studioEngines} from './studio-system.js?v=167';
+import {selectedObjectIds} from './native-contract.js?v=167';
+import {uint64Parameter} from './native-protocol.js?v=167';
 
 export function createStudioPanels(React) {
   const h=React.createElement;
@@ -10,7 +10,9 @@ export function createStudioPanels(React) {
     const options=studioEngines.filter(engine=>engine.id==='motion'||engines?.[engine.id]);
     return h('div',{className:'dcNativeEmpty'},h('div',{className:'dcStudioHome'},
       h('div',{className:'dcStudioHomeHero'},
-        h('div',null,h('h1',null,'你想创作什么？'),h('p',null,'描述你的想法，或从一种作品开始。')),
+        h('div',null,h('h1',null,'你想创作什么？'),
+         h('p',null,'从一句话到可编辑的作品。'),
+         h(Button,{icon:'ai',className:'dcPrimary',onClick:onFocusChat},'与 AI 开始')),
         h('svg',{className:'dcStudioOrbit',viewBox:'0 0 100 100',fill:'none',stroke:'currentColor','aria-hidden':true},
           h('circle',{cx:50,cy:50,r:26,opacity:.42}),
           h('ellipse',{cx:50,cy:50,rx:47,ry:19,transform:'rotate(-36 50 50)',opacity:.78}),
@@ -22,7 +24,6 @@ export function createStudioPanels(React) {
       },h('span',{className:'dcStudioEngineIcon','data-engine':engine.id},h(Icon,{name:engine.icon,size:19})),
       h('span',null,h('strong',null,engine.title),h('small',null,engine.detail)),h(Icon,{name:'arrow',size:15})))),
       h('div',{className:'dcStudioHomeLinks'},
-        h(Button,{icon:'ai',className:'dcPrimary',onClick:onFocusChat},'与 AI 开始'),
         h(Button,{icon:'upload',disabled,onClick:onImport},'导入设计'),
         h(Button,{icon:'history',disabled,onClick:onWorks},'最近作品'))));
   }

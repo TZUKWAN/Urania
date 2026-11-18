@@ -1,0 +1,92 @@
+{
+  "status": "failed",
+  "scope": "actual final-candidate isolated DSH, real native mouse/key, no LLM or user desktop",
+  "root": "C:\\Users\\PUBLIC-USER\\Documents\\Codex\\2026-11-04\\dsh-design-codex-threads-01a19111-0093\\work\\urania-closeout-20261118\\projects\\final-ux\\id-c54008314f2c2913",
+  "owned": {
+    "workspaceId": "id-773d04781be127d9",
+    "sessionId": "session-dcdesign-id-dd313373aaa1ca0d",
+    "ordinarySessionId": "session-id-bd6b3bae8a9dacf3"
+  },
+  "package": {
+    "name": "designcraft",
+    "version": "1.3.0-dev.150",
+    "designcraftUiBuild": 165,
+    "description": "Urania — unified AI-native design workspace (images, PPT, vector, motion video) for DSH, with revisioned collaboration and pinned open-source engines/resources.",
+    "type": "module",
+    "license": "MIT",
+    "author": "DesignCraft for DSH",
+    "exports": {
+      ".": "./host/index.js",
+      "./client": "./client/client.js",
+      "./package.json": "./package.json"
+    },
+    "files": [
+      "host",
+      "client",
+      "motion-worker",
+      "skills",
+      "resources",
+      "docs",
+      "runtimes",
+      "runtime-lock.json",
+      "web-runtime-lock.json",
+      "icon.svg",
+      "cordis.patch.yml",
+      "README.md",
+      "LICENSE",
+      "licenses",
+      "THIRD_PARTY_NOTICES.md",
+      "VERIFICATION.json",
+      "tests/*.test.mjs",
+      "tests/run-current.mjs",
+      "tests/check-source.mjs",
+      "tests/fixtures",
+      "motion-runtime-lock.json",
+      "scripts",
+      "release",
+      "AUDIT_UI165.md",
+      "AUDIT_UI163.md",
+      "FIX_LOG.md",
+      "VERIFICATION_UI165.json",
+      "VERIFICATION_UI163.json",
+      "DEPLOYMENT_AND_RECOVERY.md",
+      "DELIVERY_SUMMARY.md",
+      "SOURCE_SNAPSHOT.json"
+    ],
+    "engines": {
+      "node": ">=22"
+    },
+    "dsh": {
+      "bundle": {
+        "patch": "./cordis.patch.yml"
+      },
+      "client": {
+        "platform": "web",
+        "immediately": true,
+        "inject": [
+          "@deepseek-ai/dsh-client-ui-conversation"
+        ]
+      }
+    },
+    "os": [
+      "win32"
+    ],
+    "cpu": [
+      "x64"
+    ],
+    "scripts": {
+      "test": "node tests/run-current.mjs",
+      "check": "node tests/check-source.mjs",
+      "build:runner": "pwsh -NoProfile -File runtimes/build-runner.ps1",
+      "doctor": "node scripts/doctor.mjs",
+      "doctor:motion": "node scripts/motion-doctor.mjs",
+      "test:public": "node scripts/ci-portable.mjs",
+      "check:public": "node scripts/check-public-source.mjs",
+      "restore:runtime": "pwsh -NoProfile -File scripts/restore-runtime.ps1 -Download"
+    },
+    "displayName": "Urania"
+  },
+  "failure": "",
+  "pageErrors": [],
+  "alerts": []
+}

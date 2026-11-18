@@ -1,0 +1,2747 @@
+
+> designcraft@1.3.0-dev.150 test
+> node tests/run-current.mjs
+
+TAP version 13
+# Subtest: send-time reference retains Chinese text and unrelated file references
+ok 1 - send-time reference retains Chinese text and unrelated file references
+  ---
+  duration_ms: 2.7961
+  type: 'test'
+  ...
+# Subtest: selection tracking never rewrites a draft or requires private SDK fields
+ok 2 - selection tracking never rewrites a draft or requires private SDK fields
+  ---
+  duration_ms: 0.2418
+  type: 'test'
+  ...
+# Subtest: all public frozen phases reject intentional mutation
+ok 3 - all public frozen phases reject intentional mutation
+  ---
+  duration_ms: 0.4543
+  type: 'test'
+  ...
+# Subtest: composition or foreign-scope barrier leaves the draft exact
+ok 4 - composition or foreign-scope barrier leaves the draft exact
+  ---
+  duration_ms: 0.1
+  type: 'test'
+  ...
+# Subtest: malformed unrelated references reject without modifying input
+ok 5 - malformed unrelated references reject without modifying input
+  ---
+  duration_ms: 0.1289
+  type: 'test'
+  ...
+# Subtest: serializer checks object IDs when stamp and revision are unchanged
+ok 6 - serializer checks object IDs when stamp and revision are unchanged
+  ---
+  duration_ms: 0.374
+  type: 'test'
+  ...
+# Subtest: serializer rejects changed source and page
+ok 7 - serializer rejects changed source and page
+  ---
+  duration_ms: 0.3178
+  type: 'test'
+  ...
+# Subtest: desktop quote spans rebase when replacing a previous design reference
+ok 8 - desktop quote spans rebase when replacing a previous design reference
+  ---
+  duration_ms: 0.3155
+  type: 'test'
+  ...
+# Subtest: floating prompt calls current DSH submit once when composer is empty
+ok 9 - floating prompt calls current DSH submit once when composer is empty
+  ---
+  duration_ms: 0.6934
+  type: 'test'
+  ...
+# Subtest: floating prompt stages existing human draft for review instead of silently sending it
+ok 10 - floating prompt stages existing human draft for review instead of silently sending it
+  ---
+  duration_ms: 0.3146
+  type: 'test'
+  ...
+# Subtest: stale conversation blocks floating submission
+ok 11 - stale conversation blocks floating submission
+  ---
+  duration_ms: 0.137
+  type: 'test'
+  ...
+# Subtest: resizing retains room for conversation and canvas
+ok 12 - resizing retains room for conversation and canvas
+  ---
+  duration_ms: 0.0877
+  type: 'test'
+  ...
+# Subtest: target labels distinguish objects, layers, pixel regions and pages
+ok 13 - target labels distinguish objects, layers, pixel regions and pages
+  ---
+  duration_ms: 0.1336
+  type: 'test'
+  ...
+# Subtest: HTTP writes enforce revision and recovery keeps both versions
+ok 14 - HTTP writes enforce revision and recovery keeps both versions
+  ---
+  duration_ms: 2434.3351
+  type: 'test'
+  ...
+# Subtest: motion routes serve over the real host (prefix without trailing slash reaches the webserver)
+ok 15 - motion routes serve over the real host (prefix without trailing slash reaches the webserver)
+  ---
+  duration_ms: 487.6802
+  type: 'test'
+  ...
+# Subtest: streamed assets are real, immutable and idempotent without base64 buffering
+ok 16 - streamed assets are real, immutable and idempotent without base64 buffering
+  ---
+  duration_ms: 85.7796
+  type: 'test'
+  ...
+# Subtest: reusing an asset name never destroys an older pixel version
+ok 17 - reusing an asset name never destroys an older pixel version
+  ---
+  duration_ms: 53.3991
+  type: 'test'
+  ...
+# Subtest: a failed command cannot commit an earlier document update
+ok 18 - a failed command cannot commit an earlier document update
+  ---
+  duration_ms: 31.2244
+  type: 'test'
+  ...
+# Subtest: a created document is staged until the whole batch succeeds
+ok 19 - a created document is staged until the whole batch succeeds
+  ---
+  duration_ms: 22.2846
+  type: 'test'
+  ...
+# Subtest: a command batch cannot partially change multiple documents
+ok 20 - a command batch cannot partially change multiple documents
+  ---
+  duration_ms: 47.5107
+  type: 'test'
+  ...
+# Subtest: template creation stores real design-system tokens, not a preset-name string
+ok 21 - template creation stores real design-system tokens, not a preset-name string
+  ---
+  duration_ms: 41.5038
+  type: 'test'
+  ...
+# Subtest: same-batch export reads the staged document and preserves older exports
+ok 22 - same-batch export reads the staged document and preserves older exports
+  ---
+  duration_ms: 70.1245
+  type: 'test'
+  ...
+# Subtest: a failed batch cannot publish its staged export
+ok 23 - a failed batch cannot publish its staged export
+  ---
+  duration_ms: 25.1494
+  type: 'test'
+  ...
+# Subtest: unsupported common blend and isolated group opacity are rejected for native PPTX
+ok 24 - unsupported common blend and isolated group opacity are rejected for native PPTX
+  ---
+  duration_ms: 1.1688
+  type: 'test'
+  ...
+# Subtest: explicit brand fill records use real native source/object/color and leave designs unchanged
+ok 25 - explicit brand fill records use real native source/object/color and leave designs unchanged
+  ---
+  duration_ms: 357.5338
+  type: 'test'
+  ...
+# Subtest: wrong colors, gradients, unknown objects, stale versions and duplicate bindings are refused
+ok 26 - wrong colors, gradients, unknown objects, stale versions and duplicate bindings are refused
+  ---
+  duration_ms: 637.3437
+  type: 'test'
+  ...
+# Subtest: old projects without brand records remain readable and bad brand colors are refused
+ok 27 - old projects without brand records remain readable and bad brand colors are refused
+  ---
+  duration_ms: 482.4075
+  type: 'test'
+  ...
+# Subtest: changed source or changed fill is surfaced and never rewritten by inspection
+ok 28 - changed source or changed fill is surfaced and never rewritten by inspection
+  ---
+  duration_ms: 1693.9131
+  type: 'test'
+  ...
+# Subtest: brand change preview requires exact members and reports changed source without changing color
+ok 29 - brand change preview requires exact members and reports changed source without changing color
+  ---
+  duration_ms: 542.0463
+  type: 'test'
+  ...
+# Subtest: genuine native Vector and Deck fill edits pass only when all other content remains exact
+ok 30 - genuine native Vector and Deck fill edits pass only when all other content remains exact
+  ---
+  duration_ms: 37.1237
+  type: 'test'
+  ...
+# Subtest: genuine native brand identity assignment preserves the whole deck and refuses collisions
+ok 31 - genuine native brand identity assignment preserves the whole deck and refuses collisions
+  ---
+  duration_ms: 49.0398
+  type: 'test'
+  ...
+# Subtest: generic hosted execution cannot attach unverified brand markers directly or in a batch
+ok 32 - generic hosted execution cannot attach unverified brand markers directly or in a batch
+  ---
+  duration_ms: 0.5303
+  type: 'test'
+  ...
+# Subtest: genuine native Vector marker assignment preserves other data and refuses collisions
+ok 33 - genuine native Vector marker assignment preserves other data and refuses collisions
+  ---
+  duration_ms: 9.9404
+  type: 'test'
+  ...
+# Subtest: lost graph acknowledgement is recovered from source receipt, manual layout and local color survive
+ok 34 - lost graph acknowledgement is recovered from source receipt, manual layout and local color survive
+  ---
+  duration_ms: 4068.5227
+  type: 'test'
+  ...
+# Subtest: Chinese brief resolves palette, layout, density and exclusions with actual evidence spans
+ok 35 - Chinese brief resolves palette, layout, density and exclusions with actual evidence spans
+  ---
+  duration_ms: 3.6994
+  type: 'test'
+  ...
+# Subtest: Chinese negation never silently picks a forbidden default, and explicit choices resolve ambiguity
+ok 36 - Chinese negation never silently picks a forbidden default, and explicit choices resolve ambiguity
+  ---
+  duration_ms: 1.5398
+  type: 'test'
+  ...
+# Subtest: opposing English and Chinese requirements report a conflict while an explicit dimension wins
+ok 37 - opposing English and Chinese requirements report a conflict while an explicit dimension wins
+  ---
+  duration_ms: 0.5159
+  type: 'test'
+  ...
+# Subtest: processor one retains exact historical interpretation and unknown Chinese remains disclosed
+ok 38 - processor one retains exact historical interpretation and unknown Chinese remains disclosed
+  ---
+  duration_ms: 0.8024
+  type: 'test'
+  ...
+# Subtest: WCAG black/white anchors and APCA polarity are computed from actual color inputs
+ok 39 - WCAG black/white anchors and APCA polarity are computed from actual color inputs
+  ---
+  duration_ms: 3.1764
+  type: 'test'
+  ...
+# Subtest: OKLCH preserves neutral anchors and Display P3 roundtrips real red without renaming the API space
+ok 40 - OKLCH preserves neutral anchors and Display P3 roundtrips real red without renaming the API space
+  ---
+  duration_ms: 0.9754
+  type: 'test'
+  ...
+# Subtest: structural color audit measures opaque text, reports complex backgrounds and never certifies conformance
+ok 41 - structural color audit measures opaque text, reports complex backgrounds and never certifies conformance
+  ---
+  duration_ms: 1.2113
+  type: 'test'
+  ...
+# Subtest: native Deck integer RGBA and run properties are resolved without normalizing alpha 255 as opacity one
+ok 42 - native Deck integer RGBA and run properties are resolved without normalizing alpha 255 as opacity one
+  ---
+  duration_ms: 0.4393
+  type: 'test'
+  ...
+# Subtest: replay actual public imageinfo response: official tracking URLs and thumbnail domain remain usable with correct original dimensions
+ok 43 - replay actual public imageinfo response: official tracking URLs and thumbnail domain remain usable with correct original dimensions
+  ---
+  duration_ms: 43.1112
+  type: 'test'
+  ...
+# Subtest: replay malformed image sources: foreign hosts, unknown/duplicate tracking fields and nonthumbnail paths are still rejected
+ok 44 - replay malformed image sources: foreign hosts, unknown/duplicate tracking fields and nonthumbnail paths are still rejected
+  ---
+  duration_ms: 126.3978
+  type: 'test'
+  ...
+# Subtest: opaque multiply uses backdrop alpha, not backdrop color
+ok 45 - opaque multiply uses backdrop alpha, not backdrop color
+  ---
+  duration_ms: 1.6649
+  type: 'test'
+  ...
+# Subtest: transparent destination preserves unpremultiplied source RGB
+ok 46 - transparent destination preserves unpremultiplied source RGB
+  ---
+  duration_ms: 0.1971
+  type: 'test'
+  ...
+# Subtest: half-alpha red over white gives the correct visible color
+ok 47 - half-alpha red over white gives the correct visible color
+  ---
+  duration_ms: 0.1894
+  type: 'test'
+  ...
+# Subtest: a translucent black luminance mask still hides the pixel
+ok 48 - a translucent black luminance mask still hides the pixel
+  ---
+  duration_ms: 0.2186
+  type: 'test'
+  ...
+# Subtest: only the retained handwriting-text host panel is admitted
+ok 49 - only the retained handwriting-text host panel is admitted
+  ---
+  duration_ms: 0.4276
+  type: 'test'
+  ...
+# Subtest: removed recognition and capture modes are rejected before launching a helper
+ok 50 - removed recognition and capture modes are rejected before launching a helper
+  ---
+  duration_ms: 0.9125
+  type: 'test'
+  ...
+# Subtest: the actual compiled Windows helper refuses its former math and screen modes without opening windows
+ok 51 - the actual compiled Windows helper refuses its former math and screen modes without opening windows
+  ---
+  duration_ms: 745.5413
+  type: 'test'
+  ...
+# Subtest: real DeckCraft exports text, picture, editable chart/table and Bezier geometry from the common workspace
+ok 52 - real DeckCraft exports text, picture, editable chart/table and Bezier geometry from the common workspace
+  ---
+  duration_ms: 2451.4642
+  type: 'test'
+  ...
+# Subtest: native PPTX import/edit/overlay export retains rich objects, physical size and original source
+ok 53 - native PPTX import/edit/overlay export retains rich objects, physical size and original source
+  ---
+  duration_ms: 20301.0273
+  type: 'test'
+  ...
+# Subtest: actual native conversion is accepted only for its saved SVG use and exact generated shapes
+ok 54 - actual native conversion is accepted only for its saved SVG use and exact generated shapes
+  ---
+  duration_ms: 517.5321
+  type: 'test'
+  ...
+# Subtest: an explicitly linked SVG use must be unlinked before conversion
+ok 55 - an explicitly linked SVG use must be unlinked before conversion
+  ---
+  duration_ms: 713.3743
+  type: 'test'
+  ...
+# Subtest: conversion receipt and native undo/redo preserve the original SVG relation
+ok 56 - conversion receipt and native undo/redo preserve the original SVG relation
+  ---
+  duration_ms: 2981.8086
+  type: 'test'
+  ...
+# Subtest: authorized conversion stores exact native receipt and refuses a shifted output before commit
+ok 57 - authorized conversion stores exact native receipt and refuses a shifted output before commit
+  ---
+  duration_ms: 6938.5771
+  type: 'test'
+  ...
+# Subtest: dedicated conversion job is admitted, checkpointed and completed with the actual native result
+ok 58 - dedicated conversion job is admitted, checkpointed and completed with the actual native result
+  ---
+  duration_ms: 2335.2222
+  type: 'test'
+  ...
+# Subtest: after a lost acknowledgement and later edit, recovery verifies history without overwriting the newer source
+ok 59 - after a lost acknowledgement and later edit, recovery verifies history without overwriting the newer source
+  ---
+  duration_ms: 2983.1457
+  type: 'test'
+  ...
+# Subtest: actual converted native shapes preserve original SVG, all media and unrelated deck data
+ok 60 - actual converted native shapes preserve original SVG, all media and unrelated deck data
+  ---
+  duration_ms: 20.9476
+  type: 'test'
+  ...
+# Subtest: tampered generated geometry, unrelated objects or original media are rejected
+ok 61 - tampered generated geometry, unrelated objects or original media are rejected
+  ---
+  duration_ms: 31.4588
+  type: 'test'
+  ...
+# Subtest: generic commands cannot bypass the dedicated SVG conversion receipt
+ok 62 - generic commands cannot bypass the dedicated SVG conversion receipt
+  ---
+  duration_ms: 0.469
+  type: 'test'
+  ...
+# Subtest: host receipt accepts the native one-MiB limit and refuses larger results
+ok 63 - host receipt accepts the native one-MiB limit and refuses larger results
+  ---
+  duration_ms: 2.8315
+  type: 'test'
+  ...
+# Subtest: actual prepared native SVG binds only its exact original and exact preview; another use remains independent
+ok 64 - actual prepared native SVG binds only its exact original and exact preview; another use remains independent
+  ---
+  duration_ms: 480.6703
+  type: 'test'
+  ...
+# Subtest: wrong preview or missing preview cannot bind a real native SVG object
+ok 65 - wrong preview or missing preview cannot bind a real native SVG object
+  ---
+  duration_ms: 508.5012
+  type: 'test'
+  ...
+# Subtest: genuine SVG update verifies before commit and reconciles exactly one saved source receipt
+ok 66 - genuine SVG update verifies before commit and reconciles exactly one saved source receipt
+  ---
+  duration_ms: 2264.4021
+  type: 'test'
+  ...
+# Subtest: a second verified native SVG declaration is adopted independently without implicit linking
+ok 67 - a second verified native SVG declaration is adopted independently without implicit linking
+  ---
+  duration_ms: 559.5594
+  type: 'test'
+  ...
+# Subtest: real native SVG commands retain exact original/edited SVG and preview with an independent second use
+ok 68 - real native SVG commands retain exact original/edited SVG and preview with an independent second use
+  ---
+  duration_ms: 16.507
+  type: 'test'
+  ...
+# Subtest: real SVG content-only native update passes whole-document proof only for its authorized target and origin
+ok 69 - real SVG content-only native update passes whole-document proof only for its authorized target and origin
+  ---
+  duration_ms: 15.9086
+  type: 'test'
+  ...
+# Subtest: geometry, crop, SVG-source discard and MIME tampering are refused
+ok 70 - geometry, crop, SVG-source discard and MIME tampering are refused
+  ---
+  duration_ms: 45.0056
+  type: 'test'
+  ...
+# Subtest: diagnostic allowlist removes credentials, URLs, paths and excludes chat/config structures
+ok 71 - diagnostic allowlist removes credentials, URLs, paths and excludes chat/config structures
+  ---
+  duration_ms: 2.8273
+  type: 'test'
+  ...
+# Subtest: draft CAS, per-page/object keys, durable queue, batch retry and actual-read receipt
+ok 72 - draft CAS, per-page/object keys, durable queue, batch retry and actual-read receipt
+  ---
+  duration_ms: 722.7276
+  type: 'test'
+  ...
+# Subtest: request chip preserves the human draft, unrelated references/quotes, and full model payload
+ok 73 - request chip preserves the human draft, unrelated references/quotes, and full model payload
+  ---
+  duration_ms: 1.1582
+  type: 'test'
+  ...
+# Subtest: malformed/oversized request chips and an aborted send fail before serialization
+ok 74 - malformed/oversized request chips and an aborted send fail before serialization
+  ---
+  duration_ms: 0.217
+  type: 'test'
+  ...
+# Subtest: bundled OpenDesign resources retain exact upstream text and checksums
+ok 75 - bundled OpenDesign resources retain exact upstream text and checksums
+  ---
+  duration_ms: 7.7194
+  type: 'test'
+  ...
+# Subtest: OpenDesign tokens apply to existing objects with version protection and preserve native sources
+ok 76 - OpenDesign tokens apply to existing objects with version protection and preserve native sources
+  ---
+  duration_ms: 67.1057
+  type: 'test'
+  ...
+# Subtest: design scope requires the actual reserved identity and bounds the workspace
+ok 77 - design scope requires the actual reserved identity and bounds the workspace
+  ---
+  duration_ms: 49.5559
+  type: 'test'
+  ...
+# Subtest: host atomically reserves one durable dedicated identity without any transcript
+ok 78 - host atomically reserves one durable dedicated identity without any transcript
+  ---
+  duration_ms: 69.6585
+  type: 'test'
+  ...
+# Subtest: host refuses foreign workspace directory before creating metadata
+ok 79 - host refuses foreign workspace directory before creating metadata
+  ---
+  duration_ms: 5.2486
+  type: 'test'
+  ...
+# Subtest: host preserves and rejects a corrupted or ordinary-session registry
+ok 80 - host preserves and rejects a corrupted or ordinary-session registry
+  ---
+  duration_ms: 22.4928
+  type: 'test'
+  ...
+# Subtest: project selection uses catalog membership and normalized Windows paths
+ok 81 - project selection uses catalog membership and normalized Windows paths
+  ---
+  duration_ms: 0.4648
+  type: 'test'
+  ...
+# Subtest: dedicated create never reuses the ordinary blank or changes global selection
+ok 82 - dedicated create never reuses the ordinary blank or changes global selection
+  ---
+  duration_ms: 0.9776
+  type: 'test'
+  ...
+# Subtest: switching ordinary conversations in the same project preserves design identity
+ok 83 - switching ordinary conversations in the same project preserves design identity
+  ---
+  duration_ms: 0.4282
+  type: 'test'
+  ...
+# Subtest: persisted nonblank design session is retained without create or rename
+ok 84 - persisted nonblank design session is retained without create or rename
+  ---
+  duration_ms: 0.3206
+  type: 'test'
+  ...
+# Subtest: failed dedicated creation never displays or adopts an alternate ordinary session
+ok 85 - failed dedicated creation never displays or adopts an alternate ordinary session
+  ---
+  duration_ms: 0.6707
+  type: 'test'
+  ...
+# Subtest: late reservation after project removal is discarded without creating a session
+ok 86 - late reservation after project removal is discarded without creating a session
+  ---
+  duration_ms: 0.3136
+  type: 'test'
+  ...
+# Subtest: stale project is rejected synchronously and disposal releases the owned reference
+ok 87 - stale project is rejected synchronously and disposal releases the owned reference
+  ---
+  duration_ms: 0.4412
+  type: 'test'
+  ...
+# Subtest: actual pinned creative-director archive survives project retention and legacy dependency fallback
+ok 88 - actual pinned creative-director archive survives project retention and legacy dependency fallback
+  ---
+  duration_ms: 170.6899
+  type: 'test'
+  ...
+# Subtest: explicit migration between two real archive identities of the same pinned source preserves old history
+ok 89 - explicit migration between two real archive identities of the same pinned source preserves old history
+  ---
+  duration_ms: 572.6037
+  type: 'test'
+  ...
+# Subtest: workspace matching accepts Windows separators and rejects sibling prefixes or parent traversal
+ok 90 - workspace matching accepts Windows separators and rejects sibling prefixes or parent traversal
+  ---
+  duration_ms: 0.5915
+  type: 'test'
+  ...
+# Subtest: a canvas reference preserves exact source identity and safely delimits untrusted titles
+ok 91 - a canvas reference preserves exact source identity and safely delimits untrusted titles
+  ---
+  duration_ms: 0.4702
+  type: 'test'
+  ...
+# Subtest: replacing only the design reference retains the native draft, file chips and offsets
+ok 92 - replacing only the design reference retains the native draft, file chips and offsets
+  ---
+  duration_ms: 0.6175
+  type: 'test'
+  ...
+# Subtest: quoting waits for a successful save and changes the existing DSH semantic input
+ok 93 - quoting waits for a successful save and changes the existing DSH semantic input
+  ---
+  duration_ms: 0.7547
+  type: 'test'
+  ...
+# Subtest: automatic context never replaces an existing user draft or file reference
+ok 94 - automatic context never replaces an existing user draft or file reference
+  ---
+  duration_ms: 0.2346
+  type: 'test'
+  ...
+# Subtest: conflict, foreign workspace and a changed selection refuse quoting without touching input
+ok 95 - conflict, foreign workspace and a changed selection refuse quoting without touching input
+  ---
+  duration_ms: 0.535
+  type: 'test'
+  ...
+# Subtest: preview failures do not publish a fake reference or change the native draft
+ok 96 - preview failures do not publish a fake reference or change the native draft
+  ---
+  duration_ms: 0.1848
+  type: 'test'
+  ...
+# Subtest: the registered native reference codec flushes the current version at actual send time
+ok 97 - the registered native reference codec flushes the current version at actual send time
+  ---
+  duration_ms: 0.8469
+  type: 'test'
+  ...
+# Subtest: codec rejects deleted objects and foreign projects instead of silently serializing stale data
+ok 98 - codec rejects deleted objects and foreign projects instead of silently serializing stale data
+  ---
+  duration_ms: 0.2202
+  type: 'test'
+  ...
+# Subtest: legacy @ candidates refer to saved pages and objects only in the owning legacy workspace
+ok 99 - legacy @ candidates refer to saved pages and objects only in the owning legacy workspace
+  ---
+  duration_ms: 0.4359
+  type: 'test'
+  ...
+# Subtest: repeated quoting replaces only the plugin preview and keeps a user attachment
+ok 100 - repeated quoting replaces only the plugin preview and keeps a user attachment
+  ---
+  duration_ms: 1.5129
+  type: 'test'
+  ...
+# Subtest: a stale attached preview blocks admission until it is refreshed instead of misrepresenting the current canvas
+ok 101 - a stale attached preview blocks admission until it is refreshed instead of misrepresenting the current canvas
+  ---
+  duration_ms: 0.1988
+  type: 'test'
+  ...
+# Subtest: design brief binds to the current work, object, version and real resource
+ok 102 - design brief binds to the current work, object, version and real resource
+  ---
+  duration_ms: 0.8827
+  type: 'test'
+  ...
+# Subtest: input contract collapses the insertion range and preserves the existing draft
+ok 103 - input contract collapses the insertion range and preserves the existing draft
+  ---
+  duration_ms: 0.7364
+  type: 'test'
+  ...
+# Subtest: real DSH server streams pinned HTML/WASM with correct MIME and cache validation
+ok 104 - real DSH server streams pinned HTML/WASM with correct MIME and cache validation
+  ---
+  duration_ms: 150.6848
+  type: 'test'
+  ...
+# Subtest: actual routes reject mutation, unknown engines/files and traversal
+ok 105 - actual routes reject mutation, unknown engines/files and traversal
+  ---
+  duration_ms: 11.5846
+  type: 'test'
+  ...
+# Subtest: same-length tampering is detected before serving an editor script or page
+ok 106 - same-length tampering is detected before serving an editor script or page
+  ---
+  duration_ms: 22.1089
+  type: 'test'
+  ...
+# Subtest: an already registered DSH route adopts a published asset manifest without restarting or weakening integrity
+ok 107 - an already registered DSH route adopts a published asset manifest without restarting or weakening integrity
+  ---
+  duration_ms: 26.7555
+  type: 'test'
+  ...
+# Subtest: recorded real GLM missing-epoch arguments identify epoch before any manager mutation
+ok 108 - recorded real GLM missing-epoch arguments identify epoch before any manager mutation
+  ---
+  duration_ms: 1.1301
+  type: 'test'
+  ...
+# Subtest: all currently fenced public actions name missing fields; no implicit fence is supplied
+ok 109 - all currently fenced public actions name missing fields; no implicit fence is supplied
+  ---
+  duration_ms: 0.4361
+  type: 'test'
+  ...
+# Subtest: complete fences delegate unchanged; backend conflict checks retain responsibility
+ok 110 - complete fences delegate unchanged; backend conflict checks retain responsibility
+  ---
+  duration_ms: 0.1726
+  type: 'test'
+  ...
+# Subtest: state and non-base read/save contracts remain compatible
+ok 111 - state and non-base read/save contracts remain compatible
+  ---
+  duration_ms: 0.3437
+  type: 'test'
+  ...
+# Subtest: portable schema exposes all three fence requirements in model-visible descriptions
+ok 112 - portable schema exposes all three fence requirements in model-visible descriptions
+  ---
+  duration_ms: 0.109
+  type: 'test'
+  ...
+# Subtest: actual GLM open arguments with a target misplaced inside payload never reopen the current App
+ok 113 - actual GLM open arguments with a target misplaced inside payload never reopen the current App
+  ---
+  duration_ms: 0.6513
+  type: 'test'
+  ...
+# Subtest: an explicit open target still delegates without requiring the previous view epoch/base
+ok 114 - an explicit open target still delegates without requiring the previous view epoch/base
+  ---
+  duration_ms: 0.1656
+  type: 'test'
+  ...
+# Subtest: actual long Photo state becomes a compact opaque stamp and restores the exact issued bytes
+ok 115 - actual long Photo state becomes a compact opaque stamp and restores the exact issued bytes
+  ---
+  duration_ms: 1.2034
+  type: 'test'
+  ...
+# Subtest: session, source, epoch, complete base fields and ticket integrity remain bound
+ok 116 - session, source, epoch, complete base fields and ticket integrity remain bound
+  ---
+  duration_ms: 0.3414
+  type: 'test'
+  ...
+# Subtest: issued snapshots are immutable; resolution never substitutes a newer live base
+ok 117 - issued snapshots are immutable; resolution never substitutes a newer live base
+  ---
+  duration_ms: 0.517
+  type: 'test'
+  ...
+# Subtest: bounded cache eviction and legacy raw base compatibility are explicit
+ok 118 - bounded cache eviction and legacy raw base compatibility are explicit
+  ---
+  duration_ms: 0.2202
+  type: 'test'
+  ...
+# Subtest: large exact uint64 identities are preserved when a compact fence is resolved
+ok 119 - large exact uint64 identities are preserved when a compact fence is resolved
+  ---
+  duration_ms: 0.247
+  type: 'test'
+  ...
+# Subtest: AI history control and document lifecycle cannot bypass the live boundary through a batch
+ok 120 - AI history control and document lifecycle cannot bypass the live boundary through a batch
+  ---
+  duration_ms: 1.3568
+  type: 'test'
+  ...
+# Subtest: undo proof requires exactly one native history entry and its exact saved revision
+ok 121 - undo proof requires exactly one native history entry and its exact saved revision
+  ---
+  duration_ms: 0.4942
+  type: 'test'
+  ...
+# Subtest: sliced history and non-edit replies have no automatic undo ownership
+ok 122 - sliced history and non-edit replies have no automatic undo ownership
+  ---
+  duration_ms: 0.0882
+  type: 'test'
+  ...
+# Subtest: uint64 native history revisions and identity are proved without numeric conversion
+ok 123 - uint64 native history revisions and identity are proved without numeric conversion
+  ---
+  duration_ms: 0.1345
+  type: 'test'
+  ...
+# Subtest: actual PPTX package inspection, fixed source/asset fingerprints, idempotence and tamper refusal
+ok 124 - actual PPTX package inspection, fixed source/asset fingerprints, idempotence and tamper refusal
+  ---
+  duration_ms: 131.3604
+  type: 'test'
+  ...
+# Subtest: feedback checkpoint preserves actual operation identity and refuses manual/malformed provenance
+ok 125 - feedback checkpoint preserves actual operation identity and refuses manual/malformed provenance
+  ---
+  duration_ms: 113.972
+  type: 'test'
+  ...
+# Subtest: rejected feedback recovery is a separate durable source with a validated original receipt
+ok 126 - rejected feedback recovery is a separate durable source with a validated original receipt
+  ---
+  duration_ms: 104.3074
+  type: 'test'
+  ...
+# Subtest: draft expansion retains exact document/page/object identity and refuses unrelated scopes
+ok 127 - draft expansion retains exact document/page/object identity and refuses unrelated scopes
+  ---
+  duration_ms: 0.7493
+  type: 'test'
+  ...
+# Subtest: client carries an actively edited draft without overwriting another target draft or an uncertain add
+ok 128 - client carries an actively edited draft without overwriting another target draft or an uncertain add
+  ---
+  duration_ms: 0.5204
+  type: 'test'
+  ...
+# Subtest: H/V and relative SVG coordinates survive an affine transform
+ok 129 - H/V and relative SVG coordinates survive an affine transform
+  ---
+  duration_ms: 1.1026
+  type: 'test'
+  ...
+# Subtest: Bezier bounds include curve extrema
+ok 130 - Bezier bounds include curve extrema
+  ---
+  duration_ms: 0.2628
+  type: 'test'
+  ...
+# Subtest: normalization retains native extension and object identity metadata
+ok 131 - normalization retains native extension and object identity metadata
+  ---
+  duration_ms: 0.3402
+  type: 'test'
+  ...
+# Subtest: pointer coordinates use the translated canvas rectangle once
+ok 132 - pointer coordinates use the translated canvas rectangle once
+  ---
+  duration_ms: 0.1444
+  type: 'test'
+  ...
+# Subtest: v2 common commands create and edit real document structure with a revision
+ok 133 - v2 common commands create and edit real document structure with a revision
+  ---
+  duration_ms: 46.0284
+  type: 'test'
+  ...
+# Subtest: retired parser/render subsets are explicit failures, never successful native features
+ok 134 - retired parser/render subsets are explicit failures, never successful native features
+  ---
+  duration_ms: 0.3964
+  type: 'test'
+  ...
+# Subtest: HTML source versions, real archive, stale writes and concurrent saves preserve both history and one head
+ok 135 - HTML source versions, real archive, stale writes and concurrent saves preserve both history and one head
+  ---
+  duration_ms: 330.1004
+  type: 'test'
+  ...
+# Subtest: unsafe or malformed HTML source is rejected and historical corruption is surfaced
+ok 136 - unsafe or malformed HTML source is rejected and historical corruption is surfaced
+  ---
+  duration_ms: 48.625
+  type: 'test'
+  ...
+# Subtest: actual converter archive admits empty directory entries but rejects a real embedded-object member
+ok 137 - actual converter archive admits empty directory entries but rejects a real embedded-object member
+  ---
+  duration_ms: 5.0555
+  type: 'test'
+  ...
+# Subtest: font report reflects the actual embedded font metadata and payload
+ok 138 - font report reflects the actual embedded font metadata and payload
+  ---
+  duration_ms: 8.5032
+  type: 'test'
+  ...
+# Subtest: actual converter report separates SVG pictures from rasterized picture objects
+ok 139 - actual converter report separates SVG pictures from rasterized picture objects
+  ---
+  duration_ms: 2.562
+  type: 'test'
+  ...
+# Subtest: whole-page candidates retain human fields, non-target objects and deleted markers across later AI revisions
+ok 140 - whole-page candidates retain human fields, non-target objects and deleted markers across later AI revisions
+  ---
+  duration_ms: 435.0977
+  type: 'test'
+  ...
+# Subtest: all saved Deck pages are inspected rather than the current UI summary
+ok 141 - all saved Deck pages are inspected rather than the current UI summary
+  ---
+  duration_ms: 6.4106
+  type: 'test'
+  ...
+# Subtest: Photo raster tile fingerprints belong to actual layer identities
+ok 142 - Photo raster tile fingerprints belong to actual layer identities
+  ---
+  duration_ms: 3.0459
+  type: 'test'
+  ...
+# Subtest: navigation from an unrequested Deck page is allowed only when the whole native content stays identical
+ok 143 - navigation from an unrequested Deck page is allowed only when the whole native content stays identical
+  ---
+  duration_ms: 186.0456
+  type: 'test'
+  ...
+# Subtest: image candidate can be reused only when its complete saved source bytes match the original
+ok 144 - image candidate can be reused only when its complete saved source bytes match the original
+  ---
+  duration_ms: 0.4753
+  type: 'test'
+  ...
+# Subtest: real Photo source history retains original baseline identity in repeated-adoption receipts
+ok 145 - real Photo source history retains original baseline identity in repeated-adoption receipts
+  ---
+  duration_ms: 173.5584
+  type: 'test'
+  ...
+# Subtest: canvas region projects into real source pixels without confusing display scale with source size
+ok 146 - canvas region projects into real source pixels without confusing display scale with source size
+  ---
+  duration_ms: 38.6756
+  type: 'test'
+  ...
+# Subtest: pixel verifier refuses both unmasked outside changes and an unchanged edit
+ok 147 - pixel verifier refuses both unmasked outside changes and an unchanged edit
+  ---
+  duration_ms: 59.445
+  type: 'test'
+  ...
+# Subtest: bilinear upsampling keeps the actual edge pixels instead of extrapolating beyond the image
+ok 148 - bilinear upsampling keeps the actual edge pixels instead of extrapolating beyond the image
+  ---
+  duration_ms: 0.2677
+  type: 'test'
+  ...
+# Subtest: inline preview admits a real bounded PNG without changing its bytes
+ok 149 - inline preview admits a real bounded PNG without changing its bytes
+  ---
+  duration_ms: 1.322
+  type: 'test'
+  ...
+# Subtest: oversized dimensions and malformed JPEG lengths are rejected before image decode
+ok 150 - oversized dimensions and malformed JPEG lengths are rejected before image decode
+  ---
+  duration_ms: 0.8246
+  type: 'test'
+  ...
+# Subtest: image binding pins the old exact saved plan after later edits and rejects altered identity
+ok 151 - image binding pins the old exact saved plan after later edits and rejects altered identity
+  ---
+  duration_ms: 157.3359
+  type: 'test'
+  ...
+# Subtest: candidate trace exports byte-verified existing PNG/native fixtures and refuses changed candidate files
+ok 152 - candidate trace exports byte-verified existing PNG/native fixtures and refuses changed candidate files
+  ---
+  duration_ms: 171.7972
+  type: 'test'
+  ...
+# Subtest: instance fork uses exact bound historical version, keeps both uses and newer original intact
+ok 153 - instance fork uses exact bound historical version, keeps both uses and newer original intact
+  ---
+  duration_ms: 915.1558
+  type: 'test'
+  ...
+# Subtest: durable editing intent recovers a fork interrupted before publication; competing fork calls reuse one source
+ok 154 - durable editing intent recovers a fork interrupted before publication; competing fork calls reuse one source
+  ---
+  duration_ms: 602.9797
+  type: 'test'
+  ...
+# Subtest: ordinary uses stay independent until explicitly linked; durable membership, identity reuse and detach do not mutate native sources
+ok 155 - ordinary uses stay independent until explicitly linked; durable membership, identity reuse and detach do not mutate native sources
+  ---
+  duration_ms: 914.892
+  type: 'test'
+  ...
+# Subtest: actual worker writes and reads a versioned document
+ok 156 - actual worker writes and reads a versioned document
+  ---
+  duration_ms: 1428.6115
+  type: 'test'
+  ...
+# Subtest: worker failure is localized and the next job still runs
+ok 157 - worker failure is localized and the next job still runs
+  ---
+  duration_ms: 1489.1008
+  type: 'test'
+  ...
+# Subtest: worker transport retains Chinese and emoji across pipe chunk boundaries
+ok 158 - worker transport retains Chinese and emoji across pipe chunk boundaries
+  ---
+  duration_ms: 1344.6383
+  type: 'test'
+  ...
+# Subtest: a blocked child times out while the parent stays responsive
+ok 159 - a blocked child times out while the parent stays responsive
+  ---
+  duration_ms: 2723.6827
+  type: 'test'
+  ...
+# Subtest: queued cancellation does not start a second child
+ok 160 - queued cancellation does not start a second child
+  ---
+  duration_ms: 1.6417
+  type: 'test'
+  ...
+# Subtest: combined queued parameters have a byte budget that cancellation releases
+ok 161 - combined queued parameters have a byte budget that cancellation releases
+  ---
+  duration_ms: 106.0271
+  type: 'test'
+  ...
+# Subtest: old-work migration keeps exact backup, reports missing assets and detects stale or corrupted data
+ok 162 - old-work migration keeps exact backup, reports missing assets and detects stale or corrupted data
+  ---
+  duration_ms: 180.147
+  type: 'test'
+  ...
+# Subtest: old editable slide content produces a real native deck migration item
+ok 163 - old editable slide content produces a real native deck migration item
+  ---
+  duration_ms: 81.287
+  type: 'test'
+  ...
+# Subtest: linked two-source updates have durable bounded intent and progress; independent third use stays untouched
+ok 164 - linked two-source updates have durable bounded intent and progress; independent third use stays untouched
+  ---
+  duration_ms: 3272.9296
+  type: 'test'
+  ...
+# Subtest: published native source receipt recovers interrupted progress without replay or extra source revision
+ok 165 - published native source receipt recovers interrupted progress without replay or extra source revision
+  ---
+  duration_ms: 3731.2667
+  type: 'test'
+  ...
+# Subtest: stale linked member authorization cannot silently target a different group or member list
+ok 166 - stale linked member authorization cannot silently target a different group or member list
+  ---
+  duration_ms: 2042.269
+  type: 'test'
+  ...
+# Subtest: real pinned-rule workflow saves exact plan and HTML bytes, distinguishes manual reading and completes idempotently
+ok 167 - real pinned-rule workflow saves exact plan and HTML bytes, distinguishes manual reading and completes idempotently
+  ---
+  duration_ms: 927.599
+  type: 'test'
+  ...
+# Subtest: excluded services are rejected and revoked artifact declarations cannot satisfy completion
+ok 168 - excluded services are rejected and revoked artifact declarations cannot satisfy completion
+  ---
+  duration_ms: 576.78
+  type: 'test'
+  ...
+# Subtest: nine local vector anchors survive a ratio change on a rotated, skewed object
+ok 169 - nine local vector anchors survive a ratio change on a rotated, skewed object
+  ---
+  duration_ms: 1.2752
+  type: 'test'
+  ...
+# Subtest: rotated and reversed Deck frame holds the chosen anchor and respects the visible crop
+ok 170 - rotated and reversed Deck frame holds the chosen anchor and respects the visible crop
+  ---
+  duration_ms: 0.2973
+  type: 'test'
+  ...
+# Subtest: vectorcraft origin parser and authorized normalization preserve all unrelated native metadata
+ok 171 - vectorcraft origin parser and authorized normalization preserve all unrelated native metadata
+  ---
+  duration_ms: 1.7456
+  type: 'test'
+  ...
+# Subtest: deckcraft origin parser and authorized normalization preserve all unrelated native metadata
+ok 172 - deckcraft origin parser and authorized normalization preserve all unrelated native metadata
+  ---
+  duration_ms: 0.1994
+  type: 'test'
+  ...
+# Subtest: Vector full native proof only admits the specific project/asset marker change
+ok 173 - Vector full native proof only admits the specific project/asset marker change
+  ---
+  duration_ms: 9.6508
+  type: 'test'
+  ...
+# Subtest: Deck full native proof changes actual shape tag reference, not only a detached summary
+ok 174 - Deck full native proof changes actual shape tag reference, not only a detached summary
+  ---
+  duration_ms: 20.2796
+  type: 'test'
+  ...
+# Subtest: AI layer insertion and manual object move are both preserved
+ok 175 - AI layer insertion and manual object move are both preserved
+  ---
+  duration_ms: 0.9838
+  type: 'test'
+  ...
+# Subtest: editing the same field raises a visible conflict
+ok 176 - editing the same field raises a visible conflict
+  ---
+  duration_ms: 0.1419
+  type: 'test'
+  ...
+# Subtest: delete versus remote edit does not silently choose deletion
+ok 177 - delete versus remote edit does not silently choose deletion
+  ---
+  duration_ms: 0.5448
+  type: 'test'
+  ...
+# Subtest: remote deletion and unchanged local object merge without resurrection
+ok 178 - remote deletion and unchanged local object merge without resurrection
+  ---
+  duration_ms: 0.1425
+  type: 'test'
+  ...
+# Subtest: independent additions from an empty object list both survive
+ok 179 - independent additions from an empty object list both survive
+  ---
+  duration_ms: 0.1157
+  type: 'test'
+  ...
+# Subtest: streamed file identity matches actual bytes and observes an aborted operation
+ok 180 - streamed file identity matches actual bytes and observes an aborted operation
+  ---
+  duration_ms: 15.4595
+  type: 'test'
+  ...
+# Subtest: save image asset
+ok 181 - save image asset
+  ---
+  duration_ms: 17.2889
+  type: 'test'
+  ...
+# Subtest: idempotent by content (same bytes → same dir)
+ok 182 - idempotent by content (same bytes → same dir)
+  ---
+  duration_ms: 19.9822
+  type: 'test'
+  ...
+# Subtest: meta read back
+ok 183 - meta read back
+  ---
+  duration_ms: 16.5745
+  type: 'test'
+  ...
+# Subtest: bytes read back + hash verified
+ok 184 - bytes read back + hash verified
+  ---
+  duration_ms: 23.8147
+  type: 'test'
+  ...
+# Subtest: wrong kind for extension refused
+ok 185 - wrong kind for extension refused
+  ---
+  duration_ms: 0.4409
+  type: 'test'
+  ...
+# Subtest: unknown extension refused
+ok 186 - unknown extension refused
+  ---
+  duration_ms: 0.1062
+  type: 'test'
+  ...
+# Subtest: empty asset refused
+ok 187 - empty asset refused
+  ---
+  duration_ms: 0.0793
+  type: 'test'
+  ...
+# Subtest: verifyManifestAssets: present ok
+ok 188 - verifyManifestAssets: present ok
+  ---
+  duration_ms: 12.0037
+  type: 'test'
+  ...
+# Subtest: verifyManifestAssets: missing refused
+ok 189 - verifyManifestAssets: missing refused
+  ---
+  duration_ms: 6.2499
+  type: 'test'
+  ...
+# Subtest: motion routes use admission, reserved project identity and a separate preview
+ok 190 - motion routes use admission, reserved project identity and a separate preview
+  ---
+  duration_ms: 138.9056
+  type: 'test'
+  ...
+# Subtest: an unconfigured motion HTTP registry fails closed
+ok 191 - an unconfigured motion HTTP registry fails closed
+  ---
+  duration_ms: 5.2683
+  type: 'test'
+  ...
+# Subtest: MV2-03: SDK editComposition setText+setStyle
+ok 192 - MV2-03: SDK editComposition setText+setStyle
+  ---
+  duration_ms: 381.7148
+  type: 'test'
+  ...
+# Subtest: MV2-03: unknown HfId rejected in results
+ok 193 - MV2-03: unknown HfId rejected in results
+  ---
+  duration_ms: 1.2157
+  type: 'test'
+  ...
+# Subtest: MV2-04: verifyBaseShas accepts correct
+ok 194 - MV2-04: verifyBaseShas accepts correct
+  ---
+  duration_ms: 0.1617
+  type: 'test'
+  ...
+# Subtest: MV2-04: verifyBaseShas rejects wrong
+ok 195 - MV2-04: verifyBaseShas rejects wrong
+  ---
+  duration_ms: 0.2752
+  type: 'test'
+  ...
+# Subtest: MV2-04: normalizeSourceContent
+ok 196 - MV2-04: normalizeSourceContent
+  ---
+  duration_ms: 0.542
+  type: 'test'
+  ...
+# Subtest: MV2-05: native SVG import as motion asset
+ok 197 - MV2-05: native SVG import as motion asset
+  ---
+  duration_ms: 17.9291
+  type: 'test'
+  ...
+# Subtest: MV2-05: missing native file refused
+ok 198 - MV2-05: missing native file refused
+  ---
+  duration_ms: 0.3687
+  type: 'test'
+  ...
+# Subtest: legacy explicit-output import refuses an existing file outside the workspace
+ok 199 - legacy explicit-output import refuses an existing file outside the workspace
+  ---
+  duration_ms: 4.9621
+  type: 'test'
+  ...
+# Subtest: native immutable materials retain origin, text encodings and aliased media across editable package roundtrip
+ok 200 - native immutable materials retain origin, text encodings and aliased media across editable package roundtrip
+  ---
+  duration_ms: 469.6127
+  type: 'test'
+  ...
+# Subtest: binary source bytes survive package export and import, and asset paths/hashes reject traversal before publication
+ok 201 - binary source bytes survive package export and import, and asset paths/hashes reject traversal before publication
+  ---
+  duration_ms: 28.9478
+  type: 'test'
+  ...
+# Subtest: first run executes and persists receipt
+ok 202 - first run executes and persists receipt
+  ---
+  duration_ms: 6.733
+  type: 'test'
+  ...
+# Subtest: same key + same input → replayed receipt, no second execution
+ok 203 - same key + same input → replayed receipt, no second execution
+  ---
+  duration_ms: 0.6117
+  type: 'test'
+  ...
+# Subtest: same key + different input → 409
+ok 204 - same key + different input → 409
+  ---
+  duration_ms: 0.7354
+  type: 'test'
+  ...
+# Subtest: failed operation records error
+ok 205 - failed operation records error
+  ---
+  duration_ms: 3.0147
+  type: 'test'
+  ...
+# Subtest: failed operation retried → runs again
+ok 206 - failed operation retried → runs again
+  ---
+  duration_ms: 1.3778
+  type: 'test'
+  ...
+# Subtest: running operation survives "restart" (record on disk)
+ok 207 - running operation survives "restart" (record on disk)
+  ---
+  duration_ms: 3.7185
+  type: 'test'
+  ...
+# Subtest: ZIP bounds are enforced before inflate, including aggregate size and entry count
+ok 208 - ZIP bounds are enforced before inflate, including aggregate size and entry count
+  ---
+  duration_ms: 1.4907
+  type: 'test'
+  ...
+# Subtest: ZIP symlinks, local/central confusion and corrupted bytes are refused
+ok 209 - ZIP symlinks, local/central confusion and corrupted bytes are refused
+  ---
+  duration_ms: 0.2752
+  type: 'test'
+  ...
+# Subtest: setup: project with an asset
+ok 210 - setup: project with an asset
+  ---
+  duration_ms: 24.4164
+  type: 'test'
+  ...
+# Subtest: export produces a zip with manifest+sources+assets
+ok 211 - export produces a zip with manifest+sources+assets
+  ---
+  duration_ms: 20.2833
+  type: 'test'
+  ...
+# Subtest: roundtrip: export → import → new project, sources+assets identical
+ok 212 - roundtrip: export → import → new project, sources+assets identical
+  ---
+  duration_ms: 55.0908
+  type: 'test'
+  ...
+# Subtest: malicious: traversal entry refused
+ok 213 - malicious: traversal entry refused
+  ---
+  duration_ms: 0.7748
+  type: 'test'
+  ...
+# Subtest: malicious: absolute entry refused
+ok 214 - malicious: absolute entry refused
+  ---
+  duration_ms: 0.3619
+  type: 'test'
+  ...
+# Subtest: malicious: executable entry refused
+ok 215 - malicious: executable entry refused
+  ---
+  duration_ms: 0.7333
+  type: 'test'
+  ...
+# Subtest: malicious: .env entry refused
+ok 216 - malicious: .env entry refused
+  ---
+  duration_ms: 0.273
+  type: 'test'
+  ...
+# Subtest: malicious: case collision refused
+ok 217 - malicious: case collision refused
+  ---
+  duration_ms: 0.2399
+  type: 'test'
+  ...
+# Subtest: malicious: no manifest refused
+ok 218 - malicious: no manifest refused
+  ---
+  duration_ms: 0.2452
+  type: 'test'
+  ...
+# Subtest: malicious: session id in manifest refused
+ok 219 - malicious: session id in manifest refused
+  ---
+  duration_ms: 0.6809
+  type: 'test'
+  ...
+# Subtest: malicious: corrupt zip refused
+ok 220 - malicious: corrupt zip refused
+  ---
+  duration_ms: 0.1421
+  type: 'test'
+  ...
+# Subtest: independent preview serves only exact-revision source, restrictive headers, range and revocation
+ok 221 - independent preview serves only exact-revision source, restrictive headers, range and revocation
+  ---
+  duration_ms: 131.5951
+  type: 'test'
+  ...
+# Subtest: preview expiry and changed-session activity fail closed
+ok 222 - preview expiry and changed-session activity fail closed
+  ---
+  duration_ms: 18.5422
+  type: 'test'
+  ...
+# Subtest: commit r1 into empty project (baseRevision=null)
+ok 223 - commit r1 into empty project (baseRevision=null)
+  ---
+  duration_ms: 11.7205
+  type: 'test'
+  ...
+# Subtest: head reads back r1
+ok 224 - head reads back r1
+  ---
+  duration_ms: 0.4724
+  type: 'test'
+  ...
+# Subtest: base CAS: stale base refused
+ok 225 - base CAS: stale base refused
+  ---
+  duration_ms: 0.9529
+  type: 'test'
+  ...
+# Subtest: base CAS: correct base accepted
+ok 226 - base CAS: correct base accepted
+  ---
+  duration_ms: 5.9003
+  type: 'test'
+  ...
+# Subtest: sources read back byte-identical
+ok 227 - sources read back byte-identical
+  ---
+  duration_ms: 1.5025
+  type: 'test'
+  ...
+# Subtest: history lists both revisions in order
+ok 228 - history lists both revisions in order
+  ---
+  duration_ms: 6.1105
+  type: 'test'
+  ...
+# Subtest: restore old revision → new head, history intact
+ok 229 - restore old revision → new head, history intact
+  ---
+  duration_ms: 7.1129
+  type: 'test'
+  ...
+# Subtest: restore with stale base refused
+ok 230 - restore with stale base refused
+  ---
+  duration_ms: 2.0243
+  type: 'test'
+  ...
+# Subtest: listProjects shows the project
+ok 231 - listProjects shows the project
+  ---
+  duration_ms: 1.9983
+  type: 'test'
+  ...
+# Subtest: unknown project read → 404
+ok 232 - unknown project read → 404
+  ---
+  duration_ms: 0.3751
+  type: 'test'
+  ...
+# Subtest: unknown revision read → 404
+ok 233 - unknown revision read → 404
+  ---
+  duration_ms: 0.3088
+  type: 'test'
+  ...
+# Subtest: render source is project-only HTTP, opaque sandbox, no credentials/writes/file/external URLs
+ok 234 - render source is project-only HTTP, opaque sandbox, no credentials/writes/file/external URLs
+  ---
+  duration_ms: 51.8855
+  type: 'test'
+  ...
+# Subtest: resource boundary rejects traversal/encoding/absolute/Windows paths and accepts real Chinese/spaced subdirectory assets
+ok 235 - resource boundary rejects traversal/encoding/absolute/Windows paths and accepts real Chinese/spaced subdirectory assets
+  ---
+  duration_ms: 18.8659
+  type: 'test'
+  ...
+# Subtest: create: no session → E_SESSION
+ok 236 - create: no session → E_SESSION
+  ---
+  duration_ms: 2.1903
+  type: 'test'
+  ...
+# Subtest: create: valid → projectId+lease
+ok 237 - create: valid → projectId+lease
+  ---
+  duration_ms: 12.8615
+  type: 'test'
+  ...
+# Subtest: open: returns lease with correct session
+ok 238 - open: returns lease with correct session
+  ---
+  duration_ms: 9.2472
+  type: 'test'
+  ...
+# Subtest: write_sources: with valid lease → new revision
+ok 239 - write_sources: with valid lease → new revision
+  ---
+  duration_ms: 15.9078
+  type: 'test'
+  ...
+# Subtest: write_sources: stale baseRevision → E_STALE_BASE
+ok 240 - write_sources: stale baseRevision → E_STALE_BASE
+  ---
+  duration_ms: 21.9712
+  type: 'test'
+  ...
+# Subtest: write_sources: no session → E_SESSION
+ok 241 - write_sources: no session → E_SESSION
+  ---
+  duration_ms: 0.3478
+  type: 'test'
+  ...
+# Subtest: restore: old revision → new head
+ok 242 - restore: old revision → new head
+  ---
+  duration_ms: 24.8047
+  type: 'test'
+  ...
+# Subtest: close_lease: subsequent writes rejected
+ok 243 - close_lease: subsequent writes rejected
+  ---
+  duration_ms: 8.877
+  type: 'test'
+  ...
+# Subtest: list_projects returns all
+ok 244 - list_projects returns all
+  ---
+  duration_ms: 8.8834
+  type: 'test'
+  ...
+# Subtest: create: default template carries frame-clock runtime + composition root
+ok 245 - create: default template carries frame-clock runtime + composition root
+  ---
+  duration_ms: 11.6934
+  type: 'test'
+  ...
+# Subtest: export_project returns base64 payload
+ok 246 - export_project returns base64 payload
+  ---
+  duration_ms: 13.0262
+  type: 'test'
+  ...
+# Subtest: verify_artifact: missing artifact → E_NO_ARTIFACT
+ok 247 - verify_artifact: missing artifact → E_NO_ARTIFACT
+  ---
+  duration_ms: 8.5224
+  type: 'test'
+  ...
+# Subtest: verify_artifact: bad projectId rejected
+ok 248 - verify_artifact: bad projectId rejected
+  ---
+  duration_ms: 0.4206
+  type: 'test'
+  ...
+# Subtest: render action rejects unauthenticated write (no lease)
+ok 249 - render action rejects unauthenticated write (no lease)
+  ---
+  duration_ms: 7.7828
+  type: 'test'
+  ...
+# Subtest: templates: list includes vendored hyperframes templates with render params
+ok 250 - templates: list includes vendored hyperframes templates with render params
+  ---
+  duration_ms: 7.813
+  type: 'test'
+  ...
+# Subtest: create_from_template: seeds a full GSAP project (index.html + fonts)
+ok 251 - create_from_template: seeds a full GSAP project (index.html + fonts)
+  ---
+  duration_ms: 28.6589
+  type: 'test'
+  ...
+# Subtest: reference: measures a real video into facts/frames/audio
+ok 252 - reference: measures a real video into facts/frames/audio
+  ---
+  duration_ms: 3701.2103
+  type: 'test'
+  ...
+# Subtest: frame runtime injection: bare compositions get the clock, shipped ones untouched
+ok 253 - frame runtime injection: bare compositions get the clock, shipped ones untouched
+  ---
+  duration_ms: 0.5923
+  type: 'test'
+  ...
+# Subtest: runtime versions reject missing/old tools and accept supported versions
+ok 254 - runtime versions reject missing/old tools and accept supported versions
+  ---
+  duration_ms: 0.8969
+  type: 'test'
+  ...
+# Subtest: custom absolute directory supports Chinese/spaces; invalid explicit values do not silently fall back
+ok 255 - custom absolute directory supports Chinese/spaces; invalid explicit values do not silently fall back
+  ---
+  duration_ms: 66.9683
+  type: 'test'
+  ...
+# Subtest: worker environment carries only resolved executables and OS bootstrap, never providers/proxies/node options
+ok 256 - worker environment carries only resolved executables and OS bootstrap, never providers/proxies/node options
+  ---
+  duration_ms: 0.4531
+  type: 'test'
+  ...
+# Subtest: projectId: valid
+ok 257 - projectId: valid
+  ---
+  duration_ms: 1.4146
+  type: 'test'
+  ...
+# Subtest: projectId: bad prefix
+ok 258 - projectId: bad prefix
+  ---
+  duration_ms: 0.1524
+  type: 'test'
+  ...
+# Subtest: projectId: bad uuid
+ok 259 - projectId: bad uuid
+  ---
+  duration_ms: 0.1025
+  type: 'test'
+  ...
+# Subtest: revision: valid sha256
+ok 260 - revision: valid sha256
+  ---
+  duration_ms: 0.0709
+  type: 'test'
+  ...
+# Subtest: revision: short sha refused
+ok 261 - revision: short sha refused
+  ---
+  duration_ms: 0.0607
+  type: 'test'
+  ...
+# Subtest: operationKey: valid
+ok 262 - operationKey: valid
+  ---
+  duration_ms: 0.0702
+  type: 'test'
+  ...
+# Subtest: operationKey: bad char
+ok 263 - operationKey: bad char
+  ---
+  duration_ms: 0.0529
+  type: 'test'
+  ...
+# Subtest: render: 24/25/30 accepted
+ok 264 - render: 24/25/30 accepted
+  ---
+  duration_ms: 0.1266
+  type: 'test'
+  ...
+# Subtest: render: fps 60 refused
+ok 265 - render: fps 60 refused
+  ---
+  duration_ms: 0.0624
+  type: 'test'
+  ...
+# Subtest: render: den != 1 refused
+ok 266 - render: den != 1 refused
+  ---
+  duration_ms: 0.1364
+  type: 'test'
+  ...
+# Subtest: render: zero frames refused
+ok 267 - render: zero frames refused
+  ---
+  duration_ms: 0.0651
+  type: 'test'
+  ...
+# Subtest: render: negative frames refused
+ok 268 - render: negative frames refused
+  ---
+  duration_ms: 0.0653
+  type: 'test'
+  ...
+# Subtest: render: over-size edge refused
+ok 269 - render: over-size edge refused
+  ---
+  duration_ms: 0.0485
+  type: 'test'
+  ...
+# Subtest: render: over-area refused (1920x1081 > 2073600)
+ok 270 - render: over-area refused (1920x1081 > 2073600)
+  ---
+  duration_ms: 0.0425
+  type: 'test'
+  ...
+# Subtest: render: 1920x1080 accepted (exactly at area cap)
+ok 271 - render: 1920x1080 accepted (exactly at area cap)
+  ---
+  duration_ms: 0.0291
+  type: 'test'
+  ...
+# Subtest: render: NaN fps refused
+ok 272 - render: NaN fps refused
+  ---
+  duration_ms: 0.0485
+  type: 'test'
+  ...
+# Subtest: sources: valid
+ok 273 - sources: valid
+  ---
+  duration_ms: 0.2627
+  type: 'test'
+  ...
+# Subtest: sources: empty refused
+ok 274 - sources: empty refused
+  ---
+  duration_ms: 0.0478
+  type: 'test'
+  ...
+# Subtest: sources: traversal refused
+ok 275 - sources: traversal refused
+  ---
+  duration_ms: 0.0591
+  type: 'test'
+  ...
+# Subtest: sources: absolute refused
+ok 276 - sources: absolute refused
+  ---
+  duration_ms: 0.0327
+  type: 'test'
+  ...
+# Subtest: sources: drive letter refused
+ok 277 - sources: drive letter refused
+  ---
+  duration_ms: 0.0346
+  type: 'test'
+  ...
+# Subtest: sources: backslash refused
+ok 278 - sources: backslash refused
+  ---
+  duration_ms: 0.0291
+  type: 'test'
+  ...
+# Subtest: sources: executable ext refused
+ok 279 - sources: executable ext refused
+  ---
+  duration_ms: 0.0918
+  type: 'test'
+  ...
+# Subtest: sources: bad sha refused
+ok 280 - sources: bad sha refused
+  ---
+  duration_ms: 0.0382
+  type: 'test'
+  ...
+# Subtest: timeRange: valid
+ok 281 - timeRange: valid
+  ---
+  duration_ms: 0.0405
+  type: 'test'
+  ...
+# Subtest: timeRange: reversed refused
+ok 282 - timeRange: reversed refused
+  ---
+  duration_ms: 0.0261
+  type: 'test'
+  ...
+# Subtest: timeRange: end beyond duration refused
+ok 283 - timeRange: end beyond duration refused
+  ---
+  duration_ms: 0.0233
+  type: 'test'
+  ...
+# Subtest: hfIds: valid set
+ok 284 - hfIds: valid set
+  ---
+  duration_ms: 0.0439
+  type: 'test'
+  ...
+# Subtest: hfIds: empty refused
+ok 285 - hfIds: empty refused
+  ---
+  duration_ms: 0.025
+  type: 'test'
+  ...
+# Subtest: hfIds: duplicate refused
+ok 286 - hfIds: duplicate refused
+  ---
+  duration_ms: 0.0238
+  type: 'test'
+  ...
+# Subtest: manifest: valid roundtrip
+ok 287 - manifest: valid roundtrip
+  ---
+  duration_ms: 0.122
+  type: 'test'
+  ...
+# Subtest: manifest: entry missing from sources refused
+ok 288 - manifest: entry missing from sources refused
+  ---
+  duration_ms: 0.053
+  type: 'test'
+  ...
+# Subtest: manifest: bad schemaVersion refused
+ok 289 - manifest: bad schemaVersion refused
+  ---
+  duration_ms: 0.0288
+  type: 'test'
+  ...
+# Subtest: safeRelativePath: nested ok
+ok 290 - safeRelativePath: nested ok
+  ---
+  duration_ms: 0.0537
+  type: 'test'
+  ...
+# Subtest: safeRelativePath: dot segment refused
+ok 291 - safeRelativePath: dot segment refused
+  ---
+  duration_ms: 0.0478
+  type: 'test'
+  ...
+# Subtest: safeRelativePath: dotdot refused
+ok 292 - safeRelativePath: dotdot refused
+  ---
+  duration_ms: 0.0358
+  type: 'test'
+  ...
+# Subtest: supervisor: ok worker → completed, progress parsed, terminal record retained
+ok 293 - supervisor: ok worker → completed, progress parsed, terminal record retained
+  ---
+  duration_ms: 440.1769
+  type: 'test'
+  ...
+# Subtest: supervisor: failing worker → failed with error surfaced
+ok 294 - supervisor: failing worker → failed with error surfaced
+  ---
+  duration_ms: 414.1158
+  type: 'test'
+  ...
+# Subtest: supervisor: cancel kills a running job → cancelled
+ok 295 - supervisor: cancel kills a running job → cancelled
+  ---
+  duration_ms: 4545.736
+  type: 'test'
+  ...
+# Subtest: supervisor: worker entry missing → immediate structured failure
+ok 296 - supervisor: worker entry missing → immediate structured failure
+  ---
+  duration_ms: 1.3084
+  type: 'test'
+  ...
+# Subtest: timeout waits for the owned process tree; failed/cancelled writes never replace previous output
+ok 297 - timeout waits for the owned process tree; failed/cancelled writes never replace previous output
+  ---
+  duration_ms: 4426.4267
+  type: 'test'
+  ...
+# Subtest: deep artifact directories never become the child working directory
+ok 298 - deep artifact directories never become the child working directory
+  ---
+  duration_ms: 218.4239
+  type: 'test'
+  ...
+# Subtest: registered tool schema, real execution session and binary-safe source patches
+ok 299 - registered tool schema, real execution session and binary-safe source patches
+  ---
+  duration_ms: 187.3482
+  type: 'test'
+  ...
+# Subtest: motion worker renders a real MP4 that passes ffprobe verification
+ok 300 - motion worker renders a real MP4 that passes ffprobe verification
+  ---
+  duration_ms: 6734.9236
+  type: 'test'
+  ...
+# Subtest: motion worker fails loudly on a broken composition
+ok 301 - motion worker fails loudly on a broken composition
+  ---
+  duration_ms: 5803.68
+  type: 'test'
+  ...
+# Subtest: motion worker mixes composition audio into the MP4
+ok 302 - motion worker mixes composition audio into the MP4
+  ---
+  duration_ms: 7610.0329
+  type: 'test'
+  ...
+# Subtest: motion worker renders WebGL (three.js-ready) compositions
+ok 303 - motion worker renders WebGL (three.js-ready) compositions
+  ---
+  duration_ms: 6679.6689
+  type: 'test'
+  ...
+# Subtest: motion worker renders the vendored GSAP template (multi-timeline seek)
+ok 304 - motion worker renders the vendored GSAP template (multi-timeline seek)
+  ---
+  duration_ms: 9698.0502
+  type: 'test'
+  ...
+# Subtest: full saved vectorcraft structure is inspected instead of the live summary
+ok 305 - full saved vectorcraft structure is inspected instead of the live summary
+  ---
+  duration_ms: 85.2598
+  type: 'test'
+  ...
+# Subtest: full saved photocraft structure is inspected instead of the live summary
+ok 306 - full saved photocraft structure is inspected instead of the live summary
+  ---
+  duration_ms: 63.8813
+  type: 'test'
+  ...
+# Subtest: full saved deckcraft structure is inspected instead of the live summary
+ok 307 - full saved deckcraft structure is inspected instead of the live summary
+  ---
+  duration_ms: 72.3518
+  type: 'test'
+  ...
+# Subtest: exact native identity and engine-owned selection produce an unchanged execution fence
+ok 308 - exact native identity and engine-owned selection produce an unchanged execution fence
+  ---
+  duration_ms: 1.3683
+  type: 'test'
+  ...
+# Subtest: anchor/page stamp, wrong engine, rounded identity and different objects cannot match
+ok 309 - anchor/page stamp, wrong engine, rounded identity and different objects cannot match
+  ---
+  duration_ms: 0.194
+  type: 'test'
+  ...
+# Subtest: file-format knowledge never implicitly advertises Photo or Deck as working live editors
+ok 310 - file-format knowledge never implicitly advertises Photo or Deck as working live editors
+  ---
+  duration_ms: 0.0954
+  type: 'test'
+  ...
+# Subtest: identity validation accepts exact old safe values but rejects noncanonical large numbers
+ok 311 - identity validation accepts exact old safe values but rejects noncanonical large numbers
+  ---
+  duration_ms: 0.0944
+  type: 'test'
+  ...
+# Subtest: Photo schema keeps actual native layer identities and a source-backed raster reference distinct
+ok 312 - Photo schema keeps actual native layer identities and a source-backed raster reference distinct
+  ---
+  duration_ms: 0.1565
+  type: 'test'
+  ...
+# Subtest: Deck schema keeps native slides/text/cells/target, actual u32 shapes and exact runtime UID
+ok 313 - Deck schema keeps native slides/text/cells/target, actual u32 shapes and exact runtime UID
+  ---
+  duration_ms: 0.2153
+  type: 'test'
+  ...
+# Subtest: Deck notes and master targets do not become a stale slide-object list
+ok 314 - Deck notes and master targets do not become a stale slide-object list
+  ---
+  duration_ms: 0.1435
+  type: 'test'
+  ...
+# Subtest: actual Deck WASM source yields real page/object identity without changing native source
+ok 315 - actual Deck WASM source yields real page/object identity without changing native source
+  ---
+  duration_ms: 4.9118
+  type: 'test'
+  ...
+# Subtest: selective metadata read does not inflate unrelated binary members and still enforces selected budgets
+ok 316 - selective metadata read does not inflate unrelated binary members and still enforces selected budgets
+  ---
+  duration_ms: 4.5588
+  type: 'test'
+  ...
+# Subtest: actual native content-only replacement passes whole-presentation proof; unrelated or formatting changes are refused
+ok 317 - actual native content-only replacement passes whole-presentation proof; unrelated or formatting changes are refused
+  ---
+  duration_ms: 20.7793
+  type: 'test'
+  ...
+# Subtest: closing the owned native launcher kills its engine descendant
+ok 318 - closing the owned native launcher kills its engine descendant
+  ---
+  duration_ms: 1611.5379
+  type: 'test'
+  ...
+# Subtest: Windows job budget refuses a real oversized child allocation
+ok 319 - Windows job budget refuses a real oversized child allocation
+  ---
+  duration_ms: 764.059
+  type: 'test'
+  ...
+# Subtest: actual helper and editing sessions share two slots; queued cancellation does not start an engine
+ok 320 - actual helper and editing sessions share two slots; queued cancellation does not start an engine
+  ---
+  duration_ms: 1589.726
+  type: 'test'
+  ...
+# Subtest: exact uint64 boundaries survive native JSON without converting numeric text
+ok 321 - exact uint64 boundaries survive native JSON without converting numeric text
+  ---
+  duration_ms: 1.2707
+  type: 'test'
+  ...
+# Subtest: identity equality and ordering remain exact above 2^53 and across decimal lengths
+ok 322 - identity equality and ordering remain exact above 2^53 and across decimal lengths
+  ---
+  duration_ms: 0.1426
+  type: 'test'
+  ...
+# Subtest: rounding, malformed atoms, cycles, invalid JSON and budget overflow fail before dispatch
+ok 323 - rounding, malformed atoms, cycles, invalid JSON and budget overflow fail before dispatch
+  ---
+  duration_ms: 0.9906
+  type: 'test'
+  ...
+# Subtest: native save/receipt IDs are typed explicitly while source text and small integers stay compatible
+ok 324 - native save/receipt IDs are typed explicitly while source text and small integers stay compatible
+  ---
+  duration_ms: 0.2026
+  type: 'test'
+  ...
+# Subtest: exact uint64 checkpoint metadata survives persistence without changing real serializer bytes
+ok 325 - exact uint64 checkpoint metadata survives persistence without changing real serializer bytes
+  ---
+  duration_ms: 109.122
+  type: 'test'
+  ...
+# Subtest: only declared source engines can create source records, including prototype-name inputs
+ok 326 - only declared source engines can create source records, including prototype-name inputs
+  ---
+  duration_ms: 2.8706
+  type: 'test'
+  ...
+# Subtest: native source persists real serializer bytes and retains immutable history
+ok 327 - native source persists real serializer bytes and retains immutable history
+  ---
+  duration_ms: 97.0502
+  type: 'test'
+  ...
+# Subtest: stale AI checkpoint cannot overwrite a later manual checkpoint
+ok 328 - stale AI checkpoint cannot overwrite a later manual checkpoint
+  ---
+  duration_ms: 107.2558
+  type: 'test'
+  ...
+# Subtest: immutable historical source lookup never rewinds the head or admits an uncommitted record
+ok 329 - immutable historical source lookup never rewinds the head or admits an uncommitted record
+  ---
+  duration_ms: 126.248
+  type: 'test'
+  ...
+# Subtest: placement receipt is published atomically inside the immutable source commit
+ok 330 - placement receipt is published atomically inside the immutable source commit
+  ---
+  duration_ms: 48.4361
+  type: 'test'
+  ...
+# Subtest: concurrent writers preserve exactly one committed head without corrupting source
+ok 331 - concurrent writers preserve exactly one committed head without corrupting source
+  ---
+  duration_ms: 111.0269
+  type: 'test'
+  ...
+# Subtest: independent Node processes cannot both publish a successor of the same revision
+ok 332 - independent Node processes cannot both publish a successor of the same revision
+  ---
+  duration_ms: 765.3932
+  type: 'test'
+  ...
+# Subtest: source corruption is surfaced and prior metadata remains available
+ok 333 - source corruption is surfaced and prior metadata remains available
+  ---
+  duration_ms: 58.2306
+  type: 'test'
+  ...
+# Subtest: invalid identities and unversioned updates cannot create unintended paths
+ok 334 - invalid identities and unversioned updates cannot create unintended paths
+  ---
+  duration_ms: 56.6586
+  type: 'test'
+  ...
+# Subtest: streamed native checkpoint is exact and an interrupted upload cannot publish a partial source
+ok 335 - streamed native checkpoint is exact and an interrupted upload cannot publish a partial source
+  ---
+  duration_ms: 105.0711
+  type: 'test'
+  ...
+# Subtest: actual native v4 binary-image source is inspected without changing its image bytes
+ok 336 - actual native v4 binary-image source is inspected without changing its image bytes
+  ---
+  duration_ms: 4.342
+  type: 'test'
+  ...
+# Subtest: invalid binary ranges and invalid headers cannot masquerade as a valid native layout
+ok 337 - invalid binary ranges and invalid headers cannot masquerade as a valid native layout
+  ---
+  duration_ms: 4.1745
+  type: 'test'
+  ...
+# Subtest: actual saved PNG bytes are selected from a native image identity without rewriting the source
+ok 338 - actual saved PNG bytes are selected from a native image identity without rewriting the source
+  ---
+  duration_ms: 7.4926
+  type: 'test'
+  ...
+# Subtest: content-proof grammar preserves physical pixel frame and all other native fields; old raw data cannot be silently changed
+ok 339 - content-proof grammar preserves physical pixel frame and all other native fields; old raw data cannot be silently changed
+  ---
+  duration_ms: 28.1458
+  type: 'test'
+  ...
+# Subtest: canonical native ZIP reader retains stored/deflated bytes exactly
+ok 340 - canonical native ZIP reader retains stored/deflated bytes exactly
+  ---
+  duration_ms: 2.6719
+  type: 'test'
+  ...
+# Subtest: ZIP entry budgets reject before unbounded inflation and CRC rejects corruption
+ok 341 - ZIP entry budgets reject before unbounded inflation and CRC rejects corruption
+  ---
+  duration_ms: 1.4187
+  type: 'test'
+  ...
+# Subtest: unsafe and duplicate ZIP names are never extracted or accepted
+ok 342 - unsafe and duplicate ZIP names are never extracted or accepted
+  ---
+  duration_ms: 1.2145
+  type: 'test'
+  ...
+# Subtest: real PhotoCraft edits, previews and saves a native source
+ok 343 - real PhotoCraft edits, previews and saves a native source
+  ---
+  duration_ms: 1066.2303
+  type: 'test'
+  ...
+# Subtest: real VectorCraft performs boolean union and saves editable vectors
+ok 344 - real VectorCraft performs boolean union and saves editable vectors
+  ---
+  duration_ms: 1248.1197
+  type: 'test'
+  ...
+# Subtest: real DeckCraft creates native text and exports readable PPTX
+ok 345 - real DeckCraft creates native text and exports readable PPTX
+  ---
+  duration_ms: 742.1999
+  type: 'test'
+  ...
+# Subtest: group duplication and clipboard paste allocate fresh descendant identities
+ok 346 - group duplication and clipboard paste allocate fresh descendant identities
+  ---
+  duration_ms: 1.5518
+  type: 'test'
+  ...
+# Subtest: complete pinned package manifests are paged as source data and never marked executable
+ok 347 - complete pinned package manifests are paged as source data and never marked executable
+  ---
+  duration_ms: 18.4556
+  type: 'test'
+  ...
+# Subtest: actual pinned source text supports exact paging past 10000 characters with hashes and no execution
+ok 348 - actual pinned source text supports exact paging past 10000 characters with hashes and no execution
+  ---
+  duration_ms: 17.3655
+  type: 'test'
+  ...
+# Subtest: tampered cache and damaged index fail without executing content or preventing lazy library construction
+ok 349 - tampered cache and damaged index fail without executing content or preventing lazy library construction
+  ---
+  duration_ms: 19.2104
+  type: 'test'
+  ...
+# Subtest: verified legacy annotation adopts same use; native copies become independent and reused native ids never inherit links
+ok 350 - verified legacy annotation adopts same use; native copies become independent and reused native ids never inherit links
+  ---
+  duration_ms: 1916.4362
+  type: 'test'
+  ...
+# Subtest: native origin annotation retains existing explicit links with current epochs
+ok 351 - native origin annotation retains existing explicit links with current epochs
+  ---
+  duration_ms: 1339.4467
+  type: 'test'
+  ...
+# Subtest: native origin annotation retains existing explicit links from pre-epoch legacy graphs
+ok 352 - native origin annotation retains existing explicit links from pre-epoch legacy graphs
+  ---
+  duration_ms: 1281.6802
+  type: 'test'
+  ...
+# Subtest: foreign and duplicate origin identities do not associate by pixel hash; stale source revisions refuse
+ok 353 - foreign and duplicate origin identities do not associate by pixel hash; stale source revisions refuse
+  ---
+  duration_ms: 610.8503
+  type: 'test'
+  ...
+# Subtest: same-instance native undo/redo reconciles explicit marked source version without replay
+ok 354 - same-instance native undo/redo reconciles explicit marked source version without replay
+  ---
+  duration_ms: 2098.9368
+  type: 'test'
+  ...
+# Subtest: same-instance native undo/redo reconciles legacy marker-free source version without replay
+ok 355 - same-instance native undo/redo reconciles legacy marker-free source version without replay
+  ---
+  duration_ms: 1527.6635
+  type: 'test'
+  ...
+# Subtest: cubic control points and endpoints retain SVG order
+ok 356 - cubic control points and endpoints retain SVG order
+  ---
+  duration_ms: 1.1111
+  type: 'test'
+  ...
+# Subtest: relative and repeated coordinates follow current point
+ok 357 - relative and repeated coordinates follow current point
+  ---
+  duration_ms: 0.1192
+  type: 'test'
+  ...
+# Subtest: smooth cubic reflects the preceding second control point
+ok 358 - smooth cubic reflects the preceding second control point
+  ---
+  duration_ms: 0.093
+  type: 'test'
+  ...
+# Subtest: smooth quadratic works after repeated T commands
+ok 359 - smooth quadratic works after repeated T commands
+  ---
+  duration_ms: 0.1653
+  type: 'test'
+  ...
+# Subtest: scientific notation is a number, not an SVG command
+ok 360 - scientific notation is a number, not an SVG command
+  ---
+  duration_ms: 0.1444
+  type: 'test'
+  ...
+# Subtest: arc rotation is honored and all coordinates stay finite
+ok 361 - arc rotation is honored and all coordinates stay finite
+  ---
+  duration_ms: 0.2975
+  type: 'test'
+  ...
+# Subtest: missing operands, unsupported commands and bad arc flags reject
+ok 362 - missing operands, unsupported commands and bad arc flags reject
+  ---
+  duration_ms: 0.3511
+  type: 'test'
+  ...
+# Subtest: close followed by coordinates terminates in a bounded child
+ok 363 - close followed by coordinates terminates in a bounded child
+  ---
+  duration_ms: 436.8813
+  type: 'test'
+  ...
+# Subtest: path input and segment budgets are enforced
+ok 364 - path input and segment budgets are enforced
+  ---
+  duration_ms: 60.8612
+  type: 'test'
+  ...
+# Subtest: nonuniform rows round-trip without pixel drift
+ok 365 - nonuniform rows round-trip without pixel drift
+  ---
+  duration_ms: 1.7164
+  type: 'test'
+  ...
+# Subtest: decompression cannot exceed declared pixel data
+ok 366 - decompression cannot exceed declared pixel data
+  ---
+  duration_ms: 0.9576
+  type: 'test'
+  ...
+# Subtest: a forged huge palette chunk fails before allocation
+ok 367 - a forged huge palette chunk fails before allocation
+  ---
+  duration_ms: 0.2661
+  type: 'test'
+  ...
+# Subtest: corrupt CRC and invalid row filter are rejected
+ok 368 - corrupt CRC and invalid row filter are rejected
+  ---
+  duration_ms: 0.3014
+  type: 'test'
+  ...
+# Subtest: RGB transparent color key is preserved
+ok 369 - RGB transparent color key is preserved
+  ---
+  duration_ms: 0.259
+  type: 'test'
+  ...
+# Subtest: all image constructors share a bounded dimension check
+ok 370 - all image constructors share a bounded dimension check
+  ---
+  duration_ms: 0.6701
+  type: 'test'
+  ...
+# Subtest: exact multi-object, native ID and canvas region survive the native chat serializer text
+ok 371 - exact multi-object, native ID and canvas region survive the native chat serializer text
+  ---
+  duration_ms: 1.5252
+  type: 'test'
+  ...
+# Subtest: a reused native ID on a different source cannot silently retarget an old quote
+ok 372 - a reused native ID on a different source cannot silently retarget an old quote
+  ---
+  duration_ms: 0.248
+  type: 'test'
+  ...
+# Subtest: removed secondary selected object invalidates the whole multi-object quote
+ok 373 - removed secondary selected object invalidates the whole multi-object quote
+  ---
+  duration_ms: 0.0889
+  type: 'test'
+  ...
+# Subtest: whole-page and foreign-region references do not leak old selection
+ok 374 - whole-page and foreign-region references do not leak old selection
+  ---
+  duration_ms: 0.0632
+  type: 'test'
+  ...
+# Subtest: an actual native source version and immutable derivative have stable explicit project identity
+ok 375 - an actual native source version and immutable derivative have stable explicit project identity
+  ---
+  duration_ms: 231.8752
+  type: 'test'
+  ...
+# Subtest: derivation is idempotent by operation and cannot relabel another source result
+ok 376 - derivation is idempotent by operation and cannot relabel another source result
+  ---
+  duration_ms: 149.3811
+  type: 'test'
+  ...
+# Subtest: old derivatives keep their exact source revision after a later source commit
+ok 377 - old derivatives keep their exact source revision after a later source commit
+  ---
+  duration_ms: 187.7239
+  type: 'test'
+  ...
+# Subtest: a binding requires a real saved non-layer object; ordinary source copies are not inferred as uses
+ok 378 - a binding requires a real saved non-layer object; ordinary source copies are not inferred as uses
+  ---
+  duration_ms: 351.5891
+  type: 'test'
+  ...
+# Subtest: independent Node processes cannot publish two graph successors of the same revision
+ok 379 - independent Node processes cannot publish two graph successors of the same revision
+  ---
+  duration_ms: 646.5561
+  type: 'test'
+  ...
+# Subtest: unpublished bytes and history records are ignored after interruption
+ok 380 - unpublished bytes and history records are ignored after interruption
+  ---
+  duration_ms: 80.3294
+  type: 'test'
+  ...
+# Subtest: tampered derivative or referenced manifest is refused while native source remains intact
+ok 381 - tampered derivative or referenced manifest is refused while native source remains intact
+  ---
+  duration_ms: 170.0747
+  type: 'test'
+  ...
+# Subtest: project boundaries, identities, stale commits and active SVG inputs fail closed
+ok 382 - project boundaries, identities, stale commits and active SVG inputs fail closed
+  ---
+  duration_ms: 220.7363
+  type: 'test'
+  ...
+# Subtest: distribution uses equal gaps with differing object sizes and keeps endpoints
+ok 383 - distribution uses equal gaps with differing object sizes and keeps endpoints
+  ---
+  duration_ms: 1.2371
+  type: 'test'
+  ...
+# Subtest: ancestor and child selection cannot transform descendants twice
+ok 384 - ancestor and child selection cannot transform descendants twice
+  ---
+  duration_ms: 0.166
+  type: 'test'
+  ...
+# Subtest: rotated cropped source maps canvas coordinates back to the same source point
+ok 385 - rotated cropped source maps canvas coordinates back to the same source point
+  ---
+  duration_ms: 0.227
+  type: 'test'
+  ...
+# Subtest: native picking obeys true source stacking and visibility
+ok 386 - native picking obeys true source stacking and visibility
+  ---
+  duration_ms: 0.7821
+  type: 'test'
+  ...
+# Subtest: stale UI save cannot remove an AI layer
+ok 387 - stale UI save cannot remove an AI layer
+  ---
+  duration_ms: 61.8954
+  type: 'test'
+  ...
+# Subtest: existing document requires an explicit base revision
+ok 388 - existing document requires an explicit base revision
+  ---
+  duration_ms: 27.9712
+  type: 'test'
+  ...
+# Subtest: valid update preserves a restorable previous version
+ok 389 - valid update preserves a restorable previous version
+  ---
+  duration_ms: 86.1341
+  type: 'test'
+  ...
+# Subtest: atomic rename failure does not truncate the previous file
+ok 390 - atomic rename failure does not truncate the previous file
+  ---
+  duration_ms: 3.8934
+  type: 'test'
+  ...
+# Subtest: invalid documents are rejected before creating a file
+ok 391 - invalid documents are rejected before creating a file
+  ---
+  duration_ms: 1.3874
+  type: 'test'
+  ...
+# Subtest: command patch cannot mutate Object.prototype
+ok 392 - command patch cannot mutate Object.prototype
+  ---
+  duration_ms: 14.578
+  type: 'test'
+  ...
+# Subtest: a sibling directory sharing the workspace name is not inside it
+ok 393 - a sibling directory sharing the workspace name is not inside it
+  ---
+  duration_ms: 4.9826
+  type: 'test'
+  ...
+# Subtest: watcher async failure is handled and polling still reports changes
+ok 394 - watcher async failure is handled and polling still reports changes
+  ---
+  duration_ms: 287.8139
+  type: 'test'
+  ...
+# Subtest: standard default fill and opacity remain valid document values
+ok 395 - standard default fill and opacity remain valid document values
+  ---
+  duration_ms: 2.2092
+  type: 'test'
+  ...
+# Subtest: nested opacity is multiplied exactly once
+ok 396 - nested opacity is multiplied exactly once
+  ---
+  duration_ms: 0.5204
+  type: 'test'
+  ...
+# Subtest: data-fill attributes do not masquerade as actual fill
+ok 397 - data-fill attributes do not masquerade as actual fill
+  ---
+  duration_ms: 0.2114
+  type: 'test'
+  ...
+# Subtest: actual SVG Vector and Deck updates preserve unrelated uses and recover a committed receipt
+ok 398 - actual SVG Vector and Deck updates preserve unrelated uses and recover a committed receipt
+  ---
+  duration_ms: 3532.295
+  type: 'test'
+  ...
+# Subtest: actual SVG and its separately retained preview persist as one immutable source-bound material
+ok 399 - actual SVG and its separately retained preview persist as one immutable source-bound material
+  ---
+  duration_ms: 281.2074
+  type: 'test'
+  ...
+# Subtest: invalid previews refuse before material publication; legacy SVG stays readable without a fabricated preview
+ok 400 - invalid previews refuse before material publication; legacy SVG stays readable without a fabricated preview
+  ---
+  duration_ms: 147.8539
+  type: 'test'
+  ...
+# Subtest: a damaged preview is rejected while the original SVG and native source remain intact
+ok 401 - a damaged preview is rejected while the original SVG and native source remain intact
+  ---
+  duration_ms: 139.32
+  type: 'test'
+  ...
+# Subtest: save ACK does not clear a newer manual edit
+ok 402 - save ACK does not clear a newer manual edit
+  ---
+  duration_ms: 15.8935
+  type: 'test'
+  ...
+# Subtest: independent external AI edit merges with local move
+ok 403 - independent external AI edit merges with local move
+  ---
+  duration_ms: 1.2242
+  type: 'test'
+  ...
+# Subtest: conflicting revision keeps local data and blocks switching
+ok 404 - conflicting revision keeps local data and blocks switching
+  ---
+  duration_ms: 1.2511
+  type: 'test'
+  ...
+# Subtest: document switching waits for the old document save
+ok 405 - document switching waits for the old document save
+  ---
+  duration_ms: 7.6449
+  type: 'test'
+  ...
+# Subtest: late response for an older document cannot replace the newer one
+ok 406 - late response for an older document cannot replace the newer one
+  ---
+  duration_ms: 31.1251
+  type: 'test'
+  ...
+# Subtest: commands execute after autosave and include current revision
+ok 407 - commands execute after autosave and include current revision
+  ---
+  duration_ms: 1.7422
+  type: 'test'
+  ...
+# Subtest: partial command failure is not reported as successful export
+ok 408 - partial command failure is not reported as successful export
+  ---
+  duration_ms: 0.4349
+  type: 'test'
+  ...
+# Subtest: polling opens the first AI-created work when the canvas is still empty
+ok 409 - polling opens the first AI-created work when the canvas is still empty
+  ---
+  duration_ms: 0.7684
+  type: 'test'
+  ...
+# Subtest: an automatic open delayed by pixel flushing cannot replace a manually opened work or selection
+ok 410 - an automatic open delayed by pixel flushing cannot replace a manually opened work or selection
+  ---
+  duration_ms: 11.5938
+  type: 'test'
+  ...
+# Subtest: pan does not dirty the document or block remote changes
+ok 411 - pan does not dirty the document or block remote changes
+  ---
+  duration_ms: 1.26
+  type: 'test'
+  ...
+# Subtest: crop gesture creates the requested rectangle
+ok 412 - crop gesture creates the requested rectangle
+  ---
+  duration_ms: 0.8906
+  type: 'test'
+  ...
+# Subtest: E and H select the advertised tools
+ok 413 - E and H select the advertised tools
+  ---
+  duration_ms: 0.1921
+  type: 'test'
+  ...
+# Subtest: legacy drawing shortcuts do not intercept the native workspace
+ok 414 - legacy drawing shortcuts do not intercept the native workspace
+  ---
+  duration_ms: 0.0938
+  type: 'test'
+  ...
+# Subtest: async fill errors are returned to the scoped UI handler
+ok 415 - async fill errors are returned to the scoped UI handler
+  ---
+  duration_ms: 0.3115
+  type: 'test'
+  ...
+# Subtest: native contenteditable chat owns deletion, undo and drawing shortcuts
+ok 416 - native contenteditable chat owns deletion, undo and drawing shortcuts
+  ---
+  duration_ms: 0.1449
+  type: 'test'
+  ...
+# Subtest: rotating a group changes its frame once without rotating its descendants twice
+ok 417 - rotating a group changes its frame once without rotating its descendants twice
+  ---
+  duration_ms: 0.7078
+  type: 'test'
+  ...
+# Subtest: unimplemented local Morph is refused before opening a fake fade preview
+ok 418 - unimplemented local Morph is refused before opening a fake fade preview
+  ---
+  duration_ms: 0.7455
+  type: 'test'
+  ...
+# Subtest: new invisible component instances cannot be reported as successfully added
+ok 419 - new invisible component instances cannot be reported as successfully added
+  ---
+  duration_ms: 26.3688
+  type: 'test'
+  ...
+# Subtest: image and vector presets remain their actual document types after frontend normalization
+ok 420 - image and vector presets remain their actual document types after frontend normalization
+  ---
+  duration_ms: 0.1668
+  type: 'test'
+  ...
+# Subtest: editable variant adopts its real content and merges independent later manual edits
+ok 421 - editable variant adopts its real content and merges independent later manual edits
+  ---
+  duration_ms: 124.325
+  type: 'test'
+  ...
+# Subtest: variant conflict refuses overwrite while preserving both original and branch
+ok 422 - variant conflict refuses overwrite while preserving both original and branch
+  ---
+  duration_ms: 97.8559
+  type: 'test'
+  ...
+# Subtest: concurrent real worker forks cannot silently lose a registered branch
+ok 423 - concurrent real worker forks cannot silently lose a registered branch
+  ---
+  duration_ms: 984.0723
+  type: 'test'
+  ...
+# Subtest: Vector PNG apply checks whole native frame before publication and reconciles actual saved source receipt idempotently
+ok 424 - Vector PNG apply checks whole native frame before publication and reconciles actual saved source receipt idempotently
+  ---
+  duration_ms: 1335.3989
+  type: 'test'
+  ...
+# Subtest: actual embedded source binds to its exact Vector source and automatically discovers an independent second use
+ok 425 - actual embedded source binds to its exact Vector source and automatically discovers an independent second use
+  ---
+  duration_ms: 518.863
+  type: 'test'
+  ...
+# Subtest: SVG apply checks the original and changed source and reconciles undo/redo to the same instance
+ok 426 - SVG apply checks the original and changed source and reconciles undo/redo to the same instance
+  ---
+  duration_ms: 2145.2467
+  type: 'test'
+  ...
+# Subtest: real native vector use retains the exact original source and independent second use
+ok 427 - real native vector use retains the exact original source and independent second use
+  ---
+  duration_ms: 5.9685
+  type: 'test'
+  ...
+# Subtest: only authorized source and identity changes pass the whole-poster proof
+ok 428 - only authorized source and identity changes pass the whole-poster proof
+  ---
+  duration_ms: 6.4155
+  type: 'test'
+  ...
+# Subtest: frame, origin and embedded source tampering fail before publication
+ok 429 - frame, origin and embedded source tampering fail before publication
+  ---
+  duration_ms: 6.4047
+  type: 'test'
+  ...
+# Subtest: actual legacy native output is checked and committed with its original placement receipt
+ok 430 - actual legacy native output is checked and committed with its original placement receipt
+  ---
+  duration_ms: 2757.2702
+  type: 'test'
+  ...
+# Subtest: authorized host save rejects a shifted frame before committing and persists the native receipt
+ok 431 - authorized host save rejects a shifted frame before committing and persists the native receipt
+  ---
+  duration_ms: 1732.4866
+  type: 'test'
+  ...
+# Subtest: an actual unchanged legacy SVG group matches its durable native placement record
+ok 432 - an actual unchanged legacy SVG group matches its durable native placement record
+  ---
+  duration_ms: 4.8469
+  type: 'test'
+  ...
+# Subtest: legacy preflight refuses changed contents, a mismatched receipt and a wrong asset
+ok 433 - legacy preflight refuses changed contents, a mismatched receipt and a wrong asset
+  ---
+  duration_ms: 9.1719
+  type: 'test'
+  ...
+# Subtest: a separate tracked descendant or pre-existing native material origin blocks migration
+ok 434 - a separate tracked descendant or pre-existing native material origin blocks migration
+  ---
+  duration_ms: 4.282
+  type: 'test'
+  ...
+# Subtest: actual native legacy replacement has the same surrounding poster and authorized source
+ok 435 - actual native legacy replacement has the same surrounding poster and authorized source
+  ---
+  duration_ms: 7.8804
+  type: 'test'
+  ...
+# Subtest: legacy proof rejects unrelated object changes or foreign source attribution
+ok 436 - legacy proof rejects unrelated object changes or foreign source attribution
+  ---
+  duration_ms: 8.2558
+  type: 'test'
+  ...
+# Subtest: source store and graph verify the actual old placement and unchanged group
+ok 437 - source store and graph verify the actual old placement and unchanged group
+  ---
+  duration_ms: 290.815
+  type: 'test'
+  ...
+# Subtest: a later edit to the original group is refused by storage-backed preflight
+ok 438 - a later edit to the original group is refused by storage-backed preflight
+  ---
+  duration_ms: 418.4177
+  type: 'test'
+  ...
+# Subtest: a genuine native frame is durably recorded for its authorized legacy job
+ok 439 - a genuine native frame is durably recorded for its authorized legacy job
+  ---
+  duration_ms: 17.8392
+  type: 'test'
+  ...
+# Subtest: wrong context, wrong asset source and a changed recorded frame are refused
+ok 440 - wrong context, wrong asset source and a changed recorded frame are refused
+  ---
+  duration_ms: 8.1966
+  type: 'test'
+  ...
+# Subtest: real binary native PNG use binds exact asset bytes; a different actual paired Photo material cannot relabel it
+ok 441 - real binary native PNG use binds exact asset bytes; a different actual paired Photo material cannot relabel it
+  ---
+  duration_ms: 499.2451
+  type: 'test'
+  ...
+# Subtest: control-node editing respects rotation and nonuniform object geometry
+ok 442 - control-node editing respects rotation and nonuniform object geometry
+  ---
+  duration_ms: 1.2935
+  type: 'test'
+  ...
+# Subtest: moving an anchor keeps its attached handles and closed endpoint together
+ok 443 - moving an anchor keeps its attached handles and closed endpoint together
+  ---
+  duration_ms: 0.4365
+  type: 'test'
+  ...
+# Subtest: updating interaction bounds does not move any real path coordinate
+ok 444 - updating interaction bounds does not move any real path coordinate
+  ---
+  duration_ms: 0.6954
+  type: 'test'
+  ...
+# Subtest: image operations update the same object and retain a real PhotoCraft source across reopen
+ok 445 - image operations update the same object and retain a real PhotoCraft source across reopen
+  ---
+  duration_ms: 1092.3989
+  type: 'test'
+  ...
+# Subtest: real VectorCraft union produces common editable paths inside the same page
+ok 446 - real VectorCraft union produces common editable paths inside the same page
+  ---
+  duration_ms: 563.1979
+  type: 'test'
+  ...
+# Subtest: concurrent edit during a real native operation prevents overwrite and retains the candidate
+ok 447 - concurrent edit during a real native operation prevents overwrite and retains the candidate
+  ---
+  duration_ms: 471.3889
+  type: 'test'
+  ...
+# Subtest: layered PSD import retains the original bytes and actual native adjustment layers
+ok 448 - layered PSD import retains the original bytes and actual native adjustment layers
+  ---
+  duration_ms: 1399.4129
+  type: 'test'
+  ...
+# Subtest: blank photo creation makes an actual editable native image in the common page
+ok 449 - blank photo creation makes an actual editable native image in the common page
+  ---
+  duration_ms: 480.7577
+  type: 'test'
+  ...
+# Subtest: SVG import returns common paths while retaining exact original bytes and native source
+ok 450 - SVG import returns common paths while retaining exact original bytes and native source
+  ---
+  duration_ms: 516.8951
+  type: 'test'
+  ...
+# Subtest: complex SVG stays native, edits through VectorCraft and never loses its source
+ok 451 - complex SVG stays native, edits through VectorCraft and never loses its source
+  ---
+  duration_ms: 2137.8317
+  type: 'test'
+  ...
+# Subtest: SVG export uses current Bezier nodes and real stroke/opacity instead of the provenance file
+ok 452 - SVG export uses current Bezier nodes and real stroke/opacity instead of the provenance file
+  ---
+  duration_ms: 469.0123
+  type: 'test'
+  ...
+1..452
+# tests 452
+# suites 0
+# pass 452
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 104553.9386
+PASS normalizeDoc defaults
+PASS normalizePage id assigned
+PASS normalizeLayer coerces
+PASS unknown layer → shape
+PASS null layer dropped
+PASS image layer coerce
+PASS resolveColor var
+PASS resolveColor named
+PASS resolveColor passthrough
+PASS withAlpha hex
+PASS withAlpha rgba
+PASS hitTest topmost
+PASS hitTest miss
+PASS hitTest skips hidden
+PASS group bounds
+PASS flatten
+PASS transformPathData translate
+PASS transformPathData identity passthrough
+PASS transformPathData scale
+
+=== CLIENT TESTS: 19 pass, 0 fail ===

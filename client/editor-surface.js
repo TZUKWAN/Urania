@@ -1,5 +1,5 @@
 /** One professional editing surface; strict origin + capability channel, bounded requests. */
-import {SOURCE_FORMATS} from './native-contract.js?v=166';
+import {SOURCE_FORMATS} from './native-contract.js?v=167';
 export class EditorSurface extends EventTarget {
  constructor(container,{origin,engine='vectorcraft',runtime='vectorcraft-host',timeout=60000}={}){
   if(!Object.hasOwn(SOURCE_FORMATS,engine)||!/^[a-z][a-z0-9-]*$/.test(runtime))throw new Error('原生引擎或运行时标识无效');
@@ -52,6 +52,7 @@ export class EditorSurface extends EventTarget {
  async bundle(base,format='svg'){await this.ready;if(!this.capabilities.atomicBundle)throw new Error('当前原生构建尚未接入素材原子快照');return this.request('bundle',{base,format});}
  async create(params){await this.ready;return this.request('create',params);}
  async addProjectFont(bytes,sha256){await this.ready;if(!this.capabilities.projectFontSession)throw new Error('当前原生构建没有项目字体入口');return this.request('project-font',{bytes,sha256},[bytes]);}
+ async addDeckDisplayFont(bytes,sha256){await this.ready;return this.request('deck-display-font',{bytes,sha256},[bytes]);}
  async commands(query=''){await this.ready;return this.request('commands',{query});}
  async node(base,id){await this.ready;return this.request('node',{base,id});}
  async configurePresentation(options){await this.ready;if(!this.capabilities.hostPresentation)return {unsupported:true};return this.request('presentation',options);}

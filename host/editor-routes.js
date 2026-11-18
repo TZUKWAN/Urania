@@ -11,6 +11,7 @@ import {selectedObjectIds} from '../client/native-contract.js';
 import {openNativeSession,nativeProjectFonts} from './native.js';
 import {readFile} from 'node:fs/promises';
 import {nativeDeckDocument} from './native-deck-header.js';
+import {deckDisplayFont,isLocalFontRequest} from './deck-display-fonts.js';
 import {join} from 'node:path';
 import {previewImageSize} from './image-header.js';
 import {createHash} from 'node:crypto';
@@ -72,6 +73,17 @@ export function editorRoutes(ctx,manager,{guard,readJsonBody,sendJson}){
   previewFlights.set(key,shared);return {bytes:await joinPreview(shared,signal),fontCount:fonts.items.length};
  };
  return [
+  {kind:'exact',path:root+'/deck-display-font',handler:guard(async(req,res)=>{
+   if(req.method!=='GET')throw new SafetyError('GET required',405);
+   const view=viewFor(req),query=new URL(req.url,'http://localhost').searchParams,epoch=query.get('epoch');
+   if(epoch!==view.epoch||view.engine!=='deckcraft'||manager.active.get(view.sessionId)!==view.id)throw new SafetyError('演示工作区已切换',409);
+   if(!isLocalFontRequest(req)){res.writeHead(204,{'cache-control':'no-store'});res.end();return;}
+   const asset=await deckDisplayFont(query.get('face'));
+   if(epoch!==view.epoch||manager.active.get(view.sessionId)!==view.id)throw new SafetyError('演示工作区已切换',409);
+   if(!asset){res.writeHead(204,{'cache-control':'no-store'});res.end();return;}
+   res.writeHead(200,{'content-type':'font/collection','content-length':asset.bytes.length,'cache-control':'no-store','x-content-type-options':'nosniff','x-content-sha256':asset.sha256});
+   res.end(asset.bytes);
+  })},
   {kind:'exact',path:root+'/overview-preview',handler:guard(async(req,res)=>{
    if(req.method!=='GET')throw new SafetyError('GET required',405);
    const view=viewFor(req),query=new URL(req.url,'http://localhost').searchParams,epoch=query.get('epoch');
