@@ -1,4 +1,4 @@
-import {isActiveDesignSession} from './design-session.js?v=165';
+import {isActiveDesignSession} from './design-session.js?v=166';
 import {selectionIdentity,validateSelectionReference} from './selection.js';
 export function designBrief(state,request){
  const doc=state.doc;if(!doc||!state.root)throw new Error('请先打开设计作品');
@@ -43,7 +43,7 @@ export function designChatPrompt(context,request){
  const text=String(request||'').trim();
  if(text.length>64000)throw new Error('单条设计消息过长，请分段发送');
  const workflow=context.motion
-  ?'使用 designcraft-motion 技能，通过 designcraft_motion 工具编辑当前动画工程（motion.projectId 即目标工程，先 open 读状态再 write_sources 局部修改；套模板用 templates/create_from_template；参考视频用 reference）。预览会自动加载新版本并播放。用户确认后 render 导出真实 MP4。不把未执行或失败的步骤报告为完成。'
+  ?'使用 designcraft-motion 技能，通过 designcraft_motion 编辑当前动画工程。先 open 和 read_source，再用 write_sources 处理选中的组件或时段。保护其他源码和素材。预览会加载新版本，用户可以播放和核对。用户确认后 render 导出真实 MP4。'
   :'使用 designcraft 技能，通过 designcraft_workspace 先读取当前作品的最新版本；没有作品时在当前项目创建。引用对象是本次任务的上下文，保持其他对象，使用版本化命令和真实原生操作，结果回到当前画布。不要直接覆写 .dc.json，不把未执行或失败的步骤报告为完成。';
  const metadata=JSON.stringify({...context,workflow}).replace(/</g,'\\u003c');
  return (text?text+'\n\n':'')+OPEN+metadata+CLOSE;
@@ -96,8 +96,13 @@ export async function attachDesignReference({store,sync,services,sessionId,auto=
   const motionInput=conversation?.input?.for?.(owner.ctx);
   if(!motionInput?.draftSnapshot||!motionInput?.actions?.setDraft)throw new Error('DSH 原生输入框尚未就绪');
   if(!isCurrent())return {attached:false};
-  const context={schema:2,root:early.root,sessionId,docId:null,title:m.title||'动画',
-   motion:{projectId:m.projectId,revision:m.revision,title:m.title,entryFile:m.entryFile,fps:m.fps,durationFrames:m.durationFrames,currentFrame:m.currentFrame}};
+  if(m.scope?.sessionId!==sessionId||!isDesignRootInSession(m.scope?.root,cwd)||!isDesignRootInSession(cwd,m.scope.root))return {attached:false};
+  const ids=Array.isArray(m.selection?.ids)?m.selection.ids.filter(id=>typeof id==='string'&&id.length>0&&id.length<=256).slice(0,128):[];
+  const range=m.selection?.timeRange,validRange=Number.isSafeInteger(range?.startFrame)&&Number.isSafeInteger(range?.endFrame)&&range.startFrame>=0&&range.endFrame>=range.startFrame&&range.endFrame<m.durationFrames;
+  const material=m.materialReference;
+  const context={schema:2,root:m.scope.root,sessionId,docId:null,title:m.title||'动画',
+   motion:{projectId:m.projectId,revision:m.revision,title:m.title,entryFile:m.entryFile,fps:m.fps,durationFrames:m.durationFrames,currentFrame:m.currentFrame,
+    selectedIds:ids,timeRange:validRange?range:null,...(material?.nativeSource&&typeof material.path==='string'?{projectMaterial:{path:material.path,source:material.nativeSource}}:{})}};
   const phase=motionInput.state?.getSnapshot?.()?.phase;
   if(phase&&phase!=='plain')throw new Error('DSH 正在处理输入或指令，引用未插入，请稍后重试');
   const nativeDraft=motionInput.draftSnapshot,clean=withoutDesignReferences(nativeDraft);

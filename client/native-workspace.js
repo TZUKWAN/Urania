@@ -1,23 +1,49 @@
-import {createLocalWorkflowPanel} from './local-workflow-panel.js?v=165';
-import {currentDesignScope,isActiveDesignSession} from './design-session.js?v=165';
-import {insertDesignBrief} from './dsh-context.js?v=165';
-import {createDeckLocalTools,isDeckLocalAction} from './deck-local-tools.js?v=165';
-import {createStockPanel,openStockImage} from './stock-panel.js?v=165';
-import {NativeController} from './native-controller.js?v=165';
-import {quoteNative} from './native-reference.js?v=165';
-import {createBrandPanel} from './brand-panel.js?v=165';
-import {createHtmlWorkspace} from './html-workspace.js?v=165';
-import {createStudioImageWorkspace} from './studio-image-workspace.js?v=165';
-import {createLegacyMigrationWorkspace} from './legacy-migration-workspace.js?v=165';
-import {createNativeContextTools} from './native-context-tools.js?v=165';
-import {createAiCanvasTools} from './ai-canvas.js?v=165';
-import {createSelectionAi} from './selection-ai.js?v=165';
-import {DesignFeedbackClient,createFeedbackPanel} from './design-feedback.js?v=165';
-import {createDesignDiagnostics} from './design-diagnostics.js?v=165';
-import {createBriefDimensionControls,updateBriefDimension} from './brief-dimensions.js?v=165';
-const CSS="\n.dcNativeWorkspace{position:relative;flex:1;display:flex;flex-direction:column;min-width:0;min-height:0;background:var(--dc-bg)}\n.dcNativeHeader{height:58px;flex:none;display:flex;align-items:center;gap:8px;padding:0 14px;border-bottom:1px solid var(--dc-line);background:var(--dc-surface)}\n.dcNativeHeader .dcBtn{flex:none;height:32px}.dcNativeTitle{flex:1;min-width:60px;display:flex;flex-direction:column;line-height:1.35;margin:0 6px}.dcNativeTitle strong{font-size:13px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.dcNativeTitle small{font-size:10px;color:var(--dc-muted);margin-top:3px}\n.dcNativeSave{display:flex;align-items:center;gap:5px;color:var(--dc-muted);font-size:11px;white-space:nowrap}.dcNativeSave i{width:6px;height:6px;border-radius:50%;background:var(--dc-accent)}.dcNativeSave[data-dirty=true] i{background:#b7791f}\n.dcNativeStage{position:relative;flex:1;min-width:0;min-height:0}.dcNativeAnchor{position:absolute;inset:0;min-height:0}.dcNativeEmpty{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:30px;background:var(--dc-bg);z-index:3}.dcNativeStart{width:min(550px,100%);margin-top:-35px}.dcNativeStart h2{font-size:29px;letter-spacing:-.04em;font-weight:600;line-height:1.3;margin:12px 0}.dcNativeStart p{font-size:13px;color:var(--dc-muted);line-height:1.8;margin:0 0 24px}.dcNativeEyebrow{font-size:11px;letter-spacing:.12em;color:var(--dc-accent)}\n.dcNativeStartActions{display:grid;grid-template-columns:1fr 1fr;gap:12px}.dcNativeStartCard{display:flex;flex-direction:column;align-items:flex-start;gap:8px;padding:20px;border:1px solid var(--dc-line);border-radius:12px;background:var(--dc-surface);color:var(--dc-ink);text-align:left;cursor:pointer}.dcNativeStartCard:hover{border-color:var(--dc-accent);background:color-mix(in srgb,var(--dc-accent) 3%,var(--dc-surface))}.dcNativeStartCard strong{font-size:13px}.dcNativeStartCard small{font-size:11px;color:var(--dc-muted)}\n.dcNativePopover{position:absolute;top:50px;z-index:80;width:240px;padding:6px;background:var(--dc-surface);color:var(--dc-ink);border:1px solid var(--dc-line);border-radius:12px;box-shadow:0 12px 42px rgba(20,30,45,.15)}.dcNativePopover[data-menu=works]{left:14px;width:min(370px,calc(100% - 28px))}.dcNativePopover[data-menu=export],.dcNativePopover[data-menu=more]{right:14px}.dcNativeMenuItem{display:flex;align-items:center;gap:10px;width:100%;min-height:38px;padding:8px 10px;text-align:left;border:0;border-radius:7px;background:transparent;color:var(--dc-ink);font-size:12px;font-family:inherit;line-height:1.5;cursor:pointer}.dcNativeMenuItem:hover{background:var(--dc-soft)}.dcNativeMenuItem:disabled{opacity:.45;cursor:default}.dcNativeMenuItem[data-current=true]{background:color-mix(in srgb,var(--dc-accent) 8%,transparent);color:var(--dc-accent)}.dcNativeMenuItem>span{min-width:0;overflow:hidden;text-overflow:ellipsis}.dcNativeMenuItem small{display:block;font-size:10px;color:var(--dc-muted)}.dcNativeMenuDivider{height:1px;background:var(--dc-line);margin:5px}.dcNativeMenuTitle{display:flex;align-items:center;justify-content:space-between;padding:9px 10px;font-size:12px;font-weight:600}.dcNativeMenuTitle small{font-size:10px;font-weight:400;color:var(--dc-muted)}.dcNativeSearch{padding:0 8px 8px}.dcNativeWorksList{max-height:360px;overflow:auto}.dcNativeMenuEmpty{padding:20px 12px;font-size:12px;color:var(--dc-muted)}\n.dcNativeNotice{position:relative;z-index:4;display:flex;align-items:center;flex-wrap:wrap;gap:8px;padding:10px 14px;border-bottom:1px solid var(--dc-line);font-size:12px;background:color-mix(in srgb,var(--dc-danger) 6%,var(--dc-surface));color:var(--dc-danger)}.dcNativeNotice>span{flex:1;min-width:170px}.dcNativeNotice[data-kind=draft]{background:color-mix(in srgb,var(--dc-accent) 7%,var(--dc-surface));color:var(--dc-ink)}\n.dcNativeConfirm{position:absolute;inset:0;z-index:90;display:flex;align-items:center;justify-content:center;background:rgba(15,23,35,.28);padding:20px}.dcNativeConfirmCard{width:min(470px,100%);padding:24px;border:1px solid var(--dc-line);border-radius:14px;background:var(--dc-surface);box-shadow:0 20px 70px #0002}.dcNativeConfirmCard h3{margin:0 0 12px;font-size:16px}.dcNativeConfirmCard ul{padding-left:20px;font-size:12px;line-height:1.7}.dcNativeConfirmActions{display:flex;justify-content:flex-end;gap:8px;margin-top:18px}\n.dcApp[data-editor-mode=native]>.dcBody>.dcChat{width:320px;min-width:280px;--dsh-conversation-column-width:320px}.dcApp[data-editor-mode=native] .dcChatHead{height:58px;padding:10px 14px}.dcApp[data-editor-mode=native] .dcChatHead strong{font-size:13px}.dcApp[data-editor-mode=native] .dcChatHead .dcHint{font-size:10px}\n@media(max-width:1400px){.dcNativeSave{display:none}.dcNativeHeader{padding:0 10px;gap:6px}.dcApp[data-editor-mode=native]>.dcBody>.dcChat{width:290px;--dsh-conversation-column-width:290px}}@media(max-width:1050px){.dcNativeTitle small,.dcNativeImportLabel{display:none}.dcNativeTitle{margin:0}.dcNativeHeader{gap:4px}.dcNativeStartActions{grid-template-columns:1fr}.dcNativeStart h2{font-size:23px}}\n\n.dcNativeHeader{order:0}.dcNativeNotice{order:1}.dcNativeStage{order:3}\n.dcNativeWorkspace>.dcNativePopover{order:2;position:relative;top:auto;left:auto;right:auto;z-index:5;flex:none;width:100%;margin:0;padding:10px 14px;border:0;border-bottom:1px solid var(--dc-line);border-radius:0;box-shadow:none;display:flex;gap:6px;background:var(--dc-surface)}\n.dcNativeWorkspace>.dcNativePopover[data-menu=export],.dcNativeWorkspace>.dcNativePopover[data-menu=more]{right:auto;flex-wrap:wrap}\n.dcNativeWorkspace>.dcNativePopover[data-menu=works]{left:auto;width:100%;display:block}\n.dcNativePopover[data-menu=export] .dcNativeMenuItem,.dcNativePopover[data-menu=more] .dcNativeMenuItem{width:auto;min-height:32px;border:1px solid var(--dc-line);padding:6px 10px}\n.dcNativePopover[data-menu=more] .dcNativeMenuDivider{width:1px;height:30px;margin:0 4px}\n.dcNativePopover[data-menu=works] .dcNativeMenuTitle{padding:0 0 8px}.dcNativePopover[data-menu=works] .dcNativeSearch{padding:0 0 10px;max-width:280px}\n.dcNativeWorksList{display:flex;gap:8px;overflow:auto;max-height:180px}.dcNativeWorksList .dcNativeMenuItem{width:220px;flex:none;border:1px solid var(--dc-line);padding:10px 12px}\n.dcNativeConfirm{order:2;position:relative;inset:auto;z-index:5;flex:none;background:transparent;padding:0}.dcNativeConfirmCard{width:100%;border:0;border-bottom:1px solid var(--dc-line);border-radius:0;box-shadow:none;padding:16px}\n";
+import {createLocalWorkflowPanel} from './local-workflow-panel.js?v=166';
+import {currentDesignScope,isActiveDesignSession} from './design-session.js?v=166';
+import {insertDesignBrief} from './dsh-context.js?v=166';
+import {createDeckLocalTools,isDeckLocalAction} from './deck-local-tools.js?v=166';
+import {createStockPanel,openStockImage} from './stock-panel.js?v=166';
+import {NativeController} from './native-controller.js?v=166';
+import {quoteNative} from './native-reference.js?v=166';
+import {createBrandPanel} from './brand-panel.js?v=166';
+import {createHtmlWorkspace} from './html-workspace.js?v=166';
+import {createStudioImageWorkspace} from './studio-image-workspace.js?v=166';
+import {createLegacyMigrationWorkspace} from './legacy-migration-workspace.js?v=166';
+import {createNativeContextTools} from './native-context-tools.js?v=166';
+import {createAiCanvasTools} from './ai-canvas.js?v=166';
+import {createSelectionAi} from './selection-ai.js?v=166';
+import {DesignFeedbackClient,createFeedbackPanel} from './design-feedback.js?v=166';
+import {createDesignDiagnostics} from './design-diagnostics.js?v=166';
+import {createBriefDimensionControls,updateBriefDimension} from './brief-dimensions.js?v=166';
+import {createStudioComponents,studioEngines,userFacingError} from './studio-system.js?v=166';
+import {createStudioPanels} from './studio-panels.js?v=166';
+const CSS=`
+.dcNativeWorkspace{position:relative;flex:1;display:flex;flex-direction:column;min-width:0;min-height:0;background:var(--dc-bg)}
+.dcNativeHeader{order:0;flex:none;display:flex;align-items:center;border-bottom:1px solid var(--dc-line)}
+.dcNativeTitle{display:flex;flex-direction:column;line-height:1.3}
+.dcNativeTitle strong{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.dcNativeStage{order:3;position:relative;flex:1;min-width:0;min-height:0}
+.dcNativeAnchor{position:absolute;inset:0;min-height:0}
+.dcNativeEmpty{position:absolute;inset:0;display:flex}
+.dcNativeNotice{order:1;position:relative;z-index:4;display:flex;align-items:center;flex-wrap:wrap;gap:8px;border-bottom:1px solid var(--dc-line)}
+.dcNativeNotice>span{flex:1;min-width:0}
+.dcNativeMenuItem{display:flex;align-items:center;gap:9px;width:100%;min-height:32px;padding:7px 9px;border:0;border-radius:7px;background:transparent;color:var(--dc-ink);text-align:left;font:inherit;cursor:pointer}
+.dcNativeMenuItem:hover:not(:disabled){background:var(--dc-soft)}
+.dcNativeMenuItem:disabled{opacity:.45;cursor:default}
+.dcNativeMenuItem[data-current=true]{background:var(--dc-tint);color:var(--dc-accent)}
+.dcNativeMenuItem>span{min-width:0;overflow:hidden;text-overflow:ellipsis}
+.dcNativeMenuItem small{display:block;font-size:11px;color:var(--dc-muted)}
+.dcNativeMenuTitle{display:flex;gap:8px;align-items:center;padding:6px 8px;font-weight:620}
+.dcNativeMenuTitle small{color:var(--dc-muted);font-weight:400}
+.dcNativeSearch{padding:0 8px 8px}
+.dcNativeMenuEmpty{padding:20px 12px;text-align:center;color:var(--dc-muted)}
+.dcNativeConfirm{display:flex;align-items:center;justify-content:center}
+.dcNativeConfirmCard{width:min(470px,100%)}
+.dcNativeConfirmCard h3{margin:0 0 12px;font-size:16px}
+.dcNativeConfirmCard ul{padding-left:20px;font-size:12px;line-height:1.7}
+.dcNativeConfirmActions{display:flex;justify-content:flex-end;gap:8px;margin-top:12px}
+`;
 
-const paths={folder:'M2 6h7l2 2h11v11H2z',plus:'M12 5v14M5 12h14',upload:'M12 16V4m-5 5 5-5 5 5M4 16v4h16v-4',download:'M12 4v12m-5-5 5 5 5-5M4 17v3h16v-3',more:'M5 12h.01M12 12h.01M19 12h.01',chevron:'m8 10 4 4 4-4',sparkle:'m12 3 2.5 6.5L21 12l-6.5 2.5L12 21l-2.5-6.5L3 12l6.5-2.5z',art:'M5 3v18M3 5h18M19 3v18M3 19h18'};
 export function createNativeWorkspace({React,store}){
  const h=React.createElement;
  const BrandPanel=createBrandPanel(React);
@@ -32,14 +58,14 @@ export function createNativeWorkspace({React,store}){
  const SelectionAi=createSelectionAi(React);
  const DesignDiagnostics=createDesignDiagnostics(React);
  const BriefDimensionControls=createBriefDimensionControls(React);
+ const {Icon:StudioIcon,Button:StudioButton,Status:StudioStatus}=createStudioComponents(React);
+ const {Home,PanelHeading,Inspector,CanvasViewControls}=createStudioPanels(React);
  let style=document.querySelector('style[data-designcraft-native]');
  if(!style){style=document.createElement('style');style.dataset.designcraftNative='true';document.head.append(style);}
  style.textContent=CSS+'.dcNativeFileDialog{position:fixed;inset:0;width:min(480px,calc(100% - 32px));max-height:calc(100% - 48px);margin:auto;padding:0;border:1px solid var(--dc-line);border-radius:14px;background:var(--dc-surface);color:var(--dc-ink);box-shadow:0 24px 80px #0003}.dcNativeFileDialog::backdrop{background:rgba(15,23,35,.28)}.dcNativeFileDialog .dcNativeConfirmCard{width:100%;padding:24px;border:0;border-radius:0}.dcNativeFileDialog p{font-size:12px;line-height:1.7;color:var(--dc-muted)}.dcNativeFileDialog .dcNativeWorksList{display:block;margin-top:10px;max-height:280px;overflow:auto}.dcNativeFileDialog .dcNativeWorksList .dcNativeMenuItem{width:100%;margin-top:6px}';
  style.textContent+=' .dcNativePopover[data-menu=assets]{left:14px;width:min(430px,calc(100% - 28px));max-height:calc(100% - 80px);overflow:auto}.dcNativeAsset{margin:6px;padding:12px;border:1px solid var(--dc-line);border-radius:10px}.dcNativeAssetTop{display:flex;gap:12px;align-items:center}.dcNativeAssetPreview{width:64px;height:64px;flex:none;border-radius:6px;object-fit:contain;background:var(--dc-soft);font-size:10px;display:flex;align-items:center;justify-content:center;text-align:center}.dcNativeAssetInfo{flex:1;min-width:0}.dcNativeAssetInfo strong{font-size:12px;display:block;overflow:hidden;text-overflow:ellipsis}.dcNativeAssetInfo small{font-size:10px;display:block;color:var(--dc-muted);line-height:1.8}.dcNativeAssetActions{display:flex;gap:8px;margin-top:10px}.dcNativeAssetUses{font-size:11px;color:var(--dc-muted);margin-top:8px;line-height:1.8}';
- style.textContent+=' .dcNativeWorkspace>.dcNativePopover[data-menu=assets]{display:block;left:auto;right:auto;width:100%;max-height:70%;overflow:auto}.dcNativePopover[data-menu=assets]>.dcNativeSearch{max-width:360px;padding:4px 0 10px}.dcNativePopover[data-menu=assets]>.dcNativeMenuTitle{padding:0 0 10px}.dcNativePopover[data-menu=assets]>.dcNativeMenuItem{width:auto;display:inline-flex;border:1px solid var(--dc-line);margin:0 8px 8px 0}.dcNativeAsset{max-width:720px}.dcNativeAssetInfo,.dcNativeAssetUses{display:block}';
  style.textContent+=' .dcAiCanvasTools{order:2;display:flex;align-items:center;gap:10px;flex:none;padding:9px 14px;border-bottom:1px solid var(--dc-line);background:var(--dc-surface)}.dcAiCanvasTarget{flex:1;min-width:0;display:flex;align-items:center;gap:12px;flex-wrap:wrap}.dcAiCanvasTarget strong{font-size:12px;font-weight:600}.dcAiCanvasTarget small{font-size:11px;color:var(--dc-muted)}.dcAiSelectModes{display:flex;gap:3px}.dcAiSelectModes [aria-pressed=true]{color:var(--dc-accent);border-color:var(--dc-accent)}.dcAiCanvasTools .dcBtn{height:30px;white-space:nowrap}@media(max-width:1150px){.dcAiCanvasTarget small{display:none}}';
- style.textContent+=`.dcChatColumn{display:flex;flex:none;min-width:0;min-height:0}.dcApp .dcChatColumn>.dcChat{width:100%;min-width:0;max-width:none;flex:1;resize:none;--dsh-conversation-column-width:var(--dc-chat-width)}.dcChatSplit{position:relative;flex:0 0 8px;width:8px;cursor:col-resize;touch-action:none;background:var(--dc-bg);outline:none}.dcChatSplit span{position:absolute;inset:0 3px;background:var(--dc-line)}.dcChatSplit:hover span,.dcChatSplit:focus-visible span{inset:0 2px;background:var(--dc-accent)}.dcChatResizeShield{position:fixed;inset:0;z-index:2147480000;cursor:col-resize}.dcChatResizing{cursor:col-resize;user-select:none}.dcSelectionAi{position:fixed;z-index:140;box-sizing:border-box;padding:12px;border:1px solid var(--dc-line);border-radius:14px;background:var(--dc-surface);color:var(--dc-ink);box-shadow:0 10px 38px #0003}.dcSelectionAiHead,.dcSelectionAiFoot{display:flex;align-items:center;gap:8px}.dcSelectionAiHead strong{flex:1;font-size:12px}.dcSelectionAiClose{border:0;background:transparent;color:var(--dc-muted);font-size:20px;cursor:pointer}.dcSelectionAi textarea{box-sizing:border-box;width:100%;min-height:74px;max-height:180px;resize:vertical;margin:8px 0;padding:9px;border:1px solid var(--dc-line);border-radius:8px;background:var(--dc-bg);color:var(--dc-ink);font:12px/1.6 inherit;outline-color:var(--dc-accent)}.dcSelectionAiFoot{justify-content:space-between}.dcSelectionAiFoot small{font-size:10px;color:var(--dc-muted)}.dcSelectionAi .dcBtn{height:30px}.dcNativePopover[data-menu=works] .dcNativeMenuTitle{gap:10px}.dcNativePopover[data-menu=works] .dcNativeMenuTitle small{flex:1}.dcNativePopover[data-menu=works] .dcNativeWorksList{flex-wrap:wrap;max-height:330px}.dcNativePopover[data-menu=works] .dcNativeMenuItem{width:260px}`;
- const icon=(name,size=16)=>h('svg',{width:size,height:size,viewBox:'0 0 24 24',fill:'none',stroke:'currentColor',strokeWidth:1.6,strokeLinecap:'round',strokeLinejoin:'round','aria-hidden':true},h('path',{d:paths[name]||paths.art}));
+ style.textContent+=`.dcChatColumn{display:flex;flex:none;min-width:0;min-height:0}.dcChatColumn>.dcChat{flex:1;resize:none}.dcChatSplit{position:relative;cursor:col-resize;touch-action:none}.dcChatSplit span{position:absolute}.dcChatResizeShield{position:fixed;inset:0;z-index:2147480000;cursor:col-resize}.dcChatResizing{cursor:col-resize;user-select:none}.dcSelectionAi{position:fixed;z-index:140;border:1px solid var(--dc-line);color:var(--dc-ink)}.dcSelectionAiHead,.dcSelectionAiFoot{display:flex;align-items:center;gap:8px}.dcSelectionAiHead strong{flex:1}.dcSelectionAi textarea{width:100%;max-height:180px;resize:vertical;margin:8px 0;padding:9px;border:1px solid var(--dc-line);color:var(--dc-ink)}.dcSelectionAiFoot{justify-content:space-between}.dcSelectionAiFoot small{color:var(--dc-muted)}`;
  const controller=new NativeController({onChange:native=>store.set({native}),getScope:()=>{
   return currentDesignScope(store.get().services);
  },focusWorkspace:()=>{store.set({workspaceMode:'native'});store.get().services.uiWorkspace?.ctx?.get?.('layout')?.selectPanel('designcraft');}});
@@ -72,16 +98,18 @@ export function createNativeWorkspace({React,store}){
    setUrl(null);setError(false);setFontWarning(false);
    if(!epoch||!source.revision)return;
    const query=new URLSearchParams({epoch,id:source.id,revision:source.revision});
+   if(source.slideId)query.set('slideId',source.slideId);
    fetch('/designcraft/api/v2/studio/overview-preview?'+query,{headers:controller.sourceHeaders(),signal:abort.signal}).then(async response=>{
     if(!response.ok||response.headers.get('x-source-revision')!==source.revision)throw new Error('作品预览不可用');
+    if(source.slideId&&response.headers.get('x-source-slide-id')!==source.slideId)throw new Error('幻灯片预览身份不一致');
     const blob=await response.blob();if(blob.type!=='image/png')throw new Error('作品预览格式无效');
     if(!abort.signal.aborted){created=URL.createObjectURL(blob);setUrl(created);setFontWarning(Number(response.headers.get('x-project-font-count'))>0);}
    }).catch(()=>{if(!abort.signal.aborted)setError(true);});
    return()=>{abort.abort();if(created)URL.revokeObjectURL(created);};
-  },[source.id,source.revision,controller.view?.epoch,controller.state.fontGeneration]);
+  },[source.id,source.revision,source.slideId,controller.view?.epoch,controller.state.fontGeneration]);
   return url?h('span',{className:'dcNativeThumbWrap',title:fontWarning?'本机预览已提供项目字体；若有系统同名字体，外观可能不同。':undefined},h('img',{className:'dcNativeWorkThumb',src:url,alt:source.title+' 的预览'}),fontWarning?h('small',null,'字体需核对'):null):h('span',{className:'dcNativeWorkThumb'},error?'预览不可用':'读取预览');
  }
- function Workspace(){
+ function Workspace({onFocusChat}){
   const state=React.useSyncExternalStore(store.subscribe,store.get,store.get),native=state.native||controller.state;
   const scope=currentDesignScope(state.services),sessionId=scope?.sessionId,root=scope?.root;
   React.useEffect(()=>{if(root&&sessionId)void feedback.bind({root,sessionId}).catch(error=>feedback.change({error:error.message}));return()=>feedback.suspend();},[root,sessionId]);
@@ -89,6 +117,13 @@ export function createNativeWorkspace({React,store}){
   const [error,setError]=React.useState(null),[menu,setMenu]=React.useState(null),[query,setQuery]=React.useState(''),[pendingDownload,setPendingDownload]=React.useState(null),[fileTitle,setFileTitle]=React.useState(''),[assetPage,setAssetPage]=React.useState(0);
   const [linkSelection,setLinkSelection]=React.useState([]);
   const [workPage,setWorkPage]=React.useState(0);
+  const [workKind,setWorkKind]=React.useState('');
+  const [inspector,setInspector]=React.useState(false);
+  const [history,setHistory]=React.useState(null);
+  const [historySelection,selectHistory]=React.useState(null);
+  const [historyBusy,setHistoryBusy]=React.useState(false);
+  const [review,setReview]=React.useState(null);
+  const historyIntent=React.useRef(0),historyCopies=React.useRef(new Map()),menuAnchor=React.useRef(null),menuIntent=React.useRef(0);
   const [newEngine,setNewEngine]=React.useState('vectorcraft'),[newTitle,setNewTitle]=React.useState(''),[newWidth,setNewWidth]=React.useState('1280'),[newHeight,setNewHeight]=React.useState('720');
   const [variantState,setVariantState]=React.useState(null),[variantLabel,setVariantLabel]=React.useState(''),[variantBusy,setVariantBusy]=React.useState(false);
   const [planRows,setPlanRows]=React.useState(null),[selectedPlan,setSelectedPlan]=React.useState(null),[planHistory,setPlanHistory]=React.useState([]),[planCandidates,setPlanCandidates]=React.useState(null),[planBusy,setPlanBusy]=React.useState(false),[planScope,setPlanScope]=React.useState(null);
@@ -106,6 +141,8 @@ export function createNativeWorkspace({React,store}){
   const materialItems=(native.project?.assets||[]).filter(asset=>!query||asset.title.toLowerCase().includes(query.toLowerCase())).sort((a,b)=>b.at.localeCompare(a.at));
   React.useEffect(()=>setAssetPage(0),[query,menu,native.project?.revision]);
   React.useEffect(()=>setWorkPage(0),[query,menu]);
+  React.useEffect(()=>{setWorkPage(0);},[workKind]);
+  React.useEffect(()=>{setHistory(null);selectHistory(null);historyIntent.current++;historyCopies.current.clear();setInspector(false);},[sessionId,root]);
   const source=native.document,blocked=!!(native.busy||native.saving||native.unresponsive||native.pendingDraft||native.fileAction||native.projectPending||['html','image','stock','migration','workflows'].includes(menu));
   const imageUndoAvailable=native.sources.some(item=>item.id===native.sourceId&&item.revision===native.sourceRevision&&item.operation?.action==='image-adopt');
   const photoEnabled=!!controller.runtime?.engines?.photocraft,deckEnabled=!!controller.runtime?.engines?.deckcraft,contract=controller.view?.engineContract;
@@ -131,12 +168,96 @@ export function createNativeWorkspace({React,store}){
   },[menu,pendingDownload,native.fileAction]);
   React.useEffect(()=>{
    if(!menu)return;
-   const dismiss=()=>{setMenu(null);controller.resumeHostMenu().catch(error=>setError(error.message));};
-   const close=event=>{if(['html','image','stock','migration','workflows'].includes(menu))return;if(event.type==='keydown'){if(event.key==='Escape'){event.stopPropagation();dismiss();}return;}if(!event.target.closest('.dcNativePopover,.dcNativeHeader'))dismiss();};
+   const dismiss=restoreFocus=>{menuIntent.current++;setMenu(null);controller.resumeHostMenu().catch(error=>setError(error.message));if(restoreFocus)requestAnimationFrame(()=>menuAnchor.current?.focus());};
+   const close=event=>{
+    if(['html','image','stock','migration','workflows','diagnostics'].includes(menu))return;
+    if(event.type==='keydown'){
+     if(event.key==='Escape'&&!event.isComposing){event.stopPropagation();dismiss(true);}
+     return;
+    }
+    if(!event.target.closest('.dcNativePopover,.dcNativeHeader,.dcStudioHome'))dismiss(false);
+   };
    document.addEventListener('pointerdown',close);document.addEventListener('keydown',close,true);
    return()=>{document.removeEventListener('pointerdown',close);document.removeEventListener('keydown',close,true);};
   },[menu]);
-  const toggle=name=>{setError(null);setQuery('');if(menu===name){setMenu(null);controller.resumeHostMenu().catch(error=>setError(error.message));}else{if(name==='brands')controller.change({brands:null});if(name==='versions')controller.change({versions:null});if(name==='variants')setVariantState(null);if(name==='plans'){setPlanMigration(null);setPlanRows(null);setSelectedPlan(null);setPlanCandidates(null);setPlanScope(currentPlanScope);}const exclusive=['html','image','stock','migration'].includes(name);if(!exclusive)setMenu(name);controller.suspendHostMenu().then(async()=>{if(name==='assets')await controller.refreshProject();else if(name==='brands')await controller.refreshBrands();else if(name==='versions')await controller.refreshVersions();else if(name==='works')await controller.refresh();else if(name==='image')await controller.refresh();else if(name==='variants')setVariantState(await controller.variantAction('list'));else if(name==='plans')setPlanRows((await controller.planAction('list')).items);if(exclusive)setMenu(name);}).catch(error=>{setMenu(null);setError(error.message);});}};
+  const toggle=name=>{
+   const intent=++menuIntent.current;
+   if(!menu&&document.activeElement instanceof HTMLElement)menuAnchor.current=document.activeElement;
+   setError(null);setQuery('');
+   if(menu===name){
+    setMenu(null);controller.resumeHostMenu().catch(error=>setError(error.message));
+    requestAnimationFrame(()=>menuAnchor.current?.focus());return;
+   }
+   if(name==='brands')controller.change({brands:null});
+   if(name==='versions')controller.change({versions:null});
+   if(name==='variants')setVariantState(null);
+   if(name==='works'){setWorkKind('');setHistory(null);selectHistory(null);}
+   if(name==='plans'){setPlanMigration(null);setPlanRows(null);setSelectedPlan(null);setPlanCandidates(null);setPlanScope(currentPlanScope);}
+   const exclusive=['html','image','stock','migration'].includes(name);
+   if(!exclusive)setMenu(name);
+   controller.suspendHostMenu().then(async()=>{
+    if(intent!==menuIntent.current)return;
+    if(name==='assets')await controller.refreshProject();
+    else if(name==='brands')await controller.refreshBrands();
+    else if(name==='versions')await controller.refreshVersions();
+    else if(name==='works'||name==='image')await controller.refresh();
+    else if(name==='variants')setVariantState(await controller.variantAction('list'));
+    else if(name==='plans')setPlanRows((await controller.planAction('list')).items);
+    if(intent===menuIntent.current&&exclusive)setMenu(name);
+   }).catch(error=>{if(intent===menuIntent.current){setMenu(null);setError(error.message);}});
+  };
+  React.useEffect(()=>{
+   if(!menu||!native.hostMenuReady||!['works','assets','new','export','more','review'].includes(menu))return;
+   const popup=workspace.current?.querySelector('.dcNativePopover[data-menu="'+menu+'"]');
+   const frame=requestAnimationFrame(()=>popup?.querySelector('input:not(:disabled),button:not(:disabled)')?.focus({preventScroll:true}));
+   return()=>cancelAnimationFrame(frame);
+  },[menu,native.hostMenuReady]);
+  const loadWorkHistory=async (work,offset=0)=>{
+   const intent=++historyIntent.current,epoch=controller.view?.epoch;
+   setHistoryBusy(true);if(offset===0){setHistory({work,items:[]});selectHistory(null);}
+   try{
+    const result=await controller.api('source-history',{epoch,sourceId:work.id,offset});
+    if(intent!==historyIntent.current||controller.view?.epoch!==epoch)return;
+    setHistory(current=>({work,items:offset?[...current.items,...result.items]:result.items,nextOffset:result.nextOffset}));
+    if(offset===0)selectHistory(result.items[0]||null);
+   }catch(cause){if(intent===historyIntent.current)setError(cause.message);}
+   finally{if(intent===historyIntent.current)setHistoryBusy(false);}
+  };
+  const restoreHistoryCopy=async version=>{
+   const key=version.id+'/'+version.revision;
+   if(!historyCopies.current.has(key))historyCopies.current.set(key,crypto.randomUUID());
+   const copy=await controller.api('source-history-copy',{epoch:controller.view.epoch,sourceId:version.id,revision:version.revision,operationId:historyCopies.current.get(key)});
+   await controller.run('open',{sourceId:copy.sourceId});
+   historyCopies.current.delete(key);
+  };
+  const reviewFeedback=submission=>{
+   const targets=new Map();
+   for(const {target} of submission.items){
+    if(target.kind!=='native')continue;
+    const key=target.sourceId+'/'+(target.engine==='deckcraft'&&target.page?.kind==='slide'?target.page.id:'');
+    if(!targets.has(key))targets.set(key,target);
+   }
+   const works=[];
+   for(const [key,target] of targets){
+    const id=target.sourceId,result=[...submission.results].reverse().find(row=>row.sourceId===id);
+    const slideId=target.engine==='deckcraft'&&target.page?.kind==='slide'?target.page.id:null;
+    const label=target.title+(slideId&&Number.isSafeInteger(target.page.index)?' · 第 '+(target.page.index+1)+' 页':'');
+    const decision=submission.reviews?.find(item=>item.sourceId===id&&item.revision===result?.revision)?.decision;
+    if(result)works.push({key,id,title:label,slideId,engine:target.engine,before:target.revision,after:result.revision,decision});
+   }
+   if(!works.length)return;
+   const pageId=native.document?.page?.nativePage?.id;
+   const selected=works.findIndex(work=>work.id===native.sourceId&&(!work.slideId||work.slideId===String(pageId)));
+   setReview({epoch:controller.view.epoch,submissionId:submission.id,works,index:Math.max(0,selected)});
+   toggle('review');
+  };
+  const reviewDecision=async decision=>{
+   const work=review.works[review.index];
+   if(decision==='declined')await restoreHistoryCopy({id:work.id,revision:work.before});
+   await feedback.api({action:'review',submissionId:review.submissionId,sourceId:work.id,revision:work.after,decision});
+   await feedback.refresh();
+   controller.change({aiInputNotice:decision==='accepted'?'已确认这次 AI 修改结果。':'已打开修改前的独立副本，可以继续调整。'});
+  };
   const planRead=async(id,revision)=>{setPlanBusy(true);setError(null);try{const plan=await controller.planAction('read',{id,...(revision?{revision}:{})}),history=await controller.planAction('history',{id});if(!history.items.some(row=>row.revision===plan.revision))throw new Error('设计计划历史已变化，请刷新');setSelectedPlan(plan);setPlanHistory(history.items);setPlanCandidates(null);setPlanLinks(null);setPlanLinkNotice('');setPlanScope(currentPlanScope);}catch(error){setError(error.message);}finally{setPlanBusy(false);}};
   const planRefresh=async()=>{setPlanBusy(true);setError(null);try{setPlanRows((await controller.planAction('list')).items);setSelectedPlan(null);setPlanHistory([]);setPlanCandidates(null);setPlanScope(currentPlanScope);}catch(error){setError(error.message);}finally{setPlanBusy(false);}};
   const [planMigration,setPlanMigration]=React.useState(null);
@@ -190,14 +311,26 @@ export function createNativeWorkspace({React,store}){
   const defaultTitle=engine=>engine==='photocraft'?'未命名图片':engine==='deckcraft'?'未命名演示':'未命名设计';
   const chooseNewEngine=engine=>{const defaults=controller.runtime.engines[engine].createDefaults;setNewEngine(engine);setNewTitle(defaultTitle(engine));setNewWidth(String(defaults.width));setNewHeight(String(defaults.height));};
   const create=async(engine=controller.view?.engine||'vectorcraft',options={})=>{setMenu(null);const defaults=controller.runtime.engines[engine].createDefaults;await controller.run('new',{...defaults,...options,engine,title:options.title||defaultTitle(engine)});};
+  const beginCreate=engine=>{
+   if(engine==='motion'){store.set({workspaceMode:'motion'});return;}
+   chooseNewEngine(engine||controller.view?.engine||'vectorcraft');
+   toggle('new');
+  };
   const createCustom=event=>{event.preventDefault();const width=Number(newWidth),height=Number(newHeight);if(!Number.isSafeInteger(width)||!Number.isSafeInteger(height)||width<1||height<1||width>16384||height>16384||width*height>24000000){setError('宽高须为正整数，单边不超过 16384、总面积不超过 2400 万');return;}run(()=>create(newEngine,{title:newTitle.trim(),width,height}))();};
   const completeFile=async options=>{fileDialog.current?.close();await controller.completeNativeFile(options);};
   const cancelFile=async()=>{fileDialog.current?.close();await controller.cancelNativeFile();};
   const importSelection=async event=>{const element=event.target,file=element.files?.[0];if(!file)return;await run(async()=>native.fileAction?.action==='open'?completeFile({file}):controller.importFile(file))();element.value='';};
-  const quote=async()=>{controller.requestAiInput();if(!source||!(source.objectIds?.length||source.selection?.length||source.nativeSelection?.data?.selectedLayers?.length||source.nativeSelection?.data?.rasterSelection))document.querySelector('.dcChat [contenteditable=true]')?.focus();};
+  const quote=async()=>{controller.requestAiInput();if(!source||!(source.objectIds?.length||source.selection?.length||source.nativeSelection?.data?.selectedLayers?.length||source.nativeSelection?.data?.rasterSelection))onFocusChat?.();};
   const item=(label,action,extra={})=>h('button',{className:'dcNativeMenuItem',onClick:run(action),...extra,disabled:!!extra.disabled||!!menu&&!native.hostMenuReady},label);
   const status=native.phase==='opening'?'正在打开':native.busy?'正在处理':native.manualEditing?'操作中':native.saving?'正在保存':native.dirty?'尚未保存':'已保存';
-  const visible=native.sources.filter(source=>(source.title||'未命名作品').toLowerCase().includes(query.toLowerCase()));
+  const visible=native.sources.filter(work=>(!workKind||work.engine===workKind)&&(work.title||'未命名作品').toLowerCase().includes(query.trim().toLowerCase()));
+  const title=native.title||'设计工作区';
+  const currentEngine=studioEngines.find(engine=>engine.id===controller.view?.engine);
+  const compact=text=>h('span',{className:'dcStudioCompactText'},text);
+  const canUseMenus=!!controller.view&&!blocked;
+  const disabledMenu=!!(native.busy||native.saving||native.fileAction)||['html','image','stock','migration','workflows'].includes(menu);
+  const changeHistory=command=>()=>controller.manualViewCommand(source,command).catch(cause=>setError(cause.message));
+  const date=value=>Number.isFinite(Date.parse(value))?new Intl.DateTimeFormat('zh-CN',{month:'short',day:'numeric',hour:'2-digit',minute:'2-digit'}).format(new Date(value)):'';
   return h('section',{ref:workspace,className:'dcNativeWorkspace',inert:!scope||controller.view?.sessionId!==sessionId,'aria-label':'设计工作区'},
    h('header',{className:'dcNativeHeader'},
     native.sourceNavigation?h('button',{className:'dcBtn',disabled:blocked,'aria-label':'返回原设计',title:'返回 '+native.sourceNavigation.parentTitle,onClick:run(()=>controller.projectAction('return_to_design'))},'返回原设计'):null,
@@ -205,17 +338,24 @@ export function createNativeWorkspace({React,store}){
     native.sourceNavigation?.linkedCount>1?h('select',{'aria-label':'源比例变化时',title:'源比例变化时使用每个对象的本地锚点',value:layoutPolicy,disabled:blocked,onChange:e=>setLayoutPolicy(e.target.value)},
      h('option',{value:'fixed'},'保持原边框'),...['左上','上中','右上','左中','中心','右中','左下','下中','右下'].map((label,i)=>h('option',{key:i,value:'fit-'+i},'等比适配 · '+label))):null,
     native.sourceNavigation?.linkedCount>1?h('button',{className:'dcBtn',disabled:blocked||!native.sourceNavigation.canApply||native.sourceNavigation.canApplyLinked===false,'aria-label':'更新全部关联使用处',onClick:run(()=>controller.projectAction('apply_linked',{editId:native.sourceNavigation.editId,layoutPolicy}))},'更新关联 '+native.sourceNavigation.linkedCount+' 处'):null,
-    h('button',{className:'dcBtn','aria-label':'历史作品',title:'查看当前项目的历史设计作品',disabled:!!(native.busy||native.saving||native.fileAction)||['html','image','stock','migration','workflows'].includes(menu),'aria-expanded':menu==='works',onClick:()=>toggle('works')},icon('folder'),'历史作品'),
-    h('div',{className:'dcNativeTitle'},h('strong',{title:native.title||'设计工作区'},native.title||'设计工作区'),h('small',null,source?'AI 画布 · '+kindLabel(controller.view?.engine):'描述需求，开始设计')),
-    source?h('span',{className:'dcNativeSave','data-dirty':!!native.dirty,role:'status'},h('i'),status):null,
-    h('button',{className:'dcBtn dcPrimary',disabled:!controller.view||blocked,onClick:run(create)},icon('plus'),'新建设计'),
-    h('label',{className:'dcBtn',title:photoEnabled?'导入图片、SVG、矢量模板或可编辑源':'导入 SVG、矢量模板或可编辑设计源'},icon('upload'),h('span',{className:'dcNativeImportLabel'},'导入'),h('input',{ref:input,type:'file',accept,disabled:blocked,style:{display:'none'},onChange:importSelection})),
-    h('button',{className:'dcBtn',disabled:!controller.view||blocked,'aria-expanded':menu==='export',onClick:()=>toggle('export')},icon('download'),'导出',icon('chevron',12)),
-    h('button',{className:'dcBtn dcIcon','aria-label':'更多操作',title:'更多操作',disabled:!!(native.busy||native.saving||native.fileAction)||['html','image','stock','migration','workflows'].includes(menu),'aria-expanded':menu==='more',onClick:()=>toggle('more')},icon('more'))),
+    h(StudioButton,{icon:'folder',label:'历史作品',className:'dcStudioHistoryButton',disabled:disabledMenu,'aria-expanded':menu==='works',onClick:()=>toggle('works')},compact('历史作品')),
+    h('div',{className:'dcNativeTitle'},h('strong',{title},title),h('small',null,source?kindLabel(controller.view?.engine):'当前项目')),
+    h('div',{className:'dcStudioFileActions'},
+     source?h('span',{'data-save-indicator':''},h(StudioStatus,{kind:native.dirty?'warning':native.saving||native.busy||native.phase==='opening'?'busy':'success'},status)):null,
+     source?h(React.Fragment,null,h('span',{'data-separator':'','aria-hidden':true}),
+      h(StudioButton,{icon:'undo',label:'撤销',disabled:blocked||!!menu||!source.history?.length,'data-secondary-action':'',onClick:changeHistory('edit.undo')}),
+      h(StudioButton,{icon:'redo',label:'重做',disabled:blocked||!!menu||!source.redo?.length,'data-secondary-action':'',onClick:changeHistory('edit.redo')}),
+      h(StudioButton,{icon:'settings',label:'对象属性','aria-expanded':inspector,disabled:blocked||!!menu,onClick:()=>setInspector(value=>!value)})):null,
+     h(StudioButton,{icon:'assets',label:'项目素材',disabled:disabledMenu,'aria-expanded':menu==='assets',onClick:()=>toggle('assets')}),
+     h(StudioButton,{icon:'plus',label:'新建设计',disabled:!canUseMenus,'aria-expanded':menu==='new',onClick:()=>beginCreate()},compact('新建')),
+     h(StudioButton,{icon:'upload',label:'导入',disabled:blocked,onClick:()=>input.current?.click()}),
+     h('input',{ref:input,type:'file',accept,disabled:blocked,hidden:true,onChange:importSelection}),
+     h(StudioButton,{icon:'download',label:'导出',className:source?'dcPrimary':'',disabled:!canUseMenus,'aria-expanded':menu==='export',onClick:()=>toggle('export')},compact('导出')),
+     h(StudioButton,{icon:'more',label:'更多操作',disabled:disabledMenu,'aria-expanded':menu==='more',onClick:()=>toggle('more')}))),
    native.sourceNavigation?h('div',{className:'dcNativeNotice'},h('span',null,native.sourceNavigation.applyReason||(native.sourceNavigation.editId?'正在独立编辑此使用处。应用后保留原图位置、裁剪和效果。':'素材保留保存时版本。来源设计的修改不会自动替换已有素材。'))):null,
-   !menu&&source?h(AiCanvasTools,{controller,document:source,disabled:blocked,onError:setError,onQuote:run(quote)}):null,
-   source?h(SelectionAi,{controller,native,services:store.get().services,sessionId,feedback}):null,
-   source&&!menu?h(FeedbackPanel,{native:source}):null,
+   !menu&&source?h(AiCanvasTools,{controller,document:source,disabled:blocked,onError:setError,onQuote:run(quote),onAdvanced:()=>controller.setAdvancedEditing(!native.advancedEditing).catch(error=>setError(error.message)),onPhoto:()=>toggle('image')}):null,
+   source&&!menu?h(SelectionAi,{controller,native,services:store.get().services,sessionId,feedback,onShowChat:onFocusChat}):null,
+   source&&!menu?h(FeedbackPanel,{native:source,onReview:reviewFeedback}):null,
    menu==='diagnostics'?h(DesignDiagnostics,{controller,services:store.get().services,sessionId,onClose:async()=>{setMenu(null);try{await controller.resumeHostMenu();}catch(error){setError(error.message);}}}):null,
    native.lastExportReceipt?.source.id===native.sourceId?h('details',{className:'dcNativeNotice'},h('summary',null,(native.lastExportReceipt.source.revision===native.sourceRevision?'本版本':'先前版本')+' PPTX 已导出 · '+native.lastExportReceipt.inspection.slideCount+' 页 · 未执行渲染复核'),h('span',null,'源版本 '+native.lastExportReceipt.source.revision.slice(0,12)+' · 文件 SHA256 '+native.lastExportReceipt.artifact.sha256),h('button',{className:'dcBtn',onClick:()=>saveFile(new File([JSON.stringify(native.lastExportReceipt,null,2)],'PPTX导出回执.json',{type:'application/json'}))},'保存回执')):null,
    native.aiInputNotice?h('div',{className:'dcNativeNotice',role:'status'},h('span',null,native.aiInputNotice),h('button',{className:'dcBtn',onClick:()=>controller.change({aiInputNotice:null})},'知道了')):null,
@@ -230,7 +370,7 @@ export function createNativeWorkspace({React,store}){
    native.resourceNotice?h('div',{className:'dcNativeNotice',role:'status'},h('span',null,native.resourceNotice),h('button',{className:'dcBtn',onClick:()=>controller.change({resourceNotice:null})},'关闭')):null,
    native.importWarnings?.length?h('div',{className:'dcNativeNotice'},h('span',null,'导入提示：'+native.importWarnings.join('；'))):null,
    native.linkedProgress?h('div',{className:'dcNativeNotice',role:'status'},'正在更新关联 '+native.linkedProgress.index+'/'+native.linkedProgress.total+' · '+native.linkedProgress.title):null,
-   (error||native.error||native.healthWarning)?h('div',{className:'dcNativeNotice',role:'alert'},h('span',null,error||native.error||native.healthWarning),
+   (error||native.error||native.healthWarning)?h('div',{className:'dcNativeNotice',role:'alert'},h(StudioIcon,{name:'warning',size:16}),h('span',null,userFacingError(error||native.error||native.healthWarning)),
     native.sourceId?h('button',{className:'dcBtn',disabled:!!native.busy,onClick:run(()=>controller.restoreSaved({checkpointOnly:!!native.unresponsive}))},native.unresponsive?'恢复最近已保存版本':'从已保存版本恢复编辑器'):null):null,
    native.pendingDraft?h('div',{className:'dcNativeNotice','data-kind':'draft'},h('span',null,native.pendingDraft.feedbackRejected?'AI 候选未通过修改范围或人工保护核对，原稿没有被覆盖。': '发现尚未提交的本地草稿，选择恢复后继续。'),
     native.pendingDraft.instanceUpdate?.conversion?h('button',{className:'dcBtn',disabled:!!(native.busy||native.saving),onClick:run(()=>controller.reconcileSvgConversion(native.pendingDraft.instanceUpdate.jobId))},'核对 SVG 转换'):null,
@@ -254,33 +394,59 @@ export function createNativeWorkspace({React,store}){
    menu==='image'&&native.hostMenuReady?h(StudioImageWorkspace,{key:sessionId+'|'+root,controller,onClose:()=>{setMenu(null);controller.resumeHostMenu().catch(error=>setError(error.message));}}):null,
    menu==='stock'&&native.hostMenuReady?h(StockPanel,{key:sessionId+'|'+root,controller,onClose:()=>{setMenu(null);controller.resumeHostMenu().catch(error=>setError(error.message));},onOpenImage:imageId=>openStockImage(controller,()=>setMenu(null),imageId)}):null,
    menu==='migration'&&native.hostMenuReady?h(LegacyMigrationWorkspace,{key:sessionId+'|'+root,controller,onClose:()=>{setMenu(null);controller.resumeHostMenu().catch(error=>setError(error.message));}}):null,
-   h('div',{className:'dcNativeStage',style:['html','image','stock','migration','workflows'].includes(menu)?{display:'none'}:undefined},h('div',{ref:anchor,className:'dcNativeAnchor'},
-    !source?h('div',{className:'dcNativeEmpty'},h('div',{className:'dcNativeStart'},
-     h('span',{className:'dcNativeEyebrow'},'DESIGN WORKSPACE'),h('h2',null,'从一个想法，开始设计'),
-     h('p',null,'在左侧描述想做的内容，生成后在这里直接编辑。选中对象，再让 AI 继续修改。'),
-     h('div',{className:'dcNativeStartActions'},
-      h('button',{className:'dcNativeStartCard',disabled:!controller.view||blocked,onClick:run(()=>create('vectorcraft'))},icon('art',22),h('strong',null,'空白画板'),h('small',null,'1280 × 720 · 路径、文字与自由排版')),
-      h('button',{className:'dcNativeStartCard',disabled:blocked,onClick:()=>input.current?.click()},icon('upload',22),h('strong',null,'导入设计'),h('small',null,'继续编辑 SVG 或已有设计源'))))):null)),
+   h('div',{className:'dcNativeStage','data-engine':currentEngine?.id,hidden:['html','image','stock','migration','workflows'].includes(menu)},
+    h('div',{ref:anchor,className:'dcNativeAnchor'}),
+    native.phase==='opening'?h('div',{className:'dcStudioNativeLoading',role:'status'},h('span',{className:'dcStudioSkeleton','aria-hidden':true}),'正在打开作品…'):null,
+    !source&&native.phase!=='opening'?h(Home,{engines:controller.runtime?.engines,disabled:!canUseMenus,onEngine:beginCreate,onImport:()=>input.current?.click(),onWorks:()=>toggle('works'),onFocusChat}):null,
+    inspector&&source&&!menu?h(Inspector,{document:source,controller,disabled:blocked,onClose:()=>setInspector(false),onError:cause=>setError(cause.message),ContextTools:NativeContextTools,onQuote:run(quote),onImage:()=>toggle('image')}):null,
+    source&&!menu&&!native.advancedEditing?h(CanvasViewControls,{document:source,controller,disabled:blocked,onError:cause=>setError(cause.message)}):null),
+   menu==='review'&&review?.epoch===controller.view?.epoch?h('div',{className:'dcNativePopover','data-menu':'review',role:'dialog','aria-label':'AI 修改结果'},
+    h(PanelHeading,{title:'AI 修改结果',icon:'ai',onClose:()=>toggle('review')}),
+    review.works.length>1?h('select',{className:'dcSelect','aria-label':'选择待核对作品或幻灯片',value:review.index,onChange:event=>setReview({...review,index:Number(event.target.value)})},
+     ...review.works.map((work,index)=>h('option',{value:index,key:work.key},work.title))):null,
+    h('p',{className:'dcHint'},review.works[review.index].title+(review.works[review.index].decision==='accepted'?' · 已接受':review.works[review.index].decision==='declined'?' · 已拒绝':' · 结果已保存')),
+    h('div',{className:'dcStudioReviewPair'},...['before','after'].map(key=>h('figure',{key},h('figcaption',null,key==='before'?'提出意见时':'AI 修改后'),
+     h(WorkPreview,{source:{...review.works[review.index],revision:review.works[review.index][key]}})))),
+    h('div',{className:'dcNativeConfirmActions'},
+     h(StudioButton,{icon:'history',disabled:!native.hostMenuReady,onClick:run(()=>reviewDecision('declined'))},'拒绝并打开修改前副本'),
+     h(StudioButton,{icon:'check',className:'dcPrimary',disabled:!native.hostMenuReady,onClick:run(()=>reviewDecision('accepted'))},'接受此结果'))):null,
    menu==='works'?h('div',{className:'dcNativePopover','data-menu':'works',role:'dialog','aria-label':'历史作品'},
-    h('div',{className:'dcNativeMenuTitle'},'历史作品',h('small',null,'当前项目 · '+native.sources.length+' 份已保存设计'),h('button',{className:'dcBtn','aria-label':'关闭历史作品',onClick:()=>toggle('works')},'关闭')),
-    h('p',{className:'dcHint'},'打开作品继续向 AI 提要求。其他项目的作品，请先在 DSH 切换到对应项目。'),
-    h('div',{className:'dcNativeSearch'},h('input',{className:'dcInput',placeholder:'查找作品','aria-label':'查找作品',value:query,onChange:event=>setQuery(event.target.value)})),
-    h('div',{className:'dcNativeWorksList'},visible.length?visible.slice(workPage*12,(workPage+1)*12).map(source=>item(h(React.Fragment,null,h(WorkPreview,{source}),h('span',null,source.title||'未命名作品',h('small',null,source.error?'文件暂不可用':kindLabel(source.engine)))),async()=>{setMenu(null);if(native.fileAction?.action==='works')await controller.completeNativeFile({sourceId:source.id});else if(source.id!==native.sourceId)await controller.run('open',{sourceId:source.id});},{key:source.id,disabled:!!source.error||(blocked&&native.fileAction?.action!=='works'),'data-current':source.id===native.sourceId,'aria-label':'打开 '+(source.title||'未命名作品')})):h('div',{className:'dcNativeMenuEmpty'},query?'没有匹配的作品':'新建或导入后，作品会保存在这里。')),
-    visible.length>12?h('div',{className:'dcNativeWorkPages'},h('button',{className:'dcBtn',disabled:workPage===0,onClick:()=>setWorkPage(page=>page-1)},'上一页'),h('span',null,(workPage+1)+' / '+Math.ceil(visible.length/12)),h('button',{className:'dcBtn',disabled:(workPage+1)*12>=visible.length,onClick:()=>setWorkPage(page=>page+1)},'下一页')):null):null,
-   menu==='new'?h('div',{className:'dcNativePopover',role:'dialog','aria-label':'自定义新建设计'},
-    h('form',{className:'dcBrandControls',onSubmit:createCustom},
-     h('label',null,'类型',h('select',{'aria-label':'设计类型',value:newEngine,disabled:!native.hostMenuReady,onChange:e=>chooseNewEngine(e.target.value)},
-      ...[['vectorcraft','矢量设计'],...(photoEnabled?[['photocraft','图片编辑']]:[]),...(deckEnabled?[['deckcraft','演示文稿']]:[])].map(([id,label])=>h('option',{key:id,value:id},label)))),
-     h('label',null,'名称',h('input',{className:'dcInput','aria-label':'新设计名称',value:newTitle,maxLength:200,required:true,disabled:!native.hostMenuReady,onChange:e=>setNewTitle(e.target.value)})),
+    h(PanelHeading,{title:'历史作品',detail:native.sources.length+' 份作品',icon:'folder',onClose:()=>toggle('works')}),
+    history?h('section',{className:'dcStudioWorkHistory','aria-label':'作品版本记录'},
+     h(StudioButton,{icon:'history',onClick:()=>{historyIntent.current++;setHistory(null);selectHistory(null);setHistoryBusy(false);}},'返回作品'),
+     h('h3',null,history.work.title||'未命名作品'),
+     historySelection?h(WorkPreview,{source:historySelection}):null,
+     historyBusy?h('p',{role:'status'},'正在读取版本…'):null,
+     h('div',{className:'dcStudioVersionRows'},...history.items.map((version,index)=>h('button',{
+      type:'button',key:version.revision,className:'dcNativeMenuItem','data-current':version.revision===historySelection?.revision,onClick:()=>selectHistory(version),
+     },h(StudioIcon,{name:'clock',size:15}),h('span',null,index===0?'最新版本':date(version.at),' · ',version.actor==='agent'?'AI 修改':'已保存')))),
+     history.nextOffset!=null?h(StudioButton,{disabled:historyBusy,onClick:()=>loadWorkHistory(history.work,history.nextOffset)},'更多版本'):null,
+     historySelection?h(StudioButton,{icon:'plus',className:'dcPrimary',disabled:historyBusy||!native.hostMenuReady,onClick:run(()=>restoreHistoryCopy(historySelection))},'打开为独立副本'):null):
+    h(React.Fragment,null,
+     h('div',{className:'dcNativeSearch dcStudioWorksFilter'},h('input',{className:'dcInput',placeholder:'查找作品','aria-label':'查找作品',value:query,onChange:event=>setQuery(event.target.value)}),
+      h('select',{className:'dcSelect','aria-label':'按作品类型筛选',value:workKind,onChange:event=>setWorkKind(event.target.value)},h('option',{value:''},'全部类型'),...studioEngines.filter(engine=>engine.id!=='motion').map(engine=>h('option',{key:engine.id,value:engine.id},engine.title)))),
+     native.hostMenuReady?h('div',{className:'dcNativeWorksList'},visible.length?visible.slice(workPage*9,(workPage+1)*9).map(work=>h('article',{className:'dcStudioWorkCard',key:work.id},
+      item(h(React.Fragment,null,h(WorkPreview,{source:work}),h('span',{title:work.title},work.title||'未命名作品',h('small',null,work.error?'文件暂不可用':kindLabel(work.engine)+(work.at?' · '+date(work.at):'')))),
+       async()=>{setMenu(null);if(work.id!==native.sourceId)await controller.run('open',{sourceId:work.id});},{disabled:!!work.error||blocked,'data-current':work.id===native.sourceId,'aria-label':'打开 '+(work.title||'未命名作品')}),
+      h(StudioButton,{icon:'history',label:'查看 '+(work.title||'未命名作品')+' 的版本',disabled:!!work.error,onClick:()=>loadWorkHistory(work)}))):h('div',{className:'dcNativeMenuEmpty'},query||workKind?'没有匹配的作品':'新建或导入后，作品会出现在这里。')):h('p',{role:'status'},'正在读取项目作品…'),
+     visible.length>9?h('div',{className:'dcNativeWorkPages'},h('button',{className:'dcBtn',disabled:workPage===0,onClick:()=>setWorkPage(page=>page-1)},'上一页'),h('span',null,(workPage+1)+' / '+Math.ceil(visible.length/9)),h('button',{className:'dcBtn',disabled:(workPage+1)*9>=visible.length,onClick:()=>setWorkPage(page=>page+1)},'下一页')):null)):null,
+   menu==='new'?h('div',{className:'dcNativePopover','data-menu':'new',role:'dialog','aria-label':'自定义新建设计'},
+    h(PanelHeading,{title:'新建设计',icon:'plus',onClose:()=>toggle('new')}),
+    h('form',{className:'dcStudioCreateForm',onSubmit:createCustom},
+     h('div',{className:'dcStudioCreateChoices dcStudioWide','aria-label':'设计类型'},...studioEngines.filter(engine=>engine.id!=='motion'&&controller.runtime?.engines?.[engine.id]).map(engine=>
+      h(StudioButton,{key:engine.id,icon:engine.icon,'aria-pressed':newEngine===engine.id,disabled:!native.hostMenuReady,onClick:()=>chooseNewEngine(engine.id)},engine.title))),
+     h('label',{className:'dcStudioWide'},'名称',h('input',{className:'dcInput','aria-label':'新设计名称',value:newTitle,maxLength:200,required:true,disabled:!native.hostMenuReady,onChange:e=>setNewTitle(e.target.value)})),
      h('label',null,'宽',h('input',{className:'dcInput',type:'number','aria-label':'设计宽度',value:newWidth,min:1,max:16384,step:1,required:true,disabled:!native.hostMenuReady,onChange:e=>setNewWidth(e.target.value)})),
      h('label',null,'高',h('input',{className:'dcInput',type:'number','aria-label':'设计高度',value:newHeight,min:1,max:16384,step:1,required:true,disabled:!native.hostMenuReady,onChange:e=>setNewHeight(e.target.value)})),
-     h('button',{type:'submit',className:'dcBtn dcPrimary',disabled:!native.hostMenuReady||!newTitle.trim()},'创建设计'),
-     h('button',{type:'button',className:'dcBtn',disabled:!native.hostMenuReady,onClick:()=>{setMenu(null);controller.resumeHostMenu().catch(error=>setError(error.message));}},'取消'))):null,
+     error?h('div',{className:'dcStudioWide dcChatError',role:'alert'},userFacingError(error)):null,
+     h('div',{className:'dcStudioWide dcNativeConfirmActions'},h(StudioButton,{onClick:()=>toggle('new')},'取消'),
+      h('button',{type:'submit',className:'dcBtn dcPrimary',disabled:!native.hostMenuReady||!newTitle.trim()},'创建设计')))):null,
    menu==='assets'?h('div',{className:'dcNativePopover','data-menu':'assets',role:'dialog','aria-label':'项目素材'},
-    h('button',{className:'dcBtn',disabled:!native.hostMenuReady||!source||!!native.sourceNavigation,onClick:()=>toggle('brands')},'项目品牌色'),
-    h('button',{className:'dcBtn',disabled:!native.hostMenuReady||!!native.sourceNavigation,onClick:()=>toggle('plans')},'设计计划'),
-    h('button',{className:'dcBtn',disabled:!native.hostMenuReady,onClick:()=>toggle('workflows')},'本地工作流'),
-    h('div',{className:'dcNativeMenuTitle'},'项目素材',h('small',null,native.project?native.project.assets.length+' 份':'正在读取')),
+    h(PanelHeading,{title:'项目素材',detail:native.project?native.project.assets.length+' 份':'正在读取',icon:'assets',onClose:()=>toggle('assets')}),
+    h('div',{className:'dcStudioUtilityRow'},
+     h(StudioButton,{disabled:!native.hostMenuReady||!source||!!native.sourceNavigation,onClick:()=>toggle('brands')},'项目品牌色'),
+     h(StudioButton,{disabled:!native.hostMenuReady||!!native.sourceNavigation,onClick:()=>toggle('plans')},'设计计划'),
+     h(StudioButton,{disabled:!native.hostMenuReady,onClick:()=>toggle('workflows')},'本地工作流')),
     h('div',{className:'dcNativeSearch'},h('input',{className:'dcInput',placeholder:'查找素材','aria-label':'查找素材',value:query,onChange:event=>setQuery(event.target.value)})),
     exports.includes('svg')?item('保存当前设计为矢量素材',async()=>{setMenu(null);await controller.projectAction('derive',{format:'svg',title:native.title});},{disabled:!source||blocked}):null,
     item('保存当前设计为图片素材',async()=>{setMenu(null);await controller.projectAction('derive',{format:'png',title:native.title});},{disabled:!source||blocked}),
@@ -302,6 +468,9 @@ export function createNativeWorkspace({React,store}){
      return h('div',{className:'dcNativeAsset',key:asset.id,'data-asset-id':asset.id},
       h('div',{className:'dcNativeAssetTop'},h(MaterialPreview,{asset}),h('div',{className:'dcNativeAssetInfo'},h('strong',null,asset.title),h('small',null,asset.format.toUpperCase()+' · 来源：'+(original?.title||'原生设计')),h('small',null,'固定源版本 · 使用于 '+present.length+' 处'))),
       h('div',{className:'dcNativeAssetActions'},h('button',{className:'dcBtn',disabled:!source||blocked||!canPlaceAsset,title:canPlaceAsset?undefined:'此素材或当前编辑器尚不支持安全置入','aria-label':'放入 '+asset.title,onClick:run(async()=>{setMenu(null);await controller.projectAction('place',{assetId:asset.id});})},'放入当前设计'),h('button',{className:'dcBtn',disabled:blocked||!!native.sourceNavigation||native.sourceId===asset.sourceId,'aria-label':'打开来源 '+asset.title,onClick:run(async()=>{setMenu(null);await controller.projectAction('open_asset',{assetId:asset.id});})},native.sourceId===asset.sourceId?'当前为来源设计':'打开来源设计')),
+      ['png','svg'].includes(asset.format)?h(StudioButton,{icon:'motion',disabled:blocked||!native.hostMenuReady,onClick:run(async()=>{
+       store.set({motionAssetTransfer:{assetId:asset.id,title:asset.title,format:asset.format,sourceTitle:original?.title||'原生设计',sessionId,root,operationKey:'ui-mat-'+crypto.randomUUID()},workspaceMode:'motion'});
+      })},'加入动画素材'):null,
       uses.length?h('div',{className:'dcNativeAssetUses'},...uses.map(use=>{
        const pending=native.project.edits?.find(edit=>edit.instanceId===use.id&&edit.phase==='editing');
        const hidden=!!use.nativeObject?.hidden,canConvert=asset.format==='svg'&&!!asset.preview&&controller.view?.engine==='deckcraft'&&controller.surface?.capabilities?.convertSimpleSvgToShapes===true&&use.sourceId===native.sourceId&&use.status==='present'&&use.nativeObject?.kind==='picture'&&!hidden;
@@ -329,6 +498,7 @@ export function createNativeWorkspace({React,store}){
       group.adoption?h('button',{className:'dcBtn',disabled:variantBusy||!group.branches.some(branch=>branch.sourceId===native.sourceId),onClick:variantRun(()=>controller.variantAction('undo',{groupId:group.id,operationId:crypto.randomUUID()}))},'撤销采用'):null),
      !group.canAdopt&&!group.adoption?h('p',null,'原作已变化；不会自动覆盖，请打开双方逐项比较。'):null))):null,
    menu==='export'?h('div',{className:'dcNativePopover','data-menu':'export',role:'menu','aria-label':'导出设计'},
+    h('div',{className:'dcNativeMenuTitle'},h(StudioIcon,{name:'download',size:15}),'导出文件'),
     item('可编辑项目包 · ZIP',async()=>saveFile(await controller.exportProjectPackage()),{role:'menuitem',title:'包含项目中已保存的作品、素材、版本和关联关系'}),
     source?item((sourceFormat==='pcraft'?'可编辑图片源 · .':sourceFormat==='deckcraft'?'可编辑演示源 · .':'可编辑设计源 · .')+sourceFormat,()=>download(sourceFormat),{role:'menuitem'}):null,
     source&&exports.includes('svg')?item('SVG 文件',()=>download('svg'),{role:'menuitem',title:'保留原生可导出的矢量路径与文字，嵌入的位图保持位图'}):null,

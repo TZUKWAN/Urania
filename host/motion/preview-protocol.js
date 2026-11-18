@@ -22,6 +22,16 @@ function shellRuntime(config){
   if(event.source!==frame.contentWindow||event.origin!=='null')return;
   if(data.type==='ready'){ready=true;send({type:'ready'});return;}
   if(data.type==='time'&&Number.isFinite(data.timeMs))send({type:'time',timeMs:Math.max(0,Math.min(config.durationMs,data.timeMs)),playing:data.playing===true});
+  if(data.type==='timeline'){
+   if(!Array.isArray(data.clips)||data.clips.length>96)return;
+   const clips=data.clips.filter(clip=>clip&&typeof clip.id==='string'&&clip.id.length>0&&clip.id.length<=128&&Number.isFinite(clip.start)&&Number.isFinite(clip.end)&&clip.end>clip.start).map(clip=>({
+    id:clip.id,label:String(clip.label||clip.id).slice(0,80),kind:clip.kind==='audio'?'audio':clip.kind==='video'?'video':'visual',
+    start:Math.max(0,Math.min(config.durationMs,clip.start)),end:Math.max(0,Math.min(config.durationMs,clip.end)),
+    track:Number.isSafeInteger(clip.track)&&clip.track>=0&&clip.track<1000?clip.track:null,
+    keys:Array.isArray(clip.keys)?clip.keys.slice(0,24).filter(key=>Number.isFinite(key)&&key>=0&&key<=config.durationMs):[],
+   })).filter(clip=>clip.end>clip.start);
+   send({type:'timeline',clips,truncated:data.truncated===true});
+  }
   if(data.type==='selection'&&Array.isArray(data.ids)&&data.ids.length<=128&&data.ids.every(x=>typeof x==='string'&&x.length<=256)){
    const rect=data.rect;
    if(rect&&['x','y','width','height'].some(k=>!Number.isFinite(rect[k])||rect[k]<0||rect[k]>1))return;
@@ -37,6 +47,37 @@ function compositionRuntime(config){
  const send=data=>{if(connected)parent.postMessage({...data,protocol:'urania-motion/1',nonce:config.nonce,epoch:config.epoch},config.origin);};
  const pause=()=>{playing=false;window.__hfPause?.();};
  function report(){send({type:'time',timeMs:lastTime,playing});}
+ function describeTimeline(){
+  const root=document.querySelector('[data-composition-id]');if(!root)return;
+  const maxMs=config.render.durationFrames*1000*config.render.fps.den/config.render.fps.num;
+  const nodes=Array.from(document.querySelectorAll('[data-hf-id]')).slice(0,97),seen=new Set(),byElement=new Map();
+  for(const animation of document.getAnimations().slice(0,240)){
+   const effect=animation.effect,node=effect?.target;
+   if(!node||!effect.getKeyframes)continue;
+   const timing=effect.getComputedTiming?.(),duration=Number(timing?.duration),delay=Number(timing?.delay||0);
+   if(!(duration>0)||!Number.isFinite(delay))continue;
+   const frames=effect.getKeyframes().slice(0,24).map(frame=>delay+frame.computedOffset*duration).filter(Number.isFinite);
+   byElement.set(node,[...(byElement.get(node)||[]),...frames].slice(0,24));
+  }
+  const clips=[];
+  for(const node of nodes.slice(0,96)){
+   const id=node.getAttribute('data-hf-id');if(!id||id.length>128||seen.has(id))continue;
+   seen.add(id);
+   let start=0,end=maxMs;
+   const chain=[];for(let item=node;item&&item!==root;item=item.parentElement)chain.unshift(item);
+   for(const item of chain){
+    start+=(parseFloat(item.getAttribute('data-start')||'0')||0)*1000;
+    const duration=parseFloat(item.getAttribute('data-duration'));
+    if(Number.isFinite(duration))end=Math.min(end,start+duration*1000);
+   }
+   if(end<=start||start>=maxMs)continue;
+   const track=node.getAttribute('data-track-index'),tag=node.localName;
+   const text=['audio','video','img'].includes(tag)?'':(node.textContent||'').trim().replace(/\s+/g,' ').slice(0,42);
+   clips.push({id,label:node.getAttribute('aria-label')||text||id,kind:tag==='audio'?'audio':tag==='video'?'video':'visual',
+    start,end,track:track===null?null:Number(track),keys:[...new Set(byElement.get(node)||[])].sort((a,b)=>a-b).filter(key=>key>=start&&key<=end)});
+  }
+  send({type:'timeline',clips,truncated:nodes.length>96});
+ }
  addEventListener('message',event=>{
   const data=event.data;
   // Runtime clock messages are not authority; only this frame may report time.
@@ -73,7 +114,7 @@ function compositionRuntime(config){
      window[name]=function(...args){playing=state;if(name==='__hfSeek'&&Number.isFinite(args[0]))lastTime=args[0];const result=original.apply(this,args);report();return result;};
     }
    }
-   send({type:'ready'});
+   send({type:'ready'});describeTimeline();
   }).catch(error=>send({type:'error',message:error.message}));
  }
  addEventListener('error',event=>{resourceFailed=true;send({type:'error',message:event.message||'资源加载失败'});},true);

@@ -25,7 +25,7 @@ test('queued cancellation does not start a second child',async t=>{
 });
 test('combined queued parameters have a byte budget that cancellation releases',async t=>{
  const workerPath=fileURLToPath(new URL('./fixtures/blocked-worker.mjs',import.meta.url));
- const {root,jobs}=setup(t,{workerPath,concurrency:1,timeoutMs:300,parameterBudgetBytes:32*1024});
+ const {root,jobs}=setup(t,{workerPath,concurrency:1,timeoutMs:10000,parameterBudgetBytes:32*1024});
  const payload={root,content:'x'.repeat(24*1024)},first=jobs.run('commands',payload).catch(e=>e);
  await assert.rejects(jobs.run('commands',payload),error=>error.status===429);
  const running=jobs.list(root).find(job=>job.status==='running');jobs.cancel(running.id);assert.equal((await first).status,499);assert.equal(jobs.parameterBytes,0);

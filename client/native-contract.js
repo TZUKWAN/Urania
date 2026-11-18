@@ -1,5 +1,5 @@
 /** Native identity/context contract. Engine registration is separate from source formats. */
-import {isUint64,sameUint64} from './native-protocol.js?v=165';
+import {isUint64,sameUint64} from './native-protocol.js?v=166';
 
 export const EDITOR_CONTEXT_PROTOCOL=2;
 // File types do not advertise a live editor. Photo/Deck enter the live registry

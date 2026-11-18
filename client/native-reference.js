@@ -1,8 +1,8 @@
-import {isActiveDesignSession} from './design-session.js?v=165';
+import {isActiveDesignSession} from './design-session.js?v=166';
 import {designSession,isDesignRootInSession} from './dsh-context.js';
-import {sameUint64} from './native-protocol.js?v=165';
-import {aiCanvasTarget} from './ai-canvas.js?v=165';
-import {sameObjectIds} from './native-contract.js?v=165';
+import {sameUint64} from './native-protocol.js?v=166';
+import {aiCanvasTarget} from './ai-canvas.js?v=166';
+import {sameObjectIds} from './native-contract.js?v=166';
 
 const NAME='designcraft-editor',OPEN='[DesignCraftEditor]',CLOSE='[/DesignCraftEditor]';
 const label=context=>context.title+' · '+aiCanvasTarget(context);

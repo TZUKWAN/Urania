@@ -80,7 +80,9 @@ $assets = Get-Content -LiteralPath (Bound-Path $repo 'release/runtime-assets.jso
 $manifestFile = Bound-Path $repo 'release/runtime-manifest.json'
 if ((Hash-File $manifestFile) -ne $assets.runtimeManifest.sha256) { throw 'Runtime manifest hash differs from release metadata' }
 $manifest = Get-Content -LiteralPath $manifestFile -Raw | ConvertFrom-Json
-if ($package.version -ne $assets.packageVersion -or $package.designcraftUiBuild -ne $assets.uiBuild -or $manifest.sourcePackageVersion -ne $package.version -or $manifest.uiBuild -ne $package.designcraftUiBuild) { throw 'Source/package/runtime versions do not match; use the same release for all components' }
+$payloadVersion = $assets.runtimeManifest.sourcePackageVersion ?? $assets.packageVersion
+$payloadBuild = $assets.runtimeManifest.sourceUiBuild ?? $assets.uiBuild
+if ($package.version -ne $assets.packageVersion -or $package.designcraftUiBuild -ne $assets.uiBuild -or $manifest.sourcePackageVersion -ne $payloadVersion -or $manifest.uiBuild -ne $payloadBuild) { throw 'Source/package/runtime manifest identities do not match' }
 if ($assets.platform -ne 'win32-x64' -or $manifest.platform -ne 'win32-x64' -or -not $IsWindows -or [Runtime.InteropServices.RuntimeInformation]::OSArchitecture -ne 'X64') { throw 'This runtime release requires Windows x64' }
 $files = @($manifest.files)
 # The fixed HyperFrames SDK/transitive runtime is restored offline as well.

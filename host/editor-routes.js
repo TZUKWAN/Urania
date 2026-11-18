@@ -10,6 +10,7 @@ import {designDiagnostics} from './design-diagnostics.js';
 import {selectedObjectIds} from '../client/native-contract.js';
 import {openNativeSession,nativeProjectFonts} from './native.js';
 import {readFile} from 'node:fs/promises';
+import {nativeDeckDocument} from './native-deck-header.js';
 import {join} from 'node:path';
 import {previewImageSize} from './image-header.js';
 import {createHash} from 'node:crypto';
@@ -35,8 +36,8 @@ export function editorRoutes(ctx,manager,{guard,readJsonBody,sendJson}){
    signal?.addEventListener('abort',abort,{once:true});shared.promise.then(value=>{if(finish())resolve(value);},error=>{if(finish())reject(error);});if(signal?.aborted)abort();
   });
  };
- const renderPreview=async(view,source,signal)=>{
-  const fonts=await nativeProjectFonts(view.root,signal),key=view.root.toLowerCase()+'\0'+source.meta.engine+':'+source.meta.sourceHash+':'+fonts.fingerprint,existing=previewCache.get(key);
+ const renderPreview=async(view,source,signal,slideId)=>{
+  const fonts=await nativeProjectFonts(view.root,signal),key=view.root.toLowerCase()+'\0'+source.meta.engine+':'+source.meta.sourceHash+':'+fonts.fingerprint+':'+(slideId??''),existing=previewCache.get(key);
   if(existing){previewCache.delete(key);previewCache.set(key,existing);return {bytes:existing,fontCount:fonts.items.length};}
   const current=previewFlights.get(key);if(current&&!current.controller.signal.aborted)return {bytes:await joinPreview(current,signal),fontCount:fonts.items.length};
   if(current)previewFlights.delete(key);
@@ -50,8 +51,15 @@ export function editorRoutes(ctx,manager,{guard,readJsonBody,sendJson}){
      await session.call('open_file',{path:source.path});const result=await session.call('render_preview',{max_side:480,artboard:0});
      const image=result.content.find(item=>item.type==='image'&&item.mimeType==='image/png');if(!image)throw new SafetyError('矢量源未返回预览',422);bytes=Buffer.from(image.data,'base64');
     }else if(source.meta.engine==='deckcraft'){
-     await session.call('open_presentation',{path:source.path});const result=await session.call('render_slide',{slide:0,scale:.5});
-     const image=result.content.find(item=>item.type==='image'&&item.mimeType==='image/png');if(!image)throw new SafetyError('演示源没有可预览的首页',422);bytes=Buffer.from(image.data,'base64');
+     let slide=0;
+     if(slideId!==null){
+      if(source.meta.bytes>256*1024*1024)throw new SafetyError('演示源超过预览预算',413);
+      const deck=nativeDeckDocument(await readFile(source.path,{signal:shared.controller.signal}));
+      slide=deck.slides.findIndex(item=>String(item.id)===slideId);
+      if(slide<0)throw new SafetyError('此修订中没有对应幻灯片',404);
+     }
+     await session.call('open_presentation',{path:source.path});const result=await session.call('render_slide',{slide,scale:.5});
+     const image=result.content.find(item=>item.type==='image'&&item.mimeType==='image/png');if(!image)throw new SafetyError('演示源没有可预览的幻灯片',422);bytes=Buffer.from(image.data,'base64');
     }else{
      await session.call('doc_open',{path:source.path});const path=join(session.directory,'overview.png');await session.call('doc_export',{path});bytes=await readFile(path);
     }
@@ -69,11 +77,13 @@ export function editorRoutes(ctx,manager,{guard,readJsonBody,sendJson}){
    const view=viewFor(req),query=new URL(req.url,'http://localhost').searchParams,epoch=query.get('epoch');
    if(epoch!==view.epoch)throw new SafetyError('作品总览已切换',409);
    const source=await manager.store(view.root).source(query.get('id'),query.get('revision'));
+   const slideId=query.get('slideId');
+   if(slideId!==null&&(source.meta.engine!=='deckcraft'||!/^\d{1,10}$/.test(slideId)))throw new SafetyError('幻灯片预览身份无效',422);
    const controller=new AbortController(),abort=()=>{if(!res.writableEnded)controller.abort();};res.once('close',abort);
    try{
-    const {bytes,fontCount}=await renderPreview(view,source,controller.signal);
+    const {bytes,fontCount}=await renderPreview(view,source,controller.signal,slideId);
     if(view.epoch!==epoch||manager.active.get(view.sessionId)!==view.id)throw new SafetyError('工作区已切换，未返回其他项目的预览',409);
-    res.writeHead(200,{'content-type':'image/png','content-length':bytes.length,'cache-control':'no-store','x-content-type-options':'nosniff','x-source-revision':source.revision,'x-project-font-count':String(fontCount)});res.end(bytes);
+    res.writeHead(200,{'content-type':'image/png','content-length':bytes.length,'cache-control':'no-store','x-content-type-options':'nosniff','x-source-revision':source.revision,'x-project-font-count':String(fontCount),...(slideId!==null?{'x-source-slide-id':slideId}:{})});res.end(bytes);
    }finally{res.off('close',abort);}
   })},
   {kind:'exact',path:root+'/export',handler:guard(async(req,res)=>{
@@ -238,6 +248,23 @@ export function editorRoutes(ctx,manager,{guard,readJsonBody,sendJson}){
      case 'heartbeat':result={ready:view.ready,epoch:view.epoch};break;
      case 'select':result=await manager.select(view,body);break;
      case 'copy':result=await manager.copySource(view,body);break;
+     case 'source-history':{
+      if(body.epoch!==view.epoch)throw new SafetyError('作品列表已切换，请重新打开历史',409);
+      const offset=body.offset??0;
+      if(!Number.isSafeInteger(offset)||offset<0||offset>100000)throw new SafetyError('历史页码无效',422);
+      const rows=await manager.store(view.root).versions(body.sourceId);
+      if(view.epoch!==body.epoch||manager.active.get(view.sessionId)!==view.id)throw new SafetyError('作品列表已切换',409);
+      result={items:rows.slice(offset,offset+30).map(row=>({id:row.id,revision:row.revision,title:row.title,engine:row.engine,at:row.at,actor:row.actor})),nextOffset:offset+30<rows.length?offset+30:null};
+      break;
+     }
+     case 'source-history-copy':{
+      manager.fileActionIdle(view,body.epoch);
+      const source=await manager.store(view.root).source(body.sourceId,body.revision);
+      manager.fileActionIdle(view,body.epoch);
+      const saved=await manager.store(view.root).forkVersion(body.sourceId,source.revision,{operationId:body.operationId,title:source.meta.title.slice(0,180)+' · 历史副本',originType:'history-copy'});
+      result={sourceId:saved.sourceId,revision:saved.revision};
+      break;
+     }
      case 'unselect':result=await manager.unselect(view,body);break;
      case 'report':result=manager.report(view,body);break;
      case 'poll':result=manager.poll(view);break;

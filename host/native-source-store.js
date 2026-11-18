@@ -94,10 +94,11 @@ export class NativeSourceStore {
  async versions(id){
   return (await this.lineage(id)).reverse().map(({revision,meta})=>({revision,...meta}));
  }
- async forkVersion(sourceId,revision,{operationId,title}){
+ async forkVersion(sourceId,revision,{operationId,title,originType='instance-edit'}){
   if(typeof operationId!=='string'||!/^[a-f0-9-]{36}$/.test(operationId))throw new SafetyError('实例分叉身份无效',422);
+  if(!['instance-edit','history-copy'].includes(originType))throw new SafetyError('无法识别的版本副本来源',422);
   const source=await this.source(sourceId,revision),id='fork-'+operationId;
-  const origin={action:'instance-edit',operationId,sourceId,revision,sourceHash:source.meta.sourceHash};
+  const origin={action:originType,operationId,sourceId,revision,sourceHash:source.meta.sourceHash};
   const lineage=await this.lineage(id);
   if(lineage.length){
    const first=lineage[0];
@@ -209,7 +210,7 @@ export class NativeSourceStore {
    const current=await this.head(id);
    if(origin!==undefined){
     assertSafeJson(origin);
-    if(current||!['instance-edit','variant-fork'].includes(origin?.action)||typeof origin.operationId!=='string'||!/^[a-f0-9-]{36}$/.test(origin.operationId)||id!==(origin.action==='instance-edit'?'fork-':'variant-')+origin.operationId)throw new SafetyError('分叉来源无效',422);
+    if(current||!['instance-edit','history-copy','variant-fork'].includes(origin?.action)||typeof origin.operationId!=='string'||!/^[a-f0-9-]{36}$/.test(origin.operationId)||id!==(origin.action==='variant-fork'?'variant-':'fork-')+origin.operationId)throw new SafetyError('分叉来源无效',422);
     const original=await this.source(origin.sourceId,origin.revision);
     if(original.meta.sourceHash!==origin.sourceHash||original.meta.engine!==engine)throw new SafetyError('实例分叉来源版本不一致',409);
     origin={action:origin.action,operationId:origin.operationId,sourceId:origin.sourceId,revision:origin.revision,sourceHash:origin.sourceHash};

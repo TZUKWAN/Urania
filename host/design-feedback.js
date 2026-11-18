@@ -59,6 +59,18 @@ export class DesignFeedback{
    const sub={id:args.submissionId,itemIds:ids,status:'saved',delivery:'pending',at:now(),attempts:[]};record.submissions[sub.id]=sub;for(const id of ids){record.items[id].submissionId=sub.id;record.items[id].status='submitted';}this.save(root,record);return {submission:this.submission(record,sub)};
   }
   const sub=record.submissions[args.submissionId];if(!sub)failure('未找到此意见批次',404);
+  if(action==='review'){
+   if(ai)failure('只有用户可以确认设计结果',403);
+   if(!['accepted','declined'].includes(args.decision))failure('设计确认动作无效',422);
+   const result=[...(sub.results||[])].reverse().find(row=>row.sourceId===args.sourceId);
+   if(sub.status!=='modified'||!result||result.revision!==args.revision)failure('修改回执已更新，请重新核对');
+   sub.reviews||=[];
+   const previous=sub.reviews.find(item=>item.sourceId===args.sourceId);
+   if(previous?.decision===args.decision&&previous.revision===result.revision)return {submission:this.submission(record,sub)};
+   sub.reviews=sub.reviews.filter(item=>item.sourceId!==args.sourceId);
+   sub.reviews.push({sourceId:result.sourceId,revision:result.revision,decision:args.decision,at:now()});
+   this.save(root,record);return {submission:this.submission(record,sub)};
+  }
   if(action==='claim_delivery'){
    if(ai||!/^delivery-[a-f0-9-]{36}$/.test(args.attemptId||''))failure('送达动作身份无效',422);
    if(!['pending','failed'].includes(sub.delivery)||sub.receivedAt)return {accepted:false,submission:this.submission(record,sub)};

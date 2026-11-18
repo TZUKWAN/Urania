@@ -1,4 +1,5 @@
-import {selectedObjectIds} from './native-contract.js?v=165';
+import {selectedObjectIds} from './native-contract.js?v=166';
+import {createStudioComponents} from './studio-system.js?v=166';
 
 // Describe the real engine selection, including pixels and slide ranges.
 export function aiCanvasTarget(document){
@@ -25,13 +26,17 @@ export function aiCanvasTarget(document){
 
 export function createAiCanvasTools(React){
  const h=React.createElement;
- return function AiCanvasTools({controller,document,disabled,onError,onQuote}){
+ const {Icon,Button}=createStudioComponents(React);
+ return function AiCanvasTools({controller,document,disabled,onError,onQuote,onAdvanced,onPhoto}){
   const native=controller.state,photo=document.engine==='photocraft';
   const select=tool=>()=>controller.setAiSelectionTool(tool).catch(error=>onError(error.message));
   return h('div',{className:'dcAiCanvasTools',role:'toolbar','aria-label':'AI 画布选择'},
-   h('div',{className:'dcAiCanvasTarget',role:'status','aria-live':'polite'},h('strong',null,aiCanvasTarget(document)),h('small',null,photo?'点击选择图层；Shift 加选，或框选图片区域':'点击选择；Shift 加选，也可拖框多选')),
+   h('div',{className:'dcAiCanvasTarget',role:'status','aria-live':'polite'},
+    h('span',{className:'dcStudioTarget'},h(Icon,{name:photo?'photo':document.engine==='deckcraft'?'deck':'vector',size:13}),h('span',null,aiCanvasTarget(document)))),
    photo?h('div',{className:'dcAiSelectModes','aria-label':'图片选择方式'},...['objects','region'].map(tool=>h('button',{key:tool,className:'dcBtn',disabled,'aria-pressed':native.aiSelectionTool===tool,onClick:select(tool)},tool==='objects'?'选择图层':'框选区域'))):null,
    photo&&document.nativeSelection?.data?.rasterSelection?h('button',{className:'dcBtn',disabled,onClick:()=>controller.contextCommand(document,'clear-selection').catch(error=>onError(error.message))},'取消区域'):null,
-   h('button',{className:'dcBtn dcPrimary',disabled,onClick:onQuote},'让 AI 修改'));
+   photo?h(Button,{icon:'photo',label:'图片生成与局部重绘',disabled,onClick:onPhoto}):null,
+   h(Button,{icon:'settings','aria-pressed':!!native.advancedEditing,disabled,onClick:onAdvanced},native.advancedEditing?'返回简洁画布':'专业编辑'),
+   h(Button,{icon:'ai',className:'dcPrimary',disabled,onClick:onQuote},'让 AI 修改'));
  };
 }

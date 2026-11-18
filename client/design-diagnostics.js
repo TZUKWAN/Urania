@@ -1,4 +1,4 @@
-import {submitDesignFeedbackPrompt} from './native-ai-input.js?v=165';
+import {submitDesignFeedbackPrompt} from './native-ai-input.js?v=166';
 export function createDesignDiagnostics(React){const h=React.createElement;return function DesignDiagnostics({controller,services,sessionId,onClose}){
  const [report,setReport]=React.useState(null),[error,setError]=React.useState(null),[busy,setBusy]=React.useState(false),[notice,setNotice]=React.useState('');
  const read=async()=>{const response=await fetch('/designcraft/api/v2/studio/diagnostics?'+new URLSearchParams({epoch:controller.view.epoch}),{headers:controller.sourceHeaders(),cache:'no-store'}),result=await response.json();if(!response.ok||!result.ok)throw new Error(result.error||'诊断读取失败');setReport(result.report);return result.report;};

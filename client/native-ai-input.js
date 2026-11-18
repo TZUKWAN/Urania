@@ -1,6 +1,6 @@
-import {isActiveDesignSession} from './design-session.js?v=165';
+import {isActiveDesignSession} from './design-session.js?v=166';
 import {designSession,isDesignRootInSession} from './dsh-context.js';
-import {quoteNative,nativeInputAdmissionLocked,withDesignRequestReference} from './native-reference.js?v=165';
+import {quoteNative,nativeInputAdmissionLocked,withDesignRequestReference} from './native-reference.js?v=166';
 const preparing=new WeakSet();
 export function currentNativeInput(services,sessionId){if(!isActiveDesignSession(services,sessionId))throw new Error('项目设计对话尚未就绪');const {owner,cwd}=designSession(services,sessionId),input=services.conversation?.input?.for?.(owner.ctx);if(!input?.actions?.setDraft||!input.actions.submit)throw new Error('当前 DSH 对话输入接口尚未就绪');return {input,cwd};}
 export async function submitNativePrompt({controller,services,sessionId,text,isCurrent=()=>true}){

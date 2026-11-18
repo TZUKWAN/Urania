@@ -1,6 +1,6 @@
-import {feedbackTargetKey,nativeFeedbackTarget,feedbackPrompt,feedbackLabel,expandsFeedbackSelection} from './feedback-contract.js?v=165';
-import {submitDesignFeedbackPrompt} from './native-ai-input.js?v=165';
-import {isActiveDesignSession} from './design-session.js?v=165';
+import {feedbackTargetKey,nativeFeedbackTarget,feedbackPrompt,feedbackLabel,expandsFeedbackSelection} from './feedback-contract.js?v=166';
+import {submitDesignFeedbackPrompt} from './native-ai-input.js?v=166';
+import {isActiveDesignSession} from './design-session.js?v=166';
 
 /** Local emergency journal + server CAS. Typing never invokes a model. */
 export class DesignFeedbackClient{
@@ -86,7 +86,7 @@ export class DesignFeedbackClient{
 }
 
 const status=sub=>sub.status==='modified'?'修改已保存':sub.receivedAt?'AI 已收到':sub.delivery==='staged'?'已放入对话草稿，等待发送':sub.delivery==='submitted'?'已提交，等待 AI 回执':sub.delivery==='uncertain'?'送达状态待核对，意见已保存':sub.delivery==='failed'?'未送达，意见已保存':'意见已保存';
-export function createFeedbackPanel(React,feedback){const h=React.createElement;return function FeedbackPanel({native}){
+export function createFeedbackPanel(React,feedback){const h=React.createElement;return function FeedbackPanel({native,onReview}){
  const state=React.useSyncExternalStore(feedback.subscribe,feedback.get,feedback.get),[busy,setBusy]=React.useState(false),[reference,setReference]=React.useState(''),[whole,setWhole]=React.useState(false);
  const queued=state.items.filter(i=>i.status==='queued'),run=fn=>async()=>{setBusy(true);feedback.change({error:null});try{await fn();}catch(error){feedback.change({error:error.message});}finally{setBusy(false);}};
  React.useEffect(()=>{if(!feedback.scope)return;const timer=setInterval(()=>{void feedback.refresh().catch(()=>{});},2000);return()=>clearInterval(timer);},[feedback.scope?.sessionId]);
@@ -97,6 +97,10 @@ export function createFeedbackPanel(React,feedback){const h=React.createElement;
   queued.length?h('button',{className:'dcBtn dcPrimary',disabled:busy||!feedback.scope,onClick:run(()=>feedback.submit(queued.map(i=>i.id)))},busy?'正在保存…':'将 '+queued.length+' 条意见一起交给 AI'):null,
   h('details',null,h('summary',null,'模板与版式参考'),h('input',{'aria-label':'模板或版式要求',value:reference,placeholder:'例如：学术汇报风格，这页改为左右对比',onChange:e=>setReference(e.target.value)}),native.engine==='deckcraft'?h('label',null,h('input',{type:'checkbox',checked:whole,onChange:e=>setWhole(e.target.checked)}),'应用范围：整套演示'):null,
    h('button',{className:'dcBtn',disabled:busy||!reference.trim(),onClick:run(async()=>{let target=await feedback.currentTarget({reference:{kind:'design-reference',description:reference.trim(),scope:whole?'source':'page'}});target={...target,objectIds:[],...(whole?{page:null}:{} )};await feedback.add(target,reference.trim());setReference('');})},'保存为 AI 意见')),
-  ...state.submissions.slice(-8).reverse().map(sub=>h('div',{className:'dcFeedbackReceipt',key:sub.id},h('strong',null,status(sub)),h('small',null,' · '+sub.items.length+' 条意见'),h('details',null,h('summary',null,'查看意见与版本'),...sub.items.map(i=>h('p',{key:i.id},feedbackLabel(i.target)+'：'+i.text)),...(sub.results||[]).map(r=>h('code',{key:r.jobId},r.sourceId+' @ '+r.revision.slice(0,12)))),['pending','failed'].includes(sub.delivery)&&!sub.receivedAt?h('button',{className:'dcBtn',disabled:busy,onClick:run(()=>feedback.deliver(sub))},'交给 AI'):null)),
+  ...state.submissions.slice(-8).reverse().map(sub=>h('div',{className:'dcFeedbackReceipt',key:sub.id},h('strong',null,status(sub)),h('small',null,' · '+sub.items.length+' 条意见'),
+   sub.status==='modified'&&sub.results?.length&&onReview?h('button',{className:'dcBtn',onClick:()=>onReview(sub),'aria-label':'查看 AI 修改结果'},'查看结果'):null,
+   h('details',null,h('summary',null,'查看修改要求'),...sub.items.map(i=>h('p',{key:i.id},feedbackLabel(i.target)+'：'+i.text)),
+    sub.results?.length?h('details',null,h('summary',null,'版本回执'),...sub.results.map(r=>h('code',{key:r.jobId},r.sourceId+' @ '+r.revision.slice(0,12)))):null),
+   ['pending','failed'].includes(sub.delivery)&&!sub.receivedAt?h('button',{className:'dcBtn',disabled:busy,onClick:run(()=>feedback.deliver(sub))},'交给 AI'):null)),
   h('button',{className:'dcBtn',disabled:busy,onClick:run(()=>feedback.refresh())},'核对状态'));
 };}

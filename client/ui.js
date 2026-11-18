@@ -1,17 +1,18 @@
 import {createVariantPanel} from './variant-ui.js';
 import {createImagePanel} from './image-ui.js';
-import {createNativeWorkspace} from './native-workspace.js?v=165';
-import {quoteNative,nativeInputAdmissionLocked} from './native-reference.js?v=165';
-import {aiCanvasTarget} from './ai-canvas.js?v=165';
-import {isActiveDesignSession} from './design-session.js?v=165';
-import {createChatSplit} from './chat-split.js?v=165';
-import {submitNativePrompt,currentNativeInput} from './native-ai-input.js?v=165';
-import {selectedObjectIds} from './native-contract.js?v=165';
-import {createMotionWorkspace} from './motion-workspace.js?v=165';
-export {nativeReferenceSource as createNativeReferenceSource,nativeContextTextRule,designRequestReferenceSource as createDesignRequestReferenceSource,designRequestTextRule} from './native-reference.js?v=165';
+import {createNativeWorkspace} from './native-workspace.js?v=166';
+import {quoteNative,nativeInputAdmissionLocked} from './native-reference.js?v=166';
+import {aiCanvasTarget} from './ai-canvas.js?v=166';
+import {isActiveDesignSession} from './design-session.js?v=166';
+import {createChatSplit} from './chat-split.js?v=166';
+import {submitNativePrompt,currentNativeInput} from './native-ai-input.js?v=166';
+import {selectedObjectIds} from './native-contract.js?v=166';
+import {createMotionWorkspace} from './motion-workspace.js?v=166';
+import {createStudioComponents,mountStudioStyles,userFacingError} from './studio-system.js?v=166';
+export {nativeReferenceSource as createNativeReferenceSource,nativeContextTextRule,designRequestReferenceSource as createDesignRequestReferenceSource,designRequestTextRule} from './native-reference.js?v=166';
 import {selectedNative,nativeNodes,selectedIds} from './selection.js';
-import {designChatContext,isDesignRootInSession,attachDesignReference,openNativeChatReference} from './dsh-context.js?v=165';
-export {designContextTextRule,createDesignReferenceSource} from './dsh-context.js?v=165';
+import {designChatContext,isDesignRootInSession,attachDesignReference,openNativeChatReference} from './dsh-context.js?v=166';
+export {designContextTextRule,createDesignReferenceSource} from './dsh-context.js?v=166';
 /**
  * DesignCraft editor UI — full WYSIWYG editor (React via DSH ModuleLoader).
  * Exports createUI({ React, store, sync, actions, controller }) → { App }.
@@ -46,6 +47,8 @@ export function createUI({ React, store, sync, actions, controller, t }) {
   const {Workspace:NativeWorkspace,controller:nativeController}=createNativeWorkspace({React,store});
   const {MotionWorkspace}=createMotionWorkspace({h,store,actions,React});
   const ChatSplit=createChatSplit(React);
+  const {Icon:StudioIcon,Button:StudioButton,Status:StudioStatus}=createStudioComponents(React);
+  mountStudioStyles();
   const ImagePanel=createImagePanel({React,store,sync,actions});const VariantPanel=createVariantPanel({React,store,sync});
 	const { useState, useEffect, useRef, useCallback, useMemo } = React;
 	function useStore() {
@@ -1060,22 +1063,29 @@ body[data-ds-dark-theme] .dcCanvasWrap{background:repeating-conic-gradient(#2024
       if(!reference){actions.toast('请在 DSH 原对话中打开此引用');return;}
       return openNativeChatReference({store,sync,sessionId,reference});
     };
+    const target=s.workspaceMode==='motion'
+      ?s.motion?.projectId?[s.motion.title||'动画',s.motion.selection?.ids?.length?'已选 '+s.motion.selection.ids.length+' 个组件':null].filter(Boolean).join(' · '):null
+      :s.native?.document?aiCanvasTarget(s.native.document):null;
     return h('div',{className:'dcChatConversation',onClickCapture:event=>{openReference(event);return sendFromConversation(event);},onKeyDownCapture:sendFromConversation,onCompositionStartCapture:()=>{composing.current=true;},onCompositionEndCapture:()=>{composing.current=false;setCompositionRevision(value=>value+1);}},
-      h('div',{style:{padding:'10px 12px',borderBottom:'1px solid var(--dc-line)',flex:'none'}},
-        s.workspaceMode!=='legacy'?h('div',null,h('p',{className:'dcHint',style:{margin:0}},s.native?.title||'直接描述设计需求，作品会出现在右侧'),
-         s.native?.document?(s.native.advancedEditing?h('button',{className:'dcBtn',disabled:s.native.busy||busy,onClick:()=>quote({focus:true})},busy?'正在准备引用…':'让 AI 修改选中内容'):h('div',{className:'dcChatAiTarget'},h('strong',null,aiCanvasTarget(s.native.document)),h('p',{className:'dcHint',style:{margin:'4px 0 0'}},'选中后在画布弹框输入要求，也可在这里直接发送。'))):null):!sessionId?h('p',{className:'dcHint'},'先选择 DSH 项目，然后直接在下方描述设计需求。'):!s.doc?h('p',{className:'dcHint'},'直接告诉 AI 想做什么，新作品会显示在右侧画布。'):h('div',null,
+      h('div',{className:'dcStudioContext'},
+        s.workspaceMode!=='legacy'?h(React.Fragment,null,
+         target?h('div',{className:'dcStudioTarget',title:target},h(StudioIcon,{name:'ai',size:13}),h('span',null,target)):null,
+         s.native?.advancedEditing&&s.workspaceMode==='native'&&s.native?.document?h(StudioButton,{icon:'ai',disabled:s.native.busy||busy,onClick:()=>quote({focus:true})},busy?'正在准备引用…':'引用当前选择'):null,
+         session?.running?h(StudioStatus,{kind:'busy'},'AI 正在处理'):null):!sessionId?h('p',{className:'dcHint'},'先选择 DSH 项目，然后直接在下方描述设计需求。'):!s.doc?h('p',{className:'dcHint'},'直接告诉 AI 想做什么，新作品会显示在右侧画布。'):h('div',null,
           h('div',{className:'dcChatReferences'},h('span',{className:'dcChatReference',title:context.title},context.title),context.layerId?h('span',{className:'dcChatReference'},'选中：'+context.layerName):null),
           h('div',{className:'dcRow'},h('button',{className:'dcBtn',disabled:busy||outside,onClick:()=>quote({focus:true})},busy?'正在准备引用…':context.layerId?'引用选中对象':'引用当前画板'),h('label',{className:'dcHint',style:{display:'flex',alignItems:'center',gap:4}},h('input',{type:'checkbox',checked:includePreview,onChange:event=>{setIncludePreview(event.target.checked);return quote({withPreview:event.target.checked});}}),'附预览快照')),
           h('p',{className:'dcHint',style:{margin:0}},quoted?'引用会显示在下方输入框中，可随消息发送或自行移除。':'选中对象后，点“让 AI 修改”，再在下方描述要求。')),
         outside?h('div',{className:'dcChatError',role:'alert'},'此画布与当前对话不属于同一项目，请先在 DSH 侧栏切换项目。'):null,
-        error?h('div',{className:'dcChatError',role:'alert'},error):null),
+        error?h('div',{className:'dcChatError',role:'alert'},userFacingError(error,'暂时无法发送设计要求，请重试。')):null),
       outside?h('div',{className:'dcChatWelcome'},h('p',null,'当前画布尚未切换到此对话的项目。请先保存或处理冲突，再继续设计。'),h('button',{className:'dcBtn',onClick:()=>sync.setRoot(cwd)},'保存并切换到当前项目')):props.renderFactorySlot('conversation.content',{variant:'embedded',phase,hero:!sessionId}));
   }
 
-  function ChatDock({renderConversation}){
+  function ChatDock({renderConversation,onClose}){
     const s=useStore(),assistant=s.services.designAssistant,state=s.designAssistant,scope=assistant?.scope();
     useEffect(()=>assistant?.start(),[assistant]);
-    return h('aside',{className:'dcChat','aria-label':'设计 AI 对话'},h('div',{className:'dcChatHead'},h(Icon,{name:'ai',size:17}),h('strong',null,'设计助手'),h('span',{className:'dcHint'},'项目独立对话 · AI 设计')),
+    return h('aside',{className:'dcChat',id:'urania-design-chat','aria-label':'设计 AI 对话'},h('div',{className:'dcChatHead'},
+      h('span',{className:'dcStudioAiBadge'},h(StudioIcon,{name:'ai',size:16})),h('strong',null,'设计助手'),
+      onClose?h(StudioButton,{icon:'panel',label:'收起设计对话',className:'dcStudioChatClose',onClick:onClose}):null),
       scope&&state?.reference&&renderConversation?renderConversation(state.reference):h('div',{className:'dcChatWelcome',role:state?.error?'alert':'status'},h('p',null,state?.error||(!state||state.phase==='idle'?'请先在 DSH 选择一个项目，设计助手会打开该项目独立的设计对话。':'正在打开项目设计对话…')),state?.error?h('button',{className:'dcBtn',onClick:()=>assistant.retry()},'重试设计对话'):null));
   }
 
@@ -1154,6 +1164,28 @@ body[data-ds-dark-theme] .dcCanvasWrap{background:repeating-conic-gradient(#2024
 
 	function App({renderConversation}) {
 		const s = useStore();
+    const studioRoot=useRef(null);
+    const [chatOpen,setChatOpen]=useState(()=>{try{return localStorage.getItem('urania-studio-chat-open')!=='0';}catch{return true;}});
+    const [fullScreen,setFullScreen]=useState(false);
+    const changeChat=(open,{focus=false}={})=>{
+      setChatOpen(open);
+      try{localStorage.setItem('urania-studio-chat-open',open?'1':'0');}catch{}
+      if(focus)requestAnimationFrame(()=>{
+        if(open)studioRoot.current?.querySelector('.dcChat [contenteditable=true]')?.focus();
+        else studioRoot.current?.querySelector('[data-chat-toggle]')?.focus();
+      });
+    };
+    useEffect(()=>{
+      const update=()=>setFullScreen(!!document.fullscreenElement);
+      document.addEventListener('fullscreenchange',update);
+      return ()=>document.removeEventListener('fullscreenchange',update);
+    },[]);
+    const fullscreen=async()=>{
+      if(document.fullscreenElement){await document.exitFullscreen();return;}
+      const root=studioRoot.current,portal=nativeController.portal;
+      const target=portal&&nativeController.surface&&!root?.contains(portal)?document.documentElement:root;
+      if(target?.requestFullscreen)await target.requestFullscreen();
+    };
 		injectStyles();
         useEffect(()=>{if(store.get().workspaceMode!=='legacy'&&s.dirty&&s.doc&&!nativeController.state.sourceId)store.set({workspaceMode:'legacy'});},[s.dirty,s.doc?.id]);
 		useEffect(() => {
@@ -1163,11 +1195,24 @@ body[data-ds-dark-theme] .dcCanvasWrap{background:repeating-conic-gradient(#2024
 			window.addEventListener('beforeunload',beforeUnload);
 			return () => {window.removeEventListener('keydown', onKey);window.removeEventListener('beforeunload',beforeUnload);};
 		}, []);
-		if(s.workspaceMode==='motion')return h('div',{className:'dcApp','data-ui-build':s.uiBuild||18,'data-editor-mode':'motion'},
-			h('div',{className:'dcBody'},h(ChatSplit,null,h(ChatDock,{renderConversation})),h(MotionWorkspace)),h(Toast,{message:s.toast}));
-		if(s.workspaceMode!=='legacy')return h('div',{className:'dcApp','data-ui-build':s.uiBuild||18,'data-editor-mode':'native'},
-         h('div',{style:{display:'flex',justifyContent:'flex-end',padding:'4px 8px',borderBottom:'1px solid var(--dc-line)',flex:'none'}},h('button',{className:'dcBtn',onClick:()=>store.set({workspaceMode:'motion'})},'⚡ 动画')),
-         h('div',{className:'dcBody'},h(ChatSplit,null,h(ChatDock,{renderConversation})),h(NativeWorkspace)),h(Toast,{message:s.toast}));
+		if(s.workspaceMode!=='legacy'){
+      const motion=s.workspaceMode==='motion';
+      return h('div',{className:'dcApp',ref:studioRoot,'data-studio':'','data-ui-build':s.uiBuild||166,'data-editor-mode':motion?'motion':'native'},
+        h('header',{className:'dcStudioTop','aria-label':'Urania 工作台导航'},
+          h('div',{className:'dcStudioBrand'},h('span',{className:'dcStudioBrandMark'},h(StudioIcon,{name:'brand',size:18})),'Urania'),
+          h('nav',{className:'dcStudioModes','aria-label':'工作区'},
+            h(StudioButton,{icon:'design','aria-pressed':!motion,onClick:()=>store.set({workspaceMode:'native'})},'设计'),
+            h(StudioButton,{icon:'motion','aria-pressed':motion,onClick:()=>store.set({workspaceMode:'motion'})},'动画')),
+          h('div',{className:'dcStudioUtilities'},
+            h(StudioButton,{icon:'panel',label:chatOpen?'收起 AI 对话':'打开 AI 对话','data-chat-toggle':'','aria-controls':'urania-design-chat','aria-expanded':chatOpen,onClick:()=>changeChat(!chatOpen,{focus:true})}),
+            document.fullscreenEnabled?h(StudioButton,{icon:'focus',label:fullScreen?'退出全屏':'全屏工作区','aria-pressed':fullScreen,onClick:fullscreen}):null)),
+        h('div',{className:'dcBody dcStudioBody'},h(ChatSplit,{open:chatOpen},h(ChatDock,{renderConversation,onClose:()=>changeChat(false,{focus:true})})),
+          h('main',{className:'dcStudioMain'},motion?h(MotionWorkspace,{onFocusChat:()=>{
+            changeChat(true,{focus:true});
+            store.set({ui:{...store.get().ui,chatFocus:(store.get().ui.chatFocus||0)+1}});
+          }}):h(NativeWorkspace,{onFocusChat:()=>changeChat(true,{focus:true})}))),
+        h(Toast,{message:s.toast?userFacingError(s.toast):null}));
+    }
 		return h('div', { className: 'dcApp','data-ui-build':s.uiBuild||16 },
 			h('button',{className:'dcBtn',onClick:()=>store.set({workspaceMode:'native'})},'返回设计工作区'),
 			s.root?h(TopBar):null,

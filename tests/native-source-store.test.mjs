@@ -39,6 +39,20 @@ test('native source persists real serializer bytes and retains immutable history
  assert.ok(history.some(item=>item.revision===initial.revision));
 });
 
+test('a historical copy uses the exact earlier bytes and keeps the newer original',async()=>{
+ const root=await mkdtemp(join(tmpdir(),'designcraft-history-copy-')),store=new NativeSourceStore(root);
+ const first=await store.commit('original',input);
+ const latest=await store.commit('original',{...input,engineState:{uid:1,revision:2},baseRevision:first.revision});
+ const options={operationId:randomUUID(),title:'历史副本',originType:'history-copy'};
+ const copy=await store.forkVersion('original',first.revision,options);
+ const independent=await store.read(copy.sourceId);
+ assert.equal(copy.meta.origin.action,'history-copy');
+ assert.equal(copy.meta.origin.revision,first.revision);
+ assert.deepEqual(independent.bytes,bytes);
+ assert.equal((await store.head('original')).revision,latest.revision);
+ assert.equal((await store.forkVersion('original',first.revision,options)).sourceId,copy.sourceId);
+});
+
 test('stale AI checkpoint cannot overwrite a later manual checkpoint',async()=>{
  const root=await mkdtemp(join(tmpdir(),'designcraft-source-')),store=new NativeSourceStore(root);
  const initial=await store.commit('vector-a',input);
