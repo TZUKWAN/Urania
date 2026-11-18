@@ -1,7 +1,7 @@
-import {EditorSurface} from './editor-surface.js?v=165';
-import {sameUint64,compareUint64,uint64Parameter} from './native-protocol.js?v=165';
-import {EDITOR_CONTEXT_PROTOCOL,validateNativeContext,nativeBase,matchesNativeBase,selectedObjectIds,canvasMaterialTarget,sameNativeDocument} from './native-contract.js?v=165';
-import {preparePreview,capturePreview,convertPreview,conversionWarnings,hasSupportedTailwindTag} from './html-sandbox.js?v=165';
+import {EditorSurface} from './editor-surface.js?v=166';
+import {sameUint64,compareUint64,uint64Parameter} from './native-protocol.js?v=166';
+import {EDITOR_CONTEXT_PROTOCOL,validateNativeContext,nativeBase,matchesNativeBase,selectedObjectIds,canvasMaterialTarget,sameNativeDocument} from './native-contract.js?v=166';
+import {preparePreview,capturePreview,convertPreview,conversionWarnings,hasSupportedTailwindTag} from './html-sandbox.js?v=166';
 
 const API='/designcraft/api/v2/studio';
 const wait=ms=>new Promise(resolve=>setTimeout(resolve,ms));
@@ -327,6 +327,26 @@ export class NativeController {
   this.acceptDocument(current);await this.report(current);this.projectRequest=true;this.change({projectPending:true});
   try{return await this.api('context-command',{sourceId:owner.sourceId,epoch:owner.epoch,base,command,value,operationId:crypto.randomUUID()});}
   finally{this.projectRequest=false;this.change({projectPending:false});}
+ }
+ async manualViewCommand(document,command,params={}){
+  if(!['edit.undo','edit.redo','slide.go','select.set','layer.select','edit.select','view.fitArtboard','view.fitOnScreen','view.fit','view.zoomIn','view.zoomOut'].includes(command))throw new Error('此操作不属于画布控件');
+  const owner=this.view,surface=this.surface,base=nativeBase(document);
+  if(!owner?.sourceId||!surface)throw new Error('请先打开设计');
+  const occupied=()=>this.busy||this.saving||this.manualBusy||this.activating||this.projectRequest||this.state.pendingDraft||this.state.hostMenuOpen||this.state.fileAction;
+  const deadline=Date.now()+1200;
+  while((this.manualBusy||this.saving||this.activating)&&!this.busy&&this.view===owner&&this.surface===surface&&Date.now()<deadline)await wait(24);
+  if(this.view!==owner||this.surface!==surface)throw new Error('画布已经切换');
+  if(occupied())throw new Error('请先完成当前设计动作');
+  this.busy=true;this.change({busy:true,error:null});
+  try{
+   const current=await surface.inspect();
+   if(this.view!==owner||this.surface!==surface||!matchesNativeBase(current,base,owner.engine))throw new Error('画布已改变，请重新选择');
+   const result=await surface.execute(base,command,params);
+   if(this.view!==owner||this.surface!==surface)throw new Error('画布已经切换');
+   if(result.document)this.acceptDocument(result.document);
+   await this.report();
+   if(command==='edit.undo'||command==='edit.redo')await this.flush();
+  }finally{this.busy=false;this.change({busy:false});if(this.state.dirty)this.scheduleSave();}
  }
  async variantAction(action,payload={}){
   const owner=this.view,epoch=owner?.epoch;if(!owner||!epoch)throw new Error('请先打开作品');

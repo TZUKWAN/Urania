@@ -1,11 +1,12 @@
-import {createImageApiSettings} from './image-api-settings.js?v=165';
-import {createStockPanel,openStockImage} from './stock-panel.js?v=165';
-import {imageBaselineMatches} from './image-adoption.js?v=165';
-import {createPixelbinWorkspace} from './pixelbin-workspace.js?v=165';
-import {createEcommercePanel} from './ecommerce-panel.js?v=165';
-import {createWorkflowImagePanel} from './workflow-image-panel.js?v=165';
-import {createFalRealtimePanel} from './fal-realtime-panel.js?v=165';
-import {createFalWorkflowPanel} from './fal-workflow-panel.js?v=165';
+import {createImageApiSettings} from './image-api-settings.js?v=166';
+import {createStockPanel,openStockImage} from './stock-panel.js?v=166';
+import {imageBaselineMatches} from './image-adoption.js?v=166';
+import {createPixelbinWorkspace} from './pixelbin-workspace.js?v=166';
+import {createEcommercePanel} from './ecommerce-panel.js?v=166';
+import {createWorkflowImagePanel} from './workflow-image-panel.js?v=166';
+import {createFalRealtimePanel} from './fal-realtime-panel.js?v=166';
+import {createFalWorkflowPanel} from './fal-workflow-panel.js?v=166';
+import {createStudioComponents,userFacingError} from './studio-system.js?v=166';
 const API='/designcraft/api/v2/studio/image';
 
 async function checksum(bytes){
@@ -15,6 +16,7 @@ async function checksum(bytes){
 
 export function createStudioImageWorkspace(React){
  const h=React.createElement;
+ const {Icon,Button}=createStudioComponents(React);
  const ImageApiSettings=createImageApiSettings(React);
  const StockPanel=createStockPanel(React);
  const PixelbinWorkspace=createPixelbinWorkspace(React);
@@ -23,18 +25,55 @@ export function createStudioImageWorkspace(React){
  const FalRealtimePanel=createFalRealtimePanel(React);
  const FalWorkflowPanel=createFalWorkflowPanel(React);
  function Preview({controller,job,candidate,epoch,variant='preview'}){
-  const [url,setUrl]=React.useState('');
+  const [url,setUrl]=React.useState(''),[error,setError]=React.useState(false);
   React.useEffect(()=>{
-   const abort=new AbortController();let created;
+   const abort=new AbortController();let created;setUrl('');setError(false);
    const q=new URLSearchParams({epoch,id:job.id,candidateId:candidate.id,variant});
    fetch(API+'-file?'+q,{headers:controller.sourceHeaders(),signal:abort.signal}).then(async response=>{
     if(!response.ok)throw new Error('图片预览不可用');
     const bytes=await response.arrayBuffer();if(await checksum(bytes)!==response.headers.get('x-content-sha256'))throw new Error('图片预览摘要不一致');
     if(!abort.signal.aborted){created=URL.createObjectURL(new Blob([bytes],{type:response.headers.get('content-type')||'application/octet-stream'}));setUrl(created);}
-   }).catch(()=>{});
+   }).catch(()=>{if(!abort.signal.aborted)setError(true);});
    return()=>{abort.abort();if(created)URL.revokeObjectURL(created);};
   },[job.id,candidate.id,epoch,variant]);
-  return url?h('img',{src:url,alt:variant==='returned'?'服务返回的原图':'方案 '+(candidate.index+1),className:'dcStudioImagePreview'}):h('div',{className:'dcStudioImagePreview'},'预览暂不可用');
+  return url?h('img',{src:url,alt:variant==='returned'?'服务返回的原图':'方案 '+(candidate.index+1),className:'dcStudioImagePreview'}):
+   h('div',{className:'dcStudioImagePreview dcStudioImagePlaceholder',role:'status'},error?'预览暂不可用':'正在读取预览…');
+ }
+ function BaselinePreview({controller,epoch,baseline}){
+  const [result,show]=React.useState(null);
+  React.useEffect(()=>{
+   const abort=new AbortController();let url;
+   const query=new URLSearchParams({epoch,id:baseline.sourceId,revision:baseline.sourceRevision});
+   fetch('/designcraft/api/v2/studio/overview-preview?'+query,{headers:controller.sourceHeaders(),signal:abort.signal}).then(async response=>{
+    if(!response.ok||response.headers.get('x-source-revision')!==baseline.sourceRevision)throw new Error('原图版本未能读取');
+    const blob=await response.blob();
+    if(!abort.signal.aborted){url=URL.createObjectURL(blob);show({url});}
+   }).catch(()=>{if(!abort.signal.aborted)show({error:true});});
+   return()=>{abort.abort();if(url)URL.revokeObjectURL(url);};
+  },[controller,epoch,baseline.sourceId,baseline.sourceRevision]);
+  return result?.url?h('img',{className:'dcStudioImagePreview',src:result.url,alt:'重绘前已保存原图'}):
+   h('div',{className:'dcStudioImagePreview dcStudioImagePlaceholder',role:'status'},result?.error?'无法读取原图版本':'正在读取原图…');
+ }
+ function Compare({controller,epoch,job,candidate,onClose,onApply,disabled}){
+  const dialog=React.useRef(null);
+  const alternatives=job.candidates.filter(value=>value.id!==candidate.id);
+  const baseline=job.mode==='edit'?job.studio?.source:null;
+  const [other,setOther]=React.useState(alternatives[0]?.id||'');
+  const alternative=alternatives.find(value=>value.id===other);
+  React.useLayoutEffect(()=>{
+   const element=dialog.current;element?.showModal();
+   return()=>{if(element?.open)element.close();};
+  },[]);
+  return h('dialog',{ref:dialog,className:'dcStudioImageCompare','aria-label':'比较图片方案',onCancel:event=>{event.preventDefault();onClose();}},
+   h('header',{className:'dcStudioDialogHeading'},h(Icon,{name:'photo'}),h('strong',null,'比较图片方案'),h(Button,{icon:'close',label:'关闭图片比较',onClick:onClose})),
+   !baseline&&alternatives.length>1?h('select',{className:'dcSelect','aria-label':'比较其他方案',value:other,onChange:event=>setOther(event.target.value)},
+    ...alternatives.map(value=>h('option',{key:value.id,value:value.id},'方案 '+(value.index+1)))):null,
+   h('div',{className:'dcStudioImageCompareGrid'},
+    baseline||alternative?h('figure',null,h('figcaption',null,baseline?'修改前':'方案 '+(alternative.index+1)),
+      baseline?h(BaselinePreview,{controller,epoch,baseline}):h(Preview,{controller,epoch,job,candidate:alternative})):null,
+    h('figure',null,h('figcaption',null,baseline?'候选结果':'方案 '+(candidate.index+1)),h(Preview,{controller,epoch,job,candidate}))),
+   h('footer',{className:'dcNativeConfirmActions'},h(Button,{onClick:onClose},'关闭预览'),
+    onApply?h(Button,{icon:'check',className:'dcPrimary',disabled,onClick:onApply},'采用候选'):null));
  }
  return function StudioImageWorkspace({controller,onClose}){
   const root=React.useRef(controller.view.root),epoch=React.useRef(controller.view.epoch);
@@ -43,6 +82,7 @@ export function createStudioImageWorkspace(React){
   const [pixelbinOpen,setPixelbinOpen]=React.useState(false),[ecommerceOpen,setEcommerceOpen]=React.useState(false),[workflowImageOpen,setWorkflowImageOpen]=React.useState(false),[falRealtimeOpen,setFalRealtimeOpen]=React.useState(false),[falWorkflowOpen,setFalWorkflowOpen]=React.useState(false);
   const [plans,setPlans]=React.useState([]),[selectedPlan,setSelectedPlan]=React.useState('');
   const [jobs,setJobs]=React.useState([]),[mode,setMode]=React.useState(controller.view.engine==='photocraft'&&controller.state.document?.nativeSelection?.data?.rasterSelection?'edit':'generate');
+  const [comparison,setComparison]=React.useState(null);
   const [prompt,setPrompt]=React.useState(''),[count,setCount]=React.useState(1),[resolution,setResolution]=React.useState(''),[ratio,setRatio]=React.useState(''),[busy,setBusy]=React.useState(false),[error,setError]=React.useState(''),[choices,setChoices]=React.useState(null);
   const [transparentBackground,setTransparentBackground]=React.useState(false),[quality,setQuality]=React.useState('');
   const [transformCatalog,setTransformCatalog]=React.useState({providers:[]}),[transformProvider,setTransformProvider]=React.useState(''),[upscaleFactor,setUpscaleFactor]=React.useState(2),[upscaleCreativity,setUpscaleCreativity]=React.useState('0.01'),[transformNotice,setTransformNotice]=React.useState('');
@@ -166,7 +206,7 @@ export function createStudioImageWorkspace(React){
   if(falRealtimeOpen)return h(FalRealtimePanel,{controller,onBack:()=>setFalRealtimeOpen(false),onClose,onOpenImage:openFalRealtimeImage});
   if(falWorkflowOpen)return h(FalWorkflowPanel,{controller,onBack:()=>setFalWorkflowOpen(false),onClose});
   return h('div',{className:'dcStudioImageWorkspace',role:'region','aria-label':'图片生成与处理'},
-   h('div',{className:'dcStudioImageHeader'},h('strong',null,'图片生成与处理'),h('span',null,'采用后打开独立的原生图片源'),
+   h('div',{className:'dcStudioImageHeader'},h(Icon,{name:'photo'}),h('strong',null,'图片生成与处理'),
     h('button',{className:'dcBtn',disabled:busy,onClick:()=>setStockOpen(true)},'在线找图'),
     h('button',{className:'dcBtn',disabled:busy,onClick:()=>setApiSettingsOpen(true)},'生图 API 设置'),
     h('details',{open:moreServicesOpen,onToggle:event=>setMoreServicesOpen(event.currentTarget.open),style:{position:'relative'}},h('summary',{className:'dcBtn','aria-label':'更多图片服务'},'更多服务'),
@@ -219,7 +259,10 @@ export function createStudioImageWorkspace(React){
     h('button',{className:'dcBtn dcPrimary',disabled:busy||!!pending||!!styleReferences.length&&(!canStyle||styleReferences.length>selected?.styleReferenceMax)||(isTransform?!transformProvider||references.length!==1:!prompt.trim()||!selected||!!references.length&&!selected.inputImage||mode==='generate'&&selected?.requiresInputImage&&!references.length||Number.isSafeInteger(selected?.minInputImages)&&references.length+(mode==='edit'?2:0)<selected.minInputImages||references.length+(mode==='edit'?2:0)>0&&Number.isSafeInteger(selected?.minReferenceImages)&&references.length+(mode==='edit'?2:0)<selected.minReferenceImages||Number.isSafeInteger(selected?.maxInputImages)&&references.length+(mode==='edit'?2:0)>selected.maxInputImages||(mode==='edit'&&(!canEdit||!selected.inputImage||references.length>2))),onClick:run(start)},isTransform?(mode==='venice_upscale'?'提交图片放大':'提交背景移除'):(mode==='edit'?'提交选区重绘':'生成图片')),
     h('small',null,isTransform?'将选定原图发送至 Venice，可能产生费用；输出为独立方案，原图保留。中断后不会自动重发。':(mode==='edit'?'以当前保存的完整选区 alpha 合成结果；原图层保留。':'请求会使用所选服务，任务中断不会自动重复提交。')+(selected?.capabilitySource==='model_name_inferred'?' 该模型的部分图片能力依据官方资料或名称推断，最终以服务返回为准。':'')+(resolution||ratio?' 实际尺寸和比例以返回的图片为准。':''))),
    choices?h('div',{className:'dcNativeNotice'},h('span',null,'该候选已有多份导入，请选择要继续编辑的作品。'),...choices.sources.map(item=>h('button',{key:item.sourceId,className:'dcBtn',onClick:run(()=>adopt(choices.job,choices.candidate,item.sourceId))},item.title||item.sourceId)),h('button',{className:'dcBtn',onClick:()=>setChoices(null)},'取消')):null,
-   h('div',{className:'dcStudioImageJobs'},...jobs.map(job=>h('section',{key:job.id,className:'dcStudioImageJob'},
+   comparison?h(Compare,{controller,epoch:epoch.current,...comparison,onClose:()=>setComparison(null),disabled:busy,
+    onApply:comparison.job.mode==='edit'&&imageBaselineMatches(controller.state.sources.find(source=>source.id===controller.view.sourceId&&source.revision===controller.view.sourceRevision),comparison.job)?
+     run(async()=>{await applyCurrent(comparison.job,comparison.candidate);setComparison(null);}):null}):null,
+   h('div',{className:'dcStudioImageJobs'},!jobs.length?h('div',{className:'dcNativeMenuEmpty'},h(Icon,{name:'photo',size:24}),h('p',null,'生成或重绘后，候选图片会出现在这里。')):null,...jobs.map(job=>h('section',{key:job.id,className:'dcStudioImageJob'},
     h('div',null,h('strong',null,({edit:'选区重绘',generate:'图片生成',venice_upscale:'Venice 图片放大',venice_remove_background:'Venice 背景移除'})[job.mode]||'图片任务'),' · '+({queued:'排队中',running:'进行中',ready:'已返回候选',failed:'失败',cancelled:'已取消',interrupted:'已中断',adopted:'已采用'})[job.status],job.error?h('p',{role:'status'},job.error):null,
      job.remoteDispatch?.protocol==='fal'&&job.remoteDispatch.requestId?h('small',null,'fal 任务 '+job.remoteDispatch.requestId+(job.remoteDispatch.serverStatus?' · '+job.remoteDispatch.serverStatus:'')):null,
      job.remoteCancel?.detail?h('p',{role:'status'},job.remoteCancel.detail):null,
@@ -229,6 +272,7 @@ export function createStudioImageWorkspace(React){
      !['queued','running'].includes(job.status)&&job.remoteDispatch?.protocol==='fal'&&job.remoteDispatch.requestId&&!job.candidates.some(item=>item.index===job.remoteDispatch.index)&&job.remoteCancel?.state!=='removed_from_queue'?h('button',{className:'dcBtn',disabled:busy,title:'运行中的远端任务可能仍会完成或计费',onClick:run(async()=>{await call('cancel-remote-fal',{id:job.id});await refresh();})},'请求远端取消'):null),
     h('div',{className:'dcStudioImageCandidates'},...(job.candidates||[]).map(candidate=>h('article',{key:candidate.id},h(Preview,{controller,job,candidate,epoch:epoch.current}),
      h('p',null,'方案 '+(candidate.index+1)+(candidate.returnedOrdinal!=null?' · 返回图 '+(candidate.returnedOrdinal+1):'')+' · '+candidate.width+' × '+candidate.height),
+     h(Button,{icon:'focus',onClick:()=>setComparison({job,candidate})},job.mode==='edit'||job.candidates.length>1?'比较方案':'查看大图'),
      candidate.warnings?.length?h('p',{role:'status'},candidate.warnings.join('；')):null,
      job.editMethod?h('small',null,'参考图生成 + 本地选区合成'):null,
      job.mode==='edit'&&imageBaselineMatches(controller.state.sources.find(source=>source.id===controller.view.sourceId&&source.revision===controller.view.sourceRevision),job)?h('button',{className:'dcBtn dcPrimary',disabled:busy||['queued','running'].includes(job.status),onClick:run(()=>applyCurrent(job,candidate))},'应用到当前图片'):null,

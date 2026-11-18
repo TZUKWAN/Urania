@@ -17,7 +17,7 @@ DSH、Node、浏览器和 FFmpeg 不随运行包分发。恢复脚本不会安�
 
 ## 从公开源码安装
 
-检出需要的版本，先阅读 `release/runtime-assets.json`。源码、插件包和运行时必须属于同一版本。普通 Git 中没有大型 EXE/DLL/WASM，也没有开发依赖目录。
+检出需要的版本，先阅读 `release/runtime-assets.json`。恢复脚本验证源码版本及明确固定的运行时身份。UI166 使用 UI165 的同一 ZIP 和运行时清单，按文件核对完整性。普通 Git 中不包含大型 EXE、DLL、WASM 或开发依赖目录。
 
 在仓库根目录执行：
 
@@ -58,7 +58,7 @@ node scripts/doctor.mjs
 
 本轮真实隔离验收采用一个独立 DSH profile，其 `package.json` 的 `dsh.profile.bundles` 在基础 DSH bundle 后包含 `designcraft`，profile 的 `node_modules/designcraft` 指向安装目录。通过 SDK 的 `lib/bin.js --profile <独立profile名> --no-open` 启动。普通使用者应通过自己的 DSH 插件安装/配置流程加载，不要复制验收 probe、凭据、测试 profile 或会话。
 
-更新已经加载的插件时，先保存作品，再由用户自行使用 DSH 的正常后台重载或重新打开应用。插件后台与前端都应显示 UI165；“更多操作 → 设计诊断与帮助”可查看当前状态。不能凭磁盘版本判断一个未重载的窗口已经运行新版。本轮没有重启或操作用户的 DSH 窗口。
+更新已经加载的插件时，先保存作品，再使用 DSH 的正常后台重载或重新打开应用。插件后台与前端都应显示 UI166。可在「更多操作 → 设计诊断与帮助」核对当前运行状态。
 
 ## 安装失败、中断与回滚
 

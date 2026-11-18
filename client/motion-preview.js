@@ -6,7 +6,7 @@ export function previewEventAllowed(event,frame,descriptor){
 
 export class MotionPreviewBridge{
  constructor(target=globalThis.window){this.target=target;this.frame=null;this.listener=null;this.timer=null;this.ready=false;this.pending=[];}
- bind(frame,descriptor,{render,onReady=()=>{},onTime=()=>{},onSelection=()=>{},onError=()=>{},isCurrent=()=>true}={}){
+ bind(frame,descriptor,{render,onReady=()=>{},onTime=()=>{},onSelection=()=>{},onTimeline=()=>{},onError=()=>{},isCurrent=()=>true}={}){
   this.dispose();
   const url=new URL(descriptor.url),parent=new URL(this.target.location.href);
   if(url.origin!==descriptor.origin||url.hostname===parent.hostname||!/^127\.0\.0\.[23]$/.test(url.hostname)||!/^http:$/.test(url.protocol)||!/^\d+$/.test(url.port)||!/^[a-f0-9]{48}$/.test(descriptor.nonce||''))throw new Error('预览来源或凭据无效');
@@ -20,6 +20,12 @@ export class MotionPreviewBridge{
     for(const command of this.pending)this.post(command);this.pending=[];return;
    }
    if(!this.ready)return;
+   if(d.type==='timeline'){
+    const maximum=render.durationFrames*1000*render.fps.den/render.fps.num;
+    if(Array.isArray(d.clips)&&d.clips.length<=96&&d.clips.every(clip=>clip&&typeof clip.id==='string'&&clip.id.length>0&&clip.id.length<=128&&typeof clip.label==='string'&&clip.label.length<=80&&['audio','video','visual'].includes(clip.kind)&&Number.isFinite(clip.start)&&Number.isFinite(clip.end)&&clip.start>=0&&clip.end>clip.start&&clip.end<=maximum&&(clip.track===null||Number.isSafeInteger(clip.track)&&clip.track>=0&&clip.track<1000)&&Array.isArray(clip.keys)&&clip.keys.length<=24&&clip.keys.every(key=>Number.isFinite(key)&&key>=clip.start&&key<=clip.end))){
+     onTimeline({clips:d.clips,truncated:d.truncated===true});
+    }
+   }
    if(d.type==='time'&&Number.isFinite(d.timeMs)&&d.timeMs>=0&&d.timeMs<=render.durationFrames*1000*render.fps.den/render.fps.num){
     onTime({frame:Math.max(0,Math.min(render.durationFrames-1,Math.round(d.timeMs*render.fps.num/(1000*render.fps.den)))),playing:d.playing===true});
    }

@@ -1,7 +1,7 @@
 {
   "name": "designcraft",
-  "version": "1.3.0-dev.150",
-  "designcraftUiBuild": 165,
+  "version": "1.3.0-dev.151",
+  "designcraftUiBuild": 166,
   "description": "Urania — unified AI-native design workspace (images, PPT, vector, motion video) for DSH, with revisioned collaboration and pinned open-source engines/resources.",
   "type": "module",
   "license": "MIT",

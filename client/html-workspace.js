@@ -1,5 +1,5 @@
-import {preparePreview, capturePreview, convertPreview, conversionWarnings, hasSupportedTailwindTag} from './html-sandbox.js?v=165';
-import {createFigmaMcpPanel} from './figma-mcp-panel.js?v=165';
+import {preparePreview, capturePreview, convertPreview, conversionWarnings, hasSupportedTailwindTag} from './html-sandbox.js?v=166';
+import {createFigmaMcpPanel} from './figma-mcp-panel.js?v=166';
 
 const TEXT = /^(?:text\/|application\/json|image\/svg\+xml)/;
 const MAX_FILE = 8 * 1024 * 1024;

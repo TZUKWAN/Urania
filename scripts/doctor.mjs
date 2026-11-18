@@ -22,7 +22,8 @@ let pkg,assets,manifest;
 await check('package-node',async()=>{pkg=await json(path.join(root,'package.json'));if(Number(process.versions.node.split('.')[0])<22||pkg.engines.node!=='>=22')throw new Error('Plugin and Motion require Node >=22');return {version:pkg.version,uiBuild:pkg.designcraftUiBuild,node:process.version,pluginMinimum:22};});
 await check('release-metadata',async()=>{
  assets=await json(path.join(root,'release/runtime-assets.json'));const file=await inside('release/runtime-manifest.json');manifest=await json(file);
- if(!pkg||assets.packageVersion!==pkg.version||assets.uiBuild!==pkg.designcraftUiBuild||manifest.sourcePackageVersion!==pkg.version||manifest.uiBuild!==pkg.designcraftUiBuild||assets.platform!=='win32-x64'||manifest.platform!==assets.platform||manifest.files.length!==assets.runtimeManifest.files||await sha(file)!==assets.runtimeManifest.sha256)throw new Error('Package, release and manifest identity differ');
+ const payloadVersion=assets.runtimeManifest.sourcePackageVersion??assets.packageVersion,payloadBuild=assets.runtimeManifest.sourceUiBuild??assets.uiBuild;
+ if(!pkg||assets.packageVersion!==pkg.version||assets.uiBuild!==pkg.designcraftUiBuild||manifest.sourcePackageVersion!==payloadVersion||manifest.uiBuild!==payloadBuild||assets.platform!=='win32-x64'||manifest.platform!==assets.platform||manifest.files.length!==assets.runtimeManifest.files||await sha(file)!==assets.runtimeManifest.sha256)throw new Error('Package, release and manifest identity differ');
  const seen=new Set();for(const row of manifest.files){if(!row.path.startsWith('runtimes/')||!Number.isSafeInteger(row.bytes)||row.bytes<0||!/^[a-f0-9]{64}$/.test(row.sha256)||seen.has(row.path.toLowerCase()))throw new Error('Invalid or duplicate manifest file');seen.add(row.path.toLowerCase());}
  return {files:manifest.files.length,manifestSha256:assets.runtimeManifest.sha256};
 });

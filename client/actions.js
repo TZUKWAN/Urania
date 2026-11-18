@@ -1,5 +1,5 @@
-import {currentDesignScope} from './design-session.js?v=165';
-import {MotionPreviewBridge} from './motion-preview.js?v=165';
+import {currentDesignScope} from './design-session.js?v=166';
+import {MotionPreviewBridge} from './motion-preview.js?v=166';
 import {selectionIdentity,matrixPoint,inverseMatrix,multiplyMatrix,alignmentOffsets,layerRect,selectionRoots,selectedIds,selectedNative,nativeNodes,nativeAtPoint,nativePoint,nodeRect,nativeCanvasRect,unionRects} from './selection.js';
 import {editVectorNode,reboxVectorLayer,vectorNodeHandles} from './vector-nodes.js';
 /**
@@ -962,9 +962,12 @@ export function createActions({ store, sync, engine, toast }) {
 		if(!sameMotionScope(scope))throw new Error('项目已切换，动画已保存在原项目中');
 		motionGeneration++;motionBridge.dispose();
 		const manifest=metadata?.manifest||metadata||{},render=manifest.render||opened.render||{fps:{num:30,den:1},durationFrames:120,width:1280,height:720};
+		const previous=store.get().motion,sameProject=previous?.projectId===opened.projectId&&sameMotionScope(previous.scope),sameRevision=sameProject&&previous.revision===opened.revision;
 		const m={projectId:opened.projectId,revision:opened.revision,leaseId:opened.leaseId,viewEpoch:opened.viewEpoch,scope,
 			entryFile:manifest.entryFile||opened.entryFile||'composition.html',title:manifest.title||opened.title||'动画',render,
-			playing:false,currentFrame:0,fps:render.fps,durationFrames:render.durationFrames,renderStatus:null,preview:null,previewError:null};
+			playing:false,currentFrame:sameRevision?previous.currentFrame:0,selection:sameRevision?previous.selection:null,
+			fps:render.fps,durationFrames:render.durationFrames,renderStatus:sameProject?previous.renderStatus:null,
+			materialReference:manifest.assets?.findLast(asset=>asset.nativeSource)||null,preview:null,previewError:null};
 		store.set({motion:m});
 		try{await prepareMotionPreview(m);}catch(error){const now=store.get().motion;if(now?.projectId===m.projectId&&now.revision===m.revision)store.set({motion:{...now,previewError:error.message}});throw error;}
 		return opened;
@@ -982,10 +985,22 @@ export function createActions({ store, sync, engine, toast }) {
 	async function openMotionProject(projectId){
 		const scope=motionScope(),r=await motionPostAt(scope,'open',{projectId}),meta=await motionGet('project',{projectId});return publishMotion(r,meta,scope);
 	}
+	async function importMotionNativeAsset(transfer) {
+		const motion=store.get().motion,scope=motionScope();
+		if(!motion?.projectId||!sameMotionScope(motion.scope)||transfer.sessionId!==scope.sessionId||transfer.root!==scope.root)throw new Error('动画或素材所属项目已切换');
+		const receipt=await motionPostAt(scope,'import_native',{assetId:transfer.assetId,operationKey:transfer.operationKey,projectId:motion.projectId,
+			baseRevision:motion.revision,leaseId:motion.leaseId,viewEpoch:motion.viewEpoch});
+		if(!sameMotionScope(scope)||store.get().motion?.projectId!==motion.projectId)throw new Error('已保存素材，请在原动画项目查看');
+		await openMotionProject(motion.projectId);
+		const latest=store.get().motion;
+		if(sameMotionScope(scope)&&latest?.projectId===motion.projectId)store.set({motion:{...latest,materialReference:receipt.asset},motionAssetTransfer:null});
+		return receipt;
+	}
 	async function motionAutoEnter(){
 		const scope=motionScope(),existing=store.get().motion;
 		if(existing?.projectId&&sameMotionScope(existing.scope)){
-			if(!existing.preview)await prepareMotionPreview(existing);return existing;
+			if(!existing.preview)return openMotionProject(existing.projectId);
+			return existing;
 		}
 		const projects=await listMotionProjects();return projects.length?openMotionProject(projects[0].projectId):createMotionProject();
 	}
@@ -994,9 +1009,10 @@ export function createActions({ store, sync, engine, toast }) {
 		const identity=m.preview.nonce;
 		const current=()=>!disposed&&sameMotionScope(m.scope)&&store.get().workspaceMode==='motion'&&store.get().motion?.preview?.nonce===identity;
 		return motionBridge.bind(frame,m.preview,{render:m.render,isCurrent:current,
-			onReady(){if(!current())return;const cur=store.get().motion;store.set({motion:{...cur,previewReady:true,previewError:null}});motionBridge.command('seek',{frame:cur.currentFrame||0});motionBridge.command('play');},
-			onTime(update){if(current())store.set({motion:{...store.get().motion,currentFrame:update.frame,playing:update.playing}});},
+			onReady(){if(!current())return;const cur=store.get().motion;store.set({motion:{...cur,previewReady:true,previewError:null}});motionBridge.command('seek',{frame:cur.currentFrame||0});},
+			onTime(update){if(!current())return;const cur=store.get().motion;if(cur.currentFrame!==update.frame||cur.playing!==update.playing)store.set({motion:{...cur,currentFrame:update.frame,playing:update.playing}});},
 			onSelection(selection){if(current()){motionBridge.command('pause');store.set({motion:{...store.get().motion,selection,playing:false}});}},
+			onTimeline(timeline){if(current())store.set({motion:{...store.get().motion,timeline}});},
 			onError(message){if(current())store.set({motion:{...store.get().motion,playing:false,previewReady:false,previewError:message}});}});
 	}
 	function motionPreviewAutoplay(){motionBridge.hello();}
@@ -1007,10 +1023,22 @@ export function createActions({ store, sync, engine, toast }) {
 		motionBridge.command('pause');motionBridge.command('seek',{frame:next});
 		store.set({motion:{...m,playing:false,currentFrame:next}});
 	}
+	function selectMotionClip(clip,extend=false){
+		const m=store.get().motion;if(!m?.previewReady)return;
+		if(!clip){motionBridge.command('clear-selection');store.set({motion:{...m,selection:null}});return;}
+		const picked=m.timeline?.clips.find(item=>item.id===clip.id);if(!picked)return;
+		const ids=new Set(extend?m.selection?.ids||[]:[]);
+		if(ids.has(picked.id))ids.delete(picked.id);else ids.add(picked.id);
+		const chosen=m.timeline.clips.filter(item=>ids.has(item.id)),toFrame=time=>Math.min(m.durationFrames-1,Math.round(time*m.fps.num/(1000*m.fps.den)));
+		const frame=toFrame(picked.start);
+		seekMotionFrame(frame);
+		store.set({motion:{...store.get().motion,selection:chosen.length?{ids:[...ids],frame,text:chosen.map(item=>item.label).join('、').slice(0,300),
+			timeRange:{startFrame:toFrame(Math.min(...chosen.map(item=>item.start))),endFrame:Math.max(frame,toFrame(Math.max(...chosen.map(item=>item.end))))}}:null}});
+	}
 	function motionPreviewSeek(){const m=store.get().motion;if(m?.projectId)motionBridge.command('seek',{frame:m.currentFrame||0});}
 	function closeMotionWorkspace(){
 		const m=store.get().motion;motionGeneration++;motionBridge.dispose();
-		if(m?.scope&&m.projectId)void motionPostAt(m.scope,'close_lease',{projectId:m.projectId}).catch(()=>{});
+		if(m?.scope&&m.projectId&&m.leaseId)void motionPostAt(m.scope,'close',{projectId:m.projectId,leaseId:m.leaseId}).catch(()=>{});
 		if(m)store.set({motion:{...m,preview:null,previewReady:false,playing:false}});
 	}
 	async function motionPollHead(){
@@ -1082,7 +1110,7 @@ export function createActions({ store, sync, engine, toast }) {
 		createMotionProject, listMotionProjects, listMotionTemplates, createMotionFromTemplate, openMotionProject, toggleMotionPlay, seekMotionFrame,
 		motionAutoEnter, motionPreviewAutoplay, bindMotionPreview, closeMotionWorkspace,
         motionScopeKey:()=>{try{const s=motionScope();return s.root+'|'+s.sessionId;}catch{return '';}} ,
-		motionPreviewSeek, motionPollHead, motionDoctor, renderMotion, cancelMotionRender, exportMotionProject, downloadMotionArtifact, motionPreviewUrl,
+		motionPreviewSeek, motionPollHead, motionDoctor, renderMotion, cancelMotionRender, exportMotionProject, downloadMotionArtifact, motionPreviewUrl, selectMotionClip,importMotionNativeAsset,
 		toast: showToast,
 		findLayerDeep
 	};

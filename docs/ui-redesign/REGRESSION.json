@@ -1,0 +1,278 @@
+{
+  "schemaVersion": 1,
+  "product": "Urania",
+  "packageVersion": "1.3.0-dev.151",
+  "uiBuild": 166,
+  "environment": {
+    "platform": "Windows x64",
+    "dshSdk": "0.2.2-rc.1",
+    "node": "v25.6.0",
+    "isolatedDsh": true,
+    "runtimeFilesVerified": 7713,
+    "runtimeBytesVerified": 3226035371
+  },
+  "commands": {
+    "npm test": {
+      "nodeTests": 439,
+      "clientTests": 19,
+      "failures": 0
+    },
+    "npm run check": {
+      "javascriptFiles": 222,
+      "syntax": "passed",
+      "nativeBinaries": 4,
+      "runtimeHashes": "passed",
+      "resourceFiles": 36,
+      "resourceHashes": "passed"
+    },
+    "npm run test:public": {
+      "passed": 108,
+      "failed": 0
+    }
+  },
+  "criticalScenarios": [
+    {
+      "name": "01 创建画板、发起真实 AI 创作并保存可编辑矢量源",
+      "evidenceType": "interactive DSH, actual GLM, persisted VectorCraft",
+      "result": "passed"
+    },
+    {
+      "name": "02 单选、发送局部修改、对比真实修订并写入确认",
+      "evidenceType": "interactive DSH, actual GLM and real revision images",
+      "result": "passed"
+    },
+    {
+      "name": "03 多选、保留既有草稿、发送后完成两个对象修改",
+      "evidenceType": "interactive DSH, actual GLM and source field comparison",
+      "result": "passed"
+    },
+    {
+      "name": "04 手工修改后 AI 续改，未选内容保持一致",
+      "evidenceType": "actual native keyboard input and actual GLM",
+      "result": "passed"
+    },
+    {
+      "name": "05 Photo 到 Vector、Deck 和 Motion 的可溯源素材传递",
+      "evidenceType": "real gallery UI, native placement and loaded Motion frame",
+      "result": "passed"
+    },
+    {
+      "name": "06 经页面控件切换，AI 只改第 2 页，核对第 2 页前后",
+      "evidenceType": "interactive Deck, actual GLM and PPTX inspection",
+      "result": "passed"
+    },
+    {
+      "name": "07 拒绝结果，按意见锚点打开独立副本并继续编辑",
+      "evidenceType": "actual DSH review, byte-verified native source, actual keyboard edit",
+      "result": "passed"
+    },
+    {
+      "name": "08 启动 Motion 渲染，取消后重试并下载已校验 MP4",
+      "evidenceType": "actual UI render worker, file receipt and FFprobe",
+      "result": "passed"
+    },
+    {
+      "name": "09 保存 Deck 和 Vector 后在新原生实例打开并核对",
+      "evidenceType": "actual DSH reopen and native source comparison",
+      "result": "passed"
+    },
+    {
+      "name": "10 分栏拖动和键盘微调，切换工作区后宽度保留",
+      "evidenceType": "actual pointer, keyboard, storage, and realm identity",
+      "result": "passed"
+    }
+  ],
+  "model": {
+    "realConversationTurns": 4,
+    "model": "glm-5.3-flash",
+    "newImageProviderRequests": 0
+  },
+  "photo": {
+    "previousAuthenticProviderOutputs": [
+      {
+        "mode": "generate",
+        "bytes": 2358614,
+        "sha256": "3fb79a8e6cb7d1c0742c191e23a5e948674d5156132def4220343d25282ad735"
+      },
+      {
+        "mode": "generate",
+        "bytes": 2464467,
+        "sha256": "bac5af51c1baed2d76b2b2204d30ae3d0093612d3c0ccaead7ff9ea04581d249"
+      },
+      {
+        "mode": "edit",
+        "bytes": 2893254,
+        "sha256": "ae2bc3831aa5fbcb873262d9f0f8a990ef21ea6daeafa1c6523448f65256e2a0"
+      }
+    ],
+    "realRegionBeforeAfter": true,
+    "editableSourceReopened": true
+  },
+  "deck": {
+    "pages": 3,
+    "pageCompared": 2,
+    "otherPagesAndNotesUnchanged": true,
+    "renderReviewedInPowerPoint": false
+  },
+  "motion": {
+    "verifiedBinarySha256": "f837a152ccc0fb438479e1f5a0cf0524faf45ff48cfcb785706a599123bb8b1f",
+    "ffprobe": {
+      "width": 320,
+      "height": 180,
+      "avg_frame_rate": "24/1",
+      "nb_frames": "24"
+    }
+  },
+  "visual": {
+    "captures": [
+      {
+        "round": "before",
+        "screenshots": 20,
+        "viewports": [
+          [
+            1280,
+            720
+          ],
+          [
+            1440,
+            900
+          ],
+          [
+            1920,
+            1080
+          ]
+        ]
+      },
+      {
+        "round": "round-one",
+        "screenshots": 21,
+        "viewports": [
+          [
+            1280,
+            720
+          ],
+          [
+            1440,
+            900
+          ],
+          [
+            1920,
+            1080
+          ]
+        ]
+      },
+      {
+        "round": "round-two",
+        "screenshots": 21,
+        "viewports": [
+          [
+            1280,
+            720
+          ],
+          [
+            1440,
+            900
+          ],
+          [
+            1920,
+            1080
+          ]
+        ]
+      },
+      {
+        "round": "after",
+        "screenshots": 24,
+        "viewports": [
+          [
+            1280,
+            720
+          ],
+          [
+            1440,
+            900
+          ],
+          [
+            1920,
+            1080
+          ]
+        ]
+      }
+    ],
+    "media": [
+      {
+        "path": "docs/ui-redesign/media/ui165-ui166-comparison.jpg",
+        "bytes": 300355,
+        "sha256": "6523f8c40266a580f29bd2715cfad372bb722a5c8aaec50804a74d2a203adcc1"
+      },
+      {
+        "path": "docs/ui-redesign/media/ui166-interactions.mp4",
+        "bytes": 469465,
+        "sha256": "25ea93697aa5b8d1a57f7adc924b9529055c102647ce231d8de1234a1c7f5826"
+      }
+    ]
+  },
+  "performance": {
+    "environment": "Playwright Chromium headless with SwiftShader, Windows",
+    "samples": {
+      "chatCollapseOpen": {
+        "sampleFrames": 50,
+        "p50ms": 16.7,
+        "p95ms": 16.8,
+        "maxMs": 16.8,
+        "over33ms": 0,
+        "longTasksMs": []
+      },
+      "splitDragging": {
+        "sampleFrames": 110,
+        "p50ms": 16.7,
+        "p95ms": 33.3,
+        "maxMs": 66.6,
+        "over33ms": 3,
+        "longTasksMs": []
+      },
+      "nativeMotionPlayback": {
+        "sampleFrames": 104,
+        "p50ms": 16.7,
+        "p95ms": 16.7,
+        "maxMs": 16.8,
+        "over33ms": 0,
+        "longTasksMs": []
+      },
+      "motionScrubKeyboard": {
+        "sampleFrames": 78,
+        "p50ms": 16.7,
+        "p95ms": 16.7,
+        "maxMs": 16.8,
+        "over33ms": 0,
+        "longTasksMs": []
+      },
+      "openCloseMotionMenus": {
+        "sampleFrames": 55,
+        "p50ms": 16.7,
+        "p95ms": 16.8,
+        "maxMs": 33.3,
+        "over33ms": 0,
+        "longTasksMs": []
+      }
+    },
+    "reducedMotionAnimation": "1e-05s",
+    "duringActualModelConversation": {
+      "sampleFrames": 2994,
+      "p95ms": 50,
+      "mutations": 413
+    }
+  },
+  "fixesRechecked": [
+    "修复历史副本在源提交时被错误拒绝，并验证同一操作可安全重试。",
+    "Deck 属性导航等待原生过渡状态结束，比较按固定页面 ID 读取两份实际源。",
+    "全量套件第一轮缺少桌面 SDK 环境变量。使用正确的实际包路径后复测。",
+    "队列取消用例原 300ms 上限过窄，在并发负载下提前进入超时分支。扩大测试时限并复测，生产时限沿用。",
+    "素材置入首次在并发负荷下未获执行许可，原作未发生置入。串行复测成功，核对了各次固定源及最终预览。",
+    "意见的准确源锚点由提交时保存的修订决定。使用作品意见记录校对拒绝后副本的原始字节并在独立 DSH 继续编辑。"
+  ],
+  "verificationBoundaries": [
+    "未打开用户的物理桌面或现用 DSH。IME 通过浏览器合成事件核对。",
+    "可编辑 PPTX 通过文件结构、文本及原生版本回执核对，未在 PowerPoint 客户端做视觉复核。",
+    "性能数据来自当前 headless 环境，分别记录分栏、播放、拖动、菜单及真实对话流式运行。"
+  ]
+}
