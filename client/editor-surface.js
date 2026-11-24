@@ -1,5 +1,5 @@
 /** One professional editing surface; strict origin + capability channel, bounded requests. */
-import {SOURCE_FORMATS} from './native-contract.js?v=167';
+import {SOURCE_FORMATS} from './native-contract.js?v=168';
 export class EditorSurface extends EventTarget {
  constructor(container,{origin,engine='vectorcraft',runtime='vectorcraft-host',timeout=60000}={}){
   if(!Object.hasOwn(SOURCE_FORMATS,engine)||!/^[a-z][a-z0-9-]*$/.test(runtime))throw new Error('原生引擎或运行时标识无效');

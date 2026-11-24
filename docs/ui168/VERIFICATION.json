@@ -1,0 +1,207 @@
+{
+  "packageVersion": "1.3.0",
+  "uiBuild": 168,
+  "date": "2026-11-24",
+  "scope": "Windows x64, official DSH CLI/Web0.2.2-rc.1, independent test profile, Chrome157 hardware-rendered headless",
+  "performance": {
+    "accepted": true,
+    "budget": "three consecutive actual DSH/GLM streams; P95<=17.5ms, P99<=20ms, >33.5ms fraction<=0.001 for both reply-text-active and first-to-last actual AI delta window. Full send-to-complete metrics remain reported.",
+    "runs": [
+      {
+        "stage": "release-ai-deltas-fixed-1",
+        "model": {
+          "provider": "zai-coding-cn",
+          "model": "glm-5.3-flash"
+        },
+        "responseChars": 5066,
+        "visibleResponseChars": 1776,
+        "streamActiveFrames": {
+          "samples": 6343,
+          "p50ms": 10,
+          "p95ms": 10.2,
+          "p99ms": 10.3,
+          "maxMs": 40.1,
+          "over33ms": 2,
+          "over20ms": 7
+        },
+        "replyWindowFrames": {
+          "samples": 6376,
+          "p50ms": 10,
+          "p95ms": 10.2,
+          "p99ms": 10.3,
+          "maxMs": 40.1,
+          "over33ms": 2,
+          "over20ms": 7
+        },
+        "allStreamFrames": {
+          "samples": 6625,
+          "p50ms": 10,
+          "p95ms": 10.2,
+          "p99ms": 10.3,
+          "maxMs": 70.1,
+          "over33ms": 6,
+          "over20ms": 11
+        },
+        "durationSeconds": 66.59,
+        "frameBudgetAccepted": true
+      },
+      {
+        "stage": "release-ai-deltas-fixed-2",
+        "model": {
+          "provider": "zai-coding-cn",
+          "model": "glm-5.3-flash"
+        },
+        "responseChars": 4580,
+        "visibleResponseChars": 1960,
+        "streamActiveFrames": {
+          "samples": 5701,
+          "p50ms": 10,
+          "p95ms": 10.2,
+          "p99ms": 10.3,
+          "maxMs": 60.1,
+          "over33ms": 1,
+          "over20ms": 3
+        },
+        "replyWindowFrames": {
+          "samples": 5846,
+          "p50ms": 10,
+          "p95ms": 10.2,
+          "p99ms": 10.3,
+          "maxMs": 60.1,
+          "over33ms": 1,
+          "over20ms": 3
+        },
+        "allStreamFrames": {
+          "samples": 6015,
+          "p50ms": 10,
+          "p95ms": 10.2,
+          "p99ms": 10.3,
+          "maxMs": 70.1,
+          "over33ms": 4,
+          "over20ms": 7
+        },
+        "durationSeconds": 60.49,
+        "frameBudgetAccepted": true
+      },
+      {
+        "stage": "release-ai-deltas-fixed-3",
+        "model": {
+          "provider": "zai-coding-cn",
+          "model": "glm-5.3-flash"
+        },
+        "responseChars": 4531,
+        "visibleResponseChars": 1840,
+        "streamActiveFrames": {
+          "samples": 5365,
+          "p50ms": 10,
+          "p95ms": 10.2,
+          "p99ms": 10.3,
+          "maxMs": 39.9,
+          "over33ms": 1,
+          "over20ms": 4
+        },
+        "replyWindowFrames": {
+          "samples": 5460,
+          "p50ms": 10,
+          "p95ms": 10.2,
+          "p99ms": 10.3,
+          "maxMs": 39.9,
+          "over33ms": 1,
+          "over20ms": 4
+        },
+        "allStreamFrames": {
+          "samples": 5681,
+          "p50ms": 10,
+          "p95ms": 10.2,
+          "p99ms": 10.3,
+          "maxMs": 69.9,
+          "over33ms": 3,
+          "over20ms": 11
+        },
+        "durationSeconds": 57.13,
+        "frameBudgetAccepted": true
+      }
+    ],
+    "rendering": "AMD Radeon RX9060XT Direct3D11, hardware GPU compositing and rasterization enabled",
+    "diagnosticsAndFailuresRetained": "docs/ui168/performance.json",
+    "softwareRendering60HzAccepted": false,
+    "rareLongFramesRetained": true
+  },
+  "powerpoint": {
+    "passed": true,
+    "application": "Microsoft PowerPoint",
+    "version": "12.0",
+    "pages": 6,
+    "sourceSha256": "1d246d79292cb7a32fbfb63eca348cebb863c9a5eba4deec4e453703fb8369eb",
+    "readonlySourceUnchanged": true,
+    "allEditableTextRetained": true,
+    "allPagesVisuallyReviewed": true,
+    "report": "docs/ui168/powerpoint/actual.json"
+  },
+  "historicalSnapshots": {
+    "missing": 3,
+    "hashesPreserved": true,
+    "report": "docs/ui168/historical-snapshots.json"
+  },
+  "tests": {
+    "node": {
+      "count": 453,
+      "pass": 453,
+      "fail": 0,
+      "exitCode": 0
+    },
+    "client": {
+      "pass": 19,
+      "fail": 0,
+      "exitCode": 0
+    },
+    "portable": {
+      "passed": 108,
+      "failed": 0
+    },
+    "source": {
+      "javascriptFiles": 224,
+      "syntax": "passed",
+      "nativeBinaries": 4,
+      "runtimeHashes": "passed",
+      "resourceFiles": 36,
+      "resourceHashes": "passed"
+    }
+  },
+  "visual": {
+    "media": [
+      {
+        "path": "docs/ui168/powerpoint/slide-01.png",
+        "bytes": 98375,
+        "sha256": "b93746118011b89fb8e1ddc698ea9792235760b2395e4ee30ffc20a4efec123d"
+      },
+      {
+        "path": "docs/ui168/powerpoint/slide-02.png",
+        "bytes": 119572,
+        "sha256": "38bc5cee8ac4d84e3e801c168a3244f78fc69aea3561d9007e5ed44da4c82464"
+      },
+      {
+        "path": "docs/ui168/powerpoint/slide-03.png",
+        "bytes": 57473,
+        "sha256": "225b7b7ab7373622361932305fd009ae2bd18e8dfe1b5e5c68820e5fa14bbe27"
+      },
+      {
+        "path": "docs/ui168/powerpoint/slide-04.png",
+        "bytes": 64520,
+        "sha256": "eb1d55db738cb940a64bd037cd86223895e14f5ad038869bb9d38d131f28e16b"
+      },
+      {
+        "path": "docs/ui168/powerpoint/slide-05.png",
+        "bytes": 87876,
+        "sha256": "66ec3382daffafc9337e28926d1f426859c2cb706d28606e36fbbc51bb633b04"
+      },
+      {
+        "path": "docs/ui168/powerpoint/slide-06.png",
+        "bytes": 55177,
+        "sha256": "0ea037e06c8b5de584fdbb43b0209f491c799af20f2a3d0b25cc64b2ec319b02"
+      }
+    ]
+  },
+  "userProjectsUsed": false,
+  "desktopPointerOrKeyboardControlled": false
+}

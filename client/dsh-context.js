@@ -1,4 +1,4 @@
-import {isActiveDesignSession} from './design-session.js?v=167';
+import {isActiveDesignSession} from './design-session.js?v=168';
 import {selectionIdentity,validateSelectionReference} from './selection.js';
 export function designBrief(state,request){
  const doc=state.doc;if(!doc||!state.root)throw new Error('请先打开设计作品');

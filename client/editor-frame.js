@@ -1,6 +1,6 @@
 /** Professional editor transport. This module runs beside the real WASM App, not in DSH's UI. */
-import {encodeNativeJson,decodeNativeJson,nativeCallParameters,uint64Parameter} from './native-protocol.js?v=167';
-import {validateNativeContext,nativeBase,matchesNativeBase,canvasMaterialTarget,SOURCE_FORMATS} from './native-contract.js?v=167';
+import {encodeNativeJson,decodeNativeJson,nativeCallParameters,uint64Parameter} from './native-protocol.js?v=168';
+import {validateNativeContext,nativeBase,matchesNativeBase,canvasMaterialTarget,SOURCE_FORMATS} from './native-contract.js?v=168';
 const options=new URLSearchParams(location.hash.slice(1));
 const parentOrigin=options.get('parentOrigin'),nonce=options.get('nonce');
 const engineName=options.get('engine')||'vectorcraft';

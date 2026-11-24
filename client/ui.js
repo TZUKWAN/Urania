@@ -1,19 +1,19 @@
-import {storeView} from './store-view.js?v=167';
+import {storeView} from './store-view.js?v=168';
 import {createVariantPanel} from './variant-ui.js';
 import {createImagePanel} from './image-ui.js';
-import {createNativeWorkspace} from './native-workspace.js?v=167';
-import {quoteNative,nativeInputAdmissionLocked} from './native-reference.js?v=167';
-import {aiCanvasTarget} from './ai-canvas.js?v=167';
-import {isActiveDesignSession} from './design-session.js?v=167';
-import {createChatSplit} from './chat-split.js?v=167';
-import {submitNativePrompt,currentNativeInput} from './native-ai-input.js?v=167';
-import {selectedObjectIds} from './native-contract.js?v=167';
-import {createMotionWorkspace} from './motion-workspace.js?v=167';
-import {createStudioComponents,mountStudioStyles,userFacingError} from './studio-system.js?v=167';
-export {nativeReferenceSource as createNativeReferenceSource,nativeContextTextRule,designRequestReferenceSource as createDesignRequestReferenceSource,designRequestTextRule} from './native-reference.js?v=167';
+import {createNativeWorkspace} from './native-workspace.js?v=168';
+import {quoteNative,nativeInputAdmissionLocked} from './native-reference.js?v=168';
+import {aiCanvasTarget} from './ai-canvas.js?v=168';
+import {isActiveDesignSession} from './design-session.js?v=168';
+import {createChatSplit} from './chat-split.js?v=168';
+import {submitNativePrompt,currentNativeInput} from './native-ai-input.js?v=168';
+import {selectedObjectIds} from './native-contract.js?v=168';
+import {createMotionWorkspace} from './motion-workspace.js?v=168';
+import {createStudioComponents,mountStudioStyles,userFacingError} from './studio-system.js?v=168';
+export {nativeReferenceSource as createNativeReferenceSource,nativeContextTextRule,designRequestReferenceSource as createDesignRequestReferenceSource,designRequestTextRule} from './native-reference.js?v=168';
 import {selectedNative,nativeNodes,selectedIds} from './selection.js';
-import {designChatContext,isDesignRootInSession,attachDesignReference,openNativeChatReference} from './dsh-context.js?v=167';
-export {designContextTextRule,createDesignReferenceSource} from './dsh-context.js?v=167';
+import {designChatContext,isDesignRootInSession,attachDesignReference,openNativeChatReference} from './dsh-context.js?v=168';
+export {designContextTextRule,createDesignReferenceSource} from './dsh-context.js?v=168';
 /**
  * DesignCraft editor UI — full WYSIWYG editor (React via DSH ModuleLoader).
  * Exports createUI({ React, store, sync, actions, controller }) → { App }.
@@ -1219,7 +1219,7 @@ body[data-ds-dark-theme] .dcCanvasWrap{background:repeating-conic-gradient(#2024
 		}, []);
 		if(s.workspaceMode!=='legacy'){
       const motion=s.workspaceMode==='motion';
-      return h('div',{className:'dcApp',ref:studioRoot,'data-studio':'','data-ui-build':s.uiBuild||167,'data-editor-mode':motion?'motion':'native'},
+      return h('div',{className:'dcApp',ref:studioRoot,'data-studio':'','data-ui-build':s.uiBuild||168,'data-editor-mode':motion?'motion':'native'},
         h('header',{className:'dcStudioTop','aria-label':'Urania 工作台导航'},
           h('div',{className:'dcStudioBrand'},h('span',{className:'dcStudioBrandMark'},h(StudioIcon,{name:'brand',size:18})),'Urania'),
           h('nav',{className:'dcStudioModes','aria-label':'工作区'},

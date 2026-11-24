@@ -1,6 +1,6 @@
-# Urania UI167 部署与恢复
+# Urania UI168 部署与恢复
 
-本页适用 `designcraft@1.3.0-dev.152`（UI167）和 Windows x64。现有作品保存在各项目的 `design/.designcraft/`。
+本页适用 `designcraft@1.3.0`（UI168）和 Windows x64。现有作品保存在各项目的 `design/.designcraft/`。
 
 ## 环境
 
@@ -17,7 +17,7 @@ DSH、Node、浏览器和 FFmpeg 不随运行包分发。恢复脚本不会安�
 
 ## 安装插件和运行时
 
-解开发布页的 `designcraft-1.3.0-dev.152.tgz`，或检出对应源码标签。进入含有 `package.json` 的插件目录。两种方式均使用同一个 UI167 运行时 ZIP，恢复脚本按 `release/runtime-assets.json` 检查归档和每个文件的摘要。
+解开发布页的 `designcraft-1.3.0.tgz`，或检出对应源码标签。进入含有 `package.json` 的插件目录。UI168 沿用逐文件摘要相同的 UI167 运行时 ZIP，恢复脚本按 `release/runtime-assets.json` 检查归档和每个文件的摘要。
 
 在仓库根目录执行：
 
@@ -58,7 +58,7 @@ node scripts/doctor.mjs
 
 本轮真实隔离验收采用一个独立 DSH profile，其 `package.json` 的 `dsh.profile.bundles` 在基础 DSH bundle 后包含 `designcraft`，profile 的 `node_modules/designcraft` 指向安装目录。通过 SDK 的 `lib/bin.js --profile <独立profile名> --no-open` 启动。普通使用者应通过自己的 DSH 插件安装/配置流程加载，不要复制验收 probe、凭据、测试 profile 或会话。
 
-更新已经加载的插件时，先保存作品，再使用 DSH 的正常后台重载或重新打开应用。插件后台与前端都应显示 UI167。可在「更多操作 → 设计诊断与帮助」核对当前运行状态。
+更新已经加载的插件时，先保存作品，再使用 DSH 的正常后台重载或重新打开应用。插件后台与前端都应显示 UI168。可在「更多操作 → 设计诊断与帮助」核对当前运行状态。
 
 ## 安装失败、中断与回滚
 
@@ -78,6 +78,6 @@ pwsh -NoProfile -File scripts/restore-runtime.ps1 -VerifyOnly
 
 当前源码的全量命令是 `npm test`、`npm run check`。全量测试还需要对应 DSH SDK，可用 `DSH_TEST_PACKAGE` 指向其真实 `package.json`；它不随公开源分发。公开门使用 `npm run test:public`、`npm run check:public`，不冒充 DSH/原生集成验收。CI 不缓存或上传大型运行 ZIP。
 
-安装验收使用同一台 Windows 机器的干净目录、独立 DSH profile 和无窗口浏览器。UI167 结果见 [本轮验收记录](docs/ui167/VERIFICATION.json)。归档错误拒绝、进程中断与恢复的回归用例在 [UI165 验收记录](VERIFICATION_UI165.json) 中。
+安装验收使用同一台 Windows 机器的干净目录、独立 DSH profile 和无窗口浏览器。UI168 结果见 [本轮验收记录](docs/ui168/VERIFICATION.json)。归档错误拒绝、进程中断与恢复的回归用例在 [UI165 验收记录](VERIFICATION_UI165.json) 中。
 
-PPTX 在实际 Deck 编辑器和 LibreOffice 验证，PowerPoint 桌面应用尚未验收。历史审计附件见 [附件目录](docs/verification/ui165-attachments/README.md)。
+本轮六页PPTX已在PowerPoint原程序正常打开并逐页验收，详见 [逐页记录](docs/ui168/powerpoint/REVIEW.md)。历史审计附件见 [附件目录](docs/verification/ui165-attachments/README.md)。

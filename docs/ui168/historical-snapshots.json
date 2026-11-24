@@ -1,0 +1,63 @@
+{
+  "searchedAt": "2026-11-24",
+  "scope": [
+    "original Codex project sources and backups",
+    "retained designcraft installation"
+  ],
+  "counts": {
+    "filesEnumerated": 365313,
+    "sourceFilesHashed": 305,
+    "archivesScanned": 23018,
+    "archiveMembersHashed": 1637,
+    "gitBlobsHashed": 10
+  },
+  "seconds": 114.59,
+  "expectedHashesChanged": false,
+  "rows": [
+    {
+      "file": "dsh-tools.js",
+      "expectedSha256": "20ed6ff91b6cc44eaa90021e9a250d3be27dcabbf1156e1ae91647e891862608",
+      "found": false,
+      "matches": []
+    },
+    {
+      "file": "index.js",
+      "expectedSha256": "46c5cee5dfb04b5ada9c98a6d073729ce0de3bab28d20630e5cac267f032b7d4",
+      "found": false,
+      "matches": []
+    },
+    {
+      "file": "open-design-tools.js",
+      "expectedSha256": "f9dc41eacc544466bad95e2594c60b83dbe7b882202a519ab6cd1127c518120c",
+      "found": false,
+      "matches": []
+    }
+  ],
+  "errors": [
+    {
+      "path": "unrelated-project-negative-zip-fixture",
+      "error": "File is not a zip file"
+    },
+    {
+      "path": "unrelated-project-negative-zip-fixture",
+      "error": "File is not a zip file"
+    },
+    {
+      "path": "unrelated-project-negative-zip-fixture",
+      "error": "File is not a zip file"
+    },
+    {
+      "path": "unrelated-project-negative-zip-fixture",
+      "error": "File is not a zip file"
+    },
+    {
+      "path": "C14-current-wrong.zip",
+      "error": "File is not a zip file"
+    },
+    {
+      "path": "C14-wrong-runtime.zip",
+      "error": "File is not a zip file"
+    }
+  ],
+  "historicalRecordsUsedForCurrentAcceptance": false
+}

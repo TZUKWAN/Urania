@@ -1,0 +1,609 @@
+{
+  "passed": true,
+  "sourceSha256": "1d246d79292cb7a32fbfb63eca348cebb863c9a5eba4deec4e453703fb8369eb",
+  "application": "Microsoft PowerPoint",
+  "readOnly": true,
+  "withWindow": false,
+  "slides": [
+    {
+      "slide": 1,
+      "shapes": 8,
+      "text": [
+        {
+          "size": 15.0,
+          "name": "TextBox 1",
+          "width": 360.0,
+          "family": "微软雅黑",
+          "top": 54.72,
+          "boundHeight": 18.0,
+          "boundWidth": 147.35,
+          "left": 48.96,
+          "height": 28.8,
+          "content": "URANIA  /  玻璃花园"
+        },
+        {
+          "size": 49.0,
+          "name": "TextBox 2",
+          "width": 496.8,
+          "family": "微软雅黑",
+          "top": 178.56,
+          "boundHeight": 58.8,
+          "boundWidth": 294.0,
+          "left": 45.36,
+          "height": 72.0,
+          "content": "光穿过的地方"
+        },
+        {
+          "size": 22.0,
+          "name": "TextBox 3",
+          "width": 374.4,
+          "family": "微软雅黑",
+          "top": 265.68,
+          "boundHeight": 26.4,
+          "boundWidth": 330.0,
+          "left": 50.4,
+          "height": 46.08,
+          "content": "一场关于材质、空气与光的设计展"
+        },
+        {
+          "size": 14.0,
+          "name": "TextBox 8",
+          "width": 360.0,
+          "family": "微软雅黑",
+          "top": 478.8,
+          "boundHeight": 16.8,
+          "boundWidth": 147.7,
+          "left": 49.68,
+          "height": 26.64,
+          "content": "展览设计方案   /   2026"
+        }
+      ],
+      "issues": [],
+      "previewFile": "slide-01.png",
+      "previewSha256": "b93746118011b89fb8e1ddc698ea9792235760b2395e4ee30ffc20a4efec123d"
+    },
+    {
+      "slide": 2,
+      "shapes": 14,
+      "text": [
+        {
+          "size": 15.0,
+          "name": "TextBox 1",
+          "width": 360.0,
+          "family": "微软雅黑",
+          "top": 46.08,
+          "boundHeight": 18.0,
+          "boundWidth": 112.3,
+          "left": 48.96,
+          "height": 28.8,
+          "content": "01   /   策展结构"
+        },
+        {
+          "size": 36.0,
+          "name": "TextBox 2",
+          "width": 720.0,
+          "family": "微软雅黑",
+          "top": 83.52,
+          "boundHeight": 43.2,
+          "boundWidth": 324.0,
+          "left": 46.08,
+          "height": 59.04,
+          "content": "三种看见玻璃的方式"
+        },
+        {
+          "size": 14.0,
+          "name": "TextBox 4",
+          "width": 216.0,
+          "family": "微软雅黑",
+          "top": 205.92,
+          "boundHeight": 16.8,
+          "boundWidth": 17.3,
+          "left": 66.24,
+          "height": 23.04,
+          "content": "01"
+        },
+        {
+          "size": 32.0,
+          "name": "TextBox 5",
+          "width": 216.0,
+          "family": "微软雅黑",
+          "top": 247.68,
+          "boundHeight": 38.4,
+          "boundWidth": 64.0,
+          "left": 65.52,
+          "height": 47.52,
+          "content": "折射"
+        },
+        {
+          "size": 18.0,
+          "name": "TextBox 6",
+          "width": 228.24,
+          "family": "微软雅黑",
+          "top": 323.28,
+          "boundHeight": 43.2,
+          "boundWidth": 216.0,
+          "left": 66.96,
+          "height": 86.4,
+          "content": "观察光线经过曲面后改变的方向。"
+        },
+        {
+          "size": 14.0,
+          "name": "TextBox 8",
+          "width": 216.0,
+          "family": "微软雅黑",
+          "top": 205.92,
+          "boundHeight": 16.8,
+          "boundWidth": 17.3,
+          "left": 366.48,
+          "height": 23.04,
+          "content": "02"
+        },
+        {
+          "size": 32.0,
+          "name": "TextBox 9",
+          "width": 216.0,
+          "family": "微软雅黑",
+          "top": 247.68,
+          "boundHeight": 38.4,
+          "boundWidth": 64.0,
+          "left": 365.76,
+          "height": 47.52,
+          "content": "透影"
+        },
+        {
+          "size": 18.0,
+          "name": "TextBox 10",
+          "width": 228.24,
+          "family": "微软雅黑",
+          "top": 323.28,
+          "boundHeight": 43.2,
+          "boundWidth": 216.0,
+          "left": 367.2,
+          "height": 86.4,
+          "content": "利用薄片、间距与投影叠加成新的轮廓。"
+        },
+        {
+          "size": 14.0,
+          "name": "TextBox 12",
+          "width": 216.0,
+          "family": "微软雅黑",
+          "top": 205.92,
+          "boundHeight": 16.8,
+          "boundWidth": 17.3,
+          "left": 666.72,
+          "height": 23.04,
+          "content": "03"
+        },
+        {
+          "size": 32.0,
+          "name": "TextBox 13",
+          "width": 216.0,
+          "family": "微软雅黑",
+          "top": 247.68,
+          "boundHeight": 38.4,
+          "boundWidth": 64.0,
+          "left": 666.0,
+          "height": 47.52,
+          "content": "余光"
+        },
+        {
+          "size": 18.0,
+          "name": "TextBox 14",
+          "width": 228.24,
+          "family": "微软雅黑",
+          "top": 323.28,
+          "boundHeight": 43.2,
+          "boundWidth": 216.0,
+          "left": 667.44,
+          "height": 86.4,
+          "content": "在较低照度下感受材料保持的颜色。"
+        }
+      ],
+      "issues": [],
+      "previewFile": "slide-02.png",
+      "previewSha256": "38bc5cee8ac4d84e3e801c168a3244f78fc69aea3561d9007e5ed44da4c82464"
+    },
+    {
+      "slide": 3,
+      "shapes": 14,
+      "text": [
+        {
+          "size": 15.0,
+          "name": "TextBox 1",
+          "width": 360.0,
+          "family": "微软雅黑",
+          "top": 45.36,
+          "boundHeight": 18.0,
+          "boundWidth": 82.3,
+          "left": 48.96,
+          "height": 27.36,
+          "content": "02   /   动线"
+        },
+        {
+          "size": 35.0,
+          "name": "TextBox 2",
+          "width": 720.0,
+          "family": "微软雅黑",
+          "top": 84.24,
+          "boundHeight": 42.0,
+          "boundWidth": 350.0,
+          "left": 46.08,
+          "height": 61.2,
+          "content": "从明处，走进材料本身"
+        },
+        {
+          "size": 26.0,
+          "name": "TextBox 5",
+          "width": 221.76,
+          "family": "微软雅黑",
+          "top": 259.2,
+          "boundHeight": 31.2,
+          "boundWidth": 52.0,
+          "left": 57.6,
+          "height": 37.44,
+          "content": "入场"
+        },
+        {
+          "size": 18.0,
+          "name": "TextBox 6",
+          "width": 224.64,
+          "family": "微软雅黑",
+          "top": 305.28,
+          "boundHeight": 21.6,
+          "boundWidth": 90.0,
+          "left": 57.6,
+          "height": 38.88,
+          "content": "明亮与开阔"
+        },
+        {
+          "size": 26.0,
+          "name": "TextBox 9",
+          "width": 221.76,
+          "family": "微软雅黑",
+          "top": 259.2,
+          "boundHeight": 31.2,
+          "boundWidth": 52.0,
+          "left": 362.88,
+          "height": 37.44,
+          "content": "中央"
+        },
+        {
+          "size": 18.0,
+          "name": "TextBox 10",
+          "width": 224.64,
+          "family": "微软雅黑",
+          "top": 305.28,
+          "boundHeight": 21.6,
+          "boundWidth": 90.0,
+          "left": 362.88,
+          "height": 38.88,
+          "content": "折射与重复"
+        },
+        {
+          "size": 26.0,
+          "name": "TextBox 13",
+          "width": 221.76,
+          "family": "微软雅黑",
+          "top": 259.2,
+          "boundHeight": 31.2,
+          "boundWidth": 52.0,
+          "left": 668.16,
+          "height": 37.44,
+          "content": "出口"
+        },
+        {
+          "size": 18.0,
+          "name": "TextBox 14",
+          "width": 224.64,
+          "family": "微软雅黑",
+          "top": 305.28,
+          "boundHeight": 21.6,
+          "boundWidth": 90.0,
+          "left": 668.16,
+          "height": 38.88,
+          "content": "安静与停留"
+        }
+      ],
+      "issues": [],
+      "previewFile": "slide-03.png",
+      "previewSha256": "225b7b7ab7373622361932305fd009ae2bd18e8dfe1b5e5c68820e5fa14bbe27"
+    },
+    {
+      "slide": 4,
+      "shapes": 14,
+      "text": [
+        {
+          "size": 15.0,
+          "name": "TextBox 1",
+          "width": 432.0,
+          "family": "微软雅黑",
+          "top": 47.52,
+          "boundHeight": 18.0,
+          "boundWidth": 127.3,
+          "left": 51.12,
+          "height": 25.92,
+          "content": "03   /   材料与尺度"
+        },
+        {
+          "size": 36.0,
+          "name": "TextBox 2",
+          "width": 720.0,
+          "family": "微软雅黑",
+          "top": 84.96,
+          "boundHeight": 43.2,
+          "boundWidth": 360.0,
+          "left": 46.8,
+          "height": 55.44,
+          "content": "让光泽决定辨识的距离"
+        },
+        {
+          "size": 27.0,
+          "name": "TextBox 3",
+          "width": 149.76,
+          "family": "微软雅黑",
+          "top": 190.08,
+          "boundHeight": 32.4,
+          "boundWidth": 75.55,
+          "left": 52.56,
+          "height": 33.12,
+          "content": "1.1 m"
+        },
+        {
+          "size": 16.0,
+          "name": "TextBox 4",
+          "width": 262.8,
+          "family": "微软雅黑",
+          "top": 193.68,
+          "boundHeight": 19.2,
+          "boundWidth": 96.0,
+          "left": 219.6,
+          "height": 28.8,
+          "content": "触摸作品基座"
+        },
+        {
+          "size": 27.0,
+          "name": "TextBox 7",
+          "width": 149.76,
+          "family": "微软雅黑",
+          "top": 272.88,
+          "boundHeight": 32.4,
+          "boundWidth": 75.55,
+          "left": 52.56,
+          "height": 33.12,
+          "content": "1.8 m"
+        },
+        {
+          "size": 16.0,
+          "name": "TextBox 8",
+          "width": 262.8,
+          "family": "微软雅黑",
+          "top": 276.48,
+          "boundHeight": 19.2,
+          "boundWidth": 112.0,
+          "left": 219.6,
+          "height": 28.8,
+          "content": "观看轮廓与投影"
+        },
+        {
+          "size": 27.0,
+          "name": "TextBox 11",
+          "width": 149.76,
+          "family": "微软雅黑",
+          "top": 355.68,
+          "boundHeight": 32.4,
+          "boundWidth": 75.55,
+          "left": 52.56,
+          "height": 33.12,
+          "content": "2.6 m"
+        },
+        {
+          "size": 16.0,
+          "name": "TextBox 12",
+          "width": 262.8,
+          "family": "微软雅黑",
+          "top": 359.2799,
+          "boundHeight": 19.2,
+          "boundWidth": 96.0,
+          "left": 219.6,
+          "height": 28.8,
+          "content": "观察整体构图"
+        }
+      ],
+      "issues": [],
+      "previewFile": "slide-04.png",
+      "previewSha256": "eb1d55db738cb940a64bd037cd86223895e14f5ad038869bb9d38d131f28e16b"
+    },
+    {
+      "slide": 5,
+      "shapes": 14,
+      "text": [
+        {
+          "size": 15.0,
+          "name": "TextBox 1",
+          "width": 432.0,
+          "family": "微软雅黑",
+          "top": 47.52,
+          "boundHeight": 18.0,
+          "boundWidth": 112.3,
+          "left": 48.96,
+          "height": 25.92,
+          "content": "04   /   展陈细节"
+        },
+        {
+          "size": 36.0,
+          "name": "TextBox 2",
+          "width": 720.0,
+          "family": "微软雅黑",
+          "top": 85.68,
+          "boundHeight": 43.2,
+          "boundWidth": 360.0,
+          "left": 45.36,
+          "height": 55.44,
+          "content": "局部设计也能讲清主题"
+        },
+        {
+          "size": 20.0,
+          "name": "TextBox 3",
+          "width": 87.12,
+          "family": "微软雅黑",
+          "top": 185.76,
+          "boundHeight": 24.0,
+          "boundWidth": 24.7,
+          "left": 51.84,
+          "height": 33.12,
+          "content": "01"
+        },
+        {
+          "size": 25.0,
+          "name": "TextBox 4",
+          "width": 188.64,
+          "family": "微软雅黑",
+          "top": 185.76,
+          "boundHeight": 30.0,
+          "boundWidth": 50.0,
+          "left": 149.76,
+          "height": 38.16,
+          "content": "触感"
+        },
+        {
+          "size": 19.0,
+          "name": "TextBox 5",
+          "width": 432.0,
+          "family": "微软雅黑",
+          "top": 187.92,
+          "boundHeight": 22.8,
+          "boundWidth": 228.0,
+          "left": 370.8,
+          "height": 45.36,
+          "content": "通过边缘和厚度识别结构。"
+        },
+        {
+          "size": 20.0,
+          "name": "TextBox 7",
+          "width": 87.12,
+          "family": "微软雅黑",
+          "top": 267.12,
+          "boundHeight": 24.0,
+          "boundWidth": 24.7,
+          "left": 51.84,
+          "height": 33.12,
+          "content": "02"
+        },
+        {
+          "size": 25.0,
+          "name": "TextBox 8",
+          "width": 188.64,
+          "family": "微软雅黑",
+          "top": 267.12,
+          "boundHeight": 30.0,
+          "boundWidth": 50.0,
+          "left": 149.76,
+          "height": 38.16,
+          "content": "留白"
+        },
+        {
+          "size": 19.0,
+          "name": "TextBox 9",
+          "width": 432.0,
+          "family": "微软雅黑",
+          "top": 269.28,
+          "boundHeight": 22.8,
+          "boundWidth": 247.0,
+          "left": 370.8,
+          "height": 45.36,
+          "content": "用足够的间距让反光被看见。"
+        },
+        {
+          "size": 20.0,
+          "name": "TextBox 11",
+          "width": 87.12,
+          "family": "微软雅黑",
+          "top": 348.48,
+          "boundHeight": 24.0,
+          "boundWidth": 24.7,
+          "left": 51.84,
+          "height": 33.12,
+          "content": "03"
+        },
+        {
+          "size": 25.0,
+          "name": "TextBox 12",
+          "width": 188.64,
+          "family": "微软雅黑",
+          "top": 348.48,
+          "boundHeight": 30.0,
+          "boundWidth": 50.0,
+          "left": 149.76,
+          "height": 38.16,
+          "content": "光温"
+        },
+        {
+          "size": 19.0,
+          "name": "TextBox 13",
+          "width": 432.0,
+          "family": "微软雅黑",
+          "top": 350.64,
+          "boundHeight": 22.8,
+          "boundWidth": 228.0,
+          "left": 370.8,
+          "height": 45.36,
+          "content": "保持近场的照度变化连贯。"
+        }
+      ],
+      "issues": [],
+      "previewFile": "slide-05.png",
+      "previewSha256": "66ec3382daffafc9337e28926d1f426859c2cb706d28606e36fbbc51bb633b04"
+    },
+    {
+      "slide": 6,
+      "shapes": 5,
+      "text": [
+        {
+          "size": 15.0,
+          "name": "TextBox 1",
+          "width": 360.0,
+          "family": "微软雅黑",
+          "top": 55.44,
+          "boundHeight": 18.0,
+          "boundWidth": 82.3,
+          "left": 50.4,
+          "height": 28.8,
+          "content": "05   /   结语"
+        },
+        {
+          "size": 46.0,
+          "name": "TextBox 2",
+          "width": 815.76,
+          "family": "微软雅黑",
+          "top": 192.24,
+          "boundHeight": 55.2,
+          "boundWidth": 414.0,
+          "left": 48.96,
+          "height": 77.76,
+          "content": "留下光，带走观察。"
+        },
+        {
+          "size": 21.0,
+          "name": "TextBox 3",
+          "width": 720.0,
+          "family": "微软雅黑",
+          "top": 290.16,
+          "boundHeight": 25.2,
+          "boundWidth": 279.6,
+          "left": 52.56,
+          "height": 51.12,
+          "content": "玻璃花园展览设计   /   Urania"
+        }
+      ],
+      "issues": [],
+      "previewFile": "slide-06.png",
+      "previewSha256": "0ea037e06c8b5de584fdbb43b0209f491c799af20f2a3d0b25cc64b2ec319b02"
+    }
+  ],
+  "version": "12.0",
+  "sizePoints": [
+    959.9500122070312,
+    540.0
+  ],
+  "machineChecksPassed": true
+}

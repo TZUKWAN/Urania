@@ -1,7 +1,7 @@
-import {EditorSurface} from './editor-surface.js?v=167';
-import {sameUint64,compareUint64,uint64Parameter} from './native-protocol.js?v=167';
-import {EDITOR_CONTEXT_PROTOCOL,validateNativeContext,nativeBase,matchesNativeBase,selectedObjectIds,canvasMaterialTarget,sameNativeDocument} from './native-contract.js?v=167';
-import {preparePreview,capturePreview,convertPreview,conversionWarnings,hasSupportedTailwindTag} from './html-sandbox.js?v=167';
+import {EditorSurface} from './editor-surface.js?v=168';
+import {sameUint64,compareUint64,uint64Parameter} from './native-protocol.js?v=168';
+import {EDITOR_CONTEXT_PROTOCOL,validateNativeContext,nativeBase,matchesNativeBase,selectedObjectIds,canvasMaterialTarget,sameNativeDocument} from './native-contract.js?v=168';
+import {preparePreview,capturePreview,convertPreview,conversionWarnings,hasSupportedTailwindTag} from './html-sandbox.js?v=168';
 
 const API='/designcraft/api/v2/studio';
 const wait=ms=>new Promise(resolve=>setTimeout(resolve,ms));

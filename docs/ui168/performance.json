@@ -1,0 +1,1852 @@
+{
+  "acceptance": {
+    "complete": true,
+    "criterion": "three consecutive actual DSH/GLM streams; P95<=17.5ms, P99<=20ms, >33.5ms fraction<=0.001 for both reply-text-active and first-to-last actual AI delta window. Full send-to-complete metrics remain reported.",
+    "sourceSha256": {
+      "client/client.js": "28024a1a0f456e09fd5ae3ede7aa45490e9d8477d40e1f3281f9c7906eda77a8",
+      "client/studio-system.js": "4ab63d3b904d2f856dc532bf05d5c8cf08cf09f0ca66688bb48602aac5c9d477",
+      "client/ui.js": "5e4a7c95972c554863803736270b5061f18efa907709a3625c14b5d9ce0fe47d",
+      "package.json": "6813be065b006a74aee164f7109543522c0da4fbd79e4c0c10a42a769b3d2c72"
+    },
+    "runs": [
+      {
+        "passed": true,
+        "stage": "release-ai-deltas-fixed-1",
+        "realModelCalls": 1,
+        "pageErrors": [],
+        "traceCategories": "devtools.timeline,blink.user_timing",
+        "browserEnvironment": {
+          "channel": "chrome",
+          "forcedSoftwareGpu": false,
+          "version": "157.0.8103.80",
+          "devices": [
+            {
+              "vendorId": 4098,
+              "deviceId": 30096,
+              "subSysId": 2248154835,
+              "revision": 192,
+              "vendorString": "",
+              "deviceString": "AMD Radeon RX 9060 XT",
+              "driverVendor": "AMD",
+              "driverVersion": "32.0.31044.16"
+            },
+            {
+              "vendorId": 4098,
+              "deviceId": 5056,
+              "subSysId": 331354114,
+              "revision": 197,
+              "vendorString": "",
+              "deviceString": "AMD Radeon(TM) Graphics",
+              "driverVendor": "",
+              "driverVersion": "32.0.21045.1000"
+            },
+            {
+              "vendorId": 4098,
+              "deviceId": 30096,
+              "subSysId": 2248154835,
+              "revision": 192,
+              "vendorString": "",
+              "deviceString": "AMD Radeon RX 9060 XT",
+              "driverVendor": "",
+              "driverVersion": "32.0.31044.16"
+            },
+            {
+              "vendorId": 5140,
+              "deviceId": 140,
+              "subSysId": 0,
+              "revision": 0,
+              "vendorString": "",
+              "deviceString": "Microsoft Basic Render Driver",
+              "driverVendor": "",
+              "driverVersion": "10.0.26100.9818"
+            }
+          ],
+          "featureStatus": {
+            "2d_canvas": "enabled",
+            "direct_rendering_display_compositor": "disabled_off_ok",
+            "gpu_compositing": "enabled",
+            "multiple_raster_threads": "enabled_on",
+            "opengl": "enabled_on",
+            "rasterization": "enabled",
+            "skia_graphite": "disabled_off",
+            "trees_in_viz": "disabled_off",
+            "video_decode": "enabled",
+            "video_encode": "enabled",
+            "webgl": "enabled",
+            "webgpu": "enabled",
+            "webnn": "disabled_off"
+          },
+          "aux": {
+            "glRenderer": "ANGLE (AMD, AMD Radeon RX 9060 XT (0x00007590) Direct3D11 vs_5_0 ps_5_0, D3D11-32.0.31044.16)",
+            "glVendor": "Google Inc. (AMD)",
+            "glVersion": "OpenGL ES 3.0 (ANGLE 2.1.29101 git hash: c56e2a4a9b8c)",
+            "passthroughCmdDecoder": true,
+            "sandboxed": false
+          }
+        },
+        "model": {
+          "provider": "zai-coding-cn",
+          "model": "glm-5.3-flash"
+        },
+        "responseChars": 5066,
+        "visibleResponseChars": 1776,
+        "idleFrames": {
+          "samples": 320,
+          "p50ms": 10,
+          "p95ms": 10.2,
+          "p99ms": 10.2,
+          "maxMs": 10.3,
+          "over33ms": 0,
+          "over20ms": 0
+        },
+        "streamActiveFrames": {
+          "samples": 6343,
+          "p50ms": 10,
+          "p95ms": 10.2,
+          "p99ms": 10.3,
+          "maxMs": 40.1,
+          "over33ms": 2,
+          "over20ms": 7
+        },
+        "replyWindowFrames": {
+          "samples": 6376,
+          "p50ms": 10,
+          "p95ms": 10.2,
+          "p99ms": 10.3,
+          "maxMs": 40.1,
+          "over33ms": 2,
+          "over20ms": 7
+        },
+        "allStreamFrames": {
+          "samples": 6625,
+          "p50ms": 10,
+          "p95ms": 10.2,
+          "p99ms": 10.3,
+          "maxMs": 70.1,
+          "over33ms": 6,
+          "over20ms": 11
+        },
+        "textUpdates": 1307,
+        "durationSeconds": 66.59,
+        "longTasks": [],
+        "windowMs": [
+          9760.90000000596,
+          76353.10000000894
+        ],
+        "renderMetrics": {
+          "LayoutCount": 6699,
+          "RecalcStyleCount": 6855,
+          "LayoutDuration": 2.7654,
+          "RecalcStyleDuration": 1.6099,
+          "ScriptDuration": 3.4495,
+          "TaskDuration": 14.4604
+        },
+        "replyWindowMs": [
+          12048.40000000596,
+          75954.90000000596
+        ],
+        "frameBudgetAccepted": true,
+        "trace": {
+          "bytes": 5048285,
+          "dataLossOccurred": false
+        },
+        "actualReplyTextCharacters": 4750
+      },
+      {
+        "passed": true,
+        "stage": "release-ai-deltas-fixed-2",
+        "realModelCalls": 1,
+        "pageErrors": [],
+        "traceCategories": "devtools.timeline,blink.user_timing",
+        "browserEnvironment": {
+          "channel": "chrome",
+          "forcedSoftwareGpu": false,
+          "version": "157.0.8103.80",
+          "devices": [
+            {
+              "vendorId": 4098,
+              "deviceId": 30096,
+              "subSysId": 2248154835,
+              "revision": 192,
+              "vendorString": "",
+              "deviceString": "AMD Radeon RX 9060 XT",
+              "driverVendor": "AMD",
+              "driverVersion": "32.0.31044.16"
+            },
+            {
+              "vendorId": 4098,
+              "deviceId": 5056,
+              "subSysId": 331354114,
+              "revision": 197,
+              "vendorString": "",
+              "deviceString": "AMD Radeon(TM) Graphics",
+              "driverVendor": "",
+              "driverVersion": "32.0.21045.1000"
+            },
+            {
+              "vendorId": 4098,
+              "deviceId": 30096,
+              "subSysId": 2248154835,
+              "revision": 192,
+              "vendorString": "",
+              "deviceString": "AMD Radeon RX 9060 XT",
+              "driverVendor": "",
+              "driverVersion": "32.0.31044.16"
+            },
+            {
+              "vendorId": 5140,
+              "deviceId": 140,
+              "subSysId": 0,
+              "revision": 0,
+              "vendorString": "",
+              "deviceString": "Microsoft Basic Render Driver",
+              "driverVendor": "",
+              "driverVersion": "10.0.26100.9818"
+            }
+          ],
+          "featureStatus": {
+            "2d_canvas": "enabled",
+            "direct_rendering_display_compositor": "disabled_off_ok",
+            "gpu_compositing": "enabled",
+            "multiple_raster_threads": "enabled_on",
+            "opengl": "enabled_on",
+            "rasterization": "enabled",
+            "skia_graphite": "disabled_off",
+            "trees_in_viz": "disabled_off",
+            "video_decode": "enabled",
+            "video_encode": "enabled",
+            "webgl": "enabled",
+            "webgpu": "enabled",
+            "webnn": "disabled_off"
+          },
+          "aux": {
+            "glRenderer": "ANGLE (AMD, AMD Radeon RX 9060 XT (0x00007590) Direct3D11 vs_5_0 ps_5_0, D3D11-32.0.31044.16)",
+            "glVendor": "Google Inc. (AMD)",
+            "glVersion": "OpenGL ES 3.0 (ANGLE 2.1.29101 git hash: c56e2a4a9b8c)",
+            "passthroughCmdDecoder": true,
+            "sandboxed": false
+          }
+        },
+        "model": {
+          "provider": "zai-coding-cn",
+          "model": "glm-5.3-flash"
+        },
+        "responseChars": 4580,
+        "visibleResponseChars": 1960,
+        "idleFrames": {
+          "samples": 320,
+          "p50ms": 10,
+          "p95ms": 10.2,
+          "p99ms": 10.3,
+          "maxMs": 10.4,
+          "over33ms": 0,
+          "over20ms": 0
+        },
+        "streamActiveFrames": {
+          "samples": 5701,
+          "p50ms": 10,
+          "p95ms": 10.2,
+          "p99ms": 10.3,
+          "maxMs": 60.1,
+          "over33ms": 1,
+          "over20ms": 3
+        },
+        "replyWindowFrames": {
+          "samples": 5846,
+          "p50ms": 10,
+          "p95ms": 10.2,
+          "p99ms": 10.3,
+          "maxMs": 60.1,
+          "over33ms": 1,
+          "over20ms": 3
+        },
+        "allStreamFrames": {
+          "samples": 6015,
+          "p50ms": 10,
+          "p95ms": 10.2,
+          "p99ms": 10.3,
+          "maxMs": 70.1,
+          "over33ms": 4,
+          "over20ms": 7
+        },
+        "textUpdates": 1112,
+        "durationSeconds": 60.49,
+        "longTasks": [
+          63
+        ],
+        "windowMs": [
+          10677.70000000298,
+          71171.70000000298
+        ],
+        "renderMetrics": {
+          "LayoutCount": 6080,
+          "RecalcStyleCount": 6242,
+          "LayoutDuration": 2.3632,
+          "RecalcStyleDuration": 1.4224,
+          "ScriptDuration": 3.0092,
+          "TaskDuration": 12.6139
+        },
+        "replyWindowMs": [
+          12182.29999999702,
+          70807.10000000894
+        ],
+        "frameBudgetAccepted": true,
+        "trace": {
+          "bytes": 4530251,
+          "dataLossOccurred": false
+        },
+        "actualReplyTextCharacters": 4263
+      },
+      {
+        "passed": true,
+        "stage": "release-ai-deltas-fixed-3",
+        "realModelCalls": 1,
+        "pageErrors": [],
+        "traceCategories": "devtools.timeline,blink.user_timing",
+        "browserEnvironment": {
+          "channel": "chrome",
+          "forcedSoftwareGpu": false,
+          "version": "157.0.8103.80",
+          "devices": [
+            {
+              "vendorId": 4098,
+              "deviceId": 30096,
+              "subSysId": 2248154835,
+              "revision": 192,
+              "vendorString": "",
+              "deviceString": "AMD Radeon RX 9060 XT",
+              "driverVendor": "AMD",
+              "driverVersion": "32.0.31044.16"
+            },
+            {
+              "vendorId": 4098,
+              "deviceId": 5056,
+              "subSysId": 331354114,
+              "revision": 197,
+              "vendorString": "",
+              "deviceString": "AMD Radeon(TM) Graphics",
+              "driverVendor": "",
+              "driverVersion": "32.0.21045.1000"
+            },
+            {
+              "vendorId": 4098,
+              "deviceId": 30096,
+              "subSysId": 2248154835,
+              "revision": 192,
+              "vendorString": "",
+              "deviceString": "AMD Radeon RX 9060 XT",
+              "driverVendor": "",
+              "driverVersion": "32.0.31044.16"
+            },
+            {
+              "vendorId": 5140,
+              "deviceId": 140,
+              "subSysId": 0,
+              "revision": 0,
+              "vendorString": "",
+              "deviceString": "Microsoft Basic Render Driver",
+              "driverVendor": "",
+              "driverVersion": "10.0.26100.9818"
+            }
+          ],
+          "featureStatus": {
+            "2d_canvas": "enabled",
+            "direct_rendering_display_compositor": "disabled_off_ok",
+            "gpu_compositing": "enabled",
+            "multiple_raster_threads": "enabled_on",
+            "opengl": "enabled_on",
+            "rasterization": "enabled",
+            "skia_graphite": "disabled_off",
+            "trees_in_viz": "disabled_off",
+            "video_decode": "enabled",
+            "video_encode": "enabled",
+            "webgl": "enabled",
+            "webgpu": "enabled",
+            "webnn": "disabled_off"
+          },
+          "aux": {
+            "glRenderer": "ANGLE (AMD, AMD Radeon RX 9060 XT (0x00007590) Direct3D11 vs_5_0 ps_5_0, D3D11-32.0.31044.16)",
+            "glVendor": "Google Inc. (AMD)",
+            "glVersion": "OpenGL ES 3.0 (ANGLE 2.1.29101 git hash: c56e2a4a9b8c)",
+            "passthroughCmdDecoder": true,
+            "sandboxed": false
+          }
+        },
+        "model": {
+          "provider": "zai-coding-cn",
+          "model": "glm-5.3-flash"
+        },
+        "responseChars": 4531,
+        "visibleResponseChars": 1840,
+        "idleFrames": {
+          "samples": 320,
+          "p50ms": 10,
+          "p95ms": 10.2,
+          "p99ms": 10.3,
+          "maxMs": 10.4,
+          "over33ms": 0,
+          "over20ms": 0
+        },
+        "streamActiveFrames": {
+          "samples": 5365,
+          "p50ms": 10,
+          "p95ms": 10.2,
+          "p99ms": 10.3,
+          "maxMs": 39.9,
+          "over33ms": 1,
+          "over20ms": 4
+        },
+        "replyWindowFrames": {
+          "samples": 5460,
+          "p50ms": 10,
+          "p95ms": 10.2,
+          "p99ms": 10.3,
+          "maxMs": 39.9,
+          "over33ms": 1,
+          "over20ms": 4
+        },
+        "allStreamFrames": {
+          "samples": 5681,
+          "p50ms": 10,
+          "p95ms": 10.2,
+          "p99ms": 10.3,
+          "maxMs": 69.9,
+          "over33ms": 3,
+          "over20ms": 11
+        },
+        "textUpdates": 1114,
+        "durationSeconds": 57.13,
+        "longTasks": [],
+        "windowMs": [
+          11183.29999999702,
+          68317.79999999702
+        ],
+        "renderMetrics": {
+          "LayoutCount": 5766,
+          "RecalcStyleCount": 5940,
+          "LayoutDuration": 2.231,
+          "RecalcStyleDuration": 1.5805,
+          "ScriptDuration": 2.8721,
+          "TaskDuration": 12.0041
+        },
+        "replyWindowMs": [
+          13465,
+          68202.19999998808
+        ],
+        "frameBudgetAccepted": true,
+        "trace": {
+          "bytes": 4401320,
+          "dataLossOccurred": false
+        },
+        "actualReplyTextCharacters": 4220
+      }
+    ]
+  },
+  "measurements": [
+    {
+      "passed": true,
+      "stage": "baseline-default-gpu",
+      "realModelCalls": 1,
+      "pageErrors": [],
+      "browserEnvironment": {
+        "forcedSoftwareGpu": false,
+        "version": "143.0.7499.4",
+        "devices": [
+          {
+            "vendorId": 65535,
+            "deviceId": 65535,
+            "subSysId": 0,
+            "revision": 0,
+            "vendorString": "Google Inc. (Google)",
+            "deviceString": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver-5.0.0)",
+            "driverVendor": "SwANGLE",
+            "driverVersion": "5.0.0"
+          }
+        ],
+        "featureStatus": {
+          "2d_canvas": "unavailable_software",
+          "direct_rendering_display_compositor": "disabled_off_ok",
+          "gpu_compositing": "disabled_software",
+          "multiple_raster_threads": "enabled_on",
+          "opengl": "disabled_off",
+          "rasterization": "disabled_software",
+          "raw_draw": "disabled_off_ok",
+          "skia_graphite": "disabled_off",
+          "trees_in_viz": "disabled_off",
+          "video_decode": "disabled_software",
+          "video_encode": "disabled_software",
+          "webgl": "unavailable_software",
+          "webgpu": "unavailable_software",
+          "webnn": "unavailable_software"
+        },
+        "aux": {
+          "glRenderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver-5.0.0)",
+          "glVendor": "Google Inc. (Google)",
+          "glVersion": "OpenGL ES 3.0 (ANGLE 2.1.26421 git hash: e5930c3b265b)",
+          "passthroughCmdDecoder": true,
+          "sandboxed": false
+        }
+      },
+      "model": {
+        "provider": "zai-coding-cn",
+        "model": "glm-5.3-flash"
+      },
+      "responseChars": 1274,
+      "idleFrames": {
+        "samples": 192,
+        "p50ms": 16.7,
+        "p95ms": 16.7,
+        "p99ms": 16.8,
+        "maxMs": 33.3,
+        "over33ms": 0
+      },
+      "streamActiveFrames": {
+        "samples": 948,
+        "p50ms": 16.7,
+        "p95ms": 16.8,
+        "p99ms": 33.4,
+        "maxMs": 116.6,
+        "over33ms": 9
+      },
+      "textUpdates": 230,
+      "durationSeconds": 18.94,
+      "longTasks": [
+        67
+      ],
+      "windowMs": [
+        19819.89999999106,
+        38763.79999999702
+      ],
+      "renderMetrics": {
+        "LayoutCount": 1082,
+        "RecalcStyleCount": 1101,
+        "LayoutDuration": 0.9492,
+        "RecalcStyleDuration": 0.5021,
+        "ScriptDuration": 1.302,
+        "TaskDuration": 4.6353
+      },
+      "trace": {
+        "bytes": 12558075,
+        "dataLossOccurred": false
+      }
+    },
+    {
+      "passed": true,
+      "stage": "baseline-ui167",
+      "realModelCalls": 1,
+      "pageErrors": [],
+      "model": {
+        "provider": "zai-coding-cn",
+        "model": "glm-5.3-flash"
+      },
+      "responseChars": 1411,
+      "idleFrames": {
+        "samples": 193,
+        "p50ms": 16.7,
+        "p95ms": 16.7,
+        "p99ms": 16.8,
+        "maxMs": 33.3,
+        "over33ms": 0
+      },
+      "streamActiveFrames": {
+        "samples": 995,
+        "p50ms": 16.7,
+        "p95ms": 33.3,
+        "p99ms": 50,
+        "maxMs": 183.3,
+        "over33ms": 21
+      },
+      "textUpdates": 245,
+      "durationSeconds": 24.34,
+      "longTasks": [
+        118,
+        66,
+        58,
+        52,
+        55,
+        54
+      ],
+      "windowMs": [
+        14240.5,
+        38577.69999998808
+      ],
+      "renderMetrics": {
+        "LayoutCount": 1276,
+        "RecalcStyleCount": 1285,
+        "LayoutDuration": 1.3979,
+        "RecalcStyleDuration": 0.6969,
+        "ScriptDuration": 2.0712,
+        "TaskDuration": 7.2359
+      },
+      "trace": {
+        "bytes": 16586254,
+        "dataLossOccurred": false
+      }
+    },
+    {
+      "passed": true,
+      "stage": "candidate-chrome-1",
+      "realModelCalls": 1,
+      "pageErrors": [],
+      "traceCategories": "devtools.timeline,blink.user_timing",
+      "browserEnvironment": {
+        "channel": "chrome",
+        "forcedSoftwareGpu": false,
+        "version": "157.0.8103.80",
+        "devices": [
+          {
+            "vendorId": 4098,
+            "deviceId": 30096,
+            "subSysId": 2248154835,
+            "revision": 192,
+            "vendorString": "",
+            "deviceString": "AMD Radeon RX 9060 XT",
+            "driverVendor": "AMD",
+            "driverVersion": "32.0.31044.16"
+          },
+          {
+            "vendorId": 4098,
+            "deviceId": 5056,
+            "subSysId": 331354114,
+            "revision": 197,
+            "vendorString": "",
+            "deviceString": "AMD Radeon(TM) Graphics",
+            "driverVendor": "",
+            "driverVersion": "32.0.21045.1000"
+          },
+          {
+            "vendorId": 4098,
+            "deviceId": 30096,
+            "subSysId": 2248154835,
+            "revision": 192,
+            "vendorString": "",
+            "deviceString": "AMD Radeon RX 9060 XT",
+            "driverVendor": "",
+            "driverVersion": "32.0.31044.16"
+          },
+          {
+            "vendorId": 5140,
+            "deviceId": 140,
+            "subSysId": 0,
+            "revision": 0,
+            "vendorString": "",
+            "deviceString": "Microsoft Basic Render Driver",
+            "driverVendor": "",
+            "driverVersion": "10.0.26100.9818"
+          }
+        ],
+        "featureStatus": {
+          "2d_canvas": "enabled",
+          "direct_rendering_display_compositor": "disabled_off_ok",
+          "gpu_compositing": "enabled",
+          "multiple_raster_threads": "enabled_on",
+          "opengl": "enabled_on",
+          "rasterization": "enabled",
+          "skia_graphite": "disabled_off",
+          "trees_in_viz": "disabled_off",
+          "video_decode": "enabled",
+          "video_encode": "enabled",
+          "webgl": "enabled",
+          "webgpu": "enabled",
+          "webnn": "disabled_off"
+        },
+        "aux": {
+          "glRenderer": "ANGLE (AMD, AMD Radeon RX 9060 XT (0x00007590) Direct3D11 vs_5_0 ps_5_0, D3D11-32.0.31044.16)",
+          "glVendor": "Google Inc. (AMD)",
+          "glVersion": "OpenGL ES 3.0 (ANGLE 2.1.29101 git hash: c56e2a4a9b8c)",
+          "passthroughCmdDecoder": true,
+          "sandboxed": false
+        }
+      },
+      "model": {
+        "provider": "zai-coding-cn",
+        "model": "glm-5.3-flash"
+      },
+      "responseChars": 1260,
+      "idleFrames": {
+        "samples": 319,
+        "p50ms": 10,
+        "p95ms": 10.2,
+        "p99ms": 10.3,
+        "maxMs": 10.9,
+        "over33ms": 0,
+        "over20ms": 0
+      },
+      "streamActiveFrames": {
+        "samples": 1640,
+        "p50ms": 10,
+        "p95ms": 10.2,
+        "p99ms": 10.3,
+        "maxMs": 60.2,
+        "over33ms": 2,
+        "over20ms": 6
+      },
+      "allStreamFrames": {
+        "samples": 1844,
+        "p50ms": 10,
+        "p95ms": 10.2,
+        "p99ms": 10.3,
+        "maxMs": 60.2,
+        "over33ms": 2,
+        "over20ms": 6
+      },
+      "textUpdates": 344,
+      "durationSeconds": 18.62,
+      "longTasks": [],
+      "windowMs": [
+        10461.70000000298,
+        29085.5
+      ],
+      "renderMetrics": {
+        "LayoutCount": 1864,
+        "RecalcStyleCount": 1982,
+        "LayoutDuration": 0.7326,
+        "RecalcStyleDuration": 0.4183,
+        "ScriptDuration": 0.9068,
+        "TaskDuration": 3.8011
+      },
+      "frameBudgetAccepted": false,
+      "trace": {
+        "bytes": 1438029,
+        "dataLossOccurred": false
+      }
+    },
+    {
+      "passed": true,
+      "stage": "candidate-light-trace",
+      "realModelCalls": 1,
+      "pageErrors": [],
+      "traceCategories": "devtools.timeline,blink.user_timing",
+      "browserEnvironment": {
+        "forcedSoftwareGpu": false,
+        "version": "143.0.7499.4",
+        "devices": [
+          {
+            "vendorId": 65535,
+            "deviceId": 65535,
+            "subSysId": 0,
+            "revision": 0,
+            "vendorString": "Google Inc. (Google)",
+            "deviceString": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver-5.0.0)",
+            "driverVendor": "SwANGLE",
+            "driverVersion": "5.0.0"
+          }
+        ],
+        "featureStatus": {
+          "2d_canvas": "unavailable_software",
+          "direct_rendering_display_compositor": "disabled_off_ok",
+          "gpu_compositing": "disabled_software",
+          "multiple_raster_threads": "enabled_on",
+          "opengl": "disabled_off",
+          "rasterization": "disabled_software",
+          "raw_draw": "disabled_off_ok",
+          "skia_graphite": "disabled_off",
+          "trees_in_viz": "disabled_off",
+          "video_decode": "disabled_software",
+          "video_encode": "disabled_software",
+          "webgl": "unavailable_software",
+          "webgpu": "unavailable_software",
+          "webnn": "unavailable_software"
+        },
+        "aux": {
+          "glRenderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver-5.0.0)",
+          "glVendor": "Google Inc. (Google)",
+          "glVersion": "OpenGL ES 3.0 (ANGLE 2.1.26421 git hash: e5930c3b265b)",
+          "passthroughCmdDecoder": true,
+          "sandboxed": false
+        }
+      },
+      "model": {
+        "provider": "zai-coding-cn",
+        "model": "glm-5.3-flash"
+      },
+      "responseChars": 1215,
+      "idleFrames": {
+        "samples": 196,
+        "p50ms": 16.7,
+        "p95ms": 16.8,
+        "p99ms": 16.8,
+        "maxMs": 16.8,
+        "over33ms": 0
+      },
+      "streamActiveFrames": {
+        "samples": 947,
+        "p50ms": 16.7,
+        "p95ms": 16.8,
+        "p99ms": 33.4,
+        "maxMs": 83.4,
+        "over33ms": 6
+      },
+      "allStreamFrames": {
+        "samples": 1064,
+        "p50ms": 16.7,
+        "p95ms": 16.8,
+        "p99ms": 33.4,
+        "maxMs": 83.4,
+        "over33ms": 6
+      },
+      "textUpdates": 236,
+      "durationSeconds": 18.4,
+      "longTasks": [
+        79,
+        57,
+        69
+      ],
+      "windowMs": [
+        18577.20000000298,
+        36976
+      ],
+      "renderMetrics": {
+        "LayoutCount": 1057,
+        "RecalcStyleCount": 1072,
+        "LayoutDuration": 0.8217,
+        "RecalcStyleDuration": 0.5295,
+        "ScriptDuration": 1.2081,
+        "TaskDuration": 4.3343
+      },
+      "trace": {
+        "bytes": 936666,
+        "dataLossOccurred": false
+      }
+    },
+    {
+      "passed": true,
+      "stage": "candidate-paint-containment",
+      "realModelCalls": 1,
+      "pageErrors": [],
+      "browserEnvironment": {
+        "forcedSoftwareGpu": false,
+        "version": "143.0.7499.4",
+        "devices": [
+          {
+            "vendorId": 65535,
+            "deviceId": 65535,
+            "subSysId": 0,
+            "revision": 0,
+            "vendorString": "Google Inc. (Google)",
+            "deviceString": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver-5.0.0)",
+            "driverVendor": "SwANGLE",
+            "driverVersion": "5.0.0"
+          }
+        ],
+        "featureStatus": {
+          "2d_canvas": "unavailable_software",
+          "direct_rendering_display_compositor": "disabled_off_ok",
+          "gpu_compositing": "disabled_software",
+          "multiple_raster_threads": "enabled_on",
+          "opengl": "disabled_off",
+          "rasterization": "disabled_software",
+          "raw_draw": "disabled_off_ok",
+          "skia_graphite": "disabled_off",
+          "trees_in_viz": "disabled_off",
+          "video_decode": "disabled_software",
+          "video_encode": "disabled_software",
+          "webgl": "unavailable_software",
+          "webgpu": "unavailable_software",
+          "webnn": "unavailable_software"
+        },
+        "aux": {
+          "glRenderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver-5.0.0)",
+          "glVendor": "Google Inc. (Google)",
+          "glVersion": "OpenGL ES 3.0 (ANGLE 2.1.26421 git hash: e5930c3b265b)",
+          "passthroughCmdDecoder": true,
+          "sandboxed": false
+        }
+      },
+      "model": {
+        "provider": "zai-coding-cn",
+        "model": "glm-5.3-flash"
+      },
+      "responseChars": 1274,
+      "idleFrames": {
+        "samples": 194,
+        "p50ms": 16.7,
+        "p95ms": 16.8,
+        "p99ms": 16.8,
+        "maxMs": 16.8,
+        "over33ms": 0
+      },
+      "streamActiveFrames": {
+        "samples": 955,
+        "p50ms": 16.7,
+        "p95ms": 16.8,
+        "p99ms": 50,
+        "maxMs": 116.7,
+        "over33ms": 14
+      },
+      "allStreamFrames": {
+        "samples": 1066,
+        "p50ms": 16.7,
+        "p95ms": 16.8,
+        "p99ms": 50,
+        "maxMs": 116.7,
+        "over33ms": 14
+      },
+      "textUpdates": 233,
+      "durationSeconds": 18.91,
+      "longTasks": [
+        90,
+        60
+      ],
+      "windowMs": [
+        19303.5,
+        38215.70000000298
+      ],
+      "renderMetrics": {
+        "LayoutCount": 1082,
+        "RecalcStyleCount": 1098,
+        "LayoutDuration": 0.8766,
+        "RecalcStyleDuration": 0.5928,
+        "ScriptDuration": 1.3735,
+        "TaskDuration": 4.7629
+      },
+      "trace": {
+        "bytes": 12614806,
+        "dataLossOccurred": false
+      }
+    },
+    {
+      "passed": true,
+      "stage": "candidate-visible-paragraphs",
+      "realModelCalls": 1,
+      "pageErrors": [],
+      "traceCategories": "devtools.timeline,blink.user_timing",
+      "browserEnvironment": {
+        "channel": "chrome",
+        "forcedSoftwareGpu": false,
+        "version": "157.0.8103.80",
+        "devices": [
+          {
+            "vendorId": 4098,
+            "deviceId": 30096,
+            "subSysId": 2248154835,
+            "revision": 192,
+            "vendorString": "",
+            "deviceString": "AMD Radeon RX 9060 XT",
+            "driverVendor": "AMD",
+            "driverVersion": "32.0.31044.16"
+          },
+          {
+            "vendorId": 4098,
+            "deviceId": 5056,
+            "subSysId": 331354114,
+            "revision": 197,
+            "vendorString": "",
+            "deviceString": "AMD Radeon(TM) Graphics",
+            "driverVendor": "",
+            "driverVersion": "32.0.21045.1000"
+          },
+          {
+            "vendorId": 4098,
+            "deviceId": 30096,
+            "subSysId": 2248154835,
+            "revision": 192,
+            "vendorString": "",
+            "deviceString": "AMD Radeon RX 9060 XT",
+            "driverVendor": "",
+            "driverVersion": "32.0.31044.16"
+          },
+          {
+            "vendorId": 5140,
+            "deviceId": 140,
+            "subSysId": 0,
+            "revision": 0,
+            "vendorString": "",
+            "deviceString": "Microsoft Basic Render Driver",
+            "driverVendor": "",
+            "driverVersion": "10.0.26100.9818"
+          }
+        ],
+        "featureStatus": {
+          "2d_canvas": "enabled",
+          "direct_rendering_display_compositor": "disabled_off_ok",
+          "gpu_compositing": "enabled",
+          "multiple_raster_threads": "enabled_on",
+          "opengl": "enabled_on",
+          "rasterization": "enabled",
+          "skia_graphite": "disabled_off",
+          "trees_in_viz": "disabled_off",
+          "video_decode": "enabled",
+          "video_encode": "enabled",
+          "webgl": "enabled",
+          "webgpu": "enabled",
+          "webnn": "disabled_off"
+        },
+        "aux": {
+          "glRenderer": "ANGLE (AMD, AMD Radeon RX 9060 XT (0x00007590) Direct3D11 vs_5_0 ps_5_0, D3D11-32.0.31044.16)",
+          "glVendor": "Google Inc. (AMD)",
+          "glVersion": "OpenGL ES 3.0 (ANGLE 2.1.29101 git hash: c56e2a4a9b8c)",
+          "passthroughCmdDecoder": true,
+          "sandboxed": false
+        }
+      },
+      "model": {
+        "provider": "zai-coding-cn",
+        "model": "glm-5.3-flash"
+      },
+      "responseChars": 1813,
+      "idleFrames": {
+        "samples": 321,
+        "p50ms": 10,
+        "p95ms": 10.2,
+        "p99ms": 10.2,
+        "maxMs": 10.3,
+        "over33ms": 0,
+        "over20ms": 0
+      },
+      "streamActiveFrames": {
+        "samples": 5371,
+        "p50ms": 10,
+        "p95ms": 10.2,
+        "p99ms": 10.3,
+        "maxMs": 50.2,
+        "over33ms": 3,
+        "over20ms": 15
+      },
+      "allStreamFrames": {
+        "samples": 5540,
+        "p50ms": 10,
+        "p95ms": 10.2,
+        "p99ms": 10.3,
+        "maxMs": 50.2,
+        "over33ms": 3,
+        "over20ms": 15
+      },
+      "textUpdates": 1133,
+      "durationSeconds": 55.82,
+      "longTasks": [],
+      "windowMs": [
+        10683.90000000596,
+        66501.5
+      ],
+      "renderMetrics": {
+        "LayoutCount": 5629,
+        "RecalcStyleCount": 5800,
+        "LayoutDuration": 2.3995,
+        "RecalcStyleDuration": 1.5872,
+        "ScriptDuration": 3.0767,
+        "TaskDuration": 12.9175
+      },
+      "frameBudgetAccepted": true,
+      "trace": {
+        "bytes": 4243639,
+        "dataLossOccurred": false
+      }
+    },
+    {
+      "passed": true,
+      "stage": "release-60hz-1",
+      "realModelCalls": 1,
+      "pageErrors": [],
+      "traceCategories": "devtools.timeline,blink.user_timing",
+      "browserEnvironment": {
+        "channel": "chrome",
+        "forcedSoftwareGpu": false,
+        "version": "157.0.8103.80",
+        "devices": [
+          {
+            "vendorId": 4098,
+            "deviceId": 30096,
+            "subSysId": 2248154835,
+            "revision": 192,
+            "vendorString": "",
+            "deviceString": "AMD Radeon RX 9060 XT",
+            "driverVendor": "AMD",
+            "driverVersion": "32.0.31044.16"
+          },
+          {
+            "vendorId": 4098,
+            "deviceId": 5056,
+            "subSysId": 331354114,
+            "revision": 197,
+            "vendorString": "",
+            "deviceString": "AMD Radeon(TM) Graphics",
+            "driverVendor": "",
+            "driverVersion": "32.0.21045.1000"
+          },
+          {
+            "vendorId": 4098,
+            "deviceId": 30096,
+            "subSysId": 2248154835,
+            "revision": 192,
+            "vendorString": "",
+            "deviceString": "AMD Radeon RX 9060 XT",
+            "driverVendor": "",
+            "driverVersion": "32.0.31044.16"
+          },
+          {
+            "vendorId": 5140,
+            "deviceId": 140,
+            "subSysId": 0,
+            "revision": 0,
+            "vendorString": "",
+            "deviceString": "Microsoft Basic Render Driver",
+            "driverVendor": "",
+            "driverVersion": "10.0.26100.9818"
+          }
+        ],
+        "featureStatus": {
+          "2d_canvas": "enabled",
+          "direct_rendering_display_compositor": "disabled_off_ok",
+          "gpu_compositing": "enabled",
+          "multiple_raster_threads": "enabled_on",
+          "opengl": "enabled_on",
+          "rasterization": "enabled",
+          "skia_graphite": "disabled_off",
+          "trees_in_viz": "disabled_off",
+          "video_decode": "enabled",
+          "video_encode": "enabled",
+          "webgl": "enabled",
+          "webgpu": "enabled",
+          "webnn": "disabled_off"
+        },
+        "aux": {
+          "glRenderer": "ANGLE (AMD, AMD Radeon RX 9060 XT (0x00007590) Direct3D11 vs_5_0 ps_5_0, D3D11-32.0.31044.16)",
+          "glVendor": "Google Inc. (AMD)",
+          "glVersion": "OpenGL ES 3.0 (ANGLE 2.1.29101 git hash: c56e2a4a9b8c)",
+          "passthroughCmdDecoder": true,
+          "sandboxed": false
+        }
+      },
+      "model": {
+        "provider": "zai-coding-cn",
+        "model": "glm-5.3-flash"
+      },
+      "responseChars": 4147,
+      "idleFrames": {
+        "samples": 319,
+        "p50ms": 10,
+        "p95ms": 10.2,
+        "p99ms": 10.3,
+        "maxMs": 11.2,
+        "over33ms": 0,
+        "over20ms": 0
+      },
+      "streamActiveFrames": {
+        "samples": 5927,
+        "p50ms": 10,
+        "p95ms": 10.2,
+        "p99ms": 10.3,
+        "maxMs": 60,
+        "over33ms": 3,
+        "over20ms": 12
+      },
+      "allStreamFrames": {
+        "samples": 7471,
+        "p50ms": 10,
+        "p95ms": 10.2,
+        "p99ms": 10.3,
+        "maxMs": 60,
+        "over33ms": 3,
+        "over20ms": 12
+      },
+      "textUpdates": 1184,
+      "durationSeconds": 75.04,
+      "longTasks": [],
+      "windowMs": [
+        10259.20000000298,
+        85302.89999999106
+      ],
+      "renderMetrics": {
+        "LayoutCount": 7545,
+        "RecalcStyleCount": 7687,
+        "LayoutDuration": 2.9208,
+        "RecalcStyleDuration": 1.6832,
+        "ScriptDuration": 2.9875,
+        "TaskDuration": 14.744
+      },
+      "frameBudgetAccepted": true,
+      "trace": {
+        "bytes": 5094443,
+        "dataLossOccurred": false
+      }
+    },
+    {
+      "passed": true,
+      "stage": "release-60hz-2",
+      "realModelCalls": 1,
+      "pageErrors": [],
+      "traceCategories": "devtools.timeline,blink.user_timing",
+      "browserEnvironment": {
+        "channel": "chrome",
+        "forcedSoftwareGpu": false,
+        "version": "157.0.8103.80",
+        "devices": [
+          {
+            "vendorId": 4098,
+            "deviceId": 30096,
+            "subSysId": 2248154835,
+            "revision": 192,
+            "vendorString": "",
+            "deviceString": "AMD Radeon RX 9060 XT",
+            "driverVendor": "AMD",
+            "driverVersion": "32.0.31044.16"
+          },
+          {
+            "vendorId": 4098,
+            "deviceId": 5056,
+            "subSysId": 331354114,
+            "revision": 197,
+            "vendorString": "",
+            "deviceString": "AMD Radeon(TM) Graphics",
+            "driverVendor": "",
+            "driverVersion": "32.0.21045.1000"
+          },
+          {
+            "vendorId": 4098,
+            "deviceId": 30096,
+            "subSysId": 2248154835,
+            "revision": 192,
+            "vendorString": "",
+            "deviceString": "AMD Radeon RX 9060 XT",
+            "driverVendor": "",
+            "driverVersion": "32.0.31044.16"
+          },
+          {
+            "vendorId": 5140,
+            "deviceId": 140,
+            "subSysId": 0,
+            "revision": 0,
+            "vendorString": "",
+            "deviceString": "Microsoft Basic Render Driver",
+            "driverVendor": "",
+            "driverVersion": "10.0.26100.9818"
+          }
+        ],
+        "featureStatus": {
+          "2d_canvas": "enabled",
+          "direct_rendering_display_compositor": "disabled_off_ok",
+          "gpu_compositing": "enabled",
+          "multiple_raster_threads": "enabled_on",
+          "opengl": "enabled_on",
+          "rasterization": "enabled",
+          "skia_graphite": "disabled_off",
+          "trees_in_viz": "disabled_off",
+          "video_decode": "enabled",
+          "video_encode": "enabled",
+          "webgl": "enabled",
+          "webgpu": "enabled",
+          "webnn": "disabled_off"
+        },
+        "aux": {
+          "glRenderer": "ANGLE (AMD, AMD Radeon RX 9060 XT (0x00007590) Direct3D11 vs_5_0 ps_5_0, D3D11-32.0.31044.16)",
+          "glVendor": "Google Inc. (AMD)",
+          "glVersion": "OpenGL ES 3.0 (ANGLE 2.1.29101 git hash: c56e2a4a9b8c)",
+          "passthroughCmdDecoder": true,
+          "sandboxed": false
+        }
+      },
+      "model": {
+        "provider": "zai-coding-cn",
+        "model": "glm-5.3-flash"
+      },
+      "responseChars": 4256,
+      "idleFrames": {
+        "samples": 320,
+        "p50ms": 10,
+        "p95ms": 10.2,
+        "p99ms": 10.3,
+        "maxMs": 10.4,
+        "over33ms": 0,
+        "over20ms": 0
+      },
+      "streamActiveFrames": {
+        "samples": 6802,
+        "p50ms": 10,
+        "p95ms": 10.2,
+        "p99ms": 10.4,
+        "maxMs": 89.9,
+        "over33ms": 8,
+        "over20ms": 32
+      },
+      "allStreamFrames": {
+        "samples": 7567,
+        "p50ms": 10,
+        "p95ms": 10.2,
+        "p99ms": 10.4,
+        "maxMs": 89.9,
+        "over33ms": 9,
+        "over20ms": 33
+      },
+      "textUpdates": 1180,
+      "durationSeconds": 76.69,
+      "longTasks": [
+        57
+      ],
+      "windowMs": [
+        9613.09999999404,
+        86307.5
+      ],
+      "renderMetrics": {
+        "LayoutCount": 7636,
+        "RecalcStyleCount": 7787,
+        "LayoutDuration": 3.4416,
+        "RecalcStyleDuration": 1.9927,
+        "ScriptDuration": 4.2946,
+        "TaskDuration": 17.8544
+      },
+      "frameBudgetAccepted": false,
+      "trace": {
+        "bytes": 5580453,
+        "dataLossOccurred": false
+      }
+    },
+    {
+      "passed": true,
+      "stage": "release-ai-deltas-fixed-1",
+      "realModelCalls": 1,
+      "pageErrors": [],
+      "traceCategories": "devtools.timeline,blink.user_timing",
+      "browserEnvironment": {
+        "channel": "chrome",
+        "forcedSoftwareGpu": false,
+        "version": "157.0.8103.80",
+        "devices": [
+          {
+            "vendorId": 4098,
+            "deviceId": 30096,
+            "subSysId": 2248154835,
+            "revision": 192,
+            "vendorString": "",
+            "deviceString": "AMD Radeon RX 9060 XT",
+            "driverVendor": "AMD",
+            "driverVersion": "32.0.31044.16"
+          },
+          {
+            "vendorId": 4098,
+            "deviceId": 5056,
+            "subSysId": 331354114,
+            "revision": 197,
+            "vendorString": "",
+            "deviceString": "AMD Radeon(TM) Graphics",
+            "driverVendor": "",
+            "driverVersion": "32.0.21045.1000"
+          },
+          {
+            "vendorId": 4098,
+            "deviceId": 30096,
+            "subSysId": 2248154835,
+            "revision": 192,
+            "vendorString": "",
+            "deviceString": "AMD Radeon RX 9060 XT",
+            "driverVendor": "",
+            "driverVersion": "32.0.31044.16"
+          },
+          {
+            "vendorId": 5140,
+            "deviceId": 140,
+            "subSysId": 0,
+            "revision": 0,
+            "vendorString": "",
+            "deviceString": "Microsoft Basic Render Driver",
+            "driverVendor": "",
+            "driverVersion": "10.0.26100.9818"
+          }
+        ],
+        "featureStatus": {
+          "2d_canvas": "enabled",
+          "direct_rendering_display_compositor": "disabled_off_ok",
+          "gpu_compositing": "enabled",
+          "multiple_raster_threads": "enabled_on",
+          "opengl": "enabled_on",
+          "rasterization": "enabled",
+          "skia_graphite": "disabled_off",
+          "trees_in_viz": "disabled_off",
+          "video_decode": "enabled",
+          "video_encode": "enabled",
+          "webgl": "enabled",
+          "webgpu": "enabled",
+          "webnn": "disabled_off"
+        },
+        "aux": {
+          "glRenderer": "ANGLE (AMD, AMD Radeon RX 9060 XT (0x00007590) Direct3D11 vs_5_0 ps_5_0, D3D11-32.0.31044.16)",
+          "glVendor": "Google Inc. (AMD)",
+          "glVersion": "OpenGL ES 3.0 (ANGLE 2.1.29101 git hash: c56e2a4a9b8c)",
+          "passthroughCmdDecoder": true,
+          "sandboxed": false
+        }
+      },
+      "model": {
+        "provider": "zai-coding-cn",
+        "model": "glm-5.3-flash"
+      },
+      "responseChars": 5066,
+      "visibleResponseChars": 1776,
+      "idleFrames": {
+        "samples": 320,
+        "p50ms": 10,
+        "p95ms": 10.2,
+        "p99ms": 10.2,
+        "maxMs": 10.3,
+        "over33ms": 0,
+        "over20ms": 0
+      },
+      "streamActiveFrames": {
+        "samples": 6343,
+        "p50ms": 10,
+        "p95ms": 10.2,
+        "p99ms": 10.3,
+        "maxMs": 40.1,
+        "over33ms": 2,
+        "over20ms": 7
+      },
+      "replyWindowFrames": {
+        "samples": 6376,
+        "p50ms": 10,
+        "p95ms": 10.2,
+        "p99ms": 10.3,
+        "maxMs": 40.1,
+        "over33ms": 2,
+        "over20ms": 7
+      },
+      "allStreamFrames": {
+        "samples": 6625,
+        "p50ms": 10,
+        "p95ms": 10.2,
+        "p99ms": 10.3,
+        "maxMs": 70.1,
+        "over33ms": 6,
+        "over20ms": 11
+      },
+      "textUpdates": 1307,
+      "durationSeconds": 66.59,
+      "longTasks": [],
+      "windowMs": [
+        9760.90000000596,
+        76353.10000000894
+      ],
+      "renderMetrics": {
+        "LayoutCount": 6699,
+        "RecalcStyleCount": 6855,
+        "LayoutDuration": 2.7654,
+        "RecalcStyleDuration": 1.6099,
+        "ScriptDuration": 3.4495,
+        "TaskDuration": 14.4604
+      },
+      "replyWindowMs": [
+        12048.40000000596,
+        75954.90000000596
+      ],
+      "frameBudgetAccepted": true,
+      "trace": {
+        "bytes": 5048285,
+        "dataLossOccurred": false
+      }
+    },
+    {
+      "passed": true,
+      "stage": "release-ai-deltas-fixed-2",
+      "realModelCalls": 1,
+      "pageErrors": [],
+      "traceCategories": "devtools.timeline,blink.user_timing",
+      "browserEnvironment": {
+        "channel": "chrome",
+        "forcedSoftwareGpu": false,
+        "version": "157.0.8103.80",
+        "devices": [
+          {
+            "vendorId": 4098,
+            "deviceId": 30096,
+            "subSysId": 2248154835,
+            "revision": 192,
+            "vendorString": "",
+            "deviceString": "AMD Radeon RX 9060 XT",
+            "driverVendor": "AMD",
+            "driverVersion": "32.0.31044.16"
+          },
+          {
+            "vendorId": 4098,
+            "deviceId": 5056,
+            "subSysId": 331354114,
+            "revision": 197,
+            "vendorString": "",
+            "deviceString": "AMD Radeon(TM) Graphics",
+            "driverVendor": "",
+            "driverVersion": "32.0.21045.1000"
+          },
+          {
+            "vendorId": 4098,
+            "deviceId": 30096,
+            "subSysId": 2248154835,
+            "revision": 192,
+            "vendorString": "",
+            "deviceString": "AMD Radeon RX 9060 XT",
+            "driverVendor": "",
+            "driverVersion": "32.0.31044.16"
+          },
+          {
+            "vendorId": 5140,
+            "deviceId": 140,
+            "subSysId": 0,
+            "revision": 0,
+            "vendorString": "",
+            "deviceString": "Microsoft Basic Render Driver",
+            "driverVendor": "",
+            "driverVersion": "10.0.26100.9818"
+          }
+        ],
+        "featureStatus": {
+          "2d_canvas": "enabled",
+          "direct_rendering_display_compositor": "disabled_off_ok",
+          "gpu_compositing": "enabled",
+          "multiple_raster_threads": "enabled_on",
+          "opengl": "enabled_on",
+          "rasterization": "enabled",
+          "skia_graphite": "disabled_off",
+          "trees_in_viz": "disabled_off",
+          "video_decode": "enabled",
+          "video_encode": "enabled",
+          "webgl": "enabled",
+          "webgpu": "enabled",
+          "webnn": "disabled_off"
+        },
+        "aux": {
+          "glRenderer": "ANGLE (AMD, AMD Radeon RX 9060 XT (0x00007590) Direct3D11 vs_5_0 ps_5_0, D3D11-32.0.31044.16)",
+          "glVendor": "Google Inc. (AMD)",
+          "glVersion": "OpenGL ES 3.0 (ANGLE 2.1.29101 git hash: c56e2a4a9b8c)",
+          "passthroughCmdDecoder": true,
+          "sandboxed": false
+        }
+      },
+      "model": {
+        "provider": "zai-coding-cn",
+        "model": "glm-5.3-flash"
+      },
+      "responseChars": 4580,
+      "visibleResponseChars": 1960,
+      "idleFrames": {
+        "samples": 320,
+        "p50ms": 10,
+        "p95ms": 10.2,
+        "p99ms": 10.3,
+        "maxMs": 10.4,
+        "over33ms": 0,
+        "over20ms": 0
+      },
+      "streamActiveFrames": {
+        "samples": 5701,
+        "p50ms": 10,
+        "p95ms": 10.2,
+        "p99ms": 10.3,
+        "maxMs": 60.1,
+        "over33ms": 1,
+        "over20ms": 3
+      },
+      "replyWindowFrames": {
+        "samples": 5846,
+        "p50ms": 10,
+        "p95ms": 10.2,
+        "p99ms": 10.3,
+        "maxMs": 60.1,
+        "over33ms": 1,
+        "over20ms": 3
+      },
+      "allStreamFrames": {
+        "samples": 6015,
+        "p50ms": 10,
+        "p95ms": 10.2,
+        "p99ms": 10.3,
+        "maxMs": 70.1,
+        "over33ms": 4,
+        "over20ms": 7
+      },
+      "textUpdates": 1112,
+      "durationSeconds": 60.49,
+      "longTasks": [
+        63
+      ],
+      "windowMs": [
+        10677.70000000298,
+        71171.70000000298
+      ],
+      "renderMetrics": {
+        "LayoutCount": 6080,
+        "RecalcStyleCount": 6242,
+        "LayoutDuration": 2.3632,
+        "RecalcStyleDuration": 1.4224,
+        "ScriptDuration": 3.0092,
+        "TaskDuration": 12.6139
+      },
+      "replyWindowMs": [
+        12182.29999999702,
+        70807.10000000894
+      ],
+      "frameBudgetAccepted": true,
+      "trace": {
+        "bytes": 4530251,
+        "dataLossOccurred": false
+      }
+    },
+    {
+      "passed": true,
+      "stage": "release-ai-deltas-fixed-3",
+      "realModelCalls": 1,
+      "pageErrors": [],
+      "traceCategories": "devtools.timeline,blink.user_timing",
+      "browserEnvironment": {
+        "channel": "chrome",
+        "forcedSoftwareGpu": false,
+        "version": "157.0.8103.80",
+        "devices": [
+          {
+            "vendorId": 4098,
+            "deviceId": 30096,
+            "subSysId": 2248154835,
+            "revision": 192,
+            "vendorString": "",
+            "deviceString": "AMD Radeon RX 9060 XT",
+            "driverVendor": "AMD",
+            "driverVersion": "32.0.31044.16"
+          },
+          {
+            "vendorId": 4098,
+            "deviceId": 5056,
+            "subSysId": 331354114,
+            "revision": 197,
+            "vendorString": "",
+            "deviceString": "AMD Radeon(TM) Graphics",
+            "driverVendor": "",
+            "driverVersion": "32.0.21045.1000"
+          },
+          {
+            "vendorId": 4098,
+            "deviceId": 30096,
+            "subSysId": 2248154835,
+            "revision": 192,
+            "vendorString": "",
+            "deviceString": "AMD Radeon RX 9060 XT",
+            "driverVendor": "",
+            "driverVersion": "32.0.31044.16"
+          },
+          {
+            "vendorId": 5140,
+            "deviceId": 140,
+            "subSysId": 0,
+            "revision": 0,
+            "vendorString": "",
+            "deviceString": "Microsoft Basic Render Driver",
+            "driverVendor": "",
+            "driverVersion": "10.0.26100.9818"
+          }
+        ],
+        "featureStatus": {
+          "2d_canvas": "enabled",
+          "direct_rendering_display_compositor": "disabled_off_ok",
+          "gpu_compositing": "enabled",
+          "multiple_raster_threads": "enabled_on",
+          "opengl": "enabled_on",
+          "rasterization": "enabled",
+          "skia_graphite": "disabled_off",
+          "trees_in_viz": "disabled_off",
+          "video_decode": "enabled",
+          "video_encode": "enabled",
+          "webgl": "enabled",
+          "webgpu": "enabled",
+          "webnn": "disabled_off"
+        },
+        "aux": {
+          "glRenderer": "ANGLE (AMD, AMD Radeon RX 9060 XT (0x00007590) Direct3D11 vs_5_0 ps_5_0, D3D11-32.0.31044.16)",
+          "glVendor": "Google Inc. (AMD)",
+          "glVersion": "OpenGL ES 3.0 (ANGLE 2.1.29101 git hash: c56e2a4a9b8c)",
+          "passthroughCmdDecoder": true,
+          "sandboxed": false
+        }
+      },
+      "model": {
+        "provider": "zai-coding-cn",
+        "model": "glm-5.3-flash"
+      },
+      "responseChars": 4531,
+      "visibleResponseChars": 1840,
+      "idleFrames": {
+        "samples": 320,
+        "p50ms": 10,
+        "p95ms": 10.2,
+        "p99ms": 10.3,
+        "maxMs": 10.4,
+        "over33ms": 0,
+        "over20ms": 0
+      },
+      "streamActiveFrames": {
+        "samples": 5365,
+        "p50ms": 10,
+        "p95ms": 10.2,
+        "p99ms": 10.3,
+        "maxMs": 39.9,
+        "over33ms": 1,
+        "over20ms": 4
+      },
+      "replyWindowFrames": {
+        "samples": 5460,
+        "p50ms": 10,
+        "p95ms": 10.2,
+        "p99ms": 10.3,
+        "maxMs": 39.9,
+        "over33ms": 1,
+        "over20ms": 4
+      },
+      "allStreamFrames": {
+        "samples": 5681,
+        "p50ms": 10,
+        "p95ms": 10.2,
+        "p99ms": 10.3,
+        "maxMs": 69.9,
+        "over33ms": 3,
+        "over20ms": 11
+      },
+      "textUpdates": 1114,
+      "durationSeconds": 57.13,
+      "longTasks": [],
+      "windowMs": [
+        11183.29999999702,
+        68317.79999999702
+      ],
+      "renderMetrics": {
+        "LayoutCount": 5766,
+        "RecalcStyleCount": 5940,
+        "LayoutDuration": 2.231,
+        "RecalcStyleDuration": 1.5805,
+        "ScriptDuration": 2.8721,
+        "TaskDuration": 12.0041
+      },
+      "replyWindowMs": [
+        13465,
+        68202.19999998808
+      ],
+      "frameBudgetAccepted": true,
+      "trace": {
+        "bytes": 4401320,
+        "dataLossOccurred": false
+      }
+    },
+    {
+      "passed": true,
+      "stage": "release-visible-1",
+      "realModelCalls": 1,
+      "pageErrors": [],
+      "traceCategories": "devtools.timeline,blink.user_timing",
+      "browserEnvironment": {
+        "channel": "chrome",
+        "forcedSoftwareGpu": false,
+        "version": "157.0.8103.80",
+        "devices": [
+          {
+            "vendorId": 4098,
+            "deviceId": 30096,
+            "subSysId": 2248154835,
+            "revision": 192,
+            "vendorString": "",
+            "deviceString": "AMD Radeon RX 9060 XT",
+            "driverVendor": "AMD",
+            "driverVersion": "32.0.31044.16"
+          },
+          {
+            "vendorId": 4098,
+            "deviceId": 5056,
+            "subSysId": 331354114,
+            "revision": 197,
+            "vendorString": "",
+            "deviceString": "AMD Radeon(TM) Graphics",
+            "driverVendor": "",
+            "driverVersion": "32.0.21045.1000"
+          },
+          {
+            "vendorId": 4098,
+            "deviceId": 30096,
+            "subSysId": 2248154835,
+            "revision": 192,
+            "vendorString": "",
+            "deviceString": "AMD Radeon RX 9060 XT",
+            "driverVendor": "",
+            "driverVersion": "32.0.31044.16"
+          },
+          {
+            "vendorId": 5140,
+            "deviceId": 140,
+            "subSysId": 0,
+            "revision": 0,
+            "vendorString": "",
+            "deviceString": "Microsoft Basic Render Driver",
+            "driverVendor": "",
+            "driverVersion": "10.0.26100.9818"
+          }
+        ],
+        "featureStatus": {
+          "2d_canvas": "enabled",
+          "direct_rendering_display_compositor": "disabled_off_ok",
+          "gpu_compositing": "enabled",
+          "multiple_raster_threads": "enabled_on",
+          "opengl": "enabled_on",
+          "rasterization": "enabled",
+          "skia_graphite": "disabled_off",
+          "trees_in_viz": "disabled_off",
+          "video_decode": "enabled",
+          "video_encode": "enabled",
+          "webgl": "enabled",
+          "webgpu": "enabled",
+          "webnn": "disabled_off"
+        },
+        "aux": {
+          "glRenderer": "ANGLE (AMD, AMD Radeon RX 9060 XT (0x00007590) Direct3D11 vs_5_0 ps_5_0, D3D11-32.0.31044.16)",
+          "glVendor": "Google Inc. (AMD)",
+          "glVersion": "OpenGL ES 3.0 (ANGLE 2.1.29101 git hash: c56e2a4a9b8c)",
+          "passthroughCmdDecoder": true,
+          "sandboxed": false
+        }
+      },
+      "model": {
+        "provider": "zai-coding-cn",
+        "model": "glm-5.3-flash"
+      },
+      "responseChars": 4469,
+      "visibleResponseChars": 1940,
+      "idleFrames": {
+        "samples": 321,
+        "p50ms": 10,
+        "p95ms": 10.2,
+        "p99ms": 10.3,
+        "maxMs": 10.3,
+        "over33ms": 0,
+        "over20ms": 0
+      },
+      "streamActiveFrames": {
+        "samples": 5667,
+        "p50ms": 10,
+        "p95ms": 10.2,
+        "p99ms": 10.3,
+        "maxMs": 80.2,
+        "over33ms": 6,
+        "over20ms": 16
+      },
+      "allStreamFrames": {
+        "samples": 5834,
+        "p50ms": 10,
+        "p95ms": 10.2,
+        "p99ms": 10.3,
+        "maxMs": 80.2,
+        "over33ms": 6,
+        "over20ms": 16
+      },
+      "textUpdates": 1213,
+      "durationSeconds": 58.87,
+      "longTasks": [],
+      "windowMs": [
+        11428.39999999106,
+        70294.20000000298
+      ],
+      "renderMetrics": {
+        "LayoutCount": 5913,
+        "RecalcStyleCount": 6057,
+        "LayoutDuration": 2.5489,
+        "RecalcStyleDuration": 1.5894,
+        "ScriptDuration": 3.2597,
+        "TaskDuration": 13.7055
+      },
+      "frameBudgetAccepted": false,
+      "trace": {
+        "bytes": 4462881,
+        "dataLossOccurred": false
+      }
+    }
+  ]
+}

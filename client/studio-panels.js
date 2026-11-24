@@ -1,6 +1,6 @@
-import {createStudioComponents,studioEngines} from './studio-system.js?v=167';
-import {selectedObjectIds} from './native-contract.js?v=167';
-import {uint64Parameter} from './native-protocol.js?v=167';
+import {createStudioComponents,studioEngines} from './studio-system.js?v=168';
+import {selectedObjectIds} from './native-contract.js?v=168';
+import {uint64Parameter} from './native-protocol.js?v=168';
 
 export function createStudioPanels(React) {
   const h=React.createElement;

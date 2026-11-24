@@ -186,9 +186,17 @@ body[data-ds-dark-theme] .dcApp[data-studio] {
 .dcApp[data-studio] .dcNativeStage[data-canvas=professional] .dcAiCanvasTools { left:auto;right:15px;bottom:11px;translate:none; }
 .dcStudioHomeHero .dcPrimary { margin-top:18px;padding-inline:15px; }
 .dcApp[data-studio] .dcChatConversation { contain:inline-size; }
+.dcApp[data-studio] .dcChat { contain:layout style; }
+body:has(.dcApp[data-studio]) [data-slot="sidebar.workspaces"] { contain:layout style;isolation:isolate; }
+body:has(.dcApp[data-studio]) [data-slot="sidebar"] [data-shimmer] > [aria-hidden="true"][inert] { display:none; }
 /* Its flex parent supplies the SDK transcript viewport dimensions. Keep growing turns local to that viewport. */
-.dcApp[data-studio] .dcChatConversation [data-conversation-scroll] { contain:size layout style;isolation:isolate; }
+.dcApp[data-studio] .dcChatConversation [data-conversation-scroll] { contain:strict;isolation:isolate;transform:translateZ(0); }
 .dcApp[data-studio] .dcChatConversation [data-chat-flow] { contain:layout; }
+/* Keep earlier reply paragraphs in the DOM while the browser skips their offscreen layout and paint. */
+.dcApp[data-studio] .dcChatConversation :is([data-streaming],[data-text-interaction-source]) :is(p,pre,blockquote) {
+  content-visibility:auto;
+  contain-intrinsic-size:auto 64px;
+}
 .dcApp[data-studio] .dcChatConversation [data-shimmer] > [aria-hidden="true"][inert] { display:none; }
 /* Keep the embedded DSH elapsed-time row and its static icon. The supplied APNG animates a mask while text streams. */
 .dcApp[data-studio] .dcChatConversation [data-chat-running] span[aria-hidden="true"]:has(> svg) > span { display:none; }

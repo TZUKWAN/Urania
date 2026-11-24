@@ -2,10 +2,10 @@
   "schemaVersion": 2,
   "project": "Urania",
   "snapshotDate": "2026-11-18",
-  "packageVersion": "1.3.0-dev.152",
-  "uiBuild": 167,
-  "baseCommit": "25d9da9d79ad958cca12faab3d1cfc8fdd983b19",
-  "sourceBranch": "design/ui167-studio-polish",
+  "packageVersion": "1.3.0",
+  "uiBuild": 168,
+  "baseCommit": "caae12443787e2e71a98d5145ee03dd17e1ecf64",
+  "sourceBranch": "fix/ui168-streaming",
   "files": [
     {
       "path": ".gitattributes",
@@ -59,8 +59,8 @@
     },
     {
       "path": "DEPLOYMENT_AND_RECOVERY.md",
-      "bytes": 6358,
-      "sha256": "7d44177d9160fce3d80101d70026dac78c8fb6e541122e07eb42dcc5a2f38271"
+      "bytes": 6384,
+      "sha256": "c601c908583f97ed78feff792fb2f7720f76a95b2c64ec9e4384bd8f1e0a62ff"
     },
     {
       "path": "FIX_LOG.md",
@@ -82,8 +82,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 1993,
-      "sha256": "e867634569bc40f6936589abe0b67cf0c8d73eed143c3bbca10e4ba05c0e36eb"
+      "bytes": 2010,
+      "sha256": "6f487d1ea7ea8e90c898d638f56997ace439430ad1f0a6a37e5d92bb3bf80f9e"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
@@ -116,12 +116,12 @@
     {
       "path": "client/actions.js",
       "bytes": 80817,
-      "sha256": "adef80932e197ccbec700767b3b1d7a4640595f16de1678272334b949f1eb37c"
+      "sha256": "d7a1965f03aef1744fb3440ab6d5281deebe250c329d2cb60ca0af1251a6762b"
     },
     {
       "path": "client/ai-canvas.js",
       "bytes": 3024,
-      "sha256": "959aa4badd2a6ebdd674815570e0317899fb543d8d5a9287ad9146df030848a2"
+      "sha256": "9a68b354417092e808b1d9b42b8e535bb250ee6d14348f2683f7a8a0f4c9a5a0"
     },
     {
       "path": "client/brand-panel.js",
@@ -145,12 +145,12 @@
     {
       "path": "client/client.js",
       "bytes": 11774,
-      "sha256": "04cd1588a2078487202576d0c4061548a40758bef0c4bd9690e12084f9db6e78"
+      "sha256": "28024a1a0f456e09fd5ae3ede7aa45490e9d8477d40e1f3281f9c7906eda77a8"
     },
     {
       "path": "client/deck-local-tools.js",
       "bytes": 4424,
-      "sha256": "075f671fa51d77bad80ffb57e2cf4170c17faf32002783dd4141c989aa81a569"
+      "sha256": "a6919dad8426f02ebefdb8308a3f192dd13e88fe670ab7b92a782161638e830a"
     },
     {
       "path": "client/deck.js",
@@ -162,12 +162,12 @@
     {
       "path": "client/design-diagnostics.js",
       "bytes": 2789,
-      "sha256": "09eb748cb7dc7c85bcd319518875dd6649e70b986de024c095a539c43d065073"
+      "sha256": "80960d42dc97f49f9dc4496b7daa704e5fee11c58bb78ac61b767b6820679108"
     },
     {
       "path": "client/design-feedback.js",
       "bytes": 12763,
-      "sha256": "1c03551bee25204b206809250474f81957816ce2f2dc679530117f2f0eadbba9"
+      "sha256": "4c498da14788941f5c79ec6cce442da3225b4186f442885433f4701a204655f6"
     },
     {
       "path": "client/design-session.js",
@@ -179,7 +179,7 @@
     {
       "path": "client/dsh-context.js",
       "bytes": 19288,
-      "sha256": "604077cfa5d1d8bd67d42399bfb2012a1888afd6f4e6c2ad665d7d9a3235a38b"
+      "sha256": "1d4e0ab4bc4a76c1c06c9f14e93f5c03d5e791bb8a109746b3f168a2bb7f9e71"
     },
     {
       "path": "client/ecommerce-panel.js",
@@ -191,12 +191,12 @@
     {
       "path": "client/editor-frame.js",
       "bytes": 19435,
-      "sha256": "17863387ff8d23175b398f24a46b77839cb4ff5b54ade4f357e438c9c73e476f"
+      "sha256": "ab6f54d192184a79151c7c02915daf85c4372dcfacc90d5aa2f8b266e6fb3b3e"
     },
     {
       "path": "client/editor-surface.js",
       "bytes": 5935,
-      "sha256": "63d9af70a39b1ff6245ebcba6f4d3d41d4c00b70c37d99a27ee1e8fde3f20773"
+      "sha256": "c25c071821f1e4b8f52f748f0a795bdee5f02c1dc504d5adc44214a93073054c"
     },
     {
       "path": "client/engine.js",
@@ -222,7 +222,7 @@
     {
       "path": "client/feedback-contract.js",
       "bytes": 5082,
-      "sha256": "1cd7c6f699c91176ecd9c8ef65813164614324ba173a085c128f1dccb08801dc"
+      "sha256": "af6600e00b58b08d0b0ec50c4784f8180c0c3957e5b8443fcf3e27cf7c14b500"
     },
     {
       "path": "client/figma-mcp-panel.js",
@@ -241,7 +241,7 @@
     {
       "path": "client/html-workspace.js",
       "bytes": 95470,
-      "sha256": "b49d798aaee79e7965e75719ccb408ceb67fc8ceed3a2588a07ee1f85d4d7fa0"
+      "sha256": "95f735606f57c24b816f8d63a408a576b92e4db2c6ee1f759db9811566c9f919"
     },
     {
       "path": "client/image-adoption.js",
@@ -307,27 +307,27 @@
     {
       "path": "client/motion-workspace.js",
       "bytes": 15572,
-      "sha256": "dad2584c405accfbbde754d29e70e720b0fab7868c2309ab1fc51db53734afe6"
+      "sha256": "3f980ff5d6209ac8048605ee69c8d8972d6903f1c29f6a9c8bdcf8fc0c6494f1"
     },
     {
       "path": "client/native-ai-input.js",
       "bytes": 3685,
-      "sha256": "a64b5efe04359376c1a32ade232ed19cf02eb60ff5bb9327643c524aff67b72f"
+      "sha256": "d1f4081feddab78edf357d7f43799ce224598c68090d409d3ae2984007bf95f4"
     },
     {
       "path": "client/native-context-tools.js",
       "bytes": 3730,
-      "sha256": "2265d18a6163a9a6f7e5480f81a7d15b208521d975642cdf746ca59117e23538"
+      "sha256": "8ed8e0d1f9cd96c7f4b91e36e62585ed030e297a27ce12f0d1b348736d9c0cfb"
     },
     {
       "path": "client/native-contract.js",
       "bytes": 7813,
-      "sha256": "433572fe36f4791e04b2c74fe10ad315076d6fc5672e848f537d7f8c065f345b"
+      "sha256": "c601085d8918e46ce197c56ced96762280d7b6a46493ce8bfed109e76f09a90d"
     },
     {
       "path": "client/native-controller.js",
       "bytes": 146300,
-      "sha256": "f779635d22cac07b3263f91fb2cefc129d1aff81102f874adc35eda25a25e3c8"
+      "sha256": "b87d6f99b07a68746e093e049b7c7127fe9d6d62d2decdd31e460845eae18b06"
     },
     {
       "path": "client/native-protocol.js",
@@ -339,12 +339,12 @@
     {
       "path": "client/native-reference.js",
       "bytes": 11225,
-      "sha256": "9e38df90bfb6027bfc600ea99fe7b42bb5de48caf873de7f029b2644bac4940f"
+      "sha256": "c57764e6253ae24faf771d812f43cf6afaf7c8f6a2d585041f5e286ec3c4bbf8"
     },
     {
       "path": "client/native-workspace.js",
       "bytes": 106823,
-      "sha256": "5c708f887e7a2ee9262f1820fa5e5f74fc04f5c22631a71c05fe80a50adf4acd"
+      "sha256": "ba65a2b4cbe930774e4ee8830c495467c290dca86ed3b036759aff8fff0e9877"
     },
     {
       "path": "client/path.js",
@@ -377,7 +377,7 @@
     {
       "path": "client/selection-ai.js",
       "bytes": 6211,
-      "sha256": "6f7e2e5c9f6409fbec00c5750810f920d8e828d5e543322f776adcc536bf6b82"
+      "sha256": "6161b72ddd1bc1cbca86c6408b1d34250f5db68ea4dd23c8756bdd2b72eb624d"
     },
     {
       "path": "client/selection.js",
@@ -401,17 +401,17 @@
     {
       "path": "client/studio-image-workspace.js",
       "bytes": 43196,
-      "sha256": "1b3ebff4b528487a0c73acaa01c8e7da70b570f9cd8e9a0c72af80b6e5db3574"
+      "sha256": "3a8d5ab6838fcdf41bf8f1ebf15d691a24a730c692c83647d96243194d9d03a7"
     },
     {
       "path": "client/studio-panels.js",
       "bytes": 6180,
-      "sha256": "8b7c44390eab941b4acafd6304207e6b15093bdab777af6b3d435ec125a39918"
+      "sha256": "d627fe13f86d733e0fa2a744c75f0f0e0eba4412103e6267d02d5aa0ddec86f6"
     },
     {
       "path": "client/studio-system.js",
-      "bytes": 34354,
-      "sha256": "325318edb19e1c2c6849980aa6574062698d19a7d8782c0a762c3b88775884ff"
+      "bytes": 34930,
+      "sha256": "4ab63d3b904d2f856dc532bf05d5c8cf08cf09f0ca66688bb48602aac5c9d477"
     },
     {
       "path": "client/svg-export.js",
@@ -444,7 +444,7 @@
     {
       "path": "client/ui.js",
       "bytes": 110449,
-      "sha256": "630424cca8a1a7768e49c8c7cf136d094cdf294636c9816cfbe096f42de9460e"
+      "sha256": "5e4a7c95972c554863803736270b5061f18efa907709a3625c14b5d9ce0fe47d"
     },
     {
       "path": "client/variant-ui.js",
@@ -1140,6 +1140,66 @@
       "path": "docs/ui167/performance-trace-summary.json",
       "bytes": 21967,
       "sha256": "a0e7ece95aec6533573dec5fa00ce6c9998c87bbb4f126fcb8d86dac98674c15"
+    },
+    {
+      "path": "docs/ui168/REPORT.md",
+      "bytes": 2217,
+      "sha256": "67c5fe619cf455bcb656bd2e608c9b581db94c448fcf9b2b608d04451d2cf960"
+    },
+    {
+      "path": "docs/ui168/VERIFICATION.json",
+      "bytes": 5755,
+      "sha256": "7263170c91d4454e317fe3431780f9d6a30d6ea7fc390f8836a7ab277af8e87b"
+    },
+    {
+      "path": "docs/ui168/historical-snapshots.json",
+      "bytes": 1671,
+      "sha256": "6a849969737d24bec516bae94049837e4ed7f34808a6afcf2fb2e48ad2e24598"
+    },
+    {
+      "path": "docs/ui168/performance.json",
+      "bytes": 54465,
+      "sha256": "b6019f677a2f3ed1a7d4b247643f3590746309bd92dfd8caa4b9bce84efc9a28"
+    },
+    {
+      "path": "docs/ui168/powerpoint/REVIEW.md",
+      "bytes": 1012,
+      "sha256": "f4a9a4512c81d00162fbc4fc0940e844ae33d5e0fa47804007e63cf52063ffbc"
+    },
+    {
+      "path": "docs/ui168/powerpoint/actual.json",
+      "bytes": 16015,
+      "sha256": "2a3977215d203449c176097932880149a7e45633a6ef9c9b4a43b70375216b09"
+    },
+    {
+      "path": "docs/ui168/powerpoint/slide-01.png",
+      "bytes": 98375,
+      "sha256": "b93746118011b89fb8e1ddc698ea9792235760b2395e4ee30ffc20a4efec123d"
+    },
+    {
+      "path": "docs/ui168/powerpoint/slide-02.png",
+      "bytes": 119572,
+      "sha256": "38bc5cee8ac4d84e3e801c168a3244f78fc69aea3561d9007e5ed44da4c82464"
+    },
+    {
+      "path": "docs/ui168/powerpoint/slide-03.png",
+      "bytes": 57473,
+      "sha256": "225b7b7ab7373622361932305fd009ae2bd18e8dfe1b5e5c68820e5fa14bbe27"
+    },
+    {
+      "path": "docs/ui168/powerpoint/slide-04.png",
+      "bytes": 64520,
+      "sha256": "eb1d55db738cb940a64bd037cd86223895e14f5ad038869bb9d38d131f28e16b"
+    },
+    {
+      "path": "docs/ui168/powerpoint/slide-05.png",
+      "bytes": 87876,
+      "sha256": "66ec3382daffafc9337e28926d1f426859c2cb706d28606e36fbbc51bb633b04"
+    },
+    {
+      "path": "docs/ui168/powerpoint/slide-06.png",
+      "bytes": 55177,
+      "sha256": "0ea037e06c8b5de584fdbb43b0209f491c799af20f2a3d0b25cc64b2ec319b02"
     },
     {
       "path": "docs/upstream-command-candidates.json",
@@ -4689,8 +4749,8 @@
     },
     {
       "path": "motion-runtime-lock.json",
-      "bytes": 8588,
-      "sha256": "e1f6bcaeaa378072f4733e19951b78f5730fd8093dc866aba0f2d9c676f41f15"
+      "bytes": 8580,
+      "sha256": "444b128a8cc0fb1e0fbc28cc2215f2d608ad3de191608817bd33d4e3831a4ad8"
     },
     {
       "path": "motion-worker/entry.mjs",
@@ -4715,8 +4775,8 @@
     },
     {
       "path": "package.json",
-      "bytes": 2062,
-      "sha256": "7dd8deb2f4a2d3d70374bc380af8019a2c7fde7082503f9ca735799ef80d7ce9"
+      "bytes": 2054,
+      "sha256": "6813be065b006a74aee164f7109543522c0da4fbd79e4c0c10a42a769b3d2c72"
     },
     {
       "path": "release/SHA256SUMS.txt",
@@ -4725,8 +4785,8 @@
     },
     {
       "path": "release/runtime-assets.json",
-      "bytes": 962,
-      "sha256": "a54aa6d200675008b46b7255583d27c8ce5acf9a9e809884a270a494303fbd44"
+      "bytes": 1025,
+      "sha256": "8428ed59dcf075b03c2f1341cdc9d90288081131d5be9062e0f6fbd5f7cf8873"
     },
     {
       "path": "release/runtime-manifest.json",
@@ -10461,9 +10521,9 @@
       "sha256": "c1acb89360360d02cfa7c91e226627ee4e576b7ce4273f2ea1832cf4584e0ccf"
     }
   ],
-  "filesInManifest": 1520,
-  "scope": "Public source and acceptance evidence. Pinned native and HyperFrames files are restored from release/runtime-assets.json.",
+  "filesInManifest": 1532,
+  "scope": "Public source and acceptance evidence. Unchanged pinned native and HyperFrames files are restored from release/runtime-assets.json.",
   "publicReportCopiesAnonymized": true,
   "functionalTestsRerunForPublication": true,
-  "verification": "docs/ui167/VERIFICATION.json"
+  "verification": "docs/ui168/VERIFICATION.json"
 }
