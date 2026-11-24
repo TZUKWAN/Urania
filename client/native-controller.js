@@ -1,7 +1,7 @@
-import {EditorSurface} from './editor-surface.js?v=168';
-import {sameUint64,compareUint64,uint64Parameter} from './native-protocol.js?v=168';
-import {EDITOR_CONTEXT_PROTOCOL,validateNativeContext,nativeBase,matchesNativeBase,selectedObjectIds,canvasMaterialTarget,sameNativeDocument} from './native-contract.js?v=168';
-import {preparePreview,capturePreview,convertPreview,conversionWarnings,hasSupportedTailwindTag} from './html-sandbox.js?v=168';
+import {EditorSurface} from './editor-surface.js?v=169';
+import {sameUint64,compareUint64,uint64Parameter} from './native-protocol.js?v=169';
+import {EDITOR_CONTEXT_PROTOCOL,validateNativeContext,nativeBase,matchesNativeBase,selectedObjectIds,canvasMaterialTarget,sameNativeDocument} from './native-contract.js?v=169';
+import {preparePreview,capturePreview,convertPreview,conversionWarnings,hasSupportedTailwindTag} from './html-sandbox.js?v=169';
 
 const API='/designcraft/api/v2/studio';
 const wait=ms=>new Promise(resolve=>setTimeout(resolve,ms));
@@ -957,7 +957,7 @@ export class NativeController {
    else if(saved.originSync?.changed)await this.refreshProject();
    return saved;
   })();
-  try{return await this.saving;}finally{this.saving=null;this.change({saving:false});}
+  try{return await this.saving;}finally{this.saving=null;if(this.state.saving)this.change({saving:false});}
  }
  async run(action,payload={},job){
   if(job&&job.epoch!==this.view?.epoch)throw new Error('设计表面已切换，未执行旧指令');

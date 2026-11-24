@@ -1,0 +1,333 @@
+{
+  "schema": 1,
+  "scope": "Genuine compiled native source inputs and successfully replayed public patches; performance acceptance is reported separately",
+  "engines": {
+    "vectorcraft": {
+      "sourceArchive": {
+        "url": "https://codeload.github.com/storytold/vectorcraft/zip/bcebabe3f8c23a376ac68e9e6726590af278f7bb",
+        "sha256": "2f2de9286050b6debd4aba56f01be726ef116b14266a81cd10981499371585cb",
+        "revision": "bcebabe3f8c23a376ac68e9e6726590af278f7bb"
+      },
+      "sourcePatch": {
+        "path": "docs/ui169/vectorcraft-observation.patch",
+        "sha256": "3ba9d5c802c41ba1c4195cf1c8b4584b819422d03b622b4c7dd522cd04de4ed5",
+        "appliedAndVerifiedInputs": 56
+      },
+      "toolchain": {
+        "rust": "1.95.0",
+        "wasmBindgen": "0.2.129",
+        "wasmOpt": "version_123 -Oz"
+      },
+      "buildCommand": "cargo +1.95.0 build --release --offline --locked --target wasm32-unknown-unknown -p vectorcraft-web",
+      "rustSourceInputs": {
+        "apps/vectorcraft-web/src/api.rs": "e1365b9ef406e687ebaa7e9f59da51fdcfe5cd25f13481d6a03a1fe4a86e0060",
+        "apps/vectorcraft-web/src/fonts.rs": "e195b584cbc11723ec8840f45227e39cbcc3f3bbf7c165982680c5d5df52aea8",
+        "apps/vectorcraft-web/src/keys.rs": "a7a2c25ca84b9c685647de4550e810f8f5a759d4fc6297e5f6d0c22ac783a7ea",
+        "apps/vectorcraft-web/src/locks.rs": "d97d22dee18d090fe9b62faabd776a7810ef0d6670b6ff24698a890de63bc2ed",
+        "apps/vectorcraft-web/src/main.rs": "c3ff817f1e0d67411d6d5071eeb7132d10ca946d09c50198ee765985c0ce91af",
+        "apps/vectorcraft-web/src/observation.rs": "9ea761fd1dbbf04fd9800c3ca45961b6a29283f889b639a522b3e71744b95cdc",
+        "apps/vectorcraft-web/src/pencil.rs": "a765ec0c9bf5f0e09d3b789faf504297906ff571898592386dd6b1bd8d3d5d9f",
+        "apps/vectorcraft-web/src/saved_files.rs": "0961e0fdec7d800aeaada048903752123623554a857e5824b7234e4e8eea0fbf",
+        "apps/vectorcraft-web/src/web.rs": "119e6006ff22e5247705f5c94479b499406840c67745a3041ca4d2c5b9d99646"
+      },
+      "fontInputs": {
+        "font-input/fonts/biz-ud-pgothic/BIZUDPGothic-Regular.ttf": "258d7156c165f2ff774b6efee637c22c3b950de0d8a10e501137061bc8085d01",
+        "font-input/fonts/biz-ud-pgothic/OFL.txt": "e753d7155d53c747d037a445e584c8ecfca6dd79846db610417e282a736b28bc",
+        "font-input/fonts/manifest.txt": "e825709cd46ff7abe213c141e981c0c11e098195a134951e95dada85eaea778a",
+        "font-input/fonts/noto-sans-arabic/NotoSansArabic.ttf": "63111b5b2e074dd48cc67692e0a2726d86ee94c1c37fe8598257b7b4e87e869e",
+        "font-input/fonts/noto-sans-arabic/OFL.txt": "07fc70bfeb985cc1a87a8587d0a0c80bab11c86c9dc3fd95b6f0cb332f983e96",
+        "font-input/fonts/noto-sans-cjk-sc/NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+        "font-input/fonts/noto-sans-cjk-sc/OFL.txt": "6a73f9541c2de74158c0e7cf6b0a58ef774f5a780bf191f2d7ec9cc53efe2bf2",
+        "font-input/fonts/noto-sans-georgian/NotoSansGeorgian.ttf": "dc591156f36842d38996c4a7a17fee9bb58e45da3e2cac7a31b7d33de700adb9",
+        "font-input/fonts/noto-sans-georgian/OFL.txt": "8c02263c5d73d40544f9ed91e30c4e947407057a3cc430d7b786189aeceff6df",
+        "font-input/fonts/noto-sans-thai/NotoSansThai.ttf": "5a1c559bb539583c8a1fd99d1c5b9491e5e14478c9cd2bd0970d5c3096cc9ef8",
+        "font-input/fonts/noto-sans-thai/OFL.txt": "2e98fd23a52d253db8612cd5942c8f2ff4111b21d2367050fdca91d8ccc374a0",
+        "font-input/source-lock.json": "74b04373c12913d842ed0564d6ae6ab4a23af892d1789c66c52da24b0bf70f06"
+      },
+      "generatedRuntimeFiles": {
+        "vectorcraft-web-1db17032714ca7cf.js": {
+          "sha256": "3c494cd855361f742a5bfec1f5e9b4da7ed56bbb95b9341a760144db59b93457",
+          "bytes": 181232
+        },
+        "vectorcraft-web-1db17032714ca7cf_bg.wasm": {
+          "sha256": "06b73973eefe51162c3cee863574c64541b3f7d6ea8395d8ee01b12259f4a34e",
+          "bytes": 84293398
+        },
+        "snippets/eframe-d31a8450ea12dfc1/inline0.js": {
+          "sha256": "22a98f9d0c5a0532d291bdc9a3050439420b3d11143b4568fcfd3c66fff36995",
+          "bytes": 280
+        }
+      }
+    },
+    "photocraft": {
+      "sourceArchive": {
+        "url": "https://codeload.github.com/storytold/photocraft/zip/8a87a457abb43ac344deeb3fdb67541b91a72ff1",
+        "sha256": "ae14e35167e07c965268c2d7df12487d96d45f395278b00742d80247518398bd",
+        "revision": "8a87a457abb43ac344deeb3fdb67541b91a72ff1"
+      },
+      "sourcePatch": {
+        "path": "docs/ui169/photocraft-observation.patch",
+        "sha256": "a66794ce8e40a7bfd8614c28dcfb86bc194de8dcf7907c0d73cf78db4f4a30d1",
+        "appliedAndVerifiedInputs": 33
+      },
+      "toolchain": {
+        "rust": "1.95.0",
+        "wasmBindgen": "0.2.129",
+        "wasmOpt": "version_123 -Oz"
+      },
+      "buildCommand": "cargo +1.95.0 build --release --offline --locked --target wasm32-unknown-unknown -p photocraft-web",
+      "rustSourceInputs": {
+        "Cargo.lock": "7e19051711d78d853a616a72d332f5448a4bd92c3898cc658763b01af414af80",
+        "apps/photocraft-web/Cargo.toml": "24745697d1c8836ea5a85b74fe0c52f3be711dd46a20faf7626565527e424f84",
+        "apps/photocraft-web/Trunk.toml": "ad91d60bdce8772c36982df9f9b32f5673714da1ca32a525fd4c2536d34727d3",
+        "apps/photocraft-web/index.html": "c391361272bbc10d3e9bc1675c61b11acf9d8b2557e22770b3425f67c2737806",
+        "apps/photocraft-web/src/api.rs": "b8278b74b1abb319bae02fa705f4be66c6789b385e8efcbdc4722f47f56e746f",
+        "apps/photocraft-web/src/indexed_presets.rs": "a40328bd46df5ba222d4e84a132f216bab2c5e8266a0ba9a8b7a8e6d55a10d9c",
+        "apps/photocraft-web/src/main.rs": "f5fcc6f27bfb986e2075683fdaa7af8d59d4c499f09db4da4382eeabcbaba69c",
+        "apps/photocraft-web/src/observation.rs": "9ea761fd1dbbf04fd9800c3ca45961b6a29283f889b639a522b3e71744b95cdc",
+        "apps/photocraft-web/src/preset_bridge.rs": "f1ae409aee08db306550039f47eb1990e2c2ea096c2edf9e80b7c7e37f0c26a8",
+        "apps/photocraft-web/src/web.rs": "7d5f96f077e40b9bc0880720c930a3eb165c309c69b97d939c1470632afe118c",
+        "crates/io/src/embedded_import.rs": "804c0b96d87d61687209978f28eade05dbe3a10f4f9ad826fbbba87d98a11193",
+        "crates/io/src/flat.rs": "073142f95df5c28c387b39a1bc6249daf8db86404fd13c4a5a3f9ecb73663791",
+        "crates/io/src/lib.rs": "28ee836b72c595f92e3f518db52795083098823c76cf9fe5a94732dcc106517d",
+        "crates/io/src/pcraft_cache.rs": "2d06ea7642b399edf8c79749360fd7ae66d85c2c22905287b7b3a5e489b54c71",
+        "crates/text/src/fonts.rs": "0aff0c628c599aea7ef8c35f525c4040a3891a29f61b9239c91f8c3241ccfb35",
+        "crates/text/src/lib.rs": "52aadd61b0514d0d4502eddd6d8321c3731e621f7e23aa9ddff0cb551490fc6c",
+        "crates/ui-egui/src/app.rs": "7ede804fe6a88b1b3ec166a99731b5c96fa066b1a6847c531e623aac9729c5f7",
+        "crates/ui-egui/src/app/commands.rs": "b9bfbf51c44355d85141bac627ffd61328cbb44e7fcfd407ab1aac7cb72fea8d",
+        "crates/ui-egui/src/app/control.rs": "279aa79e3819338ab898e68dbd9866d233310b9a1c258f8a55c272723c909fae",
+        "crates/ui-egui/src/app/frame.rs": "f906d7404fab113c2aed483794d0f5421a15feedc1ffaf02307b0954f44cf2f5",
+        "crates/ui-egui/src/app/prefs.rs": "71c5951efa788ddf1239ebb0a7f1a04dfb60d43f9b8448d54b1d0ed77a210a4e",
+        "crates/ui-egui/src/canvas/tabs.rs": "8f74a75074e11f915148b64390a454e4a7dab24c59461a3f62da8b20919d10dd",
+        "crates/ui-egui/src/control.rs": "a68e2a3fdeb269ba6ed18ff5b6726a7b4267688d67a3af3a49e28efea54b1a1a",
+        "crates/ui-egui/src/control/dispatch.rs": "900b6138ba3fd0771a1dbae9e942c5fd3b0c86d9d7489afb4a51025f07981dbe",
+        "crates/ui-egui/src/control/hosted.rs": "077bbdc7d8f21d783998745d31d3835fb5cb865cb44990af6db928f53cb414c5",
+        "crates/ui-egui/src/control/hosted_tests.rs": "c66f62b8e8d2756e1c1db421b2672589e917c93c9978808fd3ad1823b9078af8",
+        "crates/ui-egui/src/control/inspect.rs": "e80833a09b39947c84db2c18aabfd36bd44cae3ee0905125558a0ea84c16771e",
+        "crates/ui-egui/src/lib.rs": "ac35381e361bb9719a5b1002e2b5044bff2ac7eb9e22f550856e12e1402702df",
+        "crates/ui-egui/src/menus/bar.rs": "c1015a0ebf7a38b91b9dd9f9f78f509af78564a3f29aaf32a74bffdd8782ecb4",
+        "crates/ui-egui/src/menus/invoke.rs": "84367dbcfd73776a5c518cb1a7754a1f5cb5ebbc7091a71dd8419a8c56808418",
+        "crates/ui-egui/src/panels/title_bar.rs": "85624d1b4e3e4049d6280bdba366b03db023cf250edc129d13e1f1832a48a3f8",
+        "crates/ui-egui/src/prefs/prefs_ui/appearance.rs": "8c3a0391a9ea21c9b99fb7dcd3c072c59466cc540bf08e4f437c42687adc8a95",
+        "crates/ui-egui/src/theme.rs": "dd9ca4b932c800f0f789ecc05cc98798d274fea90fd8c9ef8771964df3fce768"
+      },
+      "fontInputs": {
+        "font-input/fonts/biz-ud-pgothic/BIZUDPGothic-Regular.ttf": "258d7156c165f2ff774b6efee637c22c3b950de0d8a10e501137061bc8085d01",
+        "font-input/fonts/biz-ud-pgothic/OFL.txt": "e753d7155d53c747d037a445e584c8ecfca6dd79846db610417e282a736b28bc",
+        "font-input/fonts/manifest.txt": "e825709cd46ff7abe213c141e981c0c11e098195a134951e95dada85eaea778a",
+        "font-input/fonts/noto-sans-arabic/NotoSansArabic.ttf": "63111b5b2e074dd48cc67692e0a2726d86ee94c1c37fe8598257b7b4e87e869e",
+        "font-input/fonts/noto-sans-arabic/OFL.txt": "07fc70bfeb985cc1a87a8587d0a0c80bab11c86c9dc3fd95b6f0cb332f983e96",
+        "font-input/fonts/noto-sans-cjk-sc/NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+        "font-input/fonts/noto-sans-cjk-sc/OFL.txt": "6a73f9541c2de74158c0e7cf6b0a58ef774f5a780bf191f2d7ec9cc53efe2bf2",
+        "font-input/fonts/noto-sans-georgian/NotoSansGeorgian.ttf": "dc591156f36842d38996c4a7a17fee9bb58e45da3e2cac7a31b7d33de700adb9",
+        "font-input/fonts/noto-sans-georgian/OFL.txt": "8c02263c5d73d40544f9ed91e30c4e947407057a3cc430d7b786189aeceff6df",
+        "font-input/fonts/noto-sans-thai/NotoSansThai.ttf": "5a1c559bb539583c8a1fd99d1c5b9491e5e14478c9cd2bd0970d5c3096cc9ef8",
+        "font-input/fonts/noto-sans-thai/OFL.txt": "2e98fd23a52d253db8612cd5942c8f2ff4111b21d2367050fdca91d8ccc374a0",
+        "font-input/source-lock.json": "74b04373c12913d842ed0564d6ae6ab4a23af892d1789c66c52da24b0bf70f06"
+      },
+      "generatedRuntimeFiles": {
+        "photocraft-web-c3739d5f87e8c4f9.js": {
+          "sha256": "9ea8e6f7a3943a9905b76093b956ec42e08cb3d2288313a3c8b863fe05b89d3e",
+          "bytes": 182829
+        },
+        "photocraft-web-c3739d5f87e8c4f9_bg.wasm": {
+          "sha256": "e4398992026829017b99cc22d76697cf0f4b937bb1fc737d1eca917619023d89",
+          "bytes": 48296793
+        },
+        "snippets/eframe-d31a8450ea12dfc1/inline0.js": {
+          "sha256": "22a98f9d0c5a0532d291bdc9a3050439420b3d11143b4568fcfd3c66fff36995",
+          "bytes": 280
+        }
+      }
+    },
+    "deckcraft": {
+      "sourceArchive": {
+        "url": "https://codeload.github.com/storytold/deckcraft/zip/4ce2944630b04188dee8504c14151994d06c416a",
+        "sha256": "a6f76f20729aa998ec208c13bea121da13ec06c66396abd469a6f448bb8168e3",
+        "revision": "4ce2944630b04188dee8504c14151994d06c416a"
+      },
+      "sourcePatch": {
+        "path": "docs/ui169/deckcraft-observation.patch",
+        "sha256": "206eacb15d760590e31b7c2145b4a621d7b3ddf80c6974d54bc2b041d68a5fee",
+        "appliedAndVerifiedInputs": 141
+      },
+      "toolchain": {
+        "rust": "1.95.0",
+        "wasmBindgen": "0.2.129",
+        "wasmOpt": "version_123 -Oz"
+      },
+      "buildCommand": "cargo +1.95.0 build --release --offline --locked --target wasm32-unknown-unknown -p deckcraft-web",
+      "rustSourceInputs": {
+        "ATTRIBUTION.md": "816b9eab869f45b27719b7f638625cb746b10e959fead1c4788cb786cbf92e5e",
+        "Cargo.lock": "c920928a7c964bd7998c35f0ba63a4dede6833df905018c2fe687a4a9f799364",
+        "Cargo.toml": "95e2e1f6cc9eaf8e3f95f43757416df362a3c40b409f4cff704e35c2305a7135",
+        "apps/deckcraft-web/Cargo.toml": "9807b6d6513755ec79b394c2c40dccb3a418c8e18c0c81f4aa3b471b92449369",
+        "apps/deckcraft-web/Trunk.toml": "a996cb61144f4f961e8a44d8df04ef329620c12928aea4a4f328d1fcaf055ec8",
+        "apps/deckcraft-web/index.html": "5ff552301bfde3d5d369c93ad1a7a886f7aa639c021692269677c12f68e132be",
+        "apps/deckcraft-web/src/api.rs": "c372744bc49ae1a4442df0863e6b28ac82ec6e40be24d4373752814f4d4bf224",
+        "apps/deckcraft-web/src/audio.rs": "34c7102f6591080758c8bfdd3208f77dc2f25fab0c78f542bd1f30a24a4e7eba",
+        "apps/deckcraft-web/src/main.rs": "7a18c488f1d779b7b3e1793f0b8faff1f22c9533c7fb04275d363c8454abbb86",
+        "apps/deckcraft-web/src/observation.rs": "9ea761fd1dbbf04fd9800c3ca45961b6a29283f889b639a522b3e71744b95cdc",
+        "apps/deckcraft-web/src/web.rs": "12401cb4cb92c85127f87d08c13d97e34774385aefd59bb9e3e22284ca624238",
+        "crates/anim/src/interact.rs": "d5039045fe7173c5d271e40f20101c4bf57669520afb3e8bfdb5ebf788e05c9e",
+        "crates/engine/Cargo.toml": "45274002ee5d7ad7e59115e537a0f96e05f0ea443079344ea7d8d56bfef56780",
+        "crates/engine/src/cmd.rs": "dae2cee773e4437b56826b81302814227f32b565602fd09ab759d017610ac004",
+        "crates/engine/src/cmd/artistic.rs": "006743ed76a3a63be3c66646136651182b9ae93be69f2feb9d01c0b49138fcdd",
+        "crates/engine/src/cmd/edit.rs": "07cd586f1f36e7a2fc660e10cd4b2583fcd64feae1787396c4e319d77c501275",
+        "crates/engine/src/cmd/format.rs": "de93eeca2026ca84464ce48542825cc09ac5b528f5444eae84b7cc7d7024d540",
+        "crates/engine/src/cmd/format/font.rs": "27cd6293aaf71d82bb797add788815362660c791b5d6fe7b0caf3523fc97735e",
+        "crates/engine/src/cmd/host_brand.rs": "f5a08742ffe4e9ce400ee62e3fe8bacbbf1fcd75b6ecd8439d8007e5bc70d059",
+        "crates/engine/src/cmd/host_font.rs": "3ff4b32ff37d0b373e8119456c757e881899a0b5725f315db0c1d7ab209cc7ad",
+        "crates/engine/src/cmd/host_material.rs": "98b0497a2847fc70e15fdd1476d16a4ffbc6867de7b597469d400512f488b7ee",
+        "crates/engine/src/cmd/ink_recognition.rs": "2497b119e1c00d8a185413cf2421c10f2fe705f9da4c439d9bb7c1ab3d4908fd",
+        "crates/engine/src/cmd/insert.rs": "295385f9bcfebb19392f3b90f3141327cc2bee58f27d4524613cf15d9e10f05f",
+        "crates/engine/src/cmd/insert/picture.rs": "7c6d89ba1e7e502799a621b701073170d4bc46a8b645e5c1146725f3f90eb883",
+        "crates/engine/src/cmd/shape.rs": "c5ef2fc09faad76c3b940c7e8c61e32c9d9fb9ab42cbfb01370c457de630d45d",
+        "crates/engine/src/cmd/shape/picture.rs": "27ba8d5e97403c66d23eada29052981414a24d13c4065ea223fa0b7174ed5d03",
+        "crates/engine/src/cmd/shape/picture_replace_tests.rs": "6363798988211eef3feb26b12a2abf122863c05fa0b0a5543e95097fd8ac4b55",
+        "crates/engine/src/cmd/svg_convert.rs": "b9cf30f24664370337fe8b0bb16dddc4c30dabe6aa745128b6372e81e7d9715a",
+        "crates/engine/src/cmd/svg_picture.rs": "ccba859f7deb29f9ad436f75cb69b1407412ddd5e49c108bb6c3479253945a9e",
+        "crates/engine/src/cmd/text/autocorrect.rs": "ee17e31f302dd68957f0d0d78fb2e605ace21ae6f96df0dc7f8a2954bf5f42cf",
+        "crates/engine/src/cmd/text/caret.rs": "355b62bf4600c169c0c5696a502a65fdcb16c586b519a5ede1f67f7223f8d9d1",
+        "crates/engine/src/embedded.rs": "1dd4d44adba25d9a7f71465f052911d9236fe1ea16d2e1ba0c3609ca9b7964a8",
+        "crates/engine/src/fonts.rs": "1e7db2d436d229d70df5775afb26f7066f4f1744611a8a0fcc2fa8d17405e2d8",
+        "crates/engine/src/lib.rs": "d86f86109074e85626dcb60b5d5cd5cbfe4d640affdb4865c23e19682fb61b97",
+        "crates/engine/src/media_refs.rs": "6063a8c37d31d79691238b9b053cb4b57bc015fe74d63a56e4f1ca4769233ffb",
+        "crates/engine/src/svg_media.rs": "f951a28d36b956671f749df747d23532676b63e0663440602d01e41fdd835d50",
+        "crates/engine/tests/fixtures/dsh-svg-conversion/preview.png": "a0dae6730ec0ed7cfc2cb65a429f8120497f19d5e687cff7054c0e1e9edb76cd",
+        "crates/engine/tests/fixtures/dsh-svg-conversion/source.svg": "7bc6fd0e8b05dedcd0c3aceeb17c342de194da2446271458abfab646b8367917",
+        "crates/engine/tests/fixtures/dsh-svg-conversion/text-preview.png": "44530ba83a3fa07c67183a154e34df3d44f7ad94a5db41668ec4bc9b74a9f8c0",
+        "crates/engine/tests/fixtures/dsh-svg-conversion/text.svg": "ddbe38ed80f5017bdb1c6e79c3b89c10b6a28c4e11ffae9990e7942979abb28c",
+        "crates/engine/tests/fixtures/host-svg/edited-origin.json": "6edc6bf363a7169db5b76ccacabc41f84cb9542e3e45d2a6a701873d59a1ff2b",
+        "crates/engine/tests/fixtures/host-svg/edited-preview.png": "2a7110f2d12611c4df07eda48e06d856f800ae864cbe2019beb1d0955539d950",
+        "crates/engine/tests/fixtures/host-svg/edited-source.svg": "267c8e94cfb8abaa738285fb26423d4c0db475a918fd84b6dde498c405921243",
+        "crates/engine/tests/fixtures/host-svg/edited-source.vectorcraft": "33a882659d321c749810ae9098899084d50c57454d790046ee08839b343332e8",
+        "crates/engine/tests/fixtures/host-svg/input.svg": "c04818c956219f5f18f0ee48612bf85c97d9fd90e3d9423da1b9e599d75b40ca",
+        "crates/engine/tests/fixtures/host-svg/origin.json": "e45a9f7cc5d4305b29049a90893a1b80ad5ba57540df8fa6ad041ce687d2c138",
+        "crates/engine/tests/fixtures/host-svg/preview.png": "c9555c168a9d0bbac75cdc0f558e84cec2425f4ca8292359e470910434ad3920",
+        "crates/engine/tests/fixtures/host-svg/source.svg": "8f85b883ee5e0cfa5473b711333cfef1c63413b442297fadbd4f8bce380217ea",
+        "crates/engine/tests/fixtures/host-svg/source.vectorcraft": "8b59a20b4ac7cdbdff2d5336d761786589b178430e395d4ac28b92e752b6f5b2",
+        "crates/engine/tests/host_brand.rs": "c1334fabeaff914bd3299d825a136215db5d0228203638fb3c7be047c5d7d8d6",
+        "crates/engine/tests/host_material.rs": "6ad1e44b958484c36424e35ad438b1788aa8451a8ce8176c66d7997d266fbe2b",
+        "crates/engine/tests/svg_commands.rs": "58e8b075e1ee1b3ce24acb6a07911143a8ef96fb2e78cf0fc18c2471ae2da415",
+        "crates/engine/tests/svg_convert_inspect.rs": "224856b235261443a8f9f6046c362869d9caaec68f7422bf0b3b898e19a1282b",
+        "crates/engine/tests/svg_convert_shapes.rs": "11e3ccaa9c871f9f15d080a9e6d00ffcf08ae2d9c711d0bb245058f826938fe8",
+        "crates/engine/tests/svg_media.rs": "68bc1571a5be717c47ed32208d92d257aa8de4f0a706dbfc6ee26cb5814ba6df",
+        "crates/fonts/build.rs": "692cbe7723d5860c3b35816c5a274ae04919d80d6147cdf7d6288bb429f45bdf",
+        "crates/fonts/src/fontdb.rs": "bce2264f3781c38b8ee60c3e3b39322c5d42a6d9236c01f835297dfb957869bd",
+        "crates/media/src/player.rs": "2f18ac2be1d4b9e5409703e8569dc87fdbf732147784a773512172e435909145",
+        "crates/model/src/style.rs": "d0f7f149f63d37cf6c62eb5abfadc304a6144dff7f8b92c9701d21c95f0fa665",
+        "crates/pptx/src/read/chart.rs": "a3e7588bfb62368d42eb14807ec9820d968117482f375b8264f1d16b59ae19b7",
+        "crates/pptx/src/read/dml.rs": "f9bdd3471c4ddae02973ad389e2e9d9a4bdff729ca66841827074ab92362278e",
+        "crates/pptx/src/write/dml.rs": "676c2d0bea6099111bae12570d9b27abe557224362fb33149419049c4a68f836",
+        "crates/ui-egui/src/app.rs": "e9cf81fd993a79889e2122b79d6979d1a5ab8fb15ee3fc2f2abbaf37aa779a30",
+        "crates/ui-egui/src/app/commands.rs": "fb6cad6110115e7536939f872072212881174f6e000746043358ad0983dfaaab",
+        "crates/ui-egui/src/app/files.rs": "4e32f92a21ef116b47ed36ad6f5329130415d37daafda7dfff8f6b2b0957ccb2",
+        "crates/ui-egui/src/app/frame.rs": "b3160ad3b703a5bb53ccb92743c5593eede2d4e4c862441a5802d3ca6e2301a9",
+        "crates/ui-egui/src/app/keys.rs": "ef5d1abe023390292d178ee1c0941e3ccac4c08eb9c92f18119efa03a7149050",
+        "crates/ui-egui/src/app/playback.rs": "5f59c6d67b2e950dc1f5e6b186fe2caba3cb4824a31c94fc276483fac7c50303",
+        "crates/ui-egui/src/backstage.rs": "09f6b7ceb3201b8fac372feeab98dd70935b8c19cc0c12addf72ea5ddf697ce8",
+        "crates/ui-egui/src/backstage/files.rs": "e86962ee05fe921448b14a51c9e5041f13309969a22d5927777650e0d78069df",
+        "crates/ui-egui/src/backstage/info.rs": "2a13f34ba24f3c41469280d72fd66394d0a8e31dc66d3e3960d7db9348f56cc8",
+        "crates/ui-egui/src/backstage/print.rs": "e387d83abd3bbbf235691a4297a75a8b46207a96dd06a34a65412f8055418d84",
+        "crates/ui-egui/src/canvas/context_menu.rs": "b8fbec137d42939d65e648ce311b174cbd6e8032f33b7a79dfebb8f87faae78c",
+        "crates/ui-egui/src/canvas/rulers.rs": "fada9183cfa895433d6277e2d266fdd709cd2cc613256df74610a6ad8b9d42b3",
+        "crates/ui-egui/src/control.rs": "aed9998acb3b68e3f066739a00797de9e03d9cca96f419e3b7abbb4187dc17e1",
+        "crates/ui-egui/src/control/hosted.rs": "4c83c10ec6e2c1d131b5b37cdf2ea74ec4203378caa67bac19d41b4e77e70be7",
+        "crates/ui-egui/src/control/hosted_tests.rs": "a296d49ba2077e7cfd37aedfba67a4ff3c22fccc19833889025f409093a732a7",
+        "crates/ui-egui/src/dialogs.rs": "8606567985730ced45720dea1797a00500c054f7bda5b822d09c6f70cebd1f3c",
+        "crates/ui-egui/src/dialogs/about.rs": "5d919d0f4da70335ada0db0f408f5b7f746082b77f4a1898d45fe96c9343e1f1",
+        "crates/ui-egui/src/dialogs/body.rs": "48cb990fdd35caccfc2d6d981abd8639d0db5c5d33d2ffa93c2456a50b476a57",
+        "crates/ui-egui/src/dialogs/credits.rs": "383d4992e96a72e99bc01a18eccea8c4326409a688ba34fdef267b3351f5ee5c",
+        "crates/ui-egui/src/dialogs/date_time.rs": "cfda59d5e42d1337a053901d84fedd1d03e2db5090d4d2f4ebb0f68969ad2b5e",
+        "crates/ui-egui/src/dialogs/export.rs": "161921a666298c7d44b7dcb64ee4db2fde7b9de86de09350257355bbeb0c6da0",
+        "crates/ui-egui/src/dialogs/find.rs": "711ddae2384633fc3166c6f71a4f9f1a3db25ce900845b57b04ee8b86ca86009",
+        "crates/ui-egui/src/dialogs/font.rs": "31ec3f666a7414aa3b89e3b46f21dc8ca5da595cd2ea62d10735fa4ea88cb751",
+        "crates/ui-egui/src/dialogs/grid_options.rs": "ce497616d6a69718c93b948d6d2f2d85040c19b40e1848d09de18e9b4ae552fe",
+        "crates/ui-egui/src/dialogs/paragraph.rs": "86f1556fc57d507747758abb9f09a975432682304c4acab9fad3cbdf66a0e88f",
+        "crates/ui-egui/src/dialogs/photo_album.rs": "0f2bf69f15f9a2fa37923651f1f283467291cf4515790d09c1a3aa20a47ccc00",
+        "crates/ui-egui/src/dialogs/size_position.rs": "6a6f1ec1ae3e0271e88a6b241bfc0a79cc8ba34c0fc3bc4238fe8ba844c7c09a",
+        "crates/ui-egui/src/dialogs/tabs.rs": "f746c583bfa1f7299223623510157962b025dae4a65a3603ddc21cc2a777798e",
+        "crates/ui-egui/src/dialogs/theme_colors.rs": "7aeeae05b8f44bae3a5d47dcd5289bfd1be24e56ef8783544584d6c6f2d5e1bf",
+        "crates/ui-egui/src/dialogs/theme_fonts.rs": "5e1ac716ff0a03ff3949c2eb1ce9bbef593342a52066df23476e875a9eff451d",
+        "crates/ui-egui/src/dialogs/updates_ui.rs": "7ba18fe253080309f6552240742215ea354b3cb13c22bb5455ba67e6123e5e66",
+        "crates/ui-egui/src/dialogs/zoom.rs": "7593a33fc6de959cf0c3762f687c7baeebee8a86cbf2e1bfb7e23708f35e3751",
+        "crates/ui-egui/src/doc_window.rs": "b5a7287b1a265ce85ada97047f3f6ee0f217c4e8ba3471ad9d77c61f890a60c1",
+        "crates/ui-egui/src/host_ui.rs": "3b6268d4dbc13f0c1241bb38a73a8fb1fc46a01b19810fd495beced714ed7cc5",
+        "crates/ui-egui/src/lib.rs": "c8c584a49f965be85183b55f14b8b74fc55eadbfc95ce0a21f94c8f99e1266fe",
+        "crates/ui-egui/src/media.rs": "9e1c025a4196e67382b1585bdfee46c1ffaa9fae9be9a9c69dd2a4a146e56306",
+        "crates/ui-egui/src/menus.rs": "be362216c79dc460c0d3b5acc315ec52617d79661f869df8acfb844bbe47abe6",
+        "crates/ui-egui/src/opening.rs": "263d2ed2aa66f2edac9fa15e3183f4cf36412e9dfb722c3df2ffba9cd29da5f0",
+        "crates/ui-egui/src/panels/animation.rs": "20f8ef302df1986fb8ee2f039712859b0315ca8179f32509f93f768dcf88393c",
+        "crates/ui-egui/src/panels/animtimeline.rs": "e47c5f7523d0dd258007b4bbead97c001ecd03fd97d5100b077d9e48ed1af981",
+        "crates/ui-egui/src/panels/background.rs": "8686cdde6a1e6686c9ede7728f1fec941b26326e03e245a9e4d93ee14f34c464",
+        "crates/ui-egui/src/panels/comments.rs": "b8bd43ec80063e0360c4cf749328fb4a867d1353aaf44512dcfa50471a332c65",
+        "crates/ui-egui/src/panels/designer.rs": "b18955386d572c30321e852a579d7cdb55e1bc9c14a4e5d2a6d912a19edde4d2",
+        "crates/ui-egui/src/panels/effect_presets.rs": "a156e57841ff6d65293f7800d87d06fee85f7ceceaf65d14448b2232ebf452a7",
+        "crates/ui-egui/src/panels/fillui.rs": "bb2d126d6a0d504663a9878b4666d1d5b7f1b98e90c3786775a4c425448b49af",
+        "crates/ui-egui/src/panels/format_shape.rs": "22d55e8f014465bb0560a0fc2a58400600a50fcf7a038d6f4610534cbf99b883",
+        "crates/ui-egui/src/panels/selpane.rs": "6cb5254cd7ce2333aedd6986cb60dc743c0750bfcc685bdcf9a7920ca261f10e",
+        "crates/ui-egui/src/panels/smartart.rs": "336f9a0467da828b99ccb82a44e6718fbca9a9acd33ac70b019d70b11b352321",
+        "crates/ui-egui/src/panels/thesaurus.rs": "c9735eb82efb121d245b476f0ab473a37c3e2433925e14d51e283ddff51819ba",
+        "crates/ui-egui/src/panels/thumbs.rs": "7abcfb5a0c968c8d5f2a1a176d97edbffead980679148ce9a001e2528407e5da",
+        "crates/ui-egui/src/ribbon.rs": "a84dad6435734242fd8289af8ea11f6ae42512e401fe38e29e6511c6bae328e8",
+        "crates/ui-egui/src/ribbon/animations.rs": "61a5f21d3e6d3a4e47387dca1ed03dfac291d3b28bff74f40f556b76daa1a138",
+        "crates/ui-egui/src/ribbon/arrange.rs": "841ad2cd8529b4865dc805f9e3f3ecc823f70e42e7b386ec4fb4a02605d906fc",
+        "crates/ui-egui/src/ribbon/design.rs": "830095ed32eef70bd8d1b62375694d13bf2b53080cf397c889e4750c9f5855c2",
+        "crates/ui-egui/src/ribbon/draw.rs": "9f287320261417f87583989cd1fab963250b833a30e87654f76ddaab1affcdd2",
+        "crates/ui-egui/src/ribbon/galleries.rs": "946bac266395a6b4936eddbc6821aa7e7338472d0b817dd920cfdbd427001a84",
+        "crates/ui-egui/src/ribbon/home.rs": "f767f50ec8bb6255aca73e87b0c3a323c21cd7157bd977ef5de2c5c0caded61a",
+        "crates/ui-egui/src/ribbon/insert.rs": "0c9a4fd13be1732b672f865eb9caa9c59cf32bca703508d41f6e465bceeb1948",
+        "crates/ui-egui/src/ribbon/masters.rs": "ba4cf35b24a6c521f806ab28e6f017ae592e0858f7da9f646e081a8059920ce5",
+        "crates/ui-egui/src/ribbon/picture_format.rs": "668e38905bb60ce08812a0832ca3678122359e173b48123f7d90461283fde71d",
+        "crates/ui-egui/src/ribbon/playback.rs": "fc1fbf4cc833cdd52ab65676842da6e048f630c7142e4d3727f3ade6fb643f70",
+        "crates/ui-egui/src/ribbon/qat.rs": "0c5f5e19b7d44225bda36b80a016c1b7901347d423d9296714b4912da419a9c5",
+        "crates/ui-egui/src/ribbon/review.rs": "6f74ef8ae5773d9ad87a32f520b672269c6c940a0f8f4e8614783904c28fe6e1",
+        "crates/ui-egui/src/ribbon/shape_format.rs": "2467fc15368016173dbdca0f353fd1a18a0705768d1970869ff27c2bece24add",
+        "crates/ui-egui/src/ribbon/slide_show.rs": "6381f7d06dc2c67635de3644ef7f6534c6d9a04511806148ff17a601aa2ee8f5",
+        "crates/ui-egui/src/ribbon/smartart.rs": "46a03f4ac89249b77d8f38aae5acb061ffef4bf523bdc79e85a409e0f39c1d5e",
+        "crates/ui-egui/src/ribbon/table.rs": "464eaec429da14c5a29ac30945d11411a776aff480f5fb1f40a0089b4b598157",
+        "crates/ui-egui/src/ribbon/title_bar.rs": "7af637ae0ec87042deaf7b94bfa38a0bd7ed8b8c7074c945fb79450781f8958f",
+        "crates/ui-egui/src/ribbon/transitions.rs": "67c3e838083c354cd4aed0c58141bac360aac78d391493ea0780b19891794b6e",
+        "crates/ui-egui/src/ribbon/view.rs": "d3692c59dcae39ce4a6d23959973906b59fa378f6b4a79128432f344a86049f6",
+        "crates/ui-egui/src/services.rs": "b8c2ffab6c8c022ec5b31c858e1e28dbe16bb71a30a5490a7f1cfbb3cb909e7f",
+        "crates/ui-egui/src/show/presenter.rs": "7e8c0107dc6e2d81e1f0e590f31d94684cc5bc7f697cf8095956815ffbd148c2",
+        "crates/ui-egui/src/show/ui.rs": "37df03077997ce41f8e726b10fcdb56dfae577e0d0deaf668ef9a0780bc17a7a",
+        "crates/ui-egui/src/show/zoom.rs": "a3a2ca86324caf5567e75c09de0ee1fba08f470f4f874b33c6f4a1194de3565f",
+        "crates/ui-egui/src/sorter.rs": "9a8d005536522511815fa5de4ca60fe40d306e476c06b46a5f0dbd7ed9a6356c",
+        "crates/ui-egui/src/status.rs": "a13977dc9e0244feaf2b2ad0c25203d9a173cf9d132e633de590d60fbed1df0e",
+        "crates/ui-egui/src/theme.rs": "227925ba5d648193e8980ce681db3cee1a66920aac8113b47861d2c9121eb8d2",
+        "crates/ui-egui/src/toast.rs": "78f7ae1c009b5e4c1104d6c2a395e3293edb9f0f10833f57acf6b530bf6ac2e1",
+        "crates/ui-egui/src/widgets.rs": "21a206a600360bb0d3a606f7f6001edfc534df5498378d7b43aedb40de91b224"
+      },
+      "fontInputs": {
+        "font-input/fonts/biz-ud-pgothic/BIZUDPGothic-Bold.ttf": "30eba52fc837e8b62c97d4b82e6706583149fb7294e3712dd71a655eaea80a90",
+        "font-input/fonts/biz-ud-pgothic/BIZUDPGothic-Regular.ttf": "258d7156c165f2ff774b6efee637c22c3b950de0d8a10e501137061bc8085d01",
+        "font-input/fonts/biz-ud-pgothic/OFL.txt": "e753d7155d53c747d037a445e584c8ecfca6dd79846db610417e282a736b28bc",
+        "font-input/fonts/inter/Inter-Bold.ttf": "288316099b1e0a47a4716d159098005eef7c0066921f34e3200393dbdb01947f",
+        "font-input/fonts/inter/Inter-Regular.ttf": "40d692fce188e4471e2b3cba937be967878f631ad3ebbbdcd587687c7ebe0c82",
+        "font-input/fonts/inter/OFL.txt": "262481e844521b326f5ecd053e59b98c8b2da78c8ee1bdbb6e8174305e54935a",
+        "font-input/fonts/latin-manifest.txt": "8bdc66b47cb1a8d13e04240ab5e0c54601db05bda10a9f567e7f4cb1bdc5c58d",
+        "font-input/fonts/lxgw-wenkai-lite/LXGWWenKaiLite-Regular.ttf": "f799a538a3355877e597a0ae04050e897932c9ae7689eb9227c2953c5dd549ea",
+        "font-input/fonts/lxgw-wenkai-lite/OFL.txt": "0333a85fe077b6849f8e417acc44e8bd879442ceb681e271acf93e2d57fd4e2e",
+        "font-input/fonts/manifest.txt": "a70cf3b8c08be4e90ec40841c860d0e2ff25bc6566ce03a473d4fa1dc4b38958",
+        "font-input/fonts/simplified-chinese-manifest.txt": "dff6d22a8e3162d02e7e7c4bd058a36b117485e135e362a060ce68734649ea35",
+        "font-input/source-lock.json": "0da094ff887ee881bcd2cbb9b12cda5b73a9f9258b9447172c4d45d834b8d16b"
+      },
+      "generatedRuntimeFiles": {
+        "deckcraft-web-4880a537c181c4ef.js": {
+          "sha256": "3a28bb28877de31dc39b98d110d89b5091d3b77636c28637d09711bd8c74ed13",
+          "bytes": 170244
+        },
+        "deckcraft-web-4880a537c181c4ef_bg.wasm": {
+          "sha256": "af322739301bf1422fd6b5b4eed3f063d3fe89e2c679ce7801af758d594039b6",
+          "bytes": 38399361
+        },
+        "snippets/eframe-d31a8450ea12dfc1/inline0.js": {
+          "sha256": "22a98f9d0c5a0532d291bdc9a3050439420b3d11143b4568fcfd3c66fff36995",
+          "bytes": 280
+        }
+      }
+    }
+  }
+}

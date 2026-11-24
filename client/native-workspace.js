@@ -1,23 +1,23 @@
-import {storeView} from './store-view.js?v=168';
-import {createLocalWorkflowPanel} from './local-workflow-panel.js?v=168';
-import {currentDesignScope,isActiveDesignSession} from './design-session.js?v=168';
-import {insertDesignBrief} from './dsh-context.js?v=168';
-import {createDeckLocalTools,isDeckLocalAction} from './deck-local-tools.js?v=168';
-import {createStockPanel,openStockImage} from './stock-panel.js?v=168';
-import {NativeController} from './native-controller.js?v=168';
-import {quoteNative} from './native-reference.js?v=168';
-import {createBrandPanel} from './brand-panel.js?v=168';
-import {createHtmlWorkspace} from './html-workspace.js?v=168';
-import {createStudioImageWorkspace} from './studio-image-workspace.js?v=168';
-import {createLegacyMigrationWorkspace} from './legacy-migration-workspace.js?v=168';
-import {createNativeContextTools} from './native-context-tools.js?v=168';
-import {createAiCanvasTools} from './ai-canvas.js?v=168';
-import {createSelectionAi} from './selection-ai.js?v=168';
-import {DesignFeedbackClient,createFeedbackPanel} from './design-feedback.js?v=168';
-import {createDesignDiagnostics} from './design-diagnostics.js?v=168';
-import {createBriefDimensionControls,updateBriefDimension} from './brief-dimensions.js?v=168';
-import {createStudioComponents,studioEngines,userFacingError} from './studio-system.js?v=168';
-import {createStudioPanels} from './studio-panels.js?v=168';
+import {storeView,nativeUiView} from './store-view.js?v=169';
+import {createLocalWorkflowPanel} from './local-workflow-panel.js?v=169';
+import {currentDesignScope,isActiveDesignSession} from './design-session.js?v=169';
+import {insertDesignBrief} from './dsh-context.js?v=169';
+import {createDeckLocalTools,isDeckLocalAction} from './deck-local-tools.js?v=169';
+import {createStockPanel,openStockImage} from './stock-panel.js?v=169';
+import {NativeController} from './native-controller.js?v=169';
+import {quoteNative} from './native-reference.js?v=169';
+import {createBrandPanel} from './brand-panel.js?v=169';
+import {createHtmlWorkspace} from './html-workspace.js?v=169';
+import {createStudioImageWorkspace} from './studio-image-workspace.js?v=169';
+import {createLegacyMigrationWorkspace} from './legacy-migration-workspace.js?v=169';
+import {createNativeContextTools} from './native-context-tools.js?v=169';
+import {createAiCanvasTools} from './ai-canvas.js?v=169';
+import {createSelectionAi} from './selection-ai.js?v=169';
+import {DesignFeedbackClient,createFeedbackPanel} from './design-feedback.js?v=169';
+import {createDesignDiagnostics} from './design-diagnostics.js?v=169';
+import {createBriefDimensionControls,updateBriefDimension} from './brief-dimensions.js?v=169';
+import {createStudioComponents,studioEngines,userFacingError} from './studio-system.js?v=169';
+import {createStudioPanels} from './studio-panels.js?v=169';
 const CSS=`
 .dcNativeWorkspace{position:relative;flex:1;display:flex;flex-direction:column;min-width:0;min-height:0;background:var(--dc-bg)}
 .dcNativeHeader{order:0;flex:none;display:flex;align-items:center;border-bottom:1px solid var(--dc-line)}
@@ -110,7 +110,8 @@ export function createNativeWorkspace({React,store}){
   },[source.id,source.revision,source.slideId,controller.view?.epoch,controller.state.fontGeneration]);
   return url?h('span',{className:'dcNativeThumbWrap',title:fontWarning?'本机预览已提供项目字体；若有系统同名字体，外观可能不同。':undefined},h('img',{className:'dcNativeWorkThumb',src:url,alt:source.title+' 的预览'}),fontWarning?h('small',null,'字体需核对'):null):h('span',{className:'dcNativeWorkThumb'},error?'预览不可用':'读取预览');
  }
- const readWorkspace=storeView(store,s=>({native:s.native,services:s.services,designAssistant:s.designAssistant,uiBuild:s.uiBuild}));
+ const nativePresentation=nativeUiView();
+ const readWorkspace=storeView(store,s=>({native:nativePresentation(s.native),services:s.services,designAssistant:s.designAssistant,uiBuild:s.uiBuild}));
  function Workspace({onFocusChat}){
   const state=React.useSyncExternalStore(store.subscribe,readWorkspace,readWorkspace),native=state.native||controller.state;
   const scope=currentDesignScope(state.services),sessionId=scope?.sessionId,root=scope?.root;

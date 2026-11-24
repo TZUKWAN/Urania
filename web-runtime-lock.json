@@ -194,7 +194,7 @@
         "engineVersion": "0.19.0",
         "sourceRevision": "bcebabe3f8c23a376ac68e9e6726590af278f7bb",
         "hostProtocol": 1,
-        "status": "real Rust/Trunk build: transient AI canvas presentation; runtime acceptance recorded separately",
+        "status": "genuine Rust release/wasm-bindgen build: live App nonpainting observation; full lifecycle acceptance recorded separately",
         "fontRevision": "b076417b5880bd4154bd22f00695b1d28c6bea83",
         "rustToolchain": "1.95.0",
         "buildLogSha256": "873d2de2d03fe1f8a31c2dfd6d42249df17e2cee7c06251d1929e79a91926232",
@@ -210,7 +210,7 @@
           "crates/ui-egui/src/app/commands.rs": "11b758749c6d3117926086e3c2824f187c2e791887881f3cc62790d7244fbe55",
           "crates/ui-egui/src/shortcuts.rs": "218d58667c5e18aad46bcf688e37044608c0c45a6d9575a542b3d8ce008c5deb",
           "crates/ui-egui/src/shortcuts/tests.rs": "28772ee932b46cc9b372a32e84b9425ca8fb09a8bcf1247b6e69b92723e1ad98",
-          "apps/vectorcraft-web/src/api.rs": "1592c498d025b54c5562e9836211cebd3f5ecc8eb86cdbe82ccf5c2a716d0624",
+          "apps/vectorcraft-web/src/api.rs": "e1365b9ef406e687ebaa7e9f59da51fdcfe5cd25f13481d6a03a1fe4a86e0060",
           "Cargo.toml": "6699f02c5454559034b6f7b3900b2851ebb60245cdfaeaff99e8c450087bac0c",
           "Cargo.lock": "92671ad51c6a9428711e34ae1ba6ede92b9ce1aad41277d89b3f30171d5ef318",
           "crates/engine/Cargo.toml": "55755b932577f6917ac756cf0107f0c1fa899b2bbb0e1ee63802734e25cd88e3",
@@ -258,7 +258,15 @@
           "font-input/fonts/noto-sans-georgian/OFL.txt": "8c02263c5d73d40544f9ed91e30c4e947407057a3cc430d7b786189aeceff6df",
           "font-input/fonts/noto-sans-thai/NotoSansThai.ttf": "5a1c559bb539583c8a1fd99d1c5b9491e5e14478c9cd2bd0970d5c3096cc9ef8",
           "font-input/fonts/noto-sans-thai/OFL.txt": "2e98fd23a52d253db8612cd5942c8f2ff4111b21d2367050fdca91d8ccc374a0",
-          "font-input/source-lock.json": "74b04373c12913d842ed0564d6ae6ab4a23af892d1789c66c52da24b0bf70f06"
+          "font-input/source-lock.json": "74b04373c12913d842ed0564d6ae6ab4a23af892d1789c66c52da24b0bf70f06",
+          "apps/vectorcraft-web/src/fonts.rs": "e195b584cbc11723ec8840f45227e39cbcc3f3bbf7c165982680c5d5df52aea8",
+          "apps/vectorcraft-web/src/keys.rs": "a7a2c25ca84b9c685647de4550e810f8f5a759d4fc6297e5f6d0c22ac783a7ea",
+          "apps/vectorcraft-web/src/locks.rs": "d97d22dee18d090fe9b62faabd776a7810ef0d6670b6ff24698a890de63bc2ed",
+          "apps/vectorcraft-web/src/main.rs": "c3ff817f1e0d67411d6d5071eeb7132d10ca946d09c50198ee765985c0ce91af",
+          "apps/vectorcraft-web/src/observation.rs": "9ea761fd1dbbf04fd9800c3ca45961b6a29283f889b639a522b3e71744b95cdc",
+          "apps/vectorcraft-web/src/pencil.rs": "a765ec0c9bf5f0e09d3b789faf504297906ff571898592386dd6b1bd8d3d5d9f",
+          "apps/vectorcraft-web/src/saved_files.rs": "0961e0fdec7d800aeaada048903752123623554a857e5824b7234e4e8eea0fbf",
+          "apps/vectorcraft-web/src/web.rs": "119e6006ff22e5247705f5c94479b499406840c67745a3041ca4d2c5b9d99646"
         },
         "retainedCompatibilityFiles": [
           "vectorcraft-web-2061eac70a809dc0.js",
@@ -301,7 +309,20 @@
           "vectorcraft-web-e15e745743f12977_bg.wasm",
           "vectorcraft-web-f28c74aaf617aaa0.js",
           "vectorcraft-web-f28c74aaf617aaa0_bg.wasm"
-        ]
+        ],
+        "ui169BuildToolchain": {
+          "rust": "1.95.0",
+          "wasmBindgen": "0.2.129",
+          "wasmOpt": "version_123 -Oz"
+        },
+        "ui169NativeObservationPatch": "docs/ui169/vectorcraft-observation.patch",
+        "ui169NativeBuildLogSha256": "feedac95a4795d2fc53a638e1f49cb158fb6f8a73673ee0b0fc4a891d17718e4",
+        "ui169NativeObservationPatchSha256": "3ba9d5c802c41ba1c4195cf1c8b4584b819422d03b622b4c7dd522cd04de4ed5",
+        "ui169SourceArchive": {
+          "url": "https://codeload.github.com/storytold/vectorcraft/zip/bcebabe3f8c23a376ac68e9e6726590af278f7bb",
+          "sha256": "2f2de9286050b6debd4aba56f01be726ef116b14266a81cd10981499371585cb",
+          "revision": "bcebabe3f8c23a376ac68e9e6726590af278f7bb"
+        }
       },
       "files": {
         "fonts/2c76254f6fc379fd/NotoSansCJKsc-Regular.otf": {
@@ -349,8 +370,8 @@
           "sha256": "caf794e769614d2661e31c2b549f39777474157905c75ffac2c0f72d529ab496"
         },
         "index.html": {
-          "bytes": 3086,
-          "sha256": "1a9f22f34e5e9c42436ed0b1255433e6c1313ec43f5e7dfbc318727d2bd07c4d"
+          "sha256": "0b651058ba791f81090df0aca30d9e2202b18683a0fe621905f5719272c74871",
+          "bytes": 3086
         },
         "LICENSE-APACHE": {
           "bytes": 10174,
@@ -365,8 +386,8 @@
           "sha256": "ffb54183b2b44903f64736cdc9b50abb834ee6dac7059d2c9631692dd13c754b"
         },
         "snippets/eframe-d31a8450ea12dfc1/inline0.js": {
-          "bytes": 280,
-          "sha256": "22a98f9d0c5a0532d291bdc9a3050439420b3d11143b4568fcfd3c66fff36995"
+          "sha256": "22a98f9d0c5a0532d291bdc9a3050439420b3d11143b4568fcfd3c66fff36995",
+          "bytes": 280
         },
         "vectorcraft-web-1a4f1888c82e6869.js": {
           "bytes": 181135,
@@ -535,6 +556,14 @@
         "vectorcraft-web-f28c74aaf617aaa0_bg.wasm": {
           "bytes": 84272168,
           "sha256": "902f15d011d931dd32e713379dfdccf3d58ba4f0cfb77a8ce2d7093793684a6e"
+        },
+        "vectorcraft-web-1db17032714ca7cf.js": {
+          "sha256": "3c494cd855361f742a5bfec1f5e9b4da7ed56bbb95b9341a760144db59b93457",
+          "bytes": 181232
+        },
+        "vectorcraft-web-1db17032714ca7cf_bg.wasm": {
+          "sha256": "06b73973eefe51162c3cee863574c64541b3f7d6ea8395d8ee01b12259f4a34e",
+          "bytes": 84293398
         }
       }
     },
@@ -545,16 +574,16 @@
         "sourceRevision": "8a87a457abb43ac344deeb3fdb67541b91a72ff1",
         "hostProtocol": 1,
         "contextProtocol": 2,
-        "status": "real Rust/Trunk build: transient AI canvas presentation; runtime acceptance recorded separately",
+        "status": "genuine Rust release/wasm-bindgen build: live App nonpainting observation; full lifecycle acceptance recorded separately",
         "rustToolchain": "1.95.0",
         "sourceFiles": {
           "Cargo.lock": "7e19051711d78d853a616a72d332f5448a4bd92c3898cc658763b01af414af80",
           "apps/photocraft-web/Cargo.toml": "24745697d1c8836ea5a85b74fe0c52f3be711dd46a20faf7626565527e424f84",
           "apps/photocraft-web/Trunk.toml": "ad91d60bdce8772c36982df9f9b32f5673714da1ca32a525fd4c2536d34727d3",
           "apps/photocraft-web/index.html": "c391361272bbc10d3e9bc1675c61b11acf9d8b2557e22770b3425f67c2737806",
-          "apps/photocraft-web/src/api.rs": "cfca17485fbf366751b09a8c1898350a31e6450b0cf5726f0f648ab6538eba7c",
-          "apps/photocraft-web/src/main.rs": "a4fecd2009f99b07cd2071d33ecdf42534d7fdff311f2efd71b464274ce0a7fd",
-          "apps/photocraft-web/src/web.rs": "fdb6f0829616b669f372582cb2a43c9625679b325c1efbfe3958042420cf930f",
+          "apps/photocraft-web/src/api.rs": "b8278b74b1abb319bae02fa705f4be66c6789b385e8efcbdc4722f47f56e746f",
+          "apps/photocraft-web/src/main.rs": "f5fcc6f27bfb986e2075683fdaa7af8d59d4c499f09db4da4382eeabcbaba69c",
+          "apps/photocraft-web/src/web.rs": "7d5f96f077e40b9bc0880720c930a3eb165c309c69b97d939c1470632afe118c",
           "crates/io/src/embedded_import.rs": "804c0b96d87d61687209978f28eade05dbe3a10f4f9ad826fbbba87d98a11193",
           "crates/io/src/flat.rs": "073142f95df5c28c387b39a1bc6249daf8db86404fd13c4a5a3f9ecb73663791",
           "crates/io/src/lib.rs": "28ee836b72c595f92e3f518db52795083098823c76cf9fe5a94732dcc106517d",
@@ -566,9 +595,9 @@
           "crates/ui-egui/src/app/control.rs": "279aa79e3819338ab898e68dbd9866d233310b9a1c258f8a55c272723c909fae",
           "crates/ui-egui/src/app/frame.rs": "f906d7404fab113c2aed483794d0f5421a15feedc1ffaf02307b0954f44cf2f5",
           "crates/ui-egui/src/app/prefs.rs": "71c5951efa788ddf1239ebb0a7f1a04dfb60d43f9b8448d54b1d0ed77a210a4e",
-          "crates/ui-egui/src/control.rs": "30e2540e44fd6f821a78270558c470f0e206e224116ad4002aa813408edc08a3",
+          "crates/ui-egui/src/control.rs": "a68e2a3fdeb269ba6ed18ff5b6726a7b4267688d67a3af3a49e28efea54b1a1a",
           "crates/ui-egui/src/control/dispatch.rs": "900b6138ba3fd0771a1dbae9e942c5fd3b0c86d9d7489afb4a51025f07981dbe",
-          "crates/ui-egui/src/control/hosted.rs": "77a58fd4d65d1f6a316f82a894325b597c4311a4a0b7368c37e82731f649522d",
+          "crates/ui-egui/src/control/hosted.rs": "077bbdc7d8f21d783998745d31d3835fb5cb865cb44990af6db928f53cb414c5",
           "crates/ui-egui/src/control/hosted_tests.rs": "c66f62b8e8d2756e1c1db421b2672589e917c93c9978808fd3ad1823b9078af8",
           "crates/ui-egui/src/control/inspect.rs": "e80833a09b39947c84db2c18aabfd36bd44cae3ee0905125558a0ea84c16771e",
           "crates/ui-egui/src/lib.rs": "ac35381e361bb9719a5b1002e2b5044bff2ac7eb9e22f550856e12e1402702df",
@@ -577,7 +606,22 @@
           "crates/ui-egui/src/panels/title_bar.rs": "85624d1b4e3e4049d6280bdba366b03db023cf250edc129d13e1f1832a48a3f8",
           "crates/ui-egui/src/prefs/prefs_ui/appearance.rs": "8c3a0391a9ea21c9b99fb7dcd3c072c59466cc540bf08e4f437c42687adc8a95",
           "crates/ui-egui/src/theme.rs": "dd9ca4b932c800f0f789ecc05cc98798d274fea90fd8c9ef8771964df3fce768",
-          "crates/ui-egui/src/canvas/tabs.rs": "8f74a75074e11f915148b64390a454e4a7dab24c59461a3f62da8b20919d10dd"
+          "crates/ui-egui/src/canvas/tabs.rs": "8f74a75074e11f915148b64390a454e4a7dab24c59461a3f62da8b20919d10dd",
+          "apps/photocraft-web/src/indexed_presets.rs": "a40328bd46df5ba222d4e84a132f216bab2c5e8266a0ba9a8b7a8e6d55a10d9c",
+          "apps/photocraft-web/src/observation.rs": "9ea761fd1dbbf04fd9800c3ca45961b6a29283f889b639a522b3e71744b95cdc",
+          "apps/photocraft-web/src/preset_bridge.rs": "f1ae409aee08db306550039f47eb1990e2c2ea096c2edf9e80b7c7e37f0c26a8",
+          "font-input/fonts/biz-ud-pgothic/BIZUDPGothic-Regular.ttf": "258d7156c165f2ff774b6efee637c22c3b950de0d8a10e501137061bc8085d01",
+          "font-input/fonts/biz-ud-pgothic/OFL.txt": "e753d7155d53c747d037a445e584c8ecfca6dd79846db610417e282a736b28bc",
+          "font-input/fonts/manifest.txt": "e825709cd46ff7abe213c141e981c0c11e098195a134951e95dada85eaea778a",
+          "font-input/fonts/noto-sans-arabic/NotoSansArabic.ttf": "63111b5b2e074dd48cc67692e0a2726d86ee94c1c37fe8598257b7b4e87e869e",
+          "font-input/fonts/noto-sans-arabic/OFL.txt": "07fc70bfeb985cc1a87a8587d0a0c80bab11c86c9dc3fd95b6f0cb332f983e96",
+          "font-input/fonts/noto-sans-cjk-sc/NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+          "font-input/fonts/noto-sans-cjk-sc/OFL.txt": "6a73f9541c2de74158c0e7cf6b0a58ef774f5a780bf191f2d7ec9cc53efe2bf2",
+          "font-input/fonts/noto-sans-georgian/NotoSansGeorgian.ttf": "dc591156f36842d38996c4a7a17fee9bb58e45da3e2cac7a31b7d33de700adb9",
+          "font-input/fonts/noto-sans-georgian/OFL.txt": "8c02263c5d73d40544f9ed91e30c4e947407057a3cc430d7b786189aeceff6df",
+          "font-input/fonts/noto-sans-thai/NotoSansThai.ttf": "5a1c559bb539583c8a1fd99d1c5b9491e5e14478c9cd2bd0970d5c3096cc9ef8",
+          "font-input/fonts/noto-sans-thai/OFL.txt": "2e98fd23a52d253db8612cd5942c8f2ff4111b21d2367050fdca91d8ccc374a0",
+          "font-input/source-lock.json": "74b04373c12913d842ed0564d6ae6ab4a23af892d1789c66c52da24b0bf70f06"
         },
         "buildLogSha256": "77af74d1352802c94f35069a271d618c73a61144768a7197bb649c0aee6fe41b",
         "fontRevision": "b076417b5880bd4154bd22f00695b1d28c6bea83",
@@ -608,7 +652,20 @@
           "photocraft-web-c21ca435b4f2522c_bg.wasm",
           "photocraft-web-df380fadd9bada0b.js",
           "photocraft-web-df380fadd9bada0b_bg.wasm"
-        ]
+        ],
+        "ui169BuildToolchain": {
+          "rust": "1.95.0",
+          "wasmBindgen": "0.2.129",
+          "wasmOpt": "version_123 -Oz"
+        },
+        "ui169NativeObservationPatch": "docs/ui169/photocraft-observation.patch",
+        "ui169NativeBuildLogSha256": "e4b6f5fecd6a6cf0347ff94b4941b37a9bb6574563e24c96329ff873ab5ef6be",
+        "ui169NativeObservationPatchSha256": "a66794ce8e40a7bfd8614c28dcfb86bc194de8dcf7907c0d73cf78db4f4a30d1",
+        "ui169SourceArchive": {
+          "url": "https://codeload.github.com/storytold/photocraft/zip/8a87a457abb43ac344deeb3fdb67541b91a72ff1",
+          "sha256": "ae14e35167e07c965268c2d7df12487d96d45f395278b00742d80247518398bd",
+          "revision": "8a87a457abb43ac344deeb3fdb67541b91a72ff1"
+        }
       },
       "files": {
         "ATTRIBUTION.md": {
@@ -660,8 +717,8 @@
           "sha256": "2e98fd23a52d253db8612cd5942c8f2ff4111b21d2367050fdca91d8ccc374a0"
         },
         "index.html": {
-          "bytes": 2507,
-          "sha256": "5a8bae979c76ea0bae60a7a6b44e1c844ed33f30685b0a0706eea5fbeb5c8cfa"
+          "sha256": "905d79021ed54878151ab75c17410ac1d1d8cd2988c1bd05f076531af7adb976",
+          "bytes": 2507
         },
         "LICENSE-APACHE": {
           "bytes": 10174,
@@ -740,8 +797,16 @@
           "sha256": "dd5a9bbf818f351ae4c5d43bdd803843db47cde500bc92d377771abc880acfa5"
         },
         "snippets/eframe-d31a8450ea12dfc1/inline0.js": {
-          "bytes": 280,
-          "sha256": "22a98f9d0c5a0532d291bdc9a3050439420b3d11143b4568fcfd3c66fff36995"
+          "sha256": "22a98f9d0c5a0532d291bdc9a3050439420b3d11143b4568fcfd3c66fff36995",
+          "bytes": 280
+        },
+        "photocraft-web-c3739d5f87e8c4f9.js": {
+          "sha256": "9ea8e6f7a3943a9905b76093b956ec42e08cb3d2288313a3c8b863fe05b89d3e",
+          "bytes": 182829
+        },
+        "photocraft-web-c3739d5f87e8c4f9_bg.wasm": {
+          "sha256": "e4398992026829017b99cc22d76697cf0f4b937bb1fc737d1eca917619023d89",
+          "bytes": 48296793
         }
       }
     },
@@ -752,7 +817,7 @@
         "sourceRevision": "4ce2944630b04188dee8504c14151994d06c416a",
         "hostProtocol": 1,
         "contextProtocol": 2,
-        "status": "genuine source-owning native Web build; installation alone is not integration acceptance",
+        "status": "genuine Rust release/wasm-bindgen build: live App nonpainting observation; full lifecycle acceptance recorded separately",
         "sourceFiles": {
           "ATTRIBUTION.md": "816b9eab869f45b27719b7f638625cb746b10e959fead1c4788cb786cbf92e5e",
           "Cargo.lock": "c920928a7c964bd7998c35f0ba63a4dede6833df905018c2fe687a4a9f799364",
@@ -760,10 +825,10 @@
           "apps/deckcraft-web/Cargo.toml": "9807b6d6513755ec79b394c2c40dccb3a418c8e18c0c81f4aa3b471b92449369",
           "apps/deckcraft-web/Trunk.toml": "a996cb61144f4f961e8a44d8df04ef329620c12928aea4a4f328d1fcaf055ec8",
           "apps/deckcraft-web/index.html": "5ff552301bfde3d5d369c93ad1a7a886f7aa639c021692269677c12f68e132be",
-          "apps/deckcraft-web/src/api.rs": "b965a7af2951778967fa9bd0a9eacd968e52afc93da9daa207e540a3f040c01c",
+          "apps/deckcraft-web/src/api.rs": "c372744bc49ae1a4442df0863e6b28ac82ec6e40be24d4373752814f4d4bf224",
           "apps/deckcraft-web/src/audio.rs": "34c7102f6591080758c8bfdd3208f77dc2f25fab0c78f542bd1f30a24a4e7eba",
-          "apps/deckcraft-web/src/main.rs": "6631e810eccf762abf0a550147accc5cdf0fa622b250b4d2ed2d5092a8485101",
-          "apps/deckcraft-web/src/web.rs": "6e9b326eb7d8bf891280f457c24287ad95cb5cbf8857bfb786faefceb261f610",
+          "apps/deckcraft-web/src/main.rs": "7a18c488f1d779b7b3e1793f0b8faff1f22c9533c7fb04275d363c8454abbb86",
+          "apps/deckcraft-web/src/web.rs": "12401cb4cb92c85127f87d08c13d97e34774385aefd59bb9e3e22284ca624238",
           "crates/anim/src/interact.rs": "d5039045fe7173c5d271e40f20101c4bf57669520afb3e8bfdb5ebf788e05c9e",
           "crates/engine/Cargo.toml": "45274002ee5d7ad7e59115e537a0f96e05f0ea443079344ea7d8d56bfef56780",
           "crates/engine/src/cmd.rs": "dae2cee773e4437b56826b81302814227f32b565602fd09ab759d017610ac004",
@@ -827,8 +892,8 @@
           "crates/ui-egui/src/backstage/print.rs": "e387d83abd3bbbf235691a4297a75a8b46207a96dd06a34a65412f8055418d84",
           "crates/ui-egui/src/canvas/context_menu.rs": "b8fbec137d42939d65e648ce311b174cbd6e8032f33b7a79dfebb8f87faae78c",
           "crates/ui-egui/src/canvas/rulers.rs": "fada9183cfa895433d6277e2d266fdd709cd2cc613256df74610a6ad8b9d42b3",
-          "crates/ui-egui/src/control.rs": "22ec3265c9f9680c1b0b8c94b61d91a861b5cd811d1e267397c76a19a9b75bca",
-          "crates/ui-egui/src/control/hosted.rs": "7e0075fa1f93cd375ceecefc5198213eb103827d6095520d2cbf718ffa8bde2d",
+          "crates/ui-egui/src/control.rs": "aed9998acb3b68e3f066739a00797de9e03d9cca96f419e3b7abbb4187dc17e1",
+          "crates/ui-egui/src/control/hosted.rs": "4c83c10ec6e2c1d131b5b37cdf2ea74ec4203378caa67bac19d41b4e77e70be7",
           "crates/ui-egui/src/control/hosted_tests.rs": "a296d49ba2077e7cfd37aedfba67a4ff3c22fccc19833889025f409093a732a7",
           "crates/ui-egui/src/dialogs.rs": "8606567985730ced45720dea1797a00500c054f7bda5b822d09c6f70cebd1f3c",
           "crates/ui-egui/src/dialogs/about.rs": "5d919d0f4da70335ada0db0f408f5b7f746082b77f4a1898d45fe96c9343e1f1",
@@ -894,18 +959,19 @@
           "crates/ui-egui/src/theme.rs": "227925ba5d648193e8980ce681db3cee1a66920aac8113b47861d2c9121eb8d2",
           "crates/ui-egui/src/toast.rs": "78f7ae1c009b5e4c1104d6c2a395e3293edb9f0f10833f57acf6b530bf6ac2e1",
           "crates/ui-egui/src/widgets.rs": "21a206a600360bb0d3a606f7f6001edfc534df5498378d7b43aedb40de91b224",
-          "font-input/fonts\\biz-ud-pgothic\\BIZUDPGothic-Bold.ttf": "30eba52fc837e8b62c97d4b82e6706583149fb7294e3712dd71a655eaea80a90",
-          "font-input/fonts\\biz-ud-pgothic\\BIZUDPGothic-Regular.ttf": "258d7156c165f2ff774b6efee637c22c3b950de0d8a10e501137061bc8085d01",
-          "font-input/fonts\\biz-ud-pgothic\\OFL.txt": "e753d7155d53c747d037a445e584c8ecfca6dd79846db610417e282a736b28bc",
-          "font-input/fonts\\inter\\Inter-Bold.ttf": "288316099b1e0a47a4716d159098005eef7c0066921f34e3200393dbdb01947f",
-          "font-input/fonts\\inter\\Inter-Regular.ttf": "40d692fce188e4471e2b3cba937be967878f631ad3ebbbdcd587687c7ebe0c82",
-          "font-input/fonts\\inter\\OFL.txt": "262481e844521b326f5ecd053e59b98c8b2da78c8ee1bdbb6e8174305e54935a",
-          "font-input/fonts\\latin-manifest.txt": "8bdc66b47cb1a8d13e04240ab5e0c54601db05bda10a9f567e7f4cb1bdc5c58d",
-          "font-input/fonts\\lxgw-wenkai-lite\\LXGWWenKaiLite-Regular.ttf": "f799a538a3355877e597a0ae04050e897932c9ae7689eb9227c2953c5dd549ea",
-          "font-input/fonts\\lxgw-wenkai-lite\\OFL.txt": "0333a85fe077b6849f8e417acc44e8bd879442ceb681e271acf93e2d57fd4e2e",
-          "font-input/fonts\\manifest.txt": "a70cf3b8c08be4e90ec40841c860d0e2ff25bc6566ce03a473d4fa1dc4b38958",
-          "font-input/fonts\\simplified-chinese-manifest.txt": "dff6d22a8e3162d02e7e7c4bd058a36b117485e135e362a060ce68734649ea35",
-          "font-input/source-lock.json": "0da094ff887ee881bcd2cbb9b12cda5b73a9f9258b9447172c4d45d834b8d16b"
+          "font-input/fonts/biz-ud-pgothic/BIZUDPGothic-Bold.ttf": "30eba52fc837e8b62c97d4b82e6706583149fb7294e3712dd71a655eaea80a90",
+          "font-input/fonts/biz-ud-pgothic/BIZUDPGothic-Regular.ttf": "258d7156c165f2ff774b6efee637c22c3b950de0d8a10e501137061bc8085d01",
+          "font-input/fonts/biz-ud-pgothic/OFL.txt": "e753d7155d53c747d037a445e584c8ecfca6dd79846db610417e282a736b28bc",
+          "font-input/fonts/inter/Inter-Bold.ttf": "288316099b1e0a47a4716d159098005eef7c0066921f34e3200393dbdb01947f",
+          "font-input/fonts/inter/Inter-Regular.ttf": "40d692fce188e4471e2b3cba937be967878f631ad3ebbbdcd587687c7ebe0c82",
+          "font-input/fonts/inter/OFL.txt": "262481e844521b326f5ecd053e59b98c8b2da78c8ee1bdbb6e8174305e54935a",
+          "font-input/fonts/latin-manifest.txt": "8bdc66b47cb1a8d13e04240ab5e0c54601db05bda10a9f567e7f4cb1bdc5c58d",
+          "font-input/fonts/lxgw-wenkai-lite/LXGWWenKaiLite-Regular.ttf": "f799a538a3355877e597a0ae04050e897932c9ae7689eb9227c2953c5dd549ea",
+          "font-input/fonts/lxgw-wenkai-lite/OFL.txt": "0333a85fe077b6849f8e417acc44e8bd879442ceb681e271acf93e2d57fd4e2e",
+          "font-input/fonts/manifest.txt": "a70cf3b8c08be4e90ec40841c860d0e2ff25bc6566ce03a473d4fa1dc4b38958",
+          "font-input/fonts/simplified-chinese-manifest.txt": "dff6d22a8e3162d02e7e7c4bd058a36b117485e135e362a060ce68734649ea35",
+          "font-input/source-lock.json": "0da094ff887ee881bcd2cbb9b12cda5b73a9f9258b9447172c4d45d834b8d16b",
+          "apps/deckcraft-web/src/observation.rs": "9ea761fd1dbbf04fd9800c3ca45961b6a29283f889b639a522b3e71744b95cdc"
         },
         "buildLogSha256": "591ac973caa291c1cd1981b50ee56d5d20850c68613df39b848c8f4ba55e8ec5",
         "fonts": {
@@ -952,7 +1018,20 @@
           "wasmOpt": "version_123 -Oz"
         },
         "ui167BuildLogSha256": "4e48adf25c69a2c6c46d1da016016e03d4ed470c7f08ff87e05fb4f8a9e4e67a",
-        "ui167RuntimePatch": "docs/ui167/deckcraft-display-font.patch"
+        "ui167RuntimePatch": "docs/ui167/deckcraft-display-font.patch",
+        "ui169BuildToolchain": {
+          "rust": "1.95.0",
+          "wasmBindgen": "0.2.129",
+          "wasmOpt": "version_123 -Oz"
+        },
+        "ui169NativeObservationPatch": "docs/ui169/deckcraft-observation.patch",
+        "ui169NativeBuildLogSha256": "fc7545794eafc490112341836955a8e43746067d55c0728f3acb755768f2401b",
+        "ui169NativeObservationPatchSha256": "206eacb15d760590e31b7c2145b4a621d7b3ddf80c6974d54bc2b041d68a5fee",
+        "ui169SourceArchive": {
+          "url": "https://codeload.github.com/storytold/deckcraft/zip/4ce2944630b04188dee8504c14151994d06c416a",
+          "sha256": "a6f76f20729aa998ec208c13bea121da13ec06c66396abd469a6f448bb8168e3",
+          "revision": "4ce2944630b04188dee8504c14151994d06c416a"
+        }
       },
       "files": {
         "ATTRIBUTION.md": {
@@ -1004,8 +1083,8 @@
           "sha256": "2e315b69b915c76f6cf978f55168b8c33f8bdc1e66e13a8ff91e64cc16f047ba"
         },
         "index.html": {
-          "sha256": "3920bbb565f7746100fa907c6193f81271604dbccd674b88d224db85471e0f81",
-          "bytes": 1750
+          "sha256": "e57df2732b408611cab8389069ecb7f6bb77f380b68de6fcc8dfd57a53bc11e2",
+          "bytes": 1794
         },
         "LICENSE-APACHE": {
           "bytes": 10174,
@@ -1024,8 +1103,8 @@
           "sha256": "3a8a156dea6cfc5613c5c44d721db78afd34c68b21a29839683b3c5e3c233e2b"
         },
         "snippets/eframe-d31a8450ea12dfc1/inline0.js": {
-          "bytes": 280,
-          "sha256": "22a98f9d0c5a0532d291bdc9a3050439420b3d11143b4568fcfd3c66fff36995"
+          "sha256": "22a98f9d0c5a0532d291bdc9a3050439420b3d11143b4568fcfd3c66fff36995",
+          "bytes": 280
         },
         "fonts/biz-ud-pgothic/OFL.txt": {
           "bytes": 4408,
@@ -1050,6 +1129,14 @@
         "deckcraft-web-ui167_bg.wasm": {
           "sha256": "0c016eef2412e8997cadee3c9a764dcd0290afaa0e74f7295d3e82a049d38f00",
           "bytes": 36574210
+        },
+        "deckcraft-web-4880a537c181c4ef.js": {
+          "sha256": "3a28bb28877de31dc39b98d110d89b5091d3b77636c28637d09711bd8c74ed13",
+          "bytes": 170244
+        },
+        "deckcraft-web-4880a537c181c4ef_bg.wasm": {
+          "sha256": "af322739301bf1422fd6b5b4eed3f063d3fe89e2c679ce7801af758d594039b6",
+          "bytes": 38399361
         }
       }
     }

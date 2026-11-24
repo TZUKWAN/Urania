@@ -18,7 +18,7 @@ window.__ModuleLoader__.load({
 
 		function initialState() {
 			return {
-				root: null, sessionCwd: null, services: {},uiBuild:168,workspaceMode:'native',
+				root: null, sessionCwd: null, services: {},uiBuild:169,workspaceMode:'native',
 				docs: null, assets: [], tasks: [], templates: [], designSystems: [],
 				activeId: null, doc: null, revision: null,
 				dirty: false, saving: false, saveError: null, stateError: null,
@@ -88,10 +88,10 @@ window.__ModuleLoader__.load({
 
 			(async () => {
 				try {
-					const V = '?v=168';
+					const V = '?v=169';
 					const base = (p) => new URL(p.replace(/^\/+/, ''), document.baseURI).pathname;
 					const healthResponse=await fetch(base('/designcraft/api/v1/health'),{cache:'no-store'}),health=await healthResponse.json();
-					if(!healthResponse.ok||health.protocolVersion!==2||health.uiBuild!==168||health.capabilities?.professionalEditor!==1||!health.capabilities.editorExecutionAdmission||!health.capabilities.nativeLiveness||!health.capabilities.nativeFileActions){
+					if(!healthResponse.ok||health.protocolVersion!==2||health.uiBuild!==169||health.capabilities?.professionalEditor!==1||!health.capabilities.editorExecutionAdmission||!health.capabilities.nativeLiveness||!health.capabilities.nativeFileActions){
 						let disk='';try{const response=await fetch(base('/designcraft/api/v1/versions'),{cache:'no-store'});if(response.ok){const d=(await response.json()).disk;disk='，磁盘 '+d.version+' / UI'+d.uiBuild;}}catch{}
 						throw new Error('当前界面 UI'+store.get().uiBuild+'，后台 '+(health.version||'未知')+' / UI'+(health.uiBuild??'未知')+disk+'。组件版本或运行保护不匹配，请在方便时重新打开 DSH 以继续使用已保存作品。');
 					}

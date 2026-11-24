@@ -1,4 +1,4 @@
-import {selectedObjectIds} from './native-contract.js?v=168';
+import {selectedObjectIds} from './native-contract.js?v=169';
 
 function find(nodes,id){
  for(const node of nodes||[]){if(String(node.id)===String(id))return node;const nested=find(node.children,id);if(nested)return nested;}

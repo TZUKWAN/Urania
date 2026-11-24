@@ -393,3 +393,51 @@ condition = "AND"
 regexTarget = "line"
 paths = ['''(?:^|/)docs/engine\-source\-snapshots\-ui165\.zip!vectorcraft\-host/crates/engine/src/cmd/place/legacy_svg\.rs$''']
 regexes = ['''^\s*if\ node\.extras\(\)\.attrs\.as_ref\(\)\.is_some_and\(\|a\|\ a\.data\.iter\(\)\.any\(\|\(key,\ _\)\|\ key\ ==\ "dsh\-material\-v1"\)\)\ \{\s*$''']
+
+[[allowlists]]
+targetRules = ["generic-api-key"]
+description = "UI169 exact native source digest or verified public metadata comparison; source bytes independently checked"
+condition = "AND"
+regexTarget = "line"
+paths = ['''(?:^|/)(?:web-runtime-lock\.json|docs/ui169/NATIVE_BUILD_INPUTS\.json)$''']
+regexes = ['''^\s*"apps/deckcraft\-web/src/api\.rs":\ "c372744bc49ae1a4442df0863e6b28ac82ec6e40be24d4373752814f4d4bf224",\s*$''']
+
+[[allowlists]]
+targetRules = ["generic-api-key"]
+description = "UI169 exact native source digest or verified public metadata comparison; source bytes independently checked"
+condition = "AND"
+regexTarget = "line"
+paths = ['''(?:^|/)(?:web-runtime-lock\.json|docs/ui169/NATIVE_BUILD_INPUTS\.json)$''']
+regexes = ['''^\s*"apps/photocraft\-web/src/api\.rs":\ "b8278b74b1abb319bae02fa705f4be66c6789b385e8efcbdc4722f47f56e746f",\s*$''']
+
+[[allowlists]]
+targetRules = ["generic-api-key"]
+description = "UI169 exact native source digest or verified public metadata comparison; source bytes independently checked"
+condition = "AND"
+regexTarget = "line"
+paths = ['''(?:^|/)(?:web-runtime-lock\.json|docs/ui169/NATIVE_BUILD_INPUTS\.json)$''']
+regexes = ['''^\s*"apps/vectorcraft\-web/src/api\.rs":\ "e1365b9ef406e687ebaa7e9f59da51fdcfe5cd25f13481d6a03a1fe4a86e0060",\s*$''']
+
+[[allowlists]]
+targetRules = ["generic-api-key"]
+description = "UI169 exact native source digest or verified public metadata comparison; source bytes independently checked"
+condition = "AND"
+regexTarget = "line"
+paths = ['''(?:^|/)(?:web-runtime-lock\.json|docs/ui169/NATIVE_BUILD_INPUTS\.json)$''']
+regexes = ['''^\s*"apps/vectorcraft\-web/src/keys\.rs":\ "a7a2c25ca84b9c685647de4550e810f8f5a759d4fc6297e5f6d0c22ac783a7ea",\s*$''']
+
+[[allowlists]]
+targetRules = ["generic-api-key"]
+description = "UI169 exact native source digest or verified public metadata comparison; source bytes independently checked"
+condition = "AND"
+regexTarget = "line"
+paths = ['''(?:^|/)(?:web-runtime-lock\.json|docs/ui169/NATIVE_BUILD_INPUTS\.json)$''']
+regexes = ['''^\s*"crates/ui\-egui/src/app/keys\.rs":\ "ef5d1abe023390292d178ee1c0941e3ccac4c08eb9c92f18119efa03a7149050",\s*$''']
+
+[[allowlists]]
+targetRules = ["generic-api-key"]
+description = "UI169 exact native source digest or verified public metadata comparison; source bytes independently checked"
+condition = "AND"
+regexTarget = "match"
+paths = ['''(?:^|/)docs/ui169/vectorcraft-observation\.patch$''']
+regexes = ['''^key\s*==\s*\x22dsh-material-v1\x22$''']

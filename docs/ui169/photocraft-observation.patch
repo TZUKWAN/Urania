@@ -1,0 +1,1940 @@
+--- a/Cargo.lock
++++ b/Cargo.lock
+@@ -5462,6 +5462,7 @@
+  "photocraft-io",
+  "photocraft-paint",
+  "photocraft-psd",
++ "photocraft-text",
+  "photocraft-ui-egui",
+  "rfd",
+  "serde_json",
+--- a/apps/photocraft-web/Cargo.toml
++++ b/apps/photocraft-web/Cargo.toml
+@@ -23,18 +23,20 @@
+ photocraft-io = { workspace = true }
+ photocraft-codecs = { workspace = true }
+ photocraft-doc = { workspace = true }
++photocraft-text = { workspace = true }
+ photocraft-ui-egui = { workspace = true }
+ egui = { workspace = true }
+ log = { workspace = true }
++serde_json = { workspace = true }
+ 
+ [target.'cfg(target_arch = "wasm32")'.dependencies]
+ # `wgpu` pulls egui-wgpu's defaults: WebGPU plus the WebGL2 fallback.
+ eframe = { workspace = true, features = ["wgpu", "accesskit", "clipboard"] }
+-rfd = { workspace = true }
++rfd = { workspace = true, features = ["file-handle-inner"] }
+ wasm-bindgen = "0.2"
+ wasm-bindgen-futures = "0.4"
+ js-sys = "0.3"
+-web-sys = { version = "0.3", features = ["Window", "Document", "Element", "HtmlElement", "HtmlCanvasElement", "DomRect", "HtmlAnchorElement", "Blob", "BlobPropertyBag", "Url", "Location", "CssStyleDeclaration", "Storage", "Event", "EventTarget", "MouseEvent", "PointerEvent", "BeforeUnloadEvent", "AbortController", "AbortSignal", "DomException", "Response", "IdbFactory", "IdbOpenDbRequest", "IdbDatabase", "IdbRequest", "IdbTransaction", "IdbTransactionMode", "IdbObjectStore", "IdbCursor", "IdbCursorWithValue", "RequestInit", "RequestMode", "Navigator"] }
++web-sys = { version = "0.3", features = ["Window", "Document", "Element", "HtmlElement", "HtmlCanvasElement", "DomRect", "HtmlAnchorElement", "Blob", "File", "BlobPropertyBag", "Url", "Location", "CssStyleDeclaration", "Storage", "Event", "EventTarget", "MouseEvent", "PointerEvent", "BeforeUnloadEvent", "AbortController", "AbortSignal", "DomException", "Response", "IdbFactory", "IdbOpenDbRequest", "IdbDatabase", "IdbRequest", "IdbTransaction", "IdbTransactionMode", "IdbObjectStore", "IdbCursor", "IdbCursorWithValue", "RequestInit", "RequestMode", "Navigator"] }
+ 
+ [dev-dependencies]
+ serde_json = { workspace = true }
+--- a/apps/photocraft-web/index.html
++++ b/apps/photocraft-web/index.html
+@@ -4,7 +4,7 @@
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+   <title>PhotoCraft</title>
+-  <link data-trunk rel="rust" data-bin="photocraft-web" data-cargo-profile="wasm-release" data-cargo-features="heif" data-wasm-opt="z" data-wasm-opt-params="--converge" data-weak-refs />
++  <link data-trunk rel="rust" data-bin="photocraft-web" data-cargo-profile="wasm-release" data-cargo-features="heif" data-wasm-opt="z" data-weak-refs />
+   <style>
+     html, body { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; background: #262626; }
+     #photocraft_canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+--- /dev/null
++++ b/apps/photocraft-web/src/api.rs
+@@ -0,0 +1,228 @@
++//! Lossless browser transport to the same displayed PhotoCraft App.
++use photocraft_ui_egui::ControlRequest;
++use serde_json::Value;
++use std::cell::{Cell, RefCell};
++use std::sync::mpsc::{Receiver, Sender, TryRecvError};
++use wasm_bindgen::JsCast as _;
++use wasm_bindgen::prelude::*;
++
++type Waiting = (Receiver<Value>, js_sys::Function, js_sys::Function);
++type Inbox = std::sync::Arc<std::sync::Mutex<Vec<(String, Vec<u8>)>>>;
++thread_local! {
++    static TX: RefCell<Option<Sender<ControlRequest>>> = const { RefCell::new(None) };
++    static WAITING: RefCell<Vec<Waiting>> = const { RefCell::new(Vec::new()) };
++    static CTX: RefCell<Option<egui::Context>> = const { RefCell::new(None) };
++    static INBOX: RefCell<Option<Inbox>> = const { RefCell::new(None) };
++    static RUNNER: RefCell<Option<eframe::WebRunner>> = const { RefCell::new(None) };
++    static IN_FRAME: Cell<bool> = const { Cell::new(false) };
++    static OBSERVATION: Cell<crate::observation::Observation> = const { Cell::new(crate::observation::Observation::new()) };
++}
++
++pub struct FrameScope(bool);
++impl Drop for FrameScope {
++    fn drop(&mut self) {
++        IN_FRAME.with(|value| value.set(self.0));
++    }
++}
++pub fn enter_frame() -> FrameScope {
++    FrameScope(IN_FRAME.with(|value| value.replace(true)))
++}
++
++pub fn attach(runner: eframe::WebRunner) {
++    RUNNER.with(|slot| *slot.borrow_mut() = Some(runner));
++    activity();
++}
++
++pub fn activity() {
++    OBSERVATION.with(|slot| {
++        let mut gate = slot.get();
++        gate.activity();
++        slot.set(gate);
++    });
++}
++
++pub fn frame_start() -> Option<u64> {
++    OBSERVATION.with(|slot| slot.get().epoch())
++}
++pub fn frame_committed(epoch: Option<u64>) {
++    OBSERVATION.with(|slot| {
++        let mut gate = slot.get();
++        gate.commit(epoch);
++        slot.set(gate);
++    });
++}
++
++fn try_observe(method: &str, params: &Value) -> Option<Value> {
++    if !matches!(method, "ui.inspect" | "host.context" | "host.file.pending")
++        || !OBSERVATION.with(|slot| slot.get().ready())
++        || WAITING.with(|waiting| !waiting.borrow().is_empty())
++    {
++        return None;
++    }
++    RUNNER.with(|slot| {
++        let runner = slot.borrow();
++        let mut shell = runner.as_ref()?.app_mut::<crate::web::WebShell>()?;
++        CTX.with(|slot| shell.observe(method, params, slot.borrow().as_ref()?))
++    })
++}
++
++pub fn connect(tx: Sender<ControlRequest>, inbox: Inbox, ctx: egui::Context) {
++    TX.with(|slot| *slot.borrow_mut() = Some(tx));
++    INBOX.with(|slot| *slot.borrow_mut() = Some(inbox));
++    // Observe without replacing eframe's scheduling callback. Future timers set
++    // inside a frame (e.g. recovery heartbeats) do not make an idle read paint.
++    // Any asynchronous request outside a frame, or immediate animation request,
++    // fences reads until its activity has reached a subsequent UI pass.
++    ctx.set_repaint_observer(|info| {
++        if info.delay.is_zero() || !IN_FRAME.with(Cell::get) {
++            activity();
++        }
++    });
++    CTX.with(|slot| *slot.borrow_mut() = Some(ctx));
++}
++fn repaint() {
++    activity();
++    CTX.with(|slot| {
++        if let Some(ctx) = slot.borrow().as_ref() {
++            ctx.request_repaint();
++        }
++    });
++}
++pub fn poll_replies() {
++    WAITING.with(|slot| {
++        slot.borrow_mut().retain(|(rx, resolve, reject)| match rx.try_recv() {
++            Ok(reply) => {
++                if reply.get("ok").and_then(Value::as_bool) == Some(true) {
++                    // Do not send uint64 fields through JavaScript JSON.parse. The host
++                    // decodes exact integer tokens from this original Rust JSON string.
++                    let text = reply.get("result").unwrap_or(&Value::Null).to_string();
++                    let _ = resolve.call1(&JsValue::NULL, &JsValue::from_str(&text));
++                } else {
++                    let error = reply.get("error").and_then(Value::as_str).unwrap_or("native operation failed");
++                    let _ = reject.call1(&JsValue::NULL, &js_sys::Error::new(error));
++                }
++                false
++            }
++            Err(TryRecvError::Empty) => true,
++            Err(TryRecvError::Disconnected) => {
++                let _ = reject.call1(&JsValue::NULL, &js_sys::Error::new("native request was dropped"));
++                false
++            }
++        })
++    });
++}
++fn request_json(method: String, text: String) -> js_sys::Promise {
++    if method.is_empty() || method.len() > 128 || text.len() > 8 * 1024 * 1024 {
++        return js_sys::Promise::reject(&js_sys::Error::new("native request exceeds its method/JSON budget"));
++    }
++    let params = match serde_json::from_str::<Value>(&text) {
++        Ok(value) if value.is_object() => value,
++        _ => return js_sys::Promise::reject(&js_sys::Error::new("native parameters must be a JSON object")),
++    };
++    if let Some(value) = try_observe(&method, &params) {
++        if value.get("ok").and_then(Value::as_bool) == Some(true) {
++            let text = value.get("result").unwrap_or(&Value::Null).to_string();
++            return js_sys::Promise::resolve(&JsValue::from_str(&text));
++        }
++        let error = value.get("error").and_then(Value::as_str).unwrap_or("native operation failed");
++        return js_sys::Promise::reject(&js_sys::Error::new(error));
++    }
++    let result = js_sys::Promise::new(&mut |resolve, reject| {
++        if WAITING.with(|slot| slot.borrow().len() >= 16) {
++            let _ = reject.call1(&JsValue::NULL, &js_sys::Error::new("native request queue is full"));
++            return;
++        }
++        let (request, receiver) = ControlRequest::new(method.clone(), params.clone());
++        if TX.with(|slot| slot.borrow().as_ref().is_some_and(|tx| tx.send(request).is_ok())) {
++            WAITING.with(|slot| slot.borrow_mut().push((receiver, resolve, reject)));
++        } else {
++            let _ = reject.call1(&JsValue::NULL, &js_sys::Error::new("PhotoCraft has not started"));
++        }
++    });
++    repaint();
++    result
++}
++fn open_file(name: String, bytes: js_sys::Uint8Array) -> bool {
++    if name.is_empty() || name.len() > 960 || name.contains(['/', '\\', '\0']) || bytes.length() == 0 || bytes.length() > 256 * 1024 * 1024 {
++        return false;
++    }
++    let queued = INBOX.with(|slot| {
++        slot.borrow().as_ref().is_some_and(|inbox| {
++            let mut files = inbox.lock().unwrap_or_else(std::sync::PoisonError::into_inner);
++            if !files.is_empty() {
++                return false;
++            }
++            files.push((name, bytes.to_vec()));
++            true
++        })
++    });
++    repaint();
++    queued
++}
++/// Register an explicit project font in this web editor only.
++fn add_project_font(bytes: js_sys::Uint8Array) -> Result<JsValue, JsValue> {
++    if bytes.length() == 0 || bytes.length() > 4 * 1024 * 1024 || CTX.with(|ctx| ctx.borrow().is_none()) {
++        return Err(js_sys::Error::new("project font is empty, too large, or editor is not ready").into());
++    }
++    let mut text = photocraft_text::shared().lock().unwrap_or_else(std::sync::PoisonError::into_inner);
++    let families = text.fonts.register_font_data(bytes.to_vec());
++    if families.is_empty() {
++        return Err(js_sys::Error::new("font is invalid or did not register a family").into());
++    }
++    drop(text);
++    repaint();
++    Ok(JsValue::from_f64(families.len() as f64))
++}
++pub fn install() -> Result<(), JsValue> {
++    let object = js_sys::Object::new();
++    let set = |name: &str, value: JsValue| js_sys::Reflect::set(&object, &JsValue::from_str(name), &value).map(|_| ());
++    set("addProjectFont", Closure::<dyn Fn(js_sys::Uint8Array) -> Result<JsValue, JsValue>>::new(add_project_font).into_js_value())?;
++    set("requestJson", Closure::<dyn Fn(String, String) -> js_sys::Promise>::new(request_json).into_js_value())?;
++    set("openFile", Closure::<dyn Fn(String, js_sys::Uint8Array) -> bool>::new(open_file).into_js_value())?;
++    set(
++        "captureDownloads",
++        Closure::<dyn Fn(bool) -> Result<(), JsValue>>::new(|capture| {
++            if capture { Err(js_sys::Error::new("in-memory download capture is unsupported; use native source snapshots").into()) } else { Ok(()) }
++        })
++        .into_js_value(),
++    )?;
++    let window = web_sys::window().ok_or("no browser window")?;
++    // Capture before eframe consumes events. The JS event targets own this closure.
++    let on_activity = Closure::<dyn FnMut(web_sys::Event)>::new(|_| activity()).into_js_value();
++    for kind in [
++        "pointerdown",
++        "pointerup",
++        "pointermove",
++        "pointercancel",
++        "mousedown",
++        "mouseup",
++        "mousemove",
++        "touchstart",
++        "touchmove",
++        "touchend",
++        "touchcancel",
++        "keydown",
++        "keyup",
++        "wheel",
++        "beforeinput",
++        "input",
++        "compositionstart",
++        "compositionupdate",
++        "compositionend",
++        "focus",
++        "blur",
++        "focusin",
++        "focusout",
++        "drop",
++        "paste",
++        "cut",
++        "resize",
++        "visibilitychange",
++        "scroll",
++    ] {
++        window.add_event_listener_with_callback_and_bool(kind, on_activity.unchecked_ref(), true)?;
++    }
++
++    js_sys::Reflect::set(window.as_ref(), &JsValue::from_str("photocraft"), &object)?;
++    Ok(())
++}
+--- a/apps/photocraft-web/src/main.rs
++++ b/apps/photocraft-web/src/main.rs
+@@ -21,6 +21,11 @@
+ 
+ #[cfg(target_arch = "wasm32")]
+ mod indexed_presets;
++
++#[cfg(target_arch = "wasm32")]
++mod api;
++#[cfg(any(target_arch = "wasm32", test))]
++mod observation;
+ 
+ #[cfg(target_arch = "wasm32")]
+ mod web;
+--- a/apps/photocraft-web/src/web.rs
++++ b/apps/photocraft-web/src/web.rs
+@@ -46,6 +46,9 @@
+ 
+ pub fn start() {
+     eframe::WebLogger::init(log::LevelFilter::Info).ok();
++    if let Err(error) = crate::api::install() {
++        log::error!("PhotoCraft control bridge: {error:?}");
++    }
+     wasm_bindgen_futures::spawn_local(async {
+         let Some(document) = web_sys::window().and_then(|w| w.document()) else {
+             log::error!("no document");
+@@ -75,7 +78,8 @@
+             }
+         };
+         let pen_target = canvas.clone();
+-        let result = eframe::WebRunner::new()
++        let runner = eframe::WebRunner::new();
++        let result = runner
+             .start(
+                 canvas,
+                 options,
+@@ -83,13 +87,21 @@
+                     PhotocraftApp::install_type_reset_hooks(&cc.egui_ctx);
+                     PhotocraftApp::setup_context(&cc.egui_ctx, ThemeKind::Pro);
+                     let inbox: Inbox = Arc::default();
++                    let (control_tx, control_rx) = std::sync::mpsc::channel();
++                    crate::api::connect(control_tx, inbox.clone(), cc.egui_ctx.clone());
+                     let place_inbox: Inbox = Arc::default();
++                    let hosted_mode = Arc::new(AtomicBool::new(false));
++                    let host_errors = Arc::new(Mutex::new(Vec::new()));
+                     let served: Served = Arc::default();
+                     load_font_manifest(served.clone(), cc.egui_ctx.clone());
+                     let (session, warnings) = crate::preset_bridge::session(presets.clone());
+                     preset_warnings.extend(warnings);
+                     let drag = listen_drag(&pen_target);
+-                    let mut app = PhotocraftApp::new(session, services(inbox.clone(), place_inbox.clone(), drag_pos_service(pen_target.clone(), drag)));
++                    let mut app = PhotocraftApp::new(
++                        session,
++                        services(inbox.clone(), place_inbox.clone(), drag_pos_service(pen_target.clone(), drag), hosted_mode.clone(), host_errors.clone()),
++                    )
++                    .with_control(control_rx);
+                     if !preset_warnings.is_empty() {
+                         photocraft_ui_egui::notices::post(&mut app, i18n::t("Some brush presets could not be loaded"), preset_warnings, true, None);
+                     }
+@@ -103,10 +115,25 @@
+                     }
+                     let unsaved = Arc::new(AtomicBool::new(false));
+                     guard_unload(unsaved.clone());
+-                    Ok(Box::new(WebShell { app, inbox, place_inbox, unsaved, served, database, presets, ui_language: "" }))
++                    Ok(Box::new(WebShell {
++                        observation_epoch: None,
++                        app,
++                        inbox,
++                        place_inbox,
++                        unsaved,
++                        served,
++                        database,
++                        presets,
++                        ui_language: "",
++                        hosted_mode,
++                        host_errors,
++                    }))
+                 }),
+             )
+             .await;
++        if result.is_ok() {
++            crate::api::attach(runner.clone());
++        }
+         if let Some(el) = document.get_element_by_id("photocraft_loading") {
+             match result {
+                 Ok(()) => el.remove(),
+@@ -262,8 +289,11 @@
+ 
+ /// Wraps the app to read dropped files asynchronously (browsers can't read them synchronously,
+ /// so the app's own drop path can't handle them) and feed them through the inboxes.
+-struct WebShell {
++pub(crate) struct WebShell {
++    observation_epoch: Option<u64>,
+     app: PhotocraftApp,
++    hosted_mode: Arc<AtomicBool>,
++    host_errors: Arc<Mutex<Vec<String>>>,
+     /// Dropped files to open as documents.
+     inbox: Inbox,
+     /// Dropped files to place on the active document's canvas.
+@@ -278,6 +308,22 @@
+ }
+ 
+ impl WebShell {
++    pub(crate) fn observe(&mut self, method: &str, params: &serde_json::Value, ctx: &egui::Context) -> Option<serde_json::Value> {
++        if !photocraft_ui_egui::control::observation_ready(&self.app)
++            || !self.inbox.lock().ok()?.is_empty()
++            || !self.place_inbox.lock().ok()?.is_empty()
++            || !self.served.lock().ok()?.arrived.is_empty()
++            || !self.host_errors.lock().ok()?.is_empty()
++        {
++            return None;
++        }
++        let (request, _reply) = photocraft_ui_egui::ControlRequest::new(method.to_string(), params.clone());
++        match photocraft_ui_egui::control::handle(&mut self.app, ctx, &request) {
++            photocraft_ui_egui::control::Outcome::Done(value) => Some(value),
++            _ => None,
++        }
++    }
++
+     fn save_presets(&mut self, ctx: &egui::Context) {
+         if let Some(db) = self.database.clone()
+             && let Some(batch) = self.presets.begin()
+@@ -336,7 +382,11 @@
+ }
+ 
+ impl eframe::App for WebShell {
++    fn as_any_mut(&mut self) -> Option<&mut dyn std::any::Any> {
++        Some(self)
++    }
+     fn raw_input_hook(&mut self, ctx: &egui::Context, raw_input: &mut egui::RawInput) {
++        self.observation_epoch = crate::api::frame_start();
+         // A tap reaches eframe as Pointer Events and Touch Events: keep one press per tap, or the
+         // twin press closes the menu the first one opened (#2095).
+         photocraft_ui_egui::touch_twins::drop_twins(ctx, raw_input);
+@@ -347,8 +397,26 @@
+     }
+ 
+     fn logic(&mut self, ctx: &egui::Context, frame: &mut eframe::Frame) {
++        let _scope = crate::api::enter_frame();
++        self.hosted_mode.store(self.app.is_hosted(), Ordering::Relaxed);
++        if self.app.is_hosted() {
++            let incoming = std::mem::take(&mut *self.inbox.lock().unwrap_or_else(PoisonError::into_inner));
++            for (name, bytes) in incoming {
++                if let Err(error) = self.app.open_hosted_bytes(&name, &bytes) {
++                    self.app.ui.status = error;
++                    self.app.ui.status_error = true;
++                }
++            }
++        }
++        for error in std::mem::take(&mut *self.host_errors.lock().unwrap_or_else(PoisonError::into_inner)) {
++            self.app.ui.status = error;
++            self.app.ui.status_error = true;
++        }
+         let dropped = ctx.input_mut(|i| std::mem::take(&mut i.raw.dropped_files));
+-        if !dropped.is_empty() {
++        if !dropped.is_empty() && self.app.is_hosted() {
++            self.app.ui.status = "Use the workspace import or Place Embedded entry; hosted drag-and-drop is not connected".into();
++            self.app.ui.status_error = true;
++        } else if !dropped.is_empty() {
+             let names: Vec<String> =
+                 dropped.iter().map(|f| f.path().file_name().map(|n| n.to_string_lossy().to_string()).unwrap_or_else(|| "dropped".into())).collect();
+             // Decided now, where the drop landed: on the document's canvas the files are placed
+@@ -373,11 +441,14 @@
+         }
+         self.serve_fonts(ctx);
+         self.app.logic_frame(ctx, frame);
++        self.hosted_mode.store(self.app.is_hosted(), Ordering::Relaxed);
++        crate::api::poll_replies();
+         self.save_presets(ctx);
+         self.app.finish_type_reset_logic(ctx);
+     }
+ 
+     fn ui(&mut self, ui: &mut egui::Ui, frame: &mut eframe::Frame) {
++        let _scope = crate::api::enter_frame();
+         // Only while a preset change is unsaved. Storage the browser denies from the start (a
+         // sandboxed iframe, blocked site data) loses nothing until the first change, and that
+         // change brings the banner with the reason.
+@@ -404,46 +475,81 @@
+         self.app.ui_frame(ui, frame);
+         self.save_presets(ui.ctx());
+         self.app.finish_type_reset_pass(ui.ctx());
+-    }
+-}
+-
+-fn services(inbox: Inbox, place_inbox: Inbox, cursor_pos: photocraft_ui_egui::CursorPosFn) -> Services {
++        crate::api::frame_committed(self.observation_epoch);
++    }
++}
++
++fn services(
++    inbox: Inbox,
++    place_inbox: Inbox,
++    cursor_pos: photocraft_ui_egui::CursorPosFn,
++    hosted_mode: Arc<AtomicBool>,
++    errors: Arc<Mutex<Vec<String>>>,
++) -> Services {
++    let importing = hosted_mode.clone();
+     Services {
+         screen_pick: screen_color_service(),
+-        import: Some(Box::new(|name: &str, bytes: &[u8], opts: &photocraft_io::ImportOptions| {
+-            photocraft_io::import_with_options(name, bytes, opts).map(|r| (r.document, r.warnings)).map_err(|e| e.to_string())
++        import: Some(Box::new(move |name: &str, bytes: &[u8], opts: &photocraft_io::ImportOptions| {
++            let result = if importing.load(Ordering::Relaxed) {
++                photocraft_io::embedded_import::import(name, bytes, Default::default())
++            } else {
++                photocraft_io::import_with_options(name, bytes, opts)
++            };
++            result.map(|r| (r.document, r.warnings)).map_err(|e| e.to_string())
+         })),
+         export: Some(Box::new(|doc: &Document, path: &str, settings: &photocraft_ui_egui::ExportSettings| {
+             photocraft_io::export(doc, path, &settings.io_options()).map(|r| (r.bytes, r.warnings)).map_err(|e| e.to_string())
+         })),
+-        file_dialog: Some(Box::new(|request, _parent, reply| match request {
++        file_dialog: Some(Box::new(move |request, _parent, reply| match request {
+             // The browser's file picker hands over the files' contents, not paths. File › Open
+             // asks for several files (`multiple`), each opened in its own tab.
+-            FileDialogRequest::Open { multiple, extensions, .. } => wasm_bindgen_futures::spawn_local(async move {
+-                let dialog = if let Some(exts) = extensions {
+-                    rfd::AsyncFileDialog::new().add_filter("Supported Files", &exts)
+-                } else {
+-                    rfd::AsyncFileDialog::new().add_filter("All Formats", OPEN_EXTS).add_filter("SVG", SVG_EXTS)
+-                };
+-                let answer = if multiple {
+-                    match dialog.pick_files().await {
+-                        Some(picked) if !picked.is_empty() => {
+-                            let mut files = Vec::with_capacity(picked.len());
+-                            for file in picked {
+-                                files.push((file.file_name(), file.read().await));
++            FileDialogRequest::Open { multiple, extensions, .. } => {
++                let hosted = hosted_mode.load(Ordering::Relaxed);
++                let errors = errors.clone();
++                wasm_bindgen_futures::spawn_local(async move {
++                    let dialog = if let Some(exts) = extensions {
++                        rfd::AsyncFileDialog::new().add_filter("Supported Files", &exts)
++                    } else {
++                        rfd::AsyncFileDialog::new().add_filter("All Formats", OPEN_EXTS).add_filter("SVG", SVG_EXTS)
++                    };
++                    let answer = if multiple {
++                        match dialog.pick_files().await {
++                            Some(picked) if !picked.is_empty() => {
++                                if hosted && (picked.len() > 8 || picked.iter().map(|file| file.inner().size()).sum::<f64>() > 256.0 * 1024.0 * 1024.0) {
++                                    host_error(&errors, "Selected files exceed the hosted eight-file/256 MiB budget");
++                                    reply.send(None);
++                                    return;
++                                }
++                                let mut files = Vec::with_capacity(picked.len());
++                                for file in picked {
++                                    match read_picked(&file, hosted).await {
++                                        Ok(bytes) => files.push((file.file_name(), bytes)),
++                                        Err(error) => {
++                                            host_error(&errors, &error);
++                                            reply.send(None);
++                                            return;
++                                        }
++                                    }
++                                }
++                                Some(FileDialogAnswer::ContentsMany(files))
+                             }
+-                            Some(FileDialogAnswer::ContentsMany(files))
++                            _ => None,
+                         }
+-                        _ => None,
+-                    }
+-                } else {
+-                    match dialog.pick_file().await {
+-                        Some(file) => Some(FileDialogAnswer::Contents(file.file_name(), file.read().await)),
+-                        None => None,
+-                    }
+-                };
+-                reply.send(answer);
+-            }),
++                    } else {
++                        match dialog.pick_file().await {
++                            Some(file) => match read_picked(&file, hosted).await {
++                                Ok(bytes) => Some(FileDialogAnswer::Contents(file.file_name(), bytes)),
++                                Err(error) => {
++                                    host_error(&errors, &error);
++                                    None
++                                }
++                            },
++                            None => None,
++                        }
++                    };
++                    reply.send(answer);
++                })
++            }
+             // Browser folder handles cannot be represented as filesystem paths for engine commands.
+             FileDialogRequest::Folder { .. } => reply.send(None),
+             // No save dialog on the web: the suggested name becomes the download name.
+@@ -470,6 +576,32 @@
+ }
+ 
+ const PREFS_KEY: &str = "photocraft.preferences";
++
++fn host_error(errors: &Arc<Mutex<Vec<String>>>, message: &str) {
++    let mut pending = errors.lock().unwrap_or_else(PoisonError::into_inner);
++    if pending.len() < 16 {
++        pending.push(message.to_string());
++    }
++}
++
++async fn read_picked(file: &rfd::FileHandle, hosted: bool) -> Result<Vec<u8>, String> {
++    if !hosted {
++        return Ok(file.read().await);
++    }
++    // These handles come only from pick_file(s), which rfd constructs as Readable.
++    // Save handles are handled in a separate match arm and never enter this function.
++    let source = file.inner();
++    let size = source.size();
++    if !size.is_finite() || size <= 0.0 || size > 256.0 * 1024.0 * 1024.0 {
++        return Err("The selected file is empty or exceeds 256 MiB".into());
++    }
++    let buffer = wasm_bindgen_futures::JsFuture::from(source.array_buffer()).await.map_err(|error| format!("Could not read the selected file: {error:?}"))?;
++    let bytes = js_sys::Uint8Array::new(&buffer);
++    if f64::from(bytes.length()) != size {
++        return Err("The selected file changed while being read".into());
++    }
++    Ok(bytes.to_vec())
++}
+ 
+ fn local_storage() -> Option<web_sys::Storage> {
+     web_sys::window()?.local_storage().ok().flatten()
+--- /dev/null
++++ b/crates/io/src/embedded_import.rs
+@@ -0,0 +1,92 @@
++//! Native import for a memory-bounded embedding. Ordinary standalone import keeps its defaults.
++use crate::{ImportResult, IoError};
++
++#[derive(Clone, Copy, Debug)]
++pub struct Limits {
++    pub encoded_bytes: usize,
++    pub decoded_bytes: u64,
++    pub canvas_side: u32,
++    pub canvas_pixels: u64,
++}
++
++impl Default for Limits {
++    fn default() -> Self {
++        Self { encoded_bytes: 256 << 20, decoded_bytes: 512 << 20, canvas_side: 16384, canvas_pixels: 24_000_000 }
++    }
++}
++
++/// Read real `.pcraft`, PNG or JPEG without allocating against the standalone app's GiB budgets.
++/// Other formats need their own bounded readers before an embedding may advertise them.
++pub fn import(name: &str, bytes: &[u8], limits: Limits) -> Result<ImportResult, IoError> {
++    if bytes.is_empty() || bytes.len() > limits.encoded_bytes || limits.decoded_bytes == 0 || limits.canvas_side == 0 || limits.canvas_pixels == 0 {
++        return Err(IoError::Unsupported("embedded image input is empty or exceeds its budget".into()));
++    }
++    if name.to_ascii_lowercase().ends_with(".pcraft") || photocraft_format::is_pcraft(bytes) {
++        let options = photocraft_format::LoadOptions {
++            max_manifest_bytes: 8 << 20,
++            max_blob_bytes: usize::try_from(limits.decoded_bytes.min(128 << 20)).unwrap_or(usize::MAX),
++            max_total_bytes: limits.decoded_bytes,
++            max_canvas_side: limits.canvas_side,
++            max_canvas_pixels: limits.canvas_pixels,
++            ..Default::default()
++        };
++        let document = photocraft_format::load_from_bytes_with(bytes, &options)?;
++        let warnings = crate::open_warnings(&document);
++        return Ok(ImportResult { document, warnings, source_read_only: false, preview_only: false });
++    }
++    if !matches!(photocraft_codecs::detect(bytes), Some(photocraft_codecs::Format::Png | photocraft_codecs::Format::Jpeg)) {
++        return Err(IoError::Unsupported("the embedded editor currently admits pcraft, PNG and JPEG; other bounded readers are not connected".into()));
++    }
++    crate::flat::import_flat_bounded(
++        name,
++        bytes,
++        photocraft_codecs::Limits {
++            max_width: limits.canvas_side,
++            max_height: limits.canvas_side,
++            max_pixels: limits.canvas_pixels,
++            max_alloc: limits.decoded_bytes,
++        },
++    )
++}
++
++#[cfg(test)]
++mod tests {
++    use super::*;
++    use photocraft_codecs::{ChannelLayout, EncodeOptions, Format, Image};
++    use photocraft_color::{ColorMode, SampleType};
++    use photocraft_doc::Document;
++    use photocraft_geom::Size;
++
++    #[test]
++    fn actual_sixteen_bit_png_preserves_native_depth_and_uses_the_real_importer() {
++        let image = Image::from_u16(2, 1, ChannelLayout::Rgba, &[65535, 1000, 2000, 65535, 3000, 4000, 5000, 32768]).unwrap();
++        let png = photocraft_codecs::encode(&image, Format::Png, &EncodeOptions::default()).unwrap();
++        let result = import("sixteen.png", &png, Limits::default()).unwrap();
++        assert_eq!(result.document.depth, SampleType::U16);
++        assert_eq!(result.document.size, Size::new(2, 1));
++        assert_eq!(result.document.layers.len(), 1);
++        assert!(result.document.layers.first().unwrap().surface().is_some());
++    }
++
++    #[test]
++    fn actual_native_bundle_reopens_and_a_sparse_oversized_canvas_is_refused_before_publication() {
++        let document = Document::new("native", Size::new(64, 48), ColorMode::Rgb, SampleType::U16);
++        let bytes = photocraft_format::save_to_bytes(&document, &Default::default()).unwrap();
++        let reopened = import("native.pcraft", &bytes, Limits::default()).unwrap();
++        assert_eq!(reopened.document.id, document.id);
++        assert_eq!(reopened.document.depth, SampleType::U16);
++        assert_eq!(reopened.document.size, document.size);
++        assert!(import("native.pcraft", &bytes, Limits { canvas_pixels: 100, ..Default::default() }).is_err());
++    }
++
++    #[test]
++    fn real_encoded_pixels_and_malformed_or_unsupported_inputs_fail_closed() {
++        let image = Image::from_u8(32, 32, ChannelLayout::Rgba, vec![255; 32 * 32 * 4]).unwrap();
++        let png = photocraft_codecs::encode(&image, Format::Png, &EncodeOptions::default()).unwrap();
++        assert!(import("oversized.png", &png, Limits { canvas_pixels: 100, ..Default::default() }).is_err());
++        assert!(import("oversized.png", &png, Limits { encoded_bytes: 1, ..Default::default() }).is_err());
++        assert!(import("bad.pcraft", b"not a bundle", Limits::default()).is_err());
++        assert!(import("bad.png", b"not an image", Limits::default()).is_err());
++        assert!(import("empty.png", &[], Limits::default()).is_err());
++    }
++}
+--- a/crates/io/src/flat.rs
++++ b/crates/io/src/flat.rs
+@@ -16,12 +16,25 @@
+ /// Decodes a flat image into a single-layer document; a TIFF with Photoshop layer data opens
+ /// layered (see [`crate::tiff_layers`]).
+ pub fn import_flat(name: &str, bytes: &[u8]) -> Result<ImportResult, IoError> {
++    import_flat_with_decode(name, bytes, &codecs::DecodeOptions::default(), true)
++}
++
++/// The same native flat-image conversion, with a caller's pre-allocation limits.
++/// Layered TIFF needs its own bounded PSD reader and is deliberately not admitted here.
++pub(crate) fn import_flat_bounded(name: &str, bytes: &[u8], limits: codecs::Limits) -> Result<ImportResult, IoError> {
++    import_flat_with_decode(name, bytes, &codecs::DecodeOptions { limits, ..Default::default() }, false)
++}
++
++fn import_flat_with_decode(name: &str, bytes: &[u8], options: &codecs::DecodeOptions, allow_tiff: bool) -> Result<ImportResult, IoError> {
+     // Detected once; every step below branches on it.
+     let format = codecs::detect(bytes);
+     if format == Some(Format::Tiff) {
++        if !allow_tiff {
++            return Err(IoError::Unsupported("bounded layered TIFF import is not connected".into()));
++        }
+         return import_tiff_page(name, bytes, None);
+     }
+-    let img = codecs::decode_as(format.ok_or(codecs::CodecError::UnknownFormat)?, bytes)?;
++    let img = codecs::decode_as_with(format.ok_or(codecs::CodecError::UnknownFormat)?, bytes, options)?;
+     // A palette BMP, PNG or GIF opens in Indexed Color mode with its colour table, as in
+     // Photoshop (#3802, #4804, #7886). A GIF is always palette-based: the first frame's table.
+     let palette = match format {
+--- a/crates/io/src/lib.rs
++++ b/crates/io/src/lib.rs
+@@ -45,6 +45,7 @@
+ pub mod comps_map;
+ pub mod doc_path;
+ pub mod effects_map;
++pub mod embedded_import;
+ pub mod exr_parts;
+ mod flat;
+ mod gradient_bake;
+--- a/crates/io/src/pcraft_cache.rs
++++ b/crates/io/src/pcraft_cache.rs
+@@ -31,7 +31,9 @@
+ }
+ 
+ impl PcraftExportCache {
+-    pub(crate) fn encode(&self, doc: &Document, opts: &SaveOptions) -> photocraft_format::Result<Vec<u8>> {
++    /// Encode the exact document without assigning a filesystem save name.
++    /// Source-owning embeddings use this; Save As retains normal filename semantics.
++    pub fn encode(&self, doc: &Document, opts: &SaveOptions) -> photocraft_format::Result<Vec<u8>> {
+         self.0.lock().unwrap_or_else(std::sync::PoisonError::into_inner).save_zip(doc, opts).map(|(bytes, _)| bytes)
+     }
+ }
+--- a/crates/ui-egui/src/app.rs
++++ b/crates/ui-egui/src/app.rs
+@@ -36,6 +36,7 @@
+         session.updates.check = services.check_updates.take();
+         let mut app = Self {
+             session,
++            hosted: Default::default(),
+             ui: UiState::default(),
+             services,
+             canvases: HashMap::new(),
+--- a/crates/ui-egui/src/app/commands.rs
++++ b/crates/ui-egui/src/app/commands.rs
+@@ -6,6 +6,9 @@
+ impl PhotocraftApp {
+     /// Run an engine command, reporting errors in the status bar.
+     pub fn run(&mut self, id: &str, params: Value) -> Result<Value, String> {
++        if let Some(result) = crate::control::hosted::intercept(self, id, &params) {
++            return result;
++        }
+         if let Some(result) = delete_layer_prompt::intercept(self, id, &params) {
+             return result;
+         }
+--- a/crates/ui-egui/src/app/control.rs
++++ b/crates/ui-egui/src/app/control.rs
+@@ -21,6 +21,7 @@
+     }
+ 
+     pub(crate) fn drain_control(&mut self, ctx: &egui::Context) {
++        crate::control::hosted::poll(self);
+         let Some(rx) = self.control_rx.take() else { return };
+         while let Ok(req) = rx.try_recv() {
+             let reply = req.reply.clone();
+@@ -32,6 +33,7 @@
+                 crate::control::Outcome::Done(v) => {
+                     let _ = reply.send(v);
+                 }
++                crate::control::Outcome::HostedPending => {}
+                 crate::control::Outcome::AfterInput => self.input_waiters.push(reply),
+                 crate::control::Outcome::AfterJob(job) => self.jobs.waiters.push((job, reply)),
+                 crate::control::Outcome::Screenshot { token, path } => {
+--- a/crates/ui-egui/src/app/frame.rs
++++ b/crates/ui-egui/src/app/frame.rs
+@@ -7,6 +7,12 @@
+ };
+ 
+ impl PhotocraftApp {
++    /// The surrounding DesignCraft workspace is Chinese; keep this override
++    /// in the embedded UI only and leave the user's saved preference intact.
++    pub(crate) fn effective_ui_language(&self) -> &str {
++        if self.hosted.embedded { "zh-hans" } else { &self.session.prefs().interface.language }
++    }
++
+     /// Wait out the rest of [`Self::min_frame_ms`] since the last frame started.
+     fn cap_frame_rate(&mut self) {
+         #[cfg(not(target_arch = "wasm32"))]
+@@ -24,7 +30,7 @@
+     /// Shared logic body. A wrapping host owns the final reset tail after its own work.
+     pub fn logic_frame(&mut self, ctx: &egui::Context, frame: &mut eframe::Frame) {
+         self.cap_frame_rate();
+-        i18n::set_current(i18n::Lang::from_pref(&self.session.prefs().interface.language));
++        i18n::set_current(i18n::Lang::from_pref(self.effective_ui_language()));
+         // Caps Lock state read from the OS once per frame (see `Services::caps_lock`): the canvas
+         // cursor block needs it before the frame renders. `None` (Wayland/web) keeps `false`.
+         self.caps_lock = self.services.caps_lock.as_mut().is_some_and(|f| f());
+@@ -68,7 +74,7 @@
+         updates_ui::tick(self, ctx);
+         monitor_status::poll_frame(self, ctx, frame);
+         // Control requests and persisted preferences can change the language in this frame.
+-        i18n::sync_context(ctx, &self.session.prefs().interface.language);
++        i18n::sync_context(ctx, self.effective_ui_language());
+         type_tool::sync_font_names(ctx, self.session.prefs().type_.show_font_names_in_english);
+         // A window bigger than its display (1440 × 900 on 1366 × 768) runs under the taskbar:
+         // maximize it into the work area once (#315).
+@@ -156,7 +162,7 @@
+         // A real UI pass consumes the one in-flight synthetic batch (see `inject_synthetic`).
+         self.begin_synthetic_pass(&ctx);
+         self.hover_layer = None;
+-        i18n::set_current(i18n::Lang::from_pref(&self.session.prefs().interface.language));
++        i18n::set_current(i18n::Lang::from_pref(self.effective_ui_language()));
+         // Fonts registered via set_fonts only take effect next frame; named families would panic now.
+         if !self.fonts_ready {
+             // egui consumed this pass's input without PhotoCraft handling it: keep the synthetic
+@@ -266,12 +272,13 @@
+         // The OS title bar (and the taskbar / Alt-Tab entry) follows the active file; with the
+         // system title bar this is where the document name lives, as the in-app title is hidden.
+         panels::sync_window_title(self, &ctx);
+-        let chrome = !self.ui.view.hides_chrome();
++        let ai_canvas = self.hosted.embedded && self.hosted.ai_canvas;
++        let chrome = !self.ui.view.hides_chrome() && !ai_canvas;
+         if chrome {
+             self.ui.panels.full_screen_chrome = false;
+         }
+         // In Full Screen Mode, Tab shows the menu bar, options bar, toolbar and dock (#6760).
+-        let tabbed_in = !chrome && self.ui.panels.full_screen_chrome;
++        let tabbed_in = !ai_canvas && !chrome && self.ui.panels.full_screen_chrome;
+         if (chrome || tabbed_in) && self.ui.panels.menu_bar {
+             panels::title_bar(self, ui);
+         }
+@@ -290,19 +297,21 @@
+             panels::dock_area(self, ui);
+         } else {
+             let t = theme::Tokens::get(&ctx);
+-            let backdrop = if chrome { prefs_ui::pasteboard_color(self).unwrap_or(t.canvas) } else { egui::Color32::BLACK };
++            let backdrop = if chrome || ai_canvas { prefs_ui::pasteboard_color(self).unwrap_or(t.canvas) } else { egui::Color32::BLACK };
+             egui::CentralPanel::default().frame(egui::Frame::NONE.fill(backdrop)).show(ui, |ui| {
+                 canvas::document_area(self, ui);
+             });
+-            panels::properties_window(self, &ctx);
+-        }
+-        brush_panel::window(self, &ctx);
+-        preset_panels::windows(self, &ctx);
+-        gradient_ui::editor_window(self, &ctx);
+-        type_panels_ui::windows(self, &ctx);
+-        analysis_ui::windows(self, &ctx);
+-        timeline_ui::windows(self, &ctx);
+-        workspace_ui::windows(self, &ctx);
++            if !ai_canvas { panels::properties_window(self, &ctx); }
++        }
++        if !ai_canvas {
++            brush_panel::window(self, &ctx);
++            preset_panels::windows(self, &ctx);
++            gradient_ui::editor_window(self, &ctx);
++            type_panels_ui::windows(self, &ctx);
++            analysis_ui::windows(self, &ctx);
++            timeline_ui::windows(self, &ctx);
++            workspace_ui::windows(self, &ctx);
++        }
+         palette::show(self, &ctx);
+         dialogs::show(self, &ctx);
+         layers_panel_ui::show_dialog(self, &ctx);
+@@ -338,7 +347,7 @@
+         // closed; the engine's revision counter keeps an unchanged brush free.
+         last_brush::persist(self, &ctx);
+         // Tool options are remembered between launches the same way (#2814).
+-        tool_memory::persist(self, &ctx);
++        if !ai_canvas { tool_memory::persist(self, &ctx); }
+         // So are View › Extras, Show and Snap To (#3762).
+         view_cmds::persist(self, &ctx);
+         // Remember the 0.37 panel sizes so a later 0.36 rollback's newer old-key values win on
+--- a/crates/ui-egui/src/app/prefs.rs
++++ b/crates/ui-egui/src/app/prefs.rs
+@@ -40,7 +40,7 @@
+         }
+         self.ui.theme = kind;
+         panel_docking::sync_visibility(self);
+-        theme::apply(ctx, kind);
++        if self.hosted.embedded { theme::apply_hosted(ctx, kind); } else { theme::apply(ctx, kind); }
+         self.checker = None;
+     }
+ }
+--- a/crates/ui-egui/src/control.rs
++++ b/crates/ui-egui/src/control.rs
+@@ -44,6 +44,7 @@
+ use crate::state::{DialogKind, Tool};
+ 
+ mod dispatch;
++pub(crate) mod hosted;
+ mod inspect;
+ mod params;
+ 
+@@ -126,8 +127,15 @@
+     }
+ }
+ 
++/// Whether a read can use the live App without advancing pending UI input.
++pub fn observation_ready(app: &PhotocraftApp) -> bool {
++    app.synthetic.is_empty() && !hosted::pending_interaction(app)
++}
++
+ pub enum Outcome {
+     Done(Value),
++    /// The source-owning host wraps the genuine job result and native context on completion.
++    HostedPending,
+     Screenshot {
+         token: u64,
+         path: Option<String>,
+@@ -183,6 +191,17 @@
+ mod tests;
+ 
+ pub(super) const METHODS: &[&str] = &[
++    "host.protocol",
++    "host.configure",
++    "host.context",
++    "host.create",
++    "host.execute",
++    "host.snapshot",
++    "host.bundle",
++    "host.node",
++    "host.saved",
++    "host.file.pending",
++    "host.file.finish",
+     "app.open",
+     "app.quit",
+     "app.save",
+--- a/crates/ui-egui/src/control/dispatch.rs
++++ b/crates/ui-egui/src/control/dispatch.rs
+@@ -10,6 +10,9 @@
+ type Handler = fn(&mut PhotocraftApp, &egui::Context, &ControlRequest) -> Option<Outcome>;
+ 
+ pub(super) fn dispatch(app: &mut PhotocraftApp, ctx: &egui::Context, req: &ControlRequest) -> Outcome {
++    if let Some(result) = super::hosted::handle(app, ctx, req) {
++        return result;
++    }
+     const HANDLERS: [Handler; 5] = [engine_methods, shell_methods, dialog_methods, input_methods, app_methods];
+     HANDLERS.iter().find_map(|handler| handler(app, ctx, req)).unwrap_or_else(|| err(photocraft_engine::command_hints::unknown_method(&req.method, METHODS)))
+ }
+--- /dev/null
++++ b/crates/ui-egui/src/control/hosted.rs
+@@ -0,0 +1,494 @@
++//! A source-owning embedding of the genuine Photo App. No common-canvas pixel projection.
++use super::params::{err, ok};
++use super::{ControlRequest, Outcome};
++use crate::PhotocraftApp;
++
++#[cfg(test)]
++#[path = "hosted_tests.rs"]
++mod tests;
++use base64::Engine as _;
++use photocraft_doc::{Layer, LayerContent, LayerId};
++use serde_json::{Value, json};
++use std::sync::mpsc::{Receiver, Sender, TryRecvError};
++
++struct Pending {
++    uid: u64,
++    receiver: Receiver<Value>,
++    reply: Sender<Value>,
++}
++
++#[derive(Default)]
++pub(crate) struct HostState {
++    pub embedded: bool,
++    pub ai_canvas: bool,
++    original_ai_tool: Option<(crate::state::Tool, bool)>,
++    pub theme_override: Option<crate::theme::ThemeKind>,
++    pub file_routing: bool,
++    pub pending_file: Option<Value>,
++    next_file: u64,
++    next_context: u64,
++    original_theme: Option<crate::theme::ThemeKind>,
++    pending: Vec<Pending>,
++    pub open_warnings: Vec<String>,
++    pub open_error: Option<String>,
++    pub opening: bool,
++    summaries: Option<(u64, u64, Vec<Value>, bool)>,
++}
++
++pub(super) fn pending_interaction(app: &PhotocraftApp) -> bool {
++    app.live_stroke.is_some()
++        || app.live_adjust.is_some()
++        || app.ui.transform.is_some()
++        || app.ui.cam_transform.is_some()
++        || app.ui.type_transform.is_some()
++        || app.ui.symmetry_transform.is_some()
++        || (app.ui.crop_rect.is_some() && !app.crop.default_frame)
++        || app.crop.drag.is_some()
++        || app.ui.perspective_crop.is_some()
++        || app.ui.text_edit.as_ref().is_some_and(|edit| edit.preedit.is_some() || edit.dragging || edit.resize.is_some() || edit.mask)
++        || !app.ui.dialogs.is_empty()
++}
++
++fn coverage(surface: &photocraft_raster::Surface, role: &str, uid: u64, revision: u64) -> Value {
++    let bounds = surface.content_bounds();
++    json!({"kind":"native-coverage-surface", "nativeRole":role, "uid":uid, "revision":revision,
++        "format":format!("{:?}", surface.format()), "channels":surface.channels(),
++        "defaultPixel":surface.default_pixel(), "tiles":surface.tile_count(),
++        "bounds":[bounds.x0,bounds.y0,bounds.width(),bounds.height()],
++        "storage":"full native surface in the pcraft source; bounds are not alpha data"})
++}
++
++fn layers(items: &[Layer], depth: usize, left: &mut usize, limited: &mut bool) -> Vec<Value> {
++    let count = 50.min(*left).min(items.len());
++    if items.len() > count {
++        *limited = true;
++    }
++    let mut results = Vec::new();
++    for layer in items.iter().rev().take(count) {
++        if *left == 0 {
++            *limited = true;
++            break;
++        }
++        *left -= 1;
++        let bounds = layer.surface().map(|surface| {
++            let r = surface.content_bounds();
++            json!([r.x0, r.y0, r.width(), r.height()])
++        });
++        let mut value = json!({"id":layer.id.0,"name":layer.name.chars().take(200).collect::<String>(),"kind":layer.content.kind_name(),
++            "visible":layer.visible,"opacity":layer.opacity,"fill":layer.fill_opacity,"blend":layer.blend.label(),
++            "clipped":layer.clipped,"hasMask":layer.mask.is_some(),"hasVectorMask":layer.vector_mask.is_some(),"bounds":bounds});
++        if layer.name.chars().count() > 200 {
++            *limited = true;
++            value["nameTruncated"] = json!(true);
++        }
++        match &layer.content {
++            LayerContent::Group(group) => {
++                let children = if depth < 2 {
++                    layers(&group.children, depth + 1, left, limited)
++                } else {
++                    if !group.children.is_empty() {
++                        *limited = true;
++                    }
++                    Vec::new()
++                };
++                value["children"] = json!(children);
++                value["childCount"] = json!(group.children.len());
++            }
++            LayerContent::Text(text) => {
++                let length = text.text.chars().count();
++                value["textPreview"] = json!(text.text.chars().take(512).collect::<String>());
++                value["textLength"] = json!(length);
++                if length > 512 {
++                    *limited = true;
++                    value["textTruncated"] = json!(true);
++                }
++            }
++            _ => {}
++        }
++        results.push(value);
++    }
++    results
++}
++
++fn document(app: &mut PhotocraftApp) -> Result<Value, String> {
++    let uid = app.session.active_generation();
++    let state = app.session.active().ok_or("no native image open")?;
++    let doc = &state.doc;
++    let (summaries, limited) = match &app.hosted.summaries {
++        Some((cached_uid, revision, items, limited)) if *cached_uid == uid && *revision == state.revision => (items.clone(), *limited),
++        _ => {
++            let mut limited = false;
++            let items = layers(&doc.layers, 0, &mut 200, &mut limited);
++            app.hosted.summaries = Some((uid, state.revision, items.clone(), limited));
++            (items, limited)
++        }
++    };
++    let selected: Vec<u64> = state.selected_layers().iter().map(|id| id.0).collect();
++    let selection = json!({"documentId":doc.id.0,"activeGeneration":uid,"activeLayer":state.active_layer.map(|id|id.0),
++        "selectedLayers":selected,"layerAnchor":state.layer_anchor.map(|id|id.0),"isolatedLayers":state.isolated_layers.iter().map(|id|id.0).collect::<Vec<_>>(),
++        "rasterSelection":doc.selection.as_ref().map(|surface|coverage(surface,"document.selection",uid,state.revision)),
++        "quickMask":doc.quick_mask.is_some(),"quickMaskUnselected":doc.quick_mask_unselected,
++        "maskTarget":app.ui.mask_target,"vectorMaskTarget":app.ui.vector_mask_target,"filterMaskTarget":app.ui.filter_mask_target,
++        "channels":photocraft_engine::channel_cmds::channels_json(state)});
++    // The native brush counter covers complete tip/dynamics/current-preset changes
++    // without reserializing brush pixels on every inspection.
++    let tool = json!({"tool":app.ui.tool,"options":app.ui.tool_options,"brushRevision":app.session.tools.brush_rev,
++        "presetRevision":app.session.tools.presets_rev,"foreground":app.session.tools.foreground,"background":app.session.tools.background,
++        "textEdit":app.ui.text_edit,"maskTargeted":app.session.tools.mask_targeted});
++    let page = json!({"kind":"image","nativeDocumentId":doc.id.0,"width":doc.size.width,"height":doc.size.height});
++    let stamp = serde_json::to_string(&json!({"selection":selection,"tool":tool,"page":page})).map_err(|error| error.to_string())?;
++    if stamp.len() > 512 * 1024 {
++        return Err("native selection/tool context exceeds budget".into());
++    }
++    let next = app.hosted.next_context.checked_add(1).ok_or("native context sequence exhausted")?;
++    let result = json!({"engine":"photocraft","contextProtocol":2,"contextSequence":next,
++        "uid":uid,"identityKind":"native-active-document-generation","nativeDocumentId":doc.id.0,"revision":state.revision,
++        "title":doc.name,"width":doc.size.width,"height":doc.size.height,"mode":format!("{:?}",doc.mode),"depth":doc.depth.bits(),
++        "dirty":state.is_dirty(),"nativeSelection":{"kind":"photocraft","data":selection},"selectionStamp":stamp,
++        "toolContext":tool,"page":page,"coordinateSpace":"image-pixels","layers":summaries,
++        "history":state.history.entries(),"redo":state.history.redo_labels().collect::<Vec<_>>(),"summaryLimited":limited,
++        "pendingInteraction":pending_interaction(app),"openWarnings":app.hosted.open_warnings});
++    app.hosted.next_context = next;
++    Ok(result)
++}
++fn base(app: &mut PhotocraftApp, p: &Value) -> Result<Value, String> {
++    if pending_interaction(app) {
++        return Err("finish the native stroke, composition, transform or dialog before this action".into());
++    }
++    let current = document(app)?;
++    let before = p.get("base").ok_or("host action requires the complete current native base")?;
++    for key in ["uid", "revision", "engine", "selectionStamp"] {
++        if before.get(key).is_none() || before.get(key) != current.get(key) {
++            return Err(format!("host conflict: native {key} changed"));
++        }
++    }
++    Ok(current)
++}
++fn encoded(app: &PhotocraftApp, format: &str) -> Result<Value, String> {
++    if pending_interaction(app) {
++        return Err("native input is still in progress; no intermediate source was saved".into());
++    }
++    if !matches!(format, "pcraft" | "png") {
++        return Err("this Photo host currently exports pcraft or PNG".into());
++    }
++    let state = app.session.active().ok_or("no native image open")?;
++    if state.doc.size.width > 16384 || state.doc.size.height > 16384 || u64::from(state.doc.size.width) * u64::from(state.doc.size.height) > 24_000_000 {
++        return Err("native image exceeds embedded canvas budget".into());
++    }
++    if format == "pcraft" {
++        let bytes = state.pcraft_cache.encode(&state.doc, &Default::default()).map_err(|error| error.to_string())?;
++        if bytes.len() > 256 * 1024 * 1024 {
++            return Err("native image source exceeds 256 MiB".into());
++        }
++        return Ok(json!({"dataBase64":base64::engine::general_purpose::STANDARD.encode(bytes),"warnings":Vec::<String>::new()}));
++    }
++    let options =
++        photocraft_io::ExportOptions { read_linked_files: false, document_path: None, pcraft_cache: Some(state.pcraft_cache.clone()), ..Default::default() };
++    let output = photocraft_io::export(&state.doc, &format!("{}.{}", state.doc.name, format), &options).map_err(|error| error.to_string())?;
++    if output.bytes.len() > 256 * 1024 * 1024 {
++        return Err("native image source exceeds 256 MiB".into());
++    }
++    Ok(json!({"dataBase64":base64::engine::general_purpose::STANDARD.encode(output.bytes),"warnings":output.warnings}))
++}
++
++pub(crate) fn intercept(app: &mut PhotocraftApp, id: &str, params: &Value) -> Option<Result<Value, String>> {
++    if !app.hosted.file_routing {
++        return None;
++    }
++    let action = match id {
++        "file.new" => "new",
++        "file.open" | "file.openAs" => "open",
++        "file.save" => "save",
++        "file.saveAs" => "save_as",
++        "file.saveACopy" => "save_copy",
++        "file.close" | "file.closeAll" | "file.closeOthers" => "close",
++        "file.revert" => "revert",
++        _ => return None,
++    };
++    if app.hosted.pending_file.is_some() {
++        return Some(Err("finish the pending workspace file action first".into()));
++    }
++    let next = match app.hosted.next_file.checked_add(1) {
++        Some(value) => value,
++        None => return Some(Err("native file request sequence exhausted".into())),
++    };
++    app.hosted.next_file = next;
++    let state = app.session.active();
++    app.hosted.pending_file = Some(
++        json!({"id":next,"action":action,"uid":state.map(|_|app.session.active_generation()),"revision":state.map(|state|state.revision),"title":state.map(|state|state.doc.name.clone()),"params":params}),
++    );
++    Some(Ok(json!({"queued":true,"id":next})))
++}
++
++pub(crate) fn poll(app: &mut PhotocraftApp) {
++    for pending in std::mem::take(&mut app.hosted.pending) {
++        match pending.receiver.try_recv() {
++            Err(TryRecvError::Empty) => app.hosted.pending.push(pending),
++            Err(TryRecvError::Disconnected) => {
++                let _ = pending.reply.send(json!({"ok":false,"error":"native job result was dropped; read current source before retrying"}));
++            }
++            Ok(reply) => {
++                let result = if reply.get("ok").and_then(Value::as_bool) != Some(true) {
++                    reply
++                } else if app.session.active_generation() != pending.uid {
++                    json!({"ok":false,"error":"native source changed while the job ran; it may have applied to the earlier image"})
++                } else {
++                    match document(app) {
++                        Ok(document) => json!({"ok":true,"result":{"value":reply.get("result"),"document":document}}),
++                        Err(error) => json!({"ok":false,"error":error}),
++                    }
++                };
++                let _ = pending.reply.send(result);
++            }
++        }
++    }
++}
++
++pub(super) fn handle(app: &mut PhotocraftApp, ctx: &egui::Context, request: &ControlRequest) -> Option<Outcome> {
++    let p = &request.params;
++    Some(match request.method.as_str() {
++        "host.protocol" => ok(
++            json!({"protocol":1,"nativeContext":2,"contextOrdering":true,"losslessJson":true,"engine":"photocraft","selectionKind":"photocraft","identityKind":"native-active-document-generation","guardedExecute":true,"atomicSnapshot":true,"atomicBundle":true,"saveAcknowledgement":true,"hostPresentation":true,"aiCanvasPresentation":true,"hostFileRouting":true}),
++        ),
++        "host.context" => match document(app) {
++            Ok(document) => ok(document),
++            Err(error) => err(error),
++        },
++        "host.configure" => {
++            let Some(embedded) = p.get("embedded").and_then(Value::as_bool) else {
++                return Some(err("embedded must be a boolean"));
++            };
++            let kind = match p.get("brightness") {
++                Some(Value::String(value)) if value == "light" => crate::theme::ThemeKind::ProLight,
++                Some(Value::String(value)) if value == "mediumDark" => crate::theme::ThemeKind::ProMedium,
++                None => crate::theme::ThemeKind::ProMedium,
++                _ => return Some(err("unknown hosted brightness")),
++            };
++            let routing = match p.get("fileRouting") {
++                Some(Value::Bool(value)) => *value && embedded,
++                None => embedded,
++                _ => return Some(err("fileRouting must be a boolean")),
++            };
++            if app.hosted.pending_file.is_some() && !routing {
++                return Some(err("finish the pending file request first"));
++            }
++            let ai_canvas = match p.get("aiCanvas") {
++                None => app.hosted.ai_canvas && embedded,
++                Some(Value::Bool(value)) => *value && embedded,
++                _ => return Some(err("aiCanvas must be a boolean")),
++            };
++            let selection_tool = match p.get("selectionTool") {
++                None => None,
++                Some(Value::String(value)) if value == "objects" => Some(crate::state::Tool::Move),
++                Some(Value::String(value)) if value == "region" => Some(crate::state::Tool::RectMarquee),
++                _ => return Some(err("unknown AI selection tool")),
++            };
++            if (ai_canvas != app.hosted.ai_canvas || selection_tool.is_some()) && pending_interaction(app) {
++                return Some(err("finish the current native interaction before changing presentation"));
++            }
++            if embedded && app.hosted.original_theme.is_none() {
++                app.hosted.original_theme = Some(app.ui.theme);
++            }
++            if ai_canvas && !app.hosted.ai_canvas {
++                app.hosted.original_ai_tool = Some((app.ui.tool, app.ui.tool_options.move_auto_select));
++                app.ui.tool = crate::state::Tool::Move;
++                app.ui.tool_options.move_auto_select = true;
++            } else if !ai_canvas && app.hosted.ai_canvas {
++                if let Some((tool, auto_select)) = app.hosted.original_ai_tool.take() {
++                    app.ui.tool = tool;
++                    app.ui.tool_options.move_auto_select = auto_select;
++                }
++            }
++            if ai_canvas {
++                if let Some(tool) = selection_tool {
++                    app.ui.tool = tool;
++                }
++            }
++            app.hosted.ai_canvas = ai_canvas;
++            app.hosted.embedded = embedded;
++            app.hosted.theme_override = if embedded { Some(kind) } else { None };
++            app.hosted.file_routing = routing;
++            let applied = if embedded { kind } else { app.hosted.original_theme.take().unwrap_or(app.ui.theme) };
++            app.apply_theme(ctx, applied);
++            ok(json!({"embedded":embedded,"aiCanvas":app.hosted.ai_canvas,"fileRouting":app.hosted.file_routing}))
++        }
++        "host.create" => {
++            if !app.session.documents().is_empty() {
++                return Some(err("host.create requires an empty native App"));
++            }
++            let valid = |key: &str| p.get(key).and_then(Value::as_f64).filter(|value| value.is_finite() && *value >= 1.0 && *value <= 16384.0);
++            let Some((width, height)) = valid("width").zip(valid("height")).filter(|(width, height)| width * height <= 24_000_000.0) else {
++                return Some(err("image canvas exceeds the embedded budget"));
++            };
++            let mut params = p.clone();
++            params["width"] = json!(width);
++            params["height"] = json!(height);
++            let routing = app.hosted.file_routing;
++            app.hosted.file_routing = false;
++            let result = app.run("file.new", params);
++            app.hosted.file_routing = routing;
++            match result {
++                Ok(value) => {
++                    app.ui.chrome.home = None;
++                    app.sync_views();
++                    if let Some(view) = app.session.active_index().and_then(|index| app.ui.views.get_mut(index)) {
++                        view.fit_pending = true;
++                    }
++                    match document(app) {
++                        Ok(document) => ok(json!({"value":value,"document":document})),
++                        Err(error) => err(error),
++                    }
++                }
++                Err(error) => err(error),
++            }
++        }
++        "host.execute" => {
++            if let Err(error) = base(app, p) {
++                return Some(err(error));
++            }
++            let Some(command) = p.get("command").and_then(Value::as_str).filter(|command| !command.is_empty() && command.len() <= 256) else {
++                return Some(err("missing or excessive native command"));
++            };
++            if command.starts_with("file.") || matches!(command, "document.activate" | "document.move") {
++                return Some(err("document lifecycle belongs to the workspace"));
++            }
++            if app.hosted.pending.len() >= 16 {
++                return Some(err("host job wait queue is full"));
++            }
++            let events = app.session.prefs().script_events.enabled;
++            if events {
++                app.session.edit_prefs(|prefs| prefs.script_events.enabled = false);
++            }
++            app.jobs.last_started = None;
++            let result = app.run(command, p.get("params").cloned().unwrap_or_else(|| json!({})));
++            if events {
++                app.session.edit_prefs(|prefs| prefs.script_events.enabled = true);
++            }
++            match (result, app.jobs.last_started.take()) {
++                (Err(error), _) => err(error),
++                (Ok(_), Some(job)) => {
++                    let (tx, rx) = std::sync::mpsc::channel();
++                    app.jobs.waiters.push((job, tx));
++                    app.hosted.pending.push(Pending { uid: app.session.active_generation(), receiver: rx, reply: request.reply.clone() });
++                    Outcome::HostedPending
++                }
++                (Ok(value), None) => match document(app) {
++                    Ok(document) => ok(json!({"value":value,"document":document})),
++                    Err(error) => err(error),
++                },
++            }
++        }
++        "host.node" => {
++            if let Err(error) = base(app, p) {
++                return Some(err(error));
++            }
++            let Some(id) = p.get("id").and_then(Value::as_u64) else {
++                return Some(err("layer id must be uint64"));
++            };
++            match app.session.active().and_then(|state| state.doc.layer(LayerId(id))) {
++                Some(layer) => {
++                    let value = photocraft_engine::inspect::layer(layer);
++                    if value.to_string().len() > 1024 * 1024 { err("native layer details exceed 1 MiB; inspect a child layer instead") } else { ok(value) }
++                }
++                None => err("native layer does not exist"),
++            }
++        }
++        "host.snapshot" | "host.bundle" => {
++            if request.method == "host.bundle" {
++                if let Err(error) = base(app, p) {
++                    return Some(err(error));
++                }
++            }
++            let format = p.get("format").and_then(Value::as_str).unwrap_or("pcraft");
++            let before = match document(app) {
++                Ok(document) => document,
++                Err(error) => return Some(err(error)),
++            };
++            if request.method == "host.bundle" {
++                if format != "png" {
++                    return Some(err("Photo material derivatives currently use PNG"));
++                }
++                match encoded(app, "pcraft").and_then(|source| {
++                    encoded(app, format).map(|derivative| json!({"document":before,"source":source,"derivative":derivative,"format":format}))
++                }) {
++                    Ok(value) => ok(value),
++                    Err(error) => err(error),
++                }
++            } else {
++                match encoded(app, format) {
++                    Ok(encoded) => ok(json!({"document":before,"encoded":encoded,"format":format})),
++                    Err(error) => err(error),
++                }
++            }
++        }
++        "host.saved" => {
++            if pending_interaction(app) {
++                return Some(ok(json!({"acknowledged":false,"pendingInteraction":true})));
++            }
++            let uid = app.session.active_generation();
++            let Some(state) = app.session.active_mut() else {
++                return Some(err("no native image open"));
++            };
++            if p.get("uid").and_then(Value::as_u64) != Some(uid)
++                || p.get("revision").and_then(Value::as_u64) != Some(state.revision)
++                || p.get("nativeDocumentId").is_some_and(|id| id.as_u64() != Some(state.doc.id.0))
++            {
++                ok(json!({"acknowledged":false,"newerEdits":true}))
++            } else if !p.get("checkpoint").and_then(Value::as_str).is_some_and(|value| value.len() == 64 && value.bytes().all(|byte| byte.is_ascii_hexdigit()))
++            {
++                err("invalid durable checkpoint")
++            } else {
++                state.saved_revision = state.revision;
++                ok(json!({"acknowledged":true}))
++            }
++        }
++        "host.file.pending" => ok(json!({"request":app.hosted.pending_file})),
++        "host.file.finish" => {
++            let matches = app.hosted.pending_file.as_ref().is_some_and(|file| file.get("id") == p.get("id"));
++            if !matches {
++                err("native file receipt identity changed")
++            } else {
++                app.hosted.pending_file = None;
++                ok(json!({"completed":true}))
++            }
++        }
++        _ => return None,
++    })
++}
++
++impl PhotocraftApp {
++    pub fn is_hosted(&self) -> bool {
++        self.hosted.embedded
++    }
++    /// Reopen the exact host-provided bytes without interactive profile prompts.
++    /// The bounded native readers preserve their original profile/depth and warnings.
++    pub fn open_hosted_bytes(&mut self, name: &str, bytes: &[u8]) -> Result<(), String> {
++        if !self.hosted.embedded {
++            return Err("source-owned open requires hosted mode".into());
++        }
++        if !self.session.documents().is_empty() {
++            return Err("this native App already owns an image; use the workspace import entry".into());
++        }
++        self.hosted.open_error = None;
++        self.hosted.opening = true;
++        let result = photocraft_io::embedded_import::import(name, bytes, Default::default()).map_err(|error| error.to_string());
++        self.hosted.opening = false;
++        let result = match result {
++            Ok(result) => result,
++            Err(error) => {
++                self.hosted.open_error = Some(error.clone());
++                self.ui.status = error.clone();
++                self.ui.status_error = true;
++                return Err(error);
++            }
++        };
++        self.hosted.open_warnings = result.warnings;
++        let index = self.session.add_document(result.document, None);
++        self.sync_views();
++        self.ui.chrome.home = None;
++        if let Some(view) = self.ui.views.get_mut(index) {
++            view.fit_pending = true;
++        }
++        Ok(())
++    }
++}
+--- /dev/null
++++ b/crates/ui-egui/src/control/hosted_tests.rs
+@@ -0,0 +1,210 @@
++use super::*;
++use photocraft_engine::Session;
++use serde_json::{Value, json};
++
++fn call(app: &mut PhotocraftApp, method: &str, params: Value) -> Value {
++    let (request, _) = ControlRequest::new(method, params);
++    match crate::control::handle(app, &egui::Context::default(), &request) {
++        Outcome::Done(value) => value,
++        _ => panic!("expected immediate native host response"),
++    }
++}
++fn image() -> PhotocraftApp {
++    let mut app = PhotocraftApp::new(Session::new(), crate::Services::default());
++    app.background_jobs = false;
++    let result = call(&mut app, "host.create", json!({"width":32,"height":24,"name":"Actual image","depth":16,"background":"transparent"}));
++    assert_eq!(result["ok"], true, "{result}");
++    app
++}
++
++#[test]
++fn hosted_theme_and_language_leave_saved_preferences_and_standalone_palette_intact() {
++    let mut app = image();
++    let prefs = serde_json::to_value(app.session.prefs()).unwrap();
++    let original_language = app.effective_ui_language().to_string();
++    let original_theme = app.ui.theme;
++    let ctx = egui::Context::default();
++    let request = |embedded| ControlRequest::new("host.configure", json!({"embedded":embedded,"brightness":"light"})).0;
++    assert!(matches!(crate::control::handle(&mut app, &ctx, &request(true)), Outcome::Done(_)));
++    assert_eq!(app.effective_ui_language(), "zh-hans");
++    assert_eq!(crate::theme::Tokens::get(&ctx).accent, egui::Color32::from_rgb(0x28, 0x7D, 0x6C));
++    assert_eq!(serde_json::to_value(app.session.prefs()).unwrap(), prefs);
++    assert!(matches!(crate::control::handle(&mut app, &ctx, &request(false)), Outcome::Done(_)));
++    assert_eq!(app.effective_ui_language(), original_language);
++    assert_eq!(crate::theme::Tokens::get(&ctx).accent, crate::theme::Tokens::for_kind(original_theme).accent);
++    assert_eq!(serde_json::to_value(app.session.prefs()).unwrap(), prefs);
++}
++
++#[test]
++fn an_uncommitted_native_crop_blocks_host_mutation_and_checkpoint_ack() {
++    let mut app = image();
++    let before = call(&mut app, "host.context", json!({}))["result"].clone();
++    app.ui.crop_rect = Some([2.0, 3.0, 20.0, 18.0]);
++    let pending = call(&mut app, "host.context", json!({}))["result"].clone();
++    assert_eq!(pending["pendingInteraction"], true, "an uncommitted crop must retain manual ownership");
++    assert_eq!(call(&mut app, "host.execute", json!({"base":before,"command":"layer.setProps","params":{"opacity":0.2}}))["ok"], false);
++    assert_eq!(call(&mut app, "host.snapshot", json!({"format":"pcraft"}))["ok"], false);
++    assert_eq!(call(&mut app, "host.saved", json!({"uid":before["uid"],"revision":before["revision"],"checkpoint":"a".repeat(64)}))["result"]["acknowledged"], false);
++    assert_eq!(app.session.active().unwrap().doc.layers[0].opacity, 1.0);
++    app.ui.crop_rect = None;
++    assert_eq!(call(&mut app, "host.context", json!({}))["result"]["pendingInteraction"], false);
++    app.ui.crop_rect = Some([0.0, 0.0, 32.0, 24.0]);
++    app.crop.default_frame = true;
++    assert_eq!(call(&mut app, "host.context", json!({}))["result"]["pendingInteraction"], false, "an untouched default frame is not a pending edit");
++    app.ui.crop_rect = None;
++    app.crop.default_frame = false;
++    app.ui.perspective_crop = Some([[0.0, 0.0], [16.0, 0.0], [16.0, 16.0], [0.0, 16.0]]);
++    assert_eq!(call(&mut app, "host.context", json!({}))["result"]["pendingInteraction"], true);
++    app.ui.perspective_crop = None;
++    app.run("edit.fill", json!({"color":"#336699"})).unwrap();
++    crate::transform_tool::begin(&mut app, &egui::Context::default()).unwrap();
++    assert!(app.ui.transform.is_some());
++    assert_eq!(call(&mut app, "host.context", json!({}))["result"]["pendingInteraction"], true);
++}
++fn bytes(encoded: &Value) -> Vec<u8> {
++    base64::engine::general_purpose::STANDARD.decode(encoded["dataBase64"].as_str().unwrap()).unwrap()
++}
++
++#[test]
++fn native_source_and_png_are_real_encodings_of_the_current_image_and_depth_is_retained() {
++    let mut app = image();
++    let snapshot = call(&mut app, "host.snapshot", json!({"format":"pcraft"}));
++    assert_eq!(snapshot["ok"], true, "{snapshot}");
++    let original = bytes(&snapshot["result"]["encoded"]);
++    let source = photocraft_format::load_from_bytes(&original).unwrap();
++    assert_eq!(source.size.width, 32);
++    assert_eq!(source.depth, photocraft_color::SampleType::U16);
++    assert_eq!(source.name, app.session.active().unwrap().doc.name, "source snapshots must not append a file extension to the native document name");
++    assert_eq!(snapshot["result"]["document"]["uid"].as_u64(), Some(app.session.active_generation()));
++    let base = call(&mut app, "host.context", json!({}))["result"].clone();
++    let bundle = call(&mut app, "host.bundle", json!({"base":base,"format":"png"}));
++    assert_eq!(bundle["ok"], true, "{bundle}");
++    assert_eq!(bytes(&bundle["result"]["source"]), original, "same native source must have stable bytes for a paired checkpoint");
++    let png = photocraft_codecs::decode(&bytes(&bundle["result"]["derivative"])).unwrap();
++    assert_eq!((png.width(), png.height()), (32, 24));
++}
++
++#[test]
++fn native_layer_and_brush_target_changes_refuse_a_stale_base_without_overwriting_image_content() {
++    let mut app = image();
++    let first = app.session.active().unwrap().active_layer.unwrap().0;
++    app.run("layer.new.layer", json!({"name":"Second"})).unwrap();
++    let before = call(&mut app, "host.context", json!({}))["result"].clone();
++    let original = bytes(&call(&mut app, "host.snapshot", json!({"format":"pcraft"}))["result"]["encoded"]);
++    app.run("layer.select", json!({"layer":first})).unwrap();
++    assert_eq!(call(&mut app, "host.execute", json!({"base":before,"command":"layer.setProps","params":{"opacity":0.5}}))["ok"], false);
++    let base = call(&mut app, "host.context", json!({}))["result"].clone();
++    let brush = app.session.tools.brush_rev;
++    app.run("tools.setBrush", json!({"size":9})).unwrap();
++    assert!(app.session.tools.brush_rev > brush);
++    assert_eq!(call(&mut app, "host.execute", json!({"base":base,"command":"edit.fill","params":{"color":"#ff0000"}}))["ok"], false);
++    assert_eq!(bytes(&call(&mut app, "host.snapshot", json!({"format":"pcraft"}))["result"]["encoded"]), original);
++}
++
++#[test]
++fn hosted_menus_queue_file_intents_and_only_a_matching_durable_ack_clears_dirty() {
++    let mut app = image();
++    app.run("edit.fill", json!({"color":"#336699"})).unwrap();
++    assert!(app.session.active().unwrap().is_dirty());
++    assert_eq!(call(&mut app, "host.configure", json!({"embedded":true,"fileRouting":true}))["ok"], true);
++    let ctx = egui::Context::default();
++    let result = crate::menus::invoke(&mut app, &ctx, "file.save", json!({})).unwrap();
++    assert_eq!(result["queued"], true);
++    assert!(app.session.active().unwrap().is_dirty());
++    let request = call(&mut app, "host.file.pending", json!({}))["result"]["request"].clone();
++    let doc = call(&mut app, "host.context", json!({}))["result"].clone();
++    let revision = doc["revision"].as_u64().unwrap();
++    assert_eq!(call(&mut app, "host.saved", json!({"uid":doc["uid"],"revision":revision-1,"checkpoint":"a".repeat(64)}))["result"]["acknowledged"], false);
++    assert!(app.session.active().unwrap().is_dirty());
++    assert_eq!(call(&mut app, "host.file.finish", json!({"id":0,"ok":true}))["ok"], false);
++    assert_eq!(
++        call(&mut app, "host.saved", json!({"uid":doc["uid"],"revision":revision,"nativeDocumentId":u64::MAX,"checkpoint":"a".repeat(64)}))["result"]["acknowledged"],
++        false
++    );
++    assert_eq!(call(&mut app, "host.saved", json!({"uid":doc["uid"],"revision":revision,"checkpoint":"a".repeat(64)}))["result"]["acknowledged"], true);
++    assert!(!app.session.active().unwrap().is_dirty());
++    assert_eq!(call(&mut app, "host.file.finish", json!({"id":request["id"],"ok":true}))["ok"], true);
++    let size = json!({"width":17,"height":19,"name":"Requested image","depth":16});
++    crate::menus::invoke(&mut app, &ctx, "file.new", size.clone()).unwrap();
++    let queued = call(&mut app, "host.file.pending", json!({}))["result"]["request"].clone();
++    assert_eq!(queued["params"], size);
++    assert_eq!(app.session.documents().len(), 1, "the hosted request must not create a second native image");
++}
++
++#[test]
++fn exact_native_document_id_revision_and_layer_id_remain_u64() {
++    let mut app = image();
++    let state = app.session.active_mut().unwrap();
++    let doc = std::sync::Arc::make_mut(&mut state.doc);
++    doc.id = photocraft_doc::DocId(u64::MAX - 1);
++    let layer = doc.layers.first_mut().unwrap();
++    layer.id = LayerId(9007199254740993);
++    state.active_layer = Some(layer.id);
++    state.selected_layers = vec![layer.id];
++    state.revision = 9007199254740995;
++    let context = call(&mut app, "host.context", json!({}));
++    assert_eq!(context["ok"], true, "{context}");
++    let doc = &context["result"];
++    assert_eq!(doc["nativeDocumentId"].as_u64(), Some(u64::MAX - 1));
++    assert_eq!(doc["revision"].as_u64(), Some(9007199254740995));
++    assert_eq!(doc["nativeSelection"]["data"]["selectedLayers"][0].as_u64(), Some(9007199254740993));
++    assert_eq!(doc["identityKind"], "native-active-document-generation");
++}
++
++#[test]
++fn invalid_configurations_and_excessive_images_never_mutate_preferences_or_open_a_document() {
++    let mut app = PhotocraftApp::new(Session::new(), crate::Services::default());
++    let prefs = serde_json::to_value(app.session.prefs()).unwrap();
++    for params in [json!({"embedded":true,"brightness":4}), json!({"embedded":true,"fileRouting":"yes"})] {
++        assert_eq!(call(&mut app, "host.configure", params)["ok"], false);
++        assert!(!app.hosted.embedded);
++    }
++    assert_eq!(call(&mut app, "host.create", json!({"width":16000,"height":16000}))["ok"], false);
++    assert!(app.session.documents().is_empty());
++    assert_eq!(call(&mut app, "host.configure", json!({"embedded":true,"brightness":"light"}))["ok"], true);
++    crate::prefs_ui::tick(&mut app, &egui::Context::default());
++    assert_eq!(app.ui.theme, crate::theme::ThemeKind::ProLight, "appearance synchronization must retain the actual embedding theme");
++    assert_eq!(serde_json::to_value(app.session.prefs()).unwrap(), prefs);
++}
++
++#[test]
++fn a_real_feathered_selection_is_a_source_backed_coverage_reference_and_roundtrips_exactly() {
++    let mut app = image();
++    app.run("select.rect", json!({"x":3,"y":4,"width":10,"height":8,"feather":1.5})).unwrap();
++    let original = app.session.active().unwrap().doc.selection.clone().unwrap();
++    let context = call(&mut app, "host.context", json!({}))["result"].clone();
++    assert!(context.get("selection").is_none(), "a raster mask must not be disguised as a vector object list");
++    assert_eq!(context["nativeSelection"]["data"]["rasterSelection"]["nativeRole"], "document.selection");
++    let data = bytes(&call(&mut app, "host.snapshot", json!({"format":"pcraft"}))["result"]["encoded"]);
++    let reopened = photocraft_format::load_from_bytes(&data).unwrap();
++    assert_eq!(reopened.selection.as_ref(), Some(&original));
++    app.run("select.rect", json!({"x":4,"y":4,"width":10,"height":8,"feather":1.5})).unwrap();
++    assert_eq!(call(&mut app, "host.execute", json!({"base":context,"command":"layer.setProps","params":{"opacity":0.4}}))["ok"], false);
++}
++
++#[test]
++fn a_real_background_filter_reply_waits_for_the_native_job_application() {
++    let mut app = image();
++    app.run("select.rect", json!({"x":8,"y":8,"width":8,"height":8})).unwrap();
++    app.run("edit.fill", json!({"color":"#336699"})).unwrap();
++    app.run("select.deselect", json!({})).unwrap();
++    app.background_jobs = true;
++    let before = call(&mut app, "host.context", json!({}))["result"].clone();
++    let revision = before["revision"].as_u64().unwrap();
++    let (request, receiver) = ControlRequest::new("host.execute", json!({"base":before,"command":"filter.blur.gaussianBlur","params":{"radius":2}}));
++    assert!(matches!(crate::control::handle(&mut app, &egui::Context::default(), &request), Outcome::HostedPending));
++    assert!(matches!(receiver.try_recv(), Err(TryRecvError::Empty)), "acceptance must not be the completion reply");
++    let start = std::time::Instant::now();
++    let reply = loop {
++        crate::jobs_ui::tick(&mut app, &egui::Context::default());
++        poll(&mut app);
++        if let Ok(reply) = receiver.try_recv() {
++            break reply;
++        }
++        assert!(start.elapsed() < std::time::Duration::from_secs(20));
++        std::thread::sleep(std::time::Duration::from_millis(1));
++    };
++    assert_eq!(reply["ok"], true, "{reply}");
++    assert!(reply["result"]["document"]["revision"].as_u64().unwrap() > revision);
++    assert_eq!(reply["result"]["document"]["revision"].as_u64(), Some(app.session.active().unwrap().revision));
++}
+--- a/crates/ui-egui/src/control/inspect.rs
++++ b/crates/ui-egui/src/control/inspect.rs
+@@ -29,7 +29,7 @@
+         dialogs.push(json!({"id": SHELL_DIALOG, "kind": kind, "title": crate::workspace_ui::title(kind), "fields": fields}));
+     }
+     dialogs.extend(crate::discard_ui::inspect(app));
+-    json!({
++    let mut value = json!({
+         "window": {"width": screen.width(), "height": screen.height(), "pixelsPerPoint": ctx.pixels_per_point()},
+         "tool": app.ui.tool,
+         "toolOptions": app.ui.tool_options,
+@@ -115,7 +115,22 @@
+         "jobs": crate::jobs_ui::inspect(app),
+         "histogram": crate::histogram_panel::inspect(app),
+         "cameraRaw": app.camera_raw.as_ref().map(|d| d.describe(&app.ui.camera_raw_scope, &app.ui.camera_raw_preview)),
+-    })
++    });
++    if let Some(fields) = value.as_object_mut() {
++        fields.insert("cropRect".into(), json!(app.ui.crop_rect));
++        fields.insert("cropAngle".into(), json!(app.ui.crop_angle));
++        fields.insert("transform".into(), json!(app.ui.transform));
++        fields.insert("activeDocument".into(), json!(app.session.active_index()));
++        fields.insert(
++            "canvasRect".into(),
++            json!([app.last_canvas_rect.min.x, app.last_canvas_rect.min.y, app.last_canvas_rect.width(), app.last_canvas_rect.height()]),
++        );
++        fields.insert("opening".into(), json!(if app.hosted.opening { vec!["host-source"] } else { Vec::<&str>::new() }));
++        fields.insert("openingError".into(), json!(app.hosted.open_error));
++        fields.insert("canvasView".into(), json!(app.session.active_index().and_then(|index| app.ui.views.get(index))));
++        fields.insert("pointZoom".into(), json!(app.point_zoom()));
++    }
++    value
+ }
+ 
+ pub fn save_screenshot(app: &mut PhotocraftApp, image: &egui::ColorImage, path: Option<&str>) -> Value {
+--- a/crates/ui-egui/src/lib.rs
++++ b/crates/ui-egui/src/lib.rs
+@@ -323,6 +323,7 @@
+ 
+ pub struct PhotocraftApp {
+     pub session: Session,
++    pub(crate) hosted: control::hosted::HostState,
+     pub ui: UiState,
+     pub services: Services,
+     /// Canvas caches per (document, display): CPU textures hold monitor values; the GPU
+--- a/crates/ui-egui/src/menus/bar.rs
++++ b/crates/ui-egui/src/menus/bar.rs
+@@ -3,6 +3,33 @@
+ use super::render::{alt_click, render_level, render_level_rows};
+ use super::search::help_search;
+ use super::{PhotocraftApp, TOP_MENUS, Value, json};
++
++/// Common file actions are provided by the source-owning workspace. Special
++/// file tools and native shortcuts remain available in the embedded editor.
++fn hosted_file_items(items: Vec<&MenuItem>) -> Vec<&MenuItem> {
++    let mut out = Vec::new();
++    for item in items {
++        if matches!(item.id.as_str(), "file.open" | "file.openAs" | "file.save" | "file.saveAs" | "file.saveACopy" | "file.close" | "file.closeAll" | "file.closeOthers") { continue; }
++        if item.id == "---" && (out.is_empty() || out.last().is_some_and(|last: &&MenuItem| last.id == "---")) { continue; }
++        out.push(item);
++    }
++    if out.last().is_some_and(|last| last.id == "---") { out.pop(); }
++    out
++}
++
++#[cfg(test)]
++#[test]
++fn hosted_photo_file_menu_keeps_specialized_tools_and_removes_shared_actions() {
++    let app = PhotocraftApp::new(photocraft_engine::Session::new(), crate::Services::default());
++    let all = menu_items(&app);
++    let original: Vec<&MenuItem> = all.iter().filter(|item| item.path.first().map(String::as_str) == Some("File")).collect();
++    let hosted = hosted_file_items(original.clone());
++    for id in ["file.open", "file.save", "file.saveAs", "file.saveACopy", "file.close"] {
++        assert!(original.iter().any(|item| item.id == id));
++        assert!(!hosted.iter().any(|item| item.id == id));
++    }
++    for id in ["file.new", "file.placeEmbedded", "file.package"] { assert!(hosted.iter().any(|item| item.id == id), "{id}"); }
++}
+ 
+ /// Draws the menu bar; returns the inner edge of the menu titles, facing the rest of the title bar
+ /// (the right edge of the last title, or its left edge in a right-to-left UI, where File is at the
+@@ -24,7 +51,8 @@
+     let mut keys = crate::menu_keys::Keys::load(ui.ctx());
+     keys.take_first_row(&mut nav);
+     nav.underline = keys.show_underlines(ui.ctx());
+-    let translated: Vec<String> = TOP_MENUS.iter().map(|top| crate::i18n::tr(lang, top).to_string()).collect();
++    let mut translated: Vec<String> = TOP_MENUS.iter().map(|top| crate::i18n::tr(lang, top).to_string()).collect();
++    if app_ref.hosted.embedded && app_ref.hosted.file_routing { translated[0] = "文件工具".to_string(); }
+     let preferred: Vec<Option<char>> = TOP_MENUS.iter().map(|top| crate::menu_keys::TOP_PREFERRED.iter().find(|(t, _)| t == top).map(|(_, c)| *c)).collect();
+     // A title with no Latin letter shows its English key: "文件(F)" (#5863).
+     let (top_labels, top_mnemonics) = crate::menu_keys::localized(&translated, &TOP_MENUS, &preferred);
+@@ -90,6 +118,7 @@
+                             })
+                             .items;
+                         let mine: Vec<&MenuItem> = items.iter().filter(|i| i.path.first().map(String::as_str) == Some(*top)).collect();
++                        let mine = if app_ref.hosted.embedded && app_ref.hosted.file_routing && *top == "File" { hosted_file_items(mine) } else { mine };
+                         ui.set_min_width(220.0);
+                         if mine.is_empty() {
+                             ui.weak(crate::i18n::tr(lang, "(coming soon)"));
+--- a/crates/ui-egui/src/menus/invoke.rs
++++ b/crates/ui-egui/src/menus/invoke.rs
+@@ -44,6 +44,9 @@
+         && let Some(authorize) = app.services.automation_command.as_ref()
+     {
+         authorize(id, &params)?;
++    }
++    if let Some(result) = crate::control::hosted::intercept(app, id, &params) {
++        return result;
+     }
+     if crate::discard_ui::intercept(app, id, &params) {
+         return Ok(Value::Null);
+--- a/crates/ui-egui/src/panels/title_bar.rs
++++ b/crates/ui-egui/src/panels/title_bar.rs
+@@ -9,6 +9,15 @@
+ /// in-app bar shows menus and workspace controls only: no brand mark, no centred title.
+ pub fn title_bar(app: &mut PhotocraftApp, ui: &mut egui::Ui) {
+     let t = Tokens::get(ui.ctx());
++    if app.is_hosted() {
++        egui::Panel::top("hosted_image_menus").exact_size(28.0).frame(egui::Frame::NONE.fill(t.chrome).inner_margin(egui::Margin::symmetric(8, 0))).show(
++            ui,
++            |ui| {
++                crate::menus::menu_bar(app, ui);
++            },
++        );
++        return;
++    }
+     let custom = app.custom_titlebar;
+     let system = system_title_bar(app);
+     // The caption buttons' room at each end (`titlebar`); a side with buttons has no margin.
+--- a/crates/ui-egui/src/prefs/prefs_ui/appearance.rs
++++ b/crates/ui-egui/src/prefs/prefs_ui/appearance.rs
+@@ -202,6 +202,14 @@
+ 
+ /// Resolve the saved appearance mode without changing it or either theme slot.
+ pub(crate) fn sync_appearance(app: &mut PhotocraftApp, ctx: &egui::Context) {
++    if app.is_hosted()
++        && let Some(kind) = app.hosted.theme_override
++    {
++        if app.ui.theme != kind {
++            app.apply_theme(ctx, kind);
++        }
++        return;
++    }
+     // A restored or embedding-supplied pin must not suppress native appearance events.
+     ctx.set_theme(egui::ThemePreference::System);
+     // The native service also covers Wayland sessions where winit has no system theme.
+--- a/crates/ui-egui/src/theme.rs
++++ b/crates/ui-egui/src/theme.rs
+@@ -1017,10 +1017,45 @@
+ 
+ /// Apply a theme to egui's global style and publish its tokens.
+ pub fn apply(ctx: &egui::Context, kind: ThemeKind) {
++    apply_tokens(ctx, Tokens::for_kind(kind));
++}
++
++/// The host palette applies only to an embedded App, without changing prefs.
++pub(crate) fn apply_hosted(ctx: &egui::Context, kind: ThemeKind) {
++    let mut t = Tokens::for_kind(kind);
++    t.accent = Color32::from_rgb(0x28, 0x7D, 0x6C);
++    t.accent_border = t.accent;
++    t.primary_bg = t.accent;
++    t.primary_text = Color32::WHITE;
++    if t.dark() {
++        t.chrome = Color32::from_rgb(0x1D, 0x21, 0x29);
++        t.card = t.chrome;
++        t.dock = t.chrome;
++        t.canvas = Color32::from_rgb(0x16, 0x19, 0x1F);
++        t.card_border = Color32::from_rgb(0x34, 0x3C, 0x48);
++        t.separator = t.card_border;
++        t.text = Color32::from_rgb(0xEC, 0xF0, 0xF5);
++        t.text_dim = Color32::from_rgb(0xA0, 0xAA, 0xB9);
++        t.accent_soft = Color32::from_rgb(0x29, 0x46, 0x3F);
++        t.accent_text = Color32::from_rgb(0x8C, 0xCF, 0xBC);
++    } else {
++        t.chrome = Color32::from_rgb(0xF5, 0xF6, 0xF8);
++        t.card = Color32::WHITE;
++        t.dock = t.chrome;
++        t.card_border = Color32::from_rgb(0xDE, 0xE3, 0xE9);
++        t.separator = t.card_border;
++        t.text = Color32::from_rgb(0x20, 0x29, 0x36);
++        t.text_dim = Color32::from_rgb(0x74, 0x80, 0x8C);
++        t.accent_soft = Color32::from_rgb(0xD2, 0xEA, 0xE1);
++        t.accent_text = t.accent;
++    }
++    apply_tokens(ctx, t);
++}
++
++fn apply_tokens(ctx: &egui::Context, t: Tokens) {
+     // Keep native windows at SystemDefault so macOS continues reporting OS appearance changes,
+     // including when an integration or restored egui state pinned its own theme preference.
+     ctx.set_theme(egui::ThemePreference::System);
+-    let t = Tokens::for_kind(kind);
+     ctx.data_mut(|d| d.insert_temp(egui::Id::unique("photocraft-theme"), t));
+     let mut v = if t.dark() { Visuals::dark() } else { Visuals::light() };
+     v.panel_fill = t.chrome;
+--- a/crates/ui-egui/src/canvas/tabs.rs
++++ b/crates/ui-egui/src/canvas/tabs.rs
+@@ -16,6 +16,7 @@
+ }
+ 
+ pub(crate) fn arranged_cells(app: &PhotocraftApp, rect: Rect) -> Option<Vec<(usize, Rect)>> {
++    if app.hosted.embedded && app.hosted.ai_canvas { return None; }
+     let documents = docked_document_indices(app);
+     let n = documents.len();
+     if n == 0 {
+@@ -39,7 +40,7 @@
+     let n = app.session.documents().len();
+     // Files opening in the background (#210) have tabs before they have documents.
+     let opening = !app.jobs.opens.is_empty();
+-    if !opening && app.ui.chrome.shows_home(n, app.session.prefs().general.auto_show_home_screen) {
++    if !(app.hosted.embedded && app.hosted.ai_canvas) && !opening && app.ui.chrome.shows_home(n, app.session.prefs().general.auto_show_home_screen) {
+         start_screen(app, ui);
+         return;
+     }
+@@ -56,7 +57,7 @@
+         paint_dots(ui, ui.available_rect_before_wrap(), app.session.prefs().interface.show_canvas_dots);
+         return;
+     }
+-    if !app.ui.view.hides_tabs() || opening {
++    if !(app.hosted.embedded && app.hosted.ai_canvas) && (!app.ui.view.hides_tabs() || opening) {
+         // Flat Spectrum tabs sit directly against the canvas. The parent's default vertical
+         // item spacing would otherwise leave a visible gap below the tab strip (#2188).
+         let spacing = ui.spacing().item_spacing.y;
+--- /dev/null
++++ b/apps/photocraft-web/src/observation.rs
+@@ -0,0 +1,52 @@
++//! A read can bypass the frame queue only after all observed activity reached the UI.
++#[derive(Clone, Copy, Default)]
++pub(crate) struct Observation {
++    epoch: Option<u64>,
++    committed: Option<u64>,
++}
++
++impl Observation {
++    pub(crate) const fn new() -> Self {
++        Self { epoch: Some(0), committed: None }
++    }
++    pub(crate) fn activity(&mut self) {
++        self.epoch = self.epoch.and_then(|value| value.checked_add(1));
++    }
++    pub(crate) fn epoch(self) -> Option<u64> {
++        self.epoch
++    }
++    pub(crate) fn commit(&mut self, frame_start: Option<u64>) {
++        self.committed = frame_start;
++    }
++    pub(crate) fn ready(self) -> bool {
++        self.epoch.is_some() && self.epoch == self.committed
++    }
++}
++
++#[cfg(test)]
++mod tests {
++    use super::Observation;
++    #[test]
++    fn input_or_request_during_frame_needs_a_later_ui_commit() {
++        let mut gate = Observation::new();
++        assert!(!gate.ready());
++        gate.commit(gate.epoch());
++        assert!(gate.ready());
++        gate.activity();
++        let frame_start = gate.epoch();
++        gate.activity();
++        gate.commit(frame_start);
++        assert!(!gate.ready());
++        gate.commit(gate.epoch());
++        assert!(gate.ready());
++    }
++    #[test]
++    fn overflow_permanently_falls_back_to_the_original_frame_queue() {
++        let mut gate = Observation { epoch: Some(u64::MAX), committed: Some(u64::MAX) };
++        gate.activity();
++        gate.commit(gate.epoch());
++        assert!(!gate.ready());
++        gate.activity();
++        assert!(!gate.ready());
++    }
++}

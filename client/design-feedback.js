@@ -1,6 +1,6 @@
-import {feedbackTargetKey,nativeFeedbackTarget,feedbackPrompt,feedbackLabel,expandsFeedbackSelection} from './feedback-contract.js?v=168';
-import {submitDesignFeedbackPrompt} from './native-ai-input.js?v=168';
-import {isActiveDesignSession} from './design-session.js?v=168';
+import {feedbackTargetKey,nativeFeedbackTarget,feedbackPrompt,feedbackLabel,expandsFeedbackSelection} from './feedback-contract.js?v=169';
+import {submitDesignFeedbackPrompt} from './native-ai-input.js?v=169';
+import {isActiveDesignSession} from './design-session.js?v=169';
 
 /** Local emergency journal + server CAS. Typing never invokes a model. */
 export class DesignFeedbackClient{

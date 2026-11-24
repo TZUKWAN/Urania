@@ -1,6 +1,6 @@
 /** Professional editor transport. This module runs beside the real WASM App, not in DSH's UI. */
-import {encodeNativeJson,decodeNativeJson,nativeCallParameters,uint64Parameter} from './native-protocol.js?v=168';
-import {validateNativeContext,nativeBase,matchesNativeBase,canvasMaterialTarget,SOURCE_FORMATS} from './native-contract.js?v=168';
+import {encodeNativeJson,decodeNativeJson,nativeCallParameters,uint64Parameter} from './native-protocol.js?v=169';
+import {validateNativeContext,nativeBase,matchesNativeBase,canvasMaterialTarget,SOURCE_FORMATS} from './native-contract.js?v=169';
 const options=new URLSearchParams(location.hash.slice(1));
 const parentOrigin=options.get('parentOrigin'),nonce=options.get('nonce');
 const engineName=options.get('engine')||'vectorcraft';
@@ -11,6 +11,9 @@ let deferredSave=null;
 let gestureSequence=0;
 const realmId=crypto.randomUUID();
 let hostFileRouting=false,lastFileRequest=0;
+let observeUntil=0,nextObservationAt=0;
+const passiveNativeMethods=new Set(['identity','inspect','ui','docking','focus','commands','node','snapshot','bundle']);
+const observeSoon=()=>{observeUntil=Date.now()+2000;nextObservationAt=0;};
 const loadedProjectFonts=new Set();
 const wait=ms=>new Promise(resolve=>setTimeout(resolve,ms));
 async function api(){
@@ -30,7 +33,10 @@ async function api(){
 }
 const send=(data,transfer=[])=>{if(!disposed)port?.postMessage(data,transfer);};
 async function inspectDocument(runtime){
- const document=validateNativeContext(await runtime.request('host.context',{depth:2,childLimit:50}),engineName),pending=!!document.pendingInteraction;
+ return acceptInspectedDocument(await runtime.request('host.context',{depth:2,childLimit:50}));
+}
+function acceptInspectedDocument(value){
+ const document=validateNativeContext(value,engineName),pending=!!document.pendingInteraction;
  if(pending!==nativePending){nativePending=pending;send({event:'manual-input',kind:'native-interaction',composition,pointer,nativePending});}
  return document;
 }
@@ -51,7 +57,7 @@ function manual(event){
  // Leaving the canvas for a host toolbar is not a new edit. Keep any guard
  // already established by the preceding pointer/key event, but do not extend
  // it solely because the canvas lost focus to the user's next control.
- if(event.type!=='blur')manualUntil=Date.now()+150;
+ if(event.type!=='blur'){manualUntil=Date.now()+150;observeSoon();}
  send({event:'manual-input',kind:event.type,composition,pointer,nativePending});
 }
 for(const event of ['pointerdown','pointerup','pointercancel','keydown','beforeinput','compositionstart','compositionend','blur'])addEventListener(event,manual,true);
@@ -241,6 +247,7 @@ addEventListener('message',event=>{
   const request=event.data;
   if(!request||!Number.isSafeInteger(request.id)||typeof request.method!=='string')return;
   if(sequence>=16){send({id:request.id,ok:false,error:'编辑器请求队列已满'});return;}
+  if(!passiveNativeMethods.has(request.method))observeSoon();
   sequence++;
   try{
    const response=await perform(request.method,request.payload||{});
@@ -255,16 +262,34 @@ addEventListener('message',event=>{
 let stamp='';
 const poll=setInterval(async()=>{
  if(!port||disposed||!active||sequence||polling)return;
+ // Inputs/native writes retain 400ms observation. An idle App still answers a
+ // genuine observation/heartbeat every 2s, below the 12s health deadline, without
+ // queuing unnecessary native paints. Explicit inspect/save/AI reads stay live.
+ const now=Date.now();
+ if(!pointer&&!composition&&!nativePending&&now>=observeUntil&&now<nextObservationAt)return;
+ nextObservationAt=now+2000;
  polling=true;
  try{
   const runtime=await api();if(!active||disposed)return;
-  const ui=await runtime.inspect();if(!active||disposed)return;
+  // Each native RPC queues an App frame. Enqueue the independent read-only
+  // observations together so one native frame can answer them before painting.
+  // Keep UI/file/context failures distinct; an empty App has no host.context.
+  const [uiRead,fileRead,contextRead]=await Promise.allSettled([
+   runtime.inspect(),
+   hostFileRouting?runtime.request('host.file.pending'):Promise.resolve(null),
+   runtime.request('host.context',{depth:2,childLimit:50})
+  ]);
+  if(!active||disposed)return;
+  if(uiRead.status==='rejected')throw uiRead.reason;
+  const ui=uiRead.value;
   if(hostFileRouting){
-   const {request}=await runtime.request('host.file.pending');
+   if(fileRead.status==='rejected')throw fileRead.reason;
+   const {request}=fileRead.value;
    if(request&&request.id!==lastFileRequest){lastFileRequest=request.id;send({event:'native-file',request});}
   }
   if(ui.activeDocument==null){send({event:'native-heartbeat'});return;}
-  const state=summary(await inspectDocument(runtime));
+  if(contextRead.status==='rejected')throw contextRead.reason;
+  const state=summary(acceptInspectedDocument(contextRead.value));
   if(!active||disposed)return;
   send({event:'native-heartbeat'});
   const next=JSON.stringify([state.uid,state.revision,state.selection,state.selectionStamp,!!state.pendingInteraction]);

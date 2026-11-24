@@ -1,11 +1,5 @@
-# Urania UI165 交付说明
+# Urania UI169 交付索引
 
-版本 `1.3.0-dev.150` / UI165。完成当前用户批准范围内的动画运行环境/路径/取消/流式产物、四引擎人机协作/素材复用、原生 Deck 文字样式、意见恢复与多选输入、离线安装恢复和第三方来源收口。
+`designcraft@1.3.1` / UI169。当前性能、源码与定向交互结果见[本轮报告](docs/ui169/REPORT.md)和[验证数据](docs/ui169/VERIFICATION.json)。运行时与SDK补丁的安装还原见[部署文档](DEPLOYMENT_AND_RECOVERY.md)。
 
-本轮全量测试：452 项 Node、19 项客户端通过；`npm run check` 通过。实际两轮连续 GLM 跨 Photo→Vector→Deck→Motion，人工修改、非目标字段、保存重开、MP4 和可编辑工程核对通过。当前独立 DSH 里的分栏、历史作品、自动选区弹窗、多选文字与会话隔离通过；每类证据的实际范围分别记录。
-
-运行包含7713个逐文件 SHA256，其中7447个是固定 SDK 依赖。当前包在干净独立目录经过真实中断、恢复、全部 SHA、doctor 和 SDK 编辑。源码/构建输入见 native-source-input-audit.json、converter source-lock / codec-build-lock；新转换器独立构建字节一致，6个字体原件找到精确官方来源。
-
-仍有3个旧源码快照原件未找到；56个历史原件已恢复且旧期望摘要未改。这是明确的历史档案限制，不是当前功能代码待办。没有重新接入已放弃服务或采集硬件；PowerPoint 原程序视觉验收、所有外部 API/设备组合不在本轮通过范围。
-
-本文件随源码提供。最终 TGZ/运行 ZIP 的实际摘要、独立解包加载、提交 SHA、GitHub PR/Release 与远程读回，统一记录在最终相邻 `DELIVERY.json`。不把生成此说明当成那些动作已经成功。
+公开发布资产`UI169-DELIVERY.json`绑定实际源码提交、两次公共CI、干净TGZ与7721文件恢复、四工作区加载、六页PPTX同摘要，以及服务端资产摘要。三个旧缺档继续列在[历史记录](docs/ui168/historical-snapshots.json)。

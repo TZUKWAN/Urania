@@ -1,0 +1,220 @@
+{
+  "schema": 1,
+  "id": "urania-ui169-dsh-0.2.2-rc.1-v14",
+  "sdkVersion": "0.2.2-rc.1",
+  "license": "MIT; Copyright (c) 2026 DeepSeek",
+  "status": "source-verified",
+  "files": [
+    {
+      "path": "node_modules/@deepseek-ai/dsh-client-ui-chat/lib/client.js",
+      "beforeSha256": "b7e645f2461231e8ece31381f026db2df72d058e425eaef19265f215c823d84e",
+      "afterSha256": "79e3eed10ac2bc28d8374f8b44d5ff275717473c6be2c8fcb4bbdf441397f7e3",
+      "replacements": [
+        {
+          "before": "\n\t\tfunction apply(ctx) {",
+          "after": "\n        const uraniaVisualSources = new WeakMap(), uraniaVisualPending = new Set();\n        let uraniaVisualFrame = 0, uraniaVisualTimer = 0;\n        function cancelUraniaVisualNotify(listener) {\n            uraniaVisualPending.delete(listener);\n            if (!uraniaVisualPending.size) {\n                if (uraniaVisualFrame) cancelAnimationFrame(uraniaVisualFrame);\n                if (uraniaVisualTimer) clearTimeout(uraniaVisualTimer);\n                uraniaVisualFrame = uraniaVisualTimer = 0;\n            }\n        }\n        function uraniaVisualSubscribe(source, listener) {\n            let active = true;\n            const notify = () => { if (active) listener(); };\n            const off = source.subscribe(() => {\n                if (!active) return;\n                if (!globalThis.document?.body?.hasAttribute('data-urania-workbench')) { notify(); return; }\n                uraniaVisualPending.add(notify);\n                if (!uraniaVisualFrame && !uraniaVisualTimer) uraniaVisualFrame = requestAnimationFrame(() => {\n                    uraniaVisualFrame = 0;\n                    uraniaVisualTimer = setTimeout(() => {\n                        uraniaVisualTimer = 0;\n                        const batch = [...uraniaVisualPending]; uraniaVisualPending.clear();\n                        react_dom.unstable_batchedUpdates(() => { for (const notify of batch) notify(); });\n                    }, 0);\n                });\n            });\n            return () => { active = false; cancelUraniaVisualNotify(notify); off(); };\n        }\n        function uraniaVisualSource(source) {\n            if (!source) return source;\n            let wrapped = uraniaVisualSources.get(source);\n            if (!wrapped) {\n                wrapped = {getSnapshot: () => source.getSnapshot(), subscribe: listener => uraniaVisualSubscribe(source, listener)};\n                uraniaVisualSources.set(source, wrapped);\n            }\n            return wrapped;\n        }\n\n\t\tfunction apply(ctx) {"
+        },
+        {
+          "before": "\t\t\t\t\t\tsubscribe: (listener) => target.subscribe(listener)",
+          "after": "\t\t\t\t\t\tsubscribe: (listener) => uraniaVisualSubscribe(target, listener)"
+        },
+        {
+          "before": "chat.getSnapshot().nodes.source(key)",
+          "after": "uraniaVisualSource(chat.getSnapshot().nodes.source(key))"
+        },
+        {
+          "before": "chat.getSnapshot().nodes.bottomSource(key)",
+          "after": "uraniaVisualSource(chat.getSnapshot().nodes.bottomSource(key))"
+        },
+        {
+          "before": "chat.getSnapshot().nodes.processSource(key)",
+          "after": "uraniaVisualSource(chat.getSnapshot().nodes.processSource(key))"
+        },
+        {
+          "before": "conversation.snapshot.getSnapshot().views.grouped(\"chat\")?.groupSource(key)",
+          "after": "uraniaVisualSource(conversation.snapshot.getSnapshot().views.grouped(\"chat\")?.groupSource(key))"
+        },
+        {
+          "before": "\t\t\t\tif (!deferCompletedTurns) {\n\t\t\t\t\tcancelPendingFollow();\n\t\t\t\t\treading.interruptFollow();\n\t\t\t\t}\n\t\t\t\tviewport.updateTurns(loadedTurns);\n\t\t\t\tconst layoutChanged = previous.order !== order || previous.ready !== ready;\n\t\t\t\tif (layoutChanged) viewport.invalidate();\n\t\t\t\tviewport.reclaimBelow();\n\t\t\t\tprocessContent();\n\t\t\t\tif (layoutChanged && content.current.opened) reading.refreshActiveTurn();",
+          "after": "\t\t\t\tif (viewport.elements?.scroller.closest('.dcChatConversation')) {\n\t\t\t\tviewport.updateTurns(loadedTurns);\n\t\t\t\tconst flush = () => {\n\t\t\t\t\tif (!deferCompletedTurns) {\n\t\t\t\t\t\tcancelPendingFollow();\n\t\t\t\t\t\treading.interruptFollow();\n\t\t\t\t\t}\n\t\t\t\t\tconst layoutChanged = previous.order !== order || previous.ready !== ready;\n\t\t\t\t\tviewport.invalidate();\n\t\t\t\t\tviewport.reclaimBelow();\n\t\t\t\t\tprocessContent();\n\t\t\t\t\tif (layoutChanged && content.current.opened) reading.refreshActiveTurn();\n\t\t\t\t};\n\t\t\t\t\tviewport.queueUraniaLayout(flush, () => { content.current.applied = content.current.input; });\n\t\t\t\t} else {\n\t\t\t\tif (!deferCompletedTurns) {\n\t\t\t\t\tcancelPendingFollow();\n\t\t\t\t\treading.interruptFollow();\n\t\t\t\t}\n\t\t\t\tviewport.updateTurns(loadedTurns);\n\t\t\t\tconst layoutChanged = previous.order !== order || previous.ready !== ready;\n\t\t\t\tif (layoutChanged) viewport.invalidate();\n\t\t\t\tviewport.reclaimBelow();\n\t\t\t\tprocessContent();\n\t\t\t\tif (layoutChanged && content.current.opened) reading.refreshActiveTurn();\n\t\t\t\t}"
+        },
+        {
+          "before": "\n\t\t\tdetach() {",
+          "after": "\n\t\t\tqueueUraniaLayout(flush, cancel) {\n\t\t\t\tconst elements = this.elements, view = elements?.scroller.ownerDocument.defaultView;\n\t\t\t\tif (!view) return;\n\t\t\t\tconst task = this.uraniaLayout ||= { frame:0, timer:0, observer:null, flush:null, cancel:null, view };\n\t\t\t\ttask.flush = flush; task.cancel = cancel;\n\t\t\t\tif (task.frame || task.timer || task.observer) return;\n                if (typeof view.ResizeObserver === 'function') {\n                    task.observer = new view.ResizeObserver(() => {\n                        task.observer?.disconnect(); task.observer = null;\n                        const next = task.flush; task.flush = task.cancel = null;\n                        if (this.elements === elements && next) next();\n                    });\n                    task.observer.observe(elements.scroller);\n                    return;\n                }\n\t\t\t\ttask.frame = view.requestAnimationFrame(() => {\n\t\t\t\t\ttask.frame = 0;\n\t\t\t\t\ttask.timer = view.setTimeout(() => {\n\t\t\t\t\t\ttask.timer = 0;\n\t\t\t\t\t\tconst next = task.flush; task.flush = task.cancel = null;\n\t\t\t\t\t\tif (this.elements && next) next();\n\t\t\t\t\t}, 0);\n\t\t\t\t});\n\t\t\t}\n\t\t\tcancelUraniaLayout(readerIntent = false) {\n\t\t\t\tconst task = this.uraniaLayout;\n\t\t\t\tif (!task) return;\n\t\t\t\ttask.observer?.disconnect(); task.observer = null;\n                if (task.frame) task.view.cancelAnimationFrame(task.frame);\n\t\t\t\tif (task.timer) task.view.clearTimeout(task.timer);\n\t\t\t\ttask.frame = task.timer = 0;\n\t\t\t\tif (readerIntent) task.cancel?.();\n\t\t\t\ttask.flush = task.cancel = null;\n\t\t\t}\n\n\t\t\tdetach() {\n\t\t\t\tthis.cancelUraniaLayout();"
+        },
+        {
+          "before": "\t\t\t\tthis.events?.intent?.();",
+          "after": "\t\t\t\tthis.cancelUraniaLayout(true);\n\t\t\t\tthis.events?.intent?.();"
+        },
+        {
+          "before": "\t\t\t\tthis.measureClosing(element);",
+          "after": "\t\t\t\tif (!this.elements?.scroller.closest(\".dcChatConversation\")) this.measureClosing(element);"
+        },
+        {
+          "before": ":is(.EvIC1a_column,[data-slot=\\\"conversation.chat.flow\\\"])>:not([hidden]):not(.EvIC1a_textInteraction):not(.EvIC1a_flowItem:is(:empty,:has(>[data-slot=\\\"conversation.chat.node\\\"]:empty)))~:not([hidden]):not(.EvIC1a_textInteraction):not(.EvIC1a_flowItem:is(:empty,:has(>[data-slot=\\\"conversation.chat.node\\\"]:empty)))",
+          "after": ":is(.EvIC1a_column,[data-slot=\\\"conversation.chat.flow\\\"])>:not([hidden]):not(.EvIC1a_textInteraction):not(.EvIC1a_flowItem:is(:empty,:has(>[data-slot=\\\"conversation.chat.node\\\"]:empty)))~:not([hidden]):not(.EvIC1a_textInteraction):not(.EvIC1a_flowItem:is(:empty,:has(>[data-slot=\\\"conversation.chat.node\\\"]:empty))):where(.EvIC1a_column>*,[data-slot=\\\"conversation.chat.flow\\\"]>*)"
+        },
+        {
+          "before": ".EvIC1a_column>.EvIC1a_older+[data-slot=\\\"conversation.chat.flow\\\"]>:not([hidden]):not(.EvIC1a_textInteraction):not(.EvIC1a_flowItem:is(:empty,:has(>[data-slot=\\\"conversation.chat.node\\\"]:empty)))",
+          "after": ".EvIC1a_column>.EvIC1a_older+[data-slot=\\\"conversation.chat.flow\\\"]>:not([hidden]):not(.EvIC1a_textInteraction):not(.EvIC1a_flowItem:is(:empty,:has(>[data-slot=\\\"conversation.chat.node\\\"]:empty))):where(.EvIC1a_column>*,[data-slot=\\\"conversation.chat.flow\\\"]>*)"
+        },
+        {
+          "before": ":is(.EvIC1a_column,[data-slot=\\\"conversation.chat.flow\\\"])>[data-chat-group-part=response]:not([hidden]):not(:empty)+:not([hidden]):not(.EvIC1a_flowItem:is(:empty,:has(>[data-slot=\\\"conversation.chat.node\\\"]:empty))):not(.EvIC1a_running):not(:has(>[data-slot=\\\"conversation.chat.node\\\"]>[data-chat-steering-batch]))",
+          "after": ":is(.EvIC1a_column,[data-slot=\\\"conversation.chat.flow\\\"])>[data-chat-group-part=response]:not([hidden]):not(:empty)+:not([hidden]):not(.EvIC1a_flowItem:is(:empty,:has(>[data-slot=\\\"conversation.chat.node\\\"]:empty))):not(.EvIC1a_running):not(:has(>[data-slot=\\\"conversation.chat.node\\\"]>[data-chat-steering-batch])):where(.EvIC1a_column>*,[data-slot=\\\"conversation.chat.flow\\\"]>*)"
+        },
+        {
+          "before": ":is(.EvIC1a_column,[data-slot=\\\"conversation.chat.flow\\\"])>[data-chat-flow-kind=turn-process]:not(:empty,:has(>[data-slot=\\\"conversation.chat.node\\\"]:empty))+:not([hidden]):not(.EvIC1a_flowItem:is(:empty,:has(>[data-slot=\\\"conversation.chat.node\\\"]:empty))):not(.EvIC1a_running):not(:has(>[data-slot=\\\"conversation.chat.node\\\"]>[data-chat-steering-batch]))",
+          "after": ":is(.EvIC1a_column,[data-slot=\\\"conversation.chat.flow\\\"])>[data-chat-flow-kind=turn-process]:not(:empty,:has(>[data-slot=\\\"conversation.chat.node\\\"]:empty))+:not([hidden]):not(.EvIC1a_flowItem:is(:empty,:has(>[data-slot=\\\"conversation.chat.node\\\"]:empty))):not(.EvIC1a_running):not(:has(>[data-slot=\\\"conversation.chat.node\\\"]>[data-chat-steering-batch])):where(.EvIC1a_column>*,[data-slot=\\\"conversation.chat.flow\\\"]>*)"
+        },
+        {
+          "before": ":is(.EvIC1a_column,[data-slot=\\\"conversation.chat.flow\\\"])>[data-chat-flow-kind=turn-process]+:not([hidden]):not(.EvIC1a_flowItem:is(:empty,:has(>[data-slot=\\\"conversation.chat.node\\\"]:empty))):not(.EvIC1a_running):not([data-submission-echo],[data-pending-steering]):not(:has(>[data-slot=\\\"conversation.chat.node\\\"]>[data-chat-steering-batch]))",
+          "after": ":is(.EvIC1a_column,[data-slot=\\\"conversation.chat.flow\\\"])>[data-chat-flow-kind=turn-process]+:not([hidden]):not(.EvIC1a_flowItem:is(:empty,:has(>[data-slot=\\\"conversation.chat.node\\\"]:empty))):not(.EvIC1a_running):not([data-submission-echo],[data-pending-steering]):not(:has(>[data-slot=\\\"conversation.chat.node\\\"]>[data-chat-steering-batch])):where(.EvIC1a_column>*,[data-slot=\\\"conversation.chat.flow\\\"]>*)"
+        }
+      ]
+    },
+    {
+      "path": "node_modules/@deepseek-ai/dsh-client-ui-conversation/lib/client.js",
+      "beforeSha256": "9a37949cc76603ea3a965ce4d0d6ca65885de4a9808345c38748e595ac396378",
+      "afterSha256": "dfebdabee7f0017c9b059b598d06aae55d92bb3b44a9cfe9995fa6c4acf4f340",
+      "replacements": [
+        {
+          "before": "function ComposerContentEditable({ editor, editable, ...rest }) {\n\t\t\tconst ref = (0, react.useRef)(null);",
+          "after": "function ComposerContentEditable({ editor, editable, ...rest }) {\n\t\t\tconst ref = (0, react.useRef)(null);\n            const [uraniaInput, setUraniaInput] = (0, react.useState)(false);\n            (0, react.useLayoutEffect)(() => {\n                setUraniaInput(!!ref.current?.closest('.dcChatConversation') && !!globalThis.CSS?.supports('-webkit-user-modify','read-only'));\n            }, []);\n            (0, react.useLayoutEffect)(() => {\n                const root = ref.current;\n                if (!root || !uraniaInput || editable) return;\n                const block = event => { event.preventDefault(); event.stopPropagation(); };\n                const names = ['beforeinput','paste','cut','drop'];\n                for (const name of names) root.addEventListener(name, block, true);\n                return () => { for (const name of names) root.removeEventListener(name, block, true); };\n            }, [editor, editable, uraniaInput]);"
+        },
+        {
+          "before": "\t\t\t\tseatObserver.current = new ResizeObserver(() => {\n\t\t\t\t\tscroller.style.setProperty(\"--dsh-composer-height\", `${seat.offsetHeight}px`);\n\t\t\t\t\tscroller.style.setProperty(\"--dsh-conversation-viewport-height\", `${scroller.clientHeight}px`);\n\t\t\t\t});",
+          "after": "\t\t\t\tlet frame = 0, sizes;\n\t\t\t\tconst view = seat.ownerDocument.defaultView;\n\t\t\t\tconst observer = new ResizeObserver(() => {\n\t\t\t\t\tif (!seat.closest('.dcChatConversation') || !view) {\n\t\t\t\t\t\tscroller.style.setProperty(\"--dsh-composer-height\", `${seat.offsetHeight}px`);\n\t\t\t\t\t\tscroller.style.setProperty(\"--dsh-conversation-viewport-height\", `${scroller.clientHeight}px`);\n\t\t\t\t\t\treturn;\n\t\t\t\t\t}\n\t\t\t\t\tsizes = [`${seat.offsetHeight}px`, `${scroller.clientHeight}px`];\n\t\t\t\t\tif (frame) return;\n\t\t\t\t\tframe = view.requestAnimationFrame(() => {\n\t\t\t\t\t\tframe = 0;\n\t\t\t\t\t\tfor (const [index, name] of ['--dsh-composer-height','--dsh-conversation-viewport-height'].entries()) {\n\t\t\t\t\t\t\tif (scroller.style.getPropertyValue(name) !== sizes[index]) scroller.style.setProperty(name, sizes[index]);\n\t\t\t\t\t\t}\n\t\t\t\t\t});\n\t\t\t\t});\n\t\t\t\tconst disconnect = observer.disconnect.bind(observer);\n\t\t\t\tobserver.disconnect = () => { if (frame) view.cancelAnimationFrame(frame); frame = 0; disconnect(); };\n\t\t\t\tseatObserver.current = observer;"
+        },
+        {
+          "before": "function observeControlRow(row) {\n\t\t\tconst measure = () => {\n\t\t\t\trow.removeAttribute(\"data-model-compact\");\n\t\t\t\tconst style = getComputedStyle(row);\n\t\t\t\tconst available = row.getBoundingClientRect().width - parseFloat(style.paddingLeft) - parseFloat(style.paddingRight);\n\t\t\t\tconst widths = Array.from(row.children, (child) => child.getBoundingClientRect().width).filter((width) => width > 0);\n\t\t\t\tconst needed = widths.reduce((sum, width) => sum + width, 0) + Math.max(0, widths.length - 1) * parseFloat(style.columnGap);\n\t\t\t\trow.toggleAttribute(\"data-model-compact\", needed > available);\n\t\t\t};\n\t\t\tconst resize = new ResizeObserver(measure);\n\t\t\tresize.observe(row);\n\t\t\tfor (const child of row.children) resize.observe(child);\n\t\t\tconst mutation = new MutationObserver(measure);\n\t\t\tmutation.observe(row, {\n\t\t\t\tsubtree: true,\n\t\t\t\tchildList: true,\n\t\t\t\tcharacterData: true,\n\t\t\t\tattributes: true,\n\t\t\t\tattributeFilter: [\"hidden\"]\n\t\t\t});\n\t\t\tconst fonts = document.fonts;\n\t\t\tfonts.addEventListener(\"loadingdone\", measure);\n\t\t\tmeasure();\n\t\t\treturn () => {\n\t\t\t\tresize.disconnect();\n\t\t\t\tmutation.disconnect();\n\t\t\t\tfonts.removeEventListener(\"loadingdone\", measure);\n\t\t\t};\n\t\t}",
+          "after": "function observeControlRow(row) {\n            if (row.closest('.dcChatConversation')) {\n                row.removeAttribute('data-model-compact');\n                row.setAttribute('data-urania-controls','');\n                return () => row.removeAttribute('data-urania-controls');\n            }\n\n\t\t\tconst measure = () => {\n\t\t\t\trow.removeAttribute(\"data-model-compact\");\n\t\t\t\tconst style = getComputedStyle(row);\n\t\t\t\tconst available = row.getBoundingClientRect().width - parseFloat(style.paddingLeft) - parseFloat(style.paddingRight);\n\t\t\t\tconst widths = Array.from(row.children, (child) => child.getBoundingClientRect().width).filter((width) => width > 0);\n\t\t\t\tconst needed = widths.reduce((sum, width) => sum + width, 0) + Math.max(0, widths.length - 1) * parseFloat(style.columnGap);\n\t\t\t\trow.toggleAttribute(\"data-model-compact\", needed > available);\n\t\t\t};\n\t\t\tconst resize = new ResizeObserver(measure);\n\t\t\tresize.observe(row);\n\t\t\tfor (const child of row.children) resize.observe(child);\n\t\t\tconst mutation = new MutationObserver(measure);\n\t\t\tmutation.observe(row, {\n\t\t\t\tsubtree: true,\n\t\t\t\tchildList: true,\n\t\t\t\tcharacterData: true,\n\t\t\t\tattributes: true,\n\t\t\t\tattributeFilter: [\"hidden\"]\n\t\t\t});\n\t\t\tconst fonts = document.fonts;\n\t\t\tfonts.addEventListener(\"loadingdone\", measure);\n\t\t\tmeasure();\n\t\t\treturn () => {\n\t\t\t\tresize.disconnect();\n\t\t\t\tmutation.disconnect();\n\t\t\t\tfonts.removeEventListener(\"loadingdone\", measure);\n\t\t\t};\n\t\t}"
+        },
+        {
+          "before": "function focusDraftEditor(editor, revealSelection) {\n\t\t\teditor.getRootElement()?.focus({ preventScroll: true });\n\t\t\teditor.focus(() => {\n\t\t\t\trevealSelection();\n\t\t\t});\n\t\t}",
+          "after": "const uraniaDraftFocus = new WeakMap();\n        function focusDraftEditor(editor, revealSelection) {\n            const root = editor.getRootElement(), prior = uraniaDraftFocus.get(editor);\n            if (!root?.closest('.dcChatConversation')) {\n                prior?.cancel();\n                editor.getRootElement()?.focus({ preventScroll: true });\n                editor.focus(() => { revealSelection(); });\n                return;\n            }\n            if (prior?.root === root) { prior.reveal = revealSelection; return; }\n            prior?.cancel();\n            const view = root.ownerDocument.defaultView, doc = root.ownerDocument;\n            if (!view) return;\n            const task = {root, reveal:revealSelection, frame:0, timer:0, cancel:null};\n            const release = () => {\n                doc.removeEventListener('pointerdown', cancel, true);\n                doc.removeEventListener('keydown', cancel, true);\n                if (uraniaDraftFocus.get(editor) === task) uraniaDraftFocus.delete(editor);\n            };\n            const cancel = task.cancel = () => {\n                if (task.frame) view.cancelAnimationFrame(task.frame);\n                if (task.timer) view.clearTimeout(task.timer);\n                task.frame = task.timer = 0; release();\n            };\n            uraniaDraftFocus.set(editor, task);\n            doc.addEventListener('pointerdown', cancel, {capture:true,passive:true});\n            doc.addEventListener('keydown', cancel, {capture:true,passive:true});\n            task.frame = view.requestAnimationFrame(() => {\n                task.frame = 0;\n                task.timer = view.setTimeout(() => {\n                    task.timer = 0; release();\n                    if (!root.isConnected || editor.getRootElement() !== root || !root.isContentEditable) return;\n                    root.focus({preventScroll:true});\n                    editor.focus(() => task.reveal());\n                },0);\n            });\n        }"
+        },
+        {
+          "before": "\t\t\t\tcontentEditable: editor !== null && editable,",
+          "after": "                contentEditable: editor !== null && (editable || (uraniaInput && rest['aria-disabled'] !== true)),"
+        },
+        {
+          "before": "\t\t\t\t\"data-composer-input\": true,\n\t\t\t\t...rest",
+          "after": "\t\t\t\t\"data-composer-input\": true,\n\t\t\t\t...rest,\n                ...(editor !== null && uraniaInput && rest['aria-disabled'] !== true ? {\n                    tabIndex: rest.tabIndex ?? 0,\n                    'aria-readonly': !editable || void 0\n                } : {})"
+        }
+      ]
+    },
+    {
+      "path": "node_modules/@deepseek-ai/dsh-client-ui-workspace/lib/client.js",
+      "beforeSha256": "bb31f7870381f737b2cb45db4c7911a08a4949856bc86b648a10d3e85a3e9f89",
+      "afterSha256": "ababeb74778883c1a23367b12f7cee0e804dac194bd1aced008a862655b3336e",
+      "replacements": [
+        {
+          "before": "function ProjectRowItem(props) {",
+          "after": "function UraniaProjectRowItemContent(props) {"
+        },
+        {
+          "before": "\n\t\tfunction WorkspaceProjectRow(",
+          "after": "\n        const UraniaMemoProjectRow = (0, react.memo)(UraniaProjectRowItemContent);\n        function ProjectRowItem(props) {\n            const latest = (0, react.useRef)(props);\n            (0, react.useLayoutEffect)(() => { latest.current = props; });\n            const onToggle = (0, react.useCallback)(() => latest.current.onToggle(), []);\n            const onCreate = (0, react.useCallback)(() => latest.current.onCreate(), []);\n            const drag = (0, react.useMemo)(() => ({\n                start: () => latest.current.drag?.start(),\n                end: () => latest.current.drag?.end()\n            }), []);\n            const g = props.group;\n            // ProjectRow consumes only header fields, never its Session array.\n            // Preserve live access hooks in the memoized native row.\n            const group = (0, react.useMemo)(() => ({\n                key:g.key, workspaceId:g.workspaceId, label:g.label, cwd:g.cwd,\n                createdAt:g.createdAt, expanded:g.expanded, containsCurrent:g.containsCurrent\n            }), [g.key,g.workspaceId,g.label,g.cwd,g.createdAt,g.expanded,g.containsCurrent]);\n            if (!globalThis.document?.body?.hasAttribute('data-urania-workbench'))\n                return (0, react_jsx_runtime.jsx)(UraniaProjectRowItemContent, props);\n            return (0, react_jsx_runtime.jsx)(UraniaMemoProjectRow, {\n                ...props, group, onToggle, onCreate, drag:props.drag === void 0 ? void 0 : drag\n            });\n        }\n\n\t\tfunction WorkspaceProjectRow("
+        },
+        {
+          "before": "const statuses = useSessionStatus((s) => s);",
+          "after": "const statuses = useUraniaStatusPresentation(useSessionStatus, usePanelInfo);",
+          "count": 3
+        },
+        {
+          "before": "function restTitle(title) {",
+          "after": "function restTitle(title) {\n\t\t\tif (title.ownerDocument.body.hasAttribute(\"data-urania-workbench\") && !title.hasAttribute(\"data-scrolled\") && !title.hasAttribute(\"data-clipped\")) return;"
+        },
+        {
+          "before": "\n\t\tfunction WorkspaceBrowser(",
+          "after": "\n        function useUraniaStatusPresentation(useSessionStatus, usePanelInfo) {\n            const active = usePanelInfo(info => info.activePanelId === 'designcraft');\n            const actual = useSessionStatus(statuses => statuses);\n            const deferred = (0, react.useDeferredValue)(actual);\n            return active ? deferred : actual;\n        }\n\n        const UraniaMemoSessionTree = (0, react.memo)(SessionTree);\n        const UraniaMemoFlatList = (0, react.memo)(FlatList);\n        function UraniaDeferredSessionTree(props) {\n            const active = props.usePanelInfo(info => info.activePanelId === 'designcraft');\n            const deferred = (0, react.useDeferredValue)(props);\n            return (0, react_jsx_runtime.jsx)(UraniaMemoSessionTree, active ? deferred : props);\n        }\n        function UraniaDeferredFlatList(props) {\n            const active = props.usePanelInfo(info => info.activePanelId === 'designcraft');\n            const deferred = (0, react.useDeferredValue)(props);\n            return (0, react_jsx_runtime.jsx)(UraniaMemoFlatList, active ? deferred : props);\n        }\n\n\t\tfunction WorkspaceBrowser("
+        },
+        {
+          "before": "(0, react_jsx_runtime.jsx)(SessionTree, {",
+          "after": "(0, react_jsx_runtime.jsx)(UraniaDeferredSessionTree, {"
+        },
+        {
+          "before": "(0, react_jsx_runtime.jsx)(FlatList, {",
+          "after": "(0, react_jsx_runtime.jsx)(UraniaDeferredFlatList, {"
+        }
+      ]
+    },
+    {
+      "path": "node_modules/@deepseek-ai/dsh-client-ui-sidebar-files/lib/client.js",
+      "beforeSha256": "d26ec6bd0bb26d408c4817a71099617895d78113b312732ca1b25c7dc2fc9c1f",
+      "afterSha256": "9a3e9a747ce24ec729cce4fc8c75572326b95733cc867e1c04e8746f13a20fd2",
+      "replacements": [
+        {
+          "before": ":has(>.k-1LKG_navigator.k-1LKG_fill)>:not(.k-1LKG_navigator)",
+          "after": ".k-1LKG_navigator.k-1LKG_fill~:not(.k-1LKG_navigator),:not(.k-1LKG_navigator):has(~.k-1LKG_navigator.k-1LKG_fill)"
+        },
+        {
+          "before": ":has(>.k-1LKG_navigator:not(.k-1LKG_wholePage))>:not(.k-1LKG_navigator)",
+          "after": ".k-1LKG_navigator:not(.k-1LKG_wholePage)~:not(.k-1LKG_navigator),:not(.k-1LKG_navigator):has(~.k-1LKG_navigator:not(.k-1LKG_wholePage))"
+        }
+      ]
+    },
+    {
+      "path": "node_modules/@deepseek-ai/dsh-client-ui-session/lib/client.js",
+      "beforeSha256": "082ffb6d98a7bcc6dacbd75e6818c36d4f0f83ebad26e7986bf3ab490b301485",
+      "afterSha256": "f34a94f70ef2efddad423ca5300d672f0d25c89d87f956a6154fef95da1849d7",
+      "replacements": [
+        {
+          "before": "let react_jsx_runtime = require(\"react/jsx-runtime\");",
+          "after": "let react_jsx_runtime = require(\"react/jsx-runtime\");\n        let react_dom = require(\"react-dom\");"
+        },
+        {
+          "before": "\n\t\tconst BUILTIN_SOURCE = {",
+          "after": "\n        const uraniaVisualSources = new WeakMap(), uraniaVisualPending = new Set();\n        let uraniaVisualFrame = 0, uraniaVisualTimer = 0;\n        function cancelUraniaVisualNotify(listener) {\n            uraniaVisualPending.delete(listener);\n            if (!uraniaVisualPending.size) {\n                if (uraniaVisualFrame) cancelAnimationFrame(uraniaVisualFrame);\n                if (uraniaVisualTimer) clearTimeout(uraniaVisualTimer);\n                uraniaVisualFrame = uraniaVisualTimer = 0;\n            }\n        }\n        function uraniaVisualSubscribe(source, listener) {\n            let active = true;\n            const notify = () => { if (active) listener(); };\n            const off = source.subscribe(() => {\n                if (!active) return;\n                if (!globalThis.document?.body?.hasAttribute('data-urania-workbench')) { notify(); return; }\n                uraniaVisualPending.add(notify);\n                if (!uraniaVisualFrame && !uraniaVisualTimer) uraniaVisualFrame = requestAnimationFrame(() => {\n                    uraniaVisualFrame = 0;\n                    uraniaVisualTimer = setTimeout(() => {\n                        uraniaVisualTimer = 0;\n                        const batch = [...uraniaVisualPending]; uraniaVisualPending.clear();\n                        react_dom.unstable_batchedUpdates(() => { for (const notify of batch) notify(); });\n                    }, 0);\n                });\n            });\n            return () => { active = false; cancelUraniaVisualNotify(notify); off(); };\n        }\n        function uraniaVisualSource(source) {\n            if (!source) return source;\n            let wrapped = uraniaVisualSources.get(source);\n            if (!wrapped) {\n                wrapped = {getSnapshot: () => source.getSnapshot(), subscribe: listener => uraniaVisualSubscribe(source, listener)};\n                uraniaVisualSources.set(source, wrapped);\n            }\n            return wrapped;\n        }\n\n\t\tconst BUILTIN_SOURCE = {"
+        },
+        {
+          "before": "hooks: { session: binding.session },",
+          "after": "hooks: { session: uraniaVisualSource(binding.session) },"
+        },
+        {
+          "before": "sessions: ctx.sessions.list,",
+          "after": "sessions: uraniaVisualSource(ctx.sessions.list),"
+        }
+      ]
+    },
+    {
+      "path": "node_modules/@deepseek-ai/dsh-web-frontend/dist/assets/index-BgUyXZcc.js",
+      "beforeSha256": "c7e9821660f7e0f0524cc7cb1a375a5171eebbe68e167b80d290bd2ea391286d",
+      "afterSha256": "ddd4f09ab557a078e3ddcff5db053c58608520accac663b6117762f7ed389f7f",
+      "replacements": [
+        {
+          "before": "function TD(e){",
+          "after": "function TD(e){if(e?.ownerDocument?.body?.hasAttribute(\"data-urania-workbench\"))return;",
+          "count": 1
+        },
+        {
+          "before": "const C2=k.memo(function({children:t,active:r=!1,className:i,contentClassName:n}){",
+          "after": "const C2=k.memo(function({children:t,active:r=!1,className:i,contentClassName:n}){r=r&&!globalThis.document?.body?.hasAttribute(\"data-urania-workbench\");",
+          "count": 1
+        },
+        {
+          "before": "\"./vendor-BUMdD3V7.js\"",
+          "after": "\"./vendor-BUMdD3V7.js?urania=ui169-v14\"",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "path": "node_modules/@deepseek-ai/dsh-web-frontend/dist/index.html",
+      "beforeSha256": "d3581179edd3dde7208abdd098fa8a95387f84ec3076bea0d2b53e4e91f2d4ec",
+      "afterSha256": "ac64deed59844480953f09bee0d045e07acb28978f135f2ba7954d3708c2459e",
+      "replacements": [
+        {
+          "before": "\"./assets/index-BgUyXZcc.js\"",
+          "after": "\"./assets/index-BgUyXZcc.js?urania=ui169-v14\"",
+          "count": 1
+        },
+        {
+          "before": "\"./assets/vendor-BUMdD3V7.js\"",
+          "after": "\"./assets/vendor-BUMdD3V7.js?urania=ui169-v14\"",
+          "count": 1
+        }
+      ]
+    }
+  ]
+}

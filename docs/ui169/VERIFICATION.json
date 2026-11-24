@@ -1,0 +1,1114 @@
+{
+  "packageVersion": "1.3.1",
+  "uiBuild": 169,
+  "date": "2026-11-24",
+  "scope": "Windows x64; Chrome157; actual DSH0.2.2-rc.1 with exact separately installed UI performance companion; original90-workspace baseline; active real native Vector canvas. Native Photo/Deck read/write checked separately.",
+  "performance": {
+    "accepted": true,
+    "consecutiveHardware": 3,
+    "consecutiveStrictSoftware": 3,
+    "workspaceCount": 90,
+    "baselineManifestSha256": "a4af935d60f6133621ee7d65221862f04b02ca006187de25fb3c9d2c347464a1",
+    "criterion": {
+      "phaseP95msMax": 17.5,
+      "phaseP99msMax": 20,
+      "fullOver33_5msRatioMax": 0.001,
+      "sendOver33_5msMax": 0,
+      "completionOver33_5msMax": 0,
+      "sendWindowMs": 1200,
+      "completionWindowMs": [
+        -500,
+        1500
+      ],
+      "phaseBoundaryCrossingFramesIncluded": true,
+      "minimumRealReplyCharacters": 2200
+    },
+    "runs": [
+      {
+        "stage": "ui169-final-v14-hardware-1",
+        "model": {
+          "provider": "zai-coding-cn",
+          "model": "glm-5.3-flash"
+        },
+        "realModelCalls": 1,
+        "actualStreamedReplyChars": 4703,
+        "sendFrames": {
+          "samples": 121,
+          "p50ms": 10,
+          "p95ms": 10.2,
+          "p99ms": 10.2,
+          "maxMs": 10.3,
+          "over33ms": 0,
+          "over20ms": 0
+        },
+        "completionFrames": {
+          "samples": 199,
+          "p50ms": 10,
+          "p95ms": 10.2,
+          "p99ms": 10.3,
+          "maxMs": 30,
+          "over33ms": 0,
+          "over20ms": 1
+        },
+        "streamActiveFrames": {
+          "samples": 5950,
+          "p50ms": 10,
+          "p95ms": 10.2,
+          "p99ms": 10.2,
+          "maxMs": 10.4,
+          "over33ms": 0,
+          "over20ms": 0
+        },
+        "replyWindowFrames": {
+          "samples": 5954,
+          "p50ms": 10,
+          "p95ms": 10.2,
+          "p99ms": 10.2,
+          "maxMs": 10.4,
+          "over33ms": 0,
+          "over20ms": 0
+        },
+        "allStreamFrames": {
+          "samples": 6362,
+          "p50ms": 10,
+          "p95ms": 10.2,
+          "p99ms": 10.2,
+          "maxMs": 30,
+          "over33ms": 0,
+          "over20ms": 1
+        },
+        "durationSeconds": 62.5,
+        "browserEnvironment": {
+          "channel": "chrome",
+          "forcedSoftwareGpu": false,
+          "version": "157.0.8103.80",
+          "devices": [
+            {
+              "vendorId": 4098,
+              "deviceId": 30096,
+              "subSysId": 2248154835,
+              "revision": 192,
+              "vendorString": "",
+              "deviceString": "AMD Radeon RX 9060 XT",
+              "driverVendor": "AMD",
+              "driverVersion": "32.0.31044.16"
+            },
+            {
+              "vendorId": 4098,
+              "deviceId": 5056,
+              "subSysId": 331354114,
+              "revision": 197,
+              "vendorString": "",
+              "deviceString": "AMD Radeon(TM) Graphics",
+              "driverVendor": "",
+              "driverVersion": "32.0.21045.1000"
+            },
+            {
+              "vendorId": 4098,
+              "deviceId": 30096,
+              "subSysId": 2248154835,
+              "revision": 192,
+              "vendorString": "",
+              "deviceString": "AMD Radeon RX 9060 XT",
+              "driverVendor": "",
+              "driverVersion": "32.0.31044.16"
+            },
+            {
+              "vendorId": 5140,
+              "deviceId": 140,
+              "subSysId": 0,
+              "revision": 0,
+              "vendorString": "",
+              "deviceString": "Microsoft Basic Render Driver",
+              "driverVendor": "",
+              "driverVersion": "10.0.26100.9818"
+            }
+          ],
+          "featureStatus": {
+            "2d_canvas": "enabled",
+            "direct_rendering_display_compositor": "disabled_off_ok",
+            "gpu_compositing": "enabled",
+            "multiple_raster_threads": "enabled_on",
+            "opengl": "enabled_on",
+            "rasterization": "enabled",
+            "skia_graphite": "disabled_off",
+            "trees_in_viz": "disabled_off",
+            "video_decode": "enabled",
+            "video_encode": "enabled",
+            "webgl": "enabled",
+            "webgpu": "enabled",
+            "webnn": "disabled_off"
+          },
+          "aux": {
+            "glRenderer": "ANGLE (AMD, AMD Radeon RX 9060 XT (0x00007590) Direct3D11 vs_5_0 ps_5_0, D3D11-32.0.31044.16)",
+            "glVendor": "Google Inc. (AMD)",
+            "glVersion": "OpenGL ES 3.0 (ANGLE 2.1.29101 git hash: c56e2a4a9b8c)",
+            "passthroughCmdDecoder": true,
+            "sandboxed": false
+          }
+        },
+        "renderingContract": {
+          "nativePerformance": null,
+          "frontendV2Loaded": false,
+          "inputTabIndex": 0,
+          "slotErrors": [],
+          "bodyBoundary": true,
+          "renderer": "hardware",
+          "scrollerContainment": "strict",
+          "frontendRevision": "ui169-v14",
+          "quietReferencePreparation": true
+        },
+        "longAnimationFrames": [],
+        "renderMetrics": {
+          "LayoutCount": 7689,
+          "RecalcStyleCount": 6600,
+          "LayoutDuration": 2.9622,
+          "RecalcStyleDuration": 0.6415,
+          "ScriptDuration": 3.0145,
+          "TaskDuration": 12.609
+        },
+        "tailPositionAfterMeasurement": {
+          "top": 6336,
+          "floor": 6336,
+          "following": true
+        },
+        "sourceUnchangedDuringMeasurement": true,
+        "companionUnchangedDuringMeasurement": true,
+        "trace": {
+          "bytes": 5512467,
+          "dataLossOccurred": false
+        },
+        "captureAccepted": true,
+        "fullLifecycleAccepted": true,
+        "measurementCompleted": true,
+        "companionPlanSha256": "e97aa6b38e07187e9845d0f3313ba33baf5a4c7770b3cb532533a65ab28b52b8"
+      },
+      {
+        "stage": "ui169-final-v14-hardware-2",
+        "model": {
+          "provider": "zai-coding-cn",
+          "model": "glm-5.3-flash"
+        },
+        "realModelCalls": 1,
+        "actualStreamedReplyChars": 4170,
+        "sendFrames": {
+          "samples": 120,
+          "p50ms": 10,
+          "p95ms": 10.2,
+          "p99ms": 10.2,
+          "maxMs": 20,
+          "over33ms": 0,
+          "over20ms": 0
+        },
+        "completionFrames": {
+          "samples": 199,
+          "p50ms": 10,
+          "p95ms": 10.2,
+          "p99ms": 10.3,
+          "maxMs": 30,
+          "over33ms": 0,
+          "over20ms": 1
+        },
+        "streamActiveFrames": {
+          "samples": 5025,
+          "p50ms": 10,
+          "p95ms": 10.2,
+          "p99ms": 10.2,
+          "maxMs": 10.4,
+          "over33ms": 0,
+          "over20ms": 0
+        },
+        "replyWindowFrames": {
+          "samples": 5092,
+          "p50ms": 10,
+          "p95ms": 10.2,
+          "p99ms": 10.2,
+          "maxMs": 10.4,
+          "over33ms": 0,
+          "over20ms": 0
+        },
+        "allStreamFrames": {
+          "samples": 5462,
+          "p50ms": 10,
+          "p95ms": 10.2,
+          "p99ms": 10.2,
+          "maxMs": 30,
+          "over33ms": 0,
+          "over20ms": 1
+        },
+        "durationSeconds": 53.56,
+        "browserEnvironment": {
+          "channel": "chrome",
+          "forcedSoftwareGpu": false,
+          "version": "157.0.8103.80",
+          "devices": [
+            {
+              "vendorId": 4098,
+              "deviceId": 30096,
+              "subSysId": 2248154835,
+              "revision": 192,
+              "vendorString": "",
+              "deviceString": "AMD Radeon RX 9060 XT",
+              "driverVendor": "AMD",
+              "driverVersion": "32.0.31044.16"
+            },
+            {
+              "vendorId": 4098,
+              "deviceId": 5056,
+              "subSysId": 331354114,
+              "revision": 197,
+              "vendorString": "",
+              "deviceString": "AMD Radeon(TM) Graphics",
+              "driverVendor": "",
+              "driverVersion": "32.0.21045.1000"
+            },
+            {
+              "vendorId": 4098,
+              "deviceId": 30096,
+              "subSysId": 2248154835,
+              "revision": 192,
+              "vendorString": "",
+              "deviceString": "AMD Radeon RX 9060 XT",
+              "driverVendor": "",
+              "driverVersion": "32.0.31044.16"
+            },
+            {
+              "vendorId": 5140,
+              "deviceId": 140,
+              "subSysId": 0,
+              "revision": 0,
+              "vendorString": "",
+              "deviceString": "Microsoft Basic Render Driver",
+              "driverVendor": "",
+              "driverVersion": "10.0.26100.9818"
+            }
+          ],
+          "featureStatus": {
+            "2d_canvas": "enabled",
+            "direct_rendering_display_compositor": "disabled_off_ok",
+            "gpu_compositing": "enabled",
+            "multiple_raster_threads": "enabled_on",
+            "opengl": "enabled_on",
+            "rasterization": "enabled",
+            "skia_graphite": "disabled_off",
+            "trees_in_viz": "disabled_off",
+            "video_decode": "enabled",
+            "video_encode": "enabled",
+            "webgl": "enabled",
+            "webgpu": "enabled",
+            "webnn": "disabled_off"
+          },
+          "aux": {
+            "glRenderer": "ANGLE (AMD, AMD Radeon RX 9060 XT (0x00007590) Direct3D11 vs_5_0 ps_5_0, D3D11-32.0.31044.16)",
+            "glVendor": "Google Inc. (AMD)",
+            "glVersion": "OpenGL ES 3.0 (ANGLE 2.1.29101 git hash: c56e2a4a9b8c)",
+            "passthroughCmdDecoder": true,
+            "sandboxed": false
+          }
+        },
+        "renderingContract": {
+          "nativePerformance": null,
+          "frontendV2Loaded": false,
+          "inputTabIndex": 0,
+          "slotErrors": [],
+          "bodyBoundary": true,
+          "renderer": "hardware",
+          "scrollerContainment": "strict",
+          "frontendRevision": "ui169-v14",
+          "quietReferencePreparation": true
+        },
+        "longAnimationFrames": [],
+        "renderMetrics": {
+          "LayoutCount": 6524,
+          "RecalcStyleCount": 5677,
+          "LayoutDuration": 2.5626,
+          "RecalcStyleDuration": 0.5498,
+          "ScriptDuration": 2.5907,
+          "TaskDuration": 11.0421
+        },
+        "tailPositionAfterMeasurement": {
+          "top": 5651,
+          "floor": 5651,
+          "following": true
+        },
+        "sourceUnchangedDuringMeasurement": true,
+        "companionUnchangedDuringMeasurement": true,
+        "trace": {
+          "bytes": 4700698,
+          "dataLossOccurred": false
+        },
+        "captureAccepted": true,
+        "fullLifecycleAccepted": true,
+        "measurementCompleted": true,
+        "companionPlanSha256": "e97aa6b38e07187e9845d0f3313ba33baf5a4c7770b3cb532533a65ab28b52b8"
+      },
+      {
+        "stage": "ui169-final-v14-hardware-3",
+        "model": {
+          "provider": "zai-coding-cn",
+          "model": "glm-5.3-flash"
+        },
+        "realModelCalls": 1,
+        "actualStreamedReplyChars": 4234,
+        "sendFrames": {
+          "samples": 119,
+          "p50ms": 10,
+          "p95ms": 10.2,
+          "p99ms": 10.2,
+          "maxMs": 30.1,
+          "over33ms": 0,
+          "over20ms": 1
+        },
+        "completionFrames": {
+          "samples": 200,
+          "p50ms": 10,
+          "p95ms": 10.1,
+          "p99ms": 10.2,
+          "maxMs": 20,
+          "over33ms": 0,
+          "over20ms": 0
+        },
+        "streamActiveFrames": {
+          "samples": 5060,
+          "p50ms": 10,
+          "p95ms": 10.2,
+          "p99ms": 10.3,
+          "maxMs": 10.5,
+          "over33ms": 0,
+          "over20ms": 0
+        },
+        "replyWindowFrames": {
+          "samples": 5088,
+          "p50ms": 10,
+          "p95ms": 10.2,
+          "p99ms": 10.3,
+          "maxMs": 10.5,
+          "over33ms": 0,
+          "over20ms": 0
+        },
+        "allStreamFrames": {
+          "samples": 5482,
+          "p50ms": 10,
+          "p95ms": 10.2,
+          "p99ms": 10.3,
+          "maxMs": 30.1,
+          "over33ms": 0,
+          "over20ms": 1
+        },
+        "durationSeconds": 53.59,
+        "browserEnvironment": {
+          "channel": "chrome",
+          "forcedSoftwareGpu": false,
+          "version": "157.0.8103.80",
+          "devices": [
+            {
+              "vendorId": 4098,
+              "deviceId": 30096,
+              "subSysId": 2248154835,
+              "revision": 192,
+              "vendorString": "",
+              "deviceString": "AMD Radeon RX 9060 XT",
+              "driverVendor": "AMD",
+              "driverVersion": "32.0.31044.16"
+            },
+            {
+              "vendorId": 4098,
+              "deviceId": 5056,
+              "subSysId": 331354114,
+              "revision": 197,
+              "vendorString": "",
+              "deviceString": "AMD Radeon(TM) Graphics",
+              "driverVendor": "",
+              "driverVersion": "32.0.21045.1000"
+            },
+            {
+              "vendorId": 4098,
+              "deviceId": 30096,
+              "subSysId": 2248154835,
+              "revision": 192,
+              "vendorString": "",
+              "deviceString": "AMD Radeon RX 9060 XT",
+              "driverVendor": "",
+              "driverVersion": "32.0.31044.16"
+            },
+            {
+              "vendorId": 5140,
+              "deviceId": 140,
+              "subSysId": 0,
+              "revision": 0,
+              "vendorString": "",
+              "deviceString": "Microsoft Basic Render Driver",
+              "driverVendor": "",
+              "driverVersion": "10.0.26100.9818"
+            }
+          ],
+          "featureStatus": {
+            "2d_canvas": "enabled",
+            "direct_rendering_display_compositor": "disabled_off_ok",
+            "gpu_compositing": "enabled",
+            "multiple_raster_threads": "enabled_on",
+            "opengl": "enabled_on",
+            "rasterization": "enabled",
+            "skia_graphite": "disabled_off",
+            "trees_in_viz": "disabled_off",
+            "video_decode": "enabled",
+            "video_encode": "enabled",
+            "webgl": "enabled",
+            "webgpu": "enabled",
+            "webnn": "disabled_off"
+          },
+          "aux": {
+            "glRenderer": "ANGLE (AMD, AMD Radeon RX 9060 XT (0x00007590) Direct3D11 vs_5_0 ps_5_0, D3D11-32.0.31044.16)",
+            "glVendor": "Google Inc. (AMD)",
+            "glVersion": "OpenGL ES 3.0 (ANGLE 2.1.29101 git hash: c56e2a4a9b8c)",
+            "passthroughCmdDecoder": true,
+            "sandboxed": false
+          }
+        },
+        "renderingContract": {
+          "nativePerformance": null,
+          "frontendV2Loaded": false,
+          "inputTabIndex": 0,
+          "slotErrors": [],
+          "bodyBoundary": true,
+          "renderer": "hardware",
+          "scrollerContainment": "strict",
+          "frontendRevision": "ui169-v14",
+          "quietReferencePreparation": true
+        },
+        "longAnimationFrames": [],
+        "renderMetrics": {
+          "LayoutCount": 6575,
+          "RecalcStyleCount": 5721,
+          "LayoutDuration": 2.5171,
+          "RecalcStyleDuration": 0.5892,
+          "ScriptDuration": 2.5929,
+          "TaskDuration": 10.9009
+        },
+        "tailPositionAfterMeasurement": {
+          "top": 5723,
+          "floor": 5723,
+          "following": true
+        },
+        "sourceUnchangedDuringMeasurement": true,
+        "companionUnchangedDuringMeasurement": true,
+        "trace": {
+          "bytes": 4741438,
+          "dataLossOccurred": false
+        },
+        "captureAccepted": true,
+        "fullLifecycleAccepted": true,
+        "measurementCompleted": true,
+        "companionPlanSha256": "e97aa6b38e07187e9845d0f3313ba33baf5a4c7770b3cb532533a65ab28b52b8"
+      },
+      {
+        "stage": "ui169-final-v14-software-1",
+        "model": {
+          "provider": "zai-coding-cn",
+          "model": "glm-5.3-flash"
+        },
+        "realModelCalls": 1,
+        "actualStreamedReplyChars": 4860,
+        "sendFrames": {
+          "samples": 73,
+          "p50ms": 16.7,
+          "p95ms": 16.8,
+          "p99ms": 16.8,
+          "maxMs": 16.8,
+          "over33ms": 0,
+          "over20ms": 0
+        },
+        "completionFrames": {
+          "samples": 120,
+          "p50ms": 16.7,
+          "p95ms": 16.8,
+          "p99ms": 16.8,
+          "maxMs": 33.4,
+          "over33ms": 0,
+          "over20ms": 1
+        },
+        "streamActiveFrames": {
+          "samples": 3710,
+          "p50ms": 16.7,
+          "p95ms": 16.7,
+          "p99ms": 16.8,
+          "maxMs": 16.8,
+          "over33ms": 0,
+          "over20ms": 0
+        },
+        "replyWindowFrames": {
+          "samples": 3737,
+          "p50ms": 16.7,
+          "p95ms": 16.7,
+          "p99ms": 16.8,
+          "maxMs": 16.8,
+          "over33ms": 0,
+          "over20ms": 0
+        },
+        "allStreamFrames": {
+          "samples": 3906,
+          "p50ms": 16.7,
+          "p95ms": 16.7,
+          "p99ms": 16.8,
+          "maxMs": 33.4,
+          "over33ms": 0,
+          "over20ms": 1
+        },
+        "durationSeconds": 63.73,
+        "browserEnvironment": {
+          "channel": "chrome",
+          "forcedSoftwareGpu": true,
+          "version": "157.0.8103.80",
+          "devices": [
+            {
+              "vendorId": 65535,
+              "deviceId": 65535,
+              "subSysId": 0,
+              "revision": 0,
+              "vendorString": "Google Inc. (Google)",
+              "deviceString": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver-5.0.0)",
+              "driverVendor": "SwANGLE",
+              "driverVersion": "5.0.0"
+            }
+          ],
+          "featureStatus": {
+            "2d_canvas": "disabled_software",
+            "direct_rendering_display_compositor": "disabled_off_ok",
+            "gpu_compositing": "disabled_software",
+            "multiple_raster_threads": "enabled_on",
+            "opengl": "disabled_off",
+            "rasterization": "disabled_software",
+            "skia_graphite": "disabled_off",
+            "trees_in_viz": "disabled_off",
+            "video_decode": "disabled_software",
+            "video_encode": "disabled_software",
+            "webgl": "unavailable_software",
+            "webgpu": "unavailable_software",
+            "webnn": "unavailable_software"
+          },
+          "aux": {
+            "glRenderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver-5.0.0)",
+            "glVendor": "Google Inc. (Google)",
+            "glVersion": "OpenGL ES 3.0 (ANGLE 2.1.29101 git hash: c56e2a4a9b8c)",
+            "passthroughCmdDecoder": true,
+            "sandboxed": false
+          }
+        },
+        "renderingContract": {
+          "nativePerformance": null,
+          "frontendV2Loaded": false,
+          "inputTabIndex": 0,
+          "slotErrors": [],
+          "bodyBoundary": true,
+          "renderer": "software",
+          "scrollerContainment": "strict",
+          "frontendRevision": "ui169-v14",
+          "quietReferencePreparation": true
+        },
+        "longAnimationFrames": [],
+        "renderMetrics": {
+          "LayoutCount": 4803,
+          "RecalcStyleCount": 4120,
+          "LayoutDuration": 1.8595,
+          "RecalcStyleDuration": 0.4188,
+          "ScriptDuration": 2.3143,
+          "TaskDuration": 8.8429
+        },
+        "tailPositionAfterMeasurement": {
+          "top": 6498,
+          "floor": 6498,
+          "following": true
+        },
+        "sourceUnchangedDuringMeasurement": true,
+        "companionUnchangedDuringMeasurement": true,
+        "trace": {
+          "bytes": 4073859,
+          "dataLossOccurred": false
+        },
+        "captureAccepted": true,
+        "fullLifecycleAccepted": true,
+        "measurementCompleted": true,
+        "companionPlanSha256": "e97aa6b38e07187e9845d0f3313ba33baf5a4c7770b3cb532533a65ab28b52b8"
+      },
+      {
+        "stage": "ui169-final-v14-software-2",
+        "model": {
+          "provider": "zai-coding-cn",
+          "model": "glm-5.3-flash"
+        },
+        "realModelCalls": 1,
+        "actualStreamedReplyChars": 4980,
+        "sendFrames": {
+          "samples": 73,
+          "p50ms": 16.7,
+          "p95ms": 16.7,
+          "p99ms": 16.8,
+          "maxMs": 16.8,
+          "over33ms": 0,
+          "over20ms": 0
+        },
+        "completionFrames": {
+          "samples": 121,
+          "p50ms": 16.7,
+          "p95ms": 16.7,
+          "p99ms": 16.8,
+          "maxMs": 16.8,
+          "over33ms": 0,
+          "over20ms": 0
+        },
+        "streamActiveFrames": {
+          "samples": 3921,
+          "p50ms": 16.7,
+          "p95ms": 16.7,
+          "p99ms": 16.8,
+          "maxMs": 16.8,
+          "over33ms": 0,
+          "over20ms": 0
+        },
+        "replyWindowFrames": {
+          "samples": 3945,
+          "p50ms": 16.7,
+          "p95ms": 16.7,
+          "p99ms": 16.8,
+          "maxMs": 16.8,
+          "over33ms": 0,
+          "over20ms": 0
+        },
+        "allStreamFrames": {
+          "samples": 4183,
+          "p50ms": 16.7,
+          "p95ms": 16.7,
+          "p99ms": 16.8,
+          "maxMs": 16.8,
+          "over33ms": 0,
+          "over20ms": 0
+        },
+        "durationSeconds": 68.32,
+        "browserEnvironment": {
+          "channel": "chrome",
+          "forcedSoftwareGpu": true,
+          "version": "157.0.8103.80",
+          "devices": [
+            {
+              "vendorId": 65535,
+              "deviceId": 65535,
+              "subSysId": 0,
+              "revision": 0,
+              "vendorString": "Google Inc. (Google)",
+              "deviceString": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver-5.0.0)",
+              "driverVendor": "SwANGLE",
+              "driverVersion": "5.0.0"
+            }
+          ],
+          "featureStatus": {
+            "2d_canvas": "disabled_software",
+            "direct_rendering_display_compositor": "disabled_off_ok",
+            "gpu_compositing": "disabled_software",
+            "multiple_raster_threads": "enabled_on",
+            "opengl": "disabled_off",
+            "rasterization": "disabled_software",
+            "skia_graphite": "disabled_off",
+            "trees_in_viz": "disabled_off",
+            "video_decode": "disabled_software",
+            "video_encode": "disabled_software",
+            "webgl": "unavailable_software",
+            "webgpu": "unavailable_software",
+            "webnn": "unavailable_software"
+          },
+          "aux": {
+            "glRenderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver-5.0.0)",
+            "glVendor": "Google Inc. (Google)",
+            "glVersion": "OpenGL ES 3.0 (ANGLE 2.1.29101 git hash: c56e2a4a9b8c)",
+            "passthroughCmdDecoder": true,
+            "sandboxed": false
+          }
+        },
+        "renderingContract": {
+          "nativePerformance": null,
+          "frontendV2Loaded": false,
+          "inputTabIndex": 0,
+          "slotErrors": [],
+          "bodyBoundary": true,
+          "renderer": "software",
+          "scrollerContainment": "strict",
+          "frontendRevision": "ui169-v14",
+          "quietReferencePreparation": true
+        },
+        "longAnimationFrames": [],
+        "renderMetrics": {
+          "LayoutCount": 5132,
+          "RecalcStyleCount": 4379,
+          "LayoutDuration": 2.0861,
+          "RecalcStyleDuration": 0.452,
+          "ScriptDuration": 2.5305,
+          "TaskDuration": 9.8206
+        },
+        "tailPositionAfterMeasurement": {
+          "top": 6694,
+          "floor": 6694,
+          "following": true
+        },
+        "sourceUnchangedDuringMeasurement": true,
+        "companionUnchangedDuringMeasurement": true,
+        "trace": {
+          "bytes": 4290133,
+          "dataLossOccurred": false
+        },
+        "captureAccepted": true,
+        "fullLifecycleAccepted": true,
+        "measurementCompleted": true,
+        "companionPlanSha256": "e97aa6b38e07187e9845d0f3313ba33baf5a4c7770b3cb532533a65ab28b52b8"
+      },
+      {
+        "stage": "ui169-final-v14-software-3",
+        "model": {
+          "provider": "zai-coding-cn",
+          "model": "glm-5.3-flash"
+        },
+        "realModelCalls": 1,
+        "actualStreamedReplyChars": 4262,
+        "sendFrames": {
+          "samples": 73,
+          "p50ms": 16.7,
+          "p95ms": 16.7,
+          "p99ms": 16.8,
+          "maxMs": 16.8,
+          "over33ms": 0,
+          "over20ms": 0
+        },
+        "completionFrames": {
+          "samples": 121,
+          "p50ms": 16.7,
+          "p95ms": 16.7,
+          "p99ms": 16.8,
+          "maxMs": 16.8,
+          "over33ms": 0,
+          "over20ms": 0
+        },
+        "streamActiveFrames": {
+          "samples": 2853,
+          "p50ms": 16.7,
+          "p95ms": 16.7,
+          "p99ms": 16.8,
+          "maxMs": 50,
+          "over33ms": 1,
+          "over20ms": 1
+        },
+        "replyWindowFrames": {
+          "samples": 3390,
+          "p50ms": 16.7,
+          "p95ms": 16.7,
+          "p99ms": 16.8,
+          "maxMs": 50,
+          "over33ms": 1,
+          "over20ms": 1
+        },
+        "allStreamFrames": {
+          "samples": 3565,
+          "p50ms": 16.7,
+          "p95ms": 16.7,
+          "p99ms": 16.8,
+          "maxMs": 50,
+          "over33ms": 1,
+          "over20ms": 1
+        },
+        "durationSeconds": 58.06,
+        "browserEnvironment": {
+          "channel": "chrome",
+          "forcedSoftwareGpu": true,
+          "version": "157.0.8103.80",
+          "devices": [
+            {
+              "vendorId": 65535,
+              "deviceId": 65535,
+              "subSysId": 0,
+              "revision": 0,
+              "vendorString": "Google Inc. (Google)",
+              "deviceString": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver-5.0.0)",
+              "driverVendor": "SwANGLE",
+              "driverVersion": "5.0.0"
+            }
+          ],
+          "featureStatus": {
+            "2d_canvas": "disabled_software",
+            "direct_rendering_display_compositor": "disabled_off_ok",
+            "gpu_compositing": "disabled_software",
+            "multiple_raster_threads": "enabled_on",
+            "opengl": "disabled_off",
+            "rasterization": "disabled_software",
+            "skia_graphite": "disabled_off",
+            "trees_in_viz": "disabled_off",
+            "video_decode": "disabled_software",
+            "video_encode": "disabled_software",
+            "webgl": "unavailable_software",
+            "webgpu": "unavailable_software",
+            "webnn": "unavailable_software"
+          },
+          "aux": {
+            "glRenderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver-5.0.0)",
+            "glVendor": "Google Inc. (Google)",
+            "glVersion": "OpenGL ES 3.0 (ANGLE 2.1.29101 git hash: c56e2a4a9b8c)",
+            "passthroughCmdDecoder": true,
+            "sandboxed": false
+          }
+        },
+        "renderingContract": {
+          "nativePerformance": null,
+          "frontendV2Loaded": false,
+          "inputTabIndex": 0,
+          "slotErrors": [],
+          "bodyBoundary": true,
+          "renderer": "software",
+          "scrollerContainment": "strict",
+          "frontendRevision": "ui169-v14",
+          "quietReferencePreparation": true
+        },
+        "longAnimationFrames": [
+          {
+            "startTime": 38647.40000000596,
+            "duration": 68,
+            "blockingDuration": 8,
+            "renderStart": 38714.30000001192,
+            "styleAndLayoutStart": 38715.19999998808,
+            "scripts": [
+              {
+                "duration": 56.70000001788139,
+                "forcedStyleAndLayoutDuration": 0,
+                "sourceFunctionName": "",
+                "sourceURL": "index-BgUyXZcc.js"
+              }
+            ]
+          }
+        ],
+        "renderMetrics": {
+          "LayoutCount": 4225,
+          "RecalcStyleCount": 3707,
+          "LayoutDuration": 1.6544,
+          "RecalcStyleDuration": 0.3482,
+          "ScriptDuration": 2.0676,
+          "TaskDuration": 7.9831
+        },
+        "tailPositionAfterMeasurement": {
+          "top": 5245,
+          "floor": 5245,
+          "following": true
+        },
+        "sourceUnchangedDuringMeasurement": true,
+        "companionUnchangedDuringMeasurement": true,
+        "trace": {
+          "bytes": 3730705,
+          "dataLossOccurred": false
+        },
+        "captureAccepted": true,
+        "fullLifecycleAccepted": true,
+        "measurementCompleted": true,
+        "companionPlanSha256": "e97aa6b38e07187e9845d0f3313ba33baf5a4c7770b3cb532533a65ab28b52b8"
+      }
+    ],
+    "withoutTrace": [
+      {
+        "stage": "ui169-final-v14-notrace-hardware-1",
+        "mode": "hardware",
+        "accepted": true,
+        "baseline": {
+          "schema": 1,
+          "homeId": "final-v14-notrace-hardware-1",
+          "baselineManifestSha256": "a4af935d60f6133621ee7d65221862f04b02ca006187de25fb3c9d2c347464a1",
+          "catalogSha256": "e9bed6accdcf8fa83fe034ada08aaee458b725d3853d7da5940ce75e2032168e",
+          "workspaceCount": 90,
+          "verifiedFiles": 363,
+          "credentialsCopied": false,
+          "allBaselineBytesMatched": true
+        },
+        "realModelCalls": 1,
+        "actualStreamedReplyChars": 4348,
+        "sendFrames": {
+          "samples": 121,
+          "p50ms": 10,
+          "p95ms": 10.2,
+          "p99ms": 10.3,
+          "maxMs": 10.3,
+          "over33ms": 0,
+          "over20ms": 0
+        },
+        "completionFrames": {
+          "samples": 198,
+          "p50ms": 10,
+          "p95ms": 10.2,
+          "p99ms": 10.3,
+          "maxMs": 30,
+          "over33ms": 0,
+          "over20ms": 1
+        },
+        "allStreamFrames": {
+          "samples": 5626,
+          "p50ms": 10,
+          "p95ms": 10.2,
+          "p99ms": 10.3,
+          "maxMs": 30,
+          "over33ms": 0,
+          "over20ms": 1
+        },
+        "trace": {
+          "disabled": true,
+          "reason": "Explicit no-trace measurement to isolate capture overhead"
+        },
+        "fullLifecycleAccepted": true,
+        "ownedHostStop": {
+          "pid": 23136,
+          "stopped": true,
+          "userProcessesTouched": false
+        }
+      },
+      {
+        "stage": "ui169-final-v14-notrace-software-1",
+        "mode": "software",
+        "accepted": true,
+        "baseline": {
+          "schema": 1,
+          "homeId": "final-v14-notrace-software-1",
+          "baselineManifestSha256": "a4af935d60f6133621ee7d65221862f04b02ca006187de25fb3c9d2c347464a1",
+          "catalogSha256": "e9bed6accdcf8fa83fe034ada08aaee458b725d3853d7da5940ce75e2032168e",
+          "workspaceCount": 90,
+          "verifiedFiles": 363,
+          "credentialsCopied": false,
+          "allBaselineBytesMatched": true
+        },
+        "realModelCalls": 1,
+        "actualStreamedReplyChars": 4413,
+        "sendFrames": {
+          "samples": 73,
+          "p50ms": 16.7,
+          "p95ms": 16.7,
+          "p99ms": 16.7,
+          "maxMs": 16.8,
+          "over33ms": 0,
+          "over20ms": 0
+        },
+        "completionFrames": {
+          "samples": 121,
+          "p50ms": 16.7,
+          "p95ms": 16.8,
+          "p99ms": 16.8,
+          "maxMs": 16.8,
+          "over33ms": 0,
+          "over20ms": 0
+        },
+        "allStreamFrames": {
+          "samples": 3489,
+          "p50ms": 16.7,
+          "p95ms": 16.7,
+          "p99ms": 16.8,
+          "maxMs": 33.3,
+          "over33ms": 0,
+          "over20ms": 1
+        },
+        "trace": {
+          "disabled": true,
+          "reason": "Explicit no-trace measurement to isolate capture overhead"
+        },
+        "fullLifecycleAccepted": true,
+        "ownedHostStop": {
+          "pid": 59560,
+          "stopped": true,
+          "userProcessesTouched": false
+        }
+      }
+    ],
+    "failedAndDiagnosticMeasurementsRetained": true,
+    "guarantees": "Measured 60Hz time budget on the recorded hardware/software paths, not a guarantee of every frame <=16.7ms on all machines."
+  },
+  "sdkCompanion": {
+    "id": "urania-ui169-dsh-0.2.2-rc.1-v14",
+    "planSha256": "e97aa6b38e07187e9845d0f3313ba33baf5a4c7770b3cb532533a65ab28b52b8",
+    "files": 7,
+    "requiredForMeasuredResult": true,
+    "instructions": "docs/ui169/DSH_COMPANION.md",
+    "unknownVersionsRejected": true
+  },
+  "native": {
+    "sourceInputs": "docs/ui169/NATIVE_BUILD_INPUTS.json",
+    "realSourceReplays": [
+      {
+        "passed": true,
+        "scope": "Actually applied cumulative public source patch to the official pinned archive; all patched native inputs match the built candidate byte for byte. Fonts remain separately hash-pinned.",
+        "verifiedFiles": 56,
+        "patchSha256": "3ba9d5c802c41ba1c4195cf1c8b4584b819422d03b622b4c7dd522cd04de4ed5"
+      },
+      {
+        "passed": true,
+        "scope": "Actually applied cumulative public source patch to the official pinned archive; all patched native inputs match the built candidate byte for byte. Fonts remain separately hash-pinned.",
+        "verifiedFiles": 33,
+        "patchSha256": "a66794ce8e40a7bfd8614c28dcfb86bc194de8dcf7907c0d73cf78db4f4a30d1"
+      },
+      {
+        "passed": true,
+        "scope": "Actually applied cumulative public source patch to the official pinned archive; all patched native inputs match the built candidate byte for byte. Fonts remain separately hash-pinned.",
+        "verifiedFiles": 141,
+        "patchSha256": "206eacb15d760590e31b7c2145b4a621d7b3ddf80c6974d54bc2b041d68a5fee"
+      }
+    ]
+  },
+  "tests": {
+    "node": {
+      "count": 456,
+      "pass": 456,
+      "fail": 0,
+      "exitCode": 0
+    },
+    "client": {
+      "pass": 19,
+      "fail": 0,
+      "exitCode": 0
+    },
+    "targeted": {
+      "nativeFastReadsAndGuardedWrites": true,
+      "nativeInputAutoObservationAndAutosave": true,
+      "quoteAndDraftSerialization": true,
+      "realHistoryAndSelection": true,
+      "installerRestoreAndUnknownSourceRefusal": true
+    },
+    "portable": {
+      "passed": 108,
+      "failed": 0
+    },
+    "source": {
+      "javascriptFiles": 224,
+      "syntax": "passed",
+      "nativeBinaries": 4,
+      "runtimeHashes": "passed",
+      "resourceFiles": 36,
+      "resourceHashes": "passed"
+    }
+  },
+  "powerpoint": {
+    "previousNativePowerPointAcceptancePassed": true,
+    "application": "Microsoft PowerPoint",
+    "slides": 6,
+    "sourceSha256": "1d246d79292cb7a32fbfb63eca348cebb863c9a5eba4deec4e453703fb8369eb",
+    "report": "docs/ui168/powerpoint/actual.json",
+    "review": "docs/ui168/powerpoint/REVIEW.md",
+    "currentPackageEqualityRequiredBeforeRelease": true
+  },
+  "historicalSnapshots": {
+    "missing": 3,
+    "report": "docs/ui168/historical-snapshots.json",
+    "blocksRelease": false
+  },
+  "visual": {
+    "media": [
+      {
+        "path": "docs/ui169/ui169-final-v14-hardware-1-conversation.png",
+        "bytes": 149187,
+        "sha256": "7022af81f5ec77618a1eddad919ff1e4167c0499e2041c6d9d54c0072fd44940"
+      },
+      {
+        "path": "docs/ui169/ui169-final-v14-software-1-conversation.png",
+        "bytes": 130636,
+        "sha256": "e7b49739cb90c37053785079837c412002124c661d12da88a13dcbbf141aa157"
+      }
+    ]
+  },
+  "userDshRestarted": false,
+  "userDesktopControlled": false
+}

@@ -28,6 +28,8 @@ OpenDesign 的 cloudflare-kumo 设计系统清单标明来源为 Cloudflare Kumo
 
 DSH 服务由运行本插件的 DeepSeek Harness 提供，没有把本机用户的配置、密钥、会话或 DSH SDK 副本加入发行包。隔离验证使用的 React/Playwright/Python 库属于测试环境，不是插件运行依赖。
 
+UI169 性能兼容补丁在 `scripts/dsh-performance-patch.json` 中包含 SDK0.2.2-rc.1 的精确原生代码上下文与修改片段，采用 MIT，Copyright (c) 2026 DeepSeek；完整原始许可保留在 `licenses/dsh-native-components-MIT.txt`。它只处理显式选择且摘要匹配的 npm SDK，不分发完整 SDK。安装、作用域、全局等价 CSS 例外、还原方式和验收设备边界见 `docs/ui169/DSH_COMPANION.md`。
+
 fal 实时通道使用 MessagePack Community 的 `@msgpack/msgpack` 3.1.3（ISC）。原始许可、固定 npm 包完整性和逐文件 SHA-256 保存在 `resources/vendor/msgpack-3.1.3/`；插件仅包含该包的 ESM 运行文件和许可，不运行安装脚本。该依赖及实时服务尚未进行功能验证。
 
 Tailwind CSS 3.4.17 的官方 MIT 许可原文与来源摘要保存在 `resources/vendor/tailwind-3.4.17/`。Play CDN 脚本不随插件分发；兼容预览仅在用户主动启用时获取固定摘要的官方脚本。生成样式的其他依赖、模板和字体许可仍需按实际来源核对。

@@ -1,4 +1,4 @@
-import {isUint64} from './native-protocol.js?v=168';
+import {isUint64} from './native-protocol.js?v=169';
 const fail=message=>{throw new Error(message);};
 export function feedbackTarget(input){
  if(!input||!['native','motion'].includes(input.kind))fail('意见目标类型无效');

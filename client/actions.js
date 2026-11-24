@@ -1,5 +1,5 @@
-import {currentDesignScope} from './design-session.js?v=168';
-import {MotionPreviewBridge} from './motion-preview.js?v=168';
+import {currentDesignScope} from './design-session.js?v=169';
+import {MotionPreviewBridge} from './motion-preview.js?v=169';
 import {selectionIdentity,matrixPoint,inverseMatrix,multiplyMatrix,alignmentOffsets,layerRect,selectionRoots,selectedIds,selectedNative,nativeNodes,nativeAtPoint,nativePoint,nodeRect,nativeCanvasRect,unionRects} from './selection.js';
 import {editVectorNode,reboxVectorLayer,vectorNodeHandles} from './vector-nodes.js';
 /**

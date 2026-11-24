@@ -1,447 +1,1062 @@
 {
-  "schemaVersion": 6,
+  "schemaVersion": 7,
   "product": "Urania",
   "packageName": "designcraft",
-  "version": "1.3.0-dev.150",
-  "uiBuild": 165,
-  "generatedAt": "2026-11-17T21:58:11.791115+00:00",
-  "auditBaseline": {
-    "publicCommit": "b1627b7b8270aebafd5ccdcf0ab042dd4545e4eb",
-    "version": "1.3.0-dev.148",
-    "uiBuild": 163
-  },
-  "status": "current_approved_core_scope_functionally_verified",
-  "scope": "The user-approved AI-native design core and the20261118 audit criteria, with optional external services/cancelled capture removed. Not every operation of every upstream engine or every provider/device combination.",
-  "allCoreFunctionsAccepted": true,
-  "functionalValidationThisContinuation": true,
-  "fullUpstreamCatalogAccepted": false,
-  "pendingMandatoryCodeItems": [],
-  "userDshRestarted": false,
-  "userDesktopControlled": false,
-  "environment": {
-    "os": "Windows x64, same physical machine; clean independent deployment directory",
-    "node": "v25.6.0",
-    "dshSdk": "0.2.2-rc.1",
-    "dshNodeRequirement": ">=24.9.0",
-    "execution": "Actual isolated DSH host with actual native Web/WASM engines in headless Chromium; no physical desktop acceptance claim"
-  },
+  "version": "1.3.1",
+  "uiBuild": 169,
+  "status": "source-and-performance-accepted-installation-and-publication-gated-separately",
+  "currentReport": "docs/ui169/VERIFICATION.json",
   "tests": {
-    "npm test": {
-      "node": {
-        "count": 452,
-        "pass": 452,
-        "fail": 0,
-        "exitCode": 0
-      },
-      "client": {
-        "pass": 19,
-        "fail": 0,
-        "exitCode": 0
-      },
-      "evidence": "docs/verification/ui165-closeout/current-node-results.json"
+    "node": {
+      "count": 456,
+      "pass": 456,
+      "fail": 0,
+      "exitCode": 0
     },
-    "npm run check": {
-      "javascriptFiles": 220,
+    "client": {
+      "pass": 19,
+      "fail": 0,
+      "exitCode": 0
+    },
+    "targeted": {
+      "nativeFastReadsAndGuardedWrites": true,
+      "nativeInputAutoObservationAndAutosave": true,
+      "quoteAndDraftSerialization": true,
+      "realHistoryAndSelection": true,
+      "installerRestoreAndUnknownSourceRefusal": true
+    },
+    "portable": {
+      "passed": 108,
+      "failed": 0
+    },
+    "source": {
+      "javascriptFiles": 224,
+      "syntax": "passed",
       "nativeBinaries": 4,
+      "runtimeHashes": "passed",
       "resourceFiles": 36,
-      "passed": true
+      "resourceHashes": "passed"
+    }
+  },
+  "performance": {
+    "accepted": true,
+    "consecutiveHardware": 3,
+    "consecutiveStrictSoftware": 3,
+    "workspaceCount": 90,
+    "baselineManifestSha256": "a4af935d60f6133621ee7d65221862f04b02ca006187de25fb3c9d2c347464a1",
+    "criterion": {
+      "phaseP95msMax": 17.5,
+      "phaseP99msMax": 20,
+      "fullOver33_5msRatioMax": 0.001,
+      "sendOver33_5msMax": 0,
+      "completionOver33_5msMax": 0,
+      "sendWindowMs": 1200,
+      "completionWindowMs": [
+        -500,
+        1500
+      ],
+      "phaseBoundaryCrossingFramesIncluded": true,
+      "minimumRealReplyCharacters": 2200
     },
-    "targetedActual": [
+    "runs": [
       {
-        "file": "docs/verification/ui165-closeout/C02-actual-runtime.json",
-        "rawLocalSha256": "385645cfd86660ddfb298dfea81ab3de551d4f0e10e528b727f4f81c30e03909",
-        "publicSummarySha256": "c44282645497e81ca3064b7baa3c365724fc0a4b85c0df6773b6ac7805b02b87",
-        "anonymized": true,
-        "prePublicationSummarySha256": "23520e9967e9867a7e051be05a0140fa2bfafc8c439c9bdc04b0741a9dceec7b",
-        "publicationCopyChangedFromRaw": true,
-        "publicationEncoding": "UTF-8/LF"
+        "stage": "ui169-final-v14-hardware-1",
+        "model": {
+          "provider": "zai-coding-cn",
+          "model": "glm-5.3-flash"
+        },
+        "realModelCalls": 1,
+        "actualStreamedReplyChars": 4703,
+        "sendFrames": {
+          "samples": 121,
+          "p50ms": 10,
+          "p95ms": 10.2,
+          "p99ms": 10.2,
+          "maxMs": 10.3,
+          "over33ms": 0,
+          "over20ms": 0
+        },
+        "completionFrames": {
+          "samples": 199,
+          "p50ms": 10,
+          "p95ms": 10.2,
+          "p99ms": 10.3,
+          "maxMs": 30,
+          "over33ms": 0,
+          "over20ms": 1
+        },
+        "streamActiveFrames": {
+          "samples": 5950,
+          "p50ms": 10,
+          "p95ms": 10.2,
+          "p99ms": 10.2,
+          "maxMs": 10.4,
+          "over33ms": 0,
+          "over20ms": 0
+        },
+        "replyWindowFrames": {
+          "samples": 5954,
+          "p50ms": 10,
+          "p95ms": 10.2,
+          "p99ms": 10.2,
+          "maxMs": 10.4,
+          "over33ms": 0,
+          "over20ms": 0
+        },
+        "allStreamFrames": {
+          "samples": 6362,
+          "p50ms": 10,
+          "p95ms": 10.2,
+          "p99ms": 10.2,
+          "maxMs": 30,
+          "over33ms": 0,
+          "over20ms": 1
+        },
+        "durationSeconds": 62.5,
+        "browserEnvironment": {
+          "channel": "chrome",
+          "forcedSoftwareGpu": false,
+          "version": "157.0.8103.80",
+          "devices": [
+            {
+              "vendorId": 4098,
+              "deviceId": 30096,
+              "subSysId": 2248154835,
+              "revision": 192,
+              "vendorString": "",
+              "deviceString": "AMD Radeon RX 9060 XT",
+              "driverVendor": "AMD",
+              "driverVersion": "32.0.31044.16"
+            },
+            {
+              "vendorId": 4098,
+              "deviceId": 5056,
+              "subSysId": 331354114,
+              "revision": 197,
+              "vendorString": "",
+              "deviceString": "AMD Radeon(TM) Graphics",
+              "driverVendor": "",
+              "driverVersion": "32.0.21045.1000"
+            },
+            {
+              "vendorId": 4098,
+              "deviceId": 30096,
+              "subSysId": 2248154835,
+              "revision": 192,
+              "vendorString": "",
+              "deviceString": "AMD Radeon RX 9060 XT",
+              "driverVendor": "",
+              "driverVersion": "32.0.31044.16"
+            },
+            {
+              "vendorId": 5140,
+              "deviceId": 140,
+              "subSysId": 0,
+              "revision": 0,
+              "vendorString": "",
+              "deviceString": "Microsoft Basic Render Driver",
+              "driverVendor": "",
+              "driverVersion": "10.0.26100.9818"
+            }
+          ],
+          "featureStatus": {
+            "2d_canvas": "enabled",
+            "direct_rendering_display_compositor": "disabled_off_ok",
+            "gpu_compositing": "enabled",
+            "multiple_raster_threads": "enabled_on",
+            "opengl": "enabled_on",
+            "rasterization": "enabled",
+            "skia_graphite": "disabled_off",
+            "trees_in_viz": "disabled_off",
+            "video_decode": "enabled",
+            "video_encode": "enabled",
+            "webgl": "enabled",
+            "webgpu": "enabled",
+            "webnn": "disabled_off"
+          },
+          "aux": {
+            "glRenderer": "ANGLE (AMD, AMD Radeon RX 9060 XT (0x00007590) Direct3D11 vs_5_0 ps_5_0, D3D11-32.0.31044.16)",
+            "glVendor": "Google Inc. (AMD)",
+            "glVersion": "OpenGL ES 3.0 (ANGLE 2.1.29101 git hash: c56e2a4a9b8c)",
+            "passthroughCmdDecoder": true,
+            "sandboxed": false
+          }
+        },
+        "renderingContract": {
+          "nativePerformance": null,
+          "frontendV2Loaded": false,
+          "inputTabIndex": 0,
+          "slotErrors": [],
+          "bodyBoundary": true,
+          "renderer": "hardware",
+          "scrollerContainment": "strict",
+          "frontendRevision": "ui169-v14",
+          "quietReferencePreparation": true
+        },
+        "longAnimationFrames": [],
+        "renderMetrics": {
+          "LayoutCount": 7689,
+          "RecalcStyleCount": 6600,
+          "LayoutDuration": 2.9622,
+          "RecalcStyleDuration": 0.6415,
+          "ScriptDuration": 3.0145,
+          "TaskDuration": 12.609
+        },
+        "tailPositionAfterMeasurement": {
+          "top": 6336,
+          "floor": 6336,
+          "following": true
+        },
+        "sourceUnchangedDuringMeasurement": true,
+        "companionUnchangedDuringMeasurement": true,
+        "trace": {
+          "bytes": 5512467,
+          "dataLossOccurred": false
+        },
+        "captureAccepted": true,
+        "fullLifecycleAccepted": true,
+        "measurementCompleted": true,
+        "companionPlanSha256": "e97aa6b38e07187e9845d0f3313ba33baf5a4c7770b3cb532533a65ab28b52b8"
       },
       {
-        "file": "docs/verification/ui165-closeout/C03-actual-supervisor.json",
-        "rawLocalSha256": "32f2c1647ba4afd965ea905aabf992e53262ab555e0e5851da4b72be08335d07",
-        "publicSummarySha256": "29bec9711fc05594267afea4dec5547fe78df912512ee6f6ea9833c269134da6",
-        "anonymized": true,
-        "prePublicationSummarySha256": "8a4e744e11df5c2a56b06b9f98511fc2c33510a03ed5ad9ceef7de9de21c9c0c",
-        "publicationCopyChangedFromRaw": true,
-        "publicationEncoding": "UTF-8/LF"
+        "stage": "ui169-final-v14-hardware-2",
+        "model": {
+          "provider": "zai-coding-cn",
+          "model": "glm-5.3-flash"
+        },
+        "realModelCalls": 1,
+        "actualStreamedReplyChars": 4170,
+        "sendFrames": {
+          "samples": 120,
+          "p50ms": 10,
+          "p95ms": 10.2,
+          "p99ms": 10.2,
+          "maxMs": 20,
+          "over33ms": 0,
+          "over20ms": 0
+        },
+        "completionFrames": {
+          "samples": 199,
+          "p50ms": 10,
+          "p95ms": 10.2,
+          "p99ms": 10.3,
+          "maxMs": 30,
+          "over33ms": 0,
+          "over20ms": 1
+        },
+        "streamActiveFrames": {
+          "samples": 5025,
+          "p50ms": 10,
+          "p95ms": 10.2,
+          "p99ms": 10.2,
+          "maxMs": 10.4,
+          "over33ms": 0,
+          "over20ms": 0
+        },
+        "replyWindowFrames": {
+          "samples": 5092,
+          "p50ms": 10,
+          "p95ms": 10.2,
+          "p99ms": 10.2,
+          "maxMs": 10.4,
+          "over33ms": 0,
+          "over20ms": 0
+        },
+        "allStreamFrames": {
+          "samples": 5462,
+          "p50ms": 10,
+          "p95ms": 10.2,
+          "p99ms": 10.2,
+          "maxMs": 30,
+          "over33ms": 0,
+          "over20ms": 1
+        },
+        "durationSeconds": 53.56,
+        "browserEnvironment": {
+          "channel": "chrome",
+          "forcedSoftwareGpu": false,
+          "version": "157.0.8103.80",
+          "devices": [
+            {
+              "vendorId": 4098,
+              "deviceId": 30096,
+              "subSysId": 2248154835,
+              "revision": 192,
+              "vendorString": "",
+              "deviceString": "AMD Radeon RX 9060 XT",
+              "driverVendor": "AMD",
+              "driverVersion": "32.0.31044.16"
+            },
+            {
+              "vendorId": 4098,
+              "deviceId": 5056,
+              "subSysId": 331354114,
+              "revision": 197,
+              "vendorString": "",
+              "deviceString": "AMD Radeon(TM) Graphics",
+              "driverVendor": "",
+              "driverVersion": "32.0.21045.1000"
+            },
+            {
+              "vendorId": 4098,
+              "deviceId": 30096,
+              "subSysId": 2248154835,
+              "revision": 192,
+              "vendorString": "",
+              "deviceString": "AMD Radeon RX 9060 XT",
+              "driverVendor": "",
+              "driverVersion": "32.0.31044.16"
+            },
+            {
+              "vendorId": 5140,
+              "deviceId": 140,
+              "subSysId": 0,
+              "revision": 0,
+              "vendorString": "",
+              "deviceString": "Microsoft Basic Render Driver",
+              "driverVendor": "",
+              "driverVersion": "10.0.26100.9818"
+            }
+          ],
+          "featureStatus": {
+            "2d_canvas": "enabled",
+            "direct_rendering_display_compositor": "disabled_off_ok",
+            "gpu_compositing": "enabled",
+            "multiple_raster_threads": "enabled_on",
+            "opengl": "enabled_on",
+            "rasterization": "enabled",
+            "skia_graphite": "disabled_off",
+            "trees_in_viz": "disabled_off",
+            "video_decode": "enabled",
+            "video_encode": "enabled",
+            "webgl": "enabled",
+            "webgpu": "enabled",
+            "webnn": "disabled_off"
+          },
+          "aux": {
+            "glRenderer": "ANGLE (AMD, AMD Radeon RX 9060 XT (0x00007590) Direct3D11 vs_5_0 ps_5_0, D3D11-32.0.31044.16)",
+            "glVendor": "Google Inc. (AMD)",
+            "glVersion": "OpenGL ES 3.0 (ANGLE 2.1.29101 git hash: c56e2a4a9b8c)",
+            "passthroughCmdDecoder": true,
+            "sandboxed": false
+          }
+        },
+        "renderingContract": {
+          "nativePerformance": null,
+          "frontendV2Loaded": false,
+          "inputTabIndex": 0,
+          "slotErrors": [],
+          "bodyBoundary": true,
+          "renderer": "hardware",
+          "scrollerContainment": "strict",
+          "frontendRevision": "ui169-v14",
+          "quietReferencePreparation": true
+        },
+        "longAnimationFrames": [],
+        "renderMetrics": {
+          "LayoutCount": 6524,
+          "RecalcStyleCount": 5677,
+          "LayoutDuration": 2.5626,
+          "RecalcStyleDuration": 0.5498,
+          "ScriptDuration": 2.5907,
+          "TaskDuration": 11.0421
+        },
+        "tailPositionAfterMeasurement": {
+          "top": 5651,
+          "floor": 5651,
+          "following": true
+        },
+        "sourceUnchangedDuringMeasurement": true,
+        "companionUnchangedDuringMeasurement": true,
+        "trace": {
+          "bytes": 4700698,
+          "dataLossOccurred": false
+        },
+        "captureAccepted": true,
+        "fullLifecycleAccepted": true,
+        "measurementCompleted": true,
+        "companionPlanSha256": "e97aa6b38e07187e9845d0f3313ba33baf5a4c7770b3cb532533a65ab28b52b8"
       },
       {
-        "file": "docs/verification/ui165-closeout/C03-doctor.json",
-        "rawLocalSha256": "1979a2c83be3c557de2d542a06fb6f7f680445490be17428aad2eace8c124eb2",
-        "publicSummarySha256": "1979a2c83be3c557de2d542a06fb6f7f680445490be17428aad2eace8c124eb2",
-        "anonymized": true,
-        "prePublicationSummarySha256": "6aa76e30b93bfc2135b6577dcdac9abdddfc562334abfb8bc3bea1b3fb288741",
-        "publicationCopyChangedFromRaw": false,
-        "publicationEncoding": "UTF-8/LF"
+        "stage": "ui169-final-v14-hardware-3",
+        "model": {
+          "provider": "zai-coding-cn",
+          "model": "glm-5.3-flash"
+        },
+        "realModelCalls": 1,
+        "actualStreamedReplyChars": 4234,
+        "sendFrames": {
+          "samples": 119,
+          "p50ms": 10,
+          "p95ms": 10.2,
+          "p99ms": 10.2,
+          "maxMs": 30.1,
+          "over33ms": 0,
+          "over20ms": 1
+        },
+        "completionFrames": {
+          "samples": 200,
+          "p50ms": 10,
+          "p95ms": 10.1,
+          "p99ms": 10.2,
+          "maxMs": 20,
+          "over33ms": 0,
+          "over20ms": 0
+        },
+        "streamActiveFrames": {
+          "samples": 5060,
+          "p50ms": 10,
+          "p95ms": 10.2,
+          "p99ms": 10.3,
+          "maxMs": 10.5,
+          "over33ms": 0,
+          "over20ms": 0
+        },
+        "replyWindowFrames": {
+          "samples": 5088,
+          "p50ms": 10,
+          "p95ms": 10.2,
+          "p99ms": 10.3,
+          "maxMs": 10.5,
+          "over33ms": 0,
+          "over20ms": 0
+        },
+        "allStreamFrames": {
+          "samples": 5482,
+          "p50ms": 10,
+          "p95ms": 10.2,
+          "p99ms": 10.3,
+          "maxMs": 30.1,
+          "over33ms": 0,
+          "over20ms": 1
+        },
+        "durationSeconds": 53.59,
+        "browserEnvironment": {
+          "channel": "chrome",
+          "forcedSoftwareGpu": false,
+          "version": "157.0.8103.80",
+          "devices": [
+            {
+              "vendorId": 4098,
+              "deviceId": 30096,
+              "subSysId": 2248154835,
+              "revision": 192,
+              "vendorString": "",
+              "deviceString": "AMD Radeon RX 9060 XT",
+              "driverVendor": "AMD",
+              "driverVersion": "32.0.31044.16"
+            },
+            {
+              "vendorId": 4098,
+              "deviceId": 5056,
+              "subSysId": 331354114,
+              "revision": 197,
+              "vendorString": "",
+              "deviceString": "AMD Radeon(TM) Graphics",
+              "driverVendor": "",
+              "driverVersion": "32.0.21045.1000"
+            },
+            {
+              "vendorId": 4098,
+              "deviceId": 30096,
+              "subSysId": 2248154835,
+              "revision": 192,
+              "vendorString": "",
+              "deviceString": "AMD Radeon RX 9060 XT",
+              "driverVendor": "",
+              "driverVersion": "32.0.31044.16"
+            },
+            {
+              "vendorId": 5140,
+              "deviceId": 140,
+              "subSysId": 0,
+              "revision": 0,
+              "vendorString": "",
+              "deviceString": "Microsoft Basic Render Driver",
+              "driverVendor": "",
+              "driverVersion": "10.0.26100.9818"
+            }
+          ],
+          "featureStatus": {
+            "2d_canvas": "enabled",
+            "direct_rendering_display_compositor": "disabled_off_ok",
+            "gpu_compositing": "enabled",
+            "multiple_raster_threads": "enabled_on",
+            "opengl": "enabled_on",
+            "rasterization": "enabled",
+            "skia_graphite": "disabled_off",
+            "trees_in_viz": "disabled_off",
+            "video_decode": "enabled",
+            "video_encode": "enabled",
+            "webgl": "enabled",
+            "webgpu": "enabled",
+            "webnn": "disabled_off"
+          },
+          "aux": {
+            "glRenderer": "ANGLE (AMD, AMD Radeon RX 9060 XT (0x00007590) Direct3D11 vs_5_0 ps_5_0, D3D11-32.0.31044.16)",
+            "glVendor": "Google Inc. (AMD)",
+            "glVersion": "OpenGL ES 3.0 (ANGLE 2.1.29101 git hash: c56e2a4a9b8c)",
+            "passthroughCmdDecoder": true,
+            "sandboxed": false
+          }
+        },
+        "renderingContract": {
+          "nativePerformance": null,
+          "frontendV2Loaded": false,
+          "inputTabIndex": 0,
+          "slotErrors": [],
+          "bodyBoundary": true,
+          "renderer": "hardware",
+          "scrollerContainment": "strict",
+          "frontendRevision": "ui169-v14",
+          "quietReferencePreparation": true
+        },
+        "longAnimationFrames": [],
+        "renderMetrics": {
+          "LayoutCount": 6575,
+          "RecalcStyleCount": 5721,
+          "LayoutDuration": 2.5171,
+          "RecalcStyleDuration": 0.5892,
+          "ScriptDuration": 2.5929,
+          "TaskDuration": 10.9009
+        },
+        "tailPositionAfterMeasurement": {
+          "top": 5723,
+          "floor": 5723,
+          "following": true
+        },
+        "sourceUnchangedDuringMeasurement": true,
+        "companionUnchangedDuringMeasurement": true,
+        "trace": {
+          "bytes": 4741438,
+          "dataLossOccurred": false
+        },
+        "captureAccepted": true,
+        "fullLifecycleAccepted": true,
+        "measurementCompleted": true,
+        "companionPlanSha256": "e97aa6b38e07187e9845d0f3313ba33baf5a4c7770b3cb532533a65ab28b52b8"
       },
       {
-        "file": "docs/verification/ui165-closeout/C05-actual-cancel.json",
-        "rawLocalSha256": "16f1b4750e8d9985abe16be318b94008d35776262ad0d125184aa5435c6ed804",
-        "publicSummarySha256": "7590290cde24c611c19b1e1d0858b35928382e8a8724c92d2bde1f168a98025c",
-        "anonymized": true,
-        "prePublicationSummarySha256": "d5d1f2b8f1195fc16f7818e31a4a43a4e657c0c3ef24b977f4a1ec1a4a73ac84",
-        "publicationCopyChangedFromRaw": true,
-        "publicationEncoding": "UTF-8/LF"
+        "stage": "ui169-final-v14-software-1",
+        "model": {
+          "provider": "zai-coding-cn",
+          "model": "glm-5.3-flash"
+        },
+        "realModelCalls": 1,
+        "actualStreamedReplyChars": 4860,
+        "sendFrames": {
+          "samples": 73,
+          "p50ms": 16.7,
+          "p95ms": 16.8,
+          "p99ms": 16.8,
+          "maxMs": 16.8,
+          "over33ms": 0,
+          "over20ms": 0
+        },
+        "completionFrames": {
+          "samples": 120,
+          "p50ms": 16.7,
+          "p95ms": 16.8,
+          "p99ms": 16.8,
+          "maxMs": 33.4,
+          "over33ms": 0,
+          "over20ms": 1
+        },
+        "streamActiveFrames": {
+          "samples": 3710,
+          "p50ms": 16.7,
+          "p95ms": 16.7,
+          "p99ms": 16.8,
+          "maxMs": 16.8,
+          "over33ms": 0,
+          "over20ms": 0
+        },
+        "replyWindowFrames": {
+          "samples": 3737,
+          "p50ms": 16.7,
+          "p95ms": 16.7,
+          "p99ms": 16.8,
+          "maxMs": 16.8,
+          "over33ms": 0,
+          "over20ms": 0
+        },
+        "allStreamFrames": {
+          "samples": 3906,
+          "p50ms": 16.7,
+          "p95ms": 16.7,
+          "p99ms": 16.8,
+          "maxMs": 33.4,
+          "over33ms": 0,
+          "over20ms": 1
+        },
+        "durationSeconds": 63.73,
+        "browserEnvironment": {
+          "channel": "chrome",
+          "forcedSoftwareGpu": true,
+          "version": "157.0.8103.80",
+          "devices": [
+            {
+              "vendorId": 65535,
+              "deviceId": 65535,
+              "subSysId": 0,
+              "revision": 0,
+              "vendorString": "Google Inc. (Google)",
+              "deviceString": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver-5.0.0)",
+              "driverVendor": "SwANGLE",
+              "driverVersion": "5.0.0"
+            }
+          ],
+          "featureStatus": {
+            "2d_canvas": "disabled_software",
+            "direct_rendering_display_compositor": "disabled_off_ok",
+            "gpu_compositing": "disabled_software",
+            "multiple_raster_threads": "enabled_on",
+            "opengl": "disabled_off",
+            "rasterization": "disabled_software",
+            "skia_graphite": "disabled_off",
+            "trees_in_viz": "disabled_off",
+            "video_decode": "disabled_software",
+            "video_encode": "disabled_software",
+            "webgl": "unavailable_software",
+            "webgpu": "unavailable_software",
+            "webnn": "unavailable_software"
+          },
+          "aux": {
+            "glRenderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver-5.0.0)",
+            "glVendor": "Google Inc. (Google)",
+            "glVersion": "OpenGL ES 3.0 (ANGLE 2.1.29101 git hash: c56e2a4a9b8c)",
+            "passthroughCmdDecoder": true,
+            "sandboxed": false
+          }
+        },
+        "renderingContract": {
+          "nativePerformance": null,
+          "frontendV2Loaded": false,
+          "inputTabIndex": 0,
+          "slotErrors": [],
+          "bodyBoundary": true,
+          "renderer": "software",
+          "scrollerContainment": "strict",
+          "frontendRevision": "ui169-v14",
+          "quietReferencePreparation": true
+        },
+        "longAnimationFrames": [],
+        "renderMetrics": {
+          "LayoutCount": 4803,
+          "RecalcStyleCount": 4120,
+          "LayoutDuration": 1.8595,
+          "RecalcStyleDuration": 0.4188,
+          "ScriptDuration": 2.3143,
+          "TaskDuration": 8.8429
+        },
+        "tailPositionAfterMeasurement": {
+          "top": 6498,
+          "floor": 6498,
+          "following": true
+        },
+        "sourceUnchangedDuringMeasurement": true,
+        "companionUnchangedDuringMeasurement": true,
+        "trace": {
+          "bytes": 4073859,
+          "dataLossOccurred": false
+        },
+        "captureAccepted": true,
+        "fullLifecycleAccepted": true,
+        "measurementCompleted": true,
+        "companionPlanSha256": "e97aa6b38e07187e9845d0f3313ba33baf5a4c7770b3cb532533a65ab28b52b8"
       },
       {
-        "file": "docs/verification/ui165-closeout/C05-dsh-spawn-diagnosis.json",
-        "rawLocalSha256": "c6d63c913144468b2bb27b98dffc8352cb973eb62d6f21127086823308859768",
-        "publicSummarySha256": "44ee349f4c0818e5506b454dedc46dd52a44a60142b1aec61beeee5a925f9a58",
-        "anonymized": true,
-        "prePublicationSummarySha256": "20626e3fb112e3264d6b0e6533e59748e26b307c0e8cfefa702f4f8ec052d6f3",
-        "publicationCopyChangedFromRaw": true,
-        "publicationEncoding": "UTF-8/LF"
+        "stage": "ui169-final-v14-software-2",
+        "model": {
+          "provider": "zai-coding-cn",
+          "model": "glm-5.3-flash"
+        },
+        "realModelCalls": 1,
+        "actualStreamedReplyChars": 4980,
+        "sendFrames": {
+          "samples": 73,
+          "p50ms": 16.7,
+          "p95ms": 16.7,
+          "p99ms": 16.8,
+          "maxMs": 16.8,
+          "over33ms": 0,
+          "over20ms": 0
+        },
+        "completionFrames": {
+          "samples": 121,
+          "p50ms": 16.7,
+          "p95ms": 16.7,
+          "p99ms": 16.8,
+          "maxMs": 16.8,
+          "over33ms": 0,
+          "over20ms": 0
+        },
+        "streamActiveFrames": {
+          "samples": 3921,
+          "p50ms": 16.7,
+          "p95ms": 16.7,
+          "p99ms": 16.8,
+          "maxMs": 16.8,
+          "over33ms": 0,
+          "over20ms": 0
+        },
+        "replyWindowFrames": {
+          "samples": 3945,
+          "p50ms": 16.7,
+          "p95ms": 16.7,
+          "p99ms": 16.8,
+          "maxMs": 16.8,
+          "over33ms": 0,
+          "over20ms": 0
+        },
+        "allStreamFrames": {
+          "samples": 4183,
+          "p50ms": 16.7,
+          "p95ms": 16.7,
+          "p99ms": 16.8,
+          "maxMs": 16.8,
+          "over33ms": 0,
+          "over20ms": 0
+        },
+        "durationSeconds": 68.32,
+        "browserEnvironment": {
+          "channel": "chrome",
+          "forcedSoftwareGpu": true,
+          "version": "157.0.8103.80",
+          "devices": [
+            {
+              "vendorId": 65535,
+              "deviceId": 65535,
+              "subSysId": 0,
+              "revision": 0,
+              "vendorString": "Google Inc. (Google)",
+              "deviceString": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver-5.0.0)",
+              "driverVendor": "SwANGLE",
+              "driverVersion": "5.0.0"
+            }
+          ],
+          "featureStatus": {
+            "2d_canvas": "disabled_software",
+            "direct_rendering_display_compositor": "disabled_off_ok",
+            "gpu_compositing": "disabled_software",
+            "multiple_raster_threads": "enabled_on",
+            "opengl": "disabled_off",
+            "rasterization": "disabled_software",
+            "skia_graphite": "disabled_off",
+            "trees_in_viz": "disabled_off",
+            "video_decode": "disabled_software",
+            "video_encode": "disabled_software",
+            "webgl": "unavailable_software",
+            "webgpu": "unavailable_software",
+            "webnn": "unavailable_software"
+          },
+          "aux": {
+            "glRenderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver-5.0.0)",
+            "glVendor": "Google Inc. (Google)",
+            "glVersion": "OpenGL ES 3.0 (ANGLE 2.1.29101 git hash: c56e2a4a9b8c)",
+            "passthroughCmdDecoder": true,
+            "sandboxed": false
+          }
+        },
+        "renderingContract": {
+          "nativePerformance": null,
+          "frontendV2Loaded": false,
+          "inputTabIndex": 0,
+          "slotErrors": [],
+          "bodyBoundary": true,
+          "renderer": "software",
+          "scrollerContainment": "strict",
+          "frontendRevision": "ui169-v14",
+          "quietReferencePreparation": true
+        },
+        "longAnimationFrames": [],
+        "renderMetrics": {
+          "LayoutCount": 5132,
+          "RecalcStyleCount": 4379,
+          "LayoutDuration": 2.0861,
+          "RecalcStyleDuration": 0.452,
+          "ScriptDuration": 2.5305,
+          "TaskDuration": 9.8206
+        },
+        "tailPositionAfterMeasurement": {
+          "top": 6694,
+          "floor": 6694,
+          "following": true
+        },
+        "sourceUnchangedDuringMeasurement": true,
+        "companionUnchangedDuringMeasurement": true,
+        "trace": {
+          "bytes": 4290133,
+          "dataLossOccurred": false
+        },
+        "captureAccepted": true,
+        "fullLifecycleAccepted": true,
+        "measurementCompleted": true,
+        "companionPlanSha256": "e97aa6b38e07187e9845d0f3313ba33baf5a4c7770b3cb532533a65ab28b52b8"
       },
       {
-        "file": "docs/verification/ui165-closeout/C05-export-ui.json",
-        "rawLocalSha256": "2d47223b1324e38db18b29f05856ab0bbdb5aaf22cad575592c8a3fe101d05f5",
-        "publicSummarySha256": "8a28c049cade386fda4b13302f44bc5e86a293aa7840d3916ba90f4ba7163555",
-        "anonymized": true,
-        "prePublicationSummarySha256": "59f4fb5526b747b60c752d0bccd687ac40e19c74cd6c6be4335f8d6a1cfda1d3",
-        "publicationCopyChangedFromRaw": true,
-        "publicationEncoding": "UTF-8/LF"
-      },
-      {
-        "file": "docs/verification/ui165-closeout/C05-long-cwd-reproduction.json",
-        "rawLocalSha256": "8541b0e1ec8b29b1c491a7ee7d1a1d3ada62e39ffdf947e5df2e22beed8b3e0c",
-        "publicSummarySha256": "b02dd52412ed4f81e79279be76f0df0c33c69520a220e538ff7f1fa1ffab83b5",
-        "anonymized": true,
-        "prePublicationSummarySha256": "2dc4cac8357258db1ce49ed22ed7266c0e9c239060b286fb7b68388c4e6409f3",
-        "publicationCopyChangedFromRaw": true,
-        "publicationEncoding": "UTF-8/LF"
-      },
-      {
-        "file": "docs/verification/ui165-closeout/C05-process-tree-audit.json",
-        "rawLocalSha256": "925bd7199c2b2eeb9065142f1159e71da0e754566d97ff639258d4374c495564",
-        "publicSummarySha256": "1f47fe1c225f6fa8d84cf67f746964ee720e63db58185ee5323c71d5816a298e",
-        "anonymized": false,
-        "prePublicationSummarySha256": "925bd7199c2b2eeb9065142f1159e71da0e754566d97ff639258d4374c495564",
-        "publicationCopyChangedFromRaw": true,
-        "publicationEncoding": "UTF-8/LF"
-      },
-      {
-        "file": "docs/verification/ui165-closeout/C06-browser-crash.json",
-        "rawLocalSha256": "af9ba9620fad04e00436e54910e59476d14d7fd108b92a6b0df99c3dd8393ce8",
-        "publicSummarySha256": "b0ed4f4a8285a788ad9a694575289080c9a87b8efd259205509d0151d739d2c6",
-        "anonymized": true,
-        "prePublicationSummarySha256": "dcc06e4552814ccde7149e558b8ff578012a0b27f7862e2b98607d55ca14b81f",
-        "publicationCopyChangedFromRaw": true,
-        "publicationEncoding": "UTF-8/LF"
-      },
-      {
-        "file": "docs/verification/ui165-closeout/C06-low-memory.json",
-        "rawLocalSha256": "1bb0379e737e7e6ac2476a65497ec6d5cf2c89d84db4d69136cd02b60f97d8a4",
-        "publicSummarySha256": "ede6ef16964384beaefaf3cf795f94de52964e41b52ed7f8d6dae92ab2233e3e",
-        "anonymized": true,
-        "prePublicationSummarySha256": "0470fc543acf73edf4a5c80ef38d5379f2bf9bc051e81b470bf4506c584298bb",
-        "publicationCopyChangedFromRaw": true,
-        "publicationEncoding": "UTF-8/LF"
-      },
-      {
-        "file": "docs/verification/ui165-closeout/C06-real-verifier.json",
-        "rawLocalSha256": "7a1183319c75e5f8bd2440a940d78b94987b5b610910c341116b1b739f67487b",
-        "publicSummarySha256": "f3b8600db7b5abc5cc4eefeaefa9ac6fec5411e3091939cbe3cb55c8d138772e",
-        "anonymized": true,
-        "prePublicationSummarySha256": "fc5b5fb91895e83e502153d9110c6526bcb1dd977eb13a23f217470187e7c93f",
-        "publicationCopyChangedFromRaw": true,
-        "publicationEncoding": "UTF-8/LF"
-      },
-      {
-        "file": "docs/verification/ui165-closeout/C07-current-source-delta.json",
-        "rawLocalSha256": "ee739f0a07c0f8302521a72c2a37ab4a9d0380b5253aa4191860321149df8cef",
-        "publicSummarySha256": "ef1bdba3b186edeea06879c5ff7232d7d00b91e8e35ff3a9633cfde84a5d8f93",
-        "anonymized": true,
-        "prePublicationSummarySha256": "f95e7ef6f5b7618471bba69680ea6eb6fec682836eb60a76e18a6351caf441f8",
-        "publicationCopyChangedFromRaw": true,
-        "publicationEncoding": "UTF-8/LF"
-      },
-      {
-        "file": "docs/verification/ui165-closeout/C09-primary-native-field-audit.json",
-        "rawLocalSha256": "db3cbea8b4c3b66553bb66d66560b035a1eb8b0c2cc5313ae8fce7ae9e749596",
-        "publicSummarySha256": "32034566c1f49d95f96883cf5b9c7594d0f30945e18b038643741f02939fdc6a",
-        "anonymized": true,
-        "prePublicationSummarySha256": "4b8c8e6f922931a0d468baa9d43614a037bbe4b0d3d509aae56d6d896bfb6152",
-        "publicationCopyChangedFromRaw": true,
-        "publicationEncoding": "UTF-8/LF"
-      },
-      {
-        "file": "docs/verification/ui165-closeout/C10-corrected-actual-store-head-audit.json",
-        "rawLocalSha256": "f93b8c47604eed19a84d39460c366f3bf64da7b5e9b843304183ee1b0f544163",
-        "publicSummarySha256": "4ece99c8eb5a29d1759f5b2bb13729860ecc5f5bafb09a8eddb7b9fb25d3f5d5",
-        "anonymized": true,
-        "prePublicationSummarySha256": "715de2b9260948c4de73e856dfa4691f97d52687358236816e1f0b253072ed0c",
-        "publicationCopyChangedFromRaw": true,
-        "publicationEncoding": "UTF-8/LF"
-      },
-      {
-        "file": "docs/verification/ui165-closeout/C10-deck-host19-build.json",
-        "rawLocalSha256": "54af0fedeaa36c40eae24acb689acff473e800ba5416badd5bad47559076a383",
-        "publicSummarySha256": "9d30f699928a23d72389b35a09b9f7da4a36410c95a8aa78b211820708272108",
-        "anonymized": true,
-        "prePublicationSummarySha256": "eb9b39b4bbc51ad85cd812f8344221eba1dd397d40c7504b87d3b070b8d5cdf7",
-        "publicationCopyChangedFromRaw": true,
-        "publicationEncoding": "UTF-8/LF"
-      },
-      {
-        "file": "docs/verification/ui165-closeout/C10-feedback-recovery-attempt3.json",
-        "rawLocalSha256": "f403cd0df66d62d7f3db54c638ab11e2d27a3e09a68b5f8654dbc64965a86cea",
-        "publicSummarySha256": "23e4ae0bca2d293599739f0e6d792e7f5daa692fa6f1080d90aff86951df91d3",
-        "anonymized": true,
-        "prePublicationSummarySha256": "62eccadb2de5c866cfb84ab253b62b70daf59b163752d6bd01ce6e7dba2454c9",
-        "publicationCopyChangedFromRaw": true,
-        "publicationEncoding": "UTF-8/LF"
-      },
-      {
-        "file": "docs/verification/ui165-closeout/C10-native-style-actual.json",
-        "rawLocalSha256": "51567d7873e8cad718afcf70f3e8399e97ef0dbe5d375f8999dbaf62e5ebda13",
-        "publicSummarySha256": "e695464d080078b7a90a81bba496899316ccd4c676e1f4af47e5a3d345a9f923",
-        "anonymized": true,
-        "prePublicationSummarySha256": "f619ee16084760b4e70da66c9c534dd8b51f3d903b7015c3e0cfba7aa74bbad4",
-        "publicationCopyChangedFromRaw": true,
-        "publicationEncoding": "UTF-8/LF"
-      },
-      {
-        "file": "docs/verification/ui165-closeout/C12-four-engine-flow-attempt5.json",
-        "rawLocalSha256": "cbbaf7c72a5792866ce076d43ec69323bed5a77d019cb2c256635f55592c6da6",
-        "publicSummarySha256": "7acaa2450c342c28f7a28bc3b3c4d71f41640d88172c95e653cf85e05de81c19",
-        "anonymized": true,
-        "prePublicationSummarySha256": "19dd7f036f541a279410e6110a82affb86878cc5e4e9bc80bfc847932e57c83f",
-        "publicationCopyChangedFromRaw": true,
-        "publicationEncoding": "UTF-8/LF"
-      },
-      {
-        "file": "docs/verification/ui165-closeout/C14-current-deployment.json",
-        "rawLocalSha256": "a8486036bdd0ad1582d360388c2a84eaffd0cb9f8cd25ac523456a08df9a606c",
-        "publicSummarySha256": "b22beacaf6a0ab7a8d6d4775994e17d31ec7e08fea1fe76c3c371e44b5be2ef5",
-        "anonymized": true,
-        "prePublicationSummarySha256": "77be7856a9060c29dbdd13f641f786a0858d93de80a4b0cf56b703a519de7499",
-        "publicationCopyChangedFromRaw": true,
-        "publicationEncoding": "UTF-8/LF"
-      },
-      {
-        "file": "docs/verification/ui165-closeout/C14-current-runtime-archive.json",
-        "rawLocalSha256": "b6f9f52df71f74a255a66b44066ba883b819bcc124d28d3b656cf09c946185fb",
-        "publicSummarySha256": "1eaee3db52e5d4e511b5b1f5d85ec00090852898b874dbb67818e0e038cbf5dc",
-        "anonymized": true,
-        "prePublicationSummarySha256": "d773ff5e94ca315c9ef7914409033cba478809a76f46b71288d8fbf92405e660",
-        "publicationCopyChangedFromRaw": true,
-        "publicationEncoding": "UTF-8/LF"
-      },
-      {
-        "file": "docs/verification/ui165-closeout/C14-restore-security.json",
-        "rawLocalSha256": "e83539785f359b47571b759eb333006cd8cbde589c60d3a25bdbd0e4cdd51e83",
-        "publicSummarySha256": "7b51a3c054e09dd41c782aa04d2cd9df212dade5bbc6b47a5d9207a5a545ce36",
-        "anonymized": true,
-        "prePublicationSummarySha256": "7975cd5d556e3daf1737fa562ca22779179bcffe75a3f3d1b4a0950b6708089d",
-        "publicationCopyChangedFromRaw": true,
-        "publicationEncoding": "UTF-8/LF"
-      },
-      {
-        "file": "docs/verification/ui165-closeout/C16-independent-rebuild-final.json",
-        "rawLocalSha256": "6687014b08f5833a67069067043d8b08baf2c7742e2d5f4dd4fef4caaa5a9d22",
-        "publicSummarySha256": "50383b2ce1edb7fc3dcfbe2a746d87b84205c5f77fd2e5b783918c7cba705518",
-        "anonymized": true,
-        "prePublicationSummarySha256": "576bf78f9594838e8f4ccae2d42e9682e34548344a5d622131c2e8c3ba90f6b2",
-        "publicationCopyChangedFromRaw": true,
-        "publicationEncoding": "UTF-8/LF"
-      },
-      {
-        "file": "docs/verification/ui165-closeout/C16-real-codec.json",
-        "rawLocalSha256": "3df84431293d9190c70e3b7a351dd139b4f3845d70d48a68b8238ddd0e2e8270",
-        "publicSummarySha256": "efeefb512b80d325bc90283716d6bfdb15d1fb98fb2009ea807ef18b96ccee8c",
-        "anonymized": true,
-        "prePublicationSummarySha256": "1a43b051c069ee1669bcbd49085f4b7b48328ed81ce0337aa5447c71a70e1331",
-        "publicationCopyChangedFromRaw": true,
-        "publicationEncoding": "UTF-8/LF"
-      },
-      {
-        "file": "docs/verification/ui165-closeout/C16-real-converter-browser.json",
-        "rawLocalSha256": "ce19608c0039d5c42bd359bda913e3c932edec41fba2013c1a184cd465cc6427",
-        "publicSummarySha256": "bb9e2491fa3a7f17cc35a9343f5ee66f534810975ed8353d00e1db4f31ca737c",
-        "anonymized": true,
-        "prePublicationSummarySha256": "80b9dbec541804be95a8eec87dd57c921e6e6d8954e7f84b50d107113eecabf6",
-        "publicationCopyChangedFromRaw": true,
-        "publicationEncoding": "UTF-8/LF"
-      },
-      {
-        "file": "docs/verification/ui165-closeout/C16-real-font-semantics.json",
-        "rawLocalSha256": "4996d632e4bb84c8ddc025b66639a49a88c530768853a5774c5afda5c00139a6",
-        "publicSummarySha256": "dfb7610f1f7b6e122a81b8d3101fefb05d61339dc74aa2e2c3a65aaec034251a",
-        "anonymized": true,
-        "prePublicationSummarySha256": "79f495c39fbe81217585a53ac95bee9c9f9f9210100c938cf2bea1b6236ca636",
-        "publicationCopyChangedFromRaw": true,
-        "publicationEncoding": "UTF-8/LF"
-      },
-      {
-        "file": "docs/verification/ui165-closeout/C16-six-fonts-exact.json",
-        "rawLocalSha256": "7e4a64599b9b280801f033c8a1db6eba69f7cdd82785bfd72077f4c9c592ddb2",
-        "publicSummarySha256": "34c2f2d56048add9317ba68e31f34ead964f01504906335b94a70f47e9f4e79f",
-        "anonymized": true,
-        "prePublicationSummarySha256": "5a436fdf0129d452728a1567aeea32218a0c80f429a62bacbec47c7c7ddc805b",
-        "publicationCopyChangedFromRaw": true,
-        "publicationEncoding": "UTF-8/LF"
-      },
-      {
-        "file": "docs/verification/ui165-closeout/C17-historical-identity-closeout.json",
-        "rawLocalSha256": "a32b355e0c7b514396d4c674c1aae1a298e0caecaf45ffa0dd01c1d1f5518613",
-        "publicSummarySha256": "16548ff9e0c391c3707e42472ca3d65b68c1cd86e6dd29453195caa5971ae6b5",
-        "anonymized": true,
-        "prePublicationSummarySha256": "c60d23590dfe322bcff011d2b4f88c07eea8956c440e4acfded445272939cc49",
-        "publicationCopyChangedFromRaw": true,
-        "publicationEncoding": "UTF-8/LF"
-      },
-      {
-        "file": "docs/verification/ui165-closeout/C19-final-ux.json",
-        "rawLocalSha256": "a4c8eed7a12760fa7a1d07a7704ed8ebafa32d9240ed3afd38e6c5995ab52993",
-        "publicSummarySha256": "fe6141040e6d564ffb97cfdcd5f65cea58d804f17ece61bcf3c28cd8dde4516f",
-        "anonymized": true,
-        "prePublicationSummarySha256": "df30eb6c89b3d108fcd86a4c9aeb2e43a7bc9cee026dee86fb72576a295c8941",
-        "publicationCopyChangedFromRaw": true,
-        "publicationEncoding": "UTF-8/LF"
-      },
-      {
-        "file": "docs/verification/ui165-closeout/photo-tools.json",
-        "rawLocalSha256": "8a91968ccee43a483f73a60e83e549a8f590922838b293be91ce463845a66ae7",
-        "publicSummarySha256": "2b59884ae39ccdedc099fd61648b9f4c998967971e7f0cada6ef2d8c7a63971b",
-        "anonymized": true,
-        "prePublicationSummarySha256": "f8f0b34547c2e54f19180ca5493682f554e382d4ff7778e4aae16d0f4951fa9a",
-        "publicationCopyChangedFromRaw": true,
-        "publicationEncoding": "UTF-8/LF"
-      },
-      {
-        "file": "docs/verification/ui165-closeout/svg-deck-browser.json",
-        "rawLocalSha256": "fd568054f6c777aef72e2be3347a57ce427f402c4b9eb7833976792fe342f440",
-        "publicSummarySha256": "ff7599430da34d388d00389dd850e0d14e7d5e9f5a440907e7e229f00091875b",
-        "anonymized": true,
-        "prePublicationSummarySha256": "607f9b4eb1ffce890491d70f7202e7ff13d2b592f6570989162d0772d0335a47",
-        "publicationCopyChangedFromRaw": true,
-        "publicationEncoding": "UTF-8/LF"
-      },
-      {
-        "file": "docs/verification/ui165-closeout/svg-vector-browser.json",
-        "rawLocalSha256": "1dc3af164e63d2143baaf1974da3045e116c3afd637c38b5ec256a5ad279d2b6",
-        "publicSummarySha256": "01a4d473f4a0bd9758e884c1130f190ff4180279df142d5f3c24d9b1cf52b722",
-        "anonymized": true,
-        "prePublicationSummarySha256": "d54d07841ad2934cc0d1b78b5b3d32421db92324f758f052c5f058f6f2ccba0f",
-        "publicationCopyChangedFromRaw": true,
-        "publicationEncoding": "UTF-8/LF"
+        "stage": "ui169-final-v14-software-3",
+        "model": {
+          "provider": "zai-coding-cn",
+          "model": "glm-5.3-flash"
+        },
+        "realModelCalls": 1,
+        "actualStreamedReplyChars": 4262,
+        "sendFrames": {
+          "samples": 73,
+          "p50ms": 16.7,
+          "p95ms": 16.7,
+          "p99ms": 16.8,
+          "maxMs": 16.8,
+          "over33ms": 0,
+          "over20ms": 0
+        },
+        "completionFrames": {
+          "samples": 121,
+          "p50ms": 16.7,
+          "p95ms": 16.7,
+          "p99ms": 16.8,
+          "maxMs": 16.8,
+          "over33ms": 0,
+          "over20ms": 0
+        },
+        "streamActiveFrames": {
+          "samples": 2853,
+          "p50ms": 16.7,
+          "p95ms": 16.7,
+          "p99ms": 16.8,
+          "maxMs": 50,
+          "over33ms": 1,
+          "over20ms": 1
+        },
+        "replyWindowFrames": {
+          "samples": 3390,
+          "p50ms": 16.7,
+          "p95ms": 16.7,
+          "p99ms": 16.8,
+          "maxMs": 50,
+          "over33ms": 1,
+          "over20ms": 1
+        },
+        "allStreamFrames": {
+          "samples": 3565,
+          "p50ms": 16.7,
+          "p95ms": 16.7,
+          "p99ms": 16.8,
+          "maxMs": 50,
+          "over33ms": 1,
+          "over20ms": 1
+        },
+        "durationSeconds": 58.06,
+        "browserEnvironment": {
+          "channel": "chrome",
+          "forcedSoftwareGpu": true,
+          "version": "157.0.8103.80",
+          "devices": [
+            {
+              "vendorId": 65535,
+              "deviceId": 65535,
+              "subSysId": 0,
+              "revision": 0,
+              "vendorString": "Google Inc. (Google)",
+              "deviceString": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver-5.0.0)",
+              "driverVendor": "SwANGLE",
+              "driverVersion": "5.0.0"
+            }
+          ],
+          "featureStatus": {
+            "2d_canvas": "disabled_software",
+            "direct_rendering_display_compositor": "disabled_off_ok",
+            "gpu_compositing": "disabled_software",
+            "multiple_raster_threads": "enabled_on",
+            "opengl": "disabled_off",
+            "rasterization": "disabled_software",
+            "skia_graphite": "disabled_off",
+            "trees_in_viz": "disabled_off",
+            "video_decode": "disabled_software",
+            "video_encode": "disabled_software",
+            "webgl": "unavailable_software",
+            "webgpu": "unavailable_software",
+            "webnn": "unavailable_software"
+          },
+          "aux": {
+            "glRenderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver-5.0.0)",
+            "glVendor": "Google Inc. (Google)",
+            "glVersion": "OpenGL ES 3.0 (ANGLE 2.1.29101 git hash: c56e2a4a9b8c)",
+            "passthroughCmdDecoder": true,
+            "sandboxed": false
+          }
+        },
+        "renderingContract": {
+          "nativePerformance": null,
+          "frontendV2Loaded": false,
+          "inputTabIndex": 0,
+          "slotErrors": [],
+          "bodyBoundary": true,
+          "renderer": "software",
+          "scrollerContainment": "strict",
+          "frontendRevision": "ui169-v14",
+          "quietReferencePreparation": true
+        },
+        "longAnimationFrames": [
+          {
+            "startTime": 38647.40000000596,
+            "duration": 68,
+            "blockingDuration": 8,
+            "renderStart": 38714.30000001192,
+            "styleAndLayoutStart": 38715.19999998808,
+            "scripts": [
+              {
+                "duration": 56.70000001788139,
+                "forcedStyleAndLayoutDuration": 0,
+                "sourceFunctionName": "",
+                "sourceURL": "index-BgUyXZcc.js"
+              }
+            ]
+          }
+        ],
+        "renderMetrics": {
+          "LayoutCount": 4225,
+          "RecalcStyleCount": 3707,
+          "LayoutDuration": 1.6544,
+          "RecalcStyleDuration": 0.3482,
+          "ScriptDuration": 2.0676,
+          "TaskDuration": 7.9831
+        },
+        "tailPositionAfterMeasurement": {
+          "top": 5245,
+          "floor": 5245,
+          "following": true
+        },
+        "sourceUnchangedDuringMeasurement": true,
+        "companionUnchangedDuringMeasurement": true,
+        "trace": {
+          "bytes": 3730705,
+          "dataLossOccurred": false
+        },
+        "captureAccepted": true,
+        "fullLifecycleAccepted": true,
+        "measurementCompleted": true,
+        "companionPlanSha256": "e97aa6b38e07187e9845d0f3313ba33baf5a4c7770b3cb532533a65ab28b52b8"
       }
     ],
-    "realModelTurns": {
-      "attempts": 5,
-      "successfulContinuations": 4,
-      "failedInitialDeckTurnRetained": 1,
-      "providerModel": "Existing authorized GLM5.3-flash",
-      "newImageApiRequestsThisCloseout": 0
-    },
-    "scopeBoundaries": [
-      "Source/serializer/HTTP contracts are separate from live native/editor/model tests.",
-      "Unchanged prior real image-generation/repaint service acceptance retained, not rerun or counted as new API calls.",
-      "No PowerPoint desktop visual fidelity or universal input/provider support assertion."
-    ]
+    "withoutTrace": [
+      {
+        "stage": "ui169-final-v14-notrace-hardware-1",
+        "mode": "hardware",
+        "accepted": true,
+        "baseline": {
+          "schema": 1,
+          "homeId": "final-v14-notrace-hardware-1",
+          "baselineManifestSha256": "a4af935d60f6133621ee7d65221862f04b02ca006187de25fb3c9d2c347464a1",
+          "catalogSha256": "e9bed6accdcf8fa83fe034ada08aaee458b725d3853d7da5940ce75e2032168e",
+          "workspaceCount": 90,
+          "verifiedFiles": 363,
+          "credentialsCopied": false,
+          "allBaselineBytesMatched": true
+        },
+        "realModelCalls": 1,
+        "actualStreamedReplyChars": 4348,
+        "sendFrames": {
+          "samples": 121,
+          "p50ms": 10,
+          "p95ms": 10.2,
+          "p99ms": 10.3,
+          "maxMs": 10.3,
+          "over33ms": 0,
+          "over20ms": 0
+        },
+        "completionFrames": {
+          "samples": 198,
+          "p50ms": 10,
+          "p95ms": 10.2,
+          "p99ms": 10.3,
+          "maxMs": 30,
+          "over33ms": 0,
+          "over20ms": 1
+        },
+        "allStreamFrames": {
+          "samples": 5626,
+          "p50ms": 10,
+          "p95ms": 10.2,
+          "p99ms": 10.3,
+          "maxMs": 30,
+          "over33ms": 0,
+          "over20ms": 1
+        },
+        "trace": {
+          "disabled": true,
+          "reason": "Explicit no-trace measurement to isolate capture overhead"
+        },
+        "fullLifecycleAccepted": true,
+        "ownedHostStop": {
+          "pid": 23136,
+          "stopped": true,
+          "userProcessesTouched": false
+        }
+      },
+      {
+        "stage": "ui169-final-v14-notrace-software-1",
+        "mode": "software",
+        "accepted": true,
+        "baseline": {
+          "schema": 1,
+          "homeId": "final-v14-notrace-software-1",
+          "baselineManifestSha256": "a4af935d60f6133621ee7d65221862f04b02ca006187de25fb3c9d2c347464a1",
+          "catalogSha256": "e9bed6accdcf8fa83fe034ada08aaee458b725d3853d7da5940ce75e2032168e",
+          "workspaceCount": 90,
+          "verifiedFiles": 363,
+          "credentialsCopied": false,
+          "allBaselineBytesMatched": true
+        },
+        "realModelCalls": 1,
+        "actualStreamedReplyChars": 4413,
+        "sendFrames": {
+          "samples": 73,
+          "p50ms": 16.7,
+          "p95ms": 16.7,
+          "p99ms": 16.7,
+          "maxMs": 16.8,
+          "over33ms": 0,
+          "over20ms": 0
+        },
+        "completionFrames": {
+          "samples": 121,
+          "p50ms": 16.7,
+          "p95ms": 16.8,
+          "p99ms": 16.8,
+          "maxMs": 16.8,
+          "over33ms": 0,
+          "over20ms": 0
+        },
+        "allStreamFrames": {
+          "samples": 3489,
+          "p50ms": 16.7,
+          "p95ms": 16.7,
+          "p99ms": 16.8,
+          "maxMs": 33.3,
+          "over33ms": 0,
+          "over20ms": 1
+        },
+        "trace": {
+          "disabled": true,
+          "reason": "Explicit no-trace measurement to isolate capture overhead"
+        },
+        "fullLifecycleAccepted": true,
+        "ownedHostStop": {
+          "pid": 59560,
+          "stopped": true,
+          "userProcessesTouched": false
+        }
+      }
+    ],
+    "failedAndDiagnosticMeasurementsRetained": true,
+    "guarantees": "Measured 60Hz time budget on the recorded hardware/software paths, not a guarantee of every frame <=16.7ms on all machines."
   },
-  "coreCriteria": [
-    {
-      "id": "P0-runtime",
-      "result": "passed",
-      "behavior": "Unified validated runtime resolver reaches actual worker, custom paths, real MP4/ffprobe",
-      "evidence": "C03-actual-supervisor.json"
-    },
-    {
-      "id": "P0-paths",
-      "result": "passed",
-      "behavior": "Project audio/resource/package traversal, symlinks, budgets and native source identity fenced",
-      "evidence": "C04-path-final.log"
-    },
-    {
-      "id": "P0-native-ai",
-      "result": "passed",
-      "behavior": "Current actual Photo/Vector/Deck/Motion sequence,2real model turns, manual takeover, non-target fields exact, fresh source and export",
-      "evidence": "C12-four-engine-flow-attempt5.json"
-    },
-    {
-      "id": "P0-version",
-      "result": "passed",
-      "behavior": "UI165 package/cache/source/native locks agree; current full tests and separate package identity",
-      "evidence": "current-node-results.json"
-    },
-    {
-      "id": "P1-lifecycle",
-      "result": "passed",
-      "behavior": "Actual close/kill-tree/cancel/timeout/slot/output protection and failure recovery",
-      "evidence": "C05-short-cwd-lifecycle.log"
-    },
-    {
-      "id": "P1-streaming",
-      "result": "passed",
-      "behavior": "Real512MiB lowheap streaming hash/download and event-loop measurement; actual worker crash/recovery",
-      "evidence": "C06-low-memory.json"
-    },
-    {
-      "id": "P1-deployment",
-      "result": "passed",
-      "behavior": "7713 current files; actual install interruption, restore, all SHA, offline SDK, doctor and five path/ZIP boundary cases",
-      "evidence": "C14-current-deployment.json"
-    },
-    {
-      "id": "P1-ci",
-      "result": "passed",
-      "behavior": "108local public contracts passed; pinned source/lock/credential gates and opt-in isolated Windows full suite implemented; hosted run is recorded externally after push",
-      "evidence": "C15-public-contracts.log"
-    },
-    {
-      "id": "P2-provenance",
-      "result": "passed",
-      "behavior": "Actual fixed codec/converter build, exact independent rebuild,6exact original-font sources; old artifacts/hashes retained",
-      "evidence": "C16-independent-rebuild-final.json"
-    },
-    {
-      "id": "UX-ai-native",
-      "result": "passed",
-      "behavior": "Resize/reload/history/automatic popup/multi-select draft/current dedicated conversation tested with real native input",
-      "evidence": "C19-final-ux.json"
-    }
+  "historicalScopeReports": [
+    "VERIFICATION_UI165.json",
+    "docs/ui168/VERIFICATION.json"
   ],
-  "runtimeRelease": {
-    "files": 7713,
-    "sdkFiles": 7447,
-    "expandedBytes": 3226035371,
-    "archiveBytes": 1321208780,
-    "archiveSha256": "d1b578f37e45cb72913eaf36b01cec507d9b9bbec3608ff0e62ec4b9996cbd64",
-    "manifestSha256": "eb625aa5c1352fd5ebd3b377a27cd1b4917af8954f6cc8d52c79ef357affc22e"
-  },
-  "historicalEvidence": {
-    "expectedIdentities": 59,
-    "exactOriginalsReverified": 56,
-    "unavailableOldSnapshots": 3,
-    "oldExpectedHashesChanged": false,
-    "currentCoreDependency": false,
-    "report": "docs/historical-evidence-closeout-ui165.json"
-  },
-  "distribution": {
-    "frozenArchiveDigest": "Recorded externally in DELIVERY.json after actual packing; not self-embedded",
-    "frozenPackageLoad": "Recorded externally after actual extraction and load; current development-root tests are identified as such",
-    "sourceBranch": "audit/ui165-closeout-20261118",
-    "baseCommit": "b1627b7b8270aebafd5ccdcf0ab042dd4545e4eb",
-    "publicationChecks": "Actual remote/PR/Release/readback results recorded in external DELIVERY.json, never inferred here"
-  },
-  "removedByUser": [
-    "microphone capture",
-    "camera capture",
-    "screenshot capture",
-    "Windows formula recognition"
-  ],
-  "optionalExcluded": [
-    "OpenDesign/Vela authorized external project binding",
-    "Figma/Figma MCP",
-    "Stitch",
-    "PixelBin",
-    "extra fal/Replicate/Venice audio/video services"
-  ],
-  "publishedEvidenceDigestChecks": {
-    "count": 31,
-    "stage": "after public redaction and LF normalization",
-    "rawHistoricalExpectedHashesChanged": false,
-    "guard": "scripts/check-public-source.mjs"
-  }
+  "missingHistoricalSnapshots": 3,
+  "userDesktopControlled": false
 }

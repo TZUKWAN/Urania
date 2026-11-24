@@ -1,19 +1,19 @@
-import {storeView} from './store-view.js?v=168';
+import {storeView,nativeUiView} from './store-view.js?v=169';
 import {createVariantPanel} from './variant-ui.js';
 import {createImagePanel} from './image-ui.js';
-import {createNativeWorkspace} from './native-workspace.js?v=168';
-import {quoteNative,nativeInputAdmissionLocked} from './native-reference.js?v=168';
-import {aiCanvasTarget} from './ai-canvas.js?v=168';
-import {isActiveDesignSession} from './design-session.js?v=168';
-import {createChatSplit} from './chat-split.js?v=168';
-import {submitNativePrompt,currentNativeInput} from './native-ai-input.js?v=168';
-import {selectedObjectIds} from './native-contract.js?v=168';
-import {createMotionWorkspace} from './motion-workspace.js?v=168';
-import {createStudioComponents,mountStudioStyles,userFacingError} from './studio-system.js?v=168';
-export {nativeReferenceSource as createNativeReferenceSource,nativeContextTextRule,designRequestReferenceSource as createDesignRequestReferenceSource,designRequestTextRule} from './native-reference.js?v=168';
+import {createNativeWorkspace} from './native-workspace.js?v=169';
+import {quoteNative,nativeInputAdmissionLocked} from './native-reference.js?v=169';
+import {aiCanvasTarget} from './ai-canvas.js?v=169';
+import {isActiveDesignSession} from './design-session.js?v=169';
+import {createChatSplit} from './chat-split.js?v=169';
+import {submitNativePrompt,currentNativeInput} from './native-ai-input.js?v=169';
+import {selectedObjectIds} from './native-contract.js?v=169';
+import {createMotionWorkspace} from './motion-workspace.js?v=169';
+import {createStudioComponents,mountStudioStyles,connectStudioSurface,userFacingError} from './studio-system.js?v=169';
+export {nativeReferenceSource as createNativeReferenceSource,nativeContextTextRule,designRequestReferenceSource as createDesignRequestReferenceSource,designRequestTextRule} from './native-reference.js?v=169';
 import {selectedNative,nativeNodes,selectedIds} from './selection.js';
-import {designChatContext,isDesignRootInSession,attachDesignReference,openNativeChatReference} from './dsh-context.js?v=168';
-export {designContextTextRule,createDesignReferenceSource} from './dsh-context.js?v=168';
+import {designChatContext,isDesignRootInSession,attachDesignReference,openNativeChatReference} from './dsh-context.js?v=169';
+export {designContextTextRule,createDesignReferenceSource} from './dsh-context.js?v=169';
 /**
  * DesignCraft editor UI — full WYSIWYG editor (React via DSH ModuleLoader).
  * Exports createUI({ React, store, sync, actions, controller }) → { App }.
@@ -991,6 +991,7 @@ body[data-ds-dark-theme] .dcCanvasWrap{background:repeating-conic-gradient(#2024
     return new File([blob],'画板预览.png',{type:'image/png'});
   }
 
+  const nativeConversationPresentation=nativeUiView();
   const conversationState=storeView(store,s=>{
     const base={workspaceMode:s.workspaceMode,services:s.services,root:s.root,doc:s.doc,ui:s.ui};
     if(s.workspaceMode==='legacy')return {...base,uiSelection:s.uiSelection};
@@ -998,7 +999,7 @@ body[data-ds-dark-theme] .dcCanvasWrap{background:repeating-conic-gradient(#2024
       const m=s.motion;
       return {...base,motionProjectId:m?.projectId,motionRevision:m?.revision,motionTitle:m?.title,motionSelection:m?.selection};
     }
-    return {...base,nativeDocument:s.native?.document,nativeBusy:!!s.native?.busy,nativeSourceId:s.native?.sourceId,
+    return {...base,nativeDocument:nativeConversationPresentation(s.native)?.document,nativeBusy:!!s.native?.busy,nativeSourceId:s.native?.sourceId,
       nativeSourceRevision:s.native?.sourceRevision,nativeEpoch:s.native?.epoch,nativeAdvanced:s.native?.advancedEditing};
   });
   const readDock=storeView(store,s=>({assistant:s.services.designAssistant,state:s.designAssistant}));
@@ -1060,6 +1061,7 @@ body[data-ds-dark-theme] .dcCanvasWrap{background:repeating-conic-gradient(#2024
         if(event.key!=='Enter'||event.shiftKey||event.isComposing||event.nativeEvent?.isComposing||!event.target?.closest?.('[contenteditable=true]'))return;
         const {input}=currentNativeInput(store.get().services,sessionId);
         if(input.state.getSnapshot().phase==='claimed'||document.querySelector('[role=listbox]'))return;
+        if(nativeInputAdmissionLocked(input)){event.preventDefault();event.stopPropagation();return;}
       }else{
         const button=event.target?.closest?.('button'),label=button?.getAttribute('aria-label');
         if(!button||!['发送消息','Send message'].includes(label))return;
@@ -1087,7 +1089,7 @@ body[data-ds-dark-theme] .dcCanvasWrap{background:repeating-conic-gradient(#2024
         s.workspaceMode!=='legacy'?h(React.Fragment,null,
          target?h('div',{className:'dcStudioTarget',title:target},h(StudioIcon,{name:'ai',size:13}),h('span',null,target)):null,
          s.nativeAdvanced&&s.workspaceMode==='native'&&s.nativeDocument?h(StudioButton,{icon:'ai',disabled:s.nativeBusy||busy,onClick:()=>quote({focus:true})},busy?'正在准备引用…':'引用当前选择'):null,
-         running?h(StudioStatus,{kind:'busy'},'AI 正在处理'):null):!sessionId?h('p',{className:'dcHint'},'先选择 DSH 项目，然后直接在下方描述设计需求。'):!s.doc?h('p',{className:'dcHint'},'直接告诉 AI 想做什么，新作品会显示在右侧画布。'):h('div',null,
+         h(StudioStatus,{kind:running?'busy':'neutral'},running?'AI 正在处理':'描述需求，开始设计')):!sessionId?h('p',{className:'dcHint'},'先选择 DSH 项目，然后直接在下方描述设计需求。'):!s.doc?h('p',{className:'dcHint'},'直接告诉 AI 想做什么，新作品会显示在右侧画布。'):h('div',null,
           h('div',{className:'dcChatReferences'},h('span',{className:'dcChatReference',title:context.title},context.title),context.layerId?h('span',{className:'dcChatReference'},'选中：'+context.layerName):null),
           h('div',{className:'dcRow'},h('button',{className:'dcBtn',disabled:busy||outside,onClick:()=>quote({focus:true})},busy?'正在准备引用…':context.layerId?'引用选中对象':'引用当前画板'),h('label',{className:'dcHint',style:{display:'flex',alignItems:'center',gap:4}},h('input',{type:'checkbox',checked:includePreview,onChange:event=>{setIncludePreview(event.target.checked);return quote({withPreview:event.target.checked});}}),'附预览快照')),
           h('p',{className:'dcHint',style:{margin:0}},quoted?'引用会显示在下方输入框中，可随消息发送或自行移除。':'选中对象后，点“让 AI 修改”，再在下方描述要求。')),
@@ -1181,6 +1183,7 @@ body[data-ds-dark-theme] .dcCanvasWrap{background:repeating-conic-gradient(#2024
 	function App({renderConversation}) {
 		const s = React.useSyncExternalStore(store.subscribe,readApp,readApp);
     const studioRoot=useRef(null);
+    React.useLayoutEffect(()=>s.workspaceMode==='legacy'?undefined:connectStudioSurface(studioRoot.current,store.get().services.uiWorkspace?.ctx.get('layout')?.panelInfo),[s.workspaceMode==='legacy']);
     const [chatOpen,setChatOpen]=useState(()=>{try{return localStorage.getItem('urania-studio-chat-open')!=='0';}catch{return true;}});
     const [fullScreen,setFullScreen]=useState(false);
     const changeChat=React.useCallback((open,{focus=false}={})=>{
@@ -1219,7 +1222,7 @@ body[data-ds-dark-theme] .dcCanvasWrap{background:repeating-conic-gradient(#2024
 		}, []);
 		if(s.workspaceMode!=='legacy'){
       const motion=s.workspaceMode==='motion';
-      return h('div',{className:'dcApp',ref:studioRoot,'data-studio':'','data-ui-build':s.uiBuild||168,'data-editor-mode':motion?'motion':'native'},
+      return h('div',{className:'dcApp',ref:studioRoot,'data-studio':'','data-ui-build':s.uiBuild||169,'data-editor-mode':motion?'motion':'native'},
         h('header',{className:'dcStudioTop','aria-label':'Urania 工作台导航'},
           h('div',{className:'dcStudioBrand'},h('span',{className:'dcStudioBrandMark'},h(StudioIcon,{name:'brand',size:18})),'Urania'),
           h('nav',{className:'dcStudioModes','aria-label':'工作区'},

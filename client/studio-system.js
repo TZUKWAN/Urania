@@ -79,6 +79,41 @@ export function mountStudioStyles() {
   document.head.appendChild(style);
 }
 
+const studioSurfaces = new WeakMap(), rendererKinds = new WeakMap();
+function rendererKind(doc) {
+  if (rendererKinds.has(doc)) return rendererKinds.get(doc);
+  let gl, kind = 'unavailable';
+  try {
+    const canvas = doc.createElement('canvas');
+    canvas.width = canvas.height = 1;
+    gl = canvas.getContext('webgl', { antialias:false, depth:false, stencil:false });
+    if (gl) {
+      const info = gl.getExtension('WEBGL_debug_renderer_info');
+      const renderer = info ? String(gl.getParameter(info.UNMASKED_RENDERER_WEBGL)) : '';
+      kind = !renderer ? 'unknown' : /swiftshader|llvmpipe|softpipe|software|basic render/i.test(renderer) ? 'software' : 'hardware';
+    }
+  } catch { kind = 'unknown'; }
+  finally { try { gl?.getExtension('WEBGL_lose_context')?.loseContext(); } catch {} }
+  rendererKinds.set(doc, kind);
+  return kind;
+}
+export function connectStudioSurface(root, panelInfo) {
+  const doc = root?.ownerDocument;
+  if (!doc?.body) return;
+  let surfaces = studioSurfaces.get(doc);
+  if (!surfaces) studioSurfaces.set(doc, surfaces = new Map());
+  surfaces.set(root,()=>!panelInfo||panelInfo.getSnapshot().activePanelId==='designcraft');
+  root.setAttribute('data-renderer', rendererKind(doc));
+  const update=()=>doc.body.toggleAttribute('data-urania-workbench',[...surfaces.values()].some(active=>active()));
+  const off=panelInfo?.subscribe(update);update();
+  return () => {
+    off?.();
+    surfaces.delete(root);
+    update();
+  };
+}
+
+
 const CSS = `
 .dcApp[data-studio] {
   --dc-bg:#f0ece8; --dc-surface:#f7f7f6; --dc-raised:#fffdfa; --dc-soft:#eeebe7; --dc-stage:#e9e6e2;
@@ -136,7 +171,7 @@ body[data-ds-dark-theme] .dcApp[data-studio] {
 .dcStudioBody { position:relative;min-height:0;min-width:0;flex:1;display:flex;isolation:isolate; }
 .dcStudioMain { flex:1;min-width:0;min-height:0;display:flex;container-type:inline-size; }
 .dcStudioMain>.dcNativeWorkspace,.dcStudioMain>.dc-motion { flex:1;min-width:0;min-height:0; }
-.dcApp[data-studio] .dcChatColumn { background:var(--dc-surface); }
+.dcApp[data-studio] .dcChatColumn { background:var(--dc-surface);contain:size layout style; }
 .dcApp[data-studio] .dcChatColumn>.dcChat {
   width:100%;min-width:0;max-width:none;background:var(--dc-surface);border:none;
   padding:0;--dsh-conversation-column-width:var(--dc-chat-width);
@@ -157,6 +192,20 @@ body[data-ds-dark-theme] .dcApp[data-studio] {
 .dcStudioChatIntro strong { display:block;color:var(--dc-ink);font-size:15px;margin-bottom:4px; }
 .dcApp[data-studio] .dcChat :is([data-composer-chip],[data-composer-text-ref]) { animation:dcStudioReveal var(--dc-menu) var(--dc-ease) both; }
 .dcApp[data-studio] .dcChatConversation [contenteditable=true] { font-size:14px;line-height:1.65; }
+/* Preserve the editing host across the SDK's brief admission lock. Chromium's
+   real read-only editing style and the native editor lock both remain active. */
+.dcApp[data-studio] .dcChat [data-composer-input][aria-readonly=true] { -webkit-user-modify:read-only; }
+/* Keep the native model/permission controls responsive without expanding and
+   recollapsing their text whenever the native status glyph changes. */
+.dcApp[data-studio] .dcChat [data-urania-controls] { container-name:urania-composer-controls; }
+.dcApp[data-studio] .dcChat [data-urania-controls] > * {
+  --dsh-composer-model-text-display:block;--dsh-composer-model-icon-display:none;
+}
+@container urania-composer-controls (width <= 350px) {
+  .dcApp[data-studio] .dcChat [data-urania-controls] > * {
+    --dsh-composer-model-text-display:none;--dsh-composer-model-icon-display:block;
+  }
+}
 .dcApp[data-studio] .dcChat button:is([aria-label="发送消息"],[aria-label="Send message"]):not(:disabled) { background:var(--dc-accent);color:var(--dc-on-accent); }
 .dcApp[data-studio] .dcChatSplit { background:var(--dc-surface);width:7px;flex:0 0 7px;z-index:2; }
 .dcApp[data-studio] .dcChatSplit span { inset:0 3px;background:var(--dc-line); }
@@ -186,14 +235,19 @@ body[data-ds-dark-theme] .dcApp[data-studio] {
 .dcApp[data-studio] .dcNativeStage[data-canvas=professional] .dcAiCanvasTools { left:auto;right:15px;bottom:11px;translate:none; }
 .dcStudioHomeHero .dcPrimary { margin-top:18px;padding-inline:15px; }
 .dcApp[data-studio] .dcChatConversation { contain:inline-size; }
+/* The native embedded body owns these variables. Avoid applying its full-window
+   content margin a second time inside the already bounded assistant column. */
+.dcApp[data-studio] .dcChatConversation [data-content-phase] { --dsh-chat-content-width:100%;--dsh-composer-side-clearance:0px; }
 .dcApp[data-studio] .dcChat { contain:layout style; }
-body:has(.dcApp[data-studio]) [data-slot="sidebar.workspaces"] { contain:layout style;isolation:isolate; }
-body:has(.dcApp[data-studio]) [data-slot="sidebar"] [data-shimmer] > [aria-hidden="true"][inert] { display:none; }
+/* The Slot wrapper is display:contents; contain the bounded native root. */
+body[data-urania-workbench] [data-slot="sidebar.workspaces"] > * { contain:size layout style; }
+body[data-urania-workbench] [data-slot="sidebar"] [data-shimmer] > [aria-hidden="true"][inert] { display:none; }
 /* Its flex parent supplies the SDK transcript viewport dimensions. Keep growing turns local to that viewport. */
 .dcApp[data-studio] .dcChatConversation [data-conversation-scroll] { contain:strict;isolation:isolate;transform:translateZ(0); }
-.dcApp[data-studio] .dcChatConversation [data-chat-flow] { contain:layout; }
+.dcApp[data-studio] .dcChatConversation [data-chat-flow] { contain:layout style; }
+.dcApp[data-studio] .dcChatConversation [data-conversation-region="composer"] { contain:layout style; }
 /* Keep earlier reply paragraphs in the DOM while the browser skips their offscreen layout and paint. */
-.dcApp[data-studio] .dcChatConversation :is([data-streaming],[data-text-interaction-source]) :is(p,pre,blockquote) {
+.dcApp[data-studio] .dcChatConversation [data-chat-flow] :is(p,pre,blockquote) {
   content-visibility:auto;
   contain-intrinsic-size:auto 64px;
 }
@@ -201,6 +255,15 @@ body:has(.dcApp[data-studio]) [data-slot="sidebar"] [data-shimmer] > [aria-hidde
 /* Keep the embedded DSH elapsed-time row and its static icon. The supplied APNG animates a mask while text streams. */
 .dcApp[data-studio] .dcChatConversation [data-chat-running] span[aria-hidden="true"]:has(> svg) > span { display:none; }
 .dcApp[data-studio] .dcChatConversation [data-chat-running] span[aria-hidden="true"] > svg { display:block; }
+/* CPU rendering keeps native input, messages and progress; decorative layers
+   need not compete with the editable canvas for software rasterization. */
+.dcApp[data-studio][data-renderer=software] .dcChat *,
+.dcApp[data-studio][data-renderer=software] .dcChat *::before,
+.dcApp[data-studio][data-renderer=software] .dcChat *::after {
+  animation:none!important;transition:none!important;box-shadow:none!important;
+  filter:none!important;backdrop-filter:none!important;will-change:auto!important;
+}
+.dcApp[data-studio][data-renderer=software] .dcChat [data-shimmer] { mask-image:none!important; }
 .dcApp[data-studio] .dcNativeEmpty {
   overflow:auto;align-items:safe center;justify-content:center;z-index:2;padding:28px;
   background:radial-gradient(ellipse at 62% 30%,color-mix(in srgb,var(--dc-raised) 85%,transparent),transparent 67%),var(--dc-bg);

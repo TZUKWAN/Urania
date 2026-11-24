@@ -3,6 +3,7 @@ import {readFile,stat,realpath} from 'node:fs/promises';
 import {createReadStream,existsSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {createRequire} from 'node:module';
+import {spawnSync} from 'node:child_process';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {checkMotionRuntime} from '../host/motion/runtime-env.js';
@@ -18,7 +19,7 @@ const inside=async relative=>{
  const file=path.resolve(root,relative),base=await realpath(root),actual=await realpath(file);
  if(!actual.toLowerCase().startsWith((base+path.sep).toLowerCase())||!(await stat(actual)).isFile())throw new Error('Release file escapes repository or is not a file');return actual;
 };
-let pkg,assets,manifest;
+let pkg,assets,manifest,sdkDirectory;
 await check('package-node',async()=>{pkg=await json(path.join(root,'package.json'));if(Number(process.versions.node.split('.')[0])<22||pkg.engines.node!=='>=22')throw new Error('Plugin and Motion require Node >=22');return {version:pkg.version,uiBuild:pkg.designcraftUiBuild,node:process.version,pluginMinimum:22};});
 await check('release-metadata',async()=>{
  assets=await json(path.join(root,'release/runtime-assets.json'));const file=await inside('release/runtime-manifest.json');manifest=await json(file);
@@ -43,7 +44,17 @@ if(!sourceOnly){
   if(!minimum)throw new Error('DSH Node requirement is not recognized: '+sdk.engines?.node);
   const current=process.versions.node.split('.').map(Number),needed=minimum.slice(1).map(Number);
   if(current[0]<needed[0]||(current[0]===needed[0]&&(current[1]<needed[1]||(current[1]===needed[1]&&current[2]<needed[2]))))throw new Error('Installed DSH requires Node '+sdk.engines.node+'; use the stricter host requirement');
+  sdkDirectory=directory;
   return {version:sdk.version,nodeRequirement:sdk.engines.node,validatedSdkVersion:'0.2.2-rc.1',sameAsValidatedSdk:sdk.version==='0.2.2-rc.1',launched:false};
+ });
+ if(sdkDirectory)await check('dsh-performance',async()=>{
+  const prefix=path.resolve(sdkDirectory,'../../..');
+  const run=spawnSync(process.execPath,[path.join(root,'scripts/patch-dsh-performance.mjs'),'--sdk-root',prefix,'--check'],{encoding:'utf8',windowsHide:true,maxBuffer:1024*1024});
+  const recovery='按 docs/ui169/DSH_COMPANION.md 对显式选定的 npm SDK 检查、安装或还原配套补丁；仅验收了 0.2.2-rc.1 的受支持目录布局。';
+  if(run.error||run.status!==0)throw Object.assign(new Error('DSH performance compatibility could not be verified: '+(run.error?.message||run.stderr||'check failed').trim()),{recovery});
+  const report=JSON.parse(run.stdout);
+  if(!report.allPatched)throw Object.assign(new Error(report.allOriginal?'DSH performance companion is not installed':'DSH performance companion is only partially installed'),{recovery});
+  return {id:report.id,sdkVersion:report.sdkVersion,files:report.files.length,allPatched:true,readOnlyCheck:true};
  });
  await check('motion-runtime',async()=>{const {workerEnv,...report}=checkMotionRuntime();return report;});
 }

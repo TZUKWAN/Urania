@@ -1,4 +1,4 @@
-import {nativeBase} from './native-contract.js?v=168';
+import {nativeBase} from './native-contract.js?v=169';
 export const isDeckLocalAction=action=>action==='local_ink_text';
 export function createDeckLocalTools(React){
  const h=React.createElement;

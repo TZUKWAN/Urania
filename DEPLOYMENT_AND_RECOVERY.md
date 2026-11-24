@@ -1,6 +1,6 @@
-# Urania UI168 部署与恢复
+# Urania UI169 部署与恢复
 
-本页适用 `designcraft@1.3.0`（UI168）和 Windows x64。现有作品保存在各项目的 `design/.designcraft/`。
+本页适用 `designcraft@1.3.1`（UI169）和 Windows x64。现有作品保存在各项目的 `design/.designcraft/`。
 
 ## 环境
 
@@ -17,7 +17,7 @@ DSH、Node、浏览器和 FFmpeg 不随运行包分发。恢复脚本不会安�
 
 ## 安装插件和运行时
 
-解开发布页的 `designcraft-1.3.0.tgz`，或检出对应源码标签。进入含有 `package.json` 的插件目录。UI168 沿用逐文件摘要相同的 UI167 运行时 ZIP，恢复脚本按 `release/runtime-assets.json` 检查归档和每个文件的摘要。
+解开发布页的 `designcraft-1.3.1.tgz`，或检出对应源码标签。进入含有 `package.json` 的插件目录。UI169 使用本轮三原生引擎更新后的独立运行时 ZIP，恢复脚本按 `release/runtime-assets.json` 检查归档和每个文件的摘要。
 
 在仓库根目录执行：
 
@@ -28,12 +28,23 @@ pwsh -NoProfile -File scripts/restore-runtime.ps1 -Download
 该命令只下载清单固定的 Urania GitHub Release ZIP，支持保留 `.part` 文件后续传；只有整个 ZIP 的大小和 SHA256 正确才会解包。也可使用已下载的离线原包：
 
 ```powershell
-pwsh -NoProfile -File scripts/restore-runtime.ps1 -ArchivePath C:/Downloads/urania-runtime-win-x64-ui167-20261118.zip
+pwsh -NoProfile -File scripts/restore-runtime.ps1 -ArchivePath C:/Downloads/urania-runtime-win-x64-ui169.zip
 ```
 
-归档包含 7,715 个有逐文件摘要的运行文件，其中 7,447 个属于固定的 HyperFrames SDK 及传递依赖。ZIP 约 1.34 GB，展开约 3.26 GB。从本地归档恢复无需在项目内运行 `npm install`。
+归档包含 7,721 个有逐文件摘要的运行文件，其中 7,447 个属于固定的 HyperFrames SDK 及传递依赖。ZIP 约 1.41 GB，展开约 3.43 GB。从本地归档恢复无需在项目内运行 `npm install`。
 
 公开 TGZ 随附安装脚本和对应的归档摘要。Deck 会在本机运行的 DSH 中读取 Windows 已安装的微软雅黑常规及粗体字形用于预览。运行时归档不分发这两份系统字体，PPTX 保留可编辑文本及原字体名称。若目标系统没有该字体，实际打开的字体由该系统回退规则决定。
+
+## DSH性能兼容补丁
+
+本轮性能验收要求同版可还原SDK界面补丁。先正常保存并停止目标DSH，再对含node_modules的实际npm SDK目录执行：
+
+```powershell
+node scripts/patch-dsh-performance.mjs --sdk-root C:/Tools/dsh --check
+node scripts/patch-dsh-performance.mjs --sdk-root C:/Tools/dsh --apply
+```
+
+仅支持已固定七个文件摘要的0.2.2-rc.1，未知版本/本地修改拒绝。路径是格式示例，不能直接套用。原件和回执在SDK目录的`.urania-performance-patch`，升级其他补丁前用原版本脚本`--restore`。不支持直接修改Electron ASAR，不自动重启DSH。完整边界与回滚见[兼容补丁](docs/ui169/DSH_COMPANION.md)。
 
 ## 运行前检查
 
@@ -48,7 +59,7 @@ node scripts/doctor.mjs
 
 以上路径是配置格式示例，请使用您的真实目录。浏览器也支持指向含其可执行文件的目录；FFmpeg 目录必须同时包含 ffmpeg.exe、ffprobe.exe。未指定浏览器或 FFmpeg 时按 PATH 和系统安装位置发现，不使用开发机固定路径。明确配置的无效路径会直接报错，不悄悄换用另一安装。
 
-统一 doctor 校验平台、Node、DSH 包及其 Node 要求、当前发布清单、7,715 个文件的 SHA256，以及浏览器、FFmpeg 和 FFprobe 的实际版本。检查浏览器时使用独立临时 profile 和无窗口参数。看到 `readyForDsh=true` 后可在 DSH 中加载。
+统一 doctor 校验平台、Node、DSH 包及其 Node 要求、当前发布清单、7,721 个文件的 SHA256，以及浏览器、FFmpeg 和 FFprobe 的实际版本。检查浏览器时使用独立临时 profile 和无窗口参数。看到 `readyForDsh=true` 后可在 DSH 中加载。
 
 `node scripts/motion-doctor.mjs` 只检查动画运行环境；`node scripts/doctor.mjs --source-only` 只检查源码/清单元数据，输出不会宣称可直接启动完整插件。
 
@@ -58,7 +69,7 @@ node scripts/doctor.mjs
 
 本轮真实隔离验收采用一个独立 DSH profile，其 `package.json` 的 `dsh.profile.bundles` 在基础 DSH bundle 后包含 `designcraft`，profile 的 `node_modules/designcraft` 指向安装目录。通过 SDK 的 `lib/bin.js --profile <独立profile名> --no-open` 启动。普通使用者应通过自己的 DSH 插件安装/配置流程加载，不要复制验收 probe、凭据、测试 profile 或会话。
 
-更新已经加载的插件时，先保存作品，再使用 DSH 的正常后台重载或重新打开应用。插件后台与前端都应显示 UI168。可在「更多操作 → 设计诊断与帮助」核对当前运行状态。
+更新已经加载的插件时，先保存作品，再使用 DSH 的正常后台重载或重新打开应用。插件后台与前端都应显示 UI169。可在「更多操作 → 设计诊断与帮助」核对当前运行状态。
 
 ## 安装失败、中断与回滚
 
@@ -78,6 +89,6 @@ pwsh -NoProfile -File scripts/restore-runtime.ps1 -VerifyOnly
 
 当前源码的全量命令是 `npm test`、`npm run check`。全量测试还需要对应 DSH SDK，可用 `DSH_TEST_PACKAGE` 指向其真实 `package.json`；它不随公开源分发。公开门使用 `npm run test:public`、`npm run check:public`，不冒充 DSH/原生集成验收。CI 不缓存或上传大型运行 ZIP。
 
-安装验收使用同一台 Windows 机器的干净目录、独立 DSH profile 和无窗口浏览器。UI168 结果见 [本轮验收记录](docs/ui168/VERIFICATION.json)。归档错误拒绝、进程中断与恢复的回归用例在 [UI165 验收记录](VERIFICATION_UI165.json) 中。
+安装验收使用同一台 Windows 机器的干净目录、独立 DSH profile 和无窗口浏览器。UI169 结果见 [本轮验收记录](docs/ui169/VERIFICATION.json)。归档错误拒绝、进程中断与恢复的回归用例在 [UI165 验收记录](VERIFICATION_UI165.json) 中。
 
-本轮六页PPTX已在PowerPoint原程序正常打开并逐页验收，详见 [逐页记录](docs/ui168/powerpoint/REVIEW.md)。历史审计附件见 [附件目录](docs/verification/ui165-attachments/README.md)。
+六页PPTX已有PowerPoint原程序逐页验收证据，本轮要求干净安装包再次导出并匹配其完整SHA256，详见 [逐页记录](docs/ui168/powerpoint/REVIEW.md)。历史审计附件见 [附件目录](docs/verification/ui165-attachments/README.md)。

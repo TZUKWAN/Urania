@@ -1,8 +1,8 @@
-import {isActiveDesignSession} from './design-session.js?v=168';
+import {isActiveDesignSession} from './design-session.js?v=169';
 import {designSession,isDesignRootInSession} from './dsh-context.js';
-import {sameUint64} from './native-protocol.js?v=168';
-import {aiCanvasTarget} from './ai-canvas.js?v=168';
-import {sameObjectIds} from './native-contract.js?v=168';
+import {sameUint64} from './native-protocol.js?v=169';
+import {aiCanvasTarget} from './ai-canvas.js?v=169';
+import {sameObjectIds} from './native-contract.js?v=169';
 
 const NAME='designcraft-editor',OPEN='[DesignCraftEditor]',CLOSE='[/DesignCraftEditor]';
 const label=context=>context.title+' · '+aiCanvasTarget(context);
@@ -34,7 +34,7 @@ export function nativeInputAdmissionLocked(input){
  return !!input.disposed||['adjudicating','submitting','sending'].includes(state.phase);
 }
 
-export async function quoteNative({controller,services,sessionId,auto=false,liveSelection=false,isCurrent=()=>true}){
+export async function quoteNative({controller,services,sessionId,auto=false,liveSelection=false,isCurrent=()=>true,onAttached}){
  if(!isCurrent()||(auto&&controller.parking))return;
  // Live selection is displayed beside the canvas. Attach its exact reference
  // only on an intentional Send, never by rewriting an editable/in-flight draft.
@@ -49,8 +49,12 @@ export async function quoteNative({controller,services,sessionId,auto=false,live
  if(controller.busy)throw new Error('设计动作尚未结束，请完成后引用');
  // Automatic chips identify live objects; serialization at Send still validates
  // and checkpoints them. Selection updates must not each start another save.
- const intended=auto?controller.context():await controller.referenceContext();
- if(!auto){if(controller.state.hostMenuOpen)await controller.resumeHostMenu();await controller.flush();await controller.referenceContext();}
+ // Pin the intent already shown by the canvas. The checkpoint below performs
+ // the live native inspection; a changed selection is rejected before admission.
+ const intended=(auto||onAttached)?controller.context():await controller.referenceContext();
+ // Send checkpoints the live document here; its codec re-reads and reports the
+ // final actual selection before Host admission. Ordinary quoting still refreshes.
+ if(!auto){if(controller.state.hostMenuOpen)await controller.resumeHostMenu();await controller.flush();if(!onAttached)await controller.referenceContext();}
  if(!isCurrent())return;
  const context=controller.context();if(!context)return;
  if(intended&&(intended.sourceId!==context.sourceId||intended.epoch!==context.epoch||!sameUint64(intended.engineUid,context.engineUid)||JSON.stringify(intended.objectIds)!==JSON.stringify(context.objectIds)||intended.selectionStamp!==context.selectionStamp||!samePage(intended.page,context.page)))throw new Error('准备引用时作品、画板或原生选区已改变，请重新引用');
@@ -65,8 +69,18 @@ export async function quoteNative({controller,services,sessionId,auto=false,live
  if(auto&&previous?.length===1){try{const old=JSON.parse(previous[0].ref),{sourceRevision:oldRevision,...oldScope}=old,{sourceRevision:newRevision,...newScope}=context;if(JSON.stringify(oldScope)===JSON.stringify(newScope))return context;}catch{}}
  const tagged=textFor(context),separator=latest.text&&!/\s$/.test(latest.text)?' ':'';
  const text=latest.text+separator+tagged;
- input.actions.setDraft({...latest,text,references:[...latest.references,{source:NAME,ref:JSON.stringify(context),offset:latest.text.length+separator.length,length:tagged.length,label:label(context),appearance:'file',clipboardText:tagged}]});
- input.actions.persistDraft?.();return context;
+ const draft={...latest,text,references:[...latest.references,{source:NAME,ref:JSON.stringify(context),offset:latest.text.length+separator.length,length:tagged.length,label:label(context),appearance:'file',clipboardText:tagged}]};
+ // Send consumes this reference immediately. Keep Lexical's semantic update
+ // synchronous, but do not move the browser caret onto a transient machine chip.
+ // Ordinary quoting still uses the native selection and focus behavior.
+ if(onAttached&&typeof input.editor?.update==='function')input.editor.update(()=>input.actions.setDraft(draft),{discrete:true,tag:['skip-dom-selection','skip-scroll-into-view']});
+ else input.actions.setDraft(draft);
+ input.actions.persistDraft?.();
+ // A deliberate Send may consume the exact attached draft on this same stack.
+ // Leaving another await between insertion and admission paints a short-lived
+ // reference chip, resizes the input seat, then immediately clears it again.
+ onAttached?.(context);
+ return context;
 }
 
 export function nativeReferenceSource({controller,store}){

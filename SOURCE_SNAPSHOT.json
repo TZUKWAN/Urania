@@ -2,10 +2,10 @@
   "schemaVersion": 2,
   "project": "Urania",
   "snapshotDate": "2026-11-18",
-  "packageVersion": "1.3.0",
-  "uiBuild": 168,
-  "baseCommit": "caae12443787e2e71a98d5145ee03dd17e1ecf64",
-  "sourceBranch": "fix/ui168-streaming",
+  "packageVersion": "1.3.1",
+  "uiBuild": 169,
+  "baseCommit": "28a579f60904329d01bbacad4316b16c67b0f017",
+  "sourceBranch": "fix/ui169-conversation-phases",
   "files": [
     {
       "path": ".gitattributes",
@@ -35,8 +35,8 @@
     },
     {
       "path": ".gitleaks.toml",
-      "bytes": 18762,
-      "sha256": "885f1c6eb5e2911782f0bf2691077d02822754727b750103d01ca5d393b51d6b"
+      "bytes": 21307,
+      "sha256": "70b3047576678ed3c296856bf659b4448784f11131391d51a988f9c6c49fd31d"
     },
     {
       "path": "AUDIT_UI163.md",
@@ -52,15 +52,13 @@
     },
     {
       "path": "DELIVERY_SUMMARY.md",
-      "bytes": 1577,
-      "sha256": "3e76c05d098e1c429b1a277378a90905e23fde2c97b407b53715a110f0bb842c",
-      "sourceSha256": "3e76c05d098e1c429b1a277378a90905e23fde2c97b407b53715a110f0bb842c",
-      "publicationCopyChanged": false
+      "bytes": 551,
+      "sha256": "2fe37a1805cb08f02a8e3321edaa9035705bb59f849a5dc1d898c246478af0b7"
     },
     {
       "path": "DEPLOYMENT_AND_RECOVERY.md",
-      "bytes": 6384,
-      "sha256": "c601c908583f97ed78feff792fb2f7720f76a95b2c64ec9e4384bd8f1e0a62ff"
+      "bytes": 7236,
+      "sha256": "d581b30f2a4446d0ed35328d88d80a80e698e9c5193407fa39f24fb6c7a159a4"
     },
     {
       "path": "FIX_LOG.md",
@@ -82,22 +80,18 @@
     },
     {
       "path": "README.md",
-      "bytes": 2010,
-      "sha256": "6f487d1ea7ea8e90c898d638f56997ace439430ad1f0a6a37e5d92bb3bf80f9e"
+      "bytes": 2351,
+      "sha256": "ba9e487d110b77f2d5772487f8db6d6d0ad23e5b71e5d1abf0bd10e691a27cc6"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
-      "bytes": 10021,
-      "sha256": "2f08180dd176ab27a565f1da22ccf35acbf6c5be646a0787c367b87a740a72cb",
-      "sourceSha256": "2f08180dd176ab27a565f1da22ccf35acbf6c5be646a0787c367b87a740a72cb",
-      "publicationCopyChanged": false
+      "bytes": 10467,
+      "sha256": "e71dfdfa3aa0c2a2020795fd33204a8886f1ffa9de49428502403a4a2d684197"
     },
     {
       "path": "VERIFICATION.json",
-      "bytes": 22250,
-      "sha256": "187beae7e7e4ad4894033471fbcfcc1f652e4b64653a1eb07d03aec397717eae",
-      "sourceSha256": "187beae7e7e4ad4894033471fbcfcc1f652e4b64653a1eb07d03aec397717eae",
-      "publicationCopyChanged": false
+      "bytes": 34251,
+      "sha256": "d9c41bcebeb42b1035af60cb511b1a3a1c924506384067156e7a78156a2fbe42"
     },
     {
       "path": "VERIFICATION_UI163.json",
@@ -116,12 +110,12 @@
     {
       "path": "client/actions.js",
       "bytes": 80817,
-      "sha256": "d7a1965f03aef1744fb3440ab6d5281deebe250c329d2cb60ca0af1251a6762b"
+      "sha256": "25259b8e9bbd391472bf6e0c74360a2c636a9ed323dd0913930f1726182cc9d4"
     },
     {
       "path": "client/ai-canvas.js",
       "bytes": 3024,
-      "sha256": "9a68b354417092e808b1d9b42b8e535bb250ee6d14348f2683f7a8a0f4c9a5a0"
+      "sha256": "6149ba2a863f78e8443be5a712d4f64cf73b03bb145719b0fc9e5bb690097a58"
     },
     {
       "path": "client/brand-panel.js",
@@ -145,12 +139,12 @@
     {
       "path": "client/client.js",
       "bytes": 11774,
-      "sha256": "28024a1a0f456e09fd5ae3ede7aa45490e9d8477d40e1f3281f9c7906eda77a8"
+      "sha256": "4c51ed4bb7448f5b50fac59ea6229b8bab6284773c7960836de834b63a3cb72b"
     },
     {
       "path": "client/deck-local-tools.js",
       "bytes": 4424,
-      "sha256": "a6919dad8426f02ebefdb8308a3f192dd13e88fe670ab7b92a782161638e830a"
+      "sha256": "10c2ba50aed2fd0ee2c515937f92a0a3be78f84babc9f3224d332f9f1af4583b"
     },
     {
       "path": "client/deck.js",
@@ -162,12 +156,12 @@
     {
       "path": "client/design-diagnostics.js",
       "bytes": 2789,
-      "sha256": "80960d42dc97f49f9dc4496b7daa704e5fee11c58bb78ac61b767b6820679108"
+      "sha256": "04ad4d135a189ab5f89ff8b88888690d957ca3aa64ae854776d0a48dd5888189"
     },
     {
       "path": "client/design-feedback.js",
       "bytes": 12763,
-      "sha256": "4c498da14788941f5c79ec6cce442da3225b4186f442885433f4701a204655f6"
+      "sha256": "b7fd98850efe4db76bd1ad1850dce9d5cd2e047ccc39dda2ec85e0b6d7653132"
     },
     {
       "path": "client/design-session.js",
@@ -179,7 +173,7 @@
     {
       "path": "client/dsh-context.js",
       "bytes": 19288,
-      "sha256": "1d4e0ab4bc4a76c1c06c9f14e93f5c03d5e791bb8a109746b3f168a2bb7f9e71"
+      "sha256": "224c71553f3da28d856bf3a61120338a701ebfb29b5bdc3febe303aa61429240"
     },
     {
       "path": "client/ecommerce-panel.js",
@@ -190,13 +184,13 @@
     },
     {
       "path": "client/editor-frame.js",
-      "bytes": 19435,
-      "sha256": "ab6f54d192184a79151c7c02915daf85c4372dcfacc90d5aa2f8b266e6fb3b3e"
+      "bytes": 20861,
+      "sha256": "a26acc12efd248b35a5f38a4aa48c1f630aa2b8cce860f29456f06080b2ddcb9"
     },
     {
       "path": "client/editor-surface.js",
       "bytes": 5935,
-      "sha256": "c25c071821f1e4b8f52f748f0a795bdee5f02c1dc504d5adc44214a93073054c"
+      "sha256": "57983c7bd73a88ffbf48878571bd52916f2925a542f0fda9abc16deac5caeb88"
     },
     {
       "path": "client/engine.js",
@@ -222,7 +216,7 @@
     {
       "path": "client/feedback-contract.js",
       "bytes": 5082,
-      "sha256": "af6600e00b58b08d0b0ec50c4784f8180c0c3957e5b8443fcf3e27cf7c14b500"
+      "sha256": "f79baf790791e32a1361d2579099942b0e40f2a25e7cd0f59ce18609507ac380"
     },
     {
       "path": "client/figma-mcp-panel.js",
@@ -241,7 +235,7 @@
     {
       "path": "client/html-workspace.js",
       "bytes": 95470,
-      "sha256": "95f735606f57c24b816f8d63a408a576b92e4db2c6ee1f759db9811566c9f919"
+      "sha256": "2f2c5a269ba68f11371b39ab1de9487688b95251eec524555f3ed73c66a425e1"
     },
     {
       "path": "client/image-adoption.js",
@@ -307,27 +301,27 @@
     {
       "path": "client/motion-workspace.js",
       "bytes": 15572,
-      "sha256": "3f980ff5d6209ac8048605ee69c8d8972d6903f1c29f6a9c8bdcf8fc0c6494f1"
+      "sha256": "b5f335238124f9b1c54bf5d722c7694392669c38c8ec392488c2c263bee80c95"
     },
     {
       "path": "client/native-ai-input.js",
-      "bytes": 3685,
-      "sha256": "d1f4081feddab78edf357d7f43799ce224598c68090d409d3ae2984007bf95f4"
+      "bytes": 3835,
+      "sha256": "fb56e57337c18628533ec1b3321ad3c7172ff23761309d62972f9abc1b266d33"
     },
     {
       "path": "client/native-context-tools.js",
       "bytes": 3730,
-      "sha256": "8ed8e0d1f9cd96c7f4b91e36e62585ed030e297a27ce12f0d1b348736d9c0cfb"
+      "sha256": "9d3e5b9fa498200af9352dc51b5f9491950a0b6a95d4a78816e1e8c8de1b4de9"
     },
     {
       "path": "client/native-contract.js",
       "bytes": 7813,
-      "sha256": "c601085d8918e46ce197c56ced96762280d7b6a46493ce8bfed109e76f09a90d"
+      "sha256": "1d8ef06ed5acb6ef492933d3e3a77454cfb695ff242eab93bd6f01c63e921859"
     },
     {
       "path": "client/native-controller.js",
-      "bytes": 146300,
-      "sha256": "b87d6f99b07a68746e093e049b7c7127fe9d6d62d2decdd31e460845eae18b06"
+      "bytes": 146321,
+      "sha256": "17b6ab9c0348acfd4bb250be223d73f40b5bd14976a5d11a2d445a9a1bc1e8eb"
     },
     {
       "path": "client/native-protocol.js",
@@ -338,13 +332,13 @@
     },
     {
       "path": "client/native-reference.js",
-      "bytes": 11225,
-      "sha256": "c57764e6253ae24faf771d812f43cf6afaf7c8f6a2d585041f5e286ec3c4bbf8"
+      "bytes": 12302,
+      "sha256": "b169ce235eb637d8a67788210014e0fd8581d07fe806f2d0685df302a13af5d4"
     },
     {
       "path": "client/native-workspace.js",
-      "bytes": 106823,
-      "sha256": "ba65a2b4cbe930774e4ee8830c495467c290dca86ed3b036759aff8fff0e9877"
+      "bytes": 106899,
+      "sha256": "f818dece9d7de3e501636bb86cb7f78362342087ada0359566b5b489193b6e2f"
     },
     {
       "path": "client/path.js",
@@ -377,7 +371,7 @@
     {
       "path": "client/selection-ai.js",
       "bytes": 6211,
-      "sha256": "6161b72ddd1bc1cbca86c6408b1d34250f5db68ea4dd23c8756bdd2b72eb624d"
+      "sha256": "1cb95e9e2db3a1ed4752220f78fb574b32f9929cc625e33a88bac238c4fabdf1"
     },
     {
       "path": "client/selection.js",
@@ -395,23 +389,23 @@
     },
     {
       "path": "client/store-view.js",
-      "bytes": 516,
-      "sha256": "36b32d2a75fcb56ec075c49caab4c367119dc09cb7627c53615ed293b2a3116b"
+      "bytes": 1365,
+      "sha256": "d3468345d995721dc9289b53340a89ae6380ed449317715f7866609ad3b61120"
     },
     {
       "path": "client/studio-image-workspace.js",
       "bytes": 43196,
-      "sha256": "3a8d5ab6838fcdf41bf8f1ebf15d691a24a730c692c83647d96243194d9d03a7"
+      "sha256": "7c9e3dfc674fb9262db2caa373027fac2724f18f56dc4f806a6a2f8587472e53"
     },
     {
       "path": "client/studio-panels.js",
       "bytes": 6180,
-      "sha256": "d627fe13f86d733e0fa2a744c75f0f0e0eba4412103e6267d02d5aa0ddec86f6"
+      "sha256": "051a734a1b30334988094342732c39b7a09e2ff30fc3ebeda911a3e4c9852fc0"
     },
     {
       "path": "client/studio-system.js",
-      "bytes": 34930,
-      "sha256": "4ab63d3b904d2f856dc532bf05d5c8cf08cf09f0ca66688bb48602aac5c9d477"
+      "bytes": 38306,
+      "sha256": "aeb040eafe71ff01b1a0edb984729d495329817e99bbc11b8949041021148ca9"
     },
     {
       "path": "client/svg-export.js",
@@ -443,8 +437,8 @@
     },
     {
       "path": "client/ui.js",
-      "bytes": 110449,
-      "sha256": "5e4a7c95972c554863803736270b5061f18efa907709a3625c14b5d9ce0fe47d"
+      "bytes": 110920,
+      "sha256": "13ec1f92884c4b09b14fa16b7718118086927449ae4427870091c29ce958f6d0"
     },
     {
       "path": "client/variant-ui.js",
@@ -1200,6 +1194,56 @@
       "path": "docs/ui168/powerpoint/slide-06.png",
       "bytes": 55177,
       "sha256": "0ea037e06c8b5de584fdbb43b0209f491c799af20f2a3d0b25cc64b2ec319b02"
+    },
+    {
+      "path": "docs/ui169/DSH_COMPANION.md",
+      "bytes": 3942,
+      "sha256": "0642e25543ddd856654e4461b95688a98ff1eab22d06e4c14e53f63324fd35dc"
+    },
+    {
+      "path": "docs/ui169/NATIVE_BUILD_INPUTS.json",
+      "bytes": 30180,
+      "sha256": "f2f77395808f47241066fe50438b0a0a0de81c218fc71978345bcab92eae02eb"
+    },
+    {
+      "path": "docs/ui169/REPORT.md",
+      "bytes": 2269,
+      "sha256": "deeb0e4fdb3101cfceea4027894a8cca3ab756b4b979a85e23ea80b1cdca6c23"
+    },
+    {
+      "path": "docs/ui169/VERIFICATION.json",
+      "bytes": 36691,
+      "sha256": "54a39963d7e2f43e260b264a89411f04006cb9a64edce8d3282429865e04cf9a"
+    },
+    {
+      "path": "docs/ui169/deckcraft-observation.patch",
+      "bytes": 2864170,
+      "sha256": "206eacb15d760590e31b7c2145b4a621d7b3ddf80c6974d54bc2b041d68a5fee"
+    },
+    {
+      "path": "docs/ui169/performance.json",
+      "bytes": 298265,
+      "sha256": "0a117bf96d279a61ee2056d8eccd4d798723afe644656cac4daca0dae12bda3b"
+    },
+    {
+      "path": "docs/ui169/photocraft-observation.patch",
+      "bytes": 95140,
+      "sha256": "a66794ce8e40a7bfd8614c28dcfb86bc194de8dcf7907c0d73cf78db4f4a30d1"
+    },
+    {
+      "path": "docs/ui169/ui169-final-v14-hardware-1-conversation.png",
+      "bytes": 149187,
+      "sha256": "7022af81f5ec77618a1eddad919ff1e4167c0499e2041c6d9d54c0072fd44940"
+    },
+    {
+      "path": "docs/ui169/ui169-final-v14-software-1-conversation.png",
+      "bytes": 130636,
+      "sha256": "e7b49739cb90c37053785079837c412002124c661d12da88a13dcbbf141aa157"
+    },
+    {
+      "path": "docs/ui169/vectorcraft-observation.patch",
+      "bytes": 853248,
+      "sha256": "3ba9d5c802c41ba1c4195cf1c8b4584b819422d03b622b4c7dd522cd04de4ed5"
     },
     {
       "path": "docs/upstream-command-candidates.json",
@@ -4685,6 +4729,11 @@
       "publicationCopyChanged": false
     },
     {
+      "path": "licenses/dsh-native-components-MIT.txt",
+      "bytes": 1065,
+      "sha256": "ebb4f09972aee8608be255debaf78451a68e95c290f55c240dec2ecfa16ea6be"
+    },
+    {
       "path": "licenses/getrandom-0.4.3/LICENSE-APACHE",
       "bytes": 10849,
       "sha256": "aaff376532ea30a0cd5330b9502ad4a4c8bf769c539c87ffe78819d188a18ebf",
@@ -4750,7 +4799,7 @@
     {
       "path": "motion-runtime-lock.json",
       "bytes": 8580,
-      "sha256": "444b128a8cc0fb1e0fbc28cc2215f2d608ad3de191608817bd33d4e3831a4ad8"
+      "sha256": "2a6a8860c48f92e9db1b75f100d7fea7307d7ff57d7acaf813930ab6d6e89731"
     },
     {
       "path": "motion-worker/entry.mjs",
@@ -4776,22 +4825,22 @@
     {
       "path": "package.json",
       "bytes": 2054,
-      "sha256": "6813be065b006a74aee164f7109543522c0da4fbd79e4c0c10a42a769b3d2c72"
+      "sha256": "f7bc64a5b20e9b11484ccf8aebe3521d7eec6528f0c42c4b099da521dc5a269a"
     },
     {
       "path": "release/SHA256SUMS.txt",
-      "bytes": 196,
-      "sha256": "c041a8a1058ecb8778587f8fb6a57553755089f02211559164f1241a95d24fab"
+      "bytes": 187,
+      "sha256": "5a0f4f93d85d3a64c65919de29927c822553439f053cd6b424627b0d80701dae"
     },
     {
       "path": "release/runtime-assets.json",
-      "bytes": 1025,
-      "sha256": "8428ed59dcf075b03c2f1341cdc9d90288081131d5be9062e0f6fbd5f7cf8873"
+      "bytes": 1001,
+      "sha256": "385a5b4ff4ca9616453631fe36d0e36b98f897511baccb22acce91c5db7bac09"
     },
     {
       "path": "release/runtime-manifest.json",
-      "bytes": 1658284,
-      "sha256": "2e6f96d492f7a8b1cb3d9ea63dbe0b1da2a748064ca9542249ad1e15fbe5f032"
+      "bytes": 1659497,
+      "sha256": "9a380cefa22f078a52b4f0f97284a3f8faa8d4032fd7f8c421c25b7a8fd80616"
     },
     {
       "path": "resources/canvas-design/LICENSE.txt",
@@ -8266,6 +8315,11 @@
       "publicationCopyChanged": false
     },
     {
+      "path": "runtimes/web/deckcraft-host/deckcraft-web-4880a537c181c4ef.js",
+      "bytes": 170244,
+      "sha256": "3a28bb28877de31dc39b98d110d89b5091d3b77636c28637d09711bd8c74ed13"
+    },
+    {
       "path": "runtimes/web/deckcraft-host/deckcraft-web-79653f1493665ca6.js",
       "bytes": 170007,
       "sha256": "f091ba68229dc75bbf7f1277ac9af30e463fa8feea5bee17479a2ca4332afa54",
@@ -8328,8 +8382,8 @@
     },
     {
       "path": "runtimes/web/deckcraft-host/index.html",
-      "bytes": 1750,
-      "sha256": "3920bbb565f7746100fa907c6193f81271604dbccd674b88d224db85471e0f81"
+      "bytes": 1794,
+      "sha256": "e57df2732b408611cab8389069ecb7f6bb77f380b68de6fcc8dfd57a53bc11e2"
     },
     {
       "path": "runtimes/web/deckcraft-host/snippets/eframe-d31a8450ea12dfc1/inline0.js",
@@ -8446,9 +8500,7 @@
     {
       "path": "runtimes/web/photocraft-host/index.html",
       "bytes": 2507,
-      "sha256": "5a8bae979c76ea0bae60a7a6b44e1c844ed33f30685b0a0706eea5fbeb5c8cfa",
-      "sourceSha256": "5a8bae979c76ea0bae60a7a6b44e1c844ed33f30685b0a0706eea5fbeb5c8cfa",
-      "publicationCopyChanged": false
+      "sha256": "905d79021ed54878151ab75c17410ac1d1d8cd2988c1bd05f076531af7adb976"
     },
     {
       "path": "runtimes/web/photocraft-host/photocraft-web-27700c220bf83b54.js",
@@ -8491,6 +8543,11 @@
       "sha256": "c2631142da4da9545d61247cdb85ff64eb51e495cc01577be8cd7ddc4d50514c",
       "sourceSha256": "c2631142da4da9545d61247cdb85ff64eb51e495cc01577be8cd7ddc4d50514c",
       "publicationCopyChanged": false
+    },
+    {
+      "path": "runtimes/web/photocraft-host/photocraft-web-c3739d5f87e8c4f9.js",
+      "bytes": 182829,
+      "sha256": "9ea8e6f7a3943a9905b76093b956ec42e08cb3d2288313a3c8b863fe05b89d3e"
     },
     {
       "path": "runtimes/web/photocraft-host/photocraft-web-df380fadd9bada0b.js",
@@ -8614,9 +8671,7 @@
     {
       "path": "runtimes/web/vectorcraft-host/index.html",
       "bytes": 3086,
-      "sha256": "1a9f22f34e5e9c42436ed0b1255433e6c1313ec43f5e7dfbc318727d2bd07c4d",
-      "sourceSha256": "1a9f22f34e5e9c42436ed0b1255433e6c1313ec43f5e7dfbc318727d2bd07c4d",
-      "publicationCopyChanged": false
+      "sha256": "0b651058ba791f81090df0aca30d9e2202b18683a0fe621905f5719272c74871"
     },
     {
       "path": "runtimes/web/vectorcraft-host/snippets/eframe-d31a8450ea12dfc1/inline0.js",
@@ -8631,6 +8686,11 @@
       "sha256": "ba3e17363385c177c8a9493b1b32fc968294bd4bf550ab86e8860d3c07b009f4",
       "sourceSha256": "ba3e17363385c177c8a9493b1b32fc968294bd4bf550ab86e8860d3c07b009f4",
       "publicationCopyChanged": false
+    },
+    {
+      "path": "runtimes/web/vectorcraft-host/vectorcraft-web-1db17032714ca7cf.js",
+      "bytes": 181232,
+      "sha256": "3c494cd855361f742a5bfec1f5e9b4da7ed56bbb95b9341a760144db59b93457"
     },
     {
       "path": "runtimes/web/vectorcraft-host/vectorcraft-web-2061eac70a809dc0.js",
@@ -9101,8 +9161,13 @@
     },
     {
       "path": "scripts/doctor.mjs",
-      "bytes": 5440,
-      "sha256": "f0f30effa56608a818b72e932e1c2989a39fb5002ed19a8cd7881df2f11c1885"
+      "bytes": 6521,
+      "sha256": "fcfa01db7edf62e48bcc0599ed2961e9d6e0a4d7510916af98aa9f1393319786"
+    },
+    {
+      "path": "scripts/dsh-performance-patch.json",
+      "bytes": 29779,
+      "sha256": "e97aa6b38e07187e9845d0f3313ba33baf5a4c7770b3cb532533a65ab28b52b8"
     },
     {
       "path": "scripts/motion-doctor.mjs",
@@ -9110,6 +9175,11 @@
       "sha256": "70f0095cefb836e919684174e3dc50cc57c438dfb4cea68dc650cebb691f9fb9",
       "sourceSha256": "70f0095cefb836e919684174e3dc50cc57c438dfb4cea68dc650cebb691f9fb9",
       "publicationCopyChanged": false
+    },
+    {
+      "path": "scripts/patch-dsh-performance.mjs",
+      "bytes": 4735,
+      "sha256": "1d9d71543d75a70ee04eb5ca16470a7041e18dc4afebd29e6ef5a3d538f1e8e9"
     },
     {
       "path": "scripts/restore-runtime.ps1",
@@ -10285,6 +10355,11 @@
       "sha256": "ac427f063bdd7ae6ba7689e0d53a75ec2cfc12f94e054e83f7bbe6b9a2ed1bc4"
     },
     {
+      "path": "tests/native-ui-view.test.mjs",
+      "bytes": 1896,
+      "sha256": "882076b563ec99a113fd5b00d2c4338f44c0c9eb0f769ede439e08f98a5aa0bb"
+    },
+    {
       "path": "tests/native-vector-header.test.mjs",
       "bytes": 4511,
       "sha256": "11fe96af7c8d9af3360e7344a1f0dd1bbbe50a925e62c63d25da0fe081572a20",
@@ -10517,13 +10592,13 @@
     },
     {
       "path": "web-runtime-lock.json",
-      "bytes": 64318,
-      "sha256": "c1acb89360360d02cfa7c91e226627ee4e576b7ce4273f2ea1832cf4584e0ccf"
+      "bytes": 70726,
+      "sha256": "dbab38a6f0e52c371f9b3ddb18c8913d64983be3a13a72177e26b7fc9d47743e"
     }
   ],
-  "filesInManifest": 1532,
-  "scope": "Public source and acceptance evidence. Unchanged pinned native and HyperFrames files are restored from release/runtime-assets.json.",
+  "filesInManifest": 1549,
+  "scope": "Public source and acceptance evidence; pinned runtime restored from release/runtime-assets.json.",
   "publicReportCopiesAnonymized": true,
   "functionalTestsRerunForPublication": true,
-  "verification": "docs/ui168/VERIFICATION.json"
+  "verification": "docs/ui169/VERIFICATION.json"
 }
